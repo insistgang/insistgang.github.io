@@ -133,6 +133,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/cos/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/shell/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -148,13 +155,6 @@
   
   <url>
     <loc>http://example.com/tags/vim/</loc>
-    <lastmod>2022-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/cos/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/cos/</loc>
+    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
+    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/cos/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
