@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/01/01/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2022-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/01/06/shell%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89%E5%9F%BA%E6%9C%AC%E8%AF%AD%E5%8F%A5/</loc>
     
     <lastmod>2022-01-06</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>http://example.com/friends/index.html</loc>
-    
-    <lastmod>2022-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/01/01/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2022-01-04</lastmod>
     
