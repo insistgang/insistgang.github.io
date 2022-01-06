@@ -4,7 +4,7 @@
   <url>
     <loc>http://example.com/2022/01/05/shell%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
     
-    <lastmod>2022-01-05</lastmod>
+    <lastmod>2022-01-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -186,14 +186,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/cos/</loc>
+    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
     <lastmod>2022-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
+    <loc>http://example.com/categories/%E6%95%99%E7%A8%8B/cos/</loc>
     <lastmod>2022-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
