@@ -39,9 +39,9 @@
     <category term="Linux" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     
     
-    <category term="shell" scheme="http://example.com/tags/shell/"/>
-    
     <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="shell" scheme="http://example.com/tags/shell/"/>
     
   </entry>
   
@@ -68,9 +68,9 @@
     <category term="Linux" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     
     
-    <category term="shell" scheme="http://example.com/tags/shell/"/>
-    
     <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="shell" scheme="http://example.com/tags/shell/"/>
     
   </entry>
   
@@ -97,9 +97,9 @@
     <category term="Linux" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     
     
-    <category term="shell" scheme="http://example.com/tags/shell/"/>
-    
     <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="shell" scheme="http://example.com/tags/shell/"/>
     
   </entry>
   
