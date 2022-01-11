@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-08T15:43:46.948Z</updated>
+  <updated>2022-01-11T04:10:46.897Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1月10日 星期一 小雨</title>
+    <link href="http://example.com/posts/c14d0220.html"/>
+    <id>http://example.com/posts/c14d0220.html</id>
+    <published>2022-01-11T04:08:08.000Z</published>
+    <updated>2022-01-11T04:10:46.897Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>今天一天过的很快，上午和自立学长梳理了近况，坚持做了每日一题，背单词，写博客，读书，写读书分享……下午主要是完善博客的搭建和域名的映射，感觉很有成就感，终于有自己的博客网站了，只要去做，无论怎么样，都会有收获的。晚上和之前的老师吃了饭喝了点小酒，听了很多故事，很多精力，年纪大了的人，就会看到很多我们这个阶段看不到的东西，很多道理简单深奥朴实无华，值得深思，慢慢来，慢慢学，人生就是一场马拉松，只要前进，就会进步。喝多了，回来和张庭磊聊了会，主要是劝学吧，因为快考编了还比较迷茫，不知所措，督促督促学习吧，以后困难的事情有很多，现在得多学点东西装备一下自己的知识和见识。</p><h2 id="觉察"><a href="#觉察" class="headerlink" title="觉察"></a>觉察</h2><p>有些道理，很简单，很浅显，但是只有自己去经历了才能切实的体会，而不是常常挂在嘴边，我记得近代有个农民起义军的领袖，颁布了一夫一妻制的法案，自己却是后宫佳丽三千，那样她怎么会值得人信服呢。还有很多这样的案例。这不由的让我想到了，很多人考不上公务员，然后就去做了公务员的培训，有些人考不上编制就去做了编制的培训，给别人做讲师，不知道自己肚子里有几斤几两，又有人会说，那些培训奥运冠军的人，他们自己本身并不是奥运冠军，他们能教，不能练……这些都是没用的屁话，只有自己肚子里有东西，自己才能教别人东西，光说不练假把式。</p><h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><p>那如何真正的去识人呢，所以很多培训机构贴出了很多标签，我是北大的研究生，我考研考了多少多少分，我教出了多少多少人上了哪哪哪，用这些宣传肯定都没问题，一件事真真能不能成关键看的是这个人，老师固然重要，但你自己不做，不行动，还是为0。其次，对于这些标签，我们可以像他们学习优点，取长补短，都是人，始终得相信，别人能够做到的，我自己也能够做到，始终要相信这一点。其次，不要相信弯道超车，一招制敌，所有东西都是由日积月累得到的，而不是你说说就能说出来的。</p><h2 id="行动"><a href="#行动" class="headerlink" title="行动"></a>行动</h2><p>开始我的新年计划：</p><p>一道算法题数学题</p><p>一篇外刊</p><p>400个单词</p><p>读书</p><p>听书</p><p>运动</p><p>开言英语</p><p>输出博客</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;事件&quot;&gt;&lt;a href=&quot;#事件&quot; class=&quot;headerlink&quot; title=&quot;事件&quot;&gt;&lt;/a&gt;事件&lt;/h2&gt;&lt;p&gt;今天一天过的很快，上午和自立学长梳理了近况，坚持做了每日一题，背单词，写博客，读书，写读书分享……下午主要是完善博客的搭建和域名的映射，感觉</summary>
+      
+    
+    
+    
+    <category term="每日复盘" scheme="http://example.com/categories/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/"/>
+    
+    
+    <category term="小记" scheme="http://example.com/tags/%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>shell教程（三）基本语句</title>
