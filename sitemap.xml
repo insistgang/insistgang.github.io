@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/posts/1d5e8ad5.html</loc>
+    
+    <lastmod>2022-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/posts/70f4e8c0.html</loc>
     
     <lastmod>2022-01-08</lastmod>
@@ -194,6 +203,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://example.com/tags/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B/</loc>
+    <lastmod>2022-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -226,6 +242,13 @@
   
   <url>
     <loc>http://example.com/categories/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</loc>
+    <lastmod>2022-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
