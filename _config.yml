@@ -109,6 +109,7 @@ deploy:
   repo: 
     github: git@github.com:insistgang/insistgang.github.io.git,main
     coding: git@e.coding.net:insistgang/hexo-blog/Hexo.git,master
+    branch: main
 
 electric_clock:
   priority: 5
