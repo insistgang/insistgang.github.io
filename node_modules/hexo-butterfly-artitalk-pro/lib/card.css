@@ -1,0 +1,41 @@
+.card-shuo .cbp_tmlabel:after {
+  border-right-color: transparent !important;
+}
+.card-shuo #artitalk_main .cbp_tmtimeline > li .cbp_tmlabel {
+  display: inline-block !important;
+  margin: 0 0 30px 0px !important;
+}
+.card-shuo #artitalk_main .cbp_tmtimeline > li .cbp_tmlabel:after {
+  border-right-color: transparent !important;
+}
+.card-shuo .artitalk_avatar {
+  width: 40px;
+  height: 40px;
+}
+.card-shuo span.shuoshuo_author_img {
+  display: none;
+}
+.card-shuo .power {
+  display: none;
+  padding: 10px !important;
+  text-align: left !important;
+}
+.card-shuo #switchUser,
+.card-shuo #pubShuo,
+.card-shuo #pubComment,
+.card-shuo #uploadSource {
+  padding-right: 10px !important;
+}
+.card-shuo #uploadSource .icon {
+  width: 1.2em !important;
+  height: 1.2em !important;
+  vertical-align: 0 !important;
+}
+#article-container ul > li:not(.tab):before {
+  display: none;
+}
+.power svg.icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: 0;
+}

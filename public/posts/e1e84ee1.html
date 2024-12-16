@@ -1,0 +1,559 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>shell教程（二）基本命令 | insist刘钢的笔记本</title><meta name="keywords" content="linux,shell"><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="引用： https:&#x2F;&#x2F;www.acwing.com&#x2F;file_system&#x2F;file&#x2F;content&#x2F;whole&#x2F;index&#x2F;content&#x2F;2855883&#x2F; expr命令expr命令用于求表达式的值，格式为： 1expr 表达式  表达式说明：  用空格隔开每一项 用反斜杠放在shell特定的字符前面(发现表达式运行错误时，可以试试转义) 对包含空格和其他特殊字符的字符串要用引号括起来 exp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell教程（二）基本命令">
+<meta property="og:url" content="http://example.com/posts/e1e84ee1.html">
+<meta property="og:site_name" content="insist刘钢的笔记本">
+<meta property="og:description" content="引用： https:&#x2F;&#x2F;www.acwing.com&#x2F;file_system&#x2F;file&#x2F;content&#x2F;whole&#x2F;index&#x2F;content&#x2F;2855883&#x2F; expr命令expr命令用于求表达式的值，格式为： 1expr 表达式  表达式说明：  用空格隔开每一项 用反斜杠放在shell特定的字符前面(发现表达式运行错误时，可以试试转义) 对包含空格和其他特殊字符的字符串要用引号括起来 exp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/Linux.jpeg">
+<meta property="article:published_time" content="2022-01-05T12:43:54.000Z">
+<meta property="article:modified_time" content="2022-01-08T14:36:14.752Z">
+<meta property="article:author" content="insistgang">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/Linux.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/e1e84ee1"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'shell教程（二）基本命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-08 22:36:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="insist刘钢的笔记本" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/Linux.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">insist刘钢的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">shell教程（二）基本命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-05T12:43:54.000Z" title="发表于 2022-01-05 20:43:54">2022-01-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-08T14:36:14.752Z" title="更新于 2022-01-08 22:36:14">2022-01-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="shell教程（二）基本命令"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>引用：</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/file_system/file/content/whole/index/content/2855883/">https://www.acwing.com/file_system/file/content/whole/index/content/2855883/</a></p>
+<h2 id="expr命令"><a href="#expr命令" class="headerlink" title="expr命令"></a>expr命令</h2><p><code>expr</code>命令用于求表达式的值，格式为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expr 表达式</span><br></pre></td></tr></table></figure>
+
+<p>表达式说明：</p>
+<ul>
+<li>用空格隔开每一项</li>
+<li>用反斜杠放在shell特定的字符前面(发现表达式运行错误时，可以试试转义)</li>
+<li>对包含空格和其他特殊字符的字符串要用引号括起来</li>
+<li>expr会在<code>stdout</code>中输出结果。如果为逻辑关系表达式，则结果为真，<code>stdout</code>为1，否则为0。</li>
+<li>expr的<code>exit code</code>：如果为逻辑关系表达式，结果为真，<code>exit code</code>为0，否则为1。</li>
+</ul>
+<h3 id="字符串表达式"><a href="#字符串表达式" class="headerlink" title="字符串表达式"></a>字符串表达式</h3><ul>
+<li><code>length STRING</code>返回<code>STRING</code>的长度</li>
+<li><code>index STRING CHARSET</code> <code>CHARSET中</code>任意单个字符在<code>STRING</code>中最前面的字符位置，<strong>下标从1开始</strong>。如果在<code>STRING</code>中完全不存在<code>CHARSET中</code>的字符，则返回0。</li>
+<li><code>substr STRING POSITION LENGTH</code> 返回<code>STRING</code>字符串中从<code>POSITION</code>开始，长度最大为<code>LENGTH</code>的字符串。如果<code>POSITION</code>或<code>LENGTH</code>为负数，0或非数值，则返回空字符串。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str=&quot;Hello World!&quot;</span><br><span class="line"></span><br><span class="line">echo `expr length &quot;$str&quot;`  # ``不是单引号，表示执行该命令，输出12</span><br><span class="line">echo `expr index &quot;$str&quot; aWd`  # 输出7，下标从1开始</span><br><span class="line">echo `expr substr &quot;$str&quot; 2 3`  # 输出 ell</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="整数表达式"><a href="#整数表达式" class="headerlink" title="整数表达式"></a>整数表达式</h3><p><code>expr</code>支持普通的算术操作，算术表达式优先级低于字符串表达式，高于逻辑关系表达式。</p>
+<ul>
+<li><p><code>+ -</code></p>
+<p>加减运算。两端参数会转换为整数，如果转换失败，则报错。</p>
+</li>
+<li><p><code>* / %</code></p>
+<p>乘，除，取模运算。两端参数会转换为整数，如果转换失败则报错。</p>
+</li>
+<li><p><code>()</code>可以该表优先级，但需要用反斜杠转义</p>
+</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=3</span><br><span class="line">b=4</span><br><span class="line"></span><br><span class="line">echo `expr $a + $b`  # 输出7</span><br><span class="line">echo `expr $a - $b`  # 输出-1</span><br><span class="line">echo `expr $a \* $b`  # 输出12，*需要转义</span><br><span class="line">echo `expr $a / $b`  # 输出0，整除</span><br><span class="line">echo `expr $a % $b` # 输出3</span><br><span class="line">echo `expr \( $a + 1 \) \* \( $b + 1 \)`  # 输出20，值为(a + 1) * (b + 1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑关系表达式"><a href="#逻辑关系表达式" class="headerlink" title="逻辑关系表达式"></a>逻辑关系表达式</h3><ul>
+<li><p><code>|</code></p>
+<p>如果第一个参数非空且非0，则返回第一个参数的值，否则返回第二个参数的值，但要求第二个参数的值也是非空或0，否则返回0。如果第一个参数是非空或0时，不会计算第二个参数。</p>
+</li>
+<li><p><code>&amp;</code></p>
+<p>如果两个参数都非空且非0，则返回第一个参数，否则返回0。如果第一个参为0或为空，则不会计算第二个参数。</p>
+</li>
+<li><p><code>&lt; &lt;= = == != &gt;= &gt;</code></p>
+<p>比较两端的参数，如果为true，则返回1，否则返回0。”==”是”=”的同义词。”expr”首先尝试将两端参数转换为整数，并做算术比较，如果转换失败，则按字符集排序规则做字符比较。</p>
+</li>
+<li><p><code>()</code>可以该表优先级，但需要用反斜杠转义</p>
+</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a=3</span><br><span class="line">b=4</span><br><span class="line"></span><br><span class="line">echo `expr $a \&gt; $b`  # 输出0，&gt;需要转义</span><br><span class="line">echo `expr $a &#x27;&lt;&#x27; $b`  # 输出1，也可以将特殊字符用引号引起来</span><br><span class="line">echo `expr $a &#x27;&gt;=&#x27; $b`  # 输出0</span><br><span class="line">echo `expr $a \&lt;\= $b`  # 输出1</span><br><span class="line"></span><br><span class="line">c=0</span><br><span class="line">d=5</span><br><span class="line"></span><br><span class="line">echo `expr $c \&amp; $d`  # 输出0</span><br><span class="line">echo `expr $a \&amp; $b`  # 输出3</span><br><span class="line">echo `expr $c \| $d`  # 输出5</span><br><span class="line">echo `expr $a \| $b`  # 输出3</span><br></pre></td></tr></table></figure>
+
+<h2 id="read命令"><a href="#read命令" class="headerlink" title="read命令"></a>read命令</h2><p><code>read</code>命令用于从标准输入中读取单行数据。当读到文件结束符时，<code>exit code</code>为1，否则为0。</p>
+<p>参数说明</p>
+<ul>
+<li><code>-p</code>：后面可以接提示信息</li>
+<li><code>-t</code>：后面跟秒数，定义输入字符的等待时间，超过等待时间后会自动忽略此命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">read name  # 读入name的值</span><br><span class="line">liugang</span><br><span class="line">echo $name</span><br><span class="line">liugang</span><br><span class="line">read -p &quot;请输入你的名字:&quot; -t 30 name</span><br><span class="line">请输入你的名字: liugang</span><br><span class="line">echo $name</span><br><span class="line">liugang</span><br></pre></td></tr></table></figure>
+
+<h2 id="printf命令"><a href="#printf命令" class="headerlink" title="printf命令"></a>printf命令</h2><p><code>printf</code>命令用于格式化输出，类似于<code>c/c++</code>中的<code>printf</code>函数。</p>
+<p>默认<strong>不会在字符串末尾添加换行符。</strong></p>
+<p>命令格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf format-string[arguments...]</span><br></pre></td></tr></table></figure>
+
+<p><strong>用法示例</strong></p>
+<p>脚本内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">printf &quot;%10d.\n&quot; 123  # 占10位，右对齐</span><br><span class="line">printf &quot;%-10.2f.\n&quot; 123.123321  # 占10位，保留2位小数，左对齐</span><br><span class="line">printf &quot;My name is %s\n&quot; &quot;yxc&quot;  # 格式化输出字符串</span><br><span class="line">printf &quot;%d * %d = %d\n&quot;  2 3 `expr 2 \* 3` # 表达式的值作为参数</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">       123.</span><br><span class="line">123.12    .</span><br><span class="line">My name is yxc</span><br><span class="line">2 * 3 = 6</span><br></pre></td></tr></table></figure>
+
+<h2 id="test命令与判断符号"><a href="#test命令与判断符号" class="headerlink" title="test命令与判断符号[]"></a>test命令与判断符号[]</h2><h3 id="逻辑运算符-amp-amp-和"><a href="#逻辑运算符-amp-amp-和" class="headerlink" title="逻辑运算符&amp;&amp;和||"></a>逻辑运算符&amp;&amp;和||</h3><ul>
+<li><p><code>&amp;&amp;</code>表示与，<code>||</code>表示或</p>
+</li>
+<li><p>二者具有短路原则：</p>
+<p><code>expr1 &amp;&amp; expr2</code>：当<code>expr1</code>为假时，直接忽略<code>expr2</code></p>
+<p><code>expr1 || expr2</code>：当<code>expr1</code>为真时，直接忽略<code>expr2</code></p>
+</li>
+<li><p>表达式的<code>exit code</code>为0，表示真；为非零，表示假。(与<code>c/c++</code>中定义完全相反)</p>
+</li>
+</ul>
+<h3 id="test命令"><a href="#test命令" class="headerlink" title="test命令"></a>test命令</h3><p>在命令行中输入<code>man test</code>，可以查看<code>test</code>命令的用法。</p>
+<p><code>test</code>命令用于判断文件类型，以及变量做比较。</p>
+<p><code>test</code>命令用<code>exit code</code>返回结果，而不是用<code>stdout</code>。0表示真，非0表示假。</p>
+<p>列如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test 2 -lt 3  # 为真，返回值为0</span><br><span class="line">echo $?  # 输出上个命令的返回值，输出0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls #列出当前目录下的所有文件</span><br><span class="line">output.txt test.sh tmp</span><br><span class="line">test -e test.sh &amp;&amp; echo &quot;exist&quot; || echo &quot;Not exist&quot;</span><br><span class="line">exist  # test.sh存在</span><br><span class="line">test -e test2.sh &amp;&amp; echo &quot;exist&quot; || echo &quot;Not exist&quot;</span><br><span class="line">Not exist # test.sh不存在</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件类型判断"><a href="#文件类型判断" class="headerlink" title="文件类型判断"></a>文件类型判断</h3><p>命令格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test -e filename   # 判断文件是否存在</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>测试参数</th>
+<th>代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-e</td>
+<td>文件是否存在</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>是否为文件</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>是否为目录</td>
+</tr>
+</tbody></table>
+<h3 id="文件权限判断"><a href="#文件权限判断" class="headerlink" title="文件权限判断"></a>文件权限判断</h3><p>命令格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test -r filename  # 判断文件是否可读</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>测试参数</th>
+<th>代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>文件是否可读</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>文件是否可写</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>文件是否可执行</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>是否为非空文件</td>
+</tr>
+</tbody></table>
+<h3 id="整数间的比较"><a href="#整数间的比较" class="headerlink" title="整数间的比较"></a>整数间的比较</h3><p>命令格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test $a -eq $b  # a是否等于b</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>测试参数</th>
+<th>代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-eq</td>
+<td>a是否等于b</td>
+</tr>
+<tr>
+<td>-ne</td>
+<td>a是否不等于b</td>
+</tr>
+<tr>
+<td>-gt</td>
+<td>a是否小于b</td>
+</tr>
+<tr>
+<td>-lt</td>
+<td>a是否大于b</td>
+</tr>
+<tr>
+<td>-ge</td>
+<td>a是否大于等于b</td>
+</tr>
+<tr>
+<td>-le</td>
+<td>a是否小于等于b</td>
+</tr>
+</tbody></table>
+<h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><table>
+<thead>
+<tr>
+<th>测试参数</th>
+<th>代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>test -z STRING</td>
+<td>判断STRING是否为空，如果为空，则返回true</td>
+</tr>
+<tr>
+<td>test -n STRING</td>
+<td>判断STRING是否非空，如果非空，则返回true（-n可以省略）</td>
+</tr>
+<tr>
+<td>test str1 == str2</td>
+<td>判断str1是否等于str2</td>
+</tr>
+<tr>
+<td>test str1 != str2</td>
+<td>判断str1是否不等于str2</td>
+</tr>
+</tbody></table>
+<h3 id="多重条件判定"><a href="#多重条件判定" class="headerlink" title="多重条件判定"></a>多重条件判定</h3><p>命令格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test -r filename -a -x filename</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>测试参数</th>
+<th>代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>两个条件是否同时成立</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>两个条件是否至少一个成立</td>
+</tr>
+<tr>
+<td>!</td>
+<td>取反。如test ! -x file,当file不可执行时，返回true</td>
+</tr>
+</tbody></table>
+<h3 id="判断符号"><a href="#判断符号" class="headerlink" title="判断符号[]"></a>判断符号[]</h3><p>[]与test用法几乎一模一样，更常用于if语句中。另外[[]]是[]的加强版，支持的特性更多。</p>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ 2 -lt 3 ]  # 为真，返回值为0</span><br><span class="line">echo $?  # 输出上个命令的返回值，输出0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">homework output.txt test.sh tmp</span><br><span class="line">[ -e test.sh ] &amp;&amp; echo &quot;exist&quot; || echo &quot;not exist&quot;</span><br><span class="line">exist # test.sh 文件存在</span><br><span class="line">[ -e test2.sh ] &amp;&amp; echo &quot;exist&quot; || echo &quot;not exist&quot;</span><br><span class="line">not exist # test2.sh 文件不存在</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li><code>[]</code>内的每一项都要用空格隔开</li>
+<li>中括号内的变量，最好用双引号括起来</li>
+<li>中括号内的常数，最好用单或双引号括起来</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name=&quot;acwing yxc&quot;</span><br><span class="line">[ $name == &quot;acwing yxc&quot; ]  # 错误，等价于 [ acwing yxc == &quot;acwing yxc&quot; ]，参数太多</span><br><span class="line">[ &quot;$name&quot; == &quot;acwing yxc&quot; ]  # 正确</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/e1e84ee1.html">http://example.com/posts/e1e84ee1.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">insist刘钢的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a><a class="post-meta__tags" href="/tags/shell/">shell</a></div><div class="post_share"><div class="social-share" data-image="/img/Linux.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/70f4e8c0.html"><img class="prev-cover" src="/img/Linux.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">shell教程（三）基本语句</div></div></a></div><div class="next-post pull-right"><a href="/posts/fae31114.html"><img class="next-cover" src="/img/Linux.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">shell教程（一）基本语法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/fae31114.html" title="shell教程（一）基本语法"><img class="cover" src="/img/Linux.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-03</div><div class="title">shell教程（一）基本语法</div></div></a></div><div><a href="/posts/70f4e8c0.html" title="shell教程（三）基本语句"><img class="cover" src="/img/Linux.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-06</div><div class="title">shell教程（三）基本语句</div></div></a></div><div><a href="/posts/7e2c5aa3.html" title="Linux常用文件管理命令"><img class="cover" src="/img/Linux.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-01</div><div class="title">Linux常用文件管理命令</div></div></a></div><div><a href="/posts/17b304f4.html" title="tmux和vim"><img class="cover" src="/img/Linux.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-02</div><div class="title">tmux和vim</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#expr%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">expr命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">字符串表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">整数表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">逻辑关系表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#read%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">read命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#printf%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">printf命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#test%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%88%A4%E6%96%AD%E7%AC%A6%E5%8F%B7"><span class="toc-number">4.</span> <span class="toc-text">test命令与判断符号[]</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6-amp-amp-%E5%92%8C"><span class="toc-number">4.1.</span> <span class="toc-text">逻辑运算符&amp;&amp;和||</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">test命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD"><span class="toc-number">4.3.</span> <span class="toc-text">文件类型判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%88%A4%E6%96%AD"><span class="toc-number">4.4.</span> <span class="toc-text">文件权限判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E9%97%B4%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">4.5.</span> <span class="toc-text">整数间的比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"><span class="toc-number">4.6.</span> <span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E6%9D%A1%E4%BB%B6%E5%88%A4%E5%AE%9A"><span class="toc-number">4.7.</span> <span class="toc-text">多重条件判定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E7%AC%A6%E5%8F%B7"><span class="toc-number">4.8.</span> <span class="toc-text">判断符号[]</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/d8993ced.html" title="专业课细节"><img src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课细节"/></a><div class="content"><a class="title" href="/posts/d8993ced.html" title="专业课细节">专业课细节</a><time datetime="2023-11-27T14:29:50.000Z" title="发表于 2023-11-27 22:29:50">2023-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/78c7d46b.html" title="专业课代码复盘"><img src="/linear-gradient(102.7deg,#fddaff%208.2%25,#dfadfc%2019.6%25,#adcdfc%2036.8%25,#adfcf4%2073.2%25,#caf8d0%2090.9%25)" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课代码复盘"/></a><div class="content"><a class="title" href="/posts/78c7d46b.html" title="专业课代码复盘">专业课代码复盘</a><time datetime="2023-11-27T14:29:30.000Z" title="发表于 2023-11-27 22:29:30">2023-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/241af10e.html" title="测试卷1.0"><img src="/img/realquestion.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试卷1.0"/></a><div class="content"><a class="title" href="/posts/241af10e.html" title="测试卷1.0">测试卷1.0</a><time datetime="2022-09-11T14:10:14.000Z" title="发表于 2022-09-11 22:10:14">2022-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cf1b292.html" title="8512021"><img src="/img/realquestion.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="8512021"/></a><div class="content"><a class="title" href="/posts/cf1b292.html" title="8512021">8512021</a><time datetime="2022-09-11T13:56:58.000Z" title="发表于 2022-09-11 21:56:58">2022-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a224a7ac.html" title="20年833"><img src="/img/realquestion.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="20年833"/></a><div class="content"><a class="title" href="/posts/a224a7ac.html" title="20年833">20年833</a><time datetime="2022-09-10T06:30:20.000Z" title="发表于 2022-09-10 14:30:20">2022-09-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/Linux.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/posts/e1e84ee1.html'
+    this.page.identifier = 'posts/e1e84ee1.html'
+    this.page.title = 'shell教程（二）基本命令'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/gitcalendar/js/gitcalendar.js"></script><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/cos.jpg" alt="/img/cos.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/e350326d.html">腾讯云对象存储权限管理操作指南</a><div class="blog-slider__text">cos使用教程</div><a class="blog-slider__button" href="posts/e350326d.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/Linux.jpeg" alt="/img/Linux.jpeg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/7e2c5aa3.html">Linux常用文件管理命令</a><div class="blog-slider__text">快速学会使用Linux常用命令</div><a class="blog-slider__button" href="posts/7e2c5aa3.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/Linux.jpeg" alt="/img/Linux.jpeg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-03</span><a class="blog-slider__title" href="posts/fae31114.html">shell教程（一）基本语法</a><div class="blog-slider__text">快速学会使用shell</div><a class="blog-slider__button" href="posts/fae31114.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: '3lsiQ4pO8lx6JhDYSg8iRFk9-MdYXbMMI',
+          appKey: 'U1eyWgPlCCeNu8j30T5WYh5F',
+        }, {"serverURL":"https://3lsiQ4pO.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#49b1f5","color2":"#00c4b6","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://unpkg.zhimg.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/posts/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script data-pjax src="https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gitcalendar.akilar.top/api?insistgang",['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'],'insistgang')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
