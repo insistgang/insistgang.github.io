@@ -648,7 +648,7 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: false
+    enable: ture
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
@@ -658,7 +658,7 @@ aside:
     color: true
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
-    enable: false
+    enable: ture
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -669,7 +669,10 @@ aside:
     post_count: true
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
-
+  card_github:
+    enable: true
+    username: insistgang  # 你的 GitHub 用户名
+    color: "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']"  # 自定义颜色
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
