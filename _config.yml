@@ -104,12 +104,16 @@ theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+# deploy:
+#   type: git
+#   repo: 
+#     github: git@github.com:insistgang/insistgang.github.io.git,main
+#     coding: git@e.coding.net:insistgang/hexo-blog/Hexo.git,master
+#     branch: main
 deploy:
   type: git
-  repo: 
-    github: git@github.com:insistgang/insistgang.github.io.git,main
-    coding: git@e.coding.net:insistgang/hexo-blog/Hexo.git,master
-    branch: main
+  repo: git@github.com:insistgang/insistgang.github.io.git
+  branch: main
 
 electric_clock:
   priority: 5
