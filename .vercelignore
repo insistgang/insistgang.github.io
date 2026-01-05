@@ -1,0 +1,8 @@
+# 不需要部署到 Vercel 的文件和目录
+.deploy_git
+db.json
+*.log
+node_modules
+themes/butterfly/node_modules
+.DS_Store
+Thumbs.db

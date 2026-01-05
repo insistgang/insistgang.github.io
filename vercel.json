@@ -1,13 +1,13 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "hexo generate",
+  "outputDirectory": "public",
+  "devCommand": "hexo server",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
+      "source": "/:path*",
+      "destination": "/:path*"
     }
-  ],
-  "outputDirectory": "public"
+  ]
 }
