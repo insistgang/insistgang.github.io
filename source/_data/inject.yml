@@ -1,6 +1,4 @@
-head:
-  - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-calendar/dist/github-calendar-responsive.css"/>
-
-bottom:
-  - <script src="https://cdn.jsdelivr.net/npm/github-calendar/dist/github-calendar.min.js"></script>
-  - <script>new GitHubCalendar(".calendar", "insistgang", { responsive: true });</script>
+# inject.yml
+# 用于注入自定义脚本
+# GitHub Calendar 已通过 hexo-filter-gitcalendar 插件实现
+# 不需要在此处手动注入
