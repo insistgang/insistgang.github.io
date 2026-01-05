@@ -8,7 +8,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "hexo clean && hexo generate && touch public/.nojekyll && hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
