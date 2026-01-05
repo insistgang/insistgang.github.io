@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>8512021 | 刘钢的笔记本</title><meta name="keywords" content="datastruct,algorithm,真题"><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="851_20211. 链表题 什么是线性结构，写出线性结构的特点 写出删除链表头结点的算法  1234567891011121314&#x2F;*(1)线性结构的特点是在数据元素的非空有限集中：①存在惟一的一个被称作“第一个”的数据元素和惟一的一个被称作“最后一个”的数据元素；②除第一个之外，集合中的每个数据元素均只有一个前驱；除最后一个之外，集合中的每一个数据元素均只有一个后继。线性结构的数据元素之间存在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8512021">
+<meta property="og:url" content="https://insistgang.github.io/posts/cf1b292.html">
+<meta property="og:site_name" content="刘钢的笔记本">
+<meta property="og:description" content="851_20211. 链表题 什么是线性结构，写出线性结构的特点 写出删除链表头结点的算法  1234567891011121314&#x2F;*(1)线性结构的特点是在数据元素的非空有限集中：①存在惟一的一个被称作“第一个”的数据元素和惟一的一个被称作“最后一个”的数据元素；②除第一个之外，集合中的每个数据元素均只有一个前驱；除最后一个之外，集合中的每一个数据元素均只有一个后继。线性结构的数据元素之间存在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://insistgang.github.io/img/realquestion.jpeg">
+<meta property="article:published_time" content="2022-09-11T13:56:58.000Z">
+<meta property="article:modified_time" content="2022-09-15T14:28:09.000Z">
+<meta property="article:author" content="insistgang">
+<meta property="article:tag" content="datastruct">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="真题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://insistgang.github.io/img/realquestion.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/posts/cf1b292"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '8512021',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-15 22:28:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="刘钢的笔记本" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/realquestion.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">刘钢的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">8512021</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-11T13:56:58.000Z" title="发表于 2022-09-11 21:56:58">2022-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-15T14:28:09.000Z" title="更新于 2022-09-15 22:28:09">2022-09-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="8512021"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="851-2021"><a href="#851-2021" class="headerlink" title="851_2021"></a>851_2021</h2><h3 id="1-链表题"><a href="#1-链表题" class="headerlink" title="1. 链表题"></a>1. 链表题</h3><ol>
+<li>什么是线性结构，写出线性结构的特点</li>
+<li>写出删除链表头结点的算法</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">(1)线性结构的特点是在数据元素的非空有限集中：</span></span><br><span class="line"><span class="comment">①存在惟一的一个被称作“第一个”的数据元素和惟一的一个被称作“最后一个”的数据元素；</span></span><br><span class="line"><span class="comment">②除第一个之外，集合中的每个数据元素均只有一个前驱；除最后一个之外，集合中的每一个数据元素均只有一个后继。线性结构的数据元素之间存在一对一的线性关系。线性结构拥有两种不同的存储结构，即顺序存储结构和链式存储结构。顺序存储的线性表称为顺序表，顺序表中的存储元素是连续的，链式存储的线性表称为链表，链表中的存储元素不一定是连续的，元素节点中存放数据元素以及相邻元素的地址信息。</span></span><br><span class="line"><span class="comment">线性结构中存在两种操作受限的使用场景，即队列和栈。栈的操作只能在线性表的一端进行，就是我们常说的先进后出（FILO），队列的插入操作在线性表的一端进行而其他操作在线性表的另一端进行，先进先出（FIFO），由于线性结构存在两种存储结构，因此队列和栈各存在两个实现方式。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Node *<span class="title">DeleteHead</span><span class="params">(Node *pHead)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(PHead==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;<span class="comment">//链表为空表,返回NULL</span></span><br><span class="line">    Node *pTemp = pHead-&gt;next;<span class="comment">//pTemp 指向表头的后一个结点</span></span><br><span class="line">    <span class="built_in">free</span>(pHead);<span class="comment">//直接删除表头，释放头节点的内存</span></span><br><span class="line">    <span class="keyword">if</span>(pTemp==<span class="literal">NULL</span>)<span class="keyword">return</span> <span class="literal">NULL</span>;<span class="comment">//原表只有表头一个几点，故删除后只剩下NULL</span></span><br><span class="line">    pHead=pTemp;</span><br><span class="line">    <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-如图所示，阴影部分为边界像素，像素点着色算法的原理如下"><a href="#2-如图所示，阴影部分为边界像素，像素点着色算法的原理如下" class="headerlink" title="2. 如图所示，阴影部分为边界像素，像素点着色算法的原理如下"></a>2. 如图所示，阴影部分为边界像素，像素点着色算法的原理如下</h3><p>我们先选取s点，将其置为区域中的已知颜色，再按右上左下的方式将其邻接点着色</p>
+<p><img src="../../images/123.png"></p>
+<ol>
+<li>栈是什么？有什么特点？</li>
+<li>请描述该算法的过程</li>
+<li>画图展示该算法的运行过程</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">(1)栈也是用来存储逻辑关系为“一对一”数据的线性存储结构，同顺序表和链表一样。</span></span><br><span class="line"><span class="comment">特点：</span></span><br><span class="line"><span class="comment">①栈只能从表的一端存取数据，另一端是封闭的；</span></span><br><span class="line"><span class="comment">②在栈中，无论是存数据还是取数据，都必须遵循“先进后出”的原则，即最先进栈的元素最后出栈</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">(2)算法步骤：</span></span><br><span class="line"><span class="comment">1.将s点入栈</span></span><br><span class="line"><span class="comment">2.将栈顶元素出栈</span></span><br><span class="line"><span class="comment">3.探索栈顶元素周围按照右上左下的顺序判断是否是合法的活结点，合法的活结点必须符合：</span></span><br><span class="line"><span class="comment">（1）该点是像素点而不是边界；（2）该点未被染色</span></span><br><span class="line"><span class="comment">4.将合法的活结点入栈</span></span><br><span class="line"><span class="comment">重复执行2-4步骤，直至栈空，表示所有像素已经着色。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-综合快速排序，回答下面问题："><a href="#3-综合快速排序，回答下面问题：" class="headerlink" title="3. 综合快速排序，回答下面问题："></a>3. 综合快速排序，回答下面问题：</h3><ol>
+<li>叙述冒泡排序的过程</li>
+<li>设计实例，叙述快速排序的过程</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">(1)</span></span><br><span class="line"><span class="comment">比较两个相邻的元素，将值大的元素交换到右边。</span></span><br><span class="line"><span class="comment">一趟比较过程：依次比较相邻的两个数，将比较小的数放在前面，比较大的数放在后面。</span></span><br><span class="line"><span class="comment">①第一次比较：首先比较第一和第二个数，将小数放在前面，将大数放在后面。</span></span><br><span class="line"><span class="comment">②比较第 2 和第 3 个数，将小数 放在前面，大数放在后面。</span></span><br><span class="line"><span class="comment">③如此继续，知道比较到最后的两个数，将小数放在前面，大数放在后面，重复步骤，直至全部排序完成</span></span><br><span class="line"><span class="comment">④在上面一趟比较完成后，最后一个数一定是数组中最大的一个数，所以在比较第二趟的时候，最后一个数是不参加比较的。</span></span><br><span class="line"><span class="comment">⑤在第二趟比较完成后，倒数第二个数也一定是数组中倒数第二大数，所以在第三趟的比较中，最后两个数是不参与比较的。</span></span><br><span class="line"><span class="comment">⑥依次类推，每一趟比较次数减少依次</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">49, 38, 65, 97, 76, 13, 27</span></span><br><span class="line"><span class="comment">首先将第一个元素49作为基准</span></span><br><span class="line"><span class="comment">设变量j从27从右向左找比基准小的元素，设变量i从49开始向右找到比基准大的元素，</span></span><br><span class="line"><span class="comment">找到27和65后，交换他们则第一次交换后：49, 38, 27, 97, 76, 13, 65。</span></span><br><span class="line"><span class="comment">继续移动ij找到对应元素并交换多次交换后序列为：49, 38, 27, 13, 76, 97, 65，</span></span><br><span class="line"><span class="comment">并且ij相遇在元素13把基准元素和ij相遇所在位置交换:13,38, 27, 49, 76, 97, 65</span></span><br><span class="line"><span class="comment">此时，49左边小于49，右边大于49，可以把把问题变成两个更小规模的相同的子问题，</span></span><br><span class="line"><span class="comment">继续递归下去，直到区间为1</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-结合计算机算法设计与分析"><a href="#4-结合计算机算法设计与分析" class="headerlink" title="4. 结合计算机算法设计与分析"></a>4. 结合计算机算法设计与分析</h3><ol>
+<li>什么是动态规划？动态规划和分治法的区别是什么？</li>
+<li>举例说明，动态规划求解最优化问题的过程？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">动态规划：当前需要求解的问题可以分解为多个子问题，问题的最优解如果可以由子问题的最优解推导得到，则可以先求解子问题的最优解，再构造原问题的最优解；若子问题有较多的重复出现，为此动态规划仅解决每个子问题一次，从而减少计算量，即一旦某个给定子问题的解已经算出，则将其记忆化存储，以便下次需要同一个子问题解之时直接查询。最后则自底向上从最终子问题向原问题逐步求解。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">分治算法是把原问题分解为若干独立的子问题，子问题与子问题间相互独立，不存在重复求解子问题的情况，自顶向下求解子问题，合并子问题的解，从而得到原问题的解。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">举例为0-1背包问题：</span></span><br><span class="line"><span class="comment">在 N 件物品取出若干件放在容量为 W 的背包里，每件物品的体积为 W1，W2……Wn（Wi 为整数），与之相对应的价值为 P1,P2……Pn（Pi 为整数），求背包能够容纳的最大价值。</span></span><br><span class="line"><span class="comment">像这种固定数值的组合问题，比如这个问题的 W 总容量，跟下个实例零钱问题的总钱数，都是适合用动态规划来解决的问题，对于这样的问题，动态规划的解法就是：创建一个二维数组，横坐标是从 1 开始到 W，纵坐标是组成 W 的各种元素，本题中就是指 W1，W2……Wn，数组中每个位置（i，j）的数字就是当组成元素只有 W1，W2……Wi，背包可放容量为 j 时的结果，本题中就是容纳的最大价值。所以很容易分析出，当（i，j）时，如果 Wi 能放的下，空间减小，但是会增加 Pi 的价值，如果 Wi 不能放的下，空间不变，是（i-1，j）的价值，取其中最大值就好了，即状态转化方程为能放的下，dp[i][j] = max(dp[i-1][j],dp[i-1][jw[i]]+p[i])；放不下，dp[i][j] = dp[i-1][j]；对于前面规模更小的dp[i][j]记录最优值，当要解决更大规模的问题时，可以直接O(1)查询结果，而不必自顶向下的多次求解。最后，dp[n][v]即为最终的最优值。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Fibonacci函数表达式为："><a href="#5-Fibonacci函数表达式为：" class="headerlink" title="5. Fibonacci函数表达式为："></a>5. Fibonacci函数表达式为：</h3><p>f(1)=f(2)=1;</p>
+<p>f(n)=f(n-1)+f(n-2),(n&gt;=3，且n为N+)</p>
+<ol>
+<li>用递归思想写出代码，关键部分加上注释</li>
+<li>分析算法的时间复杂度和空间复杂度</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fib</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>) <span class="comment">//递归的出口</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Fib</span>(n<span class="number">-1</span>)+<span class="built_in">Fib</span>(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">假设需要求其中的第 n 位，则可以构建二叉树，二叉树的高度是 n - 1，由我们的基础知识可以知道，一个高度为 k 的二叉树最多可以由 2^k - 1 个叶子节点，也就是递归过程函数调用的次数，所以时间复杂度为O(2^n)，而空间复杂度就是树的高度 S(n)。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-哈夫曼树编码自底向上实现，若定义叶子结点所在层为第一层，其父为第二层，以此类推，处在第n层的结点扫描n-1次，复杂度为o-n-2"><a href="#6-哈夫曼树编码自底向上实现，若定义叶子结点所在层为第一层，其父为第二层，以此类推，处在第n层的结点扫描n-1次，复杂度为o-n-2" class="headerlink" title="6. 哈夫曼树编码自底向上实现，若定义叶子结点所在层为第一层，其父为第二层，以此类推，处在第n层的结点扫描n-1次，复杂度为o(n^2)"></a>6. 哈夫曼树编码自底向上实现，若定义叶子结点所在层为第一层，其父为第二层，以此类推，处在第n层的结点扫描n-1次，复杂度为o(n^2)</h3><ol>
+<li>设计能表示二叉树的链表数据结构</li>
+<li>基于上述两种数据结构设计一个复杂度为O(n)的哈夫曼树新编码算法，可实现从树根想叶子结点编码，写出思想</li>
+<li>编写代码实现上溢问题的算法</li>
+<li>分析时间复杂度为什么为O(n)</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">htNode</span>//树节点的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> symbol;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">htNode</span> *<span class="title">left</span>,*<span class="title">right</span>;</span><span class="comment">//左右孩子</span></span><br><span class="line">&#125;htNode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">htNode</span>//树的结构体,树的根</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    htNode *root;</span><br><span class="line">&#125;htTree;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">将排序好的结点依次放入队列1中</span></span><br><span class="line"><span class="comment">合并两个最小的元素有三种可能，队列1中的前两个，队列2中的前两个，队列1和队列2的第一个。在三种情况下选择和最小的合并。合并后放入队列2中</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">character</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch;<span class="comment">//字符</span></span><br><span class="line">    <span class="keyword">int</span> time;<span class="comment">//该字符出现的次数</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(character a,character b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.time&lt;b.time;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n;<span class="comment">//有n种字母，即n个叶子节点</span></span><br><span class="line">character arr[<span class="number">30</span>];<span class="comment">//根据字母出现次数从小到大排列数组</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initial_work</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;<span class="comment">//输入有n个叶子节点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;arr[i].ch&gt;&gt;arr[i].time;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr,arr+n,cmp);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">htNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch;</span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">htNode</span> *<span class="title">left</span>,*<span class="title">right</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">htNode</span>//树的结构体,树的根</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    htNode *root;</span><br><span class="line">&#125;htTree;</span><br><span class="line"></span><br><span class="line">htNode queone[<span class="number">100</span>];<span class="comment">//htNode 类型的数组，用数组模拟队列</span></span><br><span class="line"><span class="keyword">int</span> q1h,q2h;<span class="comment">//指向两个队列的队首的下标</span></span><br><span class="line">htNode quetwo[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> q1t,q2t;<span class="comment">//指向队尾的后一个</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Compare</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;=y&amp;&amp;x&lt;=z)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(y&lt;=x&amp;&amp;y&lt;=z)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(z&lt;=x&amp;&amp;z&lt;=y)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">htTree <span class="title">create</span><span class="params">()</span></span>&#123;</span><br><span class="line">    htNode tep;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        tep.ch=arr[i].ch;</span><br><span class="line">        tep.value=arr[i].time;</span><br><span class="line">        tep.left=<span class="literal">NULL</span>;</span><br><span class="line">        tep.right=<span class="literal">NULL</span>;</span><br><span class="line">        queone[q1t++]=tep;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(q1t-q1h+q2t-q2h&gt;<span class="number">1</span>)<span class="comment">//两个队列的元素的个数和大于1</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x1=inf; <span class="keyword">int</span> x2=inf; <span class="keyword">int</span> x3=inf;</span><br><span class="line">        <span class="keyword">if</span>(q1t-q1h&gt;=<span class="number">2</span>)<span class="comment">//队列1中有两个以上元素</span></span><br><span class="line">        	x1=queone[q1h].value+queone[q1h+<span class="number">1</span>].value;</span><br><span class="line">        <span class="keyword">if</span>(q2t-q2h&gt;=<span class="number">2</span>)<span class="comment">//队列2中有两个以上元素</span></span><br><span class="line">        	x2=quetwo[q2h].value+quetwo[q2h+<span class="number">1</span>].value;</span><br><span class="line">        <span class="keyword">if</span>(q1t-q1h&gt;=<span class="number">1</span>&amp;&amp;q2t-q2h&gt;=<span class="number">1</span>)</span><br><span class="line">        	x3=queone[q1h].value+quetwo[q2h].value;</span><br><span class="line">        <span class="keyword">int</span> Result=<span class="built_in">Compare</span>(x1,x2,x3);</span><br><span class="line">        <span class="keyword">if</span>(Result==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            tep.value=x1;</span><br><span class="line">            tep.left=&amp;queone[q1h];</span><br><span class="line">            q1h++;</span><br><span class="line">            tep.right=&amp;queone[q1h];</span><br><span class="line">            q1h++; <span class="comment">//弹出队列1前两个</span></span><br><span class="line">            quetwo[q2t++]=tep;<span class="comment">//把合并的结果存到队列2中</span></span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(Result==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            tep.value=x2;</span><br><span class="line">            tep.left=&amp;quetwo[q2h];</span><br><span class="line">            q2h++;</span><br><span class="line">            tep.right=&amp;quetwo[q2h];</span><br><span class="line">            q2h++; <span class="comment">//弹出队列2前两个</span></span><br><span class="line">            quetwo[q2t++]=tep;<span class="comment">//把合并的结果存到队列2中</span></span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            tep.value=x3;</span><br><span class="line">            tep.left=&amp;queone[q1h];</span><br><span class="line">            q1h++;</span><br><span class="line">            tep.right=&amp;quetwo[q2h];</span><br><span class="line">            q2h++; <span class="comment">//队列1 2 各弹出一个</span></span><br><span class="line">            quetwo[q2t++]=tep;<span class="comment">//把合并的结果存到队列2中</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    htTree tree;</span><br><span class="line">    tree.root=&amp;quetwo[q2h];</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(htNode *node,<span class="keyword">int</span> step)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(node-&gt;left==<span class="literal">NULL</span>&amp;&amp;node-&gt;right==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	ans+=(node-&gt;value)*step;</span><br><span class="line">    	<span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(node-&gt;left!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">dfs</span>(node-&gt;left,step+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(node-&gt;right!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">dfs</span>(node-&gt;right,step+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">构造哈夫曼树时，每次合并一个元素的代价是3，共有n次合并，时间复杂度是3n，也就是O(n)。</span></span><br><span class="line"><span class="comment">计算哈夫曼的代价值时，只需一次dfs，求和叶子节点的花费即可。时间复杂度也是O(n)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-一个由n个点构成的图，用n-n的矩阵来表示，矩阵由0或1组成，i行j列为0表示i点和j点之间无边，否则i和j之间右边，请你设计算法判断任意两点是否连通。"><a href="#7-一个由n个点构成的图，用n-n的矩阵来表示，矩阵由0或1组成，i行j列为0表示i点和j点之间无边，否则i和j之间右边，请你设计算法判断任意两点是否连通。" class="headerlink" title="7. 一个由n个点构成的图，用n*n的矩阵来表示，矩阵由0或1组成，i行j列为0表示i点和j点之间无边，否则i和j之间右边，请你设计算法判断任意两点是否连通。"></a>7. 一个由n个点构成的图，用n*n的矩阵来表示，矩阵由0或1组成，i行j列为0表示i点和j点之间无边，否则i和j之间右边，请你设计算法判断任意两点是否连通。</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">bool</span> Graph[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">101</span>];<span class="comment">//标记数组</span></span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;<span class="comment">//ans=1 表示连同，否则不连通</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> now,<span class="keyword">int</span> Target)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(now==Target)&#123;</span><br><span class="line">        ans=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Graph[now][i]&amp;&amp;!vis[i])<span class="comment">//now 可达 且该店未访问</span></span><br><span class="line">        &#123;</span><br><span class="line">            vis[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(i,Target);</span><br><span class="line">            vis[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            cin&gt;&gt;Graph[i][j];</span><br><span class="line">    <span class="keyword">int</span> x,y;<span class="comment">//判断x点和y点是否连通</span></span><br><span class="line">    cin&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    vis[x]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>(x,y);</span><br><span class="line">    <span class="keyword">if</span>(ans==<span class="number">0</span>)cout&lt;&lt;<span class="string">&quot;不连通&quot;</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span> cout&lt;&lt;<span class="string">&quot;连通&quot;</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.github.io/posts/cf1b292.html">https://insistgang.github.io/posts/cf1b292.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://insistgang.github.io" target="_blank">刘钢的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/datastruct/">datastruct</a><a class="post-meta__tags" href="/tags/algorithm/">algorithm</a><a class="post-meta__tags" href="/tags/%E7%9C%9F%E9%A2%98/">真题</a></div><div class="post_share"><div class="social-share" data-image="/img/realquestion.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/241af10e.html"><img class="prev-cover" src="/img/realquestion.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">测试卷1.0</div></div></a></div><div class="next-post pull-right"><a href="/posts/a224a7ac.html"><img class="next-cover" src="/img/realquestion.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">20年833</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/181ef313.html" title="16-17年833"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-10</div><div class="title">16-17年833</div></div></a></div><div><a href="/posts/10a5f53c.html" title="12-15真题"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">12-15真题</div></div></a></div><div><a href="/posts/a224a7ac.html" title="20年833"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-10</div><div class="title">20年833</div></div></a></div><div><a href="/posts/34f2268f.html" title="19-20真题"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">19-20真题</div></div></a></div><div><a href="/posts/a37401f9.html" title="22真题"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">22真题</div></div></a></div><div><a href="/posts/78993486.html" title="16-18真题"><img class="cover" src="/img/realquestion.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">16-18真题</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#851-2021"><span class="toc-number">1.</span> <span class="toc-text">851_2021</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%93%BE%E8%A1%A8%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">1. 链表题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A6%82%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%8C%E9%98%B4%E5%BD%B1%E9%83%A8%E5%88%86%E4%B8%BA%E8%BE%B9%E7%95%8C%E5%83%8F%E7%B4%A0%EF%BC%8C%E5%83%8F%E7%B4%A0%E7%82%B9%E7%9D%80%E8%89%B2%E7%AE%97%E6%B3%95%E7%9A%84%E5%8E%9F%E7%90%86%E5%A6%82%E4%B8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2. 如图所示，阴影部分为边界像素，像素点着色算法的原理如下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%BC%E5%90%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%8C%E5%9B%9E%E7%AD%94%E4%B8%8B%E9%9D%A2%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">3. 综合快速排序，回答下面问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%BB%93%E5%90%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text">4. 结合计算机算法设计与分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Fibonacci%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%BA%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">5. Fibonacci函数表达式为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%BC%96%E7%A0%81%E8%87%AA%E5%BA%95%E5%90%91%E4%B8%8A%E5%AE%9E%E7%8E%B0%EF%BC%8C%E8%8B%A5%E5%AE%9A%E4%B9%89%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9%E6%89%80%E5%9C%A8%E5%B1%82%E4%B8%BA%E7%AC%AC%E4%B8%80%E5%B1%82%EF%BC%8C%E5%85%B6%E7%88%B6%E4%B8%BA%E7%AC%AC%E4%BA%8C%E5%B1%82%EF%BC%8C%E4%BB%A5%E6%AD%A4%E7%B1%BB%E6%8E%A8%EF%BC%8C%E5%A4%84%E5%9C%A8%E7%AC%ACn%E5%B1%82%E7%9A%84%E7%BB%93%E7%82%B9%E6%89%AB%E6%8F%8Fn-1%E6%AC%A1%EF%BC%8C%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%BAo-n-2"><span class="toc-number">1.6.</span> <span class="toc-text">6. 哈夫曼树编码自底向上实现，若定义叶子结点所在层为第一层，其父为第二层，以此类推，处在第n层的结点扫描n-1次，复杂度为o(n^2)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%B8%80%E4%B8%AA%E7%94%B1n%E4%B8%AA%E7%82%B9%E6%9E%84%E6%88%90%E7%9A%84%E5%9B%BE%EF%BC%8C%E7%94%A8n-n%E7%9A%84%E7%9F%A9%E9%98%B5%E6%9D%A5%E8%A1%A8%E7%A4%BA%EF%BC%8C%E7%9F%A9%E9%98%B5%E7%94%B10%E6%88%961%E7%BB%84%E6%88%90%EF%BC%8Ci%E8%A1%8Cj%E5%88%97%E4%B8%BA0%E8%A1%A8%E7%A4%BAi%E7%82%B9%E5%92%8Cj%E7%82%B9%E4%B9%8B%E9%97%B4%E6%97%A0%E8%BE%B9%EF%BC%8C%E5%90%A6%E5%88%99i%E5%92%8Cj%E4%B9%8B%E9%97%B4%E5%8F%B3%E8%BE%B9%EF%BC%8C%E8%AF%B7%E4%BD%A0%E8%AE%BE%E8%AE%A1%E7%AE%97%E6%B3%95%E5%88%A4%E6%96%AD%E4%BB%BB%E6%84%8F%E4%B8%A4%E7%82%B9%E6%98%AF%E5%90%A6%E8%BF%9E%E9%80%9A%E3%80%82"><span class="toc-number">1.7.</span> <span class="toc-text">7. 一个由n个点构成的图，用n*n的矩阵来表示，矩阵由0或1组成，i行j列为0表示i点和j点之间无边，否则i和j之间右边，请你设计算法判断任意两点是否连通。</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/97f32b1f.html" title="专业课第二次作业"><img src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第二次作业"/></a><div class="content"><a class="title" href="/posts/97f32b1f.html" title="专业课第二次作业">专业课第二次作业</a><time datetime="2026-01-04T15:12:48.856Z" title="发表于 2026-01-04 23:12:48">2026-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d8993ced.html" title="专业课细节"><img src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课细节"/></a><div class="content"><a class="title" href="/posts/d8993ced.html" title="专业课细节">专业课细节</a><time datetime="2023-11-27T14:29:50.000Z" title="发表于 2023-11-27 22:29:50">2023-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/78c7d46b.html" title="专业课代码复盘"><img src="/linear-gradient(102.7deg,#fddaff%208.2%25,#dfadfc%2019.6%25,#adcdfc%2036.8%25,#adfcf4%2073.2%25,#caf8d0%2090.9%25)" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课代码复盘"/></a><div class="content"><a class="title" href="/posts/78c7d46b.html" title="专业课代码复盘">专业课代码复盘</a><time datetime="2023-11-27T14:29:30.000Z" title="发表于 2023-11-27 22:29:30">2023-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/241af10e.html" title="测试卷1.0"><img src="/img/realquestion.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试卷1.0"/></a><div class="content"><a class="title" href="/posts/241af10e.html" title="测试卷1.0">测试卷1.0</a><time datetime="2022-09-11T14:10:14.000Z" title="发表于 2022-09-11 22:10:14">2022-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cf1b292.html" title="8512021"><img src="/img/realquestion.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="8512021"/></a><div class="content"><a class="title" href="/posts/cf1b292.html" title="8512021">8512021</a><time datetime="2022-09-11T13:56:58.000Z" title="发表于 2022-09-11 21:56:58">2022-09-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/realquestion.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://insistgang.github.io/posts/cf1b292.html'
+    this.page.identifier = 'posts/cf1b292.html'
+    this.page.title = '8512021'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/cos.jpg" alt="/img/cos.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/e350326d.html">腾讯云对象存储权限管理操作指南</a><div class="blog-slider__text">cos使用教程</div><a class="blog-slider__button" href="posts/e350326d.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/Linux.jpeg" alt="/img/Linux.jpeg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/7e2c5aa3.html">Linux常用文件管理命令</a><div class="blog-slider__text">快速学会使用Linux常用命令</div><a class="blog-slider__button" href="posts/7e2c5aa3.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/Linux.jpeg" alt="/img/Linux.jpeg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-03</span><a class="blog-slider__title" href="posts/fae31114.html">shell教程（一）基本语法</a><div class="blog-slider__text">快速学会使用shell</div><a class="blog-slider__button" href="posts/fae31114.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: '3lsiQ4pO8lx6JhDYSg8iRFk9-MdYXbMMI',
+          appKey: 'U1eyWgPlCCeNu8j30T5WYh5F',
+        }, {"serverURL":"https://3lsiQ4pO.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#49b1f5","color2":"#00c4b6","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://unpkg.zhimg.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/posts/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gitcalendar.akilar.top/api?insistgang",['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'],'insistgang')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
