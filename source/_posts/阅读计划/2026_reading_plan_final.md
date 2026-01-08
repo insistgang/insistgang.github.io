@@ -1,6 +1,12 @@
 ---
+title: 2026年阅读计划（最终版）
+date: 2026-01-01 00:00:00
+tags:
+  - 日记
+  - 计划
+  - 阅读
 cover: /img/riji.png
-abbrlink: '0'
+abbrlink: reading2026final
 ---
 # 2026年阅读计划
 
