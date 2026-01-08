@@ -992,8 +992,8 @@ footer_beautify:
 # see https://akilar.top/posts/f1004b1d/
 artitalk:
   enable:
-    card: true # 侧边栏开关
-    page: true #页面开关
+    card: false # 侧边栏开关（已禁用，加载失败）
+    page: false #页面开关（已禁用，加载失败）
   # 侧栏相关配置项
   priority: 5 #过滤器优先权
   enable_page: all # 应用页面
