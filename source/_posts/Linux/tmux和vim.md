@@ -7,7 +7,7 @@ tags:
 categories:
   - 教程
   - Linux
-cover: img/Linux.jpeg
+cover: /img/linux.png
 abbrlink: 17b304f4
 date: 2022-01-02 20:39:24
 ---

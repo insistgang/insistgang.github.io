@@ -6,10 +6,10 @@ tags:
 categories:
   - 教程
   - Linux
-cover: img/Linux.jpeg
+cover: /img/linux.png
 swiper_index: 1
 swiper_desc: 快速学会使用shell
-swiper_cover: /img/Linux.jpeg
+swiper_cover: //img/linux.png
 abbrlink: fae31114
 date: 2022-01-03 12:34:42
 ---
