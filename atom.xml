@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-08T14:13:29.957Z</updated>
+  <updated>2026-01-08T15:31:35.485Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -21,19 +21,12 @@
     <link href="https://insistgang.github.io/posts/c9d0e1f2.html"/>
     <id>https://insistgang.github.io/posts/c9d0e1f2.html</id>
     <published>2026-01-06T16:00:00.000Z</published>
-    <updated>2026-01-08T14:13:29.957Z</updated>
+    <updated>2026-01-08T15:31:35.485Z</updated>
     
     <content type="html"><![CDATA[<p><strong>上午 | 常熟研学考察</strong></p><ul><li>参观三家企业：北京大学苏州工程苏南研究院（材料方向，校政企合作）、常熟国家大学科技园（低空经济等高科技）、昆承湖周边</li><li>了解常熟人才引进策略，整体还不错</li></ul><p><strong>下午 | 尚湖游玩</strong></p><ul><li>5A级景区，风景很美，逛到2点集合</li><li>撞了9次钟，仪式感拉满，拍了一堆照片</li><li>4点回到学校</li></ul><p><strong>晚上 | 学习+折腾</strong></p><ul><li>看完罗永浩访谈Tim，全程3h，信息量巨大，整理了完整笔记</li><li>论文阅读Day06：ViT</li><li>把近30天论文重命名+编号，研究生系统录入科研成果</li><li>折腾ChatGPT老兵认证，Discord+电报搞了半小时没搞定，心态爆炸，止损</li></ul><h2 id="罗永浩访谈Tim笔记摘要"><a href="#罗永浩访谈Tim笔记摘要" class="headerlink" title="罗永浩访谈Tim笔记摘要"></a>罗永浩访谈Tim笔记摘要</h2><p><strong>关于Tim的成长路径：</strong></p><ul><li>出身杭州工薪家庭，童年全托幼儿园，初中沉迷《冒险岛》成绩暴跌，后赴英留学</li><li>高中因拍毕业典礼视频”首次获得现实世界认可”，从此入行</li><li>从个体户发展到160人团队，五年才20万粉，2019年爆发式增长</li></ul><p><strong>商业模式启发：</strong></p><ul><li>“羊毛不出在羊身上”——内容免费获客，电商变现，获客成本仅同行1/15</li><li>坚持不融资，保持财务独立</li><li>评测标”体验”不标”评测”，维持内容独立性</li></ul><p><strong>AI判断：</strong></p><ul><li>“AI将在2年内替代剪辑、制图等执行性工作，创意和人生经历成为核心竞争力”</li><li>团队已用AI做文稿校验和真实性核查</li></ul><p><strong>内容方法论：</strong></p><ul><li>“短剧化长视频”——20分钟拆成8个刺激点，提升完播率</li><li>高信息密度+真实感是核心</li></ul><h2 id="论文阅读笔记"><a href="#论文阅读笔记" class="headerlink" title="论文阅读笔记"></a>论文阅读笔记</h2><p><strong>Day06 | Vision Transformer（ViT）</strong></p><p>《AN IMAGE IS WORTH 16X16 WORDS》（ICLR 2021，Google Research）</p><p><strong>核心痛点：</strong> CNN的归纳偏置（局部性+平移等变性）是小数据时代的智慧，但数据量够大时，这些”人为设计”反而成了天花板。</p><p><strong>解法：</strong> 把图像当文本处理——图片切成16×16小方块，每块展平成token，加[class] token和位置编码，扔进Transformer Encoder。跟BERT一模一样。</p><p><strong>关键发现：</strong> ViT在JFT-300M（3亿图片）预训练后，ImageNet达88.55% top-1，干翻ResNet。但直接在ImageNet从头训练不如ResNet——数据不够时，CNN先验还是管用。</p><p><strong>读后感：</strong> Day03的Transformer把NLP从RNN带进Attention时代，今天ViT把CV从CNN带进Attention时代。”当数据够多时，让模型自己学，比人类设计卷积核更有效。”</p><h2 id="吃喝记录"><a href="#吃喝记录" class="headerlink" title="吃喝记录"></a>吃喝记录</h2><ul><li>中午：王四酒家（鳝丝+冬笋+大排+水果），本地特色，好吃</li><li>喝水：2000ml ✓</li><li>散步：5km ✓（尚湖暴走）</li></ul><h2 id="状态评分"><a href="#状态评分" class="headerlink" title="状态评分"></a>状态评分</h2><ul><li>精力：8/10（昨晚2点睡但今天还顶得住）</li><li>情绪：7/10（认证没搞定有点烦，但整体还行）</li></ul><h2 id="今日金句"><a href="#今日金句" class="headerlink" title="今日金句"></a>今日金句</h2><blockquote><p>人生不设限，做自己的冠军。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li>搞定博客整合</li><li>Gemini + ChatGPT认证（1h上限，搞不定就彻底放弃）</li><li>小程序改完部署</li></ul>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;上午 | 常熟研学考察&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;参观三家企业：北京大学苏州工程苏南研究院（材料方向，校政企合作）、常熟国家大学科技园（低空经济等高科技）、昆承湖周边&lt;/li&gt;
-&lt;li&gt;了解常熟人才引进策略，整体还不错&lt;/li&gt;
-&lt;/ul&gt;</summary>
-      
+    <summary type="html">常熟研学考察 + 尚湖游玩，撞钟9次</summary>
     
     
     
