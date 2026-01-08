@@ -4,10 +4,10 @@ tags: linux
 categories:
   - 教程
   - Linux
-cover: /img/linux.png
+cover: img/linux.png
 swiper_index: 2
 swiper_desc: 快速学会使用Linux常用命令
-swiper_cover: //img/linux.png
+swiper_cover: img/linux.png
 abbrlink: 7e2c5aa3
 date: 2022-01-01 19:31:39
 ---

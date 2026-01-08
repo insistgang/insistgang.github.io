@@ -6,7 +6,7 @@ tags:
 categories:
   - 教程
   - Linux
-cover: /img/linux.png
+cover: img/linux.png
 abbrlink: 70f4e8c0
 date: 2022-01-06 22:53:50
 ---
