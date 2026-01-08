@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://insistgang.github.io/posts/e350326d.html</loc>
+    
+    <lastmod>2026-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://insistgang.github.io/posts/c3d4e5f6.html</loc>
     
     <lastmod>2026-01-08</lastmod>
@@ -599,15 +608,6 @@
     <loc>https://insistgang.github.io/posts/1d5e8ad5.html</loc>
     
     <lastmod>2022-01-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://insistgang.github.io/posts/e350326d.html</loc>
-    
-    <lastmod>2022-01-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
