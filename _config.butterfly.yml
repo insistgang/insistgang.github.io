@@ -1011,9 +1011,9 @@ artitalk:
   exclude:
     - /artitalk/
     - /posts/ #需要abbrlink插件支持
-  js: https://unpkg.zhimg.com/artitalk
-  card_css: https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card.css
-  card_visual_js: https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card_visual.js
+  js: https://unpkg.com/artitalk
+  card_css: https://unpkg.com/hexo-butterfly-artitalk-pro/lib/card.css
+  card_visual_js: https://unpkg.com/hexo-butterfly-artitalk-pro/lib/card_visual.js
   option:
     serverURL: https://3lsiQ4pO.api.lncldglobal.com #将此处的********替换为你的appId前八位
     lang: zh
