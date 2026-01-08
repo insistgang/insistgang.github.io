@@ -1277,6 +1277,13 @@ hexo-butterfly-footer-beautify@^1.0.6:
   dependencies:
     pug "^3.0.0"
 
+hexo-butterfly-git-gitcalendar@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/hexo-butterfly-git-gitcalendar/-/hexo-butterfly-git-gitcalendar-1.1.0.tgz"
+  integrity sha512-38L62HiR0+PgmutT4KNW6ntb164dCEByFoFu3UW4lZxjYDFpRg1EqZlKSvwBftEq4INkBj6YVO1lnIIvPk9Q2g==
+  dependencies:
+    pug "^3.0.0"
+
 hexo-cli@^4.0.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/hexo-cli/-/hexo-cli-4.3.0.tgz"
@@ -1309,13 +1316,6 @@ hexo-electric-clock@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/hexo-electric-clock/-/hexo-electric-clock-1.1.0.tgz"
   integrity sha512-oNXW7PGWgm7ZGRWhswDiHsFNdOaW+A1+2xI3kAwrcaiI/abp0/ulgAUmaJSsXPb1Suu80Qqzgr8dHNMl8/kotg==
-
-hexo-filter-gitcalendar@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/hexo-filter-gitcalendar/-/hexo-filter-gitcalendar-1.0.8.tgz"
-  integrity sha512-nIsp2EsZOqhdqJd4AtUZgJclVt51a8wCDKcaYSbg2Qy/VlrZTbo0vInhNPewWfKe5kVSKD3oFSDwSYdVT3sS/w==
-  dependencies:
-    pug "^3.0.0"
 
 hexo-front-matter@^1.0.0:
   version "1.0.0"
@@ -2332,6 +2332,20 @@ pug-code-gen@^3.0.2:
     void-elements "^3.1.0"
     with "^7.0.0"
 
+pug-code-gen@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/pug-code-gen/-/pug-code-gen-3.0.3.tgz"
+  integrity sha512-cYQg0JW0w32Ux+XTeZnBEeuWrAY7/HNE6TWnhiHGnnRYlCgyAUPoyh9KzCMa9WhcJlJ1AtQqpEYHc+vbCzA+Aw==
+  dependencies:
+    constantinople "^4.0.1"
+    doctypes "^1.1.0"
+    js-stringify "^1.0.2"
+    pug-attrs "^3.0.0"
+    pug-error "^2.1.0"
+    pug-runtime "^3.0.1"
+    void-elements "^3.1.0"
+    with "^7.0.0"
+
 pug-error@^1.3.3:
   version "1.3.3"
   resolved "https://registry.npmjs.org/pug-error/-/pug-error-1.3.3.tgz"
@@ -2341,6 +2355,11 @@ pug-error@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/pug-error/-/pug-error-2.0.0.tgz"
   integrity sha512-sjiUsi9M4RAGHktC1drQfCr5C5eriu24Lfbt4s+7SykztEOwVZtbFk1RRq0tzLxcMxMYTBR+zMQaG07J/btayQ==
+
+pug-error@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/pug-error/-/pug-error-2.1.0.tgz"
+  integrity sha512-lv7sU9e5Jk8IeUheHata6/UThZ7RK2jnaaNztxfPYUY+VxZyk/ePVaNZ/vwmH8WqGvDz3LrNYt/+gA55NDg6Pg==
 
 pug-filters@^3.1.1:
   version "3.1.1"
