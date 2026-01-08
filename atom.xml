@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-08T15:31:35.485Z</updated>
+  <updated>2026-01-08T15:32:17.580Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年1月8日</title>
+    <link href="https://insistgang.github.io/posts/c3d4e5f6.html"/>
+    <id>https://insistgang.github.io/posts/c3d4e5f6.html</id>
+    <published>2026-01-07T16:00:00.000Z</published>
+    <updated>2026-01-08T15:32:17.580Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>下午</strong></p><ul><li>12:30 出宿舍，中午鸡腿饭，1点回实验室</li><li>GLM Pro Plan 旺仔任务 ✅ 成功送货</li><li>Discord 注册成功但进不了群，自动化流程卡住</li><li>Telegram 搞到5积分，输入失败还被扣完了，血亏</li><li>来回折腾到3点，开始有点累</li></ul><p><strong>下午续</strong></p><ul><li>3点后转战个人博客搭建，解决了GitHub日历不显示 + 图片更新问题</li><li>4点搞定博客基础架构，后续规划：学习日志/日记/论文笔记全部托管，用 GLM API + Claude Code 自动化管理</li><li>研究极客时间内容转PDF脚本，找到开源方案并成功下载课程</li><li>学了 Claude Code 的 SDD 分层方法论（spec/plan/tasks/constitution），给自己的 API 项目定了大项目级别</li></ul><p><strong>晚上</strong></p><ul><li>5:30 吃饭，食堂快餐（胡萝卜牛腩 + 椒盐鸡柳）</li><li>7点散步，8点去好想来买了200块零食，来回溜达了1小时</li><li>继续推进课题：整理项目文档 + 论文知识点梳理 + 数据解法深入理解</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 7/10，情绪 5/10</p><p>事情太多，多线程并发把注意力打散了，心态有点崩。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：❌ 没吃</li><li>午餐：鸡腿饭</li><li>晚餐：胡萝卜牛腩 + 椒盐鸡柳</li><li>散步：✅ 1小时</li><li>喝水：✅ 2000ml</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>极客时间PDF下载流程跑通</li><li>博客GitHub日历问题解决</li><li>SDD方法论入脑，给API项目定了架构方向</li><li>FPN论文读完，串起了特征连接的进化线</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>cookie认证下载一直出问题</li><li>昨晚微信读书忘打卡，泪目</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>一颗向上的心脏，不应该有一副向下的躯体。</p></blockquote><p>不要精分，一段时间专注做一件事，效率自然会高。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 去50所好好上班</li><li><input disabled="" type="checkbox"> 闲下来折腾小程序</li></ul><hr><h2 id="今日论文-day07"><a href="#今日论文-day07" class="headerlink" title="今日论文 #day07"></a>今日论文 #day07</h2><p><strong>FPN《Feature Pyramid Networks for Object Detection》</strong><br>CVPR 2017 | FAIR | Tsung-Yi Lin等</p><h3 id="核心痛点"><a href="#核心痛点" class="headerlink" title="核心痛点"></a>核心痛点</h3><p>物体检测的多尺度困境——大物体需要浅层高分辨率特征，小物体需要深层强语义特征。传统方案要么只用单尺度特征（小物体看不清），要么搞图像金字塔（计算量爆炸）。</p><h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>既然输入金字塔太慢，那就构建<strong>特征金字塔</strong>。</p><p>FPN核心是”自顶向下 + 横向连接”：</p><ul><li>自顶向下路径：从深层强语义特征开始，逐层上采样</li><li>横向连接：每层融合同分辨率的底层特征（1×1卷积后相加）</li><li>结果：每层都有”高分辨率 + 强语义”，大车小车都能看清</li></ul><h3 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h3><p>几乎零成本的大幅提升：</p><ul><li>AP从31.6→33.9（+2.3）</li><li>小物体APs从13.2→17.8（+4.6）——FPN杀手锏</li><li>速度反而更快：FPS从3→6.7</li></ul><p>消融实验证明：横向连接最关键，”分辨率”和”语义”缺一不可。</p><h3 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h3><p>从Day04 ResNet的”+x” shortcut，到Day05 DenseNet的”[x0,x1,…]”密集拼接，再到Day07 FPN的金字塔融合——深度学习的进化史，就是一部”特征连接方式”的探索史。FPN把CNN不同层的特征串成了糖葫芦，每层都能吃到最甜的那一口。这个架构后来成了目标检测的”标配”，连YOLO系列都在用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;下午&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;12:30 出宿舍，中午鸡腿饭，1点回实验室&lt;/li&gt;
+&lt;li&gt;GLM Pro Plan 旺仔任务 ✅ 成功送货&lt;/li&gt;
+&lt;li&gt;Discord 注册成功但进不了群，自动化流程卡住&lt;/li&gt;
+&lt;li&gt;Tel</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月7日</title>
@@ -351,33 +378,6 @@
       
     <summary type="html">&lt;hr&gt;
 &lt;h2 id=&quot;🌞-今日完成&quot;&gt;&lt;a href=&quot;#🌞-今日完成&quot; class=&quot;headerlink&quot; title=&quot;🌞 今日完成&quot;&gt;&lt;/a&gt;🌞 今日完成&lt;/h2&gt;&lt;h3 id=&quot;主线任务&quot;&gt;&lt;a href=&quot;#主线任务&quot; class=&quot;headerlink&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025年1月8日</title>
-    <link href="https://insistgang.github.io/posts/c3d4e5f6.html"/>
-    <id>https://insistgang.github.io/posts/c3d4e5f6.html</id>
-    <published>2025-01-07T16:00:00.000Z</published>
-    <updated>2026-01-08T14:13:12.066Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>下午</strong></p><ul><li>12:30 出宿舍，中午鸡腿饭，1点回实验室</li><li>GLM Pro Plan 旺仔任务 ✅ 成功送货</li><li>Discord 注册成功但进不了群，自动化流程卡住</li><li>Telegram 搞到5积分，输入失败还被扣完了，血亏</li><li>来回折腾到3点，开始有点累</li></ul><p><strong>下午续</strong></p><ul><li>3点后转战个人博客搭建，解决了GitHub日历不显示 + 图片更新问题</li><li>4点搞定博客基础架构，后续规划：学习日志/日记/论文笔记全部托管，用 GLM API + Claude Code 自动化管理</li><li>研究极客时间内容转PDF脚本，找到开源方案并成功下载课程</li><li>学了 Claude Code 的 SDD 分层方法论（spec/plan/tasks/constitution），给自己的 API 项目定了大项目级别</li></ul><p><strong>晚上</strong></p><ul><li>5:30 吃饭，食堂快餐（胡萝卜牛腩 + 椒盐鸡柳）</li><li>7点散步，8点去好想来买了200块零食，来回溜达了1小时</li><li>继续推进课题：整理项目文档 + 论文知识点梳理 + 数据解法深入理解</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 7/10，情绪 5/10</p><p>事情太多，多线程并发把注意力打散了，心态有点崩。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：❌ 没吃</li><li>午餐：鸡腿饭</li><li>晚餐：胡萝卜牛腩 + 椒盐鸡柳</li><li>散步：✅ 1小时</li><li>喝水：✅ 2000ml</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>极客时间PDF下载流程跑通</li><li>博客GitHub日历问题解决</li><li>SDD方法论入脑，给API项目定了架构方向</li><li>FPN论文读完，串起了特征连接的进化线</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>cookie认证下载一直出问题</li><li>昨晚微信读书忘打卡，泪目</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>一颗向上的心脏，不应该有一副向下的躯体。</p></blockquote><p>不要精分，一段时间专注做一件事，效率自然会高。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 去50所好好上班</li><li><input disabled="" type="checkbox"> 闲下来折腾小程序</li></ul><hr><h2 id="今日论文-day07"><a href="#今日论文-day07" class="headerlink" title="今日论文 #day07"></a>今日论文 #day07</h2><p><strong>FPN《Feature Pyramid Networks for Object Detection》</strong><br>CVPR 2017 | FAIR | Tsung-Yi Lin等</p><h3 id="核心痛点"><a href="#核心痛点" class="headerlink" title="核心痛点"></a>核心痛点</h3><p>物体检测的多尺度困境——大物体需要浅层高分辨率特征，小物体需要深层强语义特征。传统方案要么只用单尺度特征（小物体看不清），要么搞图像金字塔（计算量爆炸）。</p><h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>既然输入金字塔太慢，那就构建<strong>特征金字塔</strong>。</p><p>FPN核心是”自顶向下 + 横向连接”：</p><ul><li>自顶向下路径：从深层强语义特征开始，逐层上采样</li><li>横向连接：每层融合同分辨率的底层特征（1×1卷积后相加）</li><li>结果：每层都有”高分辨率 + 强语义”，大车小车都能看清</li></ul><h3 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h3><p>几乎零成本的大幅提升：</p><ul><li>AP从31.6→33.9（+2.3）</li><li>小物体APs从13.2→17.8（+4.6）——FPN杀手锏</li><li>速度反而更快：FPS从3→6.7</li></ul><p>消融实验证明：横向连接最关键，”分辨率”和”语义”缺一不可。</p><h3 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h3><p>从Day04 ResNet的”+x” shortcut，到Day05 DenseNet的”[x0,x1,…]”密集拼接，再到Day07 FPN的金字塔融合——深度学习的进化史，就是一部”特征连接方式”的探索史。FPN把CNN不同层的特征串成了糖葫芦，每层都能吃到最甜的那一口。这个架构后来成了目标检测的”标配”，连YOLO系列都在用。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;下午&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;12:30 出宿舍，中午鸡腿饭，1点回实验室&lt;/li&gt;
-&lt;li&gt;GLM Pro Plan 旺仔任务 ✅ 成功送货&lt;/li&gt;
-&lt;li&gt;Discord 注册成功但进不了群，自动化流程卡住&lt;/li&gt;
-&lt;li&gt;Tel</summary>
       
     
     
