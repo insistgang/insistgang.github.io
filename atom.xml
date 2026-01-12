@@ -41,6 +41,29 @@
   </entry>
   
   <entry>
+    <title>2026年1月12日</title>
+    <link href="https://insistgang.github.io/posts/o2p3q4r5.html"/>
+    <id>https://insistgang.github.io/posts/o2p3q4r5.html</id>
+    <published>2026-01-11T16:00:00.000Z</published>
+    <updated>2026-01-12T08:19:31.893Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 完善小程序bug —— 解决80%，发布体验版</li><li><input checked="" disabled="" type="checkbox"> 仔细读论文 —— Day11 Focal Loss</li><li><input checked="" disabled="" type="checkbox"> 学好Claude Code并嵌入自动化流程中 —— 笔记本WSL部署完成</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点接到备案电话确认信息，发现问题被打回</li><li>重新修改后再次提交审核</li></ul><p><strong>下午 @ 实验室</strong></p><ul><li>Claude Code部署：放弃装Linux改用WSL方案（务实决策，避免踩坑）</li><li>笔记本安装WSL Ubuntu，解决代理转端口等问题</li><li>用anyrouter API分析整个磁盘结构，清理临时文件</li><li>整个过程花了2个多小时，踩了一些坑但都解决了</li></ul><p><strong>小程序进展</strong></p><ul><li>发布体验版！</li><li>解决80%的代码问题</li><li>云端备案流程推进中（等审核）</li><li>周三上线信心很大</li></ul><p><strong>晚上</strong></p><ul><li>和纪元出去吃烧烤</li><li>读完Day11论文</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 8/10，情绪 8/10</p><p>今天的关键字：<strong>执行力</strong>。拉满，无敌的执行力，任何困难都是纸老虎。又回到那个无所不能的我了。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：食堂快餐，两荤一素 21元</li><li>晚餐：和纪元吃烧烤</li><li>散步：✅</li><li>喝水：3000ml ✅✅（超额完成！配合番茄钟）</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>WSL方案比装Linux更务实，笔记本Claude Code环境搭建完成</li><li>小程序从”推进中”变成”体验版已发布”，质的飞跃</li><li>关于Linux的决策：做不完就换方案，不拖延</li></ul><h2 id="今日论文-day11"><a href="#今日论文-day11" class="headerlink" title="今日论文 #day11"></a>今日论文 #day11</h2><p><strong>Focal Loss《Focal Loss for Dense Object Detection》</strong><br>ICCV 2017 | FAIR | Tsung-Yi Lin等</p><p>Day07 FPN的作者们又来了。这次解决单阶段检测器的核心痛点：class imbalance（正负样本比1:10000）。</p><p>核心思想：FL(p_t) = -(1-p_t)^gamma * log(p_t)，让模型忽略easy examples，聚焦hard examples。gamma=2时，单阶段RetinaNet首次干翻两阶段检测器。</p><p>启发：有时候不需要改架构，只需要改loss function就能突破瓶颈。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>执行力是一切的根本。不要想太多，干就完了。任何困难都是纸老虎。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：完成所有bug修复</li><li><input disabled="" type="checkbox"> 小程序：准备部署环境</li><li><input disabled="" type="checkbox"> 论文Day12</li><li><input disabled="" type="checkbox"> 继续完善个人智能体</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;chec</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第2周复盘（1.5-1.11）</title>
     <link href="https://insistgang.github.io/posts/week2review.html"/>
     <id>https://insistgang.github.io/posts/week2review.html</id>
@@ -467,29 +490,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;📅-2025年12月31日-·-跨年日复盘&quot;&gt;&lt;a href=&quot;#📅-2025年12月31日-·-跨年日复盘&quot; class=&quot;headerlink&quot; title=&quot;📅 2025年12月31日 · 跨年日复盘&quot;&gt;&lt;/a&gt;📅 2025年12月31日 · 跨年日</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025年12月30日</title>
-    <link href="https://insistgang.github.io/posts/a1b2c3d4.html"/>
-    <id>https://insistgang.github.io/posts/a1b2c3d4.html</id>
-    <published>2025-12-29T16:00:00.000Z</published>
-    <updated>2026-01-08T15:40:42.121Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h2 id="🌞-今日完成"><a href="#🌞-今日完成" class="headerlink" title="🌞 今日完成"></a>🌞 今日完成</h2><h3 id="主线任务"><a href="#主线任务" class="headerlink" title="主线任务"></a>主线任务</h3><ul><li>✅ <strong>50的A4纸映射代码交付</strong>——拖了两天的硬骨头，今天啃掉了</li></ul><h3 id="财务整理"><a href="#财务整理" class="headerlink" title="财务整理"></a>财务整理</h3><ul><li>✅ 取消3个大模型订阅（Claude/ChatGPT/Gemini）——<strong>每月省60美元</strong></li><li>✅ 淘宝确认收货 + 联系商家返50</li><li>✅ 还花呗</li><li>✅ 理财计划梳理完成</li><li>✅ 中国银行充话费（随机立减，减了2毛…）</li><li>⏳ 花呗关闭未成功（等闲鱼订单确认收货）</li></ul><h3 id="生活杂务"><a href="#生活杂务" class="headerlink" title="生活杂务"></a>生活杂务</h3><ul><li>✅ 拿快递（贴膜+抽纸，跑了两趟，一个楼下一个南门）</li><li>✅ 换手机壁纸——<strong>1块钱解决了拖很久的事</strong></li><li>✅ 学生证补办材料准备好</li></ul><h3 id="学习-会议"><a href="#学习-会议" class="headerlink" title="学习/会议"></a>学习/会议</h3><ul><li>✅ 参加人工智能+大会</li><li>✅ 整理贺龙秘书长报告要点（60年周期、上海AI布局、国务院行动计划）</li></ul><h3 id="工具配置"><a href="#工具配置" class="headerlink" title="工具配置"></a>工具配置</h3><ul><li>✅ 配置AnyRouter + Claude Code（Windows）</li><li>✅ 了解Linux安装方案（计划1月1日在电脑B上装）</li></ul><hr><h2 id="🔋-能量管理"><a href="#🔋-能量管理" class="headerlink" title="🔋 能量管理"></a>🔋 能量管理</h2><table><thead><tr><th align="center">维度</th><th align="center">评分</th></tr></thead><tbody><tr><td align="center">🧠 认知能量</td><td align="center">8/10</td></tr><tr><td align="center">💪 身体能量</td><td align="center">7/10</td></tr><tr><td align="center">❤️ 情绪能量</td><td align="center">9/10</td></tr><tr><td align="center">🎯 意志能量</td><td align="center">6/10</td></tr></tbody></table><hr><h2 id="👥-人际互动"><a href="#👥-人际互动" class="headerlink" title="👥 人际互动"></a>👥 人际互动</h2><p><strong>发小电话：</strong> 聊了大环境、找工作意向、恋爱感情方向。</p><p>我说：<strong>大环境不好，也有赚大钱的；大环境好，也有赚不了钱的。</strong></p><hr><h2 id="🤔-今日反思"><a href="#🤔-今日反思" class="headerlink" title="🤔 今日反思"></a>🤔 今日反思</h2><p><strong>关键时刻：</strong> 在做50任务时，打开VSCode后一度逃到博客项目，又想去整理手机桌面、补办学生证……最后还是拉回来，把代码交付了。</p><p><strong>收获：</strong> </p><ol><li>逃避的冲动会一直找新借口，识别它，然后选难的那条路</li><li>珍惜时间</li><li>花小钱解决拖延问题（壁纸1块钱、充话费方案不用到处比）</li></ol><p><strong>小确幸：</strong> 王者荣耀上王者50星 👑</p><hr><h2 id="📅-明日待办（12月31日）"><a href="#📅-明日待办（12月31日）" class="headerlink" title="📅 明日待办（12月31日）"></a>📅 明日待办（12月31日）</h2><ul><li><input disabled="" type="checkbox"> 学生证补办：带一寸照 → 辅导员签字盖章 → 行政楼A119</li></ul><h2 id="📅-1月1日待办"><a href="#📅-1月1日待办" class="headerlink" title="📅 1月1日待办"></a>📅 1月1日待办</h2><ul><li><input disabled="" type="checkbox"> 充话费（会员任我选，200送20）</li><li><input disabled="" type="checkbox"> 整理手机app</li><li><input disabled="" type="checkbox"> 电脑B装Linux + 配置Claude Code</li></ul><hr><h2 id="📋-1月计划要点"><a href="#📋-1月计划要点" class="headerlink" title="📋 1月计划要点"></a>📋 1月计划要点</h2><p><strong>核心目标：体育生小程序1月中旬上线</strong></p><ul><li>第一周：需求确认 + 搭框架 + agents课程</li><li>第二周：核心开发</li><li>第三周：上线</li><li>第四周：收尾 + 启动小论文</li></ul><p><strong>放到2月：</strong> 小论文投稿、大论文复现、违建数据采集</p><hr><h2 id="✨-今日金句"><a href="#✨-今日金句" class="headerlink" title="✨ 今日金句"></a>✨ 今日金句</h2><p><strong>择难路，未有疑。</strong></p><hr><h2 id="📊-今日账本"><a href="#📊-今日账本" class="headerlink" title="📊 今日账本"></a>📊 今日账本</h2><table><thead><tr><th align="center">项目</th><th align="center">金额</th></tr></thead><tbody><tr><td align="center">壁纸</td><td align="center">-1元</td></tr><tr><td align="center">取消订阅</td><td align="center">+60美元/月（省下）</td></tr><tr><td align="center">商家返现</td><td align="center">+50元（待到账）</td></tr><tr><td align="center">话费立减</td><td align="center">-0.2元（哭）</td></tr></tbody></table><hr><blockquote><p>2025年倒数第二天，把拖了两天的硬任务干掉了。</p><p>明天是2025最后一天，收好尾，迎接2026。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;🌞-今日完成&quot;&gt;&lt;a href=&quot;#🌞-今日完成&quot; class=&quot;headerlink&quot; title=&quot;🌞 今日完成&quot;&gt;&lt;/a&gt;🌞 今日完成&lt;/h2&gt;&lt;h3 id=&quot;主线任务&quot;&gt;&lt;a href=&quot;#主线任务&quot; class=&quot;headerlink&quot;</summary>
       
     
     
