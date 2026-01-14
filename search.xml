@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>2026年1月14日</title>
+      <link href="/posts/w4x5y6z7.html"/>
+      <url>/posts/w4x5y6z7.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）—— 没来得及</li><li><input checked="" disabled="" type="checkbox"> 小程序：给客户测试使用 —— 用户协议搞定了，其他bug都修复好了</li><li><input checked="" disabled="" type="checkbox"> 论文Day13 —— DAB-DETR</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml —— 喝水完成，运动换成健身房</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点小程序审核打电话来了，备案应该快通过了</li><li>11点才醒，起床称体重：96.25kg（比12月初涨了1.5kg，得注意）</li><li>12点出宿舍，12:30吃了新疆炒米粉，酱料比较多</li></ul><p><strong>下午 @ 实验室 + 摸鱼</strong></p><p>到实验室想着把Claude Code的GLM迁移到anyrouter里，这样能统一调度修bug、完善智能体。用户协议搞定了，界面和bug也修复好了。</p><p>后来和龙哥、涂涂、仕缘去斯坦福大草坪打牌，然后一起去一食堂聚餐。</p><p><strong>晚上</strong></p><ul><li>吃完饭和学妹去健身房锻炼1h，力量恢复性训练</li><li>回来看KPL比赛：狼队1:3输给DYG，我的主队WB被AG 2:1了（截止10:30），心痛</li><li>下午开始喝水，1h水+1h海之言，总算把水量补上了</li></ul><p>今天没好好学习，光顾着玩了，得给自己上点压力。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 8/10，情绪 8/10</p><p>整体状态还行，健身房练完挺舒服的，算是给自己一些状态调整。但学习效率不高，明天得补回来。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day13 DAB-DETR</td></tr><tr><td>运动</td><td>✅ 打牌 + 健身房1h力量训练</td></tr><tr><td>喝水</td><td>✅ 1h水 + 1h海之言</td></tr><tr><td>饮食</td><td>午：新疆炒米粉（酱多）/ 晚：食堂三菜（胡萝卜牛肉+小炒肉+西红柿鸡蛋）</td></tr></tbody></table><h2 id="今日论文-day13"><a href="#今日论文-day13" class="headerlink" title="今日论文 #day13"></a>今日论文 #day13</h2><p><strong>DAB-DETR《DAB-DETR: Dynamic Anchor Boxes are Better Queries for DETR》</strong><br>ICLR 2022 | 清华 &amp; IDEA &amp; 港科大 | Shilong Liu 等</p><p>Day08 DETR说「不要anchor」，Day12 YOLOX说「YOLO也不要anchor」。今天DAB-DETR说「在DETR里，anchor其实很有用」——但这不是倒退。</p><p>核心发现：DETR的learnable query注意力是多模态的，一个query同时关注多个位置，导致定位不准、收敛慢（500 epochs）。</p><p>解法：用4D anchor box (x, y, w, h) 作为query，三大改进：</p><ol><li>Anchor as Query：直接学习4D坐标</li><li>Layer-by-layer Update：每层decoder预测相对偏移，逐层精修</li><li>Width &amp; Height Modulation：用宽高调制attention map</li></ol><p>关键结果：DAB-DETR-DC5-R50（50 epochs）达到45.7 AP，DETR要500 epochs才能43.3 AP。</p><p>启发：DAB-DETR的anchor是动态更新的，不是手工聚类的。这启发了后续DN-DETR、DINO等工作。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>今天放松了一天，健身房练完挺舒服的。但也得认清现实——玩可以，但不能天天玩，明天该补的得补上。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用</li><li><input disabled="" type="checkbox"> 论文Day14</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2026年1月13日</title>
       <link href="/posts/s3t4u5v6.html"/>
       <url>/posts/s3t4u5v6.html</url>
