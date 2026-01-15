@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>2026年1月15日</title>
+      <link href="/posts/w4x5y6z8.html"/>
+      <url>/posts/w4x5y6z8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）—— 进展中，错题库功能完善</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用—— 发布排队中</li><li><input checked="" disabled="" type="checkbox"> 论文Day14—— Conditional DETR ✅</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml—— 30分钟散步，2500ml ✅</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点多醒，重新看微信小程序用户协议，重新排队发布</li><li>和张老师约好1月20日美赛学生培训</li><li>问朋友国洋和枫溪垂钓价格：420一箱和600一箱</li></ul><p><strong>中午</strong></p><ul><li>吃鸡腿饭</li></ul><p><strong>下午 @ 实验室</strong></p><ul><li>做了财务复盘和今日计划</li><li>问学妹美赛注意事项，需要学一点美赛核心内容然后和学弟学妹讲</li><li>7点多困了，去师弟实验室睡到8点，感觉好多了</li></ul><p><strong>晚上</strong></p><ul><li>整理Claude聊天记录，整合成Obsidian个人知识库（含自动化部署）</li><li>涂涂推了老板微信，送了烧烤</li><li>思宇带了海底捞水果（黄瓜、哈密瓜），和龙哥分了</li><li>21:30-22:00 散步30分钟</li><li>看KPL春季赛：情久3:0TES, TTG 3:1Hero, DRG 0:2KSG（截止写日记）</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><p>下午补觉后状态好多了，今天整体节奏不错。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day14 Conditional DETR</td></tr><tr><td>运动</td><td>✅ 散步30分钟</td></tr><tr><td>喝水</td><td>✅ 2500ml</td></tr><tr><td>饮食</td><td>午：鸡腿饭 / 晚：烧烤</td></tr></tbody></table><h2 id="今日论文-day14"><a href="#今日论文-day14" class="headerlink" title="今日论文 #day14"></a>今日论文 #day14</h2><p><strong>Conditional DETR《Conditional DETR for Fast Training Convergence》</strong><br>ICCV 2021 | 中科大 &amp; 北大 &amp; MSRA | Depu Meng 等</p><p>Day08 DETR用learnable query做检测，但收敛需要500 epochs。今天Conditional DETR揭示了根本原因：<strong>DETR的spatial query是image-agnostic的</strong>，没有利用当前decoder embedding包含的位置信息。</p><p><strong>核心解法：Conditional Spatial Query</strong></p><p>核心公式：pq = λq ⊙ ps</p><ul><li>ps：reference point的sinusoidal positional embedding</li><li>λq = FFN(f)：从decoder embedding学习transformation</li><li>通过element-wise乘法，让spatial query同时编码位置和位移信息</li></ul><p><strong>关键结果</strong>：Conditional DETR-R50（50 epochs）40.9 AP，DETR-R50要500 epochs才42.0 AP。收敛加速6.7×。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>今日金句：<strong>道路总比困难多，困难一定都能解决的。</strong></p></blockquote><p>今天学会了看日志和分析日志内容。小程序bug修复思路：通过Git想办法恢复，数据库能看到功能是否写入，这样就知道前端能不能正常显示。当数据库有内容但前端不能显示时，看日志发现bug问题。现在控制台很少输出错误信息了，后续改bug只要看日志即可。</p><p>整理Claude聊天记录做成Obsidian知识库，感觉自己的知识体系更清晰了。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 美赛：学一点核心内容，准备给学弟学妹讲</li><li><input disabled="" type="checkbox"> 论文Day15（DINO）</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2026年1月14日</title>
       <link href="/posts/w4x5y6z7.html"/>
       <url>/posts/w4x5y6z7.html</url>
