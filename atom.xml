@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-17T14:34:47.529Z</updated>
+  <updated>2026-01-18T15:11:19.130Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年1月18日</title>
+    <link href="https://insistgang.github.io/posts/w4x5y6z1.html"/>
+    <id>https://insistgang.github.io/posts/w4x5y6z1.html</id>
+    <published>2026-01-17T16:00:00.000Z</published>
+    <updated>2026-01-18T15:11:19.130Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input checked="" disabled="" type="checkbox"> 论文Day16（RT-DETR）—— 昨天已完成</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>7点多醒，玩了会手机，又睡到了12点半</li><li>中午朋友点了快餐外卖</li></ul><p><strong>下午</strong></p><ul><li>研究朋友的研究方向和研究内容</li><li>朋友早我两年毕业，有很多经验可以学习</li><li>去漕河湿地公园散步</li></ul><p><strong>晚上</strong></p><ul><li>吃了鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕，很好吃</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>⏸️ 暂停朋友圈打卡，准备开始写自己的小论文</td></tr><tr><td>运动</td><td>✅ 漕河湿地公园散步，1万+步</td></tr><tr><td>喝水</td><td>✅ 3L</td></tr><tr><td>饮食</td><td>午：快餐外卖 / 晚：鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>真的还是要去猛猛干，赶紧要把小论文搞出来，多想着提升自己。</strong></p></blockquote><p>苏州之旅非常快乐，和攀哥哥聊了一天很开心。</p><p>朋友圈论文打卡暂停，马上开始写自己的第一篇小论文，把写竞赛的方法迁移到写论文。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第3周复盘（1.12-1.18）</title>
+    <link href="https://insistgang.github.io/posts/week3review.html"/>
+    <id>https://insistgang.github.io/posts/week3review.html</id>
+    <published>2026-01-17T16:00:00.000Z</published>
+    <updated>2026-01-18T15:13:27.882Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="📊-本周概览"><a href="#📊-本周概览" class="headerlink" title="📊 本周概览"></a>📊 本周概览</h2><p>本周主题是”完成 &gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的bug修复，论文阅读连续推进，周六苏州之行带来了很好的放松和新的思考。</p><p>核心词：<strong>小程序收尾、论文进阶、苏州充电</strong></p><hr><h2 id="🎯-关键成果"><a href="#🎯-关键成果" class="headerlink" title="🎯 关键成果"></a>🎯 关键成果</h2><ol><li><strong>小程序项目</strong>：从”修bug中”到”95%可用”，核心功能基本完成，只剩错题保存重做和收藏两个功能</li><li><strong>论文阅读</strong>：Day12-16连续推进（YOLOX、DAB-DETR、Conditional DETR、DINO、RT-DETR），深入理解DETR系列演进</li><li><strong>大论文方向</strong>：和组长讨论确定小目标检测可融入大论文，肝硬化医学影像方向与实验室核心论文高度相关</li><li><strong>人生里程碑</strong>：1月16日是人生第10000天</li><li><strong>苏州充电</strong>：和峰哥、攀哥、任总相聚，与导师汇报50实习结束，单纯的快乐</li><li><strong>AI产品认知</strong>：和andy聊天，认识到”还是要抓住这个AI时代”</li></ol><hr><h2 id="💪-习惯追踪"><a href="#💪-习惯追踪" class="headerlink" title="💪 习惯追踪"></a>💪 习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成天数</th><th>完成率</th></tr></thead><tbody><tr><td>论文阅读</td><td>5/7</td><td>71%</td></tr><tr><td>散步/运动</td><td>7/7</td><td>100%</td></tr><tr><td>饮水2000ml</td><td>7/7</td><td>100%</td></tr></tbody></table><hr><h2 id="🔄-模式识别"><a href="#🔄-模式识别" class="headerlink" title="🔄 模式识别"></a>🔄 模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><ul><li>周二、周三状态最佳（精力8/10）</li><li>周四、周五情绪提升（7/10）</li><li>周六苏州玩了一天，单纯不思考，幸福快乐（情绪9/10）</li><li>周日休息后精力恢复（6/10），受到攀哥鼓舞</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ul><li>**小程序”最后两个功能”**：错题保存重做和收藏连续多日未完成，说明存在技术或心理阻力</li><li><strong>多线程问题</strong>：同时推进小程序、论文、50所工作、美赛准备，注意力分散</li></ul><h3 id="做得顺-vs-阻力大的事"><a href="#做得顺-vs-阻力大的事" class="headerlink" title="做得顺 vs 阻力大的事"></a>做得顺 vs 阻力大的事</h3><table><thead><tr><th>顺畅</th><th>阻力大</th></tr></thead><tbody><tr><td>论文阅读（已成习惯）</td><td>小程序最后两个bug</td></tr><tr><td>散步/运动</td><td>50所内容整理备份</td></tr><tr><td>和朋友/导师交流</td><td>装Linux（未开始）</td></tr></tbody></table><hr><h2 id="❌-未完成事项"><a href="#❌-未完成事项" class="headerlink" title="❌ 未完成事项"></a>❌ 未完成事项</h2><table><thead><tr><th>任务</th><th>原因</th></tr></thead><tbody><tr><td>小程序部署上线</td><td>备案审核中，最后两个bug未完成</td></tr><tr><td>小程序：错题保存重做、收藏功能</td><td>技术卡点 + 注意力分散</td></tr><tr><td>客户测试</td><td>等待bug修复</td></tr><tr><td>50所内容整理备份</td><td>未启动</td></tr><tr><td>装Linux</td><td>优先级下降，未启动</td></tr><tr><td>抖音清理</td><td>忘记了</td></tr></tbody></table><hr><h2 id="💡-本周感悟"><a href="#💡-本周感悟" class="headerlink" title="💡 本周感悟"></a>💡 本周感悟</h2><ol><li><p><strong>“单纯玩了一天，什么也不想，就很幸福快乐”</strong> —— 有时候完全放空也是一种充电，苏州之行证明放松的价值</p></li><li><p><strong>“道路总比困难多，困难一定都能解决的”</strong> —— 小程序bug修复过程中学会了看日志分析，心态更稳了</p></li><li><p><strong>“还是要抓住这个AI时代”</strong> —— 和andy聊天意识到AI产品机会，同时受到攀哥鼓舞，要把写竞赛的方法迁移到写论文</p></li><li><p><strong>“一件事做完，再做下一件”</strong> —— 这周多线程导致注意力分散，下周需要更聚焦</p></li></ol><hr><h2 id="📅-下周调整"><a href="#📅-下周调整" class="headerlink" title="📅 下周调整"></a>📅 下周调整</h2><p>基于本周分析，下周要做出的调整：</p><ol><li><strong>小程序收尾</strong>：错题保存重做和收藏两个功能，集中2小时攻克，不再拖</li><li><strong>聚焦小论文</strong>：朋友圈论文打卡暂停，转向写自己的第一篇小论文</li><li><strong>50所任务</strong>：完成实习内容整理和备份</li><li><strong>单线程优先</strong>：一件事做完再做下一件，避免”推进中”状态</li></ol><hr><h2 id="📅-下周计划（1-19-1-25）"><a href="#📅-下周计划（1-19-1-25）" class="headerlink" title="📅 下周计划（1.19-1.25）"></a>📅 下周计划（1.19-1.25）</h2><h3 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h3><ol><li>小程序最后两个bug收尾</li><li>启动小论文写作</li><li>50所实习内容整理</li></ol><h3 id="每日规划"><a href="#每日规划" class="headerlink" title="每日规划"></a>每日规划</h3><table><thead><tr><th>日期</th><th>优先任务</th></tr></thead><tbody><tr><td>周一 1.19</td><td>小程序bug收尾</td></tr><tr><td>周二 1.20</td><td>美赛学生培训 + 小论文准备</td></tr><tr><td>周三 1.21</td><td>小论文开写</td></tr><tr><td>周四 1.22</td><td>小论文推进</td></tr><tr><td>周五 1.23</td><td>小论文推进</td></tr><tr><td>周六 1.24</td><td>小论文收尾/复盘</td></tr><tr><td>周日 1.25</td><td>周复盘 + 下周计划</td></tr></tbody></table><h3 id="习惯目标"><a href="#习惯目标" class="headerlink" title="习惯目标"></a>习惯目标</h3><ul><li>小论文写作 ≥ 1小时/天</li><li>散步/运动 30分钟/天</li><li>饮水 2000ml/天</li></ul><hr><blockquote><p><strong>下周口号：聚焦一件事，把它做完。</strong></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;📊-本周概览&quot;&gt;&lt;a href=&quot;#📊-本周概览&quot; class=&quot;headerlink&quot; title=&quot;📊 本周概览&quot;&gt;&lt;/a&gt;📊 本周概览&lt;/h2&gt;&lt;p&gt;本周主题是”完成 &amp;gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月17日</title>
@@ -428,52 +475,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;今日金句&lt;/strong&gt;：要做让自己觉得困难的事情。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;心态记录&quot;&gt;&lt;a href=&quot;#心态记录&quot; class=&quot;headerlink&quot; title=&quot;心态记录&quot;&gt;&lt;/a&gt;心态记录&lt;/h2&gt;&lt;p&gt;早上到实验室，莫名紧张。仔细</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月3日</title>
-    <link href="https://insistgang.github.io/posts/f6a7b8c9.html"/>
-    <id>https://insistgang.github.io/posts/f6a7b8c9.html</id>
-    <published>2026-01-02T16:00:00.000Z</published>
-    <updated>2026-01-08T15:40:42.191Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h2 id="🌞-今日完成"><a href="#🌞-今日完成" class="headerlink" title="🌞 今日完成"></a>🌞 今日完成</h2><h3 id="📖-每日论文-Day-2"><a href="#📖-每日论文-Day-2" class="headerlink" title="📖 每日论文 Day 2"></a>📖 每日论文 Day 2</h3><p><strong>《MUDDFormer: Breaking Residual Bottlenecks in Transformers via Multiway Dynamic Dense Connections》</strong>（彩云科技 &amp; 北邮）</p><p>昨天读的mHC担心”路太宽会翻车”，今天的MUDDFormer抱怨”路太堵了，得修立交桥”。</p><p><strong>核心痛点</strong>：Transformer变深后，残差流作为唯一通信通道被”过载”，限制跨层信息流动。</p><p><strong>MUDD解法</strong>：</p><ul><li><strong>Dense</strong>：每层直接看到之前所有层的输出</li><li><strong>Dynamic</strong>：连接权重根据hidden state动态生成，本质是深度方向的Attention</li><li><strong>Multiway（核心）</strong>：把输入解耦成Q、K、V、Residual四条流，各自独立密集连接</li></ul><p><strong>效果</strong>：</p><ul><li>MUDDPythia-2.8B ≈ Pythia-6.9B（2.4倍算力）</li><li>仅增加0.23%参数量和0.4%计算量</li><li>Scaling curve优于HC和DenseFormer</li></ul><p><strong>洞察</strong>：Value流从密集连接中获益最大，直接获取底层原始V信息能缓解”表征坍塌”。</p><p><strong>读后感</strong>：mHC求稳，MUDD求通——两种思路的博弈。</p><hr><h3 id="📱-数字断舍离"><a href="#📱-数字断舍离" class="headerlink" title="📱 数字断舍离"></a>📱 数字断舍离</h3><ul><li>抖音收藏清理：100个 ✓（剩余约1200个）</li><li>照片清理：睡前完成 ✓</li></ul><h3 id="💻-项目"><a href="#💻-项目" class="headerlink" title="💻 项目"></a>💻 项目</h3><ul><li>体育生AI小程序demo测试完成</li></ul><h3 id="📋-其他"><a href="#📋-其他" class="headerlink" title="📋 其他"></a>📋 其他</h3><ul><li>充话费（200送20）✓</li><li>学生证找到了，不用补办了</li><li>2026阅读计划整理中</li></ul><hr><h2 id="🔋-能量管理"><a href="#🔋-能量管理" class="headerlink" title="🔋 能量管理"></a>🔋 能量管理</h2><table><thead><tr><th align="center">维度</th><th align="center">评分</th></tr></thead><tbody><tr><td align="center">🧠 认知能量</td><td align="center">7/10</td></tr><tr><td align="center">💪 身体能量</td><td align="center">7/10</td></tr><tr><td align="center">❤️ 情绪能量</td><td align="center">8/10</td></tr><tr><td align="center">🎯 意志能量</td><td align="center">8/10</td></tr></tbody></table><hr><h2 id="📅-明日待办"><a href="#📅-明日待办" class="headerlink" title="📅 明日待办"></a>📅 明日待办</h2><ul><li><input disabled="" type="checkbox"> 每日论文 Day 3</li><li><input disabled="" type="checkbox"> 把本月计划读的论文都找出来</li><li><input disabled="" type="checkbox"> 完成体育生AI系统的整体内容</li><li><input disabled="" type="checkbox"> 抖音收藏继续清理（目标100个）</li><li><input disabled="" type="checkbox"> 吃饭时清理照片</li><li><input disabled="" type="checkbox"> 其他计划按部就班</li></ul><hr><h2 id="✨-今日金句"><a href="#✨-今日金句" class="headerlink" title="✨ 今日金句"></a>✨ 今日金句</h2><p><strong>如果我在平庸面前低了头，请向我开炮。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;🌞-今日完成&quot;&gt;&lt;a href=&quot;#🌞-今日完成&quot; class=&quot;headerlink&quot; title=&quot;🌞 今日完成&quot;&gt;&lt;/a&gt;🌞 今日完成&lt;/h2&gt;&lt;h3 id=&quot;📖-每日论文-Day-2&quot;&gt;&lt;a href=&quot;#📖-每日论文-Day-2&quot; </summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月2日</title>
-    <link href="https://insistgang.github.io/posts/e5f6a7b8.html"/>
-    <id>https://insistgang.github.io/posts/e5f6a7b8.html</id>
-    <published>2026-01-01T16:00:00.000Z</published>
-    <updated>2026-01-08T15:40:42.178Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年1月2日-星期五-晴"><a href="#2026年1月2日-星期五-晴" class="headerlink" title="2026年1月2日 星期五 晴"></a>2026年1月2日 星期五 晴</h1><hr><h2 id="🎮-主队夺冠！"><a href="#🎮-主队夺冠！" class="headerlink" title="🎮 主队夺冠！"></a>🎮 主队夺冠！</h2><p>今天是个好日子！北京WB对阵济南RW侠的总决赛，我的主队WB直接5:0碾压式夺冠！</p><p>说实话赛前还有点紧张，毕竟总决赛什么都可能发生。结果WB状态太好了，一局都没让，干脆利落拿下。看比赛的时候全程在喊，太爽了。</p><p>新年第二天就收获一个冠军，2026开门红！</p><hr><h2 id="📖-文献打卡Day01"><a href="#📖-文献打卡Day01" class="headerlink" title="📖 文献打卡Day01"></a>📖 文献打卡Day01</h2><p>晚上静下心来读了DeepSeek跨年夜发的新论文《mHC: Manifold-Constrained Hyper-Connections》，是关于深度学习架构优化的。</p><p>核心思路挺有意思：Hyper-Connections把残差流扩宽了，性能涨了但训练崩了。作者的解法不是把路改窄，而是改交通规则——用双随机矩阵约束，让信号传播变成”凸组合”，能量守恒。</p><p>读完发了朋友圈打卡，打算坚持到年底，一日练一日功嘛。</p><hr><h2 id="💡-今日最大收获"><a href="#💡-今日最大收获" class="headerlink" title="💡 今日最大收获"></a>💡 今日最大收获</h2><p>发现<strong>微信读书可以直接看英文文献</strong>，而且能做中英文对照翻译！</p><p>以前看英文论文要么硬啃，要么用付费软件翻译，现在微信读书直接搞定了。界面干净，翻译质量也还行，关键是免费。</p><p>这个发现太实用了，以后读文献的效率能提高不少。</p><hr><h2 id="📝-小结"><a href="#📝-小结" class="headerlink" title="📝 小结"></a>📝 小结</h2><ul><li>✅ 北京WB总决赛夺冠，5:0！</li><li>✅ 文献打卡Day01完成</li><li>✅ 解锁微信读书看文献的新姿势</li></ul><p>今天没干太多事，看比赛+读论文+休息，挺充实的。</p><p>明天继续。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年1月2日-星期五-晴&quot;&gt;&lt;a href=&quot;#2026年1月2日-星期五-晴&quot; class=&quot;headerlink&quot; title=&quot;2026年1月2日 星期五 晴&quot;&gt;&lt;/a&gt;2026年1月2日 星期五 晴&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;🎮-主队夺冠！</summary>
       
     
     
