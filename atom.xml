@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-25T15:14:51.467Z</updated>
+  <updated>2026-01-26T03:12:24.198Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第4周复盘（1.19-1.25）</title>
+    <link href="https://insistgang.github.io/posts/week4review.html"/>
+    <id>https://insistgang.github.io/posts/week4review.html</id>
+    <published>2026-01-25T15:59:59.000Z</published>
+    <updated>2026-01-26T03:12:24.198Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="📊-本周概览"><a href="#📊-本周概览" class="headerlink" title="📊 本周概览"></a>📊 本周概览</h2><p>这周的主旋律是**”收尾与启动”**：小程序项目完全交付，软著提交完成，个人知识库搭建完成，教资备考启动。从周一的低精力（5/10）到周末的恢复（7/10），经历了一个典型的”从昏沉到清醒”的过程。</p><hr><h2 id="🎯-关键成果"><a href="#🎯-关键成果" class="headerlink" title="🎯 关键成果"></a>🎯 关键成果</h2><ol><li><p><strong>小程序项目完全交付</strong> ✅</p><ul><li>bug修复（错题重做、收藏）</li><li>开发管理员后台</li><li>客户满意，代码开源到GitHub</li></ul></li><li><p><strong>软著完成并提交</strong> ✅</p><ul><li>源代码说明书、功能说明书、文档鉴别材料</li></ul></li><li><p><strong>个人知识库搭建</strong> ✅</p><ul><li>Claude Code + Obsidian</li><li>开GitHub仓库同步云端</li><li>每个模块配置私有claude.md标准</li></ul></li><li><p><strong>教资科目一启动</strong> ✅</p><ul><li>下载核心文件</li><li>看网课，制定学习计划</li></ul></li><li><p><strong>美赛讲课</strong> ✅</p><ul><li>2.5小时培训学弟学妹（Claude Code使用、绘图技巧、论文写作）</li></ul></li><li><p><strong>无人机数据采集</strong> ✅</p><ul><li>和同门试飞无人机</li></ul></li><li><p><strong>卸载抖音</strong> ✅</p><ul><li>时间多了很多</li></ul></li><li><p><strong>锻炼习惯建立</strong> ✅</p><ul><li>连续4天运动（健身房/跑步）</li></ul></li></ol><hr><h2 id="💪-习惯追踪"><a href="#💪-习惯追踪" class="headerlink" title="💪 习惯追踪"></a>💪 习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成情况</th></tr></thead><tbody><tr><td>论文/阅读</td><td>2/7天（19日、21日、22日看了，后三天拖了）</td></tr><tr><td>散步/运动</td><td>4/7天（22-25日连续）</td></tr><tr><td>喝水2L</td><td>4/7天</td></tr><tr><td>教资备考</td><td>2/7天（最后启动）</td></tr></tbody></table><hr><h2 id="🔄-模式识别"><a href="#🔄-模式识别" class="headerlink" title="🔄 模式识别"></a>🔄 模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">周一 5/10 → 周二 5/10 → 周三 8/10 → 周四 6/10 → 周五 6/10 → 周六 4/10 → 周日 7/10</span><br></pre></td></tr></table></figure><ul><li>周三是峰值（8/10），小程序收尾带来的成就感</li><li>周四后因饮食不当开始昏沉</li><li>周六触底（4/10），整理电脑变成逃避任务</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ol><li><strong>作息不规律</strong>：几乎每天中午才出门，”半天就没了”</li><li><strong>论文拖延</strong>：连续三天没进展</li><li><strong>注意力分散</strong>：想要的太多（manus、mcp、coze、小论文、教资、自荐信…），行动跟不上</li></ol><h3 id="做得好的地方"><a href="#做得好的地方" class="headerlink" title="做得好的地方"></a>做得好的地方</h3><ul><li>卸载抖音后时间充裕</li><li>锻炼后脑子清晰，找到了正向反馈</li><li>小项目和收尾类任务执行力强</li></ul><hr><h2 id="❌-未完成事项"><a href="#❌-未完成事项" class="headerlink" title="❌ 未完成事项"></a>❌ 未完成事项</h2><table><thead><tr><th>任务</th><th>状态</th><th>原因分析</th></tr></thead><tbody><tr><td>论文阅读</td><td>❌</td><td>连续三天拖了，优先级让给了琐事</td></tr><tr><td>教资摸底测试</td><td>→</td><td>改成看网课+计划，也算推进</td></tr><tr><td>生命重置协议</td><td>❌</td><td>一次都没提，可能已经放弃</td></tr><tr><td>整理数据集复现</td><td>❌</td><td>高估了，没开始</td></tr></tbody></table><hr><h2 id="💡-本周感悟"><a href="#💡-本周感悟" class="headerlink" title="💡 本周感悟"></a>💡 本周感悟</h2><blockquote><p><strong>“人与人之间的差距往往不在于智商，而在于执行力。”</strong></p></blockquote><blockquote><p><strong>“AI的两朵乌云：数据枯寂 + 价值对齐困境”</strong> —— 对行业瓶颈有了更清晰的认知。</p></blockquote><blockquote><p><strong>“锻炼完之后脑子清晰很多”</strong> —— 找到了钥匙，记住这个感觉。</p></blockquote><hr><h2 id="📅-下周调整"><a href="#📅-下周调整" class="headerlink" title="📅 下周调整"></a>📅 下周调整</h2><ol><li><strong>论文必须动</strong>：连续拖了三天，下周要强制推进</li><li><strong>作息调整</strong>：早睡早起，不要再中午出门</li><li><strong>约束整理时间</strong>：不要让整理吞噬一天</li><li><strong>教资继续</strong>：科目二跟上节奏</li><li><strong>和马老师的项目</strong>：整理出具体方案</li></ol><hr><h2 id="📅-下周计划（1-26-2-1）"><a href="#📅-下周计划（1-26-2-1）" class="headerlink" title="📅 下周计划（1.26-2.1）"></a>📅 下周计划（1.26-2.1）</h2><h3 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h3><ol><li>小论文推进</li><li>教资科目二</li><li>作息规律化</li></ol><h3 id="每日规划"><a href="#每日规划" class="headerlink" title="每日规划"></a>每日规划</h3><table><thead><tr><th>日期</th><th>优先任务</th></tr></thead><tbody><tr><td>周一 1.26</td><td>小论文推进</td></tr><tr><td>周二 1.27</td><td>小论文推进</td></tr><tr><td>周三 1.28</td><td>小论文推进</td></tr><tr><td>周四 1.29</td><td>教资科目二</td></tr><tr><td>周五 1.30</td><td>教资科目二</td></tr><tr><td>周六 1.31</td><td>复盘收尾</td></tr><tr><td>周日 2.1</td><td>周复盘 + 下周计划</td></tr></tbody></table><h3 id="习惯目标"><a href="#习惯目标" class="headerlink" title="习惯目标"></a>习惯目标</h3><ul><li>小论文写作 ≥ 2小时/天</li><li>散步/运动 30分钟/天</li><li>饮水 2000ml/天</li><li>早睡早起（23点前睡，8点前起）</li></ul><hr><blockquote><p><strong>下周口号：论文动起来，作息稳下来。</strong></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;📊-本周概览&quot;&gt;&lt;a href=&quot;#📊-本周概览&quot; class=&quot;headerlink&quot; title=&quot;📊 本周概览&quot;&gt;&lt;/a&gt;📊 本周概览&lt;/h2&gt;&lt;p&gt;这周的主旋律是**”收尾与启动”**：小程序项目完全交付，软著提交完成，个人知识库搭建完成，教资备考</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月25日</title>
@@ -453,31 +477,6 @@
     <updated>2026-01-21T15:13:41.416Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 专注搞小程序 —— 完成，下午开发+晚上修bug</li><li><input checked="" disabled="" type="checkbox"> 看论文 Day09 —— 完成，Swin Transformer</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>睡到10点多，打了两把王者，周六放松一下</li><li>和景哥、涂涂去遇上西雅图吃火锅烤肉自助</li><li>顺便给电车充电，检查三创赛审核——实战赛和常规赛都通过了✅</li></ul><p><strong>下午 @ 实验室</strong></p><ul><li>研究教师资格证报名，纠结报中职还是高中数学（后来发现大学老师需要的是高校教资，另一套体系）</li><li>用Gemini把蓝底照片换成白底</li><li>16:00开始搞小程序开发</li></ul><p><strong>晚上</strong></p><ul><li>和仕缘吃麻辣烫</li><li>回来继续修小程序bug</li><li>20:50-21:30散步，期间看论文</li><li>完成Day09论文，补了不少基础知识</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 7/10，情绪 5/10</p><p>周六节奏比较健康，休息、社交、学习都有。但情绪一般。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：遇上西雅图火锅烤肉自助（81元）</li><li>晚餐：麻辣烫（27元）</li><li>散步：✅ 40分钟</li><li>喝水：✅ 2000ml</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>三创赛实战赛+常规赛审核通过</li><li>小程序开发推进+bug修复</li><li>Swin Transformer论文读完，理解了Shifted Window Attention的精髓</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>论文基础知识欠缺，需要花大量时间追根溯源补课</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>失败是常态，要勇敢战斗，永不言弃。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 完成小程序</li><li><input disabled="" type="checkbox"> 本周复盘</li><li><input disabled="" type="checkbox"> 整理工作内容，想清楚怎么推进</li><li><input disabled="" type="checkbox"> 归纳整理自己的东西</li><li><input disabled="" type="checkbox"> 好好休息</li></ul><hr><h2 id="今日论文-day09"><a href="#今日论文-day09" class="headerlink" title="今日论文 #day09"></a>今日论文 #day09</h2><p><strong>Swin Transformer《Swin Transformer: Hierarchical Vision Transformer using Shifted Windows》</strong><br>ICCV 2021 | 微软亚研 | Ze Liu等</p><h3 id="核心痛点"><a href="#核心痛点" class="headerlink" title="核心痛点"></a>核心痛点</h3><p>ViT的O(n²)复杂度限制了高分辨率图像处理能力。分类用224×224还行，检测/分割需要高分辨率就吃不消。非分层结构也难构建多尺度特征。</p><h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p><strong>Shifted Window Attention</strong>：</p><ul><li>图像切分成不重叠的window（7×7），window内做self-attention，复杂度O(n²)→O(n)</li><li>下一层shift window（移动半个window），让跨window信息流动</li><li>用masked attention处理边界问题</li><li>层级下采样产生特征金字塔：4个stage，分辨率逐层减半，通道数逐层翻倍</li></ul><h3 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h3><ul><li>ImageNet-1K：Swin-L 87.3% top-1，超越ViT和ResNeSt</li><li>COCO检测：Swin-L 58.7 box AP，51.1 mask AP</li><li>ADE20K分割：53.5 mIoU，SOTA</li></ul><h3 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h3><p>Day06 ViT说”CNN的归纳偏置是枷锁”，今天Swin说”局部性其实是个好东西”。Swin把attention限制在window内，通过shift实现全局连接——本质上融合了CNN的局部性和Transformer的全局建模能力。Transformer不是要完全取代CNN，而是要学习CNN的优点。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;chec</summary>
-      
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月9日</title>
-    <link href="https://insistgang.github.io/posts/d4e5f6g7.html"/>
-    <id>https://insistgang.github.io/posts/d4e5f6g7.html</id>
-    <published>2026-01-08T16:00:00.000Z</published>
-    <updated>2026-01-21T15:13:41.410Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 去50所好好上班 —— 完成，搞道路病害计算</li><li><input disabled="" type="checkbox"> 闲下来折腾小程序 —— 没来得及，太累了</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>白天 @ 50所</strong></p><ul><li>道路病害计算任务推进，用A4纸面积迁移的算法思路，跑通了但效果一般，后续还得优化</li><li>三创赛报名折腾了好久，各种小问题连续填了三次，差点被填崩溃</li></ul><p><strong>晚上</strong></p><ul><li>回来比较累，吃了顿大的（大份鸡柳+鸡腿饭），吃撑了</li><li>散步半小时，顺便给爱车充电</li><li>读完Day08论文，没怎么干其他活</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><p>三创赛报名反复填表把心态搞崩了，感情上也有点爆炸，整个人像个没有感情的杀手。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：牛肉饼</li><li>午餐：50所食堂</li><li>晚餐：大份鸡柳 + 鸡腿饭（吃撑了，25元的大份）</li><li>散步：✅ 半小时</li><li>喝水：✅ 2000ml</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>道路病害算法思路跑通，虽然效果待优化</li><li>DETR论文读完，Day08打卡成功</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>道路病害计算效果不理想，A4面积迁移方案有局限</li><li>三创赛报名系统反复折腾</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>故事的主角在失败后都这样，他们会陷入无尽的沉思和沮丧中，自责到无法自拔。</p></blockquote><p>但主角之所以是主角，是因为他们最后都爬起来了。累了就歇，明天继续。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 专注搞小程序</li><li><input disabled="" type="checkbox"> 看论文 Day09</li></ul><hr><h2 id="今日论文-day08"><a href="#今日论文-day08" class="headerlink" title="今日论文 #day08"></a>今日论文 #day08</h2><p><strong>DETR《End-to-End Object Detection with Transformers》</strong><br>ECCV 2020 | FAIR | Nicolas Carion等</p><h3 id="核心痛点"><a href="#核心痛点" class="headerlink" title="核心痛点"></a>核心痛点</h3><p>目标检测的”人工痕迹”太重——Faster R-CNN需要设计anchor（9种尺度+比例）、NMS去重、一堆手工超参。检测器更像在调参，而不是在学习。</p><h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>把检测变成<strong>集合预测问题</strong>，端到端干掉anchor和NMS。</p><p>DETR架构三步走：</p><ol><li>CNN backbone（ResNet-50）提取特征</li><li>Transformer Encoder-Decoder处理</li><li>FFN预测类别和bbox</li></ol><p>核心大招：<strong>Hungarian Loss（二分匹配）</strong></p><ul><li>100个可学习的object query通过decoder</li><li>每个query预测一个bbox</li><li>训练时用匈牙利算法找GT和预测的最优匹配（一对一）</li><li>不需要NMS，天然一一对应</li></ul><h3 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h3><p>简单，但慢：</p><ul><li>COCO上42.0 AP，对标Faster R-CNN-FPN</li><li>致命问题：收敛慢——Faster R-CNN 36 epochs就行，DETR需要300-500 epochs</li><li>小目标差距明显：APs 20.5 vs 24.2（全局注意力对高分辨率特征图太贵）</li></ul><h3 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h3><p>Day03 Transformer说”Attention Is All You Need”，今天DETR说”NMS和Anchor Are All You Don’t Need”。代价是训练时间和小目标检测——这些痛点催生了Deformable DETR、DAB-DETR等后续工作。DETR的伟大在于：它证明了检测可以端到端，把检测从”工程问题”变成了纯粹的”学习问题”。</p>]]></content>
     
     
       
