@@ -39,26 +39,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://insistgang.github.io/posts/0.html"/>
-    <id>https://insistgang.github.io/posts/0.html</id>
-    <published>2026-01-26T03:12:24.198Z</published>
-    <updated>2026-01-28T05:30:17.834Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1月第4周复盘（1-19-1-25）"><a href="#1月第4周复盘（1-19-1-25）" class="headerlink" title="1月第4周复盘（1.19-1.25）"></a>1月第4周复盘（1.19-1.25）</h1><h2 id="本周概览"><a href="#本周概览" class="headerlink" title="本周概览"></a>本周概览</h2><p>这周的主旋律是**”收尾与启动”**：小程序项目完全交付，软著提交完成，个人知识库搭建完成，教资备考启动。从周一的低精力（5/10）到周末的恢复（7/10），经历了一个典型的”从昏沉到清醒”的过程。</p><hr><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><p><strong>小程序项目完全交付</strong> ✅</p><ul><li>bug修复（错题重做、收藏）</li><li>开发管理员后台</li><li>客户满意，代码开源到GitHub</li></ul></li><li><p><strong>软著完成并提交</strong> ✅</p><ul><li>源代码说明书、功能说明书、文档鉴别材料</li></ul></li><li><p><strong>个人知识库搭建</strong> ✅</p><ul><li>Claude Code + Obsidian</li><li>开GitHub仓库同步云端</li><li>每个模块配置私有claude.md标准</li></ul></li><li><p><strong>教资科目一启动</strong> ✅</p><ul><li>下载核心文件</li><li>看网课，制定学习计划</li></ul></li><li><p><strong>美赛讲课</strong> ✅</p><ul><li>2.5小时培训学弟学妹（Claude Code使用、绘图技巧、论文写作）</li></ul></li><li><p><strong>无人机数据采集</strong> ✅</p><ul><li>和同门试飞无人机</li></ul></li><li><p><strong>卸载抖音</strong> ✅</p><ul><li>时间多了很多</li></ul></li><li><p><strong>锻炼习惯建立</strong> ✅</p><ul><li>连续4天运动（健身房/跑步）</li></ul></li></ol><hr><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成情况</th></tr></thead><tbody><tr><td>论文/阅读</td><td>2/7天（19日、21日、22日看了，后三天拖了）</td></tr><tr><td>散步/运动</td><td>4/7天（22-25日连续）</td></tr><tr><td>喝水2L</td><td>4/7天</td></tr><tr><td>教资备考</td><td>2/7天（最后启动）</td></tr></tbody></table><hr><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">周一 5/10 → 周二 5/10 → 周三 8/10 → 周四 6/10 → 周五 6/10 → 周六 4/10 → 周日 7/10</span><br></pre></td></tr></table></figure><ul><li>周三是峰值（8/10），小程序收尾带来的成就感</li><li>周四后因饮食不当开始昏沉</li><li>周六触底（4/10），整理电脑变成逃避任务</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ol><li><strong>作息不规律</strong>：几乎每天中午才出门，”半天就没了”</li><li><strong>论文拖延</strong>：连续三天没进展</li><li><strong>注意力分散</strong>：想要的太多（manus、mcp、coze、小论文、教资、自荐信…），行动跟不上</li></ol><h3 id="做得好的地方"><a href="#做得好的地方" class="headerlink" title="做得好的地方"></a>做得好的地方</h3><ul><li>卸载抖音后时间充裕</li><li>锻炼后脑子清晰，找到了正向反馈</li><li>小项目和收尾类任务执行力强</li></ul><hr><h2 id="未完成事项"><a href="#未完成事项" class="headerlink" title="未完成事项"></a>未完成事项</h2><table><thead><tr><th>任务</th><th>状态</th><th>原因分析</th></tr></thead><tbody><tr><td>论文阅读</td><td>❌</td><td>连续三天拖了，优先级让给了琐事</td></tr><tr><td>教资摸底测试</td><td>→</td><td>改成看网课+计划，也算推进</td></tr><tr><td>生命重置协议</td><td>❌</td><td>一次都没提，可能已经放弃</td></tr><tr><td>整理数据集复现</td><td>❌</td><td>高估了，没开始</td></tr></tbody></table><hr><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><blockquote><p><strong>“人与人之间的差距往往不在于智商，而在于执行力。”</strong></p></blockquote><blockquote><p><strong>“AI的两朵乌云：数据枯寂 + 价值对齐困境”</strong> —— 对行业瓶颈有了更清晰的认知。</p></blockquote><blockquote><p><strong>“锻炼完之后脑子清晰很多”</strong> —— 找到了钥匙，记住这个感觉。</p></blockquote><hr><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><ol><li><strong>论文必须动</strong>：连续拖了三天，下周要强制推进</li><li><strong>作息调整</strong>：早睡早起，不要再中午出门</li><li><strong>约束整理时间</strong>：不要让整理吞噬一天</li><li><strong>教资继续</strong>：科目二跟上节奏</li><li><strong>和马老师的项目</strong>：整理出具体方案</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1月第4周复盘（1-19-1-25）&quot;&gt;&lt;a href=&quot;#1月第4周复盘（1-19-1-25）&quot; class=&quot;headerlink&quot; title=&quot;1月第4周复盘（1.19-1.25）&quot;&gt;&lt;/a&gt;1月第4周复盘（1.19-1.25）&lt;/h1&gt;&lt;h2 id=&quot;本</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>2026年1月26日</title>
     <link href="https://insistgang.github.io/posts/2601b8c9.html"/>
     <id>https://insistgang.github.io/posts/2601b8c9.html</id>
@@ -77,6 +57,55 @@
     
     
     <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第5周计划（1.26-2.1）</title>
+    <link href="https://insistgang.github.io/posts/week5plan.html"/>
+    <id>https://insistgang.github.io/posts/week5plan.html</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-01-28T09:43:58.420Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1月第5周计划（1-26-2-1）"><a href="#1月第5周计划（1-26-2-1）" class="headerlink" title="1月第5周计划（1.26-2.1）"></a>1月第5周计划（1.26-2.1）</h1><blockquote><p>上周复盘：小程序收尾、软著提交、知识库搭建完成，但论文连续三天没进展。本周核心是**”动起来”**。</p></blockquote><hr><h2 id="本周核心目标（不超过3个）"><a href="#本周核心目标（不超过3个）" class="headerlink" title="本周核心目标（不超过3个）"></a>本周核心目标（不超过3个）</h2><ol><li><strong>论文推进</strong> — 必须打破拖延，开始行动</li><li><strong>教资科目二</strong> — 跟上学习节奏</li><li><strong>无人机数据集</strong> — 老师要求放假前完成</li></ol><hr><h2 id="每日推进任务"><a href="#每日推进任务" class="headerlink" title="每日推进任务"></a>每日推进任务</h2><table><thead><tr><th>任务</th><th>频次</th><th>说明</th></tr></thead><tbody><tr><td>论文/阅读</td><td>每天1篇</td><td>哪怕只读摘要也要动</td></tr><tr><td>教资</td><td>每天1章</td><td>科目二网课+笔记</td></tr><tr><td>锻炼</td><td>5次以上</td><td>跑步/健身房，保持正向反馈</td></tr><tr><td>早睡早起</td><td>每天</td><td>23:30前睡，8:30前起</td></tr></tbody></table><hr><h2 id="项目推进"><a href="#项目推进" class="headerlink" title="项目推进"></a>项目推进</h2><h3 id="马老师项目"><a href="#马老师项目" class="headerlink" title="马老师项目"></a>马老师项目</h3><ul><li><input disabled="" type="checkbox"> 整理出具体实施方案</li><li><input disabled="" type="checkbox"> 和马老师再确认一次</li></ul><h3 id="无人机数据集"><a href="#无人机数据集" class="headerlink" title="无人机数据集"></a>无人机数据集</h3><ul><li><input disabled="" type="checkbox"> 完成采集（放假前）</li><li><input disabled="" type="checkbox"> 数据标注/整理</li></ul><h3 id="软著"><a href="#软著" class="headerlink" title="软著"></a>软著</h3><ul><li><input disabled="" type="checkbox"> 关注审核结果</li></ul><hr><h2 id="作息调整"><a href="#作息调整" class="headerlink" title="作息调整"></a>作息调整</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">07:00  起床，洗漱，吃早饭</span><br><span class="line">08:30  到实验室，开始核心工作时间</span><br><span class="line">12:00  午餐</span><br><span class="line">14:00-18:00  项目/论文时间</span><br><span class="line">19:00  晚餐</span><br><span class="line">19:30  散步/锻炼</span><br><span class="line">20:30-22:30  深度学习（论文/教资）</span><br><span class="line">23:00  准备睡觉</span><br><span class="line">23:30  关灯</span><br></pre></td></tr></table></figure><p><strong>关键原则</strong>：不要再中午出门，上午是黄金时间。</p><hr><h2 id="本周提醒"><a href="#本周提醒" class="headerlink" title="本周提醒"></a>本周提醒</h2><ul><li>⚠️ 论文不能再拖了，已经三天没进展</li><li>⚠️ 不要让整理/研究工具吞噬一天（上周的教训）</li><li>✅ 锻炼后脑子清晰，继续保持</li><li>✅ 卸载抖音保持住</li></ul><hr><h2 id="周末目标（2-1做周复盘时检查）"><a href="#周末目标（2-1做周复盘时检查）" class="headerlink" title="周末目标（2.1做周复盘时检查）"></a>周末目标（2.1做周复盘时检查）</h2><ul><li><input disabled="" type="checkbox"> 论文：读了5篇以上</li><li><input disabled="" type="checkbox"> 教资：科目二进度过半</li><li><input disabled="" type="checkbox"> 无人机：数据集采集完成</li><li><input disabled="" type="checkbox"> 作息：早睡早起达成5天以上</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1月第5周计划（1-26-2-1）&quot;&gt;&lt;a href=&quot;#1月第5周计划（1-26-2-1）&quot; class=&quot;headerlink&quot; title=&quot;1月第5周计划（1.26-2.1）&quot;&gt;&lt;/a&gt;1月第5周计划（1.26-2.1）&lt;/h1&gt;&lt;blockquote&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第4周复盘（1.19-1.25）</title>
+    <link href="https://insistgang.github.io/posts/week4review.html"/>
+    <id>https://insistgang.github.io/posts/week4review.html</id>
+    <published>2026-01-25T15:59:59.000Z</published>
+    <updated>2026-01-28T09:43:58.419Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1月第4周复盘（1-19-1-25）"><a href="#1月第4周复盘（1-19-1-25）" class="headerlink" title="1月第4周复盘（1.19-1.25）"></a>1月第4周复盘（1.19-1.25）</h1><h2 id="本周概览"><a href="#本周概览" class="headerlink" title="本周概览"></a>本周概览</h2><p>这周的主旋律是**”收尾与启动”**：小程序项目完全交付，软著提交完成，个人知识库搭建完成，教资备考启动。从周一的低精力（5/10）到周末的恢复（7/10），经历了一个典型的”从昏沉到清醒”的过程。</p><hr><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><p><strong>小程序项目完全交付</strong> ✅</p><ul><li>bug修复（错题重做、收藏）</li><li>开发管理员后台</li><li>客户满意，代码开源到GitHub</li></ul></li><li><p><strong>软著完成并提交</strong> ✅</p><ul><li>源代码说明书、功能说明书、文档鉴别材料</li></ul></li><li><p><strong>个人知识库搭建</strong> ✅</p><ul><li>Claude Code + Obsidian</li><li>开GitHub仓库同步云端</li><li>每个模块配置私有claude.md标准</li></ul></li><li><p><strong>教资科目一启动</strong> ✅</p><ul><li>下载核心文件</li><li>看网课，制定学习计划</li></ul></li><li><p><strong>美赛讲课</strong> ✅</p><ul><li>2.5小时培训学弟学妹（Claude Code使用、绘图技巧、论文写作）</li></ul></li><li><p><strong>无人机数据采集</strong> ✅</p><ul><li>和同门试飞无人机</li></ul></li><li><p><strong>卸载抖音</strong> ✅</p><ul><li>时间多了很多</li></ul></li><li><p><strong>锻炼习惯建立</strong> ✅</p><ul><li>连续4天运动（健身房/跑步）</li></ul></li></ol><hr><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成情况</th></tr></thead><tbody><tr><td>论文/阅读</td><td>2/7天（19日、21日、22日看了，后三天拖了）</td></tr><tr><td>散步/运动</td><td>4/7天（22-25日连续）</td></tr><tr><td>喝水2L</td><td>4/7天</td></tr><tr><td>教资备考</td><td>2/7天（最后启动）</td></tr></tbody></table><hr><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">周一 5/10 → 周二 5/10 → 周三 8/10 → 周四 6/10 → 周五 6/10 → 周六 4/10 → 周日 7/10</span><br></pre></td></tr></table></figure><ul><li>周三是峰值（8/10），小程序收尾带来的成就感</li><li>周四后因饮食不当开始昏沉</li><li>周六触底（4/10），整理电脑变成逃避任务</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ol><li><strong>作息不规律</strong>：几乎每天中午才出门，”半天就没了”</li><li><strong>论文拖延</strong>：连续三天没进展</li><li><strong>注意力分散</strong>：想要的太多（manus、mcp、coze、小论文、教资、自荐信…），行动跟不上</li></ol><h3 id="做得好的地方"><a href="#做得好的地方" class="headerlink" title="做得好的地方"></a>做得好的地方</h3><ul><li>卸载抖音后时间充裕</li><li>锻炼后脑子清晰，找到了正向反馈</li><li>小项目和收尾类任务执行力强</li></ul><hr><h2 id="未完成事项"><a href="#未完成事项" class="headerlink" title="未完成事项"></a>未完成事项</h2><table><thead><tr><th>任务</th><th>状态</th><th>原因分析</th></tr></thead><tbody><tr><td>论文阅读</td><td>❌</td><td>连续三天拖了，优先级让给了琐事</td></tr><tr><td>教资摸底测试</td><td>→</td><td>改成看网课+计划，也算推进</td></tr><tr><td>生命重置协议</td><td>❌</td><td>一次都没提，可能已经放弃</td></tr><tr><td>整理数据集复现</td><td>❌</td><td>高估了，没开始</td></tr></tbody></table><hr><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><blockquote><p><strong>“人与人之间的差距往往不在于智商，而在于执行力。”</strong></p></blockquote><blockquote><p><strong>“AI的两朵乌云：数据枯寂 + 价值对齐困境”</strong> —— 对行业瓶颈有了更清晰的认知。</p></blockquote><blockquote><p><strong>“锻炼完之后脑子清晰很多”</strong> —— 找到了钥匙，记住这个感觉。</p></blockquote><hr><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><ol><li><strong>论文必须动</strong>：连续拖了三天，下周要强制推进</li><li><strong>作息调整</strong>：早睡早起，不要再中午出门</li><li><strong>约束整理时间</strong>：不要让整理吞噬一天</li><li><strong>教资继续</strong>：科目二跟上节奏</li><li><strong>和马老师的项目</strong>：整理出具体方案</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1月第4周复盘（1-19-1-25）&quot;&gt;&lt;a href=&quot;#1月第4周复盘（1-19-1-25）&quot; class=&quot;headerlink&quot; title=&quot;1月第4周复盘（1.19-1.25）&quot;&gt;&lt;/a&gt;1月第4周复盘（1.19-1.25）&lt;/h1&gt;&lt;h2 id=&quot;本</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
@@ -406,7 +435,7 @@
     <link href="https://insistgang.github.io/posts/0.html"/>
     <id>https://insistgang.github.io/posts/0.html</id>
     <published>2026-01-12T08:19:27.816Z</published>
-    <updated>2026-01-28T05:30:17.832Z</updated>
+    <updated>2026-01-28T09:43:58.413Z</updated>
     
     
     
@@ -435,30 +464,6 @@
     <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
     
     <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第2周复盘（1.5-1.11）</title>
-    <link href="https://insistgang.github.io/posts/week2review.html"/>
-    <id>https://insistgang.github.io/posts/week2review.html</id>
-    <published>2026-01-11T15:59:59.000Z</published>
-    <updated>2026-01-28T05:27:46.501Z</updated>
-    
-    <content type="html"><![CDATA[<p>活动密集周（琴湖之夜 + 常熟研学两天）叠加技术任务，节奏被打散但核心习惯守住了。<strong>论文打卡连续7天是本周最大亮点</strong>，从ResNet一路追到PVT，把CV backbone进化线串了一遍。情绪波动明显——“心态崩”、”心态爆炸”多次出现，需要警惕。</p><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><strong>论文打卡Day04-Day10连续7天</strong>——ResNet→DenseNet→ViT→FPN→DETR→Swin→PVT，CV骨干网络进化史完整梳理</li><li><strong>三创赛实战赛 + 常规赛审核通过</strong></li><li><strong>博客系统基本搭建完成</strong>——GitHub日历修复、分支映射问题解决、架构规划清晰</li><li><strong>专用智能体系统框架搭建</strong>——日记助手、论文助手、减肥助手、记账助手，思路：Claude打磨 → Claude Code整合 → 博客基站</li><li><strong>道路病害计算算法跑通</strong>——效果待优化，但思路验证成功</li></ol><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成情况</th><th>备注</th></tr></thead><tbody><tr><td>每日论文阅读</td><td><strong>7/7天</strong> ✅</td><td>完美！形成稳定节奏</td></tr><tr><td>散步习惯</td><td><strong>7/7天</strong> ✅</td><td>从上周1/6到本周7/7，习惯养成</td></tr><tr><td>喝水2000ml</td><td><strong>6/7天</strong></td><td>1/11仅1500ml</td></tr><tr><td>抖音清理</td><td><strong>0/7天</strong> ❌</td><td>本周完全没动</td></tr></tbody></table><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><p><strong>精力波动规律</strong>：</p><ul><li>活动日（1/6琴湖之夜）精力最高9/10，工作日（1/9去50所）最低6/10</li><li>连续活动后（1/7-1/8）精力下滑明显</li></ul><p><strong>情绪普遍偏低</strong>：</p><ul><li>全周情绪评分：5→6→7→5→6→5→6，平均5.7/10</li><li>多次记录”心态崩”、”心态爆炸”、”像没有感情的杀手”</li><li>触发点：认证类任务反复失败、多线程并发、感情问题</li></ul><p><strong>做得顺 vs 阻力大</strong>：</p><ul><li>✅ 顺：论文阅读（打卡机制+朋友圈约束）、散步（已成习惯）、活动参与</li><li>❌ 阻力大：认证类任务（Discord/Telegram/ChatGPT老兵全失败）、小程序（一直”进行中”）、装Linux（连续两周拖延）</li></ul><h2 id="未完成事项"><a href="#未完成事项" class="headerlink" title="未完成事项"></a>未完成事项</h2><table><thead><tr><th>事项</th><th>原因分析</th></tr></thead><tbody><tr><td>小程序完成</td><td>一直在”推进”但没有”完成”，缺少明确deadline</td></tr><tr><td>装Linux</td><td>连续两周拖延，优先级不清 + 无紧迫感</td></tr><tr><td>抖音清理</td><td>上周还做了1天，本周彻底停了</td></tr><tr><td>ChatGPT老兵认证</td><td>折腾半小时失败，已止损（正确决策）</td></tr></tbody></table><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><blockquote><p><strong>“专注和聚焦，不要想着多开，不要高估自己能做多少事，而是聚焦把所有精力放在最重要的事情上。”</strong></p></blockquote><blockquote><p><strong>“少研究别人，多塑造自己。”</strong></p></blockquote><blockquote><p><strong>“一颗向上的心脏，不应该有一副向下的躯体。”</strong></p></blockquote><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><ol><li><strong>小程序本周必须完成</strong>——不是”推进”，是”完成”，周三前部署上线</li><li><strong>情绪管理</strong>——本周多次”心态崩”，识别触发点：认证类任务、多线程并发。下周遇到类似情况及时止损</li><li><strong>装Linux：做决定</strong>——要么周末2小时搞定，要么从待办里彻底删掉</li><li><strong>抖音清理重启</strong>——每天10个也行，别断</li><li><strong>论文打卡继续保持</strong>——本周7/7是最大成就，守住这个节奏</li></ol><hr><blockquote><p>习惯养成见效了（论文+散步全勤），但情绪管理是新课题。下周核心：完成 &gt; 推进，聚焦 &gt; 多开。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;活动密集周（琴湖之夜 + 常熟研学两天）叠加技术任务，节奏被打散但核心习惯守住了。&lt;strong&gt;论文打卡连续7天是本周最大亮点&lt;/strong&gt;，从ResNet一路追到PVT，把CV backbone进化线串了一遍。情绪波动明显——“心态崩”、”心态爆炸”多次出现，需要警</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   

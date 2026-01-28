@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://insistgang.github.io/posts/0.html</loc>
+    <loc>https://insistgang.github.io/posts/week5plan.html</loc>
+    
+    <lastmod>2026-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://insistgang.github.io/posts/week4review.html</loc>
     
     <lastmod>2026-01-28</lastmod>
     
