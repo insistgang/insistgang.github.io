@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-26T14:56:05.893Z</updated>
+  <updated>2026-01-27T14:52:07.820Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年1月27日</title>
+    <link href="https://insistgang.github.io/posts/c3d4e5f6.html"/>
+    <id>https://insistgang.github.io/posts/c3d4e5f6.html</id>
+    <published>2026-01-26T16:00:00.000Z</published>
+    <updated>2026-01-27T14:52:07.820Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年1月27日-星期一"><a href="#2026年1月27日-星期一" class="headerlink" title="2026年1月27日 星期一"></a>2026年1月27日 星期一</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 论文：找数据集，跑YOLOv8 seg训练 → 部分完成，采集了违建数据集</li><li><input disabled="" type="checkbox"> 教资：继续看视频 ❌</li><li><input disabled="" type="checkbox"> 作息：早睡 ❌</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>开会被导师说数据采集的事情，自闭了一上午</li><li>中午：大份小混沌+豆干</li></ul><p><strong>下午</strong></p><ul><li>打车跑了好几个地方采集违建数据集</li><li>无人机拍摄半小时就没电了</li><li>小区有的给进、有的不给进，老小区电线杆特别多</li><li>只采集了一部分数据，挺无奈的</li></ul><p><strong>晚上</strong></p><ul><li>和77吃左庭右院，花了260元（太贵了）</li><li>回来搞了一个skills，辅助写软著效果不错</li><li>研究数据集传输</li><li>整理实习项目代码，东西太多，状态有点杂乱</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 5/10</p><p>被导师骂的太难受了，总是喜欢翻旧账，太烦了。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：大混沌+豆干</li><li>晚餐：左庭右院</li><li>运动：未锻炼（但在不同小区走来走去拍视频也是锻炼了）</li><li>喝水：2L ✅</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li><strong>数据采集实战</strong>：跑了几个小区，发现老小区电线杆特别多，拍摄难度大</li><li><strong>Skills开发</strong>：辅助写软著效果不错</li><li><strong>经验教训</strong>：无人机电池太短，半小时就没电，需要改进</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li><strong>导师沟通</strong>：被说数据采集的事，情绪受影响</li><li><strong>设备问题</strong>：无人机电池不够用</li><li><strong>小区限制</strong>：有的小区不让进</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>被导师说得太难受了，总是翻旧账。</strong> —— 但还是要先把事情做好，数据采集确实需要更多准备。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 论文：继续整理数据集，准备YOLOv8 seg训练</li><li><input disabled="" type="checkbox"> 教资：继续看视频</li><li><input disabled="" type="checkbox"> 作息：今晚早睡早起</li><li><input disabled="" type="checkbox"> 软著：继续用skills辅助编写</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年1月27日-星期一&quot;&gt;&lt;a href=&quot;#2026年1月27日-星期一&quot; class=&quot;headerlink&quot; title=&quot;2026年1月27日 星期一&quot;&gt;&lt;/a&gt;2026年1月27日 星期一&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月26日</title>
@@ -455,31 +477,6 @@
       
       
     <summary type="html">&lt;p&gt;活动密集周（琴湖之夜 + 常熟研学两天）叠加技术任务，节奏被打散但核心习惯守住了。&lt;strong&gt;论文打卡连续7天是本周最大亮点&lt;/strong&gt;，从ResNet一路追到PVT，把CV backbone进化线串了一遍。情绪波动明显——“心态崩”、”心态爆炸”多次出现，需要警</summary>
-      
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月11日</title>
-    <link href="https://insistgang.github.io/posts/k8l9m0n1.html"/>
-    <id>https://insistgang.github.io/posts/k8l9m0n1.html</id>
-    <published>2026-01-10T16:00:00.000Z</published>
-    <updated>2026-01-21T15:13:41.422Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 完成小程序 —— 进行中，持续推进</li><li><input disabled="" type="checkbox"> 本周复盘 —— 进行中</li><li><input disabled="" type="checkbox"> 整理工作内容，想清楚怎么推进 —— 进行中</li><li><input checked="" disabled="" type="checkbox"> 归纳整理自己的东西 —— 完成，设计了提示词助手系统</li><li><input checked="" disabled="" type="checkbox"> 好好休息 —— 周日节奏，算休息了</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>下午 @ 实验室</strong></p><ul><li>1点半到实验室，休息到3点</li><li>3点觉得不能这样了，重启电脑开干</li><li>花10分钟编写了”提示词设计小帮手”，产出了记账助手和减肥助手两个专用提示词</li><li>目前已有的专用智能体：每日日记复盘助手、每日论文阅读助手、每日减肥计划助手、每月记账理财智能体</li><li>思路：先在Claude上打磨好 → 整合到Claude Code → 建立博客基站 → 生成个人化AI全局助手</li></ul><p><strong>晚上</strong></p><ul><li>小程序持续修改推进</li><li>本周复盘和工作整理同步进行中</li><li>散步了一会，读完Day10论文</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 7/10，情绪 6/10</p><p>周日节奏，下午启动慢了点，但3点之后找回状态。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：鸡腿饭</li><li>晚餐：烧饼羊肉串 + 两个鸡腿 + 牛肉胡辣汤 + 可乐（⚠️减肥期间注意）</li><li>散步：✅ </li><li>喝水：1500ml（未达标，差500ml）</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>搭建了专用智能体系统框架，聚焦让专有的智能体做专有的事</li><li>PVT论文读完，理解了SRA降低复杂度的另一条路</li></ul><h2 id="今日论文-day10"><a href="#今日论文-day10" class="headerlink" title="今日论文 #day10"></a>今日论文 #day10</h2><p><strong>PVT《Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions》</strong><br>ICCV 2021 | 华中科大&amp;华为诺亚 | Wenhai Wang等</p><p>Day09 Swin说”把attention限制在window里”，今天PVT说”把KV降采样就行了”。两种思路殊途同归：都让Transformer能处理高分辨率。PVT更简洁，不需要复杂的shift操作；但Swin的归纳偏置让它训练更稳定。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>专注和聚焦，不要想着多开，不要高估自己能做多少事，而是聚焦把所有精力放在最重要的事情上。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 完善小程序bug</li><li><input disabled="" type="checkbox"> 仔细读论文</li><li><input disabled="" type="checkbox"> 学好Claude Code并嵌入自动化流程中</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 完成小程</summary>
       
     
     
