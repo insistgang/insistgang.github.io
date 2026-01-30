@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-29T15:00:27.046Z</updated>
+  <updated>2026-01-30T15:53:52.054Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年1月30日</title>
+    <link href="https://insistgang.github.io/posts/j9k8l7m6.html"/>
+    <id>https://insistgang.github.io/posts/j9k8l7m6.html</id>
+    <published>2026-01-29T16:00:00.000Z</published>
+    <updated>2026-01-30T15:53:52.054Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年1月30日-星期五"><a href="#2026年1月30日-星期五" class="headerlink" title="2026年1月30日 星期五"></a>2026年1月30日 星期五</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 教资：做1套真题摸底</li><li><input disabled="" type="checkbox"> 论文：读1篇</li><li><input disabled="" type="checkbox"> 锻炼</li><li><input disabled="" type="checkbox"> 吃饭正常吃</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>10点淋雨到实验室</li><li>凌晨把clawdbot在Web UI的操作搞好了</li><li>把claude在笔记本上的wsl基本配置好了</li><li>用clawdbot跑wsl修复计算机bug，分析文件</li></ul><p><strong>下午</strong></p><ul><li>班上没几个人来拿饭票，最后留了六张，晚上给阿姨了</li><li>学妹两点半送饭过来：番茄炒鸡蛋+小炒肉+小豆角</li><li>中午到下午3点分析违建数据集，分类归纳</li><li>研究美赛论文，用了ima和notebooklm</li><li>尝试在Linux上安装anyrouter，一直出问题</li></ul><p><strong>晚上</strong></p><ul><li>吃一食堂鸭腿饭</li><li>找大佬远程看，解决anyrouter安装问题</li><li>用Gemini直接生成python代码绘图</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><p>整体状态不错。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：番茄炒鸡蛋+小炒肉+小豆角（学妹送）</li><li>晚餐：一食堂鸭腿饭</li><li>运动：无，下雨</li><li>喝水：1.5L，阴天没喝多少</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>clawdbot在wsl配置成功，修复bug很有意思</li><li>数据集分析：很多拍的高度不够，不能使用，还在整合</li><li>美赛研究：发现了很多不一样的绘图工具</li><li>Gemini可以直接把python代码生成图片展示</li><li>anyrouter安装问题最终由大佬远程解决</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>很多拍的违建数据高度不够，不能使用</li><li>ima和notebooklm生成文件效果一般</li><li>Linux安装anyrouter一直出问题</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>很多问题大模型依旧解决不了，还是需要人，操作，并且还能给你眼前一亮的操作。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 论文：推进</li><li><input disabled="" type="checkbox"> 数据集：继续整合标注</li><li><input disabled="" type="checkbox"> 教资：学习</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年1月30日-星期五&quot;&gt;&lt;a href=&quot;#2026年1月30日-星期五&quot; class=&quot;headerlink&quot; title=&quot;2026年1月30日 星期五&quot;&gt;&lt;/a&gt;2026年1月30日 星期五&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月29日</title>
@@ -442,29 +464,6 @@
       
     <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月13日</title>
-    <link href="https://insistgang.github.io/posts/s3t4u5v6.html"/>
-    <id>https://insistgang.github.io/posts/s3t4u5v6.html</id>
-    <published>2026-01-12T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.414Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 小程序：完成所有bug修复 —— 95%搞定，还剩错题保存重做和收藏两个</li><li><input checked="" disabled="" type="checkbox"> 小程序：准备部署环境 —— 已可部署，等备案审核通过</li><li><input checked="" disabled="" type="checkbox"> 论文Day12 —— YOLOX</li><li><input checked="" disabled="" type="checkbox"> 继续完善个人智能体 —— 写了两个新的</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml —— 都完成了</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>张老师发工资了，安排1月18或19日给学生开建模美赛培训</li><li>11:40 和学妹去麦当劳吃饭，两个汉堡</li><li>纪元送了车厘子，让龙哥洗干净</li></ul><p><strong>下午 @ 实验室</strong></p><p>小程序bug修复大作战：</p><ul><li>解决开始考试UI问题</li><li>解决整个页面不显示的问题</li><li>解决题目做完不记录的问题</li><li>解决倒计时考试的问题</li><li>不断更新体验版优化小bug</li><li>**总体修复95%**，基本可用了，就差错题保存重做和收藏功能</li></ul><p>中间因为倒计时问题把前端重写了一遍，有点小崩，但还是扛过来了。</p><p><strong>三创赛 &amp; 智能体</strong></p><ul><li>发了学弟学妹三创赛的内容，梳理了我们要做什么</li><li>开始网站视频学习</li><li>写了两个新智能体：美赛辅导智能体、教资学习智能体</li><li>下载了教资资料，计划每周抽10小时学教资</li></ul><p><strong>晚上</strong></p><ul><li>5点散步半小时去南门</li><li>和宿舍三人去嗨嗨地摊小炉子自助烧烤（68元/人）</li><li>抽奖抽到最大奖50！换了臭衣篓和一个点心</li><li>我吃了60串，纪元吃了70多串，把店吃穷了哈哈</li><li>回来继续看书、读论文、完善小程序</li></ul><p><strong>插曲</strong></p><p>坐浩然的车在文汇路被交警抓了（带人），第一次警告不罚款，有名刀挡了一刀。太可恶了。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 8/10，情绪 7/10</p><p>整体还行，有些许懈怠，需要继续加油。小程序从”修bug中”到”95%可用”，明天就能交付测试了。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day12 YOLOX</td></tr><tr><td>散步</td><td>✅ 半小时</td></tr><tr><td>喝水</td><td>✅ 2000ml</td></tr><tr><td>饮食</td><td>午：麦当劳两个汉堡 / 晚：自助烧烤60串（牛肉、羊肉、大油边、虾肉）</td></tr></tbody></table><h2 id="今日论文-day12"><a href="#今日论文-day12" class="headerlink" title="今日论文 #day12"></a>今日论文 #day12</h2><p><strong>YOLOX《YOLOX: Exceeding YOLO Series in 2021》</strong><br>arXiv 2021 | 旷视科技 | Ge Zheng等</p><p>YOLO终于anchor-free了。三大改进：Decoupled Head（分类回归解耦）、Anchor-free（每位置只预测1个框）、SimOTA（自动决定正样本匹配）。</p><p>YOLOX-L：50.0 AP，超过YOLOv5-L的48.2，速度69 FPS。</p><p>启发：与其从头设计anchor，不如直接用anchor-free + 自动化label assignment。这种”拿来主义+工程优化”的风格很适合工业界。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>人生得有计划你知道吗，没有计划那成什么玩意了呢。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用</li><li><input disabled="" type="checkbox"> 论文Day13</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;chec</summary>
       
     
     
