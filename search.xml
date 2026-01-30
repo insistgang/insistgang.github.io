@@ -696,46 +696,6 @@
     
     
     <entry>
-      <title>2026年1月1日</title>
-      <link href="/posts/d4e5f6a7.html"/>
-      <url>/posts/d4e5f6a7.html</url>
-      
-        <content type="html"><![CDATA[<table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>13:31</td><td>起床，舍友都回家了，宿舍就我一个人</td></tr><tr><td>下午</td><td>点外卖、拿快递（《您好2026》）、给电车充电</td></tr><tr><td>下午</td><td>回实验室吃饭，群里给刘导发元旦祝福</td></tr><tr><td>傍晚</td><td>和姐姐通话，讲了昨天钥匙失而复得的故事</td></tr><tr><td>晚上</td><td>整理笔记本电脑旧文件，备份到百度网盘</td></tr><tr><td>晚上</td><td>联系程果，借他网盘空间存东西</td></tr><tr><td>晚上</td><td>下载Lubuntu 24.04、Rufus，准备给笔记本装Linux</td></tr><tr><td>22:00+</td><td>和Claude复盘今天</td></tr></tbody></table><h2 id="🍚-今日饮食"><a href="#🍚-今日饮食" class="headerlink" title="🍚 今日饮食"></a>🍚 今日饮食</h2><ul><li>只吃了一顿：青椒肉丝盖饭</li></ul><h2 id="✅-今日完成"><a href="#✅-今日完成" class="headerlink" title="✅ 今日完成"></a>✅ 今日完成</h2><ul><li><input checked="" disabled="" type="checkbox"> 给刘导发元旦祝福</li><li><input checked="" disabled="" type="checkbox"> 整理笔记本电脑旧文件</li><li><input checked="" disabled="" type="checkbox"> 备份重要文件到百度网盘</li><li><input checked="" disabled="" type="checkbox"> 下载Lubuntu系统镜像</li><li><input checked="" disabled="" type="checkbox"> 下载Rufus写盘工具</li><li><input checked="" disabled="" type="checkbox"> 和姐姐通话</li><li><input checked="" disabled="" type="checkbox"> 收到快递《您好2026》</li></ul><h2 id="❌-未完成（留给明天）"><a href="#❌-未完成（留给明天）" class="headerlink" title="❌ 未完成（留给明天）"></a>❌ 未完成（留给明天）</h2><ul><li><input disabled="" type="checkbox"> 制作U盘启动盘</li><li><input disabled="" type="checkbox"> 给笔记本装Linux系统</li><li><input disabled="" type="checkbox"> 看罗振宇2026跨年演讲</li><li><input disabled="" type="checkbox"> 学agents</li><li><input disabled="" type="checkbox"> 研究Manus</li><li><input disabled="" type="checkbox"> 用《您好2026》做年度计划</li><li><input disabled="" type="checkbox"> 收拾实验室桌子</li><li><input disabled="" type="checkbox"> 台式机C盘清理</li></ul><h2 id="💭-今日感受"><a href="#💭-今日感受" class="headerlink" title="💭 今日感受"></a>💭 今日感受</h2><p>整理旧文件的时候脑子昏昏的。翻出来很多以前存的东西，很多都舍不得删，又觉得有用，能给我新想法。想做减法，结果不断在做加法。</p><p>元旦第一天，想通过整理电脑、收藏夹这些事把自己理顺，但没完全理顺。</p><p>一个人在实验室，舍友都回家了，有点安静。</p><h2 id="🔋-状态"><a href="#🔋-状态" class="headerlink" title="🔋 状态"></a>🔋 状态</h2><p>脑子有点乱，开了很多线程。竞赛后的恢复期，节奏慢一点也正常。</p><h2 id="📌-明日计划"><a href="#📌-明日计划" class="headerlink" title="📌 明日计划"></a>📌 明日计划</h2><ul><li>制作启动盘 + 装Linux</li><li>台式机C盘清理</li><li>继续学agents</li><li>收拾桌子</li></ul><hr><blockquote><p>元旦第一天，在混乱中慢慢找秩序。加油。</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2026年1月计划</title>
-      <link href="/posts/plan202601.html"/>
-      <url>/posts/plan202601.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="📅-第一周（1-1-1-5）启动"><a href="#📅-第一周（1-1-1-5）启动" class="headerlink" title="📅 第一周（1.1-1.5）启动"></a>📅 第一周（1.1-1.5）启动</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">1.1</td><td align="left">充话费、整理手机app</td></tr><tr><td align="center">1.2</td><td align="left">与客户确认需求文档、功能清单</td></tr><tr><td align="center">1.3</td><td align="left">技术选型、搭建项目框架</td></tr><tr><td align="center">1.4</td><td align="left">数据库设计、后端基础搭建</td></tr><tr><td align="center">1.5</td><td align="left">agents课程学习（穿插）</td></tr></tbody></table><p><strong>本周交付：</strong> 需求确认 + 项目框架搭好 ✓</p><hr><h2 id="📅-第二周（1-6-1-12）核心开发"><a href="#📅-第二周（1-6-1-12）核心开发" class="headerlink" title="📅 第二周（1.6-1.12）核心开发"></a>📅 第二周（1.6-1.12）核心开发</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">后端核心接口开发</td></tr><tr><td align="center">周三-周四</td><td align="left">小程序前端页面开发</td></tr><tr><td align="center">周五</td><td align="left">前后端联调</td></tr><tr><td align="center">周末</td><td align="left">测试、修bug</td></tr></tbody></table><p><strong>本周交付：</strong> 核心功能可用 ✓</p><p><strong>理财节点：</strong> 1月中旬月利宝/稳利宝解锁，执行第一次建仓（5000元）</p><hr><h2 id="📅-第三周（1-13-1-19）上线"><a href="#📅-第三周（1-13-1-19）上线" class="headerlink" title="📅 第三周（1.13-1.19）上线"></a>📅 第三周（1.13-1.19）上线</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">最终测试、优化体验</td></tr><tr><td align="center">周三</td><td align="left">小程序提交审核</td></tr><tr><td align="center">周四-周五</td><td align="left">等审核 + 准备上线</td></tr><tr><td align="center">周末</td><td align="left"><strong>上线发布</strong> 🚀</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序上线 ✓</p><hr><h2 id="📅-第四周（1-20-1-26）收尾-过渡"><a href="#📅-第四周（1-20-1-26）收尾-过渡" class="headerlink" title="📅 第四周（1.20-1.26）收尾+过渡"></a>📅 第四周（1.20-1.26）收尾+过渡</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周三</td><td align="left">客户反馈、bug修复、迭代</td></tr><tr><td align="center">周四-周五</td><td align="left">小论文框架梳理、开始写</td></tr><tr><td align="center">周末</td><td align="left">休息/机动</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序稳定运行 + 小论文启动 ✓</p><hr><h2 id="🔁-每周固定"><a href="#🔁-每周固定" class="headerlink" title="🔁 每周固定"></a>🔁 每周固定</h2><table><thead><tr><th align="center">事项</th><th align="left">频率</th></tr></thead><tbody><tr><td align="center">公司实习</td><td align="left">看情况，1次/周</td></tr><tr><td align="center">每天一句话记录</td><td align="left">每天</td></tr><tr><td align="center">健身（低冲击）</td><td align="left">3-4次/周</td></tr><tr><td align="center">理财定投扣款</td><td align="left">每周一自动</td></tr></tbody></table><hr><h2 id="🎯-1月底验收标准"><a href="#🎯-1月底验收标准" class="headerlink" title="🎯 1月底验收标准"></a>🎯 1月底验收标准</h2><ul><li><input disabled="" type="checkbox"> 体育生小程序上线</li><li><input disabled="" type="checkbox"> agents课程学完</li><li><input disabled="" type="checkbox"> 第一次建仓完成（5000元）</li><li><input disabled="" type="checkbox"> 每天一句话记录坚持30天</li><li><input disabled="" type="checkbox"> 体重≤93kg</li></ul><hr><h2 id="⏳-放到2月的事"><a href="#⏳-放到2月的事" class="headerlink" title="⏳ 放到2月的事"></a>⏳ 放到2月的事</h2><ul><li>小论文（知识蒸馏）投稿《信息网络安全》</li><li>硕士论文系统复现（大论文）</li><li>违建数据采集</li></ul><h2 id="💤-以后再说"><a href="#💤-以后再说" class="headerlink" title="💤 以后再说"></a>💤 以后再说</h2><ul><li>无人机培训（等有钱了自费）</li></ul><hr><h2 id="💡-本月原则"><a href="#💡-本月原则" class="headerlink" title="💡 本月原则"></a>💡 本月原则</h2><ol><li><strong>一月只做一件大事：小程序上线</strong></li><li>有Claude帮忙，效率拉满</li><li>身体优先，累了就休息</li><li>不看盘，按计划理财</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-            <tag> 计划 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2026年阅读计划（最终版）</title>
       <link href="/posts/reading2026final.html"/>
       <url>/posts/reading2026final.html</url>
@@ -774,6 +734,46 @@
             <tag> 计划 </tag>
             
             <tag> 阅读 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年1月1日</title>
+      <link href="/posts/d4e5f6a7.html"/>
+      <url>/posts/d4e5f6a7.html</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>13:31</td><td>起床，舍友都回家了，宿舍就我一个人</td></tr><tr><td>下午</td><td>点外卖、拿快递（《您好2026》）、给电车充电</td></tr><tr><td>下午</td><td>回实验室吃饭，群里给刘导发元旦祝福</td></tr><tr><td>傍晚</td><td>和姐姐通话，讲了昨天钥匙失而复得的故事</td></tr><tr><td>晚上</td><td>整理笔记本电脑旧文件，备份到百度网盘</td></tr><tr><td>晚上</td><td>联系程果，借他网盘空间存东西</td></tr><tr><td>晚上</td><td>下载Lubuntu 24.04、Rufus，准备给笔记本装Linux</td></tr><tr><td>22:00+</td><td>和Claude复盘今天</td></tr></tbody></table><h2 id="🍚-今日饮食"><a href="#🍚-今日饮食" class="headerlink" title="🍚 今日饮食"></a>🍚 今日饮食</h2><ul><li>只吃了一顿：青椒肉丝盖饭</li></ul><h2 id="✅-今日完成"><a href="#✅-今日完成" class="headerlink" title="✅ 今日完成"></a>✅ 今日完成</h2><ul><li><input checked="" disabled="" type="checkbox"> 给刘导发元旦祝福</li><li><input checked="" disabled="" type="checkbox"> 整理笔记本电脑旧文件</li><li><input checked="" disabled="" type="checkbox"> 备份重要文件到百度网盘</li><li><input checked="" disabled="" type="checkbox"> 下载Lubuntu系统镜像</li><li><input checked="" disabled="" type="checkbox"> 下载Rufus写盘工具</li><li><input checked="" disabled="" type="checkbox"> 和姐姐通话</li><li><input checked="" disabled="" type="checkbox"> 收到快递《您好2026》</li></ul><h2 id="❌-未完成（留给明天）"><a href="#❌-未完成（留给明天）" class="headerlink" title="❌ 未完成（留给明天）"></a>❌ 未完成（留给明天）</h2><ul><li><input disabled="" type="checkbox"> 制作U盘启动盘</li><li><input disabled="" type="checkbox"> 给笔记本装Linux系统</li><li><input disabled="" type="checkbox"> 看罗振宇2026跨年演讲</li><li><input disabled="" type="checkbox"> 学agents</li><li><input disabled="" type="checkbox"> 研究Manus</li><li><input disabled="" type="checkbox"> 用《您好2026》做年度计划</li><li><input disabled="" type="checkbox"> 收拾实验室桌子</li><li><input disabled="" type="checkbox"> 台式机C盘清理</li></ul><h2 id="💭-今日感受"><a href="#💭-今日感受" class="headerlink" title="💭 今日感受"></a>💭 今日感受</h2><p>整理旧文件的时候脑子昏昏的。翻出来很多以前存的东西，很多都舍不得删，又觉得有用，能给我新想法。想做减法，结果不断在做加法。</p><p>元旦第一天，想通过整理电脑、收藏夹这些事把自己理顺，但没完全理顺。</p><p>一个人在实验室，舍友都回家了，有点安静。</p><h2 id="🔋-状态"><a href="#🔋-状态" class="headerlink" title="🔋 状态"></a>🔋 状态</h2><p>脑子有点乱，开了很多线程。竞赛后的恢复期，节奏慢一点也正常。</p><h2 id="📌-明日计划"><a href="#📌-明日计划" class="headerlink" title="📌 明日计划"></a>📌 明日计划</h2><ul><li>制作启动盘 + 装Linux</li><li>台式机C盘清理</li><li>继续学agents</li><li>收拾桌子</li></ul><hr><blockquote><p>元旦第一天，在混乱中慢慢找秩序。加油。</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年1月计划</title>
+      <link href="/posts/plan202601.html"/>
+      <url>/posts/plan202601.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="📅-第一周（1-1-1-5）启动"><a href="#📅-第一周（1-1-1-5）启动" class="headerlink" title="📅 第一周（1.1-1.5）启动"></a>📅 第一周（1.1-1.5）启动</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">1.1</td><td align="left">充话费、整理手机app</td></tr><tr><td align="center">1.2</td><td align="left">与客户确认需求文档、功能清单</td></tr><tr><td align="center">1.3</td><td align="left">技术选型、搭建项目框架</td></tr><tr><td align="center">1.4</td><td align="left">数据库设计、后端基础搭建</td></tr><tr><td align="center">1.5</td><td align="left">agents课程学习（穿插）</td></tr></tbody></table><p><strong>本周交付：</strong> 需求确认 + 项目框架搭好 ✓</p><hr><h2 id="📅-第二周（1-6-1-12）核心开发"><a href="#📅-第二周（1-6-1-12）核心开发" class="headerlink" title="📅 第二周（1.6-1.12）核心开发"></a>📅 第二周（1.6-1.12）核心开发</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">后端核心接口开发</td></tr><tr><td align="center">周三-周四</td><td align="left">小程序前端页面开发</td></tr><tr><td align="center">周五</td><td align="left">前后端联调</td></tr><tr><td align="center">周末</td><td align="left">测试、修bug</td></tr></tbody></table><p><strong>本周交付：</strong> 核心功能可用 ✓</p><p><strong>理财节点：</strong> 1月中旬月利宝/稳利宝解锁，执行第一次建仓（5000元）</p><hr><h2 id="📅-第三周（1-13-1-19）上线"><a href="#📅-第三周（1-13-1-19）上线" class="headerlink" title="📅 第三周（1.13-1.19）上线"></a>📅 第三周（1.13-1.19）上线</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">最终测试、优化体验</td></tr><tr><td align="center">周三</td><td align="left">小程序提交审核</td></tr><tr><td align="center">周四-周五</td><td align="left">等审核 + 准备上线</td></tr><tr><td align="center">周末</td><td align="left"><strong>上线发布</strong> 🚀</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序上线 ✓</p><hr><h2 id="📅-第四周（1-20-1-26）收尾-过渡"><a href="#📅-第四周（1-20-1-26）收尾-过渡" class="headerlink" title="📅 第四周（1.20-1.26）收尾+过渡"></a>📅 第四周（1.20-1.26）收尾+过渡</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周三</td><td align="left">客户反馈、bug修复、迭代</td></tr><tr><td align="center">周四-周五</td><td align="left">小论文框架梳理、开始写</td></tr><tr><td align="center">周末</td><td align="left">休息/机动</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序稳定运行 + 小论文启动 ✓</p><hr><h2 id="🔁-每周固定"><a href="#🔁-每周固定" class="headerlink" title="🔁 每周固定"></a>🔁 每周固定</h2><table><thead><tr><th align="center">事项</th><th align="left">频率</th></tr></thead><tbody><tr><td align="center">公司实习</td><td align="left">看情况，1次/周</td></tr><tr><td align="center">每天一句话记录</td><td align="left">每天</td></tr><tr><td align="center">健身（低冲击）</td><td align="left">3-4次/周</td></tr><tr><td align="center">理财定投扣款</td><td align="left">每周一自动</td></tr></tbody></table><hr><h2 id="🎯-1月底验收标准"><a href="#🎯-1月底验收标准" class="headerlink" title="🎯 1月底验收标准"></a>🎯 1月底验收标准</h2><ul><li><input disabled="" type="checkbox"> 体育生小程序上线</li><li><input disabled="" type="checkbox"> agents课程学完</li><li><input disabled="" type="checkbox"> 第一次建仓完成（5000元）</li><li><input disabled="" type="checkbox"> 每天一句话记录坚持30天</li><li><input disabled="" type="checkbox"> 体重≤93kg</li></ul><hr><h2 id="⏳-放到2月的事"><a href="#⏳-放到2月的事" class="headerlink" title="⏳ 放到2月的事"></a>⏳ 放到2月的事</h2><ul><li>小论文（知识蒸馏）投稿《信息网络安全》</li><li>硕士论文系统复现（大论文）</li><li>违建数据采集</li></ul><h2 id="💤-以后再说"><a href="#💤-以后再说" class="headerlink" title="💤 以后再说"></a>💤 以后再说</h2><ul><li>无人机培训（等有钱了自费）</li></ul><hr><h2 id="💡-本月原则"><a href="#💡-本月原则" class="headerlink" title="💡 本月原则"></a>💡 本月原则</h2><ol><li><strong>一月只做一件大事：小程序上线</strong></li><li>有Claude帮忙，效率拉满</li><li>身体优先，累了就休息</li><li>不看盘，按计划理财</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+            <tag> 计划 </tag>
             
         </tags>
       
