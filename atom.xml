@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-31T15:39:13.796Z</updated>
+  <updated>2026-02-01T16:16:11.027Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -17,11 +17,131 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第6周计划（2.2-2.8）</title>
+    <link href="https://insistgang.github.io/posts/week6plan.html"/>
+    <id>https://insistgang.github.io/posts/week6plan.html</id>
+    <published>2026-02-01T16:00:00.000Z</published>
+    <updated>2026-02-01T16:16:11.027Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2月第6周计划（2-2-2-8）"><a href="#2月第6周计划（2-2-2-8）" class="headerlink" title="2月第6周计划（2.2-2.8）"></a>2月第6周计划（2.2-2.8）</h1><blockquote><p>上周复盘：数据采集完成，美赛通宵研究，但教资学习完全没动，作息一直不规律。本周核心是**”聚焦”**——少折腾工具，多干正事。</p></blockquote><hr><h2 id="本周核心目标（不超过3个）"><a href="#本周核心目标（不超过3个）" class="headerlink" title="本周核心目标（不超过3个）"></a>本周核心目标（不超过3个）</h2><ol><li><strong>论文Baseline</strong> — 必须跑起来，不要再准备了</li><li><strong>教资学习</strong> — 每天30分钟，不要再拖了</li><li><strong>作息调整</strong> — 23点前睡觉，恢复精力</li></ol><hr><h2 id="每日推进任务"><a href="#每日推进任务" class="headerlink" title="每日推进任务"></a>每日推进任务</h2><table><thead><tr><th>任务</th><th>频次</th><th>说明</th></tr></thead><tbody><tr><td>论文Baseline</td><td>每天1次</td><td>跑训练，看结果，调参数</td></tr><tr><td>教资</td><td>每天30分钟</td><td>科目一/二网课+笔记</td></tr><tr><td>锻炼</td><td>3次以上</td><td>健身房/跑步，恢复状态</td></tr><tr><td>早睡</td><td>每天</td><td>23:00前睡</td></tr></tbody></table><hr><h2 id="项目推进"><a href="#项目推进" class="headerlink" title="项目推进"></a>项目推进</h2><h3 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h3><ul><li><input disabled="" type="checkbox"> 跑baseline模型（YOLOv8 seg）</li><li><input disabled="" type="checkbox"> 分析结果，记录问题</li><li><input disabled="" type="checkbox"> 准备下周汇报材料</li></ul><h3 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h3><ul><li><input disabled="" type="checkbox"> 继续标注和整理</li><li><input disabled="" type="checkbox"> 补充采集不足的类别</li></ul><h3 id="美赛"><a href="#美赛" class="headerlink" title="美赛"></a>美赛</h3><ul><li><input disabled="" type="checkbox"> 完成A题/B题分析</li><li><input disabled="" type="checkbox"> 准备论文框架</li></ul><h3 id="教资"><a href="#教资" class="headerlink" title="教资"></a>教资</h3><ul><li><input disabled="" type="checkbox"> 科目一：综合素质知识点</li><li><input disabled="" type="checkbox"> 科目二：教育知识与能力</li></ul><hr><h2 id="作息调整"><a href="#作息调整" class="headerlink" title="作息调整"></a>作息调整</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">07:30  起床，洗漱</span><br><span class="line">08:30  到实验室，开始核心工作</span><br><span class="line">12:00  午餐</span><br><span class="line">13:00-14:00  午休（不要睡太久）</span><br><span class="line">14:00-18:00  论文/项目时间</span><br><span class="line">18:00  晚餐</span><br><span class="line">19:00  散步/锻炼</span><br><span class="line">20:00-22:00  教资学习/论文阅读</span><br><span class="line">22:30  洗漱，准备睡觉</span><br><span class="line">23:00  关灯（严格执行）</span><br></pre></td></tr></table></figure><p><strong>关键原则</strong>：</p><ul><li>早上不要拖延，早点到实验室</li><li>中午午休控制在30分钟内</li><li>晚上23点必须关灯</li></ul><hr><h2 id="本周提醒"><a href="#本周提醒" class="headerlink" title="本周提醒"></a>本周提醒</h2><ul><li>⚠️ 论文baseline不能再拖了，这周必须跑起来</li><li>⚠️ 教资学习每天必须做，不要再找借口</li><li>⚠️ AI工具少折腾，专注做正事</li><li>✅ 美赛通宵结束了，恢复正常作息</li><li>✅ 每天记录状态，周末做周复盘</li></ul><hr><h2 id="周末目标（2-8做周复盘时检查）"><a href="#周末目标（2-8做周复盘时检查）" class="headerlink" title="周末目标（2.8做周复盘时检查）"></a>周末目标（2.8做周复盘时检查）</h2><ul><li><input disabled="" type="checkbox"> 论文：baseline跑出结果</li><li><input disabled="" type="checkbox"> 教资：完成3.5小时学习</li><li><input disabled="" type="checkbox"> 作息：早睡达成5天以上</li><li><input disabled="" type="checkbox"> 锻炼：完成3次以上</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2月第6周计划（2-2-2-8）&quot;&gt;&lt;a href=&quot;#2月第6周计划（2-2-2-8）&quot; class=&quot;headerlink&quot; title=&quot;2月第6周计划（2.2-2.8）&quot;&gt;&lt;/a&gt;2月第6周计划（2.2-2.8）&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;上</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年1月复盘</title>
+    <link href="https://insistgang.github.io/posts/jan2026review.html"/>
+    <id>https://insistgang.github.io/posts/jan2026review.html</id>
+    <published>2026-02-01T15:59:59.000Z</published>
+    <updated>2026-02-01T16:17:14.970Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年1月复盘"><a href="#2026年1月复盘" class="headerlink" title="2026年1月复盘"></a>2026年1月复盘</h1><h2 id="📊-月度概览"><a href="#📊-月度概览" class="headerlink" title="📊 月度概览"></a>📊 月度概览</h2><p>1月的核心主题是**”收尾与启动”**——完成了小程序项目的交付，启动了教资备考，搭建了个人知识库，但论文和教资学习推进不足。整体状态前高后低，习惯养成有进展（散步、卸载抖音），但核心目标（论文、教资）持续拖延。</p><hr><h2 id="🎯-目标进度"><a href="#🎯-目标进度" class="headerlink" title="🎯 目标进度"></a>🎯 目标进度</h2><table><thead><tr><th>目标</th><th>月初计划</th><th>实际完成</th><th>完成度</th></tr></thead><tbody><tr><td>论文阅读/写作</td><td>每周读3篇</td><td>前2周完成，后2周拖了</td><td>50%</td></tr><tr><td>小程序交付</td><td>完成并上线</td><td>✅ 完成交付</td><td>100%</td></tr><tr><td>软著提交</td><td>提交申请</td><td>✅ 已提交</td><td>100%</td></tr><tr><td>教资备考</td><td>启动科目二</td><td>科目一启动，科目二未动</td><td>30%</td></tr><tr><td>数据集采集</td><td>完成采集</td><td>✅ 分类整理完成</td><td>100%</td></tr><tr><td>作息调整</td><td>早睡早起</td><td>❌ 持续不规律</td><td>0%</td></tr></tbody></table><hr><h2 id="🏆-关键里程碑"><a href="#🏆-关键里程碑" class="headerlink" title="🏆 关键里程碑"></a>🏆 关键里程碑</h2><h3 id="项目成果"><a href="#项目成果" class="headerlink" title="项目成果"></a>项目成果</h3><ol><li><strong>小程序项目完全交付</strong>（1.25）—— bug修复、后台开发、客户满意、代码开源</li><li><strong>软著完成并提交</strong>（1.25）—— 源代码、功能说明书、文档材料齐全</li><li><strong>个人知识库搭建</strong>（1.25）—— Claude Code + Obsidian，云端同步</li><li><strong>违建数据集采集完成</strong>（1.31）—— 7类违建分类整理</li></ol><h3 id="个人成长"><a href="#个人成长" class="headerlink" title="个人成长"></a>个人成长</h3><ol><li><strong>人生第10000天</strong>（1.16）—— 苏州之行，单纯快乐的一天</li><li><strong>卸载抖音</strong>（1.25）—— 时间多了很多</li><li><strong>美赛讲课</strong>（1.25）—— 2.5小时培训学弟学妹</li><li><strong>论文打卡连续7天</strong>（1.5-1.11）—— ResNet→PVT，CV骨干网络完整梳理</li></ol><hr><h2 id="📈-趋势分析"><a href="#📈-趋势分析" class="headerlink" title="📈 趋势分析"></a>📈 趋势分析</h2><h3 id="精力-情绪月度走势"><a href="#精力-情绪月度走势" class="headerlink" title="精力/情绪月度走势"></a>精力/情绪月度走势</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第2周（1.5-1.11）：精力6-9/10，情绪5-7/10，活动密集，论文打卡全勤</span><br><span class="line">第3周（1.12-1.18）：精力5-8/10，情绪5-9/10，苏州行充电，情绪峰值</span><br><span class="line">第4周（1.19-1.25）：精力4-8/10，情绪4-7/10，项目收尾，精力波动大</span><br><span class="line">第5周（1.26-2.1）：精力4-6/10，情绪5-7/10，整体偏低，导师影响</span><br></pre></td></tr></table></figure><p><strong>观察</strong>：精力呈下降趋势，前两周活动多状态好，后两周因拖延和导师事件状态下滑。</p><h3 id="习惯执行率统计"><a href="#习惯执行率统计" class="headerlink" title="习惯执行率统计"></a>习惯执行率统计</h3><table><thead><tr><th>习惯</th><th>第2周</th><th>第3周</th><th>第4周</th><th>第5周</th><th>月度总计</th></tr></thead><tbody><tr><td>论文阅读</td><td>7/7</td><td>5/7</td><td>2/7</td><td>0/7</td><td>14/28 (50%)</td></tr><tr><td>散步/运动</td><td>7/7</td><td>7/7</td><td>4/7</td><td>1/7</td><td>19/28 (68%)</td></tr><tr><td>喝水2L</td><td>6/7</td><td>7/7</td><td>4/7</td><td>6/7</td><td>23/28 (82%)</td></tr><tr><td>教资学习</td><td>-</td><td>-</td><td>2/7</td><td>0/7</td><td>2/14 (14%)</td></tr></tbody></table><p><strong>观察</strong>：</p><ul><li>散步习惯养成较好（68%），前两周全勤</li><li>喝水习惯稳定（82%）</li><li>论文阅读前两周好，后两周崩了</li><li>教资学习几乎没动</li></ul><h3 id="时间分配（粗略估计）"><a href="#时间分配（粗略估计）" class="headerlink" title="时间分配（粗略估计）"></a>时间分配（粗略估计）</h3><ul><li>项目开发（小程序/软著）：30%</li><li>AI工具折腾（Claude Code/manus/kimi）：20%</li><li>数据采集：15%</li><li>论文阅读：10%</li><li>社交/活动：15%</li><li>教资学习：5%</li><li>其他（整理/研究工具）：5%</li></ul><hr><h2 id="🔍-问题诊断"><a href="#🔍-问题诊断" class="headerlink" title="🔍 问题诊断"></a>🔍 问题诊断</h2><h3 id="反复出现在周复盘里的问题"><a href="#反复出现在周复盘里的问题" class="headerlink" title="反复出现在周复盘里的问题"></a>反复出现在周复盘里的问题</h3><table><thead><tr><th>问题</th><th>出现周数</th><th>根因分析</th></tr></thead><tbody><tr><td>作息不规律</td><td>4周</td><td>缺乏硬性约束，”说得多做得少”</td></tr><tr><td>论文拖延</td><td>3周</td><td>从”推进”变成”准备”，始终不启动</td></tr><tr><td>教资学习不动</td><td>2周</td><td>优先级被挤掉，没有固定时间块</td></tr><tr><td>多线程问题</td><td>3周</td><td>想要的太多，注意力分散</td></tr></tbody></table><h3 id="核心问题：执行力-vs-意愿"><a href="#核心问题：执行力-vs-意愿" class="headerlink" title="核心问题：执行力 vs 意愿"></a>核心问题：执行力 vs 意愿</h3><p><strong>模式识别</strong>：</p><ul><li>✅ 收尾类任务执行力强（小程序、软著）</li><li>✅ 新工具学习热情高（Claude Code、manus、kimi）</li><li>❌ 深度工作持续困难（论文、教资）</li><li>❌ 习惯约束力弱（作息、运动）</li></ul><p><strong>深层原因</strong>：</p><ol><li><strong>多巴胺陷阱</strong>——新工具带来即时反馈，论文学习反馈延迟</li><li><strong>完美主义</strong>——总觉得”还没准备好”，不敢开始</li><li><strong>缺乏外部约束</strong>——论文、教资没有deadline，容易被挤掉</li><li><strong>精力管理不当</strong>——作息不规律导致精力持续下降</li></ol><hr><h2 id="🌱-成长记录"><a href="#🌱-成长记录" class="headerlink" title="🌱 成长记录"></a>🌱 成长记录</h2><h3 id="技术能力"><a href="#技术能力" class="headerlink" title="技术能力"></a>技术能力</h3><ul><li><strong>AI工具掌握</strong>：Claude Code、Obsidian知识库、manus、kimi agent集群</li><li><strong>开发能力</strong>：小程序开发（从0到交付）、软著申请流程</li><li><strong>学术积累</strong>：CV骨干网络（ResNet→PVT）、DETR系列、小目标检测</li></ul><h3 id="认知升级"><a href="#认知升级" class="headerlink" title="认知升级"></a>认知升级</h3><ol><li><strong>“专注和聚焦，不要想着多开”</strong> —— 第2周感悟，但后续未执行到位</li><li><strong>“人与人之间的差距在于执行力”</strong> —— 第4周感悟</li><li><strong>“痛苦的事情才能让我成长”</strong> —— 第5周感悟</li><li><strong>“信息差是最赚钱的”</strong> —— 第5周AI使用感悟</li></ol><h3 id="习惯养成"><a href="#习惯养成" class="headerlink" title="习惯养成"></a>习惯养成</h3><ul><li>✅ 卸载抖音（持续）</li><li>✅ 散步/运动习惯（68%执行率）</li><li>✅ 每日复盘习惯（坚持整月）</li><li>❌ 早睡早起（0%）</li></ul><hr><h2 id="📅-2月规划"><a href="#📅-2月规划" class="headerlink" title="📅 2月规划"></a>📅 2月规划</h2><h3 id="要继续保持的"><a href="#要继续保持的" class="headerlink" title="要继续保持的"></a>要继续保持的</h3><ol><li><strong>知识库复盘</strong> —— 每日/周/月复盘体系已建立，继续保持</li><li><strong>散步习惯</strong> —— 效果明显，恢复到68%水平</li><li><strong>AI工具学习</strong> —— 但要控制时间，不吞噬正事时间</li><li><strong>卸载抖音</strong> —— 时间充裕，坚持住</li></ol><h3 id="要调整改进的"><a href="#要调整改进的" class="headerlink" title="要调整改进的"></a>要调整改进的</h3><ol><li><strong>论文baseline</strong> —— 2月必须跑起来，不要再准备了</li><li><strong>教资学习</strong> —— 每天30分钟固定时间块，不再找借口</li><li><strong>作息调整</strong> —— 23点前睡觉，硬性约束</li><li><strong>单线程优先</strong> —— 一件事做完再做下一件</li></ol><h3 id="2月核心目标（不超过3个）"><a href="#2月核心目标（不超过3个）" class="headerlink" title="2月核心目标（不超过3个）"></a>2月核心目标（不超过3个）</h3><ol><li><strong>论文baseline跑出结果</strong></li><li><strong>教资科目一/二各推进50%</strong></li><li><strong>作息恢复到23点前睡</strong></li></ol><hr><h2 id="💬-一句话总结"><a href="#💬-一句话总结" class="headerlink" title="💬 一句话总结"></a>💬 一句话总结</h2><p><strong>1月是”收尾与启动”的月份——项目收尾做得好，深度学习启动失败，2月要少折腾工具，多做难事。</strong></p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年1月复盘&quot;&gt;&lt;a href=&quot;#2026年1月复盘&quot; class=&quot;headerlink&quot; title=&quot;2026年1月复盘&quot;&gt;&lt;/a&gt;2026年1月复盘&lt;/h1&gt;&lt;h2 id=&quot;📊-月度概览&quot;&gt;&lt;a href=&quot;#📊-月度概览&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第5周复盘（1.26-2.1）</title>
+    <link href="https://insistgang.github.io/posts/week5review2026.html"/>
+    <id>https://insistgang.github.io/posts/week5review2026.html</id>
+    <published>2026-02-01T15:59:59.000Z</published>
+    <updated>2026-02-01T16:15:41.448Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第5周复盘（1-26-2-1）"><a href="#第5周复盘（1-26-2-1）" class="headerlink" title="第5周复盘（1.26-2.1）"></a>第5周复盘（1.26-2.1）</h1><h2 id="本周概览"><a href="#本周概览" class="headerlink" title="本周概览"></a>本周概览</h2><p>这周的主旋律是<strong>数据采集 + 美赛准备 + AI工具折腾</strong>。经历了被导师说数据采集的自卑，也体验了同门聚餐的快乐，最后以通宵看美赛数模结束。整体状态一般，精力偏低，但收获不少。</p><hr><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><strong>违建数据集采集完成</strong>：跑了多个小区，分类整理成7类（蓝色顶棚、绿色活动板房、阳光房、金属棚架、彩钢瓦临时房、屋顶加建、混合违建）</li><li><strong>美赛研究推进</strong>：看了A题和B题，研究了manus画图和kimi2.5 agent集群</li><li><strong>AI工具配置</strong>：clawdbot在wsl配置成功，Claude Code折腾了不少</li><li><strong>红学论文</strong>：直接让manus写完了</li><li><strong>软著skill开发</strong>：辅助写软著效果不错</li><li><strong>同门感情</strong>：和龙哥、朱哥、涛神吃烧烤，增进感情</li></ol><hr><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成情况</th></tr></thead><tbody><tr><td>每日论文阅读</td><td>0/7天 ❌</td></tr><tr><td>散步/运动</td><td>1/7天（26号练了胸肩背）❌</td></tr><tr><td>喝水</td><td>6/7天达到1.5L+ ✅</td></tr><tr><td>教资学习</td><td>0/7天 ❌</td></tr></tbody></table><hr><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><p><strong>精力/情绪波动：</strong></p><ul><li>周一：精力5/情绪7（状态在线）</li><li>周二：精力5/情绪5（被导师骂，自闭）</li><li>周三：精力6/情绪6（精神状态还行）</li><li>周四：精力4/情绪5（状态一般）</li><li>周五：精力6/情绪7（状态不错）</li><li>周日：精力5/情绪5（状态一般）</li></ul><p>整体偏低，周一周二因为导师的事情情绪受影响，后面慢慢恢复。</p><p><strong>反复出现的卡点：</strong></p><ol><li><strong>作息不规律</strong>：几乎每天都说要早睡，但都没做到</li><li><strong>教资学习</strong>：天天计划推进，但一天都没做</li><li><strong>论文推进</strong>：数据集整理了，但baseline一直没跑</li><li><strong>锻炼</strong>：除了周一，其他时间都没运动</li></ol><p><strong>做得顺的事情：</strong></p><ul><li>AI工具折腾（clawdbot、wsl、Claude Code）</li><li>数据集分类整理</li><li>技术学习和探索</li></ul><p><strong>阻力大的事情：</strong></p><ul><li>教资学习（完全没动）</li><li>论文baseline训练（一直在准备但没跑）</li><li>作息调整（说了多次但没改）</li></ul><hr><h2 id="未完成事项分析"><a href="#未完成事项分析" class="headerlink" title="未完成事项分析"></a>未完成事项分析</h2><table><thead><tr><th>任务</th><th>状态</th><th>原因</th></tr></thead><tbody><tr><td>教资学习</td><td>❌ 未完成</td><td>优先级被其他事挤掉了，每天计划但没执行</td></tr><tr><td>论文baseline</td><td>❌ 未完成</td><td>数据集整理花了太多时间，一直没启动训练</td></tr><tr><td>作息调整</td><td>❌ 未完成</td><td>说得多了，缺乏实际行动和约束</td></tr><tr><td>锻炼</td><td>❌ 未完成</td><td>下雨+忙+懒，各种理由</td></tr></tbody></table><hr><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><ol><li><p><strong>“痛苦的事情才能让我成长。”</strong> —— 汇报时抗拒性很强，但还是硬着头皮做了</p></li><li><p><strong>“很多问题大模型依旧解决不了，还是需要人。”</strong> —— anyrouter安装问题最终找大佬远程解决，大模型给我眼前一亮的操作</p></li><li><p><strong>“过了腊八就是年。”</strong> —— 周一腊八节，和马老师及中医朋友交流，收获很大</p></li><li><p><strong>“做PPT也是一个不断复盘的过程。”</strong> —— 整理材料的过程也是重新审视工作的过程</p></li><li><p><strong>信息差的价值</strong>：能挣钱最多的还是信息差，比如教资资料、考研真题、专业课辅导</p></li><li><p><strong>AI发展趋势</strong>：</p><ul><li>Manus：智囊团模式，把任务分配给最强的人</li><li>Kimi：笨鸟先飞模式，把任务拆成子任务，总结经验</li></ul></li></ol><hr><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><p><strong>要继续保持的：</strong></p><ul><li>数据集整理和分类能力</li><li>AI工具的学习和应用</li><li>记录和复盘习惯</li></ul><p><strong>要调整改进的：</strong></p><ol><li><strong>作息</strong>：必须早睡，不能再5点才睡</li><li><strong>教资学习</strong>：每天至少30分钟，不要再拖了</li><li><strong>论文baseline</strong>：这周必须跑起来</li><li><strong>锻炼</strong>：至少去2次健身房</li></ol><p><strong>下周核心目标（不超过3个）：</strong></p><ol><li>论文：跑baseline模型</li><li>教资：每天学习30分钟</li><li>作息：23点前睡觉</li></ol><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;第5周复盘（1-26-2-1）&quot;&gt;&lt;a href=&quot;#第5周复盘（1-26-2-1）&quot; class=&quot;headerlink&quot; title=&quot;第5周复盘（1.26-2.1）&quot;&gt;&lt;/a&gt;第5周复盘（1.26-2.1）&lt;/h1&gt;&lt;h2 id=&quot;本周概览&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年2月1日</title>
+    <link href="https://insistgang.github.io/posts/0201e5f6.html"/>
+    <id>https://insistgang.github.io/posts/0201e5f6.html</id>
+    <published>2026-01-31T16:00:00.000Z</published>
+    <updated>2026-02-01T16:20:07.779Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年2月1日-星期日"><a href="#2026年2月1日-星期日" class="headerlink" title="2026年2月1日 星期日"></a>2026年2月1日 星期日</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>12点半到实验室</li><li>用 Claude Haiku 画了一些图</li><li>看了一会违建数据集整合</li><li>没做什么科研的事情</li></ul><p><strong>下午</strong></p><ul><li>中午食堂三荤三素免费</li><li>研究科研绘图的顶级配色</li><li>anyrouter 一直配不上</li></ul><p><strong>晚上</strong></p><ul><li>晚上吃红烧肉盖饭，困了睡了一会</li><li>研究红学，给 manus 需求直接把论文写完了</li><li>实验室通宵看美赛数模</li><li>写了一个长篇感悟和总结</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 5/10</p><p>今天状态一般。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：无</li><li>午餐：食堂三荤三素（免费）</li><li>晚餐：红烧肉盖饭</li><li>运动：无</li><li>喝水：1.5L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>科研绘图顶级配色研究</li><li>红学论文直接让 manus 写完了</li><li>美赛数模通宵研究</li><li>晚上写了长篇 AI 使用感悟</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>没做什么科研的事情</li><li>anyrouter 一直配不上</li><li>Claude 到期后，给所有 AI 付费了（manus、kimi）</li><li>很多点子任务想做，想外包，想找人一起做事</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p><strong>关于 AI 使用历史的回顾：</strong></p><p>第一次用这个工具是2024年12月，当时没有铅笔，换了笔触和颜色。用 Cloud 的原因是觉得吸附能力非常强。研一的时候（大概一年半前）它可以通过 SVG 或 HTML 方式画出漂亮的图，用于比赛论文。当时版本是 3.5，现在已经 4.5 了。</p><p>参加过上财金融建模比赛、EDA 比赛。虽然没拿奖，但这个工具确实帮了很多忙。朋友刘景用它参加 EDA 比赛，没我这个软件做不出来。被封了很多号，亏了小 1000 块钱。</p><p>2-3 月用 ChatGPT 做考研复试辅导，帮本科生做作业，用 200 块一个月的软件挣了 2000 块。4 月低空经济比赛用 ChatGPT 写文案。7 月用 ChatGPT 写网页，体育生网页拿了国三（人工智能创新大赛）。ESG 评分系统、智慧城市系统、双碳系统都没中，但体育生网页中了。</p><p>之后又开始用 Claude。用 Claude Code 写了 EDA 竞技挑战赛（3-4 天开发），还有两个国三项目。金融创新项目用了知识蒸馏模型，把 671B 参数的大模型蒸馏成 10B 的小模型。</p><p><strong>AI 发展趋势：</strong></p><ul><li>Manus：智囊团模式，把任务分配给最强的人（Claude 架构、Kimi 前端、GLM 后端）</li><li>Kimi：笨鸟先飞模式，任务 A 分配给 B1-B10 子任务，总结经验</li></ul><p><strong>知识平权：</strong><br>大部分知识被拉到同一起跑线。只要有知识库就能快速学习。把教资资料放进知识库，Cloud Code 配置学习助手，会安排学习任务、出题、整理资料。</p><p><strong>信息差：</strong><br>能挣钱最多的还是信息差。比如教资资料、考研真题、专业课辅导。</p><hr><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究（通宵中）</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年2月1日-星期日&quot;&gt;&lt;a href=&quot;#2026年2月1日-星期日&quot; class=&quot;headerlink&quot; title=&quot;2026年2月1日 星期日&quot;&gt;&lt;/a&gt;2026年2月1日 星期日&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年2月计划</title>
+    <link href="https://insistgang.github.io/posts/feb2026plan.html"/>
+    <id>https://insistgang.github.io/posts/feb2026plan.html</id>
+    <published>2026-01-31T16:00:00.000Z</published>
+    <updated>2026-02-01T16:18:21.917Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年2月计划"><a href="#2026年2月计划" class="headerlink" title="2026年2月计划"></a>2026年2月计划</h1><blockquote><p>上月复盘：项目收尾做得好，但深度学习启动失败。论文、教资持续拖延。<strong>2月要少折腾工具，多做难事。</strong></p></blockquote><hr><h2 id="2月核心目标（不超过3个）"><a href="#2月核心目标（不超过3个）" class="headerlink" title="2月核心目标（不超过3个）"></a>2月核心目标（不超过3个）</h2><ol><li><strong>论文Baseline跑出结果</strong> —— 不要再准备了，直接开跑</li><li><strong>教资科目一完成</strong> —— 每天30分钟，不再找借口</li><li><strong>作息恢复规律</strong> —— 23点前睡觉，7:30前起床</li></ol><hr><h2 id="每周推进计划"><a href="#每周推进计划" class="headerlink" title="每周推进计划"></a>每周推进计划</h2><table><thead><tr><th>周</th><th>日期</th><th>主题</th><th>核心任务</th></tr></thead><tbody><tr><td>第6周</td><td>2.2-2.8</td><td>聚焦启动</td><td>论文baseline启动、教资30分/天</td></tr><tr><td>第7周</td><td>2.9-2.15</td><td>深度推进</td><td>baseline调优、教资科目一进度50%</td></tr><tr><td>第8周</td><td>2.16-2.22</td><td>收尾冲刺</td><td>论文初稿、教资科目一刷题</td></tr><tr><td>第9周</td><td>2.23-3.1</td><td>月底复盘</td><td>月复盘、3月规划</td></tr></tbody></table><hr><h2 id="项目推进"><a href="#项目推进" class="headerlink" title="项目推进"></a>项目推进</h2><h3 id="论文（优先级最高）"><a href="#论文（优先级最高）" class="headerlink" title="论文（优先级最高）"></a>论文（优先级最高）</h3><ul><li><input disabled="" type="checkbox"> 第1周：跑通baseline（YOLOv8 seg）</li><li><input disabled="" type="checkbox"> 第2周：分析结果，记录问题</li><li><input disabled="" type="checkbox"> 第3周：调参优化，准备初稿</li><li><input disabled="" type="checkbox"> 第4周：完成论文初稿</li></ul><h3 id="教资科目一"><a href="#教资科目一" class="headerlink" title="教资科目一"></a>教资科目一</h3><ul><li><input disabled="" type="checkbox"> 第1周：综合素质知识点梳理</li><li><input disabled="" type="checkbox"> 第2周：职业理念、法律法规学习</li><li><input disabled="" type="checkbox"> 第3周：教师职业道德、文化素养</li><li><input disabled="" type="checkbox"> 第4周：刷题+模拟考试</li></ul><h3 id="教资科目二"><a href="#教资科目二" class="headerlink" title="教资科目二"></a>教资科目二</h3><ul><li><input disabled="" type="checkbox"> 启动：教育知识与能力</li><li><input disabled="" type="checkbox"> 每周至少1次学习</li></ul><h3 id="美赛（2月初）"><a href="#美赛（2月初）" class="headerlink" title="美赛（2月初）"></a>美赛（2月初）</h3><ul><li><input disabled="" type="checkbox"> 完成A/B题分析</li><li><input disabled="" type="checkbox"> 准备论文框架</li></ul><hr><h2 id="每日习惯"><a href="#每日习惯" class="headerlink" title="每日习惯"></a>每日习惯</h2><table><thead><tr><th>习惯</th><th>目标</th><th>检查方式</th></tr></thead><tbody><tr><td>论文/科研</td><td>每天1小时</td><td>写日志记录</td></tr><tr><td>教资学习</td><td>每天30分钟</td><td>写日志记录</td></tr><tr><td>散步/运动</td><td>每周3次</td><td>运动打卡</td></tr><tr><td>早睡</td><td>23点前</td><td>手机不放床头</td></tr><tr><td>喝水</td><td>2L/天</td><td>水杯记录</td></tr></tbody></table><hr><h2 id="作息时间表"><a href="#作息时间表" class="headerlink" title="作息时间表"></a>作息时间表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">07:30  起床，洗漱</span><br><span class="line">08:00  早餐</span><br><span class="line">08:30  到实验室，开始核心工作</span><br><span class="line">12:00  午餐</span><br><span class="line">13:00-13:30  午休（不超过30分钟）</span><br><span class="line">14:00-18:00  论文/科研时间</span><br><span class="line">18:00  晚餐</span><br><span class="line">19:00  散步/锻炼</span><br><span class="line">20:00-22:00  教资学习/论文阅读</span><br><span class="line">22:30  洗漱，准备睡觉</span><br><span class="line">23:00  关灯（严格执行）</span><br></pre></td></tr></table></figure><p><strong>关键原则</strong>：</p><ul><li>上午不要拖延，早点到实验室</li><li>午休控制在30分钟内</li><li>晚上23点必须关灯</li></ul><hr><h2 id="本月提醒"><a href="#本月提醒" class="headerlink" title="本月提醒"></a>本月提醒</h2><ul><li>⚠️ 论文不能再拖了，2月必须出结果</li><li>⚠️ 教资学习每天必须做，不要再找借口</li><li>⚠️ AI工具少折腾，专注做正事</li><li>✅ 散步习惯恢复到68%，继续加油</li><li>✅ 卸载抖音保持住，时间充裕</li></ul><hr><h2 id="月末检查（2-28做月复盘时）"><a href="#月末检查（2-28做月复盘时）" class="headerlink" title="月末检查（2.28做月复盘时）"></a>月末检查（2.28做月复盘时）</h2><ul><li><input disabled="" type="checkbox"> 论文：baseline跑出结果</li><li><input disabled="" type="checkbox"> 论文：完成初稿</li><li><input disabled="" type="checkbox"> 教资：科目一知识点学完</li><li><input disabled="" type="checkbox"> 教资：刷题200+</li><li><input disabled="" type="checkbox"> 作息：早睡达成20天以上</li><li><input disabled="" type="checkbox"> 锻炼：完成10次以上</li></ul><hr><h2 id="💬-2月口号"><a href="#💬-2月口号" class="headerlink" title="💬 2月口号"></a>💬 2月口号</h2><p><strong>“少折腾工具，多做难事。”</strong></p><blockquote><p>难事是：跑论文、学教资、早睡早起<br>易事是：研究新工具、整理文件、刷手机</p></blockquote><blockquote><p>2月，做难事。</p></blockquote><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年2月计划&quot;&gt;&lt;a href=&quot;#2026年2月计划&quot; class=&quot;headerlink&quot; title=&quot;2026年2月计划&quot;&gt;&lt;/a&gt;2026年2月计划&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;上月复盘：项目收尾做得好，但深度学习启动失败。论文、教资持</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2026年1月31日</title>
-    <link href="https://insistgang.github.io/posts/a1b2c3d4.html"/>
-    <id>https://insistgang.github.io/posts/a1b2c3d4.html</id>
+    <link href="https://insistgang.github.io/posts/3101d4e5.html"/>
+    <id>https://insistgang.github.io/posts/3101d4e5.html</id>
     <published>2026-01-30T16:00:00.000Z</published>
-    <updated>2026-01-31T15:39:13.796Z</updated>
+    <updated>2026-02-01T16:20:08.362Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2026年1月31日-星期六"><a href="#2026年1月31日-星期六" class="headerlink" title="2026年1月31日 星期六"></a>2026年1月31日 星期六</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 论文：推进</li><li><input disabled="" type="checkbox"> 数据集：继续整合标注</li><li><input disabled="" type="checkbox"> 教资：学习</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>10点半到实验室，吃三明治和牛奶</li><li>数据集分类整理完成，还没跑baseline</li></ul><p><strong>下午</strong></p><ul><li>违建分类归纳：蓝色顶棚、绿色活动板房、阳光房、金属棚架、彩钢瓦临时房、屋顶加建、混合违建</li><li>研究 manus 画图、kimi2.5 的 agent 集群</li><li>看了美赛 A 题、B 题，都想写点东西发到期刊上</li></ul><p><strong>晚上</strong></p><ul><li>吃食堂，阿姨说随便吃还能吃两顿（昨天给了6张饭票，可以爽吃三天）</li><li>攀哥哥约去苏州玩，等明天美赛研究结束去</li><li>Claude Code 配置搞炸了（settings/config/env/bashrc），clawdbot 修复后图片打不开</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 4/10，情绪 6/10</p><p>今天比较迷，不知道咋了，比较累，很多东西想不太明白，可能没睡好。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：三明治 + 牛奶</li><li>午餐/晚餐：食堂（阿姨让随便吃）</li><li>运动：无，阴天太累</li><li>喝水：1L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>数据集分类整理完成，共7类违建</li><li>manuscript 画图是一绝</li><li>kimi2.5 的 agent 集群真的厉害</li><li>美赛 A 题、B 题 都挺有意思</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>还没跑 baseline</li><li>Claude Code 配置复杂，把自己搞炸了</li><li>clawdbot 修复后图片打不开等问题</li><li>很多事情觉得没有意义，永远解决不完</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>有钱人的孩子大多不会娇生惯养，他们会经历更多磨炼。我和很多厉害的人交流，他们讲话都很慢，反倒是我讲话非常快，做任何事都急赶着急的，非常的不对，得好好反思一下。</p></blockquote><blockquote><p>现在各种大模型生成的内容你不懂原理几乎都是黑盒。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><hr>]]></content>
     
@@ -40,10 +160,10 @@
   
   <entry>
     <title>2026年1月30日</title>
-    <link href="https://insistgang.github.io/posts/j9k8l7m6.html"/>
-    <id>https://insistgang.github.io/posts/j9k8l7m6.html</id>
+    <link href="https://insistgang.github.io/posts/0130j9k8.html"/>
+    <id>https://insistgang.github.io/posts/0130j9k8.html</id>
     <published>2026-01-29T16:00:00.000Z</published>
-    <updated>2026-01-30T15:53:52.054Z</updated>
+    <updated>2026-02-01T16:22:20.269Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2026年1月30日-星期五"><a href="#2026年1月30日-星期五" class="headerlink" title="2026年1月30日 星期五"></a>2026年1月30日 星期五</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 教资：做1套真题摸底</li><li><input disabled="" type="checkbox"> 论文：读1篇</li><li><input disabled="" type="checkbox"> 锻炼</li><li><input disabled="" type="checkbox"> 吃饭正常吃</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>10点淋雨到实验室</li><li>凌晨把clawdbot在Web UI的操作搞好了</li><li>把claude在笔记本上的wsl基本配置好了</li><li>用clawdbot跑wsl修复计算机bug，分析文件</li></ul><p><strong>下午</strong></p><ul><li>班上没几个人来拿饭票，最后留了六张，晚上给阿姨了</li><li>学妹两点半送饭过来：番茄炒鸡蛋+小炒肉+小豆角</li><li>中午到下午3点分析违建数据集，分类归纳</li><li>研究美赛论文，用了ima和notebooklm</li><li>尝试在Linux上安装anyrouter，一直出问题</li></ul><p><strong>晚上</strong></p><ul><li>吃一食堂鸭腿饭</li><li>找大佬远程看，解决anyrouter安装问题</li><li>用Gemini直接生成python代码绘图</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><p>整体状态不错。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：番茄炒鸡蛋+小炒肉+小豆角（学妹送）</li><li>晚餐：一食堂鸭腿饭</li><li>运动：无，下雨</li><li>喝水：1.5L，阴天没喝多少</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>clawdbot在wsl配置成功，修复bug很有意思</li><li>数据集分析：很多拍的高度不够，不能使用，还在整合</li><li>美赛研究：发现了很多不一样的绘图工具</li><li>Gemini可以直接把python代码生成图片展示</li><li>anyrouter安装问题最终由大佬远程解决</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>很多拍的违建数据高度不够，不能使用</li><li>ima和notebooklm生成文件效果一般</li><li>Linux安装anyrouter一直出问题</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>很多问题大模型依旧解决不了，还是需要人，操作，并且还能给你眼前一亮的操作。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 论文：推进</li><li><input disabled="" type="checkbox"> 数据集：继续整合标注</li><li><input disabled="" type="checkbox"> 教资：学习</li></ul><hr>]]></content>
     
@@ -221,10 +341,10 @@
   
   <entry>
     <title>2026年1月24日</title>
-    <link href="https://insistgang.github.io/posts/z9y8x7w6.html"/>
-    <id>https://insistgang.github.io/posts/z9y8x7w6.html</id>
+    <link href="https://insistgang.github.io/posts/0124z9y8.html"/>
+    <id>https://insistgang.github.io/posts/0124z9y8.html</id>
     <published>2026-01-23T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.417Z</updated>
+    <updated>2026-02-01T16:22:19.704Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2026年1月24日-星期六"><a href="#2026年1月24日-星期六" class="headerlink" title="2026年1月24日 星期六"></a>2026年1月24日 星期六</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 整理电脑 ⚠️ 花了太久，掉进”整理成瘾”陷阱</li><li><input disabled="" type="checkbox"> 教资摸底测试 ❌ 未开始</li><li><input disabled="" type="checkbox"> 生命重置协议 ❌ 未开始</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>白天</strong></p><ul><li>整理电脑文件（耗时过长）</li></ul><p><strong>傍晚</strong></p><ul><li>锻炼，之后脑子清晰很多</li></ul><p><strong>晚上</strong></p><ul><li>和室友吃晚饭，人均61，吃得非常快乐</li><li>22:30回宿舍<ul><li>帮纪元搞导师任务</li><li>研究学校保研要求</li><li>和国奖学长聊论文事项</li></ul></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 4/10，情绪 7/10</p><p>过度消耗的一天。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：没吃</li><li>晚餐：鱼头汤 + 小炒肉 + 小酥肉 + 干煸四季豆 + 烧烤（人均61，快乐但热量爆炸）</li><li>运动：锻炼</li><li>喝水：未记录</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>锻炼的正向反馈：脑子清晰很多</li><li>保研信息：研究了一下要求</li><li>论文交流：和国奖学长聊了，有收获</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>整理电脑变成了逃避任务的出口，花了一整天</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>“锻炼完之后脑子清晰很多”</strong> —— 这是今天发现的钥匙，记住这个感觉。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 教资：做1套真题摸底（今天跳过了，明天必须开始）</li><li><input disabled="" type="checkbox"> 论文：读1篇</li><li><input disabled="" type="checkbox"> 锻炼（继续这个好习惯）</li><li><input disabled="" type="checkbox"> 吃饭正常吃，不要暴食</li></ul><hr>]]></content>
     
@@ -243,10 +363,10 @@
   
   <entry>
     <title>2026年1月23日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z6.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z6.html</id>
+    <link href="https://insistgang.github.io/posts/0123d7e8.html"/>
+    <id>https://insistgang.github.io/posts/0123d7e8.html</id>
     <published>2026-01-22T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.417Z</updated>
+    <updated>2026-02-01T16:21:53.893Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 整理数据集，复现别人的论文</li><li><input disabled="" type="checkbox"> 继续阅读论文，看看别人的方法赶快行动</li><li><input disabled="" type="checkbox"> 修好小程序AI部分的bug</li><li><input checked="" disabled="" type="checkbox"> 试飞无人机 ✅ 3点半-5点</li><li><input checked="" disabled="" type="checkbox"> 每日行动+ ✅</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>0:57睡，10:16起床，状态昏昏沉沉</li><li>纪元送实验室，12点多到</li><li>景哥发codex（3元一日10刀token），咸鱼淘了还没用</li><li>研究manus和notebooklm的用法和区别，每天300积分额度</li><li>更新电脑powershell，研究bash用法</li></ul><p><strong>下午</strong></p><h3 id="收拾整顿"><a href="#收拾整顿" class="headerlink" title="收拾整顿"></a>收拾整顿</h3><ul><li>把实验室桌子收拾了，太杂太乱</li><li>零食能吃的都分掉了</li><li>10点回宿舍收拾宿舍</li><li>软著文档鉴别材料重新整理提交</li></ul><h3 id="出行"><a href="#出行" class="headerlink" title="出行"></a>出行</h3><ul><li>修电瓶车：换胎80r + 理发20r = 100r</li><li>午饭：鸡腿饭+鸡蛋 18r</li><li>3点半和同门去飞无人机，飞到5点车没电了，充电</li><li>博客重新推送成功</li></ul><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>研究cpicp竞赛：mpa比赛不能参加（需公共管理专业）</li></ul><p><strong>晚上</strong></p><ul><li>帮磊哥AI审稿（claude+chatgpt），写了审稿意见</li><li>实验室睡觉到8点</li><li>凯哥借5k，唠家常</li><li>去三期健身房散步，挺高级的</li><li>回来收拾宿舍制定明日计划</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>小论文</td><td>❌</td></tr><tr><td>运动</td><td>✅ 三期健身房散步</td></tr><tr><td>喝水</td><td>-</td></tr><tr><td>饮食</td><td>鸡腿饭+鸡蛋 18r</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>人与人之间的差距往往不在于智商，而在于执行力，今日事今日毕，优秀的执行力是成功的基石。</strong><br>—— 郑益慧教授《模拟电子技术基础》</p></blockquote><blockquote><p><strong>如果你不讨厌现在的平庸，你就会一直容忍它。真正的改变始于你对自己现状感到彻底恶心的那一刻。</strong><br>—— Dan Koe《How to Fix Your Entire Life in 1 Year》</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 整理数据集复现论文</li><li><input disabled="" type="checkbox"> 完善软著进行提交</li><li><input disabled="" type="checkbox"> 整理电脑文件夹文件</li><li><input disabled="" type="checkbox"> 继续完成后续的内容</li></ul>]]></content>
     
@@ -266,10 +386,10 @@
   
   <entry>
     <title>2026年1月22日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z5.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z5.html</id>
+    <link href="https://insistgang.github.io/posts/0122c6d7.html"/>
+    <id>https://insistgang.github.io/posts/0122c6d7.html</id>
     <published>2026-01-21T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.416Z</updated>
+    <updated>2026-02-01T16:21:53.364Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 软著：完成剩余部分并提交 ✅</li><li><input checked="" disabled="" type="checkbox"> 小论文：开始写作 ✅ 看论文、研究复现</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml ✅ 改成健身房</li><li><input disabled="" type="checkbox"> 早睡早起 ⚠️ 9:10起比昨天好，但1点睡还是偏晚</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>1点睡，9:10起床（比昨天4点睡10点醒状态好很多）</li><li>捯饬一下，10:40到实验室</li><li>天浩送的路上遇到涂涂</li><li>辅导员送了一箱牛奶到公共实验室</li><li>电脑重启后Obsidian的claude-code窗口找不到了，又找回来了</li></ul><p><strong>下午</strong></p><h3 id="组会"><a href="#组会" class="headerlink" title="组会"></a>组会</h3><ul><li>老师新到了一个无人机</li><li>要求放假前完成数据集采集</li><li>聊了无人机数据采集的方式</li></ul><h3 id="小程序一波三折"><a href="#小程序一波三折" class="headerlink" title="小程序一波三折"></a>小程序一波三折</h3><ul><li>微信认证因名字问题被打回，重新起名：「体招国文资料站」</li><li>审核版本出问题：不能涉及AI问答，否则需要个体工商户认证</li><li>取消AI问答功能，让claude-code修复时bash出bug（还需修复）</li><li>看了manus、coze、mcp的功能，积分制使用AI agent</li></ul><p><strong>晚上</strong></p><ul><li>中午吃钱炙自助火锅，吃太多导致下午晚上昏昏沉沉</li><li>看KPL比赛，脑袋昏昏的</li><li>实验室断断续续睡了一会</li><li>8:30-9:30健身房锻炼，路上风吹一会脑袋好一点</li><li>师兄约火锅，聊未来打算（读博vs工作）<ul><li>导师说必须要有二区以上论文作为敲门砖</li><li>准备写自荐信</li></ul></li><li>攀哥哥打电话鼓励</li><li>完成软著文档鉴别材料并提交 ✅</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>小论文</td><td>✅ 看论文、研究复现</td></tr><tr><td>运动</td><td>✅ 健身房1小时（以后散步改成健身房）</td></tr><tr><td>喝水</td><td>✅ 2L</td></tr><tr><td>饮食</td><td>午：钱炙自助火锅（吃太多）</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>静心，慢一点，想深一点。</strong></p></blockquote><p>心里想的事情太多：manus、mcp、coze、小论文、教资、自荐信、软著、邀请人体验AI agent…</p><p>想要的太多了，心沉不下来。脑袋昏昏的时候容易睡觉，做了很多计划，但行动跟不上。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 整理数据集，复现别人的论文</li><li><input disabled="" type="checkbox"> 继续阅读论文，看看别人的方法赶快行动</li><li><input disabled="" type="checkbox"> 修好小程序AI部分的bug</li><li><input disabled="" type="checkbox"> 试飞无人机</li><li><input disabled="" type="checkbox"> 每日行动+</li></ul>]]></content>
     
@@ -289,10 +409,10 @@
   
   <entry>
     <title>2026年1月21日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z4.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z4.html</id>
+    <link href="https://insistgang.github.io/posts/0121b5c6.html"/>
+    <id>https://insistgang.github.io/posts/0121b5c6.html</id>
     <published>2026-01-20T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.416Z</updated>
+    <updated>2026-02-01T16:21:52.827Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）✅ 已解决</li><li><input checked="" disabled="" type="checkbox"> 小程序：客户测试 ✅ 已交付，客户满意</li><li><input checked="" disabled="" type="checkbox"> 导师任务：50实习内容整理和备份 ✅</li><li><input checked="" disabled="" type="checkbox"> 小论文：开始准备写作 ✅ 看了2篇一区论文，下载10篇</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>睡大觉，中午才出门</li></ul><p><strong>下午 + 晚上</strong></p><h3 id="小程序大收尾-✅"><a href="#小程序大收尾-✅" class="headerlink" title="小程序大收尾 ✅"></a>小程序大收尾 ✅</h3><ul><li>错题重做功能修复</li><li>收藏功能修复</li><li><strong>开发管理员后台</strong>（用户做题情况、错题情况查看）</li><li>完全交付客户，客户满意</li><li>代码开源到 GitHub</li></ul><h3 id="软著准备"><a href="#软著准备" class="headerlink" title="软著准备"></a>软著准备</h3><ul><li>编写源代码说明书</li><li>编写功能说明书</li><li>文档鉴别材料（大部分完成，明天剩余部分）</li></ul><h3 id="知识库-amp-50所整理"><a href="#知识库-amp-50所整理" class="headerlink" title="知识库 &amp; 50所整理"></a>知识库 &amp; 50所整理</h3><ul><li>个人知识库开新 GitHub 仓库并部署</li><li>50所项目整理备份：<ul><li>道路病害面积计算代码</li><li>路灯个数计算</li><li>ReID去重算法</li></ul></li></ul><h3 id="小论文"><a href="#小论文" class="headerlink" title="小论文"></a>小论文</h3><ul><li>看了2篇道路病害一区论文</li><li>下载10篇左右论文</li><li>了解行文结构和内容写作（公式化套话）</li></ul><p><strong>晚上</strong></p><ul><li>和父母通电话，吹牛侃大山</li><li>吃小炒肉盖饭拉肚子了（拼好饭的问题）</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 8/10，情绪 7/10</p><p>整体感觉非常充实，状态挺好。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>小论文</td><td>✅ 看了一区论文，了解写作结构</td></tr><tr><td>运动</td><td>❌ 无</td></tr><tr><td>喝水</td><td>✅ 2L</td></tr><tr><td>饮食</td><td>午：鸡腿饭 / 晚：小炒肉盖饭（拉肚子） / 零食：酸奶26r（学妹请）</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>早睡早起好好努力。</strong></p></blockquote><p>每天起来半天就没了，都是中午出门。以后要调整作息，早点出门。</p><p>下午学妹请喝酸奶，26块钱太贵了，喝不起哈哈。</p><p>再也不吃拼好饭了，注意饮食卫生。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 软著：完成剩余部分并提交</li><li><input disabled="" type="checkbox"> 小论文：开始写作</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li><li><input disabled="" type="checkbox"> 早睡早起</li></ul>]]></content>
     
@@ -312,10 +432,10 @@
   
   <entry>
     <title>2026年1月20日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z3.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z3.html</id>
+    <link href="https://insistgang.github.io/posts/0120a4b5.html"/>
+    <id>https://insistgang.github.io/posts/0120a4b5.html</id>
     <published>2026-01-19T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.416Z</updated>
+    <updated>2026-02-01T16:21:52.265Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>11点到实验室</li><li>中午点了外卖：隆江猪脚饭</li></ul><p><strong>下午</strong></p><ul><li>备课到14:30</li><li><strong>美赛讲课 2.5小时（14:30-17:10）</strong></li><li>整理好备课资料和录播发给学生</li></ul><p><strong>讲课内容：</strong></p><ul><li>Claude-Code 使用</li><li>绘图技巧</li><li>美赛赛题准备</li><li>怎么写论文</li><li>怎么用好AI</li></ul><p><strong>晚上</strong></p><ul><li>吃了24个水饺</li><li>讲完课后有点小摆，刷抖音看《好先生》，刷上头了，几乎快看完这部剧</li><li>涂涂来实验室玩，带了糯米冰酿（不太好喝）</li><li>没有运动和散步，在放松</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 9/10</p><p>讲课确实有点累，但晚上玩得很爽，整体状态非常好。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文/阅读</td><td>❌</td></tr><tr><td>运动</td><td>❌ 休息</td></tr><tr><td>喝水</td><td>✅ 2L</td></tr><tr><td>饮食</td><td>午：隆江猪脚饭 / 晚：24个水饺</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>不要浮躁，慢慢来。</strong></p></blockquote><p>看电视剧体悟不同的人生，有很多感受：</p><ul><li>爱一个人就要让爱的人自由</li><li>还需要好好做自己</li><li>看人间百味，挺有意思的</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
     
@@ -335,128 +455,12 @@
   
   <entry>
     <title>2026年1月19日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z2.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z2.html</id>
+    <link href="https://insistgang.github.io/posts/0119f3a4.html"/>
+    <id>https://insistgang.github.io/posts/0119f3a4.html</id>
     <published>2026-01-18T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.415Z</updated>
+    <updated>2026-02-01T16:21:51.721Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）—— 没来及，明天要讲数模课</li><li><input disabled="" type="checkbox"> 小程序：客户测试—— 客户没催，备案已完成 ✅</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>昨晚没睡好，在宿舍躺到了下午</li></ul><p><strong>中午</strong></p><ul><li>看论文</li><li>一天只吃了一顿饭</li></ul><p><strong>下午</strong></p><ul><li>天气降温，很冷</li></ul><p><strong>晚上</strong></p><ul><li>77请吃大盘鸡</li><li>准备建模比赛备课（明天要讲课）</li><li>教学妹在Linux上训练视觉模型</li><li>看论文 + 搞Linux</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 7/10</p><p>昨晚没睡好，今天降温，整体精力偏低。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ 中午 + 晚上阅读</td></tr><tr><td>运动</td><td>❌ 休息</td></tr><tr><td>喝水</td><td>✅ 2L</td></tr><tr><td>饮食</td><td>一天一顿（晚：大盘鸡）</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>不要堕落，多想想自己要做的事情。</strong></p></blockquote><h2 id="进展"><a href="#进展" class="headerlink" title="进展"></a>进展</h2><ul><li>小程序备案已完成 ✅</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：给学弟学妹讲课（1月20日培训）</li><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月18日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z1.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z1.html</id>
-    <published>2026-01-17T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.415Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input checked="" disabled="" type="checkbox"> 论文Day16（RT-DETR）—— 昨天已完成</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>7点多醒，玩了会手机，又睡到了12点半</li><li>中午朋友点了快餐外卖</li></ul><p><strong>下午</strong></p><ul><li>研究朋友的研究方向和研究内容</li><li>朋友早我两年毕业，有很多经验可以学习</li><li>去漕河湿地公园散步</li></ul><p><strong>晚上</strong></p><ul><li>吃了鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕，很好吃</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>⏸️ 暂停朋友圈打卡，准备开始写自己的小论文</td></tr><tr><td>运动</td><td>✅ 漕河湿地公园散步，1万+步</td></tr><tr><td>喝水</td><td>✅ 3L</td></tr><tr><td>饮食</td><td>午：快餐外卖 / 晚：鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>真的还是要去猛猛干，赶紧要把小论文搞出来，多想着提升自己。</strong></p></blockquote><p>苏州之旅非常快乐，和攀哥哥聊了一天很开心。</p><p>朋友圈论文打卡暂停，马上开始写自己的第一篇小论文，把写竞赛的方法迁移到写论文。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 小论文：开始准备写作</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第3周复盘（1.12-1.18）</title>
-    <link href="https://insistgang.github.io/posts/week3review.html"/>
-    <id>https://insistgang.github.io/posts/week3review.html</id>
-    <published>2026-01-17T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.419Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="📊-本周概览"><a href="#📊-本周概览" class="headerlink" title="📊 本周概览"></a>📊 本周概览</h2><p>本周主题是”完成 &gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的bug修复，论文阅读连续推进，周六苏州之行带来了很好的放松和新的思考。</p><p>核心词：<strong>小程序收尾、论文进阶、苏州充电</strong></p><hr><h2 id="🎯-关键成果"><a href="#🎯-关键成果" class="headerlink" title="🎯 关键成果"></a>🎯 关键成果</h2><ol><li><strong>小程序项目</strong>：从”修bug中”到”95%可用”，核心功能基本完成，只剩错题保存重做和收藏两个功能</li><li><strong>论文阅读</strong>：Day12-16连续推进（YOLOX、DAB-DETR、Conditional DETR、DINO、RT-DETR），深入理解DETR系列演进</li><li><strong>大论文方向</strong>：和组长讨论确定小目标检测可融入大论文，肝硬化医学影像方向与实验室核心论文高度相关</li><li><strong>人生里程碑</strong>：1月16日是人生第10000天</li><li><strong>苏州充电</strong>：和峰哥、攀哥、任总相聚，与导师汇报50实习结束，单纯的快乐</li><li><strong>AI产品认知</strong>：和andy聊天，认识到”还是要抓住这个AI时代”</li></ol><hr><h2 id="💪-习惯追踪"><a href="#💪-习惯追踪" class="headerlink" title="💪 习惯追踪"></a>💪 习惯追踪</h2><table><thead><tr><th>习惯</th><th>完成天数</th><th>完成率</th></tr></thead><tbody><tr><td>论文阅读</td><td>5/7</td><td>71%</td></tr><tr><td>散步/运动</td><td>7/7</td><td>100%</td></tr><tr><td>饮水2000ml</td><td>7/7</td><td>100%</td></tr></tbody></table><hr><h2 id="🔄-模式识别"><a href="#🔄-模式识别" class="headerlink" title="🔄 模式识别"></a>🔄 模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><ul><li>周二、周三状态最佳（精力8/10）</li><li>周四、周五情绪提升（7/10）</li><li>周六苏州玩了一天，单纯不思考，幸福快乐（情绪9/10）</li><li>周日休息后精力恢复（6/10），受到攀哥鼓舞</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ul><li>**小程序”最后两个功能”**：错题保存重做和收藏连续多日未完成，说明存在技术或心理阻力</li><li><strong>多线程问题</strong>：同时推进小程序、论文、50所工作、美赛准备，注意力分散</li></ul><h3 id="做得顺-vs-阻力大的事"><a href="#做得顺-vs-阻力大的事" class="headerlink" title="做得顺 vs 阻力大的事"></a>做得顺 vs 阻力大的事</h3><table><thead><tr><th>顺畅</th><th>阻力大</th></tr></thead><tbody><tr><td>论文阅读（已成习惯）</td><td>小程序最后两个bug</td></tr><tr><td>散步/运动</td><td>50所内容整理备份</td></tr><tr><td>和朋友/导师交流</td><td>装Linux（未开始）</td></tr></tbody></table><hr><h2 id="❌-未完成事项"><a href="#❌-未完成事项" class="headerlink" title="❌ 未完成事项"></a>❌ 未完成事项</h2><table><thead><tr><th>任务</th><th>原因</th></tr></thead><tbody><tr><td>小程序部署上线</td><td>备案审核中，最后两个bug未完成</td></tr><tr><td>小程序：错题保存重做、收藏功能</td><td>技术卡点 + 注意力分散</td></tr><tr><td>客户测试</td><td>等待bug修复</td></tr><tr><td>50所内容整理备份</td><td>未启动</td></tr><tr><td>装Linux</td><td>优先级下降，未启动</td></tr><tr><td>抖音清理</td><td>忘记了</td></tr></tbody></table><hr><h2 id="💡-本周感悟"><a href="#💡-本周感悟" class="headerlink" title="💡 本周感悟"></a>💡 本周感悟</h2><ol><li><p><strong>“单纯玩了一天，什么也不想，就很幸福快乐”</strong> —— 有时候完全放空也是一种充电，苏州之行证明放松的价值</p></li><li><p><strong>“道路总比困难多，困难一定都能解决的”</strong> —— 小程序bug修复过程中学会了看日志分析，心态更稳了</p></li><li><p><strong>“还是要抓住这个AI时代”</strong> —— 和andy聊天意识到AI产品机会，同时受到攀哥鼓舞，要把写竞赛的方法迁移到写论文</p></li><li><p><strong>“一件事做完，再做下一件”</strong> —— 这周多线程导致注意力分散，下周需要更聚焦</p></li></ol><hr><h2 id="📅-下周调整"><a href="#📅-下周调整" class="headerlink" title="📅 下周调整"></a>📅 下周调整</h2><p>基于本周分析，下周要做出的调整：</p><ol><li><strong>小程序收尾</strong>：错题保存重做和收藏两个功能，集中2小时攻克，不再拖</li><li><strong>聚焦小论文</strong>：朋友圈论文打卡暂停，转向写自己的第一篇小论文</li><li><strong>50所任务</strong>：完成实习内容整理和备份</li><li><strong>单线程优先</strong>：一件事做完再做下一件，避免”推进中”状态</li></ol><hr><h2 id="📅-下周计划（1-19-1-25）"><a href="#📅-下周计划（1-19-1-25）" class="headerlink" title="📅 下周计划（1.19-1.25）"></a>📅 下周计划（1.19-1.25）</h2><h3 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h3><ol><li>小程序最后两个bug收尾</li><li>启动小论文写作</li><li>50所实习内容整理</li></ol><h3 id="每日规划"><a href="#每日规划" class="headerlink" title="每日规划"></a>每日规划</h3><table><thead><tr><th>日期</th><th>优先任务</th></tr></thead><tbody><tr><td>周一 1.19</td><td>小程序bug收尾</td></tr><tr><td>周二 1.20</td><td>美赛学生培训 + 小论文准备</td></tr><tr><td>周三 1.21</td><td>小论文开写</td></tr><tr><td>周四 1.22</td><td>小论文推进</td></tr><tr><td>周五 1.23</td><td>小论文推进</td></tr><tr><td>周六 1.24</td><td>小论文收尾/复盘</td></tr><tr><td>周日 1.25</td><td>周复盘 + 下周计划</td></tr></tbody></table><h3 id="习惯目标"><a href="#习惯目标" class="headerlink" title="习惯目标"></a>习惯目标</h3><ul><li>小论文写作 ≥ 1小时/天</li><li>散步/运动 30分钟/天</li><li>饮水 2000ml/天</li></ul><hr><blockquote><p><strong>下周口号：聚焦一件事，把它做完。</strong></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;📊-本周概览&quot;&gt;&lt;a href=&quot;#📊-本周概览&quot; class=&quot;headerlink&quot; title=&quot;📊 本周概览&quot;&gt;&lt;/a&gt;📊 本周概览&lt;/h2&gt;&lt;p&gt;本周主题是”完成 &amp;gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月17日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z0.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z0.html</id>
-    <published>2026-01-16T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.415Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 论文Day16（RT-DETR）</li><li><input checked="" disabled="" type="checkbox"> 苏州之行：和峰哥、攀哥碰面，逛逛苏州</li><li><input disabled="" type="checkbox"> 吃顿好的（火锅自助补一下）→ 改老北京涮肉</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>5:20就醒了，昨晚没睡好</li><li>醒了之后一直在刷抖音，啥也没干</li><li>朋友催我，才想着回苏州和朋友碰面</li><li>打顺风车去苏州的路上，和导师汇报了50实习结束的事项</li><li>导师让做一下内容的整理和备份，聊了很多，很开心</li></ul><p><strong>下午 @ 苏州</strong></p><ul><li>约了峰哥和任总</li><li>午餐：隆江猪脚饭</li><li>一起逛，晚上和任总、峰哥吃了老北京涮牛肉</li></ul><p><strong>晚上</strong></p><ul><li>去看了东方之门</li><li>打车去了攀哥哥那里</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 9/10</p><p>昨晚没睡好，但今天单纯玩了一天，没有想很多事情，很幸福快乐。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day16 RT-DETR（打车的路上看的）</td></tr><tr><td>运动</td><td>✅ 苏州逛了一天</td></tr><tr><td>喝水</td><td>✅ 2L</td></tr><tr><td>饮食</td><td>午：隆江猪脚饭 / 晚：老北京涮牛肉（和峰哥、任总）</td></tr></tbody></table><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>单纯玩了一天，什么也不想，就很幸福快乐。</strong></p></blockquote><p>和导师汇报50实习，聊了很多很开心，让做内容整理和备份。</p><p>今天看到了东方之门，苏州的夜景很美。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 导师任务：50实习内容整理和备份</li><li><input disabled="" type="checkbox"> 论文Day16（RT-DETR）</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月16日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z9.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z9.html</id>
-    <published>2026-01-15T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.414Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input checked="" disabled="" type="checkbox"> 美赛：学核心内容，准备给学弟学妹讲</li><li><input checked="" disabled="" type="checkbox"> 论文Day15（DINO）</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>8点起床，吃了牛肉饼 + 鸡蛋饼</li><li>10点到公司</li><li>组长聊天：项目都做完了，明年计划做小目标检测，可以融入大论文！肝硬化是医学影像方向，也是视觉模型，和实验室核心论文相关性很大</li><li>中午和组长一起吃公司食堂四菜一汤，聊学习近况和科研方向——收获很大</li></ul><p><strong>下午 @ 公司</strong></p><ul><li>整合笔记本和台式机的API（anyrouter失效改用glm，切换不麻烦）</li><li>看了实验室最近6年的肝硬化论文（医学影像方向的视觉检测）</li><li>整理美赛核心内容给学弟学妹，解析了近5年美赛真题</li></ul><p><strong>晚上</strong></p><ul><li>在商场等andy下班，散步逛了1h</li><li>和andy吃凑凑自助火锅（158元/位），第一次吃，还不错</li><li>和y的产品头脑，andy的产品愿景很丰富，受益匪浅</li><li>回来路上看论文，终于把今天的论文内容看完了</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 7/10，情绪 7/10</p><p>今天和组长、andy的对话都很有收获。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day15 DINO</td></tr><tr><td>运动</td><td>✅ 商场散步1h</td></tr><tr><td>喝水</td><td>✅ 3L</td></tr><tr><td>饮食</td><td>午：四菜一汤 / 晚：凑凑自助火锅</td></tr></tbody></table><h2 id="今日论文-day15"><a href="#今日论文-day15" class="headerlink" title="今日论文 #day15"></a>今日论文 #day15</h2><p><strong>DINO《DINO: DETR with Improved DeNoising Anchor Boxes》</strong><br>ICLR 2023 | 港科大 &amp; 清华 &amp; IDEA | Hao Zhang 等</p><p><strong>核心痛点</strong>：DN-DETR用denoising加速训练，但只学习”从噪声重建GT”，没有学习”拒绝远离GT的anchor”，导致可能输出重复框。</p><p><strong>核心解法：Contrastive DeNoising (CDN)</strong></p><p>对每个GT同时生成：</p><ul><li>Positive query（噪声 &lt; λ₁）：学习重建GT</li><li>Negative query（λ₁ &lt; 噪声 &lt; λ₂）：学习预测”no object”</li></ul><p>这教会模型：离GT近的anchor输出框，离得远的输出背景。</p><p><strong>DINO三大改进</strong>：</p><ol><li>Contrastive DeNoising：抑制重复框</li><li>Mixed Query Selection：encoder特征初始化positional query</li><li>Look Forward Twice：后层梯度回传前层，改进box refinement</li></ol><p><strong>关键结果</strong>：DINO-5scale（R50, 12 epochs）49.4 AP，SwinL预训练后达到63.3 AP。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>人生第10000天</strong> 🎉</p></blockquote><p>今天在daymaster上看到自己诞生10000天了，10000天 ≈ 27.4年。这是个人生里程碑。</p><p>和andy聊完，深有感触：<strong>还是要抓住这个AI时代</strong>。andy的产品头脑很棒，愿景也很丰富，让我对AI产品有了新的认识。</p><p>明天约了峰哥和攀哥在苏州碰面，走走停停，出去看看。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 论文Day16（RT-DETR）</li><li><input disabled="" type="checkbox"> 苏州之行：和峰哥、攀哥碰面，逛逛苏州</li><li><input disabled="" type="checkbox"> 吃顿好的（火锅自助补一下）</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月15日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z8.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z8.html</id>
-    <published>2026-01-14T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.414Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）—— 进展中，错题库功能完善</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用—— 发布排队中</li><li><input checked="" disabled="" type="checkbox"> 论文Day14—— Conditional DETR ✅</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml—— 30分钟散步，2500ml ✅</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点多醒，重新看微信小程序用户协议，重新排队发布</li><li>和张老师约好1月20日美赛学生培训</li><li>问朋友国洋和枫溪垂钓价格：420一箱和600一箱</li></ul><p><strong>中午</strong></p><ul><li>吃鸡腿饭</li></ul><p><strong>下午 @ 实验室</strong></p><ul><li>做了财务复盘和今日计划</li><li>问学妹美赛注意事项，需要学一点美赛核心内容然后和学弟学妹讲</li><li>7点多困了，去师弟实验室睡到8点，感觉好多了</li></ul><p><strong>晚上</strong></p><ul><li>整理Claude聊天记录，整合成Obsidian个人知识库（含自动化部署）</li><li>涂涂推了老板微信，送了烧烤</li><li>思宇带了海底捞水果（黄瓜、哈密瓜），和龙哥分了</li><li>21:30-22:00 散步30分钟</li><li>看KPL春季赛：情久3:0TES, TTG 3:1Hero, DRG 0:2KSG（截止写日记）</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><p>下午补觉后状态好多了，今天整体节奏不错。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day14 Conditional DETR</td></tr><tr><td>运动</td><td>✅ 散步30分钟</td></tr><tr><td>喝水</td><td>✅ 2500ml</td></tr><tr><td>饮食</td><td>午：鸡腿饭 / 晚：烧烤</td></tr></tbody></table><h2 id="今日论文-day14"><a href="#今日论文-day14" class="headerlink" title="今日论文 #day14"></a>今日论文 #day14</h2><p><strong>Conditional DETR《Conditional DETR for Fast Training Convergence》</strong><br>ICCV 2021 | 中科大 &amp; 北大 &amp; MSRA | Depu Meng 等</p><p>Day08 DETR用learnable query做检测，但收敛需要500 epochs。今天Conditional DETR揭示了根本原因：<strong>DETR的spatial query是image-agnostic的</strong>，没有利用当前decoder embedding包含的位置信息。</p><p><strong>核心解法：Conditional Spatial Query</strong></p><p>核心公式：pq = λq ⊙ ps</p><ul><li>ps：reference point的sinusoidal positional embedding</li><li>λq = FFN(f)：从decoder embedding学习transformation</li><li>通过element-wise乘法，让spatial query同时编码位置和位移信息</li></ul><p><strong>关键结果</strong>：Conditional DETR-R50（50 epochs）40.9 AP，DETR-R50要500 epochs才42.0 AP。收敛加速6.7×。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>今日金句：<strong>道路总比困难多，困难一定都能解决的。</strong></p></blockquote><p>今天学会了看日志和分析日志内容。小程序bug修复思路：通过Git想办法恢复，数据库能看到功能是否写入，这样就知道前端能不能正常显示。当数据库有内容但前端不能显示时，看日志发现bug问题。现在控制台很少输出错误信息了，后续改bug只要看日志即可。</p><p>整理Claude聊天记录做成Obsidian知识库，感觉自己的知识体系更清晰了。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 美赛：学一点核心内容，准备给学弟学妹讲</li><li><input disabled="" type="checkbox"> 论文Day15（DINO）</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
     
     
       
