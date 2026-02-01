@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-01-30T15:53:52.054Z</updated>
+  <updated>2026-01-31T15:39:13.796Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年1月31日</title>
+    <link href="https://insistgang.github.io/posts/a1b2c3d4.html"/>
+    <id>https://insistgang.github.io/posts/a1b2c3d4.html</id>
+    <published>2026-01-30T16:00:00.000Z</published>
+    <updated>2026-01-31T15:39:13.796Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年1月31日-星期六"><a href="#2026年1月31日-星期六" class="headerlink" title="2026年1月31日 星期六"></a>2026年1月31日 星期六</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 论文：推进</li><li><input disabled="" type="checkbox"> 数据集：继续整合标注</li><li><input disabled="" type="checkbox"> 教资：学习</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>10点半到实验室，吃三明治和牛奶</li><li>数据集分类整理完成，还没跑baseline</li></ul><p><strong>下午</strong></p><ul><li>违建分类归纳：蓝色顶棚、绿色活动板房、阳光房、金属棚架、彩钢瓦临时房、屋顶加建、混合违建</li><li>研究 manus 画图、kimi2.5 的 agent 集群</li><li>看了美赛 A 题、B 题，都想写点东西发到期刊上</li></ul><p><strong>晚上</strong></p><ul><li>吃食堂，阿姨说随便吃还能吃两顿（昨天给了6张饭票，可以爽吃三天）</li><li>攀哥哥约去苏州玩，等明天美赛研究结束去</li><li>Claude Code 配置搞炸了（settings/config/env/bashrc），clawdbot 修复后图片打不开</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 4/10，情绪 6/10</p><p>今天比较迷，不知道咋了，比较累，很多东西想不太明白，可能没睡好。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：三明治 + 牛奶</li><li>午餐/晚餐：食堂（阿姨让随便吃）</li><li>运动：无，阴天太累</li><li>喝水：1L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>数据集分类整理完成，共7类违建</li><li>manuscript 画图是一绝</li><li>kimi2.5 的 agent 集群真的厉害</li><li>美赛 A 题、B 题 都挺有意思</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>还没跑 baseline</li><li>Claude Code 配置复杂，把自己搞炸了</li><li>clawdbot 修复后图片打不开等问题</li><li>很多事情觉得没有意义，永远解决不完</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>有钱人的孩子大多不会娇生惯养，他们会经历更多磨炼。我和很多厉害的人交流，他们讲话都很慢，反倒是我讲话非常快，做任何事都急赶着急的，非常的不对，得好好反思一下。</p></blockquote><blockquote><p>现在各种大模型生成的内容你不懂原理几乎都是黑盒。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年1月31日-星期六&quot;&gt;&lt;a href=&quot;#2026年1月31日-星期六&quot; class=&quot;headerlink&quot; title=&quot;2026年1月31日 星期六&quot;&gt;&lt;/a&gt;2026年1月31日 星期六&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年1月30日</title>
@@ -435,29 +457,6 @@
     <updated>2026-01-28T09:43:58.414Z</updated>
     
     <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）—— 进展中，错题库功能完善</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用—— 发布排队中</li><li><input checked="" disabled="" type="checkbox"> 论文Day14—— Conditional DETR ✅</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml—— 30分钟散步，2500ml ✅</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点多醒，重新看微信小程序用户协议，重新排队发布</li><li>和张老师约好1月20日美赛学生培训</li><li>问朋友国洋和枫溪垂钓价格：420一箱和600一箱</li></ul><p><strong>中午</strong></p><ul><li>吃鸡腿饭</li></ul><p><strong>下午 @ 实验室</strong></p><ul><li>做了财务复盘和今日计划</li><li>问学妹美赛注意事项，需要学一点美赛核心内容然后和学弟学妹讲</li><li>7点多困了，去师弟实验室睡到8点，感觉好多了</li></ul><p><strong>晚上</strong></p><ul><li>整理Claude聊天记录，整合成Obsidian个人知识库（含自动化部署）</li><li>涂涂推了老板微信，送了烧烤</li><li>思宇带了海底捞水果（黄瓜、哈密瓜），和龙哥分了</li><li>21:30-22:00 散步30分钟</li><li>看KPL春季赛：情久3:0TES, TTG 3:1Hero, DRG 0:2KSG（截止写日记）</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 7/10</p><p>下午补觉后状态好多了，今天整体节奏不错。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day14 Conditional DETR</td></tr><tr><td>运动</td><td>✅ 散步30分钟</td></tr><tr><td>喝水</td><td>✅ 2500ml</td></tr><tr><td>饮食</td><td>午：鸡腿饭 / 晚：烧烤</td></tr></tbody></table><h2 id="今日论文-day14"><a href="#今日论文-day14" class="headerlink" title="今日论文 #day14"></a>今日论文 #day14</h2><p><strong>Conditional DETR《Conditional DETR for Fast Training Convergence》</strong><br>ICCV 2021 | 中科大 &amp; 北大 &amp; MSRA | Depu Meng 等</p><p>Day08 DETR用learnable query做检测，但收敛需要500 epochs。今天Conditional DETR揭示了根本原因：<strong>DETR的spatial query是image-agnostic的</strong>，没有利用当前decoder embedding包含的位置信息。</p><p><strong>核心解法：Conditional Spatial Query</strong></p><p>核心公式：pq = λq ⊙ ps</p><ul><li>ps：reference point的sinusoidal positional embedding</li><li>λq = FFN(f)：从decoder embedding学习transformation</li><li>通过element-wise乘法，让spatial query同时编码位置和位移信息</li></ul><p><strong>关键结果</strong>：Conditional DETR-R50（50 epochs）40.9 AP，DETR-R50要500 epochs才42.0 AP。收敛加速6.7×。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>今日金句：<strong>道路总比困难多，困难一定都能解决的。</strong></p></blockquote><p>今天学会了看日志和分析日志内容。小程序bug修复思路：通过Git想办法恢复，数据库能看到功能是否写入，这样就知道前端能不能正常显示。当数据库有内容但前端不能显示时，看日志发现bug问题。现在控制台很少输出错误信息了，后续改bug只要看日志即可。</p><p>整理Claude聊天记录做成Obsidian知识库，感觉自己的知识体系更清晰了。</p><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：最后两个bug收尾（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：客户测试</li><li><input disabled="" type="checkbox"> 美赛：学一点核心内容，准备给学弟学妹讲</li><li><input disabled="" type="checkbox"> 论文Day15（DINO）</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href=&quot;#昨日计划完成情况&quot; class=&quot;headerlink&quot; title=&quot;昨日计划完成情况&quot;&gt;&lt;/a&gt;昨日计划完成情况&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 小程序：</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月14日</title>
-    <link href="https://insistgang.github.io/posts/w4x5y6z7.html"/>
-    <id>https://insistgang.github.io/posts/w4x5y6z7.html</id>
-    <published>2026-01-13T16:00:00.000Z</published>
-    <updated>2026-01-28T09:43:58.414Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）—— 没来得及</li><li><input checked="" disabled="" type="checkbox"> 小程序：给客户测试使用 —— 用户协议搞定了，其他bug都修复好了</li><li><input checked="" disabled="" type="checkbox"> 论文Day13 —— DAB-DETR</li><li><input checked="" disabled="" type="checkbox"> 散步 + 喝水2000ml —— 喝水完成，运动换成健身房</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>9点小程序审核打电话来了，备案应该快通过了</li><li>11点才醒，起床称体重：96.25kg（比12月初涨了1.5kg，得注意）</li><li>12点出宿舍，12:30吃了新疆炒米粉，酱料比较多</li></ul><p><strong>下午 @ 实验室 + 摸鱼</strong></p><p>到实验室想着把Claude Code的GLM迁移到anyrouter里，这样能统一调度修bug、完善智能体。用户协议搞定了，界面和bug也修复好了。</p><p>后来和龙哥、涂涂、仕缘去斯坦福大草坪打牌，然后一起去一食堂聚餐。</p><p><strong>晚上</strong></p><ul><li>吃完饭和学妹去健身房锻炼1h，力量恢复性训练</li><li>回来看KPL比赛：狼队1:3输给DYG，我的主队WB被AG 2:1了（截止10:30），心痛</li><li>下午开始喝水，1h水+1h海之言，总算把水量补上了</li></ul><p>今天没好好学习，光顾着玩了，得给自己上点压力。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 8/10，情绪 8/10</p><p>整体状态还行，健身房练完挺舒服的，算是给自己一些状态调整。但学习效率不高，明天得补回来。</p><h2 id="习惯打卡"><a href="#习惯打卡" class="headerlink" title="习惯打卡"></a>习惯打卡</h2><table><thead><tr><th>项目</th><th>完成情况</th></tr></thead><tbody><tr><td>论文</td><td>✅ Day13 DAB-DETR</td></tr><tr><td>运动</td><td>✅ 打牌 + 健身房1h力量训练</td></tr><tr><td>喝水</td><td>✅ 1h水 + 1h海之言</td></tr><tr><td>饮食</td><td>午：新疆炒米粉（酱多）/ 晚：食堂三菜（胡萝卜牛肉+小炒肉+西红柿鸡蛋）</td></tr></tbody></table><h2 id="今日论文-day13"><a href="#今日论文-day13" class="headerlink" title="今日论文 #day13"></a>今日论文 #day13</h2><p><strong>DAB-DETR《DAB-DETR: Dynamic Anchor Boxes are Better Queries for DETR》</strong><br>ICLR 2022 | 清华 &amp; IDEA &amp; 港科大 | Shilong Liu 等</p><p>Day08 DETR说「不要anchor」，Day12 YOLOX说「YOLO也不要anchor」。今天DAB-DETR说「在DETR里，anchor其实很有用」——但这不是倒退。</p><p>核心发现：DETR的learnable query注意力是多模态的，一个query同时关注多个位置，导致定位不准、收敛慢（500 epochs）。</p><p>解法：用4D anchor box (x, y, w, h) 作为query，三大改进：</p><ol><li>Anchor as Query：直接学习4D坐标</li><li>Layer-by-layer Update：每层decoder预测相对偏移，逐层精修</li><li>Width &amp; Height Modulation：用宽高调制attention map</li></ol><p>关键结果：DAB-DETR-DC5-R50（50 epochs）达到45.7 AP，DETR要500 epochs才能43.3 AP。</p><p>启发：DAB-DETR的anchor是动态更新的，不是手工聚类的。这启发了后续DN-DETR、DINO等工作。</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>今天放松了一天，健身房练完挺舒服的。但也得认清现实——玩可以，但不能天天玩，明天该补的得补上。</p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 小程序：完善最后两个bug（错题保存重做、收藏）</li><li><input disabled="" type="checkbox"> 小程序：给客户测试使用</li><li><input disabled="" type="checkbox"> 论文Day14</li><li><input disabled="" type="checkbox"> 散步 + 喝水2000ml</li></ul>]]></content>
     
     
       
