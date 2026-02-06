@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>2026年2月6日</title>
+      <link href="/posts/0206h7k2.html"/>
+      <url>/posts/0206h7k2.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026年2月6日-星期五"><a href="#2026年2月6日-星期五" class="headerlink" title="2026年2月6日 星期五"></a>2026年2月6日 星期五</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 论文：跑 baseline（未完成）</li><li><input disabled="" type="checkbox"> 数据集：想办法解决禁飞问题（未完成，禁飞中）</li><li><input checked="" disabled="" type="checkbox"> 知识库：继续用大模型整理项目，做 n+1（完成）</li><li><input disabled="" type="checkbox"> 教资：安排学习计划（未完成）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>昨晚打王者打到 3 点，早上 10 点起来又打到 2 点，还是星耀一</li><li>骑车去学校没带伞，雨打在身上睁不开眼，路滑摔了一跤，缓了好一会</li></ul><p><strong>下午</strong></p><ul><li>2 点半到实验室</li><li>中午吃了烤肉拌饭 + 鸡腿 20r</li><li>朱哥收拾好东西准备走了</li><li>继续整理电脑的 D 盘和 E 盘，完整写好了技术博文</li><li>AutoGLM 配合打字，输入内容快了很多</li><li>导师来问了实验和数据采集情况，让我每天回去时给实验室锁门</li><li>和导师一起倒饬实验室门的问题，没解决</li></ul><p><strong>晚上</strong></p><ul><li>晚上吃了 20 个饺子 + 青椒肉丝盖饭</li><li>从 8 点多睡到 10 点，在实验室太困了</li><li>千问红包又出来了，Opus 4.6 和 GPT 5.3 发布了，价格非常贵</li><li>看到他们两天复现了一个 Linux 系统，大模型越来越无所不能</li><li>把张老师导师的 80 篇论文下载下来，导入微信读书准备看</li><li>GitHub 推送又出问题，解决了好久终于搞定</li><li>Kimi 额度用了 92%，还剩 48 小时才更新</li><li>读了一篇文献综述《深度学习架构综述 CNNs RNNs Transformers》</li><li>稍微优化了 Obsidian 的板子</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 6/10</p><p>有点 FOMO，处于这个时代应该做什么呢？疯狂用命令行干活的一天。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：烤肉拌饭 + 鸡腿</li><li>晚餐：20 个饺子 + 青椒肉丝盖饭</li><li>运动：无（骑车摔了一跤）</li><li>喝水：2L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>整理好 D 盘和 E 盘，写好技术博文</li><li>AutoGLM 打字效率提升</li><li>GitHub 推送问题解决</li><li>读了深度学习架构综述</li><li>下载 80 篇论文到微信读书</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>打王者太久，作息混乱</li><li>骑车摔跤，没带伞</li><li>Kimi 额度快用完了</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>大模型越来越无所不能了，有点 FOMO，处于这个时代的我应该做什么呢？</strong></p></blockquote><blockquote><p><strong>不要省，就是要解决具体的问题。</strong></p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>论文研究：[[MOC-论文地图]]</li><li>工具使用：[[05-Tech/Tools/Claude-Code/使用心得]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 论文：跑 baseline，开始实验</li><li><input disabled="" type="checkbox"> 数据集：继续想办法采集</li><li><input disabled="" type="checkbox"> 阅读：看张老师导师的论文</li><li><input disabled="" type="checkbox"> 知识库：继续整理优化</li></ul><hr>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>E盘整理实战：微信文件治理与空间管理</title>
       <link href="/posts/e-disk-cleanup.html"/>
       <url>/posts/e-disk-cleanup.html</url>
