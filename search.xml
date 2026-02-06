@@ -90,9 +90,9 @@
             
             <tag> Windows </tag>
             
-            <tag> 系统优化 </tag>
-            
             <tag> 磁盘清理 </tag>
+            
+            <tag> 系统优化 </tag>
             
             <tag> 经验分享 </tag>
             
@@ -242,6 +242,25 @@
     
     
     <entry>
+      <title>2026年2月1日</title>
+      <link href="/posts/0201e5f6.html"/>
+      <url>/posts/0201e5f6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026年2月1日-星期日"><a href="#2026年2月1日-星期日" class="headerlink" title="2026年2月1日 星期日"></a>2026年2月1日 星期日</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>12点半到实验室</li><li>用 Claude Haiku 画了一些图</li><li>看了一会违建数据集整合</li><li>没做什么科研的事情</li></ul><p><strong>下午</strong></p><ul><li>中午食堂三荤三素免费</li><li>研究科研绘图的顶级配色</li><li>anyrouter 一直配不上</li></ul><p><strong>晚上</strong></p><ul><li>晚上吃红烧肉盖饭，困了睡了一会</li><li>研究红学，给 manus 需求直接把论文写完了</li><li>实验室通宵看美赛数模</li><li>写了一个长篇感悟和总结</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 5/10</p><p>今天状态一般。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：无</li><li>午餐：食堂三荤三素（免费）</li><li>晚餐：红烧肉盖饭</li><li>运动：无</li><li>喝水：1.5L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>科研绘图顶级配色研究</li><li>红学论文直接让 manus 写完了</li><li>美赛数模通宵研究</li><li>晚上写了长篇 AI 使用感悟</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>没做什么科研的事情</li><li>anyrouter 一直配不上</li><li>Claude 到期后，给所有 AI 付费了（manus、kimi）</li><li>很多点子任务想做，想外包，想找人一起做事</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p><strong>关于 AI 使用历史的回顾：</strong></p><p>第一次用这个工具是2024年12月，当时没有铅笔，换了笔触和颜色。用 Cloud 的原因是觉得吸附能力非常强。研一的时候（大概一年半前）它可以通过 SVG 或 HTML 方式画出漂亮的图，用于比赛论文。当时版本是 3.5，现在已经 4.5 了。</p><p>参加过上财金融建模比赛、EDA 比赛。虽然没拿奖，但这个工具确实帮了很多忙。朋友刘景用它参加 EDA 比赛，没我这个软件做不出来。被封了很多号，亏了小 1000 块钱。</p><p>2-3 月用 ChatGPT 做考研复试辅导，帮本科生做作业，用 200 块一个月的软件挣了 2000 块。4 月低空经济比赛用 ChatGPT 写文案。7 月用 ChatGPT 写网页，体育生网页拿了国三（人工智能创新大赛）。ESG 评分系统、智慧城市系统、双碳系统都没中，但体育生网页中了。</p><p>之后又开始用 Claude。用 Claude Code 写了 EDA 竞技挑战赛（3-4 天开发），还有两个国三项目。金融创新项目用了知识蒸馏模型，把 671B 参数的大模型蒸馏成 10B 的小模型。</p><p><strong>AI 发展趋势：</strong></p><ul><li>Manus：智囊团模式，把任务分配给最强的人（Claude 架构、Kimi 前端、GLM 后端）</li><li>Kimi：笨鸟先飞模式，任务 A 分配给 B1-B10 子任务，总结经验</li></ul><p><strong>知识平权：</strong><br>大部分知识被拉到同一起跑线。只要有知识库就能快速学习。把教资资料放进知识库，Cloud Code 配置学习助手，会安排学习任务、出题、整理资料。</p><p><strong>信息差：</strong><br>能挣钱最多的还是信息差。比如教资资料、考研真题、专业课辅导。</p><hr><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究（通宵中）</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><hr>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2026年2月计划</title>
       <link href="/posts/feb2026plan.html"/>
       <url>/posts/feb2026plan.html</url>
@@ -255,25 +274,6 @@
             <tag> 日记 </tag>
             
             <tag> 计划 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2026年2月1日</title>
-      <link href="/posts/0201e5f6.html"/>
-      <url>/posts/0201e5f6.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="2026年2月1日-星期日"><a href="#2026年2月1日-星期日" class="headerlink" title="2026年2月1日 星期日"></a>2026年2月1日 星期日</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><ul><li>12点半到实验室</li><li>用 Claude Haiku 画了一些图</li><li>看了一会违建数据集整合</li><li>没做什么科研的事情</li></ul><p><strong>下午</strong></p><ul><li>中午食堂三荤三素免费</li><li>研究科研绘图的顶级配色</li><li>anyrouter 一直配不上</li></ul><p><strong>晚上</strong></p><ul><li>晚上吃红烧肉盖饭，困了睡了一会</li><li>研究红学，给 manus 需求直接把论文写完了</li><li>实验室通宵看美赛数模</li><li>写了一个长篇感悟和总结</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 5/10</p><p>今天状态一般。</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：无</li><li>午餐：食堂三荤三素（免费）</li><li>晚餐：红烧肉盖饭</li><li>运动：无</li><li>喝水：1.5L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>科研绘图顶级配色研究</li><li>红学论文直接让 manus 写完了</li><li>美赛数模通宵研究</li><li>晚上写了长篇 AI 使用感悟</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>没做什么科研的事情</li><li>anyrouter 一直配不上</li><li>Claude 到期后，给所有 AI 付费了（manus、kimi）</li><li>很多点子任务想做，想外包，想找人一起做事</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p><strong>关于 AI 使用历史的回顾：</strong></p><p>第一次用这个工具是2024年12月，当时没有铅笔，换了笔触和颜色。用 Cloud 的原因是觉得吸附能力非常强。研一的时候（大概一年半前）它可以通过 SVG 或 HTML 方式画出漂亮的图，用于比赛论文。当时版本是 3.5，现在已经 4.5 了。</p><p>参加过上财金融建模比赛、EDA 比赛。虽然没拿奖，但这个工具确实帮了很多忙。朋友刘景用它参加 EDA 比赛，没我这个软件做不出来。被封了很多号，亏了小 1000 块钱。</p><p>2-3 月用 ChatGPT 做考研复试辅导，帮本科生做作业，用 200 块一个月的软件挣了 2000 块。4 月低空经济比赛用 ChatGPT 写文案。7 月用 ChatGPT 写网页，体育生网页拿了国三（人工智能创新大赛）。ESG 评分系统、智慧城市系统、双碳系统都没中，但体育生网页中了。</p><p>之后又开始用 Claude。用 Claude Code 写了 EDA 竞技挑战赛（3-4 天开发），还有两个国三项目。金融创新项目用了知识蒸馏模型，把 671B 参数的大模型蒸馏成 10B 的小模型。</p><p><strong>AI 发展趋势：</strong></p><ul><li>Manus：智囊团模式，把任务分配给最强的人（Claude 架构、Kimi 前端、GLM 后端）</li><li>Kimi：笨鸟先飞模式，任务 A 分配给 B1-B10 子任务，总结经验</li></ul><p><strong>知识平权：</strong><br>大部分知识被拉到同一起跑线。只要有知识库就能快速学习。把教资资料放进知识库，Cloud Code 配置学习助手，会安排学习任务、出题、整理资料。</p><p><strong>信息差：</strong><br>能挣钱最多的还是信息差。比如教资资料、考研真题、专业课辅导。</p><hr><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 美赛：继续研究（通宵中）</li><li><input disabled="" type="checkbox"> 数据集：跑 baseline</li><li><input disabled="" type="checkbox"> 苏州：玩（等美赛结束）</li></ul><hr>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
             
         </tags>
       
