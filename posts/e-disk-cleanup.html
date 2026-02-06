@@ -1,0 +1,726 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>E盘整理实战：微信文件治理与空间管理 | Leo的笔记本</title><meta name="keywords" content="Windows,磁盘清理,存储优化,E盘整理,微信文件管理"><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言在完成了C盘和D盘的整理之后，我的E盘也亮起了红灯——使用率一度高达93.9%，剩余空间仅剩17GB。与C盘（系统盘）和D盘（软件盘）不同，E盘是我存放微信文件、个人项目和工作资料的地方，其中最令人头疼的就是微信文件占用了196GB！本文记录了E盘整理的全过程，特别是如何治理微信文件这个”空间杀手”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="E盘整理实战：微信文件治理与空间管理">
+<meta property="og:url" content="https://insistgang.github.io/posts/e-disk-cleanup.html">
+<meta property="og:site_name" content="Leo的笔记本">
+<meta property="og:description" content="前言在完成了C盘和D盘的整理之后，我的E盘也亮起了红灯——使用率一度高达93.9%，剩余空间仅剩17GB。与C盘（系统盘）和D盘（软件盘）不同，E盘是我存放微信文件、个人项目和工作资料的地方，其中最令人头疼的就是微信文件占用了196GB！本文记录了E盘整理的全过程，特别是如何治理微信文件这个”空间杀手”。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://insistgang.github.io/img/riji.png">
+<meta property="article:published_time" content="2026-02-05T15:30:00.000Z">
+<meta property="article:modified_time" content="2026-02-06T12:21:08.014Z">
+<meta property="article:author" content="insistgang">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="磁盘清理">
+<meta property="article:tag" content="存储优化">
+<meta property="article:tag" content="E盘整理">
+<meta property="article:tag" content="微信文件管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://insistgang.github.io/img/riji.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/posts/e-disk-cleanup"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'E盘整理实战：微信文件治理与空间管理',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-02-06 20:21:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/riji.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Leo的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">E盘整理实战：微信文件治理与空间管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-02-05T15:30:00.000Z" title="发表于 2026-02-05 23:30:00">2026-02-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-06T12:21:08.014Z" title="更新于 2026-02-06 20:21:08">2026-02-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="E盘整理实战：微信文件治理与空间管理"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在完成了C盘和D盘的整理之后，我的E盘也亮起了红灯——使用率一度高达<strong>93.9%<strong>，剩余空间仅剩</strong>17GB</strong>。与C盘（系统盘）和D盘（软件盘）不同，E盘是我存放微信文件、个人项目和工作资料的地方，其中最令人头疼的就是<strong>微信文件占用了196GB</strong>！本文记录了E盘整理的全过程，特别是如何治理微信文件这个”空间杀手”。</p>
+<span id="more"></span>
+
+<h2 id="一、E盘的危急状态"><a href="#一、E盘的危急状态" class="headerlink" title="一、E盘的危急状态"></a>一、E盘的危急状态</h2><h3 id="1-1-初始诊断"><a href="#1-1-初始诊断" class="headerlink" title="1.1 初始诊断"></a>1.1 初始诊断</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">总容量：277 GB</span><br><span class="line">已用：260 GB (93.9%) 🔴</span><br><span class="line">剩余：17 GB 🔴</span><br><span class="line">状态：告急！</span><br></pre></td></tr></table></figure>
+
+<p><strong>E盘根目录的”四大巨头”：</strong></p>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>文件夹</th>
+<th>大小</th>
+<th>占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🥇</td>
+<td><strong>xwechat_files</strong></td>
+<td>107.53 GB</td>
+<td>39%</td>
+<td>新版微信文件</td>
+</tr>
+<tr>
+<td>🥈</td>
+<td><strong>wechat</strong></td>
+<td>88.91 GB</td>
+<td>32%</td>
+<td>旧版微信文件</td>
+</tr>
+<tr>
+<td>🥉</td>
+<td><strong>000</strong></td>
+<td>53.59 GB</td>
+<td>19%</td>
+<td>个人知识库</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>vscode_project</strong></td>
+<td>52.69 GB</td>
+<td>19%</td>
+<td>VSCode项目</td>
+</tr>
+</tbody></table>
+<p><strong>微信相关合计：196.44 GB，占E盘71%！</strong></p>
+<h3 id="1-2-其他占用"><a href="#1-2-其他占用" class="headerlink" title="1.2 其他占用"></a>1.2 其他占用</h3><table>
+<thead>
+<tr>
+<th>文件夹</th>
+<th>大小</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>steam</td>
+<td>13.06 GB</td>
+<td>游戏平台</td>
+</tr>
+<tr>
+<td>BaiduNetdiskDownload</td>
+<td>12.64 GB</td>
+<td>百度网盘下载</td>
+</tr>
+<tr>
+<td>WindowsNoEditor0907</td>
+<td>10.88 GB</td>
+<td>不明软件</td>
+</tr>
+<tr>
+<td>qycache</td>
+<td>6.01 GB</td>
+<td>爱奇艺缓存</td>
+</tr>
+<tr>
+<td>视频</td>
+<td>4.24 GB</td>
+<td>视频文件夹</td>
+</tr>
+</tbody></table>
+<h2 id="二、微信文件：E盘的”空间杀手”"><a href="#二、微信文件：E盘的”空间杀手”" class="headerlink" title="二、微信文件：E盘的”空间杀手”"></a>二、微信文件：E盘的”空间杀手”</h2><h3 id="2-1-为什么微信文件这么大？"><a href="#2-1-为什么微信文件这么大？" class="headerlink" title="2.1 为什么微信文件这么大？"></a>2.1 为什么微信文件这么大？</h3><p>微信文件占用196GB的原因：</p>
+<ol>
+<li><p><strong>双版本并存</strong></p>
+<ul>
+<li><code>xwechat_files</code>：新版微信（NT架构）文件存储</li>
+<li><code>wechat</code>：旧版微信文件存储</li>
+<li>两个版本同时存在，文件重复累积</li>
+</ul>
+</li>
+<li><p><strong>自动下载机制</strong></p>
+<ul>
+<li>默认自动下载所有图片、视频、文件</li>
+<li>群聊中的视频、图片自动保存</li>
+<li>朋友圈图片缓存</li>
+</ul>
+</li>
+<li><p><strong>历史积累</strong></p>
+<ul>
+<li>多年来的聊天记录从未清理</li>
+<li>工作群、家庭群、朋友群的海量文件</li>
+<li>重复转发的图片和视频</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-微信去重实战"><a href="#2-2-微信去重实战" class="headerlink" title="2.2 微信去重实战"></a>2.2 微信去重实战</h3><p>在整理过程中，我使用了<strong>微信文件去重工具</strong>，清理了重复的文件：</p>
+<p><strong>去重成果：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">去重前：~196 GB</span><br><span class="line">去重后：~193 GB</span><br><span class="line">释放空间：~2.76 GB</span><br></pre></td></tr></table></figure>
+
+<p>虽然2.76GB看起来不多，但去重后文件结构更清晰，后续管理更方便。</p>
+<p><strong>去重原理：</strong></p>
+<ul>
+<li>扫描微信文件夹中的重复文件（相同MD5值）</li>
+<li>保留一份，删除重复项</li>
+<li>主要清理重复转发的图片和视频</li>
+</ul>
+<p><strong>常用去重工具：</strong></p>
+<ul>
+<li>dupeGuru（开源，支持自定义扫描）</li>
+<li>Duplicate Cleaner（Windows专用）</li>
+<li>微信自带的存储空间管理（设置→通用设置→存储空间）</li>
+</ul>
+<h2 id="三、E盘整理：删除管理策略"><a href="#三、E盘整理：删除管理策略" class="headerlink" title="三、E盘整理：删除管理策略"></a>三、E盘整理：删除管理策略</h2><h3 id="3-1-保留原则"><a href="#3-1-保留原则" class="headerlink" title="3.1 保留原则"></a>3.1 保留原则</h3><p><strong>必须保留的（核心资产）：</strong></p>
+<ul>
+<li>✅ <strong>000文件夹</strong>（53.59GB）- 个人知识库，核心资产</li>
+<li>✅ <strong>微信文件</strong>（193GB）- 聊天记录，去重后保留</li>
+<li>✅ <strong>vscode_project</strong>（52.69GB）- 开发项目</li>
+</ul>
+<p><strong>保留原因：</strong></p>
+<ul>
+<li>000文件夹承载了所有的心血和知识积累</li>
+<li>微信聊天记录有情感价值和工作价值</li>
+<li>VSCode项目是正在进行的开发工作</li>
+</ul>
+<h3 id="3-2-删除策略"><a href="#3-2-删除策略" class="headerlink" title="3.2 删除策略"></a>3.2 删除策略</h3><p><strong>第一轮：删除明显废弃的项目</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>大小</th>
+<th>删除原因</th>
+<th>删除方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WindowsNoEditor0907</td>
+<td>10.88 GB</td>
+<td>418天未用（1年多）</td>
+<td><code>Remove-Item -Recurse -Force</code></td>
+</tr>
+<tr>
+<td>steam</td>
+<td>13.06 GB</td>
+<td>不玩游戏了</td>
+<td><code>rmdir /s /q</code></td>
+</tr>
+<tr>
+<td>chrome-win64</td>
+<td>0.34 GB</td>
+<td>448天未用</td>
+<td>直接删除</td>
+</tr>
+<tr>
+<td>eclipse_workplace</td>
+<td>0.22 GB</td>
+<td>399天未用，不用Eclipse了</td>
+<td>直接删除</td>
+</tr>
+<tr>
+<td>qycache</td>
+<td>6.01 GB</td>
+<td>爱奇艺缓存，255天未用</td>
+<td>直接删除</td>
+</tr>
+</tbody></table>
+<p><strong>删除技巧：</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PowerShell删除（推荐）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="string">&quot;E:\文件夹名&quot;</span> <span class="literal">-Recurse</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># CMD删除（遇到权限问题时）</span></span><br><span class="line">cmd /c <span class="string">&quot;rmdir /s /q \&quot;</span>E:\文件夹名\<span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>删除管理的经验：</strong></p>
+<ol>
+<li><strong>先查看后删除</strong>：用<code>Get-ChildItem</code>查看内容</li>
+<li><strong>检查进程</strong>：删除前确认软件没有在运行</li>
+<li><strong>保留备份</strong>：重要文件先移动到回收站或备份盘</li>
+<li><strong>记录日志</strong>：记录删除的内容，便于恢复</li>
+</ol>
+<h3 id="3-3-第二轮：百度网盘下载管理"><a href="#3-3-第二轮：百度网盘下载管理" class="headerlink" title="3.3 第二轮：百度网盘下载管理"></a>3.3 第二轮：百度网盘下载管理</h3><p><strong>BaiduNetdiskDownload</strong>（12.64GB）是百度网盘的默认下载位置：</p>
+<p><strong>管理策略：</strong></p>
+<ul>
+<li>定期清理已下载的安装包</li>
+<li>大文件下载后立即移动到对应位置</li>
+<li>不再使用的文件及时删除</li>
+</ul>
+<p><strong>建议设置：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">百度网盘设置 → 传输 → 下载位置</span><br><span class="line">改为：D:\Downloads 或专门的数据盘</span><br><span class="line">避免占用E盘空间</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、微信文件长期管理方案"><a href="#四、微信文件长期管理方案" class="headerlink" title="四、微信文件长期管理方案"></a>四、微信文件长期管理方案</h2><h3 id="4-1-防止微信文件再次膨胀"><a href="#4-1-防止微信文件再次膨胀" class="headerlink" title="4.1 防止微信文件再次膨胀"></a>4.1 防止微信文件再次膨胀</h3><p><strong>方案一：关闭自动下载</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">微信PC版设置：</span><br><span class="line">→ 通用设置</span><br><span class="line">→ 存储空间管理</span><br><span class="line">→ 关闭&quot;自动下载&quot;</span><br><span class="line">→ 设置文件保存位置为其他磁盘</span><br></pre></td></tr></table></figure>
+
+<p><strong>方案二：定期手动清理</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">微信 → 设置 → 通用设置 → 存储空间</span><br><span class="line">→ 管理聊天记录</span><br><span class="line">→ 删除超过1年的图片/视频</span><br><span class="line">→ 清理缓存文件</span><br></pre></td></tr></table></figure>
+
+<p><strong>方案三：迁移到其他磁盘</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用符号链接迁移微信文件</span></span><br><span class="line"><span class="comment"># 1. 关闭微信</span></span><br><span class="line"><span class="comment"># 2. 移动文件夹到D盘或移动硬盘</span></span><br><span class="line"><span class="comment"># 3. 创建符号链接</span></span><br><span class="line">mklink /J <span class="string">&quot;E:\xwechat_files&quot;</span> <span class="string">&quot;D:\xwechat_files&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-微信文件备份策略"><a href="#4-2-微信文件备份策略" class="headerlink" title="4.2 微信文件备份策略"></a>4.2 微信文件备份策略</h3><p><strong>重要聊天记录备份：</strong></p>
+<ol>
+<li>微信 → 设置 → 聊天 → 聊天记录迁移与备份</li>
+<li>选择”备份到电脑”或”迁移到手机”</li>
+<li>导出为.bak文件，保存在安全位置</li>
+</ol>
+<p><strong>定期归档：</strong></p>
+<ul>
+<li>每半年导出一次重要聊天记录</li>
+<li>将历史图片/视频备份到移动硬盘</li>
+<li>清理本地文件，保留云端备份</li>
+</ul>
+<h2 id="五、整理成果"><a href="#五、整理成果" class="headerlink" title="五、整理成果"></a>五、整理成果</h2><h3 id="5-1-数据对比"><a href="#5-1-数据对比" class="headerlink" title="5.1 数据对比"></a>5.1 数据对比</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>整理前</th>
+<th>整理后</th>
+<th>变化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>已用空间</td>
+<td>260 GB</td>
+<td>211 GB</td>
+<td>-49 GB ✅</td>
+</tr>
+<tr>
+<td>剩余空间</td>
+<td>17 GB</td>
+<td>66 GB</td>
+<td>+49 GB ✅</td>
+</tr>
+<tr>
+<td>使用率</td>
+<td>93.9% 🔴</td>
+<td>76.2% 🟡</td>
+<td>-17.7% ✅</td>
+</tr>
+<tr>
+<td>微信文件</td>
+<td>~196 GB</td>
+<td>~193 GB</td>
+<td>-3 GB（去重）</td>
+</tr>
+</tbody></table>
+<h3 id="5-2-E盘现状"><a href="#5-2-E盘现状" class="headerlink" title="5.2 E盘现状"></a>5.2 E盘现状</h3><p><strong>保留的项目：</strong></p>
+<ul>
+<li>000知识库（53.59GB）✅ 核心资产</li>
+<li>微信文件（193GB）✅ 去重后保留</li>
+<li>vscode_project（52.69GB）✅ 开发项目</li>
+<li>BaiduNetdiskDownload（12.64GB）✅ 管理使用</li>
+<li>其他小文件夹（~8GB）✅</li>
+</ul>
+<p><strong>删除的项目：</strong></p>
+<ul>
+<li>WindowsNoEditor0907（10.88GB）🗑️</li>
+<li>steam（13.06GB）🗑️</li>
+<li>chrome-win64（0.34GB）🗑️</li>
+<li>eclipse_workplace（0.22GB）🗑️</li>
+<li>qycache（6.01GB）🗑️</li>
+</ul>
+<p><strong>小计释放：30.31 GB</strong></p>
+<h3 id="5-3-三盘整理总成果"><a href="#5-3-三盘整理总成果" class="headerlink" title="5.3 三盘整理总成果"></a>5.3 三盘整理总成果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C盘：释放 ~18 GB（清理Desktop垃圾）</span><br><span class="line">D盘：释放 ~45 GB（清理软件+环境）</span><br><span class="line">E盘：释放 ~30 GB（清理废弃项目+微信去重）</span><br><span class="line">───────────────────────</span><br><span class="line">合计：释放 ~93 GB 🎉</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、删除管理的最佳实践"><a href="#六、删除管理的最佳实践" class="headerlink" title="六、删除管理的最佳实践"></a>六、删除管理的最佳实践</h2><h3 id="6-1-删除前的检查清单"><a href="#6-1-删除前的检查清单" class="headerlink" title="6.1 删除前的检查清单"></a>6.1 删除前的检查清单</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">□ 确认文件夹内容（用Get-ChildItem查看）</span><br><span class="line">□ 检查最后修改时间（超过1年未用可考虑删除）</span><br><span class="line">□ 检查是否有进程在运行（Get-Process）</span><br><span class="line">□ 确认不是系统关键文件</span><br><span class="line">□ 重要文件先备份到回收站或移动硬盘</span><br><span class="line">□ 记录删除日志（便于恢复）</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-删除的四种方式"><a href="#6-2-删除的四种方式" class="headerlink" title="6.2 删除的四种方式"></a>6.2 删除的四种方式</h3><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>命令</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PowerShell</td>
+<td><code>Remove-Item -Recurse -Force</code></td>
+<td>常规删除</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td><code>rmdir /s /q</code></td>
+<td>权限问题</td>
+</tr>
+<tr>
+<td>资源管理器</td>
+<td>Shift+Delete</td>
+<td>小文件</td>
+</tr>
+<tr>
+<td>安全删除</td>
+<td>移动到回收站</td>
+<td>不确定时</td>
+</tr>
+</tbody></table>
+<h3 id="6-3-删除后恢复"><a href="#6-3-删除后恢复" class="headerlink" title="6.3 删除后恢复"></a>6.3 删除后恢复</h3><p><strong>从回收站恢复：</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看回收站内容</span></span><br><span class="line"><span class="built_in">Get-ChildItem</span> <span class="string">&#x27;C:\$Recycle.Bin&#x27;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复特定文件（复杂，建议图形界面操作）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用数据恢复软件：</strong></p>
+<ul>
+<li>Recuva（免费）</li>
+<li>DiskGenius（专业）</li>
+<li>注意：删除后尽快恢复，避免覆盖</li>
+</ul>
+<h2 id="七、长期空间管理策略"><a href="#七、长期空间管理策略" class="headerlink" title="七、长期空间管理策略"></a>七、长期空间管理策略</h2><h3 id="7-1-分区规划建议"><a href="#7-1-分区规划建议" class="headerlink" title="7.1 分区规划建议"></a>7.1 分区规划建议</h3><p><strong>理想的分区方案：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C盘（系统盘）：150GB - 系统和软件</span><br><span class="line">D盘（软件盘）：300GB - 开发环境、大型软件</span><br><span class="line">E盘（数据盘）：500GB+ - 微信文件、项目、资料</span><br><span class="line">F盘（备份盘）：移动硬盘 - 备份、归档</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-定期维护计划"><a href="#7-2-定期维护计划" class="headerlink" title="7.2 定期维护计划"></a>7.2 定期维护计划</h3><p><strong>每周：</strong></p>
+<ul>
+<li>清空回收站</li>
+<li>清理Downloads临时文件</li>
+</ul>
+<p><strong>每月：</strong></p>
+<ul>
+<li>运行磁盘清理工具</li>
+<li>检查大文件增长情况</li>
+<li>备份重要数据</li>
+</ul>
+<p><strong>每季度：</strong></p>
+<ul>
+<li>整理微信文件</li>
+<li>归档已完成的项目</li>
+<li>检查磁盘健康状态</li>
+</ul>
+<p><strong>每年：</strong></p>
+<ul>
+<li>全面备份到移动硬盘</li>
+<li>整理和删除旧文件</li>
+<li>评估磁盘空间需求</li>
+</ul>
+<h2 id="八、结语"><a href="#八、结语" class="headerlink" title="八、结语"></a>八、结语</h2><p>E盘的整理是整个磁盘清理战役中最具挑战性的，因为涉及到<strong>微信文件</strong>这个特殊的”空间杀手”。通过本次整理，我不仅释放了30GB空间，更重要的是建立了<strong>删除管理</strong>的意识和流程。</p>
+<p><strong>核心收获：</strong></p>
+<ol>
+<li>微信文件需要定期去重和清理</li>
+<li>删除前要确认内容、进程和重要性</li>
+<li>建立分区规划，避免单一磁盘过载</li>
+<li>定期备份是数据安全的最后一道防线</li>
+</ol>
+<p><strong>下一步：</strong></p>
+<ul>
+<li>继续监控微信文件增长</li>
+<li>建立每月清理的习惯</li>
+<li>考虑将000知识库备份到云端</li>
+</ul>
+<hr>
+<p><strong>附录：E盘删除明细清单</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>文件夹</th>
+<th>大小</th>
+<th>删除原因</th>
+<th>删除时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>WindowsNoEditor0907</td>
+<td>10.88 GB</td>
+<td>1年多未用</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>2</td>
+<td>steam</td>
+<td>13.06 GB</td>
+<td>不玩游戏</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>chrome-win64</td>
+<td>0.34 GB</td>
+<td>1.2年未用</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>4</td>
+<td>eclipse_workplace</td>
+<td>0.22 GB</td>
+<td>不用Eclipse</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>5</td>
+<td>qycache</td>
+<td>6.01 GB</td>
+<td>爱奇艺缓存</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td></td>
+<td><strong>30.31 GB</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>微信去重成果：</strong></p>
+<ul>
+<li>去重前：~196 GB</li>
+<li>去重后：~193 GB</li>
+<li>释放：~2.76 GB</li>
+</ul>
+<hr>
+<p><em>本文作者：Administrator</em><br><em>整理时间：2026-02-05</em><br><em>系统环境：Windows 11 + E盘277GB</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.github.io/posts/e-disk-cleanup.html">https://insistgang.github.io/posts/e-disk-cleanup.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://insistgang.github.io" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Windows/">Windows</a><a class="post-meta__tags" href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/">磁盘清理</a><a class="post-meta__tags" href="/tags/%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96/">存储优化</a><a class="post-meta__tags" href="/tags/E%E7%9B%98%E6%95%B4%E7%90%86/">E盘整理</a><a class="post-meta__tags" href="/tags/%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">微信文件管理</a></div><div class="post_share"><div class="social-share" data-image="/img/riji.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/d-disk-cleanup.html"><img class="next-cover" src="/img/riji.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">D盘整理实战：从&quot;爆红&quot;到&quot;健康&quot;</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/d-disk-cleanup.html" title="D盘整理实战：从"爆红"到"健康""><img class="cover" src="/img/riji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-05</div><div class="title">D盘整理实战：从"爆红"到"健康"</div></div></a></div><div><a href="/posts/c-disk-cleanup.html" title="C盘整理实战：从混沌到清晰"><img class="cover" src="/img/riji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-05</div><div class="title">C盘整理实战：从混沌到清晰</div></div></a></div><div><a href="/posts/appdata-deep-dive.html" title="Windows AppData 深度解析：Local vs Roaming"><img class="cover" src="/img/riji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-05</div><div class="title">Windows AppData 深度解析：Local vs Roaming</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81E%E7%9B%98%E7%9A%84%E5%8D%B1%E6%80%A5%E7%8A%B6%E6%80%81"><span class="toc-number">2.</span> <span class="toc-text">一、E盘的危急状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%88%9D%E5%A7%8B%E8%AF%8A%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 初始诊断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%85%B6%E4%BB%96%E5%8D%A0%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 其他占用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%EF%BC%9AE%E7%9B%98%E7%9A%84%E2%80%9D%E7%A9%BA%E9%97%B4%E6%9D%80%E6%89%8B%E2%80%9D"><span class="toc-number">3.</span> <span class="toc-text">二、微信文件：E盘的”空间杀手”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E8%BF%99%E4%B9%88%E5%A4%A7%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 为什么微信文件这么大？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%BE%AE%E4%BF%A1%E5%8E%BB%E9%87%8D%E5%AE%9E%E6%88%98"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 微信去重实战</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81E%E7%9B%98%E6%95%B4%E7%90%86%EF%BC%9A%E5%88%A0%E9%99%A4%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="toc-number">4.</span> <span class="toc-text">三、E盘整理：删除管理策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BF%9D%E7%95%99%E5%8E%9F%E5%88%99"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 保留原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%88%A0%E9%99%A4%E7%AD%96%E7%95%A5"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 删除策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%AC%AC%E4%BA%8C%E8%BD%AE%EF%BC%9A%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E7%AE%A1%E7%90%86"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 第二轮：百度网盘下载管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E9%95%BF%E6%9C%9F%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88"><span class="toc-number">5.</span> <span class="toc-text">四、微信文件长期管理方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%98%B2%E6%AD%A2%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E5%86%8D%E6%AC%A1%E8%86%A8%E8%83%80"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 防止微信文件再次膨胀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E7%AD%96%E7%95%A5"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 微信文件备份策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%95%B4%E7%90%86%E6%88%90%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">五、整理成果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94"><span class="toc-number">6.1.</span> <span class="toc-text">5.1 数据对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-E%E7%9B%98%E7%8E%B0%E7%8A%B6"><span class="toc-number">6.2.</span> <span class="toc-text">5.2 E盘现状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E4%B8%89%E7%9B%98%E6%95%B4%E7%90%86%E6%80%BB%E6%88%90%E6%9E%9C"><span class="toc-number">6.3.</span> <span class="toc-text">5.3 三盘整理总成果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%88%A0%E9%99%A4%E7%AE%A1%E7%90%86%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-number">7.</span> <span class="toc-text">六、删除管理的最佳实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%88%A0%E9%99%A4%E5%89%8D%E7%9A%84%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95"><span class="toc-number">7.1.</span> <span class="toc-text">6.1 删除前的检查清单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%88%A0%E9%99%A4%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">7.2.</span> <span class="toc-text">6.2 删除的四种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%88%A0%E9%99%A4%E5%90%8E%E6%81%A2%E5%A4%8D"><span class="toc-number">7.3.</span> <span class="toc-text">6.3 删除后恢复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E9%95%BF%E6%9C%9F%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="toc-number">8.</span> <span class="toc-text">七、长期空间管理策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E5%88%86%E5%8C%BA%E8%A7%84%E5%88%92%E5%BB%BA%E8%AE%AE"><span class="toc-number">8.1.</span> <span class="toc-text">7.1 分区规划建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%AE%9A%E6%9C%9F%E7%BB%B4%E6%8A%A4%E8%AE%A1%E5%88%92"><span class="toc-number">8.2.</span> <span class="toc-text">7.2 定期维护计划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E7%BB%93%E8%AF%AD"><span class="toc-number">9.</span> <span class="toc-text">八、结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/e-disk-cleanup.html" title="E盘整理实战：微信文件治理与空间管理"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="E盘整理实战：微信文件治理与空间管理"/></a><div class="content"><a class="title" href="/posts/e-disk-cleanup.html" title="E盘整理实战：微信文件治理与空间管理">E盘整理实战：微信文件治理与空间管理</a><time datetime="2026-02-05T15:30:00.000Z" title="发表于 2026-02-05 23:30:00">2026-02-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d-disk-cleanup.html" title="D盘整理实战：从&quot;爆红&quot;到&quot;健康&quot;"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="D盘整理实战：从&quot;爆红&quot;到&quot;健康&quot;"/></a><div class="content"><a class="title" href="/posts/d-disk-cleanup.html" title="D盘整理实战：从&quot;爆红&quot;到&quot;健康&quot;">D盘整理实战：从&quot;爆红&quot;到&quot;健康&quot;</a><time datetime="2026-02-05T14:30:00.000Z" title="发表于 2026-02-05 22:30:00">2026-02-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/appdata-deep-dive.html" title="Windows AppData 深度解析：Local vs Roaming"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows AppData 深度解析：Local vs Roaming"/></a><div class="content"><a class="title" href="/posts/appdata-deep-dive.html" title="Windows AppData 深度解析：Local vs Roaming">Windows AppData 深度解析：Local vs Roaming</a><time datetime="2026-02-05T13:30:00.000Z" title="发表于 2026-02-05 21:30:00">2026-02-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c-disk-cleanup.html" title="C盘整理实战：从混沌到清晰"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C盘整理实战：从混沌到清晰"/></a><div class="content"><a class="title" href="/posts/c-disk-cleanup.html" title="C盘整理实战：从混沌到清晰">C盘整理实战：从混沌到清晰</a><time datetime="2026-02-05T13:00:00.000Z" title="发表于 2026-02-05 21:00:00">2026-02-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0205k3m7.html" title="2026年2月5日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月5日"/></a><div class="content"><a class="title" href="/posts/0205k3m7.html" title="2026年2月5日">2026年2月5日</a><time datetime="2026-02-04T16:00:00.000Z" title="发表于 2026-02-05 00:00:00">2026-02-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/riji.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://insistgang.github.io/posts/e-disk-cleanup.html'
+    this.page.identifier = 'posts/e-disk-cleanup.html'
+    this.page.title = 'E盘整理实战：微信文件治理与空间管理'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/cos.png" alt="/img/cos.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/e350326d.html">腾讯云对象存储权限管理操作指南</a><div class="blog-slider__text">cos使用教程</div><a class="blog-slider__button" href="posts/e350326d.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/riji.png" alt="/img/riji.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-01-01</span><a class="blog-slider__title" href="posts/plan202601.html">2026年1月计划</a><div class="blog-slider__text">2026年1月规划 - 启动、阅读、运动、作息调整</div><a class="blog-slider__button" href="posts/plan202601.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/linux.png" alt="/img/linux.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-01</span><a class="blog-slider__title" href="posts/7e2c5aa3.html">Linux常用文件管理命令</a><div class="blog-slider__text">快速学会使用Linux常用命令</div><a class="blog-slider__button" href="posts/7e2c5aa3.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/riji.png" alt="/img/riji.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-01-07</span><a class="blog-slider__title" href="posts/c9d0e1f2.html">2026年1月7日</a><div class="blog-slider__text">常熟研学考察 + 尚湖游玩，撞钟9次</div><a class="blog-slider__button" href="posts/c9d0e1f2.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/linux.png" alt="/img/linux.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-01-03</span><a class="blog-slider__title" href="posts/fae31114.html">shell教程（一）基本语法</a><div class="blog-slider__text">快速学会使用shell</div><a class="blog-slider__button" href="posts/fae31114.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><!-- hexo injector body_end end --></body></html>
