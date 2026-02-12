@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-02-11T15:16:04.358Z</updated>
+  <updated>2026-02-12T15:03:36.013Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年2月12日</title>
+    <link href="https://insistgang.github.io/posts/0212qm5k.html"/>
+    <id>https://insistgang.github.io/posts/0212qm5k.html</id>
+    <published>2026-02-11T16:00:00.000Z</published>
+    <updated>2026-02-12T15:03:36.013Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年2月12日-星期三"><a href="#2026年2月12日-星期三" class="headerlink" title="2026年2月12日 星期三"></a>2026年2月12日 星期三</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><p>（草稿中未明确记录）</p><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>今天回来第一天，高消费花了好多米：充值了claude 150r，买了中转平台1000刀的额度200r，给微信云平台付费20r，充值5到tikhub爬虫额度35r，给桃源买了点体力18r。</p><p>10点醒了，然后跑通了红学爬虫的内容。</p><p><strong>下午</strong></p><p>跑完了井盖论文，做出来的结果不是很好，而且没有啥科研绘图的东西，所以整篇论文虽然写成了latex的形式，但最终效果比较一般吧，在overleaf上编译了好几次才编译成功，整个改了很多模块，也谈不上什么创新点，有用了几次优化AI味的提示词，还在改模型跑代码，期待年前能把实验和论文搞定，主要差科研绘图+实验+论文。</p><p>用notebooklm分析了<strong>变分法</strong>的知识，然后去学习了一下ROF的功能，稍微归纳了自己在做什么并专门给一个智能体提示词辅助我总结，然后也去找了网上的一些claude-code的插件装一下好玩多了，kimi强大支持多模态，GLM-5并不支持。</p><p><strong>晚上</strong></p><p>现在大模型价格涨了好多，也开始收费了好多。</p><p><strong>感想</strong></p><p>大模型时代多智能体编排：我买了无数的token想去折腾很多事情，但是我的精力又是有限的，做不到能够非常有能力的精分。</p><p>我需要多个agent子代理：</p><ol><li>红学爬虫</li><li>井盖论文</li><li>祖师爷论文学习</li><li>违建论文研究</li><li>自己的爱好研究skills，mcp，openclawd组件集群等</li></ol><p>我不怕废token，我只怕claude code或者kimi code不能执行我之需求。</p><p>我还购买了很多其他的平台：比如kimi2.5 claude code的转接口，还有claude充值了pro、kimi，glm也都充值了pro以及minimax2.5。</p><p>我要做的事情还有很多很多，在家的午饭和晚饭都是青椒肉丝、香肠、排骨汤，吃的很舒服，辛苦我爸爸了。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青椒肉丝、香肠、排骨汤</li><li>晚餐：青椒肉丝、香肠、排骨汤</li><li>运动：未运动</li><li>喝水：1.5L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>跑通了红学爬虫</li><li>完成井盖论文初稿（LaTeX形式）</li><li>学习变分法和ROF功能</li><li>安装claude-code插件</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>井盖论文结果不理想，缺乏科研绘图</li><li>模型效果一般，创新点不足</li><li>第二天开始需要早睡早起</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>大模型时代的思考者与决策者</strong></p><p>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的token为自己的思想建设，为了自己的目的添砖加瓦。</p><p>在这个时代，我不怕废token，只怕AI工具不能执行我的需求。要做的事情还有很多，需要通过多智能体编排来管理有限精力。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>论文相关：[[MOC-论文地图]]</li><li>项目相关：[[03-Projects/中电科50所]]</li><li>AI工具：[[05-Tech/Tools/Claude-Code/使用心得]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 继续优化井盖论文，补充科研绘图</li><li><input disabled="" type="checkbox"> 跑模型代码，完善实验部分</li><li><input disabled="" type="checkbox"> 早睡早起，恢复运动</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年2月12日-星期三&quot;&gt;&lt;a href=&quot;#2026年2月12日-星期三&quot; class=&quot;headerlink&quot; title=&quot;2026年2月12日 星期三&quot;&gt;&lt;/a&gt;2026年2月12日 星期三&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年2月11日</title>
@@ -471,31 +493,6 @@
     
     
     <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月计划</title>
-    <link href="https://insistgang.github.io/posts/feb2026plan.html"/>
-    <id>https://insistgang.github.io/posts/feb2026plan.html</id>
-    <published>2026-01-31T16:00:00.000Z</published>
-    <updated>2026-02-01T16:18:21.917Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年2月计划"><a href="#2026年2月计划" class="headerlink" title="2026年2月计划"></a>2026年2月计划</h1><blockquote><p>上月复盘：项目收尾做得好，但深度学习启动失败。论文、教资持续拖延。<strong>2月要少折腾工具，多做难事。</strong></p></blockquote><hr><h2 id="2月核心目标（不超过3个）"><a href="#2月核心目标（不超过3个）" class="headerlink" title="2月核心目标（不超过3个）"></a>2月核心目标（不超过3个）</h2><ol><li><strong>论文Baseline跑出结果</strong> —— 不要再准备了，直接开跑</li><li><strong>教资科目一完成</strong> —— 每天30分钟，不再找借口</li><li><strong>作息恢复规律</strong> —— 23点前睡觉，7:30前起床</li></ol><hr><h2 id="每周推进计划"><a href="#每周推进计划" class="headerlink" title="每周推进计划"></a>每周推进计划</h2><table><thead><tr><th>周</th><th>日期</th><th>主题</th><th>核心任务</th></tr></thead><tbody><tr><td>第6周</td><td>2.2-2.8</td><td>聚焦启动</td><td>论文baseline启动、教资30分/天</td></tr><tr><td>第7周</td><td>2.9-2.15</td><td>深度推进</td><td>baseline调优、教资科目一进度50%</td></tr><tr><td>第8周</td><td>2.16-2.22</td><td>收尾冲刺</td><td>论文初稿、教资科目一刷题</td></tr><tr><td>第9周</td><td>2.23-3.1</td><td>月底复盘</td><td>月复盘、3月规划</td></tr></tbody></table><hr><h2 id="项目推进"><a href="#项目推进" class="headerlink" title="项目推进"></a>项目推进</h2><h3 id="论文（优先级最高）"><a href="#论文（优先级最高）" class="headerlink" title="论文（优先级最高）"></a>论文（优先级最高）</h3><ul><li><input disabled="" type="checkbox"> 第1周：跑通baseline（YOLOv8 seg）</li><li><input disabled="" type="checkbox"> 第2周：分析结果，记录问题</li><li><input disabled="" type="checkbox"> 第3周：调参优化，准备初稿</li><li><input disabled="" type="checkbox"> 第4周：完成论文初稿</li></ul><h3 id="教资科目一"><a href="#教资科目一" class="headerlink" title="教资科目一"></a>教资科目一</h3><ul><li><input disabled="" type="checkbox"> 第1周：综合素质知识点梳理</li><li><input disabled="" type="checkbox"> 第2周：职业理念、法律法规学习</li><li><input disabled="" type="checkbox"> 第3周：教师职业道德、文化素养</li><li><input disabled="" type="checkbox"> 第4周：刷题+模拟考试</li></ul><h3 id="教资科目二"><a href="#教资科目二" class="headerlink" title="教资科目二"></a>教资科目二</h3><ul><li><input disabled="" type="checkbox"> 启动：教育知识与能力</li><li><input disabled="" type="checkbox"> 每周至少1次学习</li></ul><h3 id="美赛（2月初）"><a href="#美赛（2月初）" class="headerlink" title="美赛（2月初）"></a>美赛（2月初）</h3><ul><li><input disabled="" type="checkbox"> 完成A/B题分析</li><li><input disabled="" type="checkbox"> 准备论文框架</li></ul><hr><h2 id="每日习惯"><a href="#每日习惯" class="headerlink" title="每日习惯"></a>每日习惯</h2><table><thead><tr><th>习惯</th><th>目标</th><th>检查方式</th></tr></thead><tbody><tr><td>论文/科研</td><td>每天1小时</td><td>写日志记录</td></tr><tr><td>教资学习</td><td>每天30分钟</td><td>写日志记录</td></tr><tr><td>散步/运动</td><td>每周3次</td><td>运动打卡</td></tr><tr><td>早睡</td><td>23点前</td><td>手机不放床头</td></tr><tr><td>喝水</td><td>2L/天</td><td>水杯记录</td></tr></tbody></table><hr><h2 id="作息时间表"><a href="#作息时间表" class="headerlink" title="作息时间表"></a>作息时间表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">07:30  起床，洗漱</span><br><span class="line">08:00  早餐</span><br><span class="line">08:30  到实验室，开始核心工作</span><br><span class="line">12:00  午餐</span><br><span class="line">13:00-13:30  午休（不超过30分钟）</span><br><span class="line">14:00-18:00  论文/科研时间</span><br><span class="line">18:00  晚餐</span><br><span class="line">19:00  散步/锻炼</span><br><span class="line">20:00-22:00  教资学习/论文阅读</span><br><span class="line">22:30  洗漱，准备睡觉</span><br><span class="line">23:00  关灯（严格执行）</span><br></pre></td></tr></table></figure><p><strong>关键原则</strong>：</p><ul><li>上午不要拖延，早点到实验室</li><li>午休控制在30分钟内</li><li>晚上23点必须关灯</li></ul><hr><h2 id="本月提醒"><a href="#本月提醒" class="headerlink" title="本月提醒"></a>本月提醒</h2><ul><li>⚠️ 论文不能再拖了，2月必须出结果</li><li>⚠️ 教资学习每天必须做，不要再找借口</li><li>⚠️ AI工具少折腾，专注做正事</li><li>✅ 散步习惯恢复到68%，继续加油</li><li>✅ 卸载抖音保持住，时间充裕</li></ul><hr><h2 id="月末检查（2-28做月复盘时）"><a href="#月末检查（2-28做月复盘时）" class="headerlink" title="月末检查（2.28做月复盘时）"></a>月末检查（2.28做月复盘时）</h2><ul><li><input disabled="" type="checkbox"> 论文：baseline跑出结果</li><li><input disabled="" type="checkbox"> 论文：完成初稿</li><li><input disabled="" type="checkbox"> 教资：科目一知识点学完</li><li><input disabled="" type="checkbox"> 教资：刷题200+</li><li><input disabled="" type="checkbox"> 作息：早睡达成20天以上</li><li><input disabled="" type="checkbox"> 锻炼：完成10次以上</li></ul><hr><h2 id="💬-2月口号"><a href="#💬-2月口号" class="headerlink" title="💬 2月口号"></a>💬 2月口号</h2><p><strong>“少折腾工具，多做难事。”</strong></p><blockquote><p>难事是：跑论文、学教资、早睡早起<br>易事是：研究新工具、整理文件、刷手机</p></blockquote><blockquote><p>2月，做难事。</p></blockquote><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年2月计划&quot;&gt;&lt;a href=&quot;#2026年2月计划&quot; class=&quot;headerlink&quot; title=&quot;2026年2月计划&quot;&gt;&lt;/a&gt;2026年2月计划&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;上月复盘：项目收尾做得好，但深度学习启动失败。论文、教资持</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
