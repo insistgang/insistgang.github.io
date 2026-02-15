@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>第7周复盘（2月10日-2月16日）</title>
+      <link href="/posts/week7review2026.html"/>
+      <url>/posts/week7review2026.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="第7周复盘（2月10日-2月16日）"><a href="#第7周复盘（2月10日-2月16日）" class="headerlink" title="第7周复盘（2月10日 ~ 2月16日）"></a>第7周复盘（2月10日 ~ 2月16日）</h1><h2 id="本周概览"><a href="#本周概览" class="headerlink" title="本周概览"></a>本周概览</h2><p>本周是从学校回家的一周，完成了井盖论文初稿、红学爬虫跑通，但整体处于”多而散”的状态——买了大量 token 额度却找不到抓手，项目进展零散。回家后作息混乱，运动完全中断，处于一种”想做的事太多但无从下手”的焦虑状态。</p><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><strong>井盖论文</strong> - 完成初稿，写成 LaTeX 形式（但科研绘图、实验模块图待完善）</li><li><strong>红学爬虫</strong> - 跑通基础功能，后续升级版爬取约 1000 个视频和 10 万条评论</li><li><strong>工具升级</strong> - Claude Code 升级到 Opus 4.6，安装 mem 插件，配置智谱大龙虾</li><li><strong>知识库可视化</strong> - 用 Kimi 制作了项目 dashboard（论文数据采集、竞赛分配、磁盘归档）</li><li><strong>GitHub 仓库</strong> - 为文献阅读助手开仓，整合 80+ 篇文献</li></ol><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>目标</th><th>完成情况</th></tr></thead><tbody><tr><td>论文30分钟</td><td>每天</td><td>3/7天</td></tr><tr><td>散步/运动</td><td>每天</td><td>1/7天</td></tr><tr><td>饮水2000ml</td><td>每天</td><td>5/7天</td></tr><tr><td>早睡早起</td><td>每天</td><td>0/7天（多次11-12点起床）</td></tr><tr><td>教资学习</td><td>每天</td><td>0/7天</td></tr></tbody></table><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><ul><li>平均精力：<strong>6.0/10</strong></li><li>平均情绪：<strong>6.0/10</strong></li><li>最高精力：无显著波动，整体处于及格线</li><li>最低精力：感冒期间（2月10日），身体不适</li></ul><h3 id="做得顺的事"><a href="#做得顺的事" class="headerlink" title="做得顺的事"></a>做得顺的事</h3><ul><li><strong>工具折腾</strong> - 配置各种 AI 工具（Claude Code、Kimi Code、GLM、智谱大龙虾）</li><li><strong>可视化</strong> - Kimi 的 UI 生成能力很强，快速做出 dashboard</li><li><strong>爬虫突破</strong> - 红学爬虫终于跑通，虽然过程中反复修改</li></ul><h3 id="阻力大的事"><a href="#阻力大的事" class="headerlink" title="阻力大的事"></a>阻力大的事</h3><ul><li><strong>早睡早起</strong> - 每天都说要从明天开始，但连续失败</li><li><strong>运动</strong> - 整周只有一天搬砖算运动，散步习惯完全中断</li><li><strong>深度工作</strong> - 面对多个项目（井盖论文、违建论文、祖师爷论文、爬虫）陷入选择困难</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ol><li><strong>熵增不熵减</strong> - 不断开新项目、买新 token，但缺乏复盘总结，知识沉淀不足</li><li><strong>抓手缺失</strong> - 2月13日对着五六条命令行发呆，买了很多 token 但不知道让它们干什么</li><li><strong>多而散</strong> - 同时推进 5 个方向（红学爬虫、井盖论文、祖师爷论文、违建论文、技能研究），每个都浅尝辄止</li></ol><h2 id="未完成事项分析"><a href="#未完成事项分析" class="headerlink" title="未完成事项分析"></a>未完成事项分析</h2><table><thead><tr><th>任务</th><th>原因</th><th>下周调整</th></tr></thead><tbody><tr><td>早睡早起</td><td>前一天熬夜太晚、缺乏硬性约束</td><td>设定 23:00 强制关机闹钟</td></tr><tr><td>井盖论文科研绘图</td><td>LaTeX 不熟练、缺乏绘图思路</td><td>优先学习论文绘图工具，参考优秀论文</td></tr><tr><td>运动</td><td>回家后环境变化、缺乏动力</td><td>每天固定时间段（晚饭后）散步 30 分钟</td></tr><tr><td>教资学习</td><td>被各种 AI 工具和项目分散注意力</td><td>每天上午固定 1 小时，雷打不动</td></tr></tbody></table><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><blockquote><p><strong>大模型时代的核心用户（20%）的特征不是”用得多”，而是把 token 转化成了可交付的成果。</strong></p></blockquote><blockquote><p><strong>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设。</strong></p></blockquote><blockquote><p><strong>每天都在让很多大模型帮我去跑一些项目，不断在做熵增的过程，然后得到一些结论之后就不怎么管之前做过的一些事情了，没有进行总结归纳整理这种熵减的算法。</strong></p></blockquote><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><ol><li><strong>熵减优先</strong> - 每天必须做复盘总结，把项目产出整理成可交付文档（而不是跑完就扔）</li><li><strong>单一抓手</strong> - 每天只选 1 个核心项目深度推进，其他项目暂停或限流</li><li><strong>作息恢复</strong> - 23:00 前关机，7:30 起床，用闹钟强制约束</li><li><strong>运动重启</strong> - 每天晚饭后散步 30 分钟，不带手机</li><li><strong>工具收敛</strong> - 停止购买新 token/API，用完手头额度再评估</li></ol><hr><h2 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h2><ul><li><input disabled="" type="checkbox"> 井盖论文：完成科研绘图（网络架构图、模块图）</li><li><input disabled="" type="checkbox"> 教资：每天上午 1 小时固定学习</li><li><input disabled="" type="checkbox"> 作息：23:00 关机，7:30 起床</li><li><input disabled="" type="checkbox"> 运动：每天散步 30 分钟</li><li><input disabled="" type="checkbox"> 熵减：每天整理当天项目产出，写技术笔记</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 周复盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年2月15日</title>
+      <link href="/posts/0215qm8k.html"/>
+      <url>/posts/0215qm8k.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026年2月15日-星期日"><a href="#2026年2月15日-星期日" class="headerlink" title="2026年2月15日 星期日"></a>2026年2月15日 星期日</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 继续优化爬虫项目</li><li><input disabled="" type="checkbox"> 整理知识库和项目文件</li><li><input disabled="" type="checkbox"> 早睡早起（今日11点起床，未完成）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>11点左右起床，送压岁钱。</p><p><strong>下午</strong></p><p>直接把 Kimi 的额度都用完了。对于昨天做的一些项目还有自己以前做的一些项目，我做了一下 dashboard，非常有意思的可视化，包括：</p><ul><li>论文阅读数据采集</li><li>竞赛的分配</li><li>整个电脑磁盘的文件重新归档</li></ul><p>一下子把 Kimi 的 API 额度用完了。然后发现如果想用 GLM-5 的话还是非常困难，没有把 Agent 用起来，每次最多用 50% 的余额就刷新了。</p><p>问了 Claude 之后发现一个新的观点：GLM 涨价了，大部分人付费的只有 20% 的人用的比例算是比较高的，而 80% 的人仅用于聊天和简单的操作，所以他们的消耗很小。由于 OpenClaw 以及 Opus 4.6 集群出来之后，大部分人都能拉到 100%，所以 GLM 就产生了提价这个操作。</p><p>但是我还是没有能够拉满。Claude 给我的反馈很经典：那 20% 的核心特征不是”聊得多”，而是<strong>把 token 转化成了可交付的成果</strong>。这个很关键，我要把它的 token 转化为我自己的核心结果。</p><p><strong>晚上</strong></p><p>姐夫过生日，一起去酒店给他庆生，喝了一些红酒，吃了很多熟食。</p><p>下午去洗了个澡，晚上和爸爸妈妈去超市购物了，买了一些零食和饮料。晚上和好久没聊的朋友唠了会嗑。</p><p>加急用了一下 GLM，之前祖师爷的论文下载了很多存在问题，用了 Open Code 才发现，又重新整理下载新的论文，继续重新做了整合。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青菜煮肉、羊肉汤、蒜苔肉丝</li><li>晚餐：酒店庆生宴（红酒、熟食）</li><li>运动：无</li><li>喝水：2L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>发现了 AI 工具使用的核心：<strong>把 token 转化成可交付的成果</strong>，而不是仅仅聊天</li><li>用 Kimi 制作了项目 dashboard 可视化，效果不错</li><li>重新整理了祖师爷的论文资源</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>GLM-5 的 Agent 模式还是没有完全用起来，每次只能用到 50% 额度就刷新</li><li>11 点起床，早睡早起计划未完成</li><li>没有运动</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>大模型时代的核心用户（20%）的特征不是”用得多”，而是<strong>把 token 转化成了可交付的成果</strong>。这是对工具价值最大化的关键认知。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>相关工具：[[05-Tech/Tools/Claude-Code/使用心得]]</li><li>相关论文：[[02-Thesis/MOC-论文地图]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 早睡早起，恢复作息</li><li><input disabled="" type="checkbox"> 继续整理祖师爷论文资源</li><li><input disabled="" type="checkbox"> 爬虫项目优化</li><li><input disabled="" type="checkbox"> 运动，恢复锻炼习惯</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2026年2月14日</title>
       <link href="/posts/0214sk3f.html"/>
       <url>/posts/0214sk3f.html</url>

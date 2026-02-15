@@ -6,7 +6,7 @@
   <link href="https://insistgang.github.io/atom.xml" rel="self"/>
   
   <link href="https://insistgang.github.io/"/>
-  <updated>2026-02-14T15:44:21.909Z</updated>
+  <updated>2026-02-15T16:00:41.397Z</updated>
   <id>https://insistgang.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第7周复盘（2月10日-2月16日）</title>
+    <link href="https://insistgang.github.io/posts/week7review2026.html"/>
+    <id>https://insistgang.github.io/posts/week7review2026.html</id>
+    <published>2026-02-15T16:00:00.000Z</published>
+    <updated>2026-02-15T16:00:41.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第7周复盘（2月10日-2月16日）"><a href="#第7周复盘（2月10日-2月16日）" class="headerlink" title="第7周复盘（2月10日 ~ 2月16日）"></a>第7周复盘（2月10日 ~ 2月16日）</h1><h2 id="本周概览"><a href="#本周概览" class="headerlink" title="本周概览"></a>本周概览</h2><p>本周是从学校回家的一周，完成了井盖论文初稿、红学爬虫跑通，但整体处于”多而散”的状态——买了大量 token 额度却找不到抓手，项目进展零散。回家后作息混乱，运动完全中断，处于一种”想做的事太多但无从下手”的焦虑状态。</p><h2 id="关键成果"><a href="#关键成果" class="headerlink" title="关键成果"></a>关键成果</h2><ol><li><strong>井盖论文</strong> - 完成初稿，写成 LaTeX 形式（但科研绘图、实验模块图待完善）</li><li><strong>红学爬虫</strong> - 跑通基础功能，后续升级版爬取约 1000 个视频和 10 万条评论</li><li><strong>工具升级</strong> - Claude Code 升级到 Opus 4.6，安装 mem 插件，配置智谱大龙虾</li><li><strong>知识库可视化</strong> - 用 Kimi 制作了项目 dashboard（论文数据采集、竞赛分配、磁盘归档）</li><li><strong>GitHub 仓库</strong> - 为文献阅读助手开仓，整合 80+ 篇文献</li></ol><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><table><thead><tr><th>习惯</th><th>目标</th><th>完成情况</th></tr></thead><tbody><tr><td>论文30分钟</td><td>每天</td><td>3/7天</td></tr><tr><td>散步/运动</td><td>每天</td><td>1/7天</td></tr><tr><td>饮水2000ml</td><td>每天</td><td>5/7天</td></tr><tr><td>早睡早起</td><td>每天</td><td>0/7天（多次11-12点起床）</td></tr><tr><td>教资学习</td><td>每天</td><td>0/7天</td></tr></tbody></table><h2 id="模式识别"><a href="#模式识别" class="headerlink" title="模式识别"></a>模式识别</h2><h3 id="精力-状态波动"><a href="#精力-状态波动" class="headerlink" title="精力/状态波动"></a>精力/状态波动</h3><ul><li>平均精力：<strong>6.0/10</strong></li><li>平均情绪：<strong>6.0/10</strong></li><li>最高精力：无显著波动，整体处于及格线</li><li>最低精力：感冒期间（2月10日），身体不适</li></ul><h3 id="做得顺的事"><a href="#做得顺的事" class="headerlink" title="做得顺的事"></a>做得顺的事</h3><ul><li><strong>工具折腾</strong> - 配置各种 AI 工具（Claude Code、Kimi Code、GLM、智谱大龙虾）</li><li><strong>可视化</strong> - Kimi 的 UI 生成能力很强，快速做出 dashboard</li><li><strong>爬虫突破</strong> - 红学爬虫终于跑通，虽然过程中反复修改</li></ul><h3 id="阻力大的事"><a href="#阻力大的事" class="headerlink" title="阻力大的事"></a>阻力大的事</h3><ul><li><strong>早睡早起</strong> - 每天都说要从明天开始，但连续失败</li><li><strong>运动</strong> - 整周只有一天搬砖算运动，散步习惯完全中断</li><li><strong>深度工作</strong> - 面对多个项目（井盖论文、违建论文、祖师爷论文、爬虫）陷入选择困难</li></ul><h3 id="反复出现的卡点"><a href="#反复出现的卡点" class="headerlink" title="反复出现的卡点"></a>反复出现的卡点</h3><ol><li><strong>熵增不熵减</strong> - 不断开新项目、买新 token，但缺乏复盘总结，知识沉淀不足</li><li><strong>抓手缺失</strong> - 2月13日对着五六条命令行发呆，买了很多 token 但不知道让它们干什么</li><li><strong>多而散</strong> - 同时推进 5 个方向（红学爬虫、井盖论文、祖师爷论文、违建论文、技能研究），每个都浅尝辄止</li></ol><h2 id="未完成事项分析"><a href="#未完成事项分析" class="headerlink" title="未完成事项分析"></a>未完成事项分析</h2><table><thead><tr><th>任务</th><th>原因</th><th>下周调整</th></tr></thead><tbody><tr><td>早睡早起</td><td>前一天熬夜太晚、缺乏硬性约束</td><td>设定 23:00 强制关机闹钟</td></tr><tr><td>井盖论文科研绘图</td><td>LaTeX 不熟练、缺乏绘图思路</td><td>优先学习论文绘图工具，参考优秀论文</td></tr><tr><td>运动</td><td>回家后环境变化、缺乏动力</td><td>每天固定时间段（晚饭后）散步 30 分钟</td></tr><tr><td>教资学习</td><td>被各种 AI 工具和项目分散注意力</td><td>每天上午固定 1 小时，雷打不动</td></tr></tbody></table><h2 id="本周感悟"><a href="#本周感悟" class="headerlink" title="本周感悟"></a>本周感悟</h2><blockquote><p><strong>大模型时代的核心用户（20%）的特征不是”用得多”，而是把 token 转化成了可交付的成果。</strong></p></blockquote><blockquote><p><strong>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设。</strong></p></blockquote><blockquote><p><strong>每天都在让很多大模型帮我去跑一些项目，不断在做熵增的过程，然后得到一些结论之后就不怎么管之前做过的一些事情了，没有进行总结归纳整理这种熵减的算法。</strong></p></blockquote><h2 id="下周调整"><a href="#下周调整" class="headerlink" title="下周调整"></a>下周调整</h2><ol><li><strong>熵减优先</strong> - 每天必须做复盘总结，把项目产出整理成可交付文档（而不是跑完就扔）</li><li><strong>单一抓手</strong> - 每天只选 1 个核心项目深度推进，其他项目暂停或限流</li><li><strong>作息恢复</strong> - 23:00 前关机，7:30 起床，用闹钟强制约束</li><li><strong>运动重启</strong> - 每天晚饭后散步 30 分钟，不带手机</li><li><strong>工具收敛</strong> - 停止购买新 token/API，用完手头额度再评估</li></ol><hr><h2 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h2><ul><li><input disabled="" type="checkbox"> 井盖论文：完成科研绘图（网络架构图、模块图）</li><li><input disabled="" type="checkbox"> 教资：每天上午 1 小时固定学习</li><li><input disabled="" type="checkbox"> 作息：23:00 关机，7:30 起床</li><li><input disabled="" type="checkbox"> 运动：每天散步 30 分钟</li><li><input disabled="" type="checkbox"> 熵减：每天整理当天项目产出，写技术笔记</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;第7周复盘（2月10日-2月16日）&quot;&gt;&lt;a href=&quot;#第7周复盘（2月10日-2月16日）&quot; class=&quot;headerlink&quot; title=&quot;第7周复盘（2月10日 ~ 2月16日）&quot;&gt;&lt;/a&gt;第7周复盘（2月10日 ~ 2月16日）&lt;/h1&gt;&lt;h2 i</summary>
+      
+    
+    
+    
+    
+    <category term="周复盘" scheme="https://insistgang.github.io/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年2月15日</title>
+    <link href="https://insistgang.github.io/posts/0215qm8k.html"/>
+    <id>https://insistgang.github.io/posts/0215qm8k.html</id>
+    <published>2026-02-14T16:00:00.000Z</published>
+    <updated>2026-02-15T15:58:08.881Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年2月15日-星期日"><a href="#2026年2月15日-星期日" class="headerlink" title="2026年2月15日 星期日"></a>2026年2月15日 星期日</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 继续优化爬虫项目</li><li><input disabled="" type="checkbox"> 整理知识库和项目文件</li><li><input disabled="" type="checkbox"> 早睡早起（今日11点起床，未完成）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>11点左右起床，送压岁钱。</p><p><strong>下午</strong></p><p>直接把 Kimi 的额度都用完了。对于昨天做的一些项目还有自己以前做的一些项目，我做了一下 dashboard，非常有意思的可视化，包括：</p><ul><li>论文阅读数据采集</li><li>竞赛的分配</li><li>整个电脑磁盘的文件重新归档</li></ul><p>一下子把 Kimi 的 API 额度用完了。然后发现如果想用 GLM-5 的话还是非常困难，没有把 Agent 用起来，每次最多用 50% 的余额就刷新了。</p><p>问了 Claude 之后发现一个新的观点：GLM 涨价了，大部分人付费的只有 20% 的人用的比例算是比较高的，而 80% 的人仅用于聊天和简单的操作，所以他们的消耗很小。由于 OpenClaw 以及 Opus 4.6 集群出来之后，大部分人都能拉到 100%，所以 GLM 就产生了提价这个操作。</p><p>但是我还是没有能够拉满。Claude 给我的反馈很经典：那 20% 的核心特征不是”聊得多”，而是<strong>把 token 转化成了可交付的成果</strong>。这个很关键，我要把它的 token 转化为我自己的核心结果。</p><p><strong>晚上</strong></p><p>姐夫过生日，一起去酒店给他庆生，喝了一些红酒，吃了很多熟食。</p><p>下午去洗了个澡，晚上和爸爸妈妈去超市购物了，买了一些零食和饮料。晚上和好久没聊的朋友唠了会嗑。</p><p>加急用了一下 GLM，之前祖师爷的论文下载了很多存在问题，用了 Open Code 才发现，又重新整理下载新的论文，继续重新做了整合。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青菜煮肉、羊肉汤、蒜苔肉丝</li><li>晚餐：酒店庆生宴（红酒、熟食）</li><li>运动：无</li><li>喝水：2L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>发现了 AI 工具使用的核心：<strong>把 token 转化成可交付的成果</strong>，而不是仅仅聊天</li><li>用 Kimi 制作了项目 dashboard 可视化，效果不错</li><li>重新整理了祖师爷的论文资源</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>GLM-5 的 Agent 模式还是没有完全用起来，每次只能用到 50% 额度就刷新</li><li>11 点起床，早睡早起计划未完成</li><li>没有运动</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>大模型时代的核心用户（20%）的特征不是”用得多”，而是<strong>把 token 转化成了可交付的成果</strong>。这是对工具价值最大化的关键认知。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>相关工具：[[05-Tech/Tools/Claude-Code/使用心得]]</li><li>相关论文：[[02-Thesis/MOC-论文地图]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 早睡早起，恢复作息</li><li><input disabled="" type="checkbox"> 继续整理祖师爷论文资源</li><li><input disabled="" type="checkbox"> 爬虫项目优化</li><li><input disabled="" type="checkbox"> 运动，恢复锻炼习惯</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年2月15日-星期日&quot;&gt;&lt;a href=&quot;#2026年2月15日-星期日&quot; class=&quot;headerlink&quot; title=&quot;2026年2月15日 星期日&quot;&gt;&lt;/a&gt;2026年2月15日 星期日&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年2月14日</title>
@@ -442,55 +486,6 @@
     
     
     <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第6周计划（2.2-2.8）</title>
-    <link href="https://insistgang.github.io/posts/week6plan.html"/>
-    <id>https://insistgang.github.io/posts/week6plan.html</id>
-    <published>2026-02-01T16:00:00.000Z</published>
-    <updated>2026-02-01T16:16:11.027Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2月第6周计划（2-2-2-8）"><a href="#2月第6周计划（2-2-2-8）" class="headerlink" title="2月第6周计划（2.2-2.8）"></a>2月第6周计划（2.2-2.8）</h1><blockquote><p>上周复盘：数据采集完成，美赛通宵研究，但教资学习完全没动，作息一直不规律。本周核心是**”聚焦”**——少折腾工具，多干正事。</p></blockquote><hr><h2 id="本周核心目标（不超过3个）"><a href="#本周核心目标（不超过3个）" class="headerlink" title="本周核心目标（不超过3个）"></a>本周核心目标（不超过3个）</h2><ol><li><strong>论文Baseline</strong> — 必须跑起来，不要再准备了</li><li><strong>教资学习</strong> — 每天30分钟，不要再拖了</li><li><strong>作息调整</strong> — 23点前睡觉，恢复精力</li></ol><hr><h2 id="每日推进任务"><a href="#每日推进任务" class="headerlink" title="每日推进任务"></a>每日推进任务</h2><table><thead><tr><th>任务</th><th>频次</th><th>说明</th></tr></thead><tbody><tr><td>论文Baseline</td><td>每天1次</td><td>跑训练，看结果，调参数</td></tr><tr><td>教资</td><td>每天30分钟</td><td>科目一/二网课+笔记</td></tr><tr><td>锻炼</td><td>3次以上</td><td>健身房/跑步，恢复状态</td></tr><tr><td>早睡</td><td>每天</td><td>23:00前睡</td></tr></tbody></table><hr><h2 id="项目推进"><a href="#项目推进" class="headerlink" title="项目推进"></a>项目推进</h2><h3 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h3><ul><li><input disabled="" type="checkbox"> 跑baseline模型（YOLOv8 seg）</li><li><input disabled="" type="checkbox"> 分析结果，记录问题</li><li><input disabled="" type="checkbox"> 准备下周汇报材料</li></ul><h3 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h3><ul><li><input disabled="" type="checkbox"> 继续标注和整理</li><li><input disabled="" type="checkbox"> 补充采集不足的类别</li></ul><h3 id="美赛"><a href="#美赛" class="headerlink" title="美赛"></a>美赛</h3><ul><li><input disabled="" type="checkbox"> 完成A题/B题分析</li><li><input disabled="" type="checkbox"> 准备论文框架</li></ul><h3 id="教资"><a href="#教资" class="headerlink" title="教资"></a>教资</h3><ul><li><input disabled="" type="checkbox"> 科目一：综合素质知识点</li><li><input disabled="" type="checkbox"> 科目二：教育知识与能力</li></ul><hr><h2 id="作息调整"><a href="#作息调整" class="headerlink" title="作息调整"></a>作息调整</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">07:30  起床，洗漱</span><br><span class="line">08:30  到实验室，开始核心工作</span><br><span class="line">12:00  午餐</span><br><span class="line">13:00-14:00  午休（不要睡太久）</span><br><span class="line">14:00-18:00  论文/项目时间</span><br><span class="line">18:00  晚餐</span><br><span class="line">19:00  散步/锻炼</span><br><span class="line">20:00-22:00  教资学习/论文阅读</span><br><span class="line">22:30  洗漱，准备睡觉</span><br><span class="line">23:00  关灯（严格执行）</span><br></pre></td></tr></table></figure><p><strong>关键原则</strong>：</p><ul><li>早上不要拖延，早点到实验室</li><li>中午午休控制在30分钟内</li><li>晚上23点必须关灯</li></ul><hr><h2 id="本周提醒"><a href="#本周提醒" class="headerlink" title="本周提醒"></a>本周提醒</h2><ul><li>⚠️ 论文baseline不能再拖了，这周必须跑起来</li><li>⚠️ 教资学习每天必须做，不要再找借口</li><li>⚠️ AI工具少折腾，专注做正事</li><li>✅ 美赛通宵结束了，恢复正常作息</li><li>✅ 每天记录状态，周末做周复盘</li></ul><hr><h2 id="周末目标（2-8做周复盘时检查）"><a href="#周末目标（2-8做周复盘时检查）" class="headerlink" title="周末目标（2.8做周复盘时检查）"></a>周末目标（2.8做周复盘时检查）</h2><ul><li><input disabled="" type="checkbox"> 论文：baseline跑出结果</li><li><input disabled="" type="checkbox"> 教资：完成3.5小时学习</li><li><input disabled="" type="checkbox"> 作息：早睡达成5天以上</li><li><input disabled="" type="checkbox"> 锻炼：完成3次以上</li></ul><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2月第6周计划（2-2-2-8）&quot;&gt;&lt;a href=&quot;#2月第6周计划（2-2-2-8）&quot; class=&quot;headerlink&quot; title=&quot;2月第6周计划（2.2-2.8）&quot;&gt;&lt;/a&gt;2月第6周计划（2.2-2.8）&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;上</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="计划" scheme="https://insistgang.github.io/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年1月复盘</title>
-    <link href="https://insistgang.github.io/posts/jan2026review.html"/>
-    <id>https://insistgang.github.io/posts/jan2026review.html</id>
-    <published>2026-02-01T15:59:59.000Z</published>
-    <updated>2026-02-01T16:17:14.970Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年1月复盘"><a href="#2026年1月复盘" class="headerlink" title="2026年1月复盘"></a>2026年1月复盘</h1><h2 id="📊-月度概览"><a href="#📊-月度概览" class="headerlink" title="📊 月度概览"></a>📊 月度概览</h2><p>1月的核心主题是**”收尾与启动”**——完成了小程序项目的交付，启动了教资备考，搭建了个人知识库，但论文和教资学习推进不足。整体状态前高后低，习惯养成有进展（散步、卸载抖音），但核心目标（论文、教资）持续拖延。</p><hr><h2 id="🎯-目标进度"><a href="#🎯-目标进度" class="headerlink" title="🎯 目标进度"></a>🎯 目标进度</h2><table><thead><tr><th>目标</th><th>月初计划</th><th>实际完成</th><th>完成度</th></tr></thead><tbody><tr><td>论文阅读/写作</td><td>每周读3篇</td><td>前2周完成，后2周拖了</td><td>50%</td></tr><tr><td>小程序交付</td><td>完成并上线</td><td>✅ 完成交付</td><td>100%</td></tr><tr><td>软著提交</td><td>提交申请</td><td>✅ 已提交</td><td>100%</td></tr><tr><td>教资备考</td><td>启动科目二</td><td>科目一启动，科目二未动</td><td>30%</td></tr><tr><td>数据集采集</td><td>完成采集</td><td>✅ 分类整理完成</td><td>100%</td></tr><tr><td>作息调整</td><td>早睡早起</td><td>❌ 持续不规律</td><td>0%</td></tr></tbody></table><hr><h2 id="🏆-关键里程碑"><a href="#🏆-关键里程碑" class="headerlink" title="🏆 关键里程碑"></a>🏆 关键里程碑</h2><h3 id="项目成果"><a href="#项目成果" class="headerlink" title="项目成果"></a>项目成果</h3><ol><li><strong>小程序项目完全交付</strong>（1.25）—— bug修复、后台开发、客户满意、代码开源</li><li><strong>软著完成并提交</strong>（1.25）—— 源代码、功能说明书、文档材料齐全</li><li><strong>个人知识库搭建</strong>（1.25）—— Claude Code + Obsidian，云端同步</li><li><strong>违建数据集采集完成</strong>（1.31）—— 7类违建分类整理</li></ol><h3 id="个人成长"><a href="#个人成长" class="headerlink" title="个人成长"></a>个人成长</h3><ol><li><strong>人生第10000天</strong>（1.16）—— 苏州之行，单纯快乐的一天</li><li><strong>卸载抖音</strong>（1.25）—— 时间多了很多</li><li><strong>美赛讲课</strong>（1.25）—— 2.5小时培训学弟学妹</li><li><strong>论文打卡连续7天</strong>（1.5-1.11）—— ResNet→PVT，CV骨干网络完整梳理</li></ol><hr><h2 id="📈-趋势分析"><a href="#📈-趋势分析" class="headerlink" title="📈 趋势分析"></a>📈 趋势分析</h2><h3 id="精力-情绪月度走势"><a href="#精力-情绪月度走势" class="headerlink" title="精力/情绪月度走势"></a>精力/情绪月度走势</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第2周（1.5-1.11）：精力6-9/10，情绪5-7/10，活动密集，论文打卡全勤</span><br><span class="line">第3周（1.12-1.18）：精力5-8/10，情绪5-9/10，苏州行充电，情绪峰值</span><br><span class="line">第4周（1.19-1.25）：精力4-8/10，情绪4-7/10，项目收尾，精力波动大</span><br><span class="line">第5周（1.26-2.1）：精力4-6/10，情绪5-7/10，整体偏低，导师影响</span><br></pre></td></tr></table></figure><p><strong>观察</strong>：精力呈下降趋势，前两周活动多状态好，后两周因拖延和导师事件状态下滑。</p><h3 id="习惯执行率统计"><a href="#习惯执行率统计" class="headerlink" title="习惯执行率统计"></a>习惯执行率统计</h3><table><thead><tr><th>习惯</th><th>第2周</th><th>第3周</th><th>第4周</th><th>第5周</th><th>月度总计</th></tr></thead><tbody><tr><td>论文阅读</td><td>7/7</td><td>5/7</td><td>2/7</td><td>0/7</td><td>14/28 (50%)</td></tr><tr><td>散步/运动</td><td>7/7</td><td>7/7</td><td>4/7</td><td>1/7</td><td>19/28 (68%)</td></tr><tr><td>喝水2L</td><td>6/7</td><td>7/7</td><td>4/7</td><td>6/7</td><td>23/28 (82%)</td></tr><tr><td>教资学习</td><td>-</td><td>-</td><td>2/7</td><td>0/7</td><td>2/14 (14%)</td></tr></tbody></table><p><strong>观察</strong>：</p><ul><li>散步习惯养成较好（68%），前两周全勤</li><li>喝水习惯稳定（82%）</li><li>论文阅读前两周好，后两周崩了</li><li>教资学习几乎没动</li></ul><h3 id="时间分配（粗略估计）"><a href="#时间分配（粗略估计）" class="headerlink" title="时间分配（粗略估计）"></a>时间分配（粗略估计）</h3><ul><li>项目开发（小程序/软著）：30%</li><li>AI工具折腾（Claude Code/manus/kimi）：20%</li><li>数据采集：15%</li><li>论文阅读：10%</li><li>社交/活动：15%</li><li>教资学习：5%</li><li>其他（整理/研究工具）：5%</li></ul><hr><h2 id="🔍-问题诊断"><a href="#🔍-问题诊断" class="headerlink" title="🔍 问题诊断"></a>🔍 问题诊断</h2><h3 id="反复出现在周复盘里的问题"><a href="#反复出现在周复盘里的问题" class="headerlink" title="反复出现在周复盘里的问题"></a>反复出现在周复盘里的问题</h3><table><thead><tr><th>问题</th><th>出现周数</th><th>根因分析</th></tr></thead><tbody><tr><td>作息不规律</td><td>4周</td><td>缺乏硬性约束，”说得多做得少”</td></tr><tr><td>论文拖延</td><td>3周</td><td>从”推进”变成”准备”，始终不启动</td></tr><tr><td>教资学习不动</td><td>2周</td><td>优先级被挤掉，没有固定时间块</td></tr><tr><td>多线程问题</td><td>3周</td><td>想要的太多，注意力分散</td></tr></tbody></table><h3 id="核心问题：执行力-vs-意愿"><a href="#核心问题：执行力-vs-意愿" class="headerlink" title="核心问题：执行力 vs 意愿"></a>核心问题：执行力 vs 意愿</h3><p><strong>模式识别</strong>：</p><ul><li>✅ 收尾类任务执行力强（小程序、软著）</li><li>✅ 新工具学习热情高（Claude Code、manus、kimi）</li><li>❌ 深度工作持续困难（论文、教资）</li><li>❌ 习惯约束力弱（作息、运动）</li></ul><p><strong>深层原因</strong>：</p><ol><li><strong>多巴胺陷阱</strong>——新工具带来即时反馈，论文学习反馈延迟</li><li><strong>完美主义</strong>——总觉得”还没准备好”，不敢开始</li><li><strong>缺乏外部约束</strong>——论文、教资没有deadline，容易被挤掉</li><li><strong>精力管理不当</strong>——作息不规律导致精力持续下降</li></ol><hr><h2 id="🌱-成长记录"><a href="#🌱-成长记录" class="headerlink" title="🌱 成长记录"></a>🌱 成长记录</h2><h3 id="技术能力"><a href="#技术能力" class="headerlink" title="技术能力"></a>技术能力</h3><ul><li><strong>AI工具掌握</strong>：Claude Code、Obsidian知识库、manus、kimi agent集群</li><li><strong>开发能力</strong>：小程序开发（从0到交付）、软著申请流程</li><li><strong>学术积累</strong>：CV骨干网络（ResNet→PVT）、DETR系列、小目标检测</li></ul><h3 id="认知升级"><a href="#认知升级" class="headerlink" title="认知升级"></a>认知升级</h3><ol><li><strong>“专注和聚焦，不要想着多开”</strong> —— 第2周感悟，但后续未执行到位</li><li><strong>“人与人之间的差距在于执行力”</strong> —— 第4周感悟</li><li><strong>“痛苦的事情才能让我成长”</strong> —— 第5周感悟</li><li><strong>“信息差是最赚钱的”</strong> —— 第5周AI使用感悟</li></ol><h3 id="习惯养成"><a href="#习惯养成" class="headerlink" title="习惯养成"></a>习惯养成</h3><ul><li>✅ 卸载抖音（持续）</li><li>✅ 散步/运动习惯（68%执行率）</li><li>✅ 每日复盘习惯（坚持整月）</li><li>❌ 早睡早起（0%）</li></ul><hr><h2 id="📅-2月规划"><a href="#📅-2月规划" class="headerlink" title="📅 2月规划"></a>📅 2月规划</h2><h3 id="要继续保持的"><a href="#要继续保持的" class="headerlink" title="要继续保持的"></a>要继续保持的</h3><ol><li><strong>知识库复盘</strong> —— 每日/周/月复盘体系已建立，继续保持</li><li><strong>散步习惯</strong> —— 效果明显，恢复到68%水平</li><li><strong>AI工具学习</strong> —— 但要控制时间，不吞噬正事时间</li><li><strong>卸载抖音</strong> —— 时间充裕，坚持住</li></ol><h3 id="要调整改进的"><a href="#要调整改进的" class="headerlink" title="要调整改进的"></a>要调整改进的</h3><ol><li><strong>论文baseline</strong> —— 2月必须跑起来，不要再准备了</li><li><strong>教资学习</strong> —— 每天30分钟固定时间块，不再找借口</li><li><strong>作息调整</strong> —— 23点前睡觉，硬性约束</li><li><strong>单线程优先</strong> —— 一件事做完再做下一件</li></ol><h3 id="2月核心目标（不超过3个）"><a href="#2月核心目标（不超过3个）" class="headerlink" title="2月核心目标（不超过3个）"></a>2月核心目标（不超过3个）</h3><ol><li><strong>论文baseline跑出结果</strong></li><li><strong>教资科目一/二各推进50%</strong></li><li><strong>作息恢复到23点前睡</strong></li></ol><hr><h2 id="💬-一句话总结"><a href="#💬-一句话总结" class="headerlink" title="💬 一句话总结"></a>💬 一句话总结</h2><p><strong>1月是”收尾与启动”的月份——项目收尾做得好，深度学习启动失败，2月要少折腾工具，多做难事。</strong></p><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年1月复盘&quot;&gt;&lt;a href=&quot;#2026年1月复盘&quot; class=&quot;headerlink&quot; title=&quot;2026年1月复盘&quot;&gt;&lt;/a&gt;2026年1月复盘&lt;/h1&gt;&lt;h2 id=&quot;📊-月度概览&quot;&gt;&lt;a href=&quot;#📊-月度概览&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="复盘" scheme="https://insistgang.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
