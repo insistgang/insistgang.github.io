@@ -85,7 +85,11 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: 
+index_img:
+  - /img/steam-steel-infinite-minds/00_封面.png
+  - /img/minimax-agent-analysis/cover.png
+  - /img/qwen-coding-plan/cover.png
+  - /img/coding-plan-report/cover.png 
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)
