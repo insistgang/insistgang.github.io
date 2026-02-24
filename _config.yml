@@ -112,8 +112,9 @@ theme: butterfly
 #     branch: main
 deploy:
   type: git
-  repo: git@github.com:insistgang/insistgang.github.io.git
-  branch: master
+  repo:
+    github: https://github.com/insistgang/insistgang.github.io.git,master
+  branch: hexo
 
 electric_clock:
   priority: 5
