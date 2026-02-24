@@ -1,29 +1,110 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="Leo的笔记本">
-<meta property="og:url" content="https://insistgang.github.io/page/6/index.html">
-<meta property="og:site_name" content="Leo的笔记本">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://insistgang.github.io/img/toux.jpg">
-<meta property="article:author" content="insistgang">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://insistgang.github.io/img/toux.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/page/6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/page/6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: undefined,
   translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: true
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -31,637 +112,169 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'Leo的笔记本',
-  isPost: false,
-  isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-02-24 15:45:07'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+  pageType: 'home'
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Leo的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Leo的笔记本</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0121b5c6.html" title="2026年1月21日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月21日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0121b5c6.html" title="2026年1月21日">2026年1月21日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-20T16:00:00.000Z" title="发表于 2026-01-21 00:00:00">2026-01-21</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:52.827Z" title="更新于 2026-02-02 00:21:52">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾（错题保存重做、收藏）✅ 已解决
- 小程序：客户测试 ✅ 已交付，客户满意
- 导师任务：50实习内容整理和备份 ✅
- 小论文：开始准备写作 ✅ 看了2篇一区论文，下载10篇
- 散步 + 喝水2000ml
-
-今日记录上午
-
-睡大觉，中午才出门
-
-下午 + 晚上
-小程序大收尾 ✅
-错题重做功能修复
-收藏功能修复
-开发管理员后台（用户做题情况、错题情况查看）
-完全交付客户，客户满意
-代码开源到 GitHub
-
-软著准备
-编写源代码说明书
-编写功能说明书
-文档鉴别材料（大部分完成，明天剩余部分）
-
-知识库 &amp; 50所整理
-个人知识库开新 GitHub 仓库并部署
-50所项目整理备份：
-道路病害面积计算代码
-路灯个数计算
-ReID去重算法
-
-
-
-小论文
-看了2篇道路病害一区论文
-下载10篇左右论文
-了解行文结构和内容写作（公式化套话）
-
-晚上
-
-和父母通电话，吹牛侃大山
-吃小炒肉盖饭拉肚子了（拼好饭的问题）
-
-状态精力 8/10，情绪 7/10
-整体感觉非常充实，状态挺好。
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-小论文
-✅ 看了一区论文，了解写 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0120a4b5.html" title="2026年1月20日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月20日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0120a4b5.html" title="2026年1月20日">2026年1月20日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-19T16:00:00.000Z" title="发表于 2026-01-20 00:00:00">2026-01-20</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:52.265Z" title="更新于 2026-02-02 00:21:52">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾（错题保存重做、收藏）
- 小程序：客户测试
- 导师任务：50实习内容整理和备份
- 小论文：开始准备写作
- 散步 + 喝水2000ml
-
-今日记录上午
-
-11点到实验室
-中午点了外卖：隆江猪脚饭
-
-下午
-
-备课到14:30
-美赛讲课 2.5小时（14:30-17:10）
-整理好备课资料和录播发给学生
-
-讲课内容：
-
-Claude-Code 使用
-绘图技巧
-美赛赛题准备
-怎么写论文
-怎么用好AI
-
-晚上
-
-吃了24个水饺
-讲完课后有点小摆，刷抖音看《好先生》，刷上头了，几乎快看完这部剧
-涂涂来实验室玩，带了糯米冰酿（不太好喝）
-没有运动和散步，在放松
-
-状态精力 5/10，情绪 9/10
-讲课确实有点累，但晚上玩得很爽，整体状态非常好。
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-论文/阅读
-❌
-
-
-运动
-❌ 休息
-
-
-喝水
-✅ 2L
-
-
-饮食
-午：隆江猪脚饭 / 晚：24个水饺
-
-
-感悟
-不要浮躁，慢慢来。
-
-看电视剧体悟不同的人生，有很多感受：
-
-爱一个人就要让爱的人自由
-还需要好好做自己
-看人间百味，挺有意思的
-
-明日计划
- 小程序：最后两个bu ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0119f3a4.html" title="2026年1月19日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月19日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0119f3a4.html" title="2026年1月19日">2026年1月19日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-18T16:00:00.000Z" title="发表于 2026-01-19 00:00:00">2026-01-19</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:51.721Z" title="更新于 2026-02-02 00:21:51">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾（错题保存重做、收藏）—— 没来及，明天要讲数模课
- 小程序：客户测试—— 客户没催，备案已完成 ✅
- 导师任务：50实习内容整理和备份
- 小论文：开始准备写作
- 散步 + 喝水2000ml
-
-今日记录上午
-
-昨晚没睡好，在宿舍躺到了下午
-
-中午
-
-看论文
-一天只吃了一顿饭
-
-下午
-
-天气降温，很冷
-
-晚上
-
-77请吃大盘鸡
-准备建模比赛备课（明天要讲课）
-教学妹在Linux上训练视觉模型
-看论文 + 搞Linux
-
-状态精力 5/10，情绪 7/10
-昨晚没睡好，今天降温，整体精力偏低。
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-论文
-✅ 中午 + 晚上阅读
-
-
-运动
-❌ 休息
-
-
-喝水
-✅ 2L
-
-
-饮食
-一天一顿（晚：大盘鸡）
-
-
-感悟
-不要堕落，多想想自己要做的事情。
-
-进展
-小程序备案已完成 ✅
-
-明日计划
- 美赛：给学弟学妹讲课（1月20日培训）
- 小程序：最后两个bug收尾（错题保存重做、收藏）
- 小程序：客户测试
- 导师任务：50实习内容整理和备份
- 小论文：开始准备写作
- 散步 + 喝水2000ml
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0118e2f3.html" title="2026年1月18日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月18日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0118e2f3.html" title="2026年1月18日">2026年1月18日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-17T16:00:00.000Z" title="发表于 2026-01-18 00:00:00">2026-01-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:51.182Z" title="更新于 2026-02-02 00:21:51">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾（错题保存重做、收藏）
- 小程序：客户测试
- 导师任务：50实习内容整理和备份
- 论文Day16（RT-DETR）—— 昨天已完成
- 散步 + 喝水2000ml
-
-今日记录上午
-
-7点多醒，玩了会手机，又睡到了12点半
-中午朋友点了快餐外卖
-
-下午
-
-研究朋友的研究方向和研究内容
-朋友早我两年毕业，有很多经验可以学习
-去漕河湿地公园散步
-
-晚上
-
-吃了鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕，很好吃
-
-状态精力 6/10，情绪 6/10
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-论文
-⏸️ 暂停朋友圈打卡，准备开始写自己的小论文
-
-
-运动
-✅ 漕河湿地公园散步，1万+步
-
-
-喝水
-✅ 3L
-
-
-饮食
-午：快餐外卖 / 晚：鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕
-
-
-感悟
-真的还是要去猛猛干，赶紧要把小论文搞出来，多想着提升自己。
-
-苏州之旅非常快乐，和攀哥哥聊了一天很开心。
-朋友圈论文打卡暂停，马上开始写自己的第一篇小论文，把写竞赛的方法迁移到写论文。
-明日计划
- 小程序：最后两个bug收尾（错题保存重做、收藏）
- 小程序：客户测试
- 导师任务：50实习内 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/week3review.html" title="第3周复盘（1.12-1.18）"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第3周复盘（1.12-1.18）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/week3review.html" title="第3周复盘（1.12-1.18）">第3周复盘（1.12-1.18）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-17T16:00:00.000Z" title="发表于 2026-01-18 00:00:00">2026-01-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-28T09:43:58.419Z" title="更新于 2026-01-28 17:43:58">2026-01-28</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E5%A4%8D%E7%9B%98/">复盘</a></span></div><div class="content">📊 本周概览本周主题是”完成 &gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的bug修复，论文阅读连续推进，周六苏州之行带来了很好的放松和新的思考。
-核心词：小程序收尾、论文进阶、苏州充电
-
-🎯 关键成果
-小程序项目：从”修bug中”到”95%可用”，核心功能基本完成，只剩错题保存重做和收藏两个功能
-论文阅读：Day12-16连续推进（YOLOX、DAB-DETR、Conditional DETR、DINO、RT-DETR），深入理解DETR系列演进
-大论文方向：和组长讨论确定小目标检测可融入大论文，肝硬化医学影像方向与实验室核心论文高度相关
-人生里程碑：1月16日是人生第10000天
-苏州充电：和峰哥、攀哥、任总相聚，与导师汇报50实习结束，单纯的快乐
-AI产品认知：和andy聊天，认识到”还是要抓住这个AI时代”
-
-
-💪 习惯追踪
-
-
-习惯
-完成天数
-完成率
-
-
-
-论文阅读
-5/7
-71%
-
-
-散步/运动
-7/7
-100%
-
-
-饮水2000ml
-7/7
-100%
-
-
-
-🔄 模式识别精力/状态波动
-周二、周三状态最佳（精力8/10）
-周四、周 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0117d1e2.html" title="2026年1月17日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月17日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0117d1e2.html" title="2026年1月17日">2026年1月17日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-16T16:00:00.000Z" title="发表于 2026-01-17 00:00:00">2026-01-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:50.504Z" title="更新于 2026-02-02 00:21:50">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾
- 小程序：客户测试
- 论文Day16（RT-DETR）
- 苏州之行：和峰哥、攀哥碰面，逛逛苏州
- 吃顿好的（火锅自助补一下）→ 改老北京涮肉
-
-今日记录上午
-
-5:20就醒了，昨晚没睡好
-醒了之后一直在刷抖音，啥也没干
-朋友催我，才想着回苏州和朋友碰面
-打顺风车去苏州的路上，和导师汇报了50实习结束的事项
-导师让做一下内容的整理和备份，聊了很多，很开心
-
-下午 @ 苏州
-
-约了峰哥和任总
-午餐：隆江猪脚饭
-一起逛，晚上和任总、峰哥吃了老北京涮牛肉
-
-晚上
-
-去看了东方之门
-打车去了攀哥哥那里
-
-状态精力 6/10，情绪 9/10
-昨晚没睡好，但今天单纯玩了一天，没有想很多事情，很幸福快乐。
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-论文
-✅ Day16 RT-DETR（打车的路上看的）
-
-
-运动
-✅ 苏州逛了一天
-
-
-喝水
-✅ 2L
-
-
-饮食
-午：隆江猪脚饭 / 晚：老北京涮牛肉（和峰哥、任总）
-
-
-感悟
-单纯玩了一天，什么也不想，就很幸福快乐。
-
-和导师汇报50实习，聊了很多很开心，让做内容整理和备份。
-今天看到了东方之门，苏州的夜景很美。
- ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0116c0d1.html" title="2026年1月16日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月16日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0116c0d1.html" title="2026年1月16日">2026年1月16日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-15T16:00:00.000Z" title="发表于 2026-01-16 00:00:00">2026-01-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:49.072Z" title="更新于 2026-02-02 00:21:49">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：最后两个bug收尾
- 小程序：客户测试
- 美赛：学核心内容，准备给学弟学妹讲
- 论文Day15（DINO）
- 散步 + 喝水2000ml
-
-今日记录上午
-
-8点起床，吃了牛肉饼 + 鸡蛋饼
-10点到公司
-组长聊天：项目都做完了，明年计划做小目标检测，可以融入大论文！肝硬化是医学影像方向，也是视觉模型，和实验室核心论文相关性很大
-中午和组长一起吃公司食堂四菜一汤，聊学习近况和科研方向——收获很大
-
-下午 @ 公司
-
-整合笔记本和台式机的API（anyrouter失效改用glm，切换不麻烦）
-看了实验室最近6年的肝硬化论文（医学影像方向的视觉检测）
-整理美赛核心内容给学弟学妹，解析了近5年美赛真题
-
-晚上
-
-在商场等andy下班，散步逛了1h
-和andy吃凑凑自助火锅（158元/位），第一次吃，还不错
-和y的产品头脑，andy的产品愿景很丰富，受益匪浅
-回来路上看论文，终于把今天的论文内容看完了
-
-状态精力 7/10，情绪 7/10
-今天和组长、andy的对话都很有收获。
-习惯打卡
-
-
-项目
-完成情况
-
-
-
-论文
-✅ Day15 DINO
-
-
-运动
-✅ 商场散步 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0115b9c0.html" title="2026年1月15日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月15日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0115b9c0.html" title="2026年1月15日">2026年1月15日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-14T16:00:00.000Z" title="发表于 2026-01-15 00:00:00">2026-01-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:48.534Z" title="更新于 2026-02-02 00:21:48">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：完善最后两个bug（错题保存重做、收藏）—— 进展中，错题库功能完善
- 小程序：给客户测试使用—— 发布排队中
- 论文Day14—— Conditional DETR ✅
- 散步 + 喝水2000ml—— 30分钟散步，2500ml ✅
-
-今日记录上午
-
-9点多醒，重新看微信小程序用户协议，重新排队发布
-和张老师约好1月20日美赛学生培训
-问朋友国洋和枫溪垂钓价格：420一箱和600一箱
-
-中午
-
-吃鸡腿饭
-
-下午 @ 实验室
-
-做了财务复盘和今日计划
-问学妹美赛注意事项，需要学一点美赛核心内容然后和学弟学妹讲
-7点多困了，去师弟实验室睡到8点，感觉好多了
-
-晚上
-
-整理Claude聊天记录，整合成Obsidian个人知识库（含自动化部署）
-涂涂推了老板微信，送了烧烤
-思宇带了海底捞水果（黄瓜、哈密瓜），和龙哥分了
-21:30-22:00 散步30分钟
-看KPL春季赛：情久3:0TES, TTG 3:1Hero, DRG 0:2KSG（截止写日记）
-
-状态精力 6/10，情绪 7/10
-下午补觉后状态好多了，今天整体节奏不错。
-习惯打卡
-
-
-项目
-完成情况
- ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0114a7b8.html" title="2026年1月14日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月14日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0114a7b8.html" title="2026年1月14日">2026年1月14日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-13T16:00:00.000Z" title="发表于 2026-01-14 00:00:00">2026-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:47.964Z" title="更新于 2026-02-02 00:21:47">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：完善最后两个bug（错题保存重做、收藏）—— 没来得及
- 小程序：给客户测试使用 —— 用户协议搞定了，其他bug都修复好了
- 论文Day13 —— DAB-DETR
- 散步 + 喝水2000ml —— 喝水完成，运动换成健身房
-
-今日记录上午
-
-9点小程序审核打电话来了，备案应该快通过了
-11点才醒，起床称体重：96.25kg（比12月初涨了1.5kg，得注意）
-12点出宿舍，12:30吃了新疆炒米粉，酱料比较多
-
-下午 @ 实验室 + 摸鱼
-到实验室想着把Claude Code的GLM迁移到anyrouter里，这样能统一调度修bug、完善智能体。用户协议搞定了，界面和bug也修复好了。
-后来和龙哥、涂涂、仕缘去斯坦福大草坪打牌，然后一起去一食堂聚餐。
-晚上
-
-吃完饭和学妹去健身房锻炼1h，力量恢复性训练
-回来看KPL比赛：狼队1:3输给DYG，我的主队WB被AG 2:1了（截止10:30），心痛
-下午开始喝水，1h水+1h海之言，总算把水量补上了
-
-今天没好好学习，光顾着玩了，得给自己上点压力。
-状态精力 8/10，情绪 8/10
-整体状态还行，健身房 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0113s3t4.html" title="2026年1月13日"><img class="post_bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月13日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0113s3t4.html" title="2026年1月13日">2026年1月13日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-12T16:00:00.000Z" title="发表于 2026-01-13 00:00:00">2026-01-13</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:22:19.149Z" title="更新于 2026-02-02 00:22:19">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况
- 小程序：完成所有bug修复 —— 95%搞定，还剩错题保存重做和收藏两个
- 小程序：准备部署环境 —— 已可部署，等备案审核通过
- 论文Day12 —— YOLOX
- 继续完善个人智能体 —— 写了两个新的
- 散步 + 喝水2000ml —— 都完成了
-
-今日记录上午
-
-张老师发工资了，安排1月18或19日给学生开建模美赛培训
-11:40 和学妹去麦当劳吃饭，两个汉堡
-纪元送了车厘子，让龙哥洗干净
-
-下午 @ 实验室
-小程序bug修复大作战：
-
-解决开始考试UI问题
-解决整个页面不显示的问题
-解决题目做完不记录的问题
-解决倒计时考试的问题
-不断更新体验版优化小bug
-**总体修复95%**，基本可用了，就差错题保存重做和收藏功能
-
-中间因为倒计时问题把前端重写了一遍，有点小崩，但还是扛过来了。
-三创赛 &amp; 智能体
-
-发了学弟学妹三创赛的内容，梳理了我们要做什么
-开始网站视频学习
-写了两个新智能体：美赛辅导智能体、教资学习智能体
-下载了教资资料，计划每周抽10小时学教资
-
-晚上
-
-5点散步半小时去南门
-和宿舍三人去嗨嗨地摊小炉子自助烧烤（68元/人）
-抽奖抽到 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#content-inner">14</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Leo的笔记本</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0121b5c6.html" title="2026年1月21日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月21日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0121b5c6.html" title="2026年1月21日">2026年1月21日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-20T16:00:00.000Z" title="发表于 2026-01-21 00:00:00">2026-01-21</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:52.827Z" title="更新于 2026-02-02 00:21:52">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾（错题保存重做、收藏）✅ 已解决  小程序：客户测试 ✅ 已交付，客户满意  导师任务：50实习内容整理和备份 ✅  小论文：开始准备写作 ✅ 看了2篇一区论文，下载10篇  散步 + 喝水2000ml  今日记录上午  睡大觉，中午才出门  下午 + 晚上 小程序大收尾 ✅ 错题重做功能修复 收藏功能修复 开发管理员后台（用户做题情况、错题情况查看） 完全交付客户，客户满意 代码开源到 GitHub  软著准备 编写源代码说明书 编写功能说明书 文档鉴别材料（大部分完成，明天剩余部分）  知识库 &amp; 50所整理 个人知识库开新 GitHub 仓库并部署 50所项目整理备份： 道路病害面积计算代码 路灯个数计算 ReID去重算法    小论文 看了2篇道路病害一区论文 下载10篇左右论文 了解行文结构和内容写作（公式化套话）  晚上  和父母通电话，吹牛侃大山 吃小炒肉盖饭拉肚子了（拼好饭的问题）  状态精力 8/10，情绪 7/10 整体感觉非常充实，状态挺好。 习惯打卡   项目 完成情况    小论文 ✅ 看了一区论文，...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0120a4b5.html" title="2026年1月20日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月20日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0120a4b5.html" title="2026年1月20日">2026年1月20日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-19T16:00:00.000Z" title="发表于 2026-01-20 00:00:00">2026-01-20</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:52.265Z" title="更新于 2026-02-02 00:21:52">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾（错题保存重做、收藏）  小程序：客户测试  导师任务：50实习内容整理和备份  小论文：开始准备写作  散步 + 喝水2000ml  今日记录上午  11点到实验室 中午点了外卖：隆江猪脚饭  下午  备课到14:30 美赛讲课 2.5小时（14:30-17:10） 整理好备课资料和录播发给学生  讲课内容：  Claude-Code 使用 绘图技巧 美赛赛题准备 怎么写论文 怎么用好AI  晚上  吃了24个水饺 讲完课后有点小摆，刷抖音看《好先生》，刷上头了，几乎快看完这部剧 涂涂来实验室玩，带了糯米冰酿（不太好喝） 没有运动和散步，在放松  状态精力 5/10，情绪 9/10 讲课确实有点累，但晚上玩得很爽，整体状态非常好。 习惯打卡   项目 完成情况    论文/阅读 ❌   运动 ❌ 休息   喝水 ✅ 2L   饮食 午：隆江猪脚饭 / 晚：24个水饺   感悟 不要浮躁，慢慢来。  看电视剧体悟不同的人生，有很多感受：  爱一个人就要让爱的人自由 还需要好好做自己 看人间百味，挺有意思的  明日计划  小程序：最后两...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0119f3a4.html" title="2026年1月19日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月19日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0119f3a4.html" title="2026年1月19日">2026年1月19日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-18T16:00:00.000Z" title="发表于 2026-01-19 00:00:00">2026-01-19</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:51.721Z" title="更新于 2026-02-02 00:21:51">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾（错题保存重做、收藏）—— 没来及，明天要讲数模课  小程序：客户测试—— 客户没催，备案已完成 ✅  导师任务：50实习内容整理和备份  小论文：开始准备写作  散步 + 喝水2000ml  今日记录上午  昨晚没睡好，在宿舍躺到了下午  中午  看论文 一天只吃了一顿饭  下午  天气降温，很冷  晚上  77请吃大盘鸡 准备建模比赛备课（明天要讲课） 教学妹在Linux上训练视觉模型 看论文 + 搞Linux  状态精力 5/10，情绪 7/10 昨晚没睡好，今天降温，整体精力偏低。 习惯打卡   项目 完成情况    论文 ✅ 中午 + 晚上阅读   运动 ❌ 休息   喝水 ✅ 2L   饮食 一天一顿（晚：大盘鸡）   感悟 不要堕落，多想想自己要做的事情。  进展 小程序备案已完成 ✅  明日计划  美赛：给学弟学妹讲课（1月20日培训）  小程序：最后两个bug收尾（错题保存重做、收藏）  小程序：客户测试  导师任务：50实习内容整理和备份  小论文：开始准备写作  散步 + 喝水2000ml  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0118e2f3.html" title="2026年1月18日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月18日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0118e2f3.html" title="2026年1月18日">2026年1月18日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-17T16:00:00.000Z" title="发表于 2026-01-18 00:00:00">2026-01-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:51.182Z" title="更新于 2026-02-02 00:21:51">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾（错题保存重做、收藏）  小程序：客户测试  导师任务：50实习内容整理和备份  论文Day16（RT-DETR）—— 昨天已完成  散步 + 喝水2000ml  今日记录上午  7点多醒，玩了会手机，又睡到了12点半 中午朋友点了快餐外卖  下午  研究朋友的研究方向和研究内容 朋友早我两年毕业，有很多经验可以学习 去漕河湿地公园散步  晚上  吃了鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕，很好吃  状态精力 6/10，情绪 6/10 习惯打卡   项目 完成情况    论文 ⏸️ 暂停朋友圈打卡，准备开始写自己的小论文   运动 ✅ 漕河湿地公园散步，1万+步   喝水 ✅ 3L   饮食 午：快餐外卖 / 晚：鱼头汤、臭豆腐、青椒肉丝、鱿鱼年糕   感悟 真的还是要去猛猛干，赶紧要把小论文搞出来，多想着提升自己。  苏州之旅非常快乐，和攀哥哥聊了一天很开心。 朋友圈论文打卡暂停，马上开始写自己的第一篇小论文，把写竞赛的方法迁移到写论文。 明日计划  小程序：最后两个bug收尾（错题保存重做、收藏）  小程序：客户测试  导师任务：50...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/week3review.html" title="第3周复盘（1.12-1.18）"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第3周复盘（1.12-1.18）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/week3review.html" title="第3周复盘（1.12-1.18）">第3周复盘（1.12-1.18）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-17T16:00:00.000Z" title="发表于 2026-01-18 00:00:00">2026-01-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-28T09:43:58.419Z" title="更新于 2026-01-28 17:43:58">2026-01-28</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%A4%8D%E7%9B%98/">复盘</a></span></div><div class="content">📊 本周概览本周主题是”完成 &gt; 推进”，目标是小程序上线。虽然小程序没有完全按计划部署，但完成了95%的bug修复，论文阅读连续推进，周六苏州之行带来了很好的放松和新的思考。 核心词：小程序收尾、论文进阶、苏州充电  🎯 关键成果 小程序项目：从”修bug中”到”95%可用”，核心功能基本完成，只剩错题保存重做和收藏两个功能 论文阅读：Day12-16连续推进（YOLOX、DAB-DETR、Conditional DETR、DINO、RT-DETR），深入理解DETR系列演进 大论文方向：和组长讨论确定小目标检测可融入大论文，肝硬化医学影像方向与实验室核心论文高度相关 人生里程碑：1月16日是人生第10000天 苏州充电：和峰哥、攀哥、任总相聚，与导师汇报50实习结束，单纯的快乐 AI产品认知：和andy聊天，认识到”还是要抓住这个AI时代”   💪 习惯追踪   习惯 完成天数 完成率    论文阅读 5/7 71%   散步/运动 7/7 100%   饮水2000ml 7/7 100%    🔄 模式识别精力/状态波动 周二、周三状态最佳（精力8/10） 周...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0117d1e2.html" title="2026年1月17日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月17日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0117d1e2.html" title="2026年1月17日">2026年1月17日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-16T16:00:00.000Z" title="发表于 2026-01-17 00:00:00">2026-01-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:50.504Z" title="更新于 2026-02-02 00:21:50">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾  小程序：客户测试  论文Day16（RT-DETR）  苏州之行：和峰哥、攀哥碰面，逛逛苏州  吃顿好的（火锅自助补一下）→ 改老北京涮肉  今日记录上午  5:20就醒了，昨晚没睡好 醒了之后一直在刷抖音，啥也没干 朋友催我，才想着回苏州和朋友碰面 打顺风车去苏州的路上，和导师汇报了50实习结束的事项 导师让做一下内容的整理和备份，聊了很多，很开心  下午 @ 苏州  约了峰哥和任总 午餐：隆江猪脚饭 一起逛，晚上和任总、峰哥吃了老北京涮牛肉  晚上  去看了东方之门 打车去了攀哥哥那里  状态精力 6/10，情绪 9/10 昨晚没睡好，但今天单纯玩了一天，没有想很多事情，很幸福快乐。 习惯打卡   项目 完成情况    论文 ✅ Day16 RT-DETR（打车的路上看的）   运动 ✅ 苏州逛了一天   喝水 ✅ 2L   饮食 午：隆江猪脚饭 / 晚：老北京涮牛肉（和峰哥、任总）   感悟 单纯玩了一天，什么也不想，就很幸福快乐。  和导师汇报50实习，聊了很多很开心，让做内容整理和备份。 今天看到了东方之门，苏州的夜景很...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0116c0d1.html" title="2026年1月16日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月16日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0116c0d1.html" title="2026年1月16日">2026年1月16日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-15T16:00:00.000Z" title="发表于 2026-01-16 00:00:00">2026-01-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:49.072Z" title="更新于 2026-02-02 00:21:49">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：最后两个bug收尾  小程序：客户测试  美赛：学核心内容，准备给学弟学妹讲  论文Day15（DINO）  散步 + 喝水2000ml  今日记录上午  8点起床，吃了牛肉饼 + 鸡蛋饼 10点到公司 组长聊天：项目都做完了，明年计划做小目标检测，可以融入大论文！肝硬化是医学影像方向，也是视觉模型，和实验室核心论文相关性很大 中午和组长一起吃公司食堂四菜一汤，聊学习近况和科研方向——收获很大  下午 @ 公司  整合笔记本和台式机的API（anyrouter失效改用glm，切换不麻烦） 看了实验室最近6年的肝硬化论文（医学影像方向的视觉检测） 整理美赛核心内容给学弟学妹，解析了近5年美赛真题  晚上  在商场等andy下班，散步逛了1h 和andy吃凑凑自助火锅（158元/位），第一次吃，还不错 和y的产品头脑，andy的产品愿景很丰富，受益匪浅 回来路上看论文，终于把今天的论文内容看完了  状态精力 7/10，情绪 7/10 今天和组长、andy的对话都很有收获。 习惯打卡   项目 完成情况    论文 ✅ Day15 DINO   运动 ✅ 商...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0115b9c0.html" title="2026年1月15日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月15日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0115b9c0.html" title="2026年1月15日">2026年1月15日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-14T16:00:00.000Z" title="发表于 2026-01-15 00:00:00">2026-01-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:48.534Z" title="更新于 2026-02-02 00:21:48">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：完善最后两个bug（错题保存重做、收藏）—— 进展中，错题库功能完善  小程序：给客户测试使用—— 发布排队中  论文Day14—— Conditional DETR ✅  散步 + 喝水2000ml—— 30分钟散步，2500ml ✅  今日记录上午  9点多醒，重新看微信小程序用户协议，重新排队发布 和张老师约好1月20日美赛学生培训 问朋友国洋和枫溪垂钓价格：420一箱和600一箱  中午  吃鸡腿饭  下午 @ 实验室  做了财务复盘和今日计划 问学妹美赛注意事项，需要学一点美赛核心内容然后和学弟学妹讲 7点多困了，去师弟实验室睡到8点，感觉好多了  晚上  整理Claude聊天记录，整合成Obsidian个人知识库（含自动化部署） 涂涂推了老板微信，送了烧烤 思宇带了海底捞水果（黄瓜、哈密瓜），和龙哥分了 21:30-22:00 散步30分钟 看KPL春季赛：情久3:0TES, TTG 3:1Hero, DRG 0:2KSG（截止写日记）  状态精力 6/10，情绪 7/10 下午补觉后状态好多了，今天整体节奏不错。 习惯打卡   项目 完成...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/0114a7b8.html" title="2026年1月14日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月14日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0114a7b8.html" title="2026年1月14日">2026年1月14日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-13T16:00:00.000Z" title="发表于 2026-01-14 00:00:00">2026-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:21:47.964Z" title="更新于 2026-02-02 00:21:47">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：完善最后两个bug（错题保存重做、收藏）—— 没来得及  小程序：给客户测试使用 —— 用户协议搞定了，其他bug都修复好了  论文Day13 —— DAB-DETR  散步 + 喝水2000ml —— 喝水完成，运动换成健身房  今日记录上午  9点小程序审核打电话来了，备案应该快通过了 11点才醒，起床称体重：96.25kg（比12月初涨了1.5kg，得注意） 12点出宿舍，12:30吃了新疆炒米粉，酱料比较多  下午 @ 实验室 + 摸鱼 到实验室想着把Claude Code的GLM迁移到anyrouter里，这样能统一调度修bug、完善智能体。用户协议搞定了，界面和bug也修复好了。 后来和龙哥、涂涂、仕缘去斯坦福大草坪打牌，然后一起去一食堂聚餐。 晚上  吃完饭和学妹去健身房锻炼1h，力量恢复性训练 回来看KPL比赛：狼队1:3输给DYG，我的主队WB被AG 2:1了（截止10:30），心痛 下午开始喝水，1h水+1h海之言，总算把水量补上了  今天没好好学习，光顾着玩了，得给自己上点压力。 状态精力 8/10，情绪 8/10 整体状态还行，...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/0113s3t4.html" title="2026年1月13日"><img class="post-bg" src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年1月13日"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/0113s3t4.html" title="2026年1月13日">2026年1月13日</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-12T16:00:00.000Z" title="发表于 2026-01-13 00:00:00">2026-01-13</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-01T16:22:19.149Z" title="更新于 2026-02-02 00:22:19">2026-02-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">昨日计划完成情况  小程序：完成所有bug修复 —— 95%搞定，还剩错题保存重做和收藏两个  小程序：准备部署环境 —— 已可部署，等备案审核通过  论文Day12 —— YOLOX  继续完善个人智能体 —— 写了两个新的  散步 + 喝水2000ml —— 都完成了  今日记录上午  张老师发工资了，安排1月18或19日给学生开建模美赛培训 11:40 和学妹去麦当劳吃饭，两个汉堡 纪元送了车厘子，让龙哥洗干净  下午 @ 实验室 小程序bug修复大作战：  解决开始考试UI问题 解决整个页面不显示的问题 解决题目做完不记录的问题 解决倒计时考试的问题 不断更新体验版优化小bug **总体修复95%**，基本可用了，就差错题保存重做和收藏功能  中间因为倒计时问题把前端重写了一遍，有点小崩，但还是扛过来了。 三创赛 &amp; 智能体  发了学弟学妹三创赛的内容，梳理了我们要做什么 开始网站视频学习 写了两个新智能体：美赛辅导智能体、教资学习智能体 下载了教资资料，计划每周抽10小时学教资  晚上  5点散步半小时去南门 和宿舍三人去嗨嗨地摊小炉子自助烧烤（68元/人） 抽...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#content-inner">14</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/cos/"><span class="card-category-list-name">cos</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">杂谈</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">技术分享</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"><span class="card-category-list-name">技术研究</span><span class="card-category-list-count">3</span></a></li></ul></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.3em; color: rgb(102, 47, 199)">linux</a><a href="/tags/shell/" style="font-size: 1.22em; color: rgb(148, 24, 72)">shell</a><a href="/tags/tmux/" style="font-size: 1.15em; color: rgb(189, 81, 43)">tmux</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(157, 144, 150)">vim</a><a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 1.15em; color: rgb(107, 148, 160)">c语言</a><a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.45em; color: rgb(107, 196, 174)">考研</a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.41em; color: rgb(184, 26, 39)">C语言</a><a href="/tags/datastruct/" style="font-size: 1.45em; color: rgb(115, 87, 53)">datastruct</a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.15em; color: rgb(34, 194, 192)">数据库</a><a href="/tags/python/" style="font-size: 1.19em; color: rgb(194, 98, 23)">python</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.15em; color: rgb(67, 49, 143)">小程序</a><a href="/tags/case/" style="font-size: 1.15em; color: rgb(135, 146, 60)">case</a><a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 1.34em; color: rgb(52, 51, 103)">小记</a><a href="/tags/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B/" style="font-size: 1.41em; color: rgb(17, 72, 65)">把时间当朋友</a><a href="/tags/%E8%81%8C%E5%9C%BA%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(188, 50, 43)">职场问题</a><a href="/tags/Windows/" style="font-size: 1.26em; color: rgb(24, 180, 147)">Windows</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(16, 8, 189)">系统优化</a><a href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" style="font-size: 1.22em; color: rgb(115, 190, 98)">磁盘清理</a><a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.15em; color: rgb(92, 86, 199)">经验分享</a><a href="/tags/AI/" style="font-size: 1.26em; color: rgb(175, 181, 98)">AI</a><a href="/tags/MiniMax/" style="font-size: 1.19em; color: rgb(38, 40, 31)">MiniMax</a><a href="/tags/Agent/" style="font-size: 1.15em; color: rgb(26, 46, 39)">Agent</a><a href="/tags/Claude/" style="font-size: 1.15em; color: rgb(162, 197, 64)">Claude</a><a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 1.15em; color: rgb(151, 88, 110)">效率工具</a><a href="/tags/E%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(134, 117, 44)">E盘整理</a><a href="/tags/%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" style="font-size: 1.15em; color: rgb(118, 18, 63)">微信文件管理</a><a href="/tags/%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96/" style="font-size: 1.19em; color: rgb(186, 157, 58)">存储优化</a><a href="/tags/D%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(177, 113, 60)">D盘整理</a><a href="/tags/API/" style="font-size: 1.19em; color: rgb(146, 166, 152)">API</a><a href="/tags/GLM/" style="font-size: 1.15em; color: rgb(199, 17, 104)">GLM</a><a href="/tags/Kimi/" style="font-size: 1.15em; color: rgb(53, 53, 65)">Kimi</a><a href="/tags/Coding/" style="font-size: 1.19em; color: rgb(149, 12, 125)">Coding</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" style="font-size: 1.15em; color: rgb(29, 149, 198)">系统知识</a><a href="/tags/AppData/" style="font-size: 1.15em; color: rgb(102, 134, 28)">AppData</a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/" style="font-size: 1.15em; color: rgb(175, 2, 144)">技术原理</a><a href="/tags/cos/" style="font-size: 1.15em; color: rgb(154, 148, 92)">cos</a><a href="/tags/Qwen/" style="font-size: 1.15em; color: rgb(169, 54, 142)">Qwen</a><a href="/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/" style="font-size: 1.15em; color: rgb(46, 144, 33)">通义千问</a><a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.15em; color: rgb(46, 10, 70)">阿里云</a><a href="/tags/algorithm/" style="font-size: 1.38em; color: rgb(162, 183, 99)">algorithm</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><span class="card-archive-list-count">38</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><span class="card-archive-list-count">41</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">133</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">144.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-24T07:45:07.433Z"></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["学如逆水行舟，不进则退！","Learning is like rowing upstream!"],
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.27em; color: rgb(50, 112, 130);">linux</a><a href="/tags/shell/" style="font-size: 1.21em; color: rgb(109, 50, 156);">shell</a><a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 1.15em; color: rgb(196, 50, 166);">c语言</a><a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.42em; color: rgb(69, 200, 71);">考研</a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.39em; color: rgb(52, 146, 148);">C语言</a><a href="/tags/tmux/" style="font-size: 1.15em; color: rgb(50, 155, 196);">tmux</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(50, 182, 50);">vim</a><a href="/tags/datastruct/" style="font-size: 1.42em; color: rgb(83, 59, 50);">datastruct</a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.15em; color: rgb(74, 169, 123);">数据库</a><a href="/tags/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B/" style="font-size: 1.39em; color: rgb(166, 131, 104);">把时间当朋友</a><a href="/tags/case/" style="font-size: 1.15em; color: rgb(68, 68, 110);">case</a><a href="/tags/python/" style="font-size: 1.18em; color: rgb(198, 94, 50);">python</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.15em; color: rgb(50, 56, 50);">小程序</a><a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 1.45em; color: rgb(142, 187, 64);">日记</a><a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 1.3em; color: rgb(50, 94, 50);">复盘</a><a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.33em; color: rgb(183, 147, 73);">计划</a><a href="/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/" style="font-size: 1.21em; color: rgb(118, 197, 145);">周复盘</a><a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 1.3em; color: rgb(115, 52, 142);">小记</a><a href="/tags/%E8%81%8C%E5%9C%BA%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(50, 137, 78);">职场问题</a><a href="/tags/%E9%98%85%E8%AF%BB/" style="font-size: 1.18em; color: rgb(144, 117, 152);">阅读</a><a href="/tags/algorithm/" style="font-size: 1.36em; color: rgb(156, 75, 79);">algorithm</a><a href="/tags/%E7%9C%9F%E9%A2%98/" style="font-size: 1.36em; color: rgb(71, 50, 98);">真题</a><a href="/tags/Windows/" style="font-size: 1.24em; color: rgb(178, 153, 177);">Windows</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(187, 112, 51);">系统优化</a><a href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" style="font-size: 1.21em; color: rgb(100, 171, 50);">磁盘清理</a><a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.15em; color: rgb(79, 50, 131);">经验分享</a><a href="/tags/D%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(173, 189, 179);">D盘整理</a><a href="/tags/%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96/" style="font-size: 1.18em; color: rgb(50, 52, 175);">存储优化</a><a href="/tags/E%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(119, 50, 50);">E盘整理</a><a href="/tags/%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" style="font-size: 1.15em; color: rgb(50, 105, 171);">微信文件管理</a><a href="/tags/AI/" style="font-size: 1.24em; color: rgb(184, 98, 85);">AI</a><a href="/tags/MiniMax/" style="font-size: 1.18em; color: rgb(172, 53, 190);">MiniMax</a><a href="/tags/Agent/" style="font-size: 1.15em; color: rgb(50, 104, 55);">Agent</a><a href="/tags/Claude/" style="font-size: 1.15em; color: rgb(50, 113, 53);">Claude</a><a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 1.15em; color: rgb(50, 68, 50);">效率工具</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" style="font-size: 1.15em; color: rgb(56, 50, 114);">系统知识</a><a href="/tags/AppData/" style="font-size: 1.15em; color: rgb(50, 50, 171);">AppData</a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/" style="font-size: 1.15em; color: rgb(72, 125, 50);">技术原理</a><a href="/tags/cos/" style="font-size: 1.15em; color: rgb(50, 177, 150);">cos</a><a href="/tags/API/" style="font-size: 1.18em; color: rgb(50, 199, 137);">API</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              二月 2026
+            </span>
+            <span class="card-archive-list-count">38</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">41</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/09/">
+            <span class="card-archive-list-date">
+              九月 2022
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/08/">
+            <span class="card-archive-list-date">
+              八月 2022
+            </span>
+            <span class="card-archive-list-count">16</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/06/">
+            <span class="card-archive-list-date">
+              六月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/04/">
+            <span class="card-archive-list-date">
+              四月 2022
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">133</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">144.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-24T08:45:27.407Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '学如逆水行舟，不进则退！'
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["学如逆水行舟，不进则退！","Learning is like rowing upstream!"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
   }
 }
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["学如逆水行舟，不进则退！","Learning is like rowing upstream!"])
+}
+typedJSFn.run(subtitleType)</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);

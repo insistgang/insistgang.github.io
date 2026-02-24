@@ -1,35 +1,125 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>第六章查找 | Leo的笔记本</title><meta name="keywords" content="考研,datastruct"><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="六、查找顺序查找123456int Search(int a[],int n,int k)&amp;#123;    for(int i &#x3D; 1;i &lt;&#x3D; n; ++i)        if(a[i] &#x3D;&#x3D; k)            return 1;    return 0;&amp;#125;  折半查找（二分查找）时间复杂度： 12345678910111213int	BSearch(int a[]">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第六章查找">
-<meta property="og:url" content="https://insistgang.github.io/posts/4bd3708b.html">
-<meta property="og:site_name" content="Leo的笔记本">
-<meta property="og:description" content="六、查找顺序查找123456int Search(int a[],int n,int k)&amp;#123;    for(int i &#x3D; 1;i &lt;&#x3D; n; ++i)        if(a[i] &#x3D;&#x3D; k)            return 1;    return 0;&amp;#125;  折半查找（二分查找）时间复杂度： 12345678910111213int	BSearch(int a[]">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://insistgang.github.io/img/datastruct.jpeg">
-<meta property="article:published_time" content="2022-08-10T12:07:22.000Z">
-<meta property="article:modified_time" content="2026-01-08T15:40:41.737Z">
-<meta property="article:author" content="insistgang">
-<meta property="article:tag" content="考研">
-<meta property="article:tag" content="datastruct">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://insistgang.github.io/img/datastruct.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/posts/4bd3708b"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第六章查找 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="六、查找顺序查找123456int Search(int a[],int n,int k)&amp;#123;    for(int i = 1;i &amp;lt;= n; ++i)        if(a[i] == k)            return 1;    return 0;&amp;#125;  ..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "第六章查找",
+  "url": "https://insistgang.github.io/posts/4bd3708b.html",
+  "image": "https://insistgang.github.io/img/datastruct.jpeg",
+  "datePublished": "2022-08-10T12:07:22.000Z",
+  "dateModified": "2026-01-08T15:40:41.737Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/posts/4bd3708b.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: undefined,
   translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: true
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -37,206 +127,175 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '第六章查找',
-  isPost: true,
-  isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2026-01-08 23:40:41'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+  pageType: 'post'
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/datastruct.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Leo的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">第六章查找</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:07:22.000Z" title="发表于 2022-08-10 20:07:22">2022-08-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.737Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">689</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="第六章查找"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="六、查找"><a href="#六、查找" class="headerlink" title="六、查找"></a>六、查找</h1><h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Search</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span>(a[i] == k)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/datastruct.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">第六章查找</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">第六章查找</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:07:22.000Z" title="发表于 2022-08-10 20:07:22">2022-08-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.737Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">689</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="六、查找"><a href="#六、查找" class="headerlink" title="六、查找"></a>六、查找</h1><h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Search</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span>(a[i] == k)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="折半查找（二分查找）"><a href="#折半查找（二分查找）" class="headerlink" title="折半查找（二分查找）"></a>折半查找（二分查找）</h3><p>时间复杂度：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>	<span class="title">BSearch</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">        mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(a[mid] == k)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">if</span>(a[mid] &gt; k)</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span>	<span class="title">BSearch</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">        mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(a[mid] == k)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">if</span>(a[mid] &gt; k)</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="分块查找"><a href="#分块查找" class="headerlink" title="分块查找"></a>分块查找</h3><p>时间复杂度：<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAASCAIAAAAi++zfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK4SURBVFhHY/z//z/DKCAOMEHpUUAEGA0sEgCBwHqwIkSMg5GxcD+UP7IBgcBSiFizpVIUyhnxgHA2FJZWg7JGPCCxzHp3fk6iEShjMvLJuFftfvwbLPr71eE2dxk+oCgM2My5C5bBAX6/2l2lw8co13jq97vzk/yBBvJ5zL8FMWwwA2DTAT+4M9uaoWAfmPlkRQC7aOyqe9////9+dbojO4PuxKtA4RdrwthFs7a//PX/+72FgeyiBfs+gpXjBLfmFk6/+mlXFoNndWvlxNMvf92cbsZgPfsOVHrQAlIC6/48Rwb17otgUSC42K0O8eG+AgZYcIJVE+dtkGmiWbvegtjAwGIvPQgWHsyAlGz49+8vBhEBbiiPgVtABMLQsghgWLpmx6vfwOx16dAZdg1pSJXw4/6OKgdQnuXTSVyJnsk+Xdm/X7cm21UIyH55fuepMDsDiMQgBiSWWQy3nr6Fshi+fnjDwMbMzMAgHtTUo7g4TI6NkU0l92Xd/i5PPpD83SWxZXz9j378ernQaHnpmstgTXBw4+wO0WALLRDz0+mtGwK8TcGaBjeApjDc4GSDKEPsZnApdHWiLgO74/SroDLr3qpYUfaAFU+AwnfmOYaveglSgANc7NZN3oZajoHyMNRUsA0F+96em9i/5TVYYLACQoF1tJIXFKS8fsvvA3m/Hu2qdJMGibCLGibMPgcucP6/3VcgC1IEBbzaedtAYQgFv27Oy209BlEJBy9WBDA4zgMZCQRP1oTxMvBaYCgadIBwyiIInmxNMoQW1EDw6+WqcEQR/+vm4sKuQR8IxAJSyyws4NbueU8Yfn79DCrBf39+ce/uE2gR//vW/LQF0jWllkK/j9c0DoceEzTQKADgvKksyg42jlfaLXcJJHuCWmVgMTCAtS2GMhgdzyIBUCEbjhTAwAAAuF7Tj/yvtTQAAAAASUVORK5CYII=" alt="img"></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    <span class="keyword">int</span> low,high;	<span class="comment">//记录某块中第一个和最后一个元素的位置</span></span><br><span class="line">&#125;indexElem;</span><br><span class="line">indexElem index[MaxSize];	<span class="comment">//定义索引表</span></span><br><span class="line"><span class="comment">//k是需要查找的数字  arr[]表示原数组  index是结构体类型的索引表</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Block_Search</span><span class="params">(indexElem index[],<span class="keyword">int</span> k,<span class="keyword">int</span> n,<span class="keyword">int</span> arr[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j,k;</span><br><span class="line">    <span class="comment">//寻找第一个块内最大关键字 &gt;= k 的块 </span></span><br><span class="line">    <span class="keyword">while</span>((i &lt; n) &amp;&amp; index[i].key &lt; k)</span><br><span class="line">        i++;</span><br><span class="line">    <span class="keyword">if</span>(i &gt;= n)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nNot found&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//从块内查找</span></span><br><span class="line">    j = index[i].low;</span><br><span class="line">    <span class="keyword">while</span>((j &lt;= index[i].high) &amp;&amp; arr[j] != k)</span><br><span class="line">        j++;</span><br><span class="line">    <span class="comment">//查找越界</span></span><br><span class="line">    <span class="keyword">if</span>(j &gt; index[i].high)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nNot found&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span>&#123;</span><br><span class="line">    <span class="type">int</span> key;</span><br><span class="line">    <span class="type">int</span> low,high;	<span class="comment">//记录某块中第一个和最后一个元素的位置</span></span><br><span class="line">&#125;indexElem;</span><br><span class="line">indexElem index[MaxSize];	<span class="comment">//定义索引表</span></span><br><span class="line"><span class="comment">//k是需要查找的数字  arr[]表示原数组  index是结构体类型的索引表</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Block_Search</span><span class="params">(indexElem index[],<span class="type">int</span> k,<span class="type">int</span> n,<span class="type">int</span> arr[])</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> j,k;</span><br><span class="line">    <span class="comment">//寻找第一个块内最大关键字 &gt;= k 的块 </span></span><br><span class="line">    <span class="keyword">while</span>((i &lt; n) &amp;&amp; index[i].key &lt; k)</span><br><span class="line">        i++;</span><br><span class="line">    <span class="keyword">if</span>(i &gt;= n)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nNot found&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//从块内查找</span></span><br><span class="line">    j = index[i].low;</span><br><span class="line">    <span class="keyword">while</span>((j &lt;= index[i].high) &amp;&amp; arr[j] != k)</span><br><span class="line">        j++;</span><br><span class="line">    <span class="comment">//查找越界</span></span><br><span class="line">    <span class="keyword">if</span>(j &gt; index[i].high)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nNot found&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><h4 id="BST树的查找（类比一下二分查找）"><a href="#BST树的查找（类比一下二分查找）" class="headerlink" title="BST树的查找（类比一下二分查找）"></a>BST树的查找（类比一下二分查找）</h4><p>思想：</p>
 <p>首先将给定的k值与二叉排序树的根结点的关键字进行比较，若相等，则查找成功；</p>
 <p>① 给定的k值小时BST的根结点的关键字，继续在该结点的左子树上进行查找；</p>
 <p>② 给定的k值大于BST的根结点的关键字，继续在该结点的右子树上进行查找。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BTNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BTNode</span> *<span class="title">lchild</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BTNode</span> *<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BTNode;</span><br><span class="line"></span><br><span class="line"><span class="function">BTNode *<span class="title">research</span><span class="params">(BTNode *t,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(t == <span class="literal">NULL</span>)			<span class="comment">//1.递归结束条件</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t-&gt;key == k)		<span class="comment">//2.解决本次步骤</span></span><br><span class="line">            <span class="keyword">return</span> t;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(k &lt; t-&gt;key)	<span class="comment">//3.递归转移方程</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">research</span>(t-&gt;lchild, k);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">research</span>(t-&gt;rchild, k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">BTNode</span>&#123;</span><br><span class="line">    <span class="type">int</span> key;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">BTNode</span> *lchild;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">BTNode</span> *rchild;</span><br><span class="line">&#125;BTNode;</span><br><span class="line"></span><br><span class="line"><span class="function">BTNode *<span class="title">research</span><span class="params">(BTNode *t,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(t == <span class="literal">NULL</span>)			<span class="comment">//1.递归结束条件</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t-&gt;key == k)		<span class="comment">//2.解决本次步骤</span></span><br><span class="line">            <span class="keyword">return</span> t;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(k &lt; t-&gt;key)	<span class="comment">//3.递归转移方程</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">research</span>(t-&gt;lchild, k);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">research</span>(t-&gt;rchild, k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="插入关键字算法"><a href="#插入关键字算法" class="headerlink" title="插入关键字算法"></a>插入关键字算法</h4><p>在插入过程中如果待插入关键字已经存在，则返回0，代表插入不成功；</p>
 <p>如果待插入关键字不存在，则插入，并返回1，代表插入成功。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Insert</span><span class="params">(BTNode *t,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">    <span class="comment">//t为当前查找的结点（可能是根结点也可能不是）</span></span><br><span class="line">    <span class="keyword">if</span>(t == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        t = <span class="keyword">new</span> BTNode;		<span class="comment">//创建一个新结点（c++语法）</span></span><br><span class="line">        t-&gt;key = key;</span><br><span class="line">        t-&gt;lchild = t-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="comment">//查找成功不需要插入</span></span><br><span class="line">        <span class="keyword">if</span>(key == t-&gt;key)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">        <span class="comment">//key 值小于当前结点，在左子树插入</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key &lt; t-&gt;key)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Insert</span>(t-&gt;lchild, key);</span><br><span class="line">        <span class="comment">//key 值大于当前结点，在右子树插入</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Insert</span>(t-&gt;rchild, key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Insert</span><span class="params">(BTNode *t,<span class="type">int</span> key)</span></span>&#123;</span><br><span class="line">    <span class="comment">//t为当前查找的结点（可能是根结点也可能不是）</span></span><br><span class="line">    <span class="keyword">if</span>(t == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        t = <span class="keyword">new</span> BTNode;		<span class="comment">//创建一个新结点（c++语法）</span></span><br><span class="line">        t-&gt;key = key;</span><br><span class="line">        t-&gt;lchild = t-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="comment">//查找成功不需要插入</span></span><br><span class="line">        <span class="keyword">if</span>(key == t-&gt;key)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">        <span class="comment">//key 值小于当前结点，在左子树插入</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key &lt; t-&gt;key)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Insert</span>(t-&gt;lchild, key);</span><br><span class="line">        <span class="comment">//key 值大于当前结点，在右子树插入</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Insert</span>(t-&gt;rchild, key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="二叉排序树的构造算法"><a href="#二叉排序树的构造算法" class="headerlink" title="二叉排序树的构造算法"></a>二叉排序树的构造算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建立一个空树,每个数据元素都用插入算法插入</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Create</span><span class="params">(BTNode *t,<span class="keyword">int</span> arr[],<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">Insert</span>(t,arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="二叉排序树的构造算法"><a href="#二叉排序树的构造算法" class="headerlink" title="二叉排序树的构造算法"></a>二叉排序树的构造算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建立一个空树,每个数据元素都用插入算法插入</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Create</span><span class="params">(BTNode *t,<span class="type">int</span> arr[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">Insert</span>(t,arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.github.io/posts/4bd3708b.html">https://insistgang.github.io/posts/4bd3708b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://insistgang.github.io" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><a class="post-meta__tags" href="/tags/datastruct/">datastruct</a></div><div class="post_share"><div class="social-share" data-image="/img/datastruct.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/f593ace5.html"><img class="prev-cover" src="/img/datastruct.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第七章排序</div></div></a></div><div class="next-post pull-right"><a href="/posts/6428e5d6.html"><img class="next-cover" src="/img/datastruct.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第五章图</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/a8b46908.html" title="专业课数据结构部分合集"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">专业课数据结构部分合集</div></div></a></div><div><a href="/posts/17be3fca.html" title="数据结构第二次习题课"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">数据结构第二次习题课</div></div></a></div><div><a href="/posts/6c6a429c.html" title="数据结构第一次习题课"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">数据结构第一次习题课</div></div></a></div><div><a href="/posts/5c16dd3e.html" title="数据结构测试卷"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">数据结构测试卷</div></div></a></div><div><a href="/posts/fee3f5d3.html" title="第一章线性表"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">第一章线性表</div></div></a></div><div><a href="/posts/f593ace5.html" title="第七章排序"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">第七章排序</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">六、查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="toc-number">1.0.1.</span> <span class="toc-text">顺序查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%88%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-number">1.0.2.</span> <span class="toc-text">折半查找（二分查找）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE"><span class="toc-number">1.0.3.</span> <span class="toc-text">分块查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91"><span class="toc-number">1.0.4.</span> <span class="toc-text">二叉排序树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BST%E6%A0%91%E7%9A%84%E6%9F%A5%E6%89%BE%EF%BC%88%E7%B1%BB%E6%AF%94%E4%B8%80%E4%B8%8B%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">BST树的查找（类比一下二分查找）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%85%B3%E9%94%AE%E5%AD%97%E7%AE%97%E6%B3%95"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">插入关键字算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.0.4.3.</span> <span class="toc-text">二叉排序树的构造算法</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/datastruct.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.github.io">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.github.io/posts/4bd3708b.html">https://insistgang.github.io/posts/4bd3708b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.github.io" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><a class="post-meta__tags" href="/tags/datastruct/">datastruct</a></div><div class="post-share"><div class="social-share" data-image="/img/datastruct.jpeg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/f593ace5.html" title="第七章排序"><img class="cover" src="/img/datastruct.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">第七章排序</div></div><div class="info-2"><div class="info-item-1">七、排序1.时间复杂度 ​    平均情况下，快排，希尔排序（复杂度了解即可）、归并排序和堆排序的复杂度为O(nlog²n)，其他都是O(n²)。一个特殊的是计数排序，其复杂度为O(n*k) ​    最坏情况下，快速排序的为O(n²)，其他都和平均情况下相同 2.空间复杂度 ​    快排O(nlog²n)，归并O(n)，基数O(n+k)，其他都是O(1) 快排、希尔、简单选择、堆排序是不稳定的，其余均为稳定的。  插入排序时间复杂度：最好O(n)    最坏O(n²)    平均O(n²)         空间复杂度：O(1) 稳定 直接插入排序1234567891011void InsertSort(int arr[],int n)&#123;	for(int i = 1; i &lt; n;i++)&#123;		int t = arr[i];//t等于当前元素		int j = i;//j从当前元素开始往前看		while(j&amp;&amp;t &lt; arr[j-1])&#123;//j&gt;0且前一个元素也是大于t的时候			arr[j] = arr[j-1...</div></div></div></a><a class="pagination-related" href="/posts/6428e5d6.html" title="第五章图"><img class="cover" src="/img/datastruct.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">第五章图</div></div><div class="info-2"><div class="info-item-1">第五章图邻接矩阵基本思想：vexNum表示顶点数量，arcNum表示边数量，edges表示边（1或者权值） 1234struct MGraph&#123;    int edge[Maxn][Maxn];//存储边	edge[i][j]=MAXN 表示两个顶点不通    int vexNum,arcNum;&#125;;  邻接表123456789101112struct ArcNode&#123;	//边结构	int adjvex;//顶点编号一条边里 被指向的那个顶点		ArcNode *next;//指针&#125;;struct VNode&#123;	//顶点结构	int data;//顶点信息	ArcNode *firstarc;&#125;;struct AGraph&#123;	//表	VNode adjlist[Maxn];//存储所有顶点链表  存了所有顶点 以及他们所指向的边	int vexNum,arcNum;&#125;;  图的遍历图的深度优先遍历思想:1.首先，访问开始结点从起始结点开始任选一个相邻并未被访问的结点，访问； 2.接着，把找到的结点作为...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/fee3f5d3.html" title="第一章线性表"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">第一章线性表</div></div><div class="info-2"><div class="info-item-1">第一章线性表线性表的操作123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175#include&lt;cstdio&gt;#include&lt;iostream&gt;using namespace std;co...</div></div></div></a><a class="pagination-related" href="/posts/f593ace5.html" title="第七章排序"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">第七章排序</div></div><div class="info-2"><div class="info-item-1">七、排序1.时间复杂度 ​    平均情况下，快排，希尔排序（复杂度了解即可）、归并排序和堆排序的复杂度为O(nlog²n)，其他都是O(n²)。一个特殊的是计数排序，其复杂度为O(n*k) ​    最坏情况下，快速排序的为O(n²)，其他都和平均情况下相同 2.空间复杂度 ​    快排O(nlog²n)，归并O(n)，基数O(n+k)，其他都是O(1) 快排、希尔、简单选择、堆排序是不稳定的，其余均为稳定的。  插入排序时间复杂度：最好O(n)    最坏O(n²)    平均O(n²)         空间复杂度：O(1) 稳定 直接插入排序1234567891011void InsertSort(int arr[],int n)&#123;	for(int i = 1; i &lt; n;i++)&#123;		int t = arr[i];//t等于当前元素		int j = i;//j从当前元素开始往前看		while(j&amp;&amp;t &lt; arr[j-1])&#123;//j&gt;0且前一个元素也是大于t的时候			arr[j] = arr[j-1...</div></div></div></a><a class="pagination-related no-desc" href="/posts/5c16dd3e.html" title="数据结构测试卷"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">数据结构测试卷</div></div></div></a><a class="pagination-related" href="/posts/6c6a429c.html" title="数据结构第一次习题课"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">数据结构第一次习题课</div></div><div class="info-2"><div class="info-item-1">第一次习题课阶乘和123456789101112131415161718int cal(int x)&#123;    int cal=1;    for(int i=2;i&lt;=x;i++)&#123;        cal*=x;    &#125;    return cal;&#125;int fun(LinkList L)&#123;    LNode p=L-&gt;next;    int ans=0;    while(p)&#123;        ans+=cal(p-&gt;data);        p=p-&gt;next;    &#125;&#125;  数组在长度为N的数组arr中，将小于等于arr[0]的数放在数组的左半部分，大于arr[0]的放在右半部分， arr[0]介于中间，输出处理后的数组  123456789101112131415161718192021222324#include&lt;iostream&gt;using namespace std;const int N=100010;int arr[N];int main()...</div></div></div></a><a class="pagination-related no-desc" href="/posts/a8b46908.html" title="专业课数据结构部分合集"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">专业课数据结构部分合集</div></div></div></a><a class="pagination-related" href="/posts/6428e5d6.html" title="第五章图"><img class="cover" src="/img/datastruct.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="info-item-2">第五章图</div></div><div class="info-2"><div class="info-item-1">第五章图邻接矩阵基本思想：vexNum表示顶点数量，arcNum表示边数量，edges表示边（1或者权值） 1234struct MGraph&#123;    int edge[Maxn][Maxn];//存储边	edge[i][j]=MAXN 表示两个顶点不通    int vexNum,arcNum;&#125;;  邻接表123456789101112struct ArcNode&#123;	//边结构	int adjvex;//顶点编号一条边里 被指向的那个顶点		ArcNode *next;//指针&#125;;struct VNode&#123;	//顶点结构	int data;//顶点信息	ArcNode *firstarc;&#125;;struct AGraph&#123;	//表	VNode adjlist[Maxn];//存储所有顶点链表  存了所有顶点 以及他们所指向的边	int vexNum,arcNum;&#125;;  图的遍历图的深度优先遍历思想:1.首先，访问开始结点从起始结点开始任选一个相邻并未被访问的结点，访问； 2.接着，把找到的结点作为...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">六、查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="toc-number">1.0.1.</span> <span class="toc-text">顺序查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%88%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-number">1.0.2.</span> <span class="toc-text">折半查找（二分查找）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE"><span class="toc-number">1.0.3.</span> <span class="toc-text">分块查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91"><span class="toc-number">1.0.4.</span> <span class="toc-text">二叉排序树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BST%E6%A0%91%E7%9A%84%E6%9F%A5%E6%89%BE%EF%BC%88%E7%B1%BB%E6%AF%94%E4%B8%80%E4%B8%8B%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">BST树的查找（类比一下二分查找）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%85%B3%E9%94%AE%E5%AD%97%E7%AE%97%E6%B3%95"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">插入关键字算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.0.4.3.</span> <span class="toc-text">二叉排序树的构造算法</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
 
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
-  function initValine () {
-    const valine = new Valine(Object.assign({
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
       el: '#vcomment',
       appId: '',
       appKey: '',
       avatar: 'monsterid',
       serverURLs: '',
       emojiMaps: "",
-      path: window.location.pathname,
-      visitor: false
-    }, null))
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
   }
 
-  if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
-}
-
-if ('Valine' === 'Valine' || !false) {
-  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
-} else {
-  function loadOtherComment () {
-    loadValine()
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
   }
-}</script><script>function loadDisqus () {
-  var disqus_config = function () {
-    this.page.url = 'https://insistgang.github.io/posts/4bd3708b.html'
-    this.page.identifier = 'posts/4bd3708b.html'
-    this.page.title = '第六章查找'
-  };
 
-  window.disqusReset = () => {
-    DISQUS.reset({
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
       reload: true,
-      config: disqus_config
+      config: conf
     })
   }
 
-  if (window.DISQUS) disqusReset()
-  else {
-    (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  }
-}
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
 
-if ('Valine' === 'Disqus' || !false) {
-  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
-  else loadDisqus()
-} else {
-  function loadOtherComment () {
-    loadDisqus()
+    window.disqus_identifier = isShuoshuo ? path : '/posts/4bd3708b.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.github.io/posts/4bd3708b.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '第六章查找'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
   }
-}
-</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);

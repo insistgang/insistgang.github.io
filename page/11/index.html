@@ -1,29 +1,110 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="Leo的笔记本">
-<meta property="og:url" content="https://insistgang.github.io/page/11/index.html">
-<meta property="og:site_name" content="Leo的笔记本">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://insistgang.github.io/img/toux.jpg">
-<meta property="article:author" content="insistgang">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://insistgang.github.io/img/toux.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/page/11/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.github.io/page/11/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: undefined,
   translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: true
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -31,251 +112,169 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'Leo的笔记本',
-  isPost: false,
-  isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-02-24 15:45:07'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+  pageType: 'home'
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Leo的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Leo的笔记本</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/fcab5681.html" title="第二章栈和队列"><img class="post_bg" src="/img/datastruct.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二章栈和队列"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fcab5681.html" title="第二章栈和队列">第二章栈和队列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:06:01.000Z" title="发表于 2022-08-10 20:06:01">2022-08-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.704Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/datastruct/">datastruct</a></span></div><div class="content">第二章栈和队列栈的基本操作123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990const int maxSize=100010;//顺序栈typedef struct&#123;    ElemType data[maxSize];//存放栈中元素    int top;//存放栈顶指针&#125;SqStack;/*链式栈 入栈和出栈都在表头执行，相当于只处理表头一端的单链表出栈：相当于删除链表的一个结点入栈：相当于头插法插入结点*/typedef struct LinkNode&#123;    ElemType data;    struct LinkNode *next;&#125;*LiStack;/*共享栈：利用栈底位置相对不变的特性，让两个顺序栈共享一个数组空间，将两个栈底设置在数组的两 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/fee3f5d3.html" title="第一章线性表"><img class="post_bg" src="/img/datastruct.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一章线性表"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fee3f5d3.html" title="第一章线性表">第一章线性表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:05:46.000Z" title="发表于 2022-08-10 20:05:46">2022-08-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.655Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/datastruct/">datastruct</a></span></div><div class="content">第一章线性表线性表的操作123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175#include&lt;cstdio&gt;#include&lt;iostream&gt;using namespace std;const ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/69ae16d2.html" title="专业课C语言部分合集"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课C语言部分合集"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/69ae16d2.html" title="专业课C语言部分合集">专业课C语言部分合集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:48:20.000Z" title="发表于 2022-08-07 13:48:20">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.474Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">C语言合集第一次作业1.输入2个整数，求两数的平方和并输出。
-123456789#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    cout&lt;&lt; a*a + b*b &lt;&lt;endl;    return 0;&#125;
-
-
-
-2.输入一个圆半径(r)当r&gt;=0时，计算并输出圆的面积和周长，否则，输出提示信息。
-1234567891011121314#include&lt;iostream&gt;#define PI 3.14using namespace std;int main()&#123;    int r;    cin&gt;&gt;r;    if(r&gt;0)&#123;        cout&lt;&lt;PI*r*r&lt;&lt;endl;        cout&lt;&lt;2*PI*r&lt;&lt;endl;    &#125;el ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/175bb044.html" title="专业课第六次作业"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第六次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/175bb044.html" title="专业课第六次作业">专业课第六次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:48:03.000Z" title="发表于 2022-08-07 13:48:03">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.551Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第六次课作业 用冒泡法对一组用户输入的整数进行排序。 
-1234567891011121314151617181920#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;/*外层n-1次循环每次循环都在待排序的序列中把最大的移到待排序的最后面1~n-i-1*/int main()&#123;    int a[10]=&#123;3,2,5,1,4,8,9,7,10,6&#125;;    for(int i=0;i&lt;9;i++)&#123;        for(int j=1;j&lt;=10-i-1;j++)&#123;            if(a[j]&gt;a[j-1])            swap(a[j-1],a[j]);        &#125;    &#125;    for(int i=0;i&lt;10;i++)cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;    return 0;&#125;
-
- 2.将一个二维数组行和列的元素互换,存 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/a38aea03.html" title="专业课第五次作业"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第五次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/a38aea03.html" title="专业课第五次作业">专业课第五次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:31:35.000Z" title="发表于 2022-08-07 13:31:35">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.538Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第五次作业最大公约数和最小公倍数
-1234567891011121314#include&lt;iostream&gt;using namespace std;int gcd(int a,int b)&#123;    return b?gcd(b,a%b):a;&#125;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    int c=gcd(a,b);    cout&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;a*b/c&lt;&lt;endl;    return 0;    &#125;
-
-2.写一个函数，由键盘输入一个数，输出其是否为素数。
-123456789101112131415161718192021222324#include&lt;iostream&gt;#include&lt;cmath&gt;using namespace std;bool prime(int a)&#123;     if(a==1) return 0;     if(a==3||a==2) ret ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/8e36adf6.html" title="专业课第四次作业"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第四次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/8e36adf6.html" title="专业课第四次作业">专业课第四次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:17:22.000Z" title="发表于 2022-08-07 13:17:22">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.565Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第四次作业输入一个数组，输出数组倒序的结果。
-12345678910111213#include&lt;iostream&gt;#include&lt;cstring&gt;using namespace std;int main()&#123;    int a[10];    for(int i=0;i&lt;10;i++)&#123;        cin&gt;&gt;a[i];    &#125;    for(int i=9;i&gt;=0;i--)&#123;        cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;    &#125;    return 0;&#125;
-
-输入一个字符串,判断是否为回文串(回文串:从前向后输出与从后向前输出为相同的结果)
-123456789101112131415161718#include&lt;iostream&gt;#include&lt;cstring&gt;using namespace std;int main()&#123;    string a;    getline(cin,a); ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/29b6599a.html" title="专业课第三次作业"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第三次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/29b6599a.html" title="专业课第三次作业">专业课第三次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:04:13.000Z" title="发表于 2022-08-07 13:04:13">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.513Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">习题课1
-a+b&gt;c=&gt;3+4=7&gt;5=&gt;1 b==c =&gt;0 1&amp;&amp;0  0 
-a=3 a||b+c==&gt;1 b-c==-1 ==&gt; 1 1||-1=1
-a&gt;b 3&gt;4==0 !0=1 !c=0 1&amp;&amp;0=0
-x=a=1 !1=0 0&amp;&amp;任何都是0
-a+b=7 !7=0 0+c-1=4 b+c/2=4+2=6 4&amp;&amp;6=1
-
-2.从键盘输入一个小于1000的正数,要求输出它的平方根(如平方根不是整数,则输出其整数部分)。要求在输入数据后先对其进行检查是否为小于1000的正数。若不是,则要求重新输入。
-1234567891011121314151617#include&lt;iostream&gt;#include&lt;cmath&gt;using namespace std;int main()&#123;    int n,t;    cin&gt;&gt;n;    while(1)&#123;        if(n&gt;1000)&#123;        ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/d5a37250.html" title="专业课第一次作业"><img class="post_bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第一次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/d5a37250.html" title="专业课第一次作业">专业课第一次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-27T16:07:27.000Z" title="发表于 2022-06-28 00:07:27">2022-06-28</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.501Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第一次作业好久不写代码了，6月27日，从基础题开始写，锻炼自己写代码的速度。
-1.输入2个整数，求两数的平方和并输出。
-123456789#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    cout&lt;&lt; a*a &lt;&lt;&quot; &quot;&lt;&lt; b*b &lt;&lt;endl;    return 0;&#125;
-
-
-
-2.输入一个圆半径(r)当r&gt;=0时，计算并输出圆的面积和周长，否则，输出提示信息。
-1234567891011121314#include&lt;iostream&gt;#define PI 3.14using namespace std;int main()&#123;    int r;    cin&gt;&gt;r;    if(r&gt;0)&#123;        cout&lt;&lt;PI*r*r&lt;&lt ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/e518e14.html" title="数据库原理"><img class="post_bg" src="/img/DBS.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库原理"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/e518e14.html" title="数据库原理">数据库原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-03T09:06:54.000Z" title="发表于 2022-04-03 17:06:54">2022-04-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.588Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span></div><div class="content">数据库基础SQL语言 数据化查询语言 绝大部分数据库系统支持
-关于sql语句的使用
-sqol语句不区分大小写
-命令 使用大写比较标准
-
-
-表名  库名  小写
-每条命里  建议分号结尾
-命令如果写的比较长  建议分成多行  关键字单独写一行
-
-
-注释方式
-
-
-单行注释 #开头 注释内容  –  注释
-多行注释 /* 注释内容 */
-
-关于数据库的存放单元数据库名
-表名
-字段名
-关于数据库的服务的启动和关闭使用数据库之前  记得开启服务
-
-手动找到服务 开启
-
-打开命令提示符管理员权限
-
-打开服务 net start 服务名
-关闭服务 net stop 服务名
-
-
-
-关于mysql的登录和退出
-通过mysql自带的客户端  输入密码就可以启动
-使用exit 或者ctrl+c退出
-
-使用控制台登录
-mysql -h localhost -P 3306 -u -root -p
-如果是本机可以省略 -h localhost -P 3306 -u -root -p
-
-
-关于一些常见的mysql语句
-show database；显示数据库当中的内容
-
-use 库名;
-
-select databas ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/cc7d7256.html" title="C程序设计01"><img class="post_bg" src="/img/c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C程序设计01"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/cc7d7256.html" title="C程序设计01">C程序设计01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-01T07:13:30.000Z" title="发表于 2022-04-01 15:13:30">2022-04-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.462Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/C/">C</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/c%E8%AF%AD%E8%A8%80/">c语言</a></span></div><div class="content">基本数据类型整型整数（没有小数点的数值）
-int  占用4个字节 -2^31~2^31-1 (10^10以内的数字)
-short 占用2个字节-2^152^15-1  (-3276832767)
-long 占用4个字节-2^31~2^31-1 (10^10以内的数字)
-long long 占用 8个字节-2^63~2^63-1 
-32位环境下 规定字节数int一定不能小于short long一定不能小于int（有可能相等）
-浮点型实型，小数 有小数点的类型
-float 单精度浮点型  4个字节  -3.4*10^38~3.410^38 精度6~7位  运算比较快 对于精度要求不高用float
-double 双精度浮点型  -1.7*10^308~1.710^308 精度16~17位 精度比较高 但计算比较慢
-字符类型char  
-az AZ  都是一个字符 
-hello 视为 5个字母
-数字 字母 标点符号 都可以用字符类型表示
-用键盘输入的字符都在ASCII上 0~127 ASCII中的范围
-char 用来存放字符—&gt; 存放这些数字 -128127 -2^72^7-1
-ASCI ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/10/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#content-inner">14</a><a class="extend next" rel="next" href="/page/12/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">insistgang</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Leo的笔记本</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/fcab5681.html" title="第二章栈和队列"><img class="post-bg" src="/img/datastruct.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二章栈和队列"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fcab5681.html" title="第二章栈和队列">第二章栈和队列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:06:01.000Z" title="发表于 2022-08-10 20:06:01">2022-08-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.704Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/datastruct/">datastruct</a></span></div><div class="content">第二章栈和队列栈的基本操作123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990const int maxSize=100010;//顺序栈typedef struct&#123;    ElemType data[maxSize];//存放栈中元素    int top;//存放栈顶指针&#125;SqStack;/*链式栈 入栈和出栈都在表头执行，相当于只处理表头一端的单链表出栈：相当于删除链表的一个结点入栈：相当于头插法插入结点*/typedef struct LinkNode&#123;    ElemType data;    struct LinkNode *next;&#125;*LiStack;/*共享栈：利用栈底位置相对不变的特性，让两个顺序栈共享一个数组空间，将两个栈底设置在数...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/fee3f5d3.html" title="第一章线性表"><img class="post-bg" src="/img/datastruct.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一章线性表"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fee3f5d3.html" title="第一章线性表">第一章线性表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-10T12:05:46.000Z" title="发表于 2022-08-10 20:05:46">2022-08-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.655Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/datastruct/">datastruct</a></span></div><div class="content">第一章线性表线性表的操作123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175#include&lt;cstdio&gt;#include&lt;iostream&gt;using namespace std;co...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/69ae16d2.html" title="专业课C语言部分合集"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课C语言部分合集"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/69ae16d2.html" title="专业课C语言部分合集">专业课C语言部分合集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:48:20.000Z" title="发表于 2022-08-07 13:48:20">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.474Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">C语言合集第一次作业1.输入2个整数，求两数的平方和并输出。 123456789#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    cout&lt;&lt; a*a + b*b &lt;&lt;endl;    return 0;&#125;    2.输入一个圆半径(r)当r&gt;=0时，计算并输出圆的面积和周长，否则，输出提示信息。 1234567891011121314#include&lt;iostream&gt;#define PI 3.14using namespace std;int main()&#123;    int r;    cin&gt;&gt;r;    if(r&gt;0)&#123;        cout&lt;&lt;PI*r*r&lt;&lt;endl;        cout&lt;&lt;2*PI*r&lt;&lt;endl;    &#125...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/175bb044.html" title="专业课第六次作业"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第六次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/175bb044.html" title="专业课第六次作业">专业课第六次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:48:03.000Z" title="发表于 2022-08-07 13:48:03">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.551Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第六次课作业 用冒泡法对一组用户输入的整数进行排序。  1234567891011121314151617181920#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;/*外层n-1次循环每次循环都在待排序的序列中把最大的移到待排序的最后面1~n-i-1*/int main()&#123;    int a[10]=&#123;3,2,5,1,4,8,9,7,10,6&#125;;    for(int i=0;i&lt;9;i++)&#123;        for(int j=1;j&lt;=10-i-1;j++)&#123;            if(a[j]&gt;a[j-1])            swap(a[j-1],a[j]);        &#125;    &#125;    for(int i=0;i&lt;10;i++)cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;    return 0;&#125;   2.将一个二维数组行和列的元素互...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/a38aea03.html" title="专业课第五次作业"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第五次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/a38aea03.html" title="专业课第五次作业">专业课第五次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:31:35.000Z" title="发表于 2022-08-07 13:31:35">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.538Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第五次作业最大公约数和最小公倍数 1234567891011121314#include&lt;iostream&gt;using namespace std;int gcd(int a,int b)&#123;    return b?gcd(b,a%b):a;&#125;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    int c=gcd(a,b);    cout&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;a*b/c&lt;&lt;endl;    return 0;    &#125;  2.写一个函数，由键盘输入一个数，输出其是否为素数。 123456789101112131415161718192021222324#include&lt;iostream&gt;#include&lt;cmath&gt;using namespace std;bool prime(int a)&#123;     if(a==1) return 0;     if(a==3||a==2) ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/8e36adf6.html" title="专业课第四次作业"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第四次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/8e36adf6.html" title="专业课第四次作业">专业课第四次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:17:22.000Z" title="发表于 2022-08-07 13:17:22">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.565Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第四次作业输入一个数组，输出数组倒序的结果。 12345678910111213#include&lt;iostream&gt;#include&lt;cstring&gt;using namespace std;int main()&#123;    int a[10];    for(int i=0;i&lt;10;i++)&#123;        cin&gt;&gt;a[i];    &#125;    for(int i=9;i&gt;=0;i--)&#123;        cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;    &#125;    return 0;&#125;  输入一个字符串,判断是否为回文串(回文串:从前向后输出与从后向前输出为相同的结果) 123456789101112131415161718#include&lt;iostream&gt;#include&lt;cstring&gt;using namespace std;int main()&#123;    string a;    getline(cin,...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/29b6599a.html" title="专业课第三次作业"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第三次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/29b6599a.html" title="专业课第三次作业">专业课第三次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-07T05:04:13.000Z" title="发表于 2022-08-07 13:04:13">2022-08-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.513Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">习题课1 a+b&gt;c=&gt;3+4=7&gt;5=&gt;1 b==c =&gt;0 1&amp;&amp;0  0  a=3 a||b+c==&gt;1 b-c==-1 ==&gt; 1 1||-1=1 a&gt;b 3&gt;4==0 !0=1 !c=0 1&amp;&amp;0=0 x=a=1 !1=0 0&amp;&amp;任何都是0 a+b=7 !7=0 0+c-1=4 b+c/2=4+2=6 4&amp;&amp;6=1  2.从键盘输入一个小于1000的正数,要求输出它的平方根(如平方根不是整数,则输出其整数部分)。要求在输入数据后先对其进行检查是否为小于1000的正数。若不是,则要求重新输入。 1234567891011121314151617#include&lt;iostream&gt;#include&lt;cmath&gt;using namespace std;int main()&#123;    int n,t;    cin&gt;&gt;n;    while(1)&#123;        if(n&gt;1000)&#123;    ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/d5a37250.html" title="专业课第一次作业"><img class="post-bg" src="/img/c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="专业课第一次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/d5a37250.html" title="专业课第一次作业">专业课第一次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-27T16:07:27.000Z" title="发表于 2022-06-28 00:07:27">2022-06-28</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.501Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%80%83%E7%A0%94/">考研</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="content">第一次作业好久不写代码了，6月27日，从基础题开始写，锻炼自己写代码的速度。 1.输入2个整数，求两数的平方和并输出。 123456789#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123;    int a,b;    cin&gt;&gt;a&gt;&gt;b;    cout&lt;&lt; a*a &lt;&lt;&quot; &quot;&lt;&lt; b*b &lt;&lt;endl;    return 0;&#125;    2.输入一个圆半径(r)当r&gt;=0时，计算并输出圆的面积和周长，否则，输出提示信息。 1234567891011121314#include&lt;iostream&gt;#define PI 3.14using namespace std;int main()&#123;    int r;    cin&gt;&gt;r;    if(r&gt;0)&#123;        cout&lt;&lt;PI*r*r&lt;...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/e518e14.html" title="数据库原理"><img class="post-bg" src="/img/DBS.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库原理"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/e518e14.html" title="数据库原理">数据库原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-03T09:06:54.000Z" title="发表于 2022-04-03 17:06:54">2022-04-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.588Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span></div><div class="content">数据库基础SQL语言 数据化查询语言 绝大部分数据库系统支持 关于sql语句的使用 sqol语句不区分大小写 命令 使用大写比较标准   表名  库名  小写 每条命里  建议分号结尾 命令如果写的比较长  建议分成多行  关键字单独写一行   注释方式   单行注释 #开头 注释内容  –  注释 多行注释 /* 注释内容 */  关于数据库的存放单元数据库名 表名 字段名 关于数据库的服务的启动和关闭使用数据库之前  记得开启服务  手动找到服务 开启  打开命令提示符管理员权限  打开服务 net start 服务名 关闭服务 net stop 服务名    关于mysql的登录和退出 通过mysql自带的客户端  输入密码就可以启动 使用exit 或者ctrl+c退出  使用控制台登录 mysql -h localhost -P 3306 -u -root -p 如果是本机可以省略 -h localhost -P 3306 -u -root -p   关于一些常见的mysql语句 show database；显示数据库当中的内容  use 库名;  select data...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/cc7d7256.html" title="C程序设计01"><img class="post-bg" src="/img/c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C程序设计01"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/cc7d7256.html" title="C程序设计01">C程序设计01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-01T07:13:30.000Z" title="发表于 2022-04-01 15:13:30">2022-04-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-08T15:40:41.462Z" title="更新于 2026-01-08 23:40:41">2026-01-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/C/">C</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/c%E8%AF%AD%E8%A8%80/">c语言</a></span></div><div class="content">基本数据类型整型整数（没有小数点的数值） int  占用4个字节 -2^31~2^31-1 (10^10以内的数字) short 占用2个字节-2^152^15-1  (-3276832767) long 占用4个字节-2^31~2^31-1 (10^10以内的数字) long long 占用 8个字节-2^63~2^63-1  32位环境下 规定字节数int一定不能小于short long一定不能小于int（有可能相等） 浮点型实型，小数 有小数点的类型 float 单精度浮点型  4个字节  -3.4*10^38~3.410^38 精度6~7位  运算比较快 对于精度要求不高用float double 双精度浮点型  -1.7*10^308~1.710^308 精度16~17位 精度比较高 但计算比较慢 字符类型char   az AZ  都是一个字符  hello 视为 5个字母 数字 字母 标点符号 都可以用字符类型表示 用键盘输入的字符都在ASCII上 0~127 ASCII中的范围 char 用来存放字符—&gt; 存放这些数字 -128127 -2^72^7-1 A...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/10/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#content-inner">14</a><a class="extend next" rel="next" href="/page/12/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">133</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智"><img src="/img/steam-steel-infinite-minds/00_%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度解析：蒸汽、钢铁与无限心智"/></a><div class="content"><a class="title" href="/posts/steam-steel-infinite-minds-analysis.html" title="深度解析：蒸汽、钢铁与无限心智">深度解析：蒸汽、钢铁与无限心智</a><time datetime="2026-02-24T08:00:00.000Z" title="发表于 2026-02-24 16:00:00">2026-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力"><img src="/img/minimax-agent-analysis/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniMax Agent 应用场景与核心竞争力"/></a><div class="content"><a class="title" href="/posts/minimax-agent-analysis.html" title="MiniMax Agent 应用场景与核心竞争力">MiniMax Agent 应用场景与核心竞争力</a><time datetime="2026-02-23T13:00:00.000Z" title="发表于 2026-02-23 21:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img src="/img/qwen-coding-plan/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通义千问 (Qwen) Coding Plan 调研报告"/></a><div class="content"><a class="title" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告">通义千问 (Qwen) Coding Plan 调研报告</a><time datetime="2026-02-23T04:00:00.000Z" title="发表于 2026-02-23 12:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0223f7a2.html" title="2026年2月23日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年2月23日"/></a><div class="content"><a class="title" href="/posts/0223f7a2.html" title="2026年2月23日">2026年2月23日</a><time datetime="2026-02-22T16:00:00.000Z" title="发表于 2026-02-23 00:00:00">2026-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img src="/img/coding-plan-report/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国产顶级 Coding Plan API 研究报告"/></a><div class="content"><a class="title" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告">国产顶级 Coding Plan API 研究报告</a><time datetime="2026-02-22T04:00:00.000Z" title="发表于 2026-02-22 12:00:00">2026-02-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/cos/"><span class="card-category-list-name">cos</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">杂谈</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">技术分享</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"><span class="card-category-list-name">技术研究</span><span class="card-category-list-count">3</span></a></li></ul></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.3em; color: rgb(102, 47, 199)">linux</a><a href="/tags/shell/" style="font-size: 1.22em; color: rgb(148, 24, 72)">shell</a><a href="/tags/tmux/" style="font-size: 1.15em; color: rgb(189, 81, 43)">tmux</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(157, 144, 150)">vim</a><a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 1.15em; color: rgb(107, 148, 160)">c语言</a><a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.45em; color: rgb(107, 196, 174)">考研</a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.41em; color: rgb(184, 26, 39)">C语言</a><a href="/tags/datastruct/" style="font-size: 1.45em; color: rgb(115, 87, 53)">datastruct</a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.15em; color: rgb(34, 194, 192)">数据库</a><a href="/tags/python/" style="font-size: 1.19em; color: rgb(194, 98, 23)">python</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.15em; color: rgb(67, 49, 143)">小程序</a><a href="/tags/case/" style="font-size: 1.15em; color: rgb(135, 146, 60)">case</a><a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 1.34em; color: rgb(52, 51, 103)">小记</a><a href="/tags/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B/" style="font-size: 1.41em; color: rgb(17, 72, 65)">把时间当朋友</a><a href="/tags/%E8%81%8C%E5%9C%BA%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(188, 50, 43)">职场问题</a><a href="/tags/Windows/" style="font-size: 1.26em; color: rgb(24, 180, 147)">Windows</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(16, 8, 189)">系统优化</a><a href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" style="font-size: 1.22em; color: rgb(115, 190, 98)">磁盘清理</a><a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.15em; color: rgb(92, 86, 199)">经验分享</a><a href="/tags/AI/" style="font-size: 1.26em; color: rgb(175, 181, 98)">AI</a><a href="/tags/MiniMax/" style="font-size: 1.19em; color: rgb(38, 40, 31)">MiniMax</a><a href="/tags/Agent/" style="font-size: 1.15em; color: rgb(26, 46, 39)">Agent</a><a href="/tags/Claude/" style="font-size: 1.15em; color: rgb(162, 197, 64)">Claude</a><a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 1.15em; color: rgb(151, 88, 110)">效率工具</a><a href="/tags/E%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(134, 117, 44)">E盘整理</a><a href="/tags/%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" style="font-size: 1.15em; color: rgb(118, 18, 63)">微信文件管理</a><a href="/tags/%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96/" style="font-size: 1.19em; color: rgb(186, 157, 58)">存储优化</a><a href="/tags/D%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(177, 113, 60)">D盘整理</a><a href="/tags/API/" style="font-size: 1.19em; color: rgb(146, 166, 152)">API</a><a href="/tags/GLM/" style="font-size: 1.15em; color: rgb(199, 17, 104)">GLM</a><a href="/tags/Kimi/" style="font-size: 1.15em; color: rgb(53, 53, 65)">Kimi</a><a href="/tags/Coding/" style="font-size: 1.19em; color: rgb(149, 12, 125)">Coding</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" style="font-size: 1.15em; color: rgb(29, 149, 198)">系统知识</a><a href="/tags/AppData/" style="font-size: 1.15em; color: rgb(102, 134, 28)">AppData</a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/" style="font-size: 1.15em; color: rgb(175, 2, 144)">技术原理</a><a href="/tags/cos/" style="font-size: 1.15em; color: rgb(154, 148, 92)">cos</a><a href="/tags/Qwen/" style="font-size: 1.15em; color: rgb(169, 54, 142)">Qwen</a><a href="/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/" style="font-size: 1.15em; color: rgb(46, 144, 33)">通义千问</a><a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.15em; color: rgb(46, 10, 70)">阿里云</a><a href="/tags/algorithm/" style="font-size: 1.38em; color: rgb(162, 183, 99)">algorithm</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><span class="card-archive-list-count">38</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><span class="card-archive-list-count">41</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">133</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">144.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-24T07:45:07.433Z"></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By insistgang</div><div id="workboard"></div><script async="async" src="/js/runtime.js"></script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["学如逆水行舟，不进则退！","Learning is like rowing upstream!"],
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.27em; color: rgb(50, 112, 130);">linux</a><a href="/tags/shell/" style="font-size: 1.21em; color: rgb(109, 50, 156);">shell</a><a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 1.15em; color: rgb(196, 50, 166);">c语言</a><a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.42em; color: rgb(69, 200, 71);">考研</a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.39em; color: rgb(52, 146, 148);">C语言</a><a href="/tags/tmux/" style="font-size: 1.15em; color: rgb(50, 155, 196);">tmux</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(50, 182, 50);">vim</a><a href="/tags/datastruct/" style="font-size: 1.42em; color: rgb(83, 59, 50);">datastruct</a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.15em; color: rgb(74, 169, 123);">数据库</a><a href="/tags/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B/" style="font-size: 1.39em; color: rgb(166, 131, 104);">把时间当朋友</a><a href="/tags/case/" style="font-size: 1.15em; color: rgb(68, 68, 110);">case</a><a href="/tags/python/" style="font-size: 1.18em; color: rgb(198, 94, 50);">python</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.15em; color: rgb(50, 56, 50);">小程序</a><a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 1.45em; color: rgb(142, 187, 64);">日记</a><a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 1.3em; color: rgb(50, 94, 50);">复盘</a><a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.33em; color: rgb(183, 147, 73);">计划</a><a href="/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/" style="font-size: 1.21em; color: rgb(118, 197, 145);">周复盘</a><a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 1.3em; color: rgb(115, 52, 142);">小记</a><a href="/tags/%E8%81%8C%E5%9C%BA%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(50, 137, 78);">职场问题</a><a href="/tags/%E9%98%85%E8%AF%BB/" style="font-size: 1.18em; color: rgb(144, 117, 152);">阅读</a><a href="/tags/algorithm/" style="font-size: 1.36em; color: rgb(156, 75, 79);">algorithm</a><a href="/tags/%E7%9C%9F%E9%A2%98/" style="font-size: 1.36em; color: rgb(71, 50, 98);">真题</a><a href="/tags/Windows/" style="font-size: 1.24em; color: rgb(178, 153, 177);">Windows</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(187, 112, 51);">系统优化</a><a href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" style="font-size: 1.21em; color: rgb(100, 171, 50);">磁盘清理</a><a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.15em; color: rgb(79, 50, 131);">经验分享</a><a href="/tags/D%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(173, 189, 179);">D盘整理</a><a href="/tags/%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96/" style="font-size: 1.18em; color: rgb(50, 52, 175);">存储优化</a><a href="/tags/E%E7%9B%98%E6%95%B4%E7%90%86/" style="font-size: 1.15em; color: rgb(119, 50, 50);">E盘整理</a><a href="/tags/%E5%BE%AE%E4%BF%A1%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" style="font-size: 1.15em; color: rgb(50, 105, 171);">微信文件管理</a><a href="/tags/AI/" style="font-size: 1.24em; color: rgb(184, 98, 85);">AI</a><a href="/tags/MiniMax/" style="font-size: 1.18em; color: rgb(172, 53, 190);">MiniMax</a><a href="/tags/Agent/" style="font-size: 1.15em; color: rgb(50, 104, 55);">Agent</a><a href="/tags/Claude/" style="font-size: 1.15em; color: rgb(50, 113, 53);">Claude</a><a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 1.15em; color: rgb(50, 68, 50);">效率工具</a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" style="font-size: 1.15em; color: rgb(56, 50, 114);">系统知识</a><a href="/tags/AppData/" style="font-size: 1.15em; color: rgb(50, 50, 171);">AppData</a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/" style="font-size: 1.15em; color: rgb(72, 125, 50);">技术原理</a><a href="/tags/cos/" style="font-size: 1.15em; color: rgb(50, 177, 150);">cos</a><a href="/tags/API/" style="font-size: 1.18em; color: rgb(50, 199, 137);">API</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              二月 2026
+            </span>
+            <span class="card-archive-list-count">38</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">41</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/09/">
+            <span class="card-archive-list-date">
+              九月 2022
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/08/">
+            <span class="card-archive-list-date">
+              八月 2022
+            </span>
+            <span class="card-archive-list-count">16</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/06/">
+            <span class="card-archive-list-date">
+              六月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/04/">
+            <span class="card-archive-list-date">
+              四月 2022
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">133</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">144.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-24T08:45:27.407Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '学如逆水行舟，不进则退！'
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["学如逆水行舟，不进则退！","Learning is like rowing upstream!"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
   }
 }
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["学如逆水行舟，不进则退！","Learning is like rowing upstream!"])
+}
+typedJSFn.run(subtitleType)</script></div><script defer src="/live2d-widget/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
