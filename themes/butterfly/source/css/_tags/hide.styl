@@ -3,9 +3,11 @@
 .hide-block
   & > .hide-button
     display: inline-block
-    padding: 6px 20px
+    padding: 5px 18px
     background: $tag-hide-bg
     color: var(--white)
+    addBorderRadius()
+    @extend .btn-effects
 
     &:hover
       background-color: var(--btn-hover-color)
@@ -32,27 +34,31 @@
 .hide-block
   margin: 0 0 16px
 
-.hide-toggle
+.toggle
   margin-bottom: 20px
   border: 1px solid $tag-hide-toggle-bg
+  addBorderRadius(5, true)
 
-  & > .hide-button
-    padding: 6px 10px
+  & > .toggle-content
+    margin: 30px 24px
+
+  & > .toggle-button
+    padding: 6px 15px
     background: $tag-hide-toggle-bg
     color: #1F2D3D
+    list-style: none
     cursor: pointer
 
-    & > i
-      font-size: 1.2em
-      transition: all .3s
+    &::-webkit-details-marker
+      display: none
 
-    &.open
-      i
-        transform: rotate(90deg)
+    &::before
+      @extend .fontawesomeIcon
+      margin-right: 8px
+      content: '\f0d7'
+      transition: transform .3s ease
+      transform: rotate(-90deg)
+      transform-origin: center center
 
-      & + div
-        display: block
-
-  & > .hide-content
-    display: none
-    margin: 30px 24px
+  &[open] summary::before
+    transform: rotate(0)

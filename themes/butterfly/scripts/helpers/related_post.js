@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /**
  * Butterfly
  * Related Posts
@@ -6,35 +7,42 @@
 
 'use strict'
 
-hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
-  let relatedPosts = []
-  currentPost.tags.forEach(function (tag) {
-    allPosts.forEach(function (post) {
-      if (isTagRelated(tag.name, post.tags)) {
-        const relatedPost = {
+const { postDesc } = require('../common/postDesc')
+
+hexo.extend.helper.register('related_posts', function (currentPost) {
+  const relatedPosts = new Map()
+  const tagsData = currentPost.tags
+
+  if (!tagsData || !tagsData.length) return ''
+
+  tagsData.forEach(tag => {
+    const posts = tag.posts
+    posts.forEach(post => {
+      if (currentPost.path === post.path) return
+
+      if (relatedPosts.has(post.path)) {
+        relatedPosts.get(post.path).weight += 1
+      } else {
+        const getPostDesc = post.postDesc || postDesc(post, hexo)
+        relatedPosts.set(post.path, {
           title: post.title,
           path: post.path,
           cover: post.cover,
-          randomcover: post.randomcover,
+          cover_type: post.cover_type,
           weight: 1,
           updated: post.updated,
-          created: post.date
-        }
-        const index = findItem(relatedPosts, 'path', post.path)
-        if (index !== -1) {
-          relatedPosts[index].weight += 1
-        } else {
-          if (currentPost.path !== post.path) {
-            relatedPosts.push(relatedPost)
-          }
-        }
+          created: post.date,
+          postDesc: getPostDesc,
+          random: Math.random()
+        })
       }
     })
   })
-  if (relatedPosts.length === 0) {
+
+  if (relatedPosts.size === 0) {
     return ''
   }
-  let result = ''
+
   const hexoConfig = hexo.config
   const config = hexo.theme.config
 
@@ -42,57 +50,42 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
   const dateType = config.related_post.date_type || 'created'
   const headlineLang = this._p('post.recommend')
 
-  relatedPosts = relatedPosts.sort(compare('weight'))
-
-  if (relatedPosts.length > 0) {
-    result += '<div class="relatedPosts">'
-    result += `<div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>${headlineLang}</span></div>`
-    result += '<div class="relatedPosts-list">'
-
-    for (let i = 0; i < Math.min(relatedPosts.length, limitNum); i++) {
-      const cover =
-        relatedPosts[i].cover === false
-          ? relatedPosts[i].randomcover
-          : relatedPosts[i].cover
-      result += `<div><a href="${this.url_for(relatedPosts[i].path)}" title="${relatedPosts[i].title}">`
-      result += `<img class="cover" src="${this.url_for(cover)}" alt="cover">`
-      if (dateType === 'created') {
-        result += `<div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> ${this.date(relatedPosts[i].created, hexoConfig.date_format)}</div>`
-      } else {
-        result += `<div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> ${this.date(relatedPosts[i].updated, hexoConfig.date_format)}</div>`
-      }
-      result += `<div class="title">${relatedPosts[i].title}</div>`
-      result += '</div></a></div>'
+  const relatedPostsList = Array.from(relatedPosts.values()).sort((a, b) => {
+    if (b.weight !== a.weight) {
+      return b.weight - a.weight
     }
-
-    result += '</div></div>'
-    return result
-  }
-})
-
-function isTagRelated (tagName, TBDtags) {
-  let result = false
-  TBDtags.forEach(function (tag) {
-    if (tagName === tag.name) {
-      result = true
-    }
+    return b.random - a.random
   })
-  return result
-}
 
-function findItem (arrayToSearch, attr, val) {
-  for (let i = 0; i < arrayToSearch.length; i++) {
-    if (arrayToSearch[i][attr] === val) {
-      return i
+  let result = '<div class="relatedPosts">'
+  result += `<div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>${headlineLang}</span></div>`
+  result += '<div class="relatedPosts-list">'
+
+  for (let i = 0; i < Math.min(relatedPostsList.length, limitNum); i++) {
+    let { cover, title, path, cover_type, created, updated, postDesc } = relatedPostsList[i]
+    const { escape_html, url_for, date } = this
+    cover = cover || 'var(--default-bg-color)'
+    title = escape_html(title)
+    const className = postDesc ? 'pagination-related' : 'pagination-related no-desc'
+    result += `<a class="${className}" href="${url_for(path)}" title="${title}">`
+    if (cover_type === 'img') {
+      result += `<img class="cover" src="${url_for(cover)}" alt="cover">`
+    } else {
+      result += `<div class="cover" style="background: ${cover}"></div>`
     }
-  }
-  return -1
-}
+    if (dateType === 'created') {
+      result += `<div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> ${date(created, hexoConfig.date_format)}</div>`
+    } else {
+      result += `<div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="fas fa-history fa-fw"></i> ${date(updated, hexoConfig.date_format)}</div>`
+    }
+    result += `<div class="info-item-2">${title}</div></div>`
 
-function compare (attr) {
-  return function (a, b) {
-    const val1 = a[attr]
-    const val2 = b[attr]
-    return val2 - val1
+    if (postDesc) {
+      result += `<div class="info-2"><div class="info-item-1">${postDesc}</div></div>`
+    }
+    result += '</div></a>'
   }
-}
+
+  result += '</div></div>'
+  return result
+})

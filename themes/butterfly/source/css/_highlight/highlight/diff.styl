@@ -1,7 +1,6 @@
 figure.highlight
   table
-    &::-webkit-scrollbar-thumb
-      background: var(--hlscrollbar-bg)
+    @extend $scrollbar-style
 
   pre .deletion
     color: $highlight-deletion

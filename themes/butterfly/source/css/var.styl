@@ -13,25 +13,25 @@ $code-foreground = $themeColorEnable && hexo-config('theme_color.code_foreground
 $code-background = $themeColorEnable && hexo-config('theme_color.code_background') ? convert(hexo-config('theme_color.code_background')) : rgba(27, 31, 35, .05)
 $theme-toc-color = $themeColorEnable && hexo-config('theme_color.toc_color') ? convert(hexo-config('theme_color.toc_color')) : $strong-cyan
 // font
-$dafault-font-family = -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif
-$dafault-code-font = consolas, Menlo, 'PingFang SC', 'Microsoft YaHei', sans-serif
-$font-family = hexo-config('font.font-family') ? unquote(hexo-config('font.font-family')) : $dafault-font-family
-$code-font-family = hexo-config('font.code-font-family') ? unquote(hexo-config('font.code-font-family')) : $dafault-code-font
-$site-name-font = hexo-config('blog_title_font.font-family') && unquote(hexo-config('blog_title_font.font-family'))
+$chineseFont = $language == 'zh-CN' ? 'Microsoft YaHei' : 'Microsoft JhengHei'
+$default-font-family = -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', $chineseFont, sans-serif
+$default-code-font = consolas, Menlo, monospace, 'PingFang SC', $chineseFont, sans-serif
+$font-family = hexo-config('font.font_family') ? unquote(hexo-config('font.font_family')) : $default-font-family
+$code-font-family = hexo-config('font.code_font_family') ? unquote(hexo-config('font.code_font_family')) : $default-code-font
+$site-name-font = hexo-config('blog_title_font.font_family') && unquote(hexo-config('blog_title_font.font_family'))
 // hr
 $hrEnable = hexo-config('hr_icon') && hexo-config('hr_icon.enable')
 $hr-icon = $hrEnable && hexo-config('hr_icon.icon') ? hexo-config('hr_icon.icon') : '\f0c4'
-$hr-icon-top = $hrEnable && hexo-config('hr_icon.icon-top') ? convert(hexo-config('hr_icon.icon-top')) : -10px
-// page beatutify
+$hr-icon-top = $hrEnable && hexo-config('hr_icon.icon_top') ? convert(hexo-config('hr_icon.icon_top')) : -10px
+// page beautify
 $beautifyEnable = hexo-config('beautify.enable')
-$title-prefix-icon = $beautifyEnable && hexo-config('beautify.title-prefix-icon') ? hexo-config('beautify.title-prefix-icon') : '\f0c1'
-$title-prefix-icon-color = $beautifyEnable && hexo-config('beautify.title-prefix-icon-color') ? convert(hexo-config('beautify.title-prefix-icon-color')) : $light-red
+$title-prefix-icon = $beautifyEnable && hexo-config('beautify.title_prefix_icon') ? hexo-config('beautify.title_prefix_icon') : '\f0c1'
+$title-prefix-icon-color = $beautifyEnable && hexo-config('beautify.title_prefix_icon_color') ? convert(hexo-config('beautify.title_prefix_icon_color')) : $light-red
 // Global Variables
-$font-size = hexo-config('font.global-font-size') ? convert(hexo-config('font.global-font-size')) : 14px
-$code-font-size = hexo-config('font.code-font-size') ? convert(hexo-config('font.code-font-size')) : var(--global-font-size)
+$font-size = hexo-config('font.global_font_size') ? convert(hexo-config('font.global_font_size')) : 14px
+$code-font-size = hexo-config('font.code_font_size') ? convert(hexo-config('font.code_font_size')) : var(--global-font-size)
 $font-color = #1F2D3D
 $text-line-height = 2
-$web-bg = hexo-config('background') && unquote(hexo-config('background'))
 $index_top_img_height = hexo-config('index_top_img_height') ? convert(hexo-config('index_top_img_height')) : 100vh
 $index_site_info_top = hexo-config('index_site_info_top') ? convert(hexo-config('index_site_info_top')) : 43%
 // Global color & SVG
@@ -59,7 +59,7 @@ $sticky-color = $light-orange
 $theme-meta-color = $themeColorEnable && hexo-config('theme_color.meta_color') ? convert(hexo-config('theme_color.meta_color')) : #858585
 // sidebar
 $sidebar-background = #f6f8fa
-$sidebar-width = 300px
+$sidebar-width = 330px
 // aside
 $toc-link-color = #666261
 $toc-mobile-width = calc(100% - 80px)
@@ -71,7 +71,7 @@ $button-hover-color = $themeColorEnable && hexo-config('theme_color.button_hover
 $button-bg = $theme-color
 $pseudo-hover = $button-hover-color
 // scrollbar
-$scrollbar-color= $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
+$scrollbar-color = $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
 // table
 $table-thead-bg = #99a9bf
 // reward
@@ -82,7 +82,7 @@ $search-bg = #f6f8fa
 $search-input-color = $font-black
 $search-color = $theme-color
 $search-keyword-highlight = #F47466
-$search-result-title = $font-black
+$search-a-color = $font-black
 // comments
 $comments-switch-first-text = $bright-blue
 $comments-switch-second-text = $light-orange
@@ -101,7 +101,7 @@ $tag-hide-toggle-bg = #f0f0f0
 $preloader-bg = #37474f
 $preloader-word-color = #fff
 // rightside
-$rightside-bottom = hexo-config('rightside-bottom') ? convert(hexo-config('rightside-bottom')) : 40px
+$rightside-bottom = hexo-config('rightside_bottom') ? convert(hexo-config('rightside_bottom')) : 40px
 // fireworks
 $fireworks-zIndex = hexo-config('fireworks.zIndex') ? hexo-config('fireworks.zIndex') : 99999
 // Tag Plugins - Note
@@ -162,7 +162,7 @@ $note-modern-danger-bg = lighten(spin($note-modern-danger-border, 10), 35% + ($l
 $note-modern-danger-text = #a94442
 $note-modern-danger-hover = darken(spin($note-modern-danger-text, -10), 22%)
 // Tag Plugins - Button/note
-$tagsP-types = 'blue' 'pink' 'red' 'purple' 'orange' 'green'
+$color-types = 'blue' 'pink' 'red' 'purple' 'orange' 'green'
 $btn-color = #fff
 $btn-default-color = #777
 $tagsP-blue-color = #428bca
@@ -173,13 +173,61 @@ $tagsP-purple-color = #6f42c1
 $tagsP-green-color = #5cb85c
 // Tag Plugins - Tab
 $tab-border-color = #f0f0f0
-$tab-botton-bg = #f0f0f0
-$tab-botton-color = $font-color
+$tab-button-bg = #f0f0f0
+$tab-button-color = $font-color
 $tab-button-hover-bg = darken($tab-border-color, 8)
 $tab-active-border-color = $theme-color
 $tab-button-active-bg = $card-bg
 $tab-to-top-color = #99a9bf
-
-// timeline
-$timeline-content-bg = #f6f6f6
-$timeline-border-color = $theme-color
+$tab-to-top-hover-color = $theme-color
+// Tag Plugins - timeline
+$timeline-default-color = $theme-color
+// note - darkmode
+// Default
+$note-dark-default-border = #5a5a5a
+$note-dark-default-bg = #2b2b2b
+$note-dark-default-text = #b3b3b3
+$note-dark-modern-default-border = #9a9a9a
+$note-dark-modern-default-bg = #353535
+$note-dark-modern-default-text = #c4c4c4
+$note-dark-modern-default-hover = #d0d0d0
+// Primary
+$note-dark-primary-border = #5935a1
+$note-dark-primary-bg = #2e1c3e
+$note-dark-primary-text = #a47dd4
+$note-dark-modern-primary-border = #9985cc
+$note-dark-modern-primary-bg = #3c2d4c
+$note-dark-modern-primary-text = #b693e6
+$note-dark-modern-primary-hover = #c9a8f0
+// Info
+$note-dark-info-border = #346fa2
+$note-dark-info-bg = #1f2e3b
+$note-dark-info-text = #7bb3db
+$note-dark-modern-info-border = #7ca8b5
+$note-dark-modern-info-bg = #2b3c44
+$note-dark-modern-info-text = #8fc6e0
+$note-dark-modern-info-hover = #a3d4ea
+// Success
+$note-dark-success-border = #4a944a
+$note-dark-success-bg = #202e20
+$note-dark-success-text = #82c682
+$note-dark-modern-success-border = #8bb087
+$note-dark-modern-success-bg = #2c3d2c
+$note-dark-modern-success-text = #96d196
+$note-dark-modern-success-hover = #a8dca8
+// Warning
+$note-dark-warning-border = #c08a3e
+$note-dark-warning-bg = #3e301f
+$note-dark-warning-text = #e6ba6b
+$note-dark-modern-warning-border = #b8a285
+$note-dark-modern-warning-bg = #4b3c2b
+$note-dark-modern-warning-text = #d4b373
+$note-dark-modern-warning-hover = #e0c080
+// Danger
+$note-dark-danger-border = #b34440
+$note-dark-danger-bg = #3b201f
+$note-dark-danger-text = #e67572
+$note-dark-modern-danger-border = #c7898c
+$note-dark-modern-danger-bg = #4d2b2e
+$note-dark-modern-danger-text = #d98b8e
+$note-dark-modern-danger-hover = #e59fa2

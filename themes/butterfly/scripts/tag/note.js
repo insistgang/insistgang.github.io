@@ -6,10 +6,10 @@
 
 'use strict'
 
-function postNote (args, content) {
+const postNote = (args, content) => {
   const styleConfig = hexo.theme.config.note.style
-  const lastArgs = args[args.length - 1]
-  if (!(lastArgs === 'flat' || lastArgs === 'modern' || lastArgs === 'simple' || lastArgs === 'disabled')) {
+  const noteTag = ['flat', 'modern', 'simple', 'disabled']
+  if (!noteTag.includes(args[args.length - 1])) {
     args.push(styleConfig)
   }
 
@@ -17,7 +17,7 @@ function postNote (args, content) {
   const iconArray = args[args.length - 2]
   if (iconArray && iconArray.startsWith('fa')) {
     icon = `<i class="note-icon ${iconArray}"></i>`
-    args[args.length - 2] = 'icon'
+    args[args.length - 2] = 'icon-padding'
   }
 
   return `<div class="note ${args.join(' ')}">${icon + hexo.render.renderSync({ text: content, engine: 'markdown' })}</div>`

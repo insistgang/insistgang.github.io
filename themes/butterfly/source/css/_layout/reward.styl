@@ -14,6 +14,13 @@
     background: var(--btn-bg)
     color: var(--btn-color)
     cursor: pointer
+    addBorderRadius()
+    @extend .btn-effects
+    @extend .btn-effects-large
+
+    i
+      margin-right: 5px
+      vertical-align: baseline
 
   &:hover
     .reward-button
@@ -24,7 +31,7 @@
 
   .reward-main
     position: absolute
-    bottom: 40px
+    bottom: 50px
     left: 0
     z-index: 100
     display: none
@@ -35,8 +42,8 @@
       display: inline-block
       margin: 0
       padding: 20px 10px
-      border-radius: 4px
       background: var(--reward-pop)
+      addBorderRadius()
 
       &:before
         position: absolute

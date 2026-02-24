@@ -1,38 +1,50 @@
 /**
- * timeline
- * by Jerry
+ * Timeline tag for Hexo
+ * Syntax:
+ * {% timeline [headline],[color] %}
+ * <!-- timeline [title] -->
+ * [content]
+ * <!-- endtimeline -->
+ * <!-- timeline [title] -->
+ * [content]
+ * <!-- endtimeline -->
+ * {% endtimeline %}
  */
 
 'use strict'
 
-function timeLineFn (args, content) {
-  const tlBlock = /<!--\s*timeline (.*?)\s*-->\n([\w\W\s\S]*?)<!--\s*endtimeline\s*-->/g
+const timeLineFn = (args, content) => {
+  // Use named capture groups for better readability
+  const tlBlock = /<!--\s*timeline\s*(?<title>.*?)\s*-->\n(?<content>[\s\S]*?)<!--\s*endtimeline\s*-->/g
 
-  let result = ''
-  if (args.length) {
-    args = hexo.render.renderSync({ text: args.join(' '), engine: 'markdown' })
-    result += `<div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'>${args}</div></div></div>`
-  }
+  // Pre-compile markdown render function
+  const renderMd = text => hexo.render.renderSync({ text, engine: 'markdown' })
 
-  const matches = []
-  let match
+  // Parse arguments more efficiently
+  const [text, color = ''] = args.length ? args.join(' ').split(',') : []
 
-  while ((match = tlBlock.exec(content)) !== null) {
-    matches.push(match[1])
-    matches.push(match[2])
-  }
+  // Build initial headline if text exists
+  const headline = text
+    ? `<div class='timeline-item headline'>
+        <div class='timeline-item-title'>
+          <div class='item-circle'>${renderMd(text)}</div>
+        </div>
+      </div>`
+    : ''
 
-  for (let i = 0; i < matches.length; i += 2) {
-    const tlChildTitle = hexo.render.renderSync({ text: matches[i], engine: 'markdown' })
-    const tlChildContent = hexo.render.renderSync({ text: matches[i + 1], engine: 'markdown' })
+  // Match all timeline blocks in one pass and transform
+  const items = Array.from(content.matchAll(tlBlock))
+    .map(({ groups: { title, content } }) =>
+      `<div class='timeline-item'>
+        <div class='timeline-item-title'>
+          <div class='item-circle'>${renderMd(title)}</div>
+        </div>
+        <div class='timeline-item-content'>${renderMd(content)}</div>
+      </div>`
+    )
+    .join('')
 
-    const tlTitleHtml = `<div class='timeline-item-title'><div class='item-circle'>${tlChildTitle}</div></div>`
-    const tlContentHtml = `<div class='timeline-item-content'>${tlChildContent}</div>`
-
-    result += `<div class='timeline-item'>${tlTitleHtml + tlContentHtml}</div>`
-  }
-
-  return `<div class="timeline">${result}</div>`
+  return `<div class="timeline ${color}">${headline}${items}</div>`
 }
 
 hexo.extend.tag.register('timeline', timeLineFn, { ends: true })

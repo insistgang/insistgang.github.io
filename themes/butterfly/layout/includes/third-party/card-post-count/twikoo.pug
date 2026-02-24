@@ -1,5 +1,5 @@
 script.
-  (() => { 
+  (() => {
     const getCommentUrl = () => {
       const eleGroup = document.querySelectorAll('#recent-posts .article-title')
       let urlArray = []
@@ -18,7 +18,9 @@ script.
           includeReply: false
         }).then(function (res) {
           document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
-            item.innerText = res[index].count
+            if (res[index]) {
+              item.textContent = res[index].count
+            }
           })
         }).catch(function (err) {
           console.log(err)
@@ -28,7 +30,7 @@ script.
         if (typeof twikoo === 'object') {
           runTwikoo()
         } else {
-          getScript('!{theme.CDN.twikoo}').then(runTwikoo)
+          btf.getScript('!{url_for(theme.asset.twikoo)}').then(runTwikoo)
         }
     }
 
