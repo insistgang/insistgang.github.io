@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>AI编程工具时代的个人发展路径</title>
+      <link href="/posts/ai-coding-era-career-path.html"/>
+      <url>/posts/ai-coding-era-career-path.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/ai-coding-era-career-path/00_cover.png" alt="封面"></p><p><strong>——一场关于AI工具时代个人发展路径的深度对话</strong></p><hr><p>最近看到一段很有启发性的对话，一位留美金融硕士，靠自学AI编程工具一个月写出十万行代码，帮幼儿园做数字化、给妈妈做网站、开发MBTI测试应用……听起来是不是很厉害？</p><p>但对话的另一方却泼了一盆冷水：<strong>你这是拿关羽的青龙偃月刀在砍苍蝇。</strong></p><p>这句话值得每一个正在拥抱AI工具的人停下来想一想。</p><hr><h2 id="一个典型的”AI原住民”画像"><a href="#一个典型的”AI原住民”画像" class="headerlink" title="一个典型的”AI原住民”画像"></a>一个典型的”AI原住民”画像</h2><p><img src="/img/ai-coding-era-career-path/01_ai_native_profile.png" alt="第一章配图"></p><p>故事的主角背景并不复杂：本科经济学，研究生金融学，都在美国读的。编程基础有一些，系统学过Python，但自认不是传统意义上的程序员。</p><p>真正的转折点是研究生期间的一门课——《AI Essentials for Business》。通过这门课，他上手了Sonnet 3.5/3.7、Claude Code 4.5/4.6 Max等AI编程工具，发现自己能以惊人的速度把想法变成产品。一个月写十万行代码，这在传统开发模式下几乎不可想象。</p><p>于是他开始行动：帮家附近经营困难的幼儿园做网页、公众号、小程序；给母亲定制个人网站；开发了一个AI对话式MBTI测试；第一时间把OpenCloud部署到AWS服务器……</p><p>他的自我定位也很明确——<strong>不想打工，要创业</strong>。大学时就当过创业社社长，信奉”先试再说，成功看概率”，还开了自媒体账号输出技术内容。</p><p>在他看来，AI工具让个人生产力呈指数级增长，”以前一年做3到5件事，现在能做200到500件事。”</p><p>听上去，一切都在朝好的方向发展。</p><hr><h2 id="那盆冷水：三个被忽视的问题"><a href="#那盆冷水：三个被忽视的问题" class="headerlink" title="那盆冷水：三个被忽视的问题"></a>那盆冷水：三个被忽视的问题</h2><p><img src="/img/ai-coding-era-career-path/02_cold_water_problems.png" alt="第二章配图"></p><p>然而，当更有经验的人审视这条路径时，提出了三个尖锐的问题。</p><p><strong>第一，高端工具用在了低价值场景。</strong></p><p>为一家因出生率下降而经营困难的幼儿园做数字化赋能，本身并没有解决它的核心问题——<strong>不是没有网站才招不到学生，而是根本没有那么多孩子了。</strong>这就好比给一个溺水的人递了一把设计精美的梳子。工具再强大，如果指向的需求本身不成立，产出就是零。</p><p><strong>第二，信息差优势的保质期比想象中短得多。</strong></p><p>当前他的竞争力很大程度上来自于”我比别人更早、更熟练地使用了Claude Code等海外AI工具”。但根据DeepMind创始人哈萨比斯的判断，国外大模型领先国内大约只有6个月。也就是说，这扇窗口正在快速关闭。一旦国内同等能力的工具普及，”我会用AI编程”将不再是优势，而是基本功。</p><p><strong>第三，有产品，没有商业闭环。</strong></p><p>开发MBTI测试网站是个不错的练手项目，但它没有考虑微信生态的传播限制，也没有分析过已有竞品的格局。做出来了，然后呢？没有用户获取策略、没有变现路径、没有护城河。这不是创业，这是技术练习。</p><hr><h2 id="真正该做的四件事"><a href="#真正该做的四件事" class="headerlink" title="真正该做的四件事"></a>真正该做的四件事</h2><p><img src="/img/ai-coding-era-career-path/03_four_things_to_do.png" alt="第三章配图"></p><p>对话中给出的建议，我觉得对所有在AI浪潮中跃跃欲试的人都有参考价值。</p><p><strong>第一，落袋为安。</strong></p><p>信息差是有保质期的资产，要趁它还值钱的时候变现。怎么变现？录课程、写教程、做分享。把”我比你早半年用上这个工具”这件事，转化成可以沉淀的内容资产和个人品牌。等工具普及了，你已经是”那个最早教大家用的人”。</p><p><strong>第二，去企业里历练。</strong></p><p>不管是大厂还是创业公司，进去待一段时间。不是为了那份薪水，而是为了理解真实的市场需求长什么样。很多年轻技术人才的通病是——<strong>能做出东西，但不知道该做什么东西。</strong>在企业里被市场毒打过一轮，才能建立起对需求的直觉。</p><p><strong>第三，选一个垂直赛道深扎下去。</strong></p><p>AI加法律、AI加医疗、AI加保险、AI加农牧合规、AI加养老健康监测……技术是横向的能力，但真正的壁垒来自对某个行业的深度理解。你用AI做了一个通用工具，别人三天就能复制；但你用AI解决了某个行业里只有从业者才知道的痛点，那就是护城河。</p><p><strong>第四，找到合伙人，补上短板。</strong></p><p>AI时代的创业依然需要团队。你会写代码，但你会卖东西吗？你懂政府关系吗？你有媒体资源吗？一个人扛不住完整的商业链条。找到在销售、推广、行业资源上能互补的人，远比自己多写一万行代码重要。</p><hr><h2 id="一个容易掉进去的认知陷阱"><a href="#一个容易掉进去的认知陷阱" class="headerlink" title="一个容易掉进去的认知陷阱"></a>一个容易掉进去的认知陷阱</h2><p><img src="/img/ai-coding-era-career-path/04_cognition_trap.png" alt="第四章配图"></p><p>这段对话里最有穿透力的一句话是：<strong>不要错把平台当实力。</strong></p><p>AI工具确实在重新定义个人的生产力边界。但工具是公共的，你能用，别人也能用。今天你靠Claude Code一个月出一个产品，明天别人也可以。</p><p>真正不可替代的东西是什么？是你对某个领域的深刻理解，是你积累的用户和口碑，是你整合资源的能力，是你对市场需求的嗅觉。这些东西，AI写不出来，也复制不了。</p><p>还有一个现实需要正视：<strong>没有自有流量支撑的软件项目，命运几乎是确定的</strong>——做得好，会被有流量的人抄走；做不好，自然消亡。在这个复制成本趋近于零的时代，分发能力比开发能力更稀缺。</p><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/ai-coding-era-career-path/05_conclusion.png" alt="第五章配图"></p><p>AI编程工具给了每个人一把好刀。但拿到好刀的人，首先要想清楚三个问题：</p><ul><li><strong>砍什么？</strong>（需求判断）</li><li><strong>为谁砍？</strong>（市场定位）</li><li><strong>凭什么是你砍？</strong>（竞争壁垒）</li></ul><p>技术代差带来的时间窗口大约只有6个月。在这6个月里，最聪明的做法不是埋头做更多的项目，而是把这段先发优势转化为真正属于自己的资产——用户、品牌、行业认知、合作关系。</p><p><strong>刀会钝，但砍出来的路是你的。</strong></p><hr><p><em>如果这篇文章对你有启发，欢迎转发给同样在思考AI时代个人发展路径的朋友。</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+          <category> 深度分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> 个人发展 </tag>
+            
+            <tag> 职业规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一个拿了一堆奖却觉得自己什么都没做好的研究生</title>
       <link href="/posts/grad-self-reflection.html"/>
       <url>/posts/grad-self-reflection.html</url>
@@ -749,9 +780,9 @@
             
             <tag> Windows </tag>
             
-            <tag> 系统优化 </tag>
-            
             <tag> 磁盘清理 </tag>
+            
+            <tag> 系统优化 </tag>
             
             <tag> 经验分享 </tag>
             
@@ -2421,9 +2452,9 @@
       
         <tags>
             
-            <tag> case </tag>
-            
             <tag> python </tag>
+            
+            <tag> case </tag>
             
         </tags>
       
