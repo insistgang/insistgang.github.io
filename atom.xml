@@ -3,11 +3,11 @@
   <title>Leo的笔记本</title>
   
   
-  <link href="https://insistgang.github.io/atom.xml" rel="self"/>
+  <link href="https://insistgang.top/atom.xml" rel="self"/>
   
-  <link href="https://insistgang.github.io/"/>
-  <updated>2026-02-24T07:44:32.451Z</updated>
-  <id>https://insistgang.github.io/</id>
+  <link href="https://insistgang.top/"/>
+  <updated>2026-02-25T04:16:02.556Z</updated>
+  <id>https://insistgang.top/</id>
   
   <author>
     <name>insistgang</name>
@@ -17,9 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Claude Code 七大组件深度拆解：从入门到真正会用</title>
+    <link href="https://insistgang.top/posts/claude-code-seven-components-deep-dive.html"/>
+    <id>https://insistgang.top/posts/claude-code-seven-components-deep-dive.html</id>
+    <published>2026-02-25T02:00:00.000Z</published>
+    <updated>2026-02-25T04:16:02.556Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="封面"></p><blockquote><p>先用一个类比搞懂全局，再逐个击破，最后串联成完整工作流</p></blockquote><hr><h2 id="为什么写这篇"><a href="#为什么写这篇" class="headerlink" title="为什么写这篇"></a>为什么写这篇</h2><p><img src="/img/claude-code-seven-components-deep-dive/01_why_write_this.png" alt="为什么写这篇"></p><p>Claude Code 的功能越来越多，但大多数人只会用最基础的对话。问题不是工具不强，而是<strong>组件太多、关系不清楚、不知道该从哪个开始</strong>。</p><p>这篇文章把 Claude Code 的七大核心组件一次性讲透：它们分别是什么、怎么配、什么时候该用哪个。文末附完整的协同工作流图和推荐上手顺序。</p><hr><h2 id="全局类比：Claude-Code-是一个什么结构？"><a href="#全局类比：Claude-Code-是一个什么结构？" class="headerlink" title="全局类比：Claude Code 是一个什么结构？"></a>全局类比：Claude Code 是一个什么结构？</h2><p><img src="/img/claude-code-seven-components-deep-dive/02_global_analogy.png" alt="全局类比"></p><p>把 Claude Code 想象成一个<strong>新员工入职系统</strong>：</p><table><thead><tr><th>组件</th><th>类比</th><th>一句话说明</th></tr></thead><tbody><tr><td><strong>CLAUDE.md</strong></td><td>项目交接文档</td><td>告诉AI”这个项目是什么、怎么做”</td></tr><tr><td><strong>Commands/Skills</strong></td><td>标准操作手册</td><td>把高频操作固化成一键命令</td></tr><tr><td><strong>MCP</strong></td><td>办公软件账号</td><td>让AI连接GitHub、数据库等外部工具</td></tr><tr><td><strong>Hooks</strong></td><td>自动化规则</td><td>“每次提交前必须跑lint”这种强制规则</td></tr><tr><td><strong>Subagents</strong></td><td>专项小组</td><td>把任务委派给专家，结果汇总给你</td></tr><tr><td><strong>Plugins</strong></td><td>入职大礼包</td><td>一键安装别人配好的全套工具</td></tr></tbody></table><blockquote><p>注：2026年2月起，Claude Code 已将 <strong>Skills 和 Slash Commands 合并为同一套系统</strong>。<code>.claude/commands/</code> 目录仍然兼容，但官方推荐统一使用 Skills。本文将两者合并讲解。</p></blockquote><hr><h2 id="1-CLAUDE-md-—-项目记忆"><a href="#1-CLAUDE-md-—-项目记忆" class="headerlink" title="1. CLAUDE.md — 项目记忆"></a>1. CLAUDE.md — 项目记忆</h2><p><img src="/img/claude-code-seven-components-deep-dive/03_claude_md.png" alt="CLAUDE.md"></p><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><p>项目根目录下的 Markdown 文件，Claude Code <strong>每次启动自动读取</strong>。相当于给AI的”项目说明书”，是所有其他组件的基础。</p><h3 id="三层加载机制"><a href="#三层加载机制" class="headerlink" title="三层加载机制"></a>三层加载机制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/.claude/CLAUDE.md          → 全局（所有项目生效，写你个人的编码偏好）</span><br><span class="line">项目根目录/CLAUDE.md          → 项目级（最重要，写项目架构和规范）</span><br><span class="line">子目录/CLAUDE.md              → 模块级（比如 frontend/CLAUDE.md）</span><br></pre></td></tr></table></figure><p>三层<strong>累加生效</strong>，不会互相覆盖。</p><h3 id="快速创建"><a href="#快速创建" class="headerlink" title="快速创建"></a>快速创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> your-project</span><br><span class="line">claude        <span class="comment"># 启动 Claude Code</span></span><br><span class="line">/init         <span class="comment"># 自动扫描项目，生成 CLAUDE.md</span></span><br></pre></td></tr></table></figure><p><code>/init</code> 会分析项目结构自动生成，但通常需要你手动补充。</p><h3 id="该写什么"><a href="#该写什么" class="headerlink" title="该写什么"></a>该写什么</h3><p>一份好的 CLAUDE.md 应该包含以下内容：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 项目名称</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 项目概述</span></span><br><span class="line">一句话说清楚这个项目做什么、用什么技术栈</span><br><span class="line"></span><br><span class="line"><span class="section">## 目录结构</span></span><br><span class="line">src/、tests/、docs/ 各放什么，关键文件在哪</span><br><span class="line"></span><br><span class="line"><span class="section">## 技术栈</span></span><br><span class="line">语言版本、框架、数据库、依赖管理工具</span><br><span class="line"></span><br><span class="line"><span class="section">## 编码规范</span></span><br><span class="line">命名风格、注释要求、Git commit 格式</span><br><span class="line"></span><br><span class="line"><span class="section">## 常用命令</span></span><br><span class="line">构建: npm run build</span><br><span class="line">测试: npm test</span><br><span class="line">部署: npm run deploy</span><br><span class="line"></span><br><span class="line"><span class="section">## 注意事项</span></span><br><span class="line">哪些文件不能改、哪些目录有特殊用途、已知的坑</span><br></pre></td></tr></table></figure><h3 id="进阶玩法"><a href="#进阶玩法" class="headerlink" title="进阶玩法"></a>进阶玩法</h3><ul><li><strong>自动维护</strong>：安装 <code>claude-code-auto-memory</code> 插件，Claude 会在每次会话后自动更新 CLAUDE.md</li><li><strong>自我进化</strong>：在 CLAUDE.md 底部加一段”当你发现新的项目模式时，建议更新此文件”，让AI主动维护</li></ul><h3 id="投入产出比"><a href="#投入产出比" class="headerlink" title="投入产出比"></a>投入产出比</h3><p><strong>10分钟配置，之后每次对话质量直接翻倍。</strong> 没有 CLAUDE.md 的 Claude Code 就像没看过项目文档的新人——每次都要重新解释一遍上下文。</p><hr><h2 id="2-Skills（含-Commands）—-工作流模板"><a href="#2-Skills（含-Commands）—-工作流模板" class="headerlink" title="2. Skills（含 Commands）— 工作流模板"></a>2. Skills（含 Commands）— 工作流模板</h2><p><img src="/img/claude-code-seven-components-deep-dive/04_skills.png" alt="Skills"></p><h3 id="是什么-1"><a href="#是什么-1" class="headerlink" title="是什么"></a>是什么</h3><p>Skills 是可复用的指令模板，有两种触发方式：</p><ul><li><strong>你手动调用</strong>：输入 <code>/skill-name</code> 触发</li><li><strong>Claude 自动匹配</strong>：根据任务描述自动加载相关 Skill</li></ul><p>2026年起，Skills 和原来的 Slash Commands <strong>已合并为同一套系统</strong>。</p><h3 id="存放位置"><a href="#存放位置" class="headerlink" title="存放位置"></a>存放位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.claude/skills/&lt;skill-name&gt;/SKILL.md    → 项目级</span><br><span class="line">~/.claude/skills/&lt;skill-name&gt;/SKILL.md  → 全局</span><br></pre></td></tr></table></figure><p>每个 Skill 就是一个文件夹 + 一个 SKILL.md 文件。</p><h3 id="核心格式"><a href="#核心格式" class="headerlink" title="核心格式"></a>核心格式</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: code-review</span><br><span class="line"><span class="section">description: &#x27;代码审查，检查质量、安全性和可维护性。当用户提到代码审查、review时自动激活。&#x27;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 代码审查工作流</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 审查清单</span></span><br><span class="line"><span class="bullet">1.</span> 检查是否有明显的 bug 或逻辑错误</span><br><span class="line"><span class="bullet">2.</span> 检查安全漏洞（SQL注入、XSS等）</span><br><span class="line"><span class="bullet">3.</span> 检查性能问题（N+1查询、内存泄漏）</span><br><span class="line"><span class="bullet">4.</span> 检查代码风格是否符合项目规范</span><br><span class="line"><span class="bullet">5.</span> 检查测试覆盖率</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出格式</span></span><br><span class="line"><span class="bullet">-</span> 严重程度：🔴 严重 / 🟡 警告 / 🟢 建议</span><br><span class="line"><span class="bullet">-</span> 每个问题附上修复建议</span><br></pre></td></tr></table></figure><h3 id="控制谁能调用"><a href="#控制谁能调用" class="headerlink" title="控制谁能调用"></a>控制谁能调用</h3><p>两个关键字段：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">description: &#x27;生产环境部署&#x27;</span><br><span class="line"><span class="section">disable-model-invocation: true    # 只有你能调用，Claude不能自动触发</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">description: &#x27;遗留系统架构说明&#x27;</span><br><span class="line"><span class="section">user-invocable: false             # 只有Claude自动调用，你不需要手动触发</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure><ul><li><code>disable-model-invocation: true</code> → 适合有副作用的操作（部署、发消息）</li><li><code>user-invocable: false</code> → 适合背景知识（系统架构说明、编码规范）</li></ul><h3 id="高效加载机制"><a href="#高效加载机制" class="headerlink" title="高效加载机制"></a>高效加载机制</h3><p>Skills 采用<strong>渐进式加载</strong>——启动时只加载 frontmatter（约100 tokens），完整内容在实际激活时才读取。所以不用担心 Skill 太多会拖慢启动。</p><h3 id="实用-Skill-示例"><a href="#实用-Skill-示例" class="headerlink" title="实用 Skill 示例"></a>实用 Skill 示例</h3><p><strong>Git 提交规范：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: git-commit</span><br><span class="line"><span class="section">description: &#x27;Git提交规范。当用户要提交代码、写commit message时自动激活。&#x27;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section"># Git Commit 规范</span></span><br><span class="line">格式: <span class="language-xml"><span class="tag">&lt;<span class="name">type</span>&gt;</span></span>(<span class="language-xml"><span class="tag">&lt;<span class="name">scope</span>&gt;</span></span>): <span class="language-xml"><span class="tag">&lt;<span class="name">subject</span>&gt;</span></span></span><br><span class="line">type: feat|fix|docs|style|refactor|test|chore</span><br><span class="line">scope: 影响的模块名</span><br><span class="line">subject: 50字以内，中文描述</span><br><span class="line">示例: feat(auth): 添加OAuth2.0登录支持</span><br></pre></td></tr></table></figure><p><strong>API 接口开发：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: api-development</span><br><span class="line"><span class="section">description: &#x27;RESTful API开发规范。当涉及接口设计、路由配置、请求处理时自动激活。&#x27;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section"># API 开发规范</span></span><br><span class="line"><span class="bullet">-</span> 统一使用 RESTful 风格</span><br><span class="line"><span class="bullet">-</span> 响应格式: &#123; code: 0, data: &#123;&#125;, message: &quot;success&quot; &#125;</span><br><span class="line"><span class="bullet">-</span> 错误处理: 统一通过中间件捕获</span><br><span class="line"><span class="bullet">-</span> 必须编写对应的 API 测试</span><br></pre></td></tr></table></figure><h3 id="与旧版-Commands-的关系"><a href="#与旧版-Commands-的关系" class="headerlink" title="与旧版 Commands 的关系"></a>与旧版 Commands 的关系</h3><p>旧版 <code>.claude/commands/*.md</code> 文件仍然兼容，但官方推荐迁移到 Skills。Skills 比 Commands 多了自动匹配、控制调用权限、渐进加载等能力。</p><hr><h2 id="3-MCP-—-外部工具接口"><a href="#3-MCP-—-外部工具接口" class="headerlink" title="3. MCP — 外部工具接口"></a>3. MCP — 外部工具接口</h2><p><img src="/img/claude-code-seven-components-deep-dive/05_mcp.png" alt="MCP"></p><h3 id="是什么-2"><a href="#是什么-2" class="headerlink" title="是什么"></a>是什么</h3><p><strong>Model Context Protocol</strong>，一个开放协议，让 Claude Code 能调用外部工具和服务。比如让它直接操作 GitHub、查数据库、控制浏览器。</p><p>Claude Code 内置了文件读写、Shell 命令等基础工具，MCP 让你可以无限扩展。</p><h3 id="添加-MCP-Server"><a href="#添加-MCP-Server" class="headerlink" title="添加 MCP Server"></a>添加 MCP Server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加 GitHub（管理仓库、创建PR）</span></span><br><span class="line">claude mcp add github -- npx -y @anthropic-ai/mcp-github</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加文件系统（访问指定目录）</span></span><br><span class="line">claude mcp add filesystem -- npx -y @anthropic-ai/mcp-filesystem ~/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 Puppeteer（网页自动化）</span></span><br><span class="line">claude mcp add puppeteer -- npx -y @anthropic-ai/mcp-puppeteer</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看已安装</span></span><br><span class="line">claude mcp list</span><br></pre></td></tr></table></figure><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>MCP 配置存储在 <code>~/.claude.json</code>：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;mcpServers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;github&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;-y&quot;</span><span class="punctuation">,</span> <span class="string">&quot;@anthropic-ai/mcp-github&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;env&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;GITHUB_TOKEN&quot;</span><span class="punctuation">:</span> <span class="string">&quot;your-token&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h3 id="2026年重要更新：MCP-Tool-Search"><a href="#2026年重要更新：MCP-Tool-Search" class="headerlink" title="2026年重要更新：MCP Tool Search"></a>2026年重要更新：MCP Tool Search</h3><p><strong>这是大多数指南没提到的关键特性。</strong></p><p>以前每装一个 MCP Server，它的所有工具定义都会加载到上下文窗口中。装十个 MCP Server 可能吃掉几千 tokens，还没开始干活就浪费了上下文。</p><p>现在 Claude Code 支持 <strong>MCP Tool Search</strong>——工具定义按需加载。当 Claude 需要操作 GitHub 时，它才去搜索 GitHub 相关的工具，而不是一开始就加载所有工具。上下文占用最多减少 95%。</p><h3 id="装多少合适"><a href="#装多少合适" class="headerlink" title="装多少合适"></a>装多少合适</h3><p>官方建议：<strong>2-3个 MCP Server 就够了</strong>。一个用于版本控制（GitHub），一个用于你的主要外部服务，按需加一个领域特定的。贪多不如精。</p><hr><h2 id="4-Hooks-—-事件钩子"><a href="#4-Hooks-—-事件钩子" class="headerlink" title="4. Hooks — 事件钩子"></a>4. Hooks — 事件钩子</h2><p><img src="/img/claude-code-seven-components-deep-dive/06_hooks.png" alt="Hooks"></p><h3 id="是什么-3"><a href="#是什么-3" class="headerlink" title="是什么"></a>是什么</h3><p>在 Claude Code 的特定生命周期事件发生时，<strong>自动执行的 shell 命令</strong>。</p><p>关键区别：<strong>Prompt 是建议，Hook 是保证。</strong> 你在提示词里说”每次改完代码都跑一下lint”，Claude 有时候会忘。但 Hook 设定了就一定执行，没有例外。</p><h3 id="支持的事件"><a href="#支持的事件" class="headerlink" title="支持的事件"></a>支持的事件</h3><table><thead><tr><th>事件</th><th>触发时机</th><th>典型用途</th></tr></thead><tbody><tr><td><code>PreToolUse</code></td><td>工具调用<strong>之前</strong></td><td>拦截危险操作、安全检查</td></tr><tr><td><code>PostToolUse</code></td><td>工具调用<strong>之后</strong></td><td>自动格式化、自动lint</td></tr><tr><td><code>Stop</code></td><td>Claude 完成响应时</td><td>发送桌面通知</td></tr><tr><td><code>SubagentStop</code></td><td>子代理完成时</td><td>记录子代理结果</td></tr><tr><td><code>Notification</code></td><td>通知事件</td><td>自定义通知</td></tr></tbody></table><h3 id="配置位置"><a href="#配置位置" class="headerlink" title="配置位置"></a>配置位置</h3><p><code>.claude/settings.json</code> 或 <code>.claude/settings.local.json</code></p><h3 id="人人都该配的第一个-Hook：任务完成通知"><a href="#人人都该配的第一个-Hook：任务完成通知" class="headerlink" title="人人都该配的第一个 Hook：任务完成通知"></a>人人都该配的第一个 Hook：任务完成通知</h3><p>当 Claude 完成一个耗时任务时，你可能已经切到别的窗口了。这个 Hook 让你收到桌面通知：</p><p><strong>macOS：</strong></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;Stop&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;matcher&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;osascript -e &#x27;display notification \&quot;Claude Code 任务完成！\&quot; with title \&quot;Claude Code\&quot;&#x27;&quot;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p><strong>Linux：</strong></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;Stop&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;matcher&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;notify-send &#x27;Claude Code&#x27; &#x27;任务完成！&#x27;&quot;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h3 id="代码修改后自动-lint"><a href="#代码修改后自动-lint" class="headerlink" title="代码修改后自动 lint"></a>代码修改后自动 lint</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;PostToolUse&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;matcher&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Write|Edit&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jq -r &#x27;.tool_input.file_path&#x27; | xargs npx eslint --fix&quot;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>每次 Claude 写入或编辑文件后，自动对该文件跑 ESLint 修复。<code>matcher</code> 用正则匹配工具名，<code>Write|Edit</code> 表示匹配写入和编辑操作。</p><h3 id="安全拦截"><a href="#安全拦截" class="headerlink" title="安全拦截"></a>安全拦截</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;PreToolUse&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;matcher&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Bash&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./scripts/security-check.sh&quot;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>Hook 命令通过 stdin 接收 JSON 格式的输入，包含即将执行的命令信息。脚本返回<strong>退出码2</strong>可以阻止操作执行。</p><h3 id="2026年新增"><a href="#2026年新增" class="headerlink" title="2026年新增"></a>2026年新增</h3><p>最新版本新增了 <code>last_assistant_message</code> 字段，Stop 和 SubagentStop 事件现在可以直接获取 Claude 的最终响应文本，不再需要解析 transcript 文件。</p><hr><h2 id="5-Subagents-—-分身术"><a href="#5-Subagents-—-分身术" class="headerlink" title="5. Subagents — 分身术"></a>5. Subagents — 分身术</h2><p><img src="/img/claude-code-seven-components-deep-dive/07_subagents.png" alt="Subagents"></p><h3 id="是什么-4"><a href="#是什么-4" class="headerlink" title="是什么"></a>是什么</h3><p>独立的 Claude 实例，拥有<strong>独立的上下文窗口</strong>。主 Agent 把任务委派给它们，只拿回最终结果。</p><h3 id="为什么需要"><a href="#为什么需要" class="headerlink" title="为什么需要"></a>为什么需要</h3><p>这是 Subagent 最大的价值：<strong>上下文隔离</strong>。</p><p>当你让 Claude 浏览50个文件去找一个 Bug，这50个文件会留在对话上下文中，持续占用空间。如果交给 Subagent 去做，只有最终的定位结果返回到你的主对话，那50个文件留在 Subagent 自己的工作区。</p><h3 id="三个内置-Subagent"><a href="#三个内置-Subagent" class="headerlink" title="三个内置 Subagent"></a>三个内置 Subagent</h3><p>Claude Code 自带三个子代理，不需要额外配置：</p><table><thead><tr><th>子代理</th><th>模型</th><th>权限</th><th>适用场景</th></tr></thead><tbody><tr><td><strong>通用子代理</strong></td><td>Sonnet</td><td>读+写</td><td>复杂任务（既要查又要改）</td></tr><tr><td><strong>Plan 子代理</strong></td><td>Sonnet</td><td>只读</td><td>进入Plan模式时自动激活，研究代码库后出方案</td></tr><tr><td><strong>Explore 子代理</strong></td><td>Haiku</td><td>只读</td><td>快速查找文件和代码片段</td></tr></tbody></table><h3 id="自定义-Subagent"><a href="#自定义-Subagent" class="headerlink" title="自定义 Subagent"></a>自定义 Subagent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p .claude/agents</span><br></pre></td></tr></table></figure><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;!-- .claude/agents/code-reviewer.md --&gt;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">name: code-reviewer</span><br><span class="line">description: 审查代码的质量、安全性和可维护性。在代码修改后主动进行审查。</span><br><span class="line">tools: [Read, Grep, Glob, Bash]</span><br><span class="line"><span class="section">model: sonnet</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">你是一个资深代码审查专家。</span><br><span class="line"></span><br><span class="line"><span class="section">## 审查重点</span></span><br><span class="line"><span class="bullet">1.</span> 安全漏洞（注入、XSS、权限绕过）</span><br><span class="line"><span class="bullet">2.</span> 性能问题（N+1查询、内存泄漏、不必要的计算）</span><br><span class="line"><span class="bullet">3.</span> 代码质量（可读性、DRY原则、单一职责）</span><br><span class="line"><span class="bullet">4.</span> 边界情况处理（空值、异常、并发）</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出格式</span></span><br><span class="line">每个问题包含：文件路径 → 行号 → 问题描述 → 修复建议 → 严重程度</span><br></pre></td></tr></table></figure><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;!-- .claude/agents/researcher.md --&gt;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">name: researcher</span><br><span class="line">description: 研究代码库结构和实现细节，为主Agent提供精简的分析报告。</span><br><span class="line">tools: [Read, Grep, Glob]</span><br><span class="line"><span class="section">model: haiku</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">你是一个代码库探索专家。你的任务是快速定位相关文件和代码模式，</span><br><span class="line">返回精简的摘要报告，不要返回大段代码原文。</span><br></pre></td></tr></table></figure><h3 id="创建方式"><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h3><p>除了手动创建文件，也可以在 Claude Code 中输入 <code>/agents</code>，通过交互式向导创建。</p><h3 id="调用方式"><a href="#调用方式" class="headerlink" title="调用方式"></a>调用方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Claude自动判断使用哪个子代理（推荐）</span><br><span class="line">帮我审查一下最近的代码变更</span><br><span class="line"></span><br><span class="line"># 显式指定</span><br><span class="line">使用 code-reviewer 子代理审查 src/auth/ 目录的代码</span><br><span class="line"></span><br><span class="line"># 后台运行（独有能力）</span><br><span class="line"># 按 Ctrl+B 可以把当前任务送到后台，继续做别的事</span><br></pre></td></tr></table></figure><h3 id="什么时候用-Skill，什么时候用-Subagent"><a href="#什么时候用-Skill，什么时候用-Subagent" class="headerlink" title="什么时候用 Skill，什么时候用 Subagent"></a>什么时候用 Skill，什么时候用 Subagent</h3><ul><li><strong>Skill</strong>：改变当前对话中 Claude 的工作方式（代码风格、审查标准、输出格式）</li><li><strong>Subagent</strong>：把任务委派给另一个独立的工作者（代码研究、深度审查、文档生成）</li></ul><p>简单说：<strong>Skill 改变规则，Subagent 分担工作。</strong></p><hr><h2 id="6-Plugins-—-预制技能包"><a href="#6-Plugins-—-预制技能包" class="headerlink" title="6. Plugins — 预制技能包"></a>6. Plugins — 预制技能包</h2><p><img src="/img/claude-code-seven-components-deep-dive/08_plugins.png" alt="Plugins"></p><h3 id="是什么-5"><a href="#是什么-5" class="headerlink" title="是什么"></a>是什么</h3><p>把 Skills + Subagents + Hooks + MCP 配置<strong>打包成一个可安装单元</strong>的分发机制。</p><h3 id="一组数字"><a href="#一组数字" class="headerlink" title="一组数字"></a>一组数字</h3><p>截至 2026 年 2 月：</p><ul><li><strong>9,000+</strong> 个可用插件</li><li>社区最活跃的插件 <code>claude-workflow-v2</code> 有 <strong>1.2K Stars</strong></li><li>安全审计插件 <code>claude-code-safety-net</code> 有 <strong>920 Stars</strong></li></ul><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加社区市场</span></span><br><span class="line">/plugin marketplace add affaan-m/everything-claude-code</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件</span></span><br><span class="line">/plugin install everything-claude-code@everything-claude-code</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看已安装</span></span><br><span class="line">/plugin list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用/启用</span></span><br><span class="line">/plugin <span class="built_in">disable</span> &lt;plugin-name&gt;</span><br><span class="line">/plugin <span class="built_in">enable</span> &lt;plugin-name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地测试开发中的插件</span></span><br><span class="line">claude --plugin-dir ./my-plugin</span><br></pre></td></tr></table></figure><h3 id="推荐安装"><a href="#推荐安装" class="headerlink" title="推荐安装"></a>推荐安装</h3><table><thead><tr><th>插件</th><th>Stars</th><th>功能</th></tr></thead><tbody><tr><td><code>everything-claude-code</code></td><td>50K+</td><td>13个子代理 + 40+ Skills + Hooks，最全面的配置集</td></tr><tr><td><code>claude-code-safety-net</code></td><td>920</td><td>安全网，拦截危险的git和文件系统命令</td></tr><tr><td><code>claude-workflow-v2</code></td><td>1.2K</td><td>通用工作流，含代理、Skills、Hooks、Commands</td></tr><tr><td><code>cartographer</code></td><td>420</td><td>用并行子代理扫描和文档化整个代码库</td></tr><tr><td><code>design-plugin</code></td><td>440</td><td>UI设计决策辅助，快速迭代</td></tr></tbody></table><h3 id="插件结构"><a href="#插件结构" class="headerlink" title="插件结构"></a>插件结构</h3><p>如果你想自己做插件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">my-plugin/</span><br><span class="line">├── .claude-plugin/</span><br><span class="line">│   └── plugin.json      # 元数据（名称、版本、描述）</span><br><span class="line">├── skills/              # Skills</span><br><span class="line">│   └── my-skill/</span><br><span class="line">│       └── SKILL.md</span><br><span class="line">├── agents/              # 子代理</span><br><span class="line">│   └── reviewer.md</span><br><span class="line">├── hooks/               # Hooks</span><br><span class="line">│   └── hooks.json</span><br><span class="line">├── commands/            # 命令（兼容旧格式）</span><br><span class="line">│   └── deploy.md</span><br><span class="line">└── .mcp.json            # MCP 配置</span><br></pre></td></tr></table></figure><p><strong>重要：</strong> <code>commands/</code>、<code>agents/</code>、<code>skills/</code>、<code>hooks/</code> 这些目录放在插件根目录，<strong>不要</strong>放进 <code>.claude-plugin/</code> 里面。<code>.claude-plugin/</code> 里面只放 <code>plugin.json</code>。</p><hr><h2 id="7-全局串联：七大组件的协同工作流"><a href="#7-全局串联：七大组件的协同工作流" class="headerlink" title="7. 全局串联：七大组件的协同工作流"></a>7. 全局串联：七大组件的协同工作流</h2><p><img src="/img/claude-code-seven-components-deep-dive/09_workflow.png" alt="协同工作流"></p><p>一个真实的开发场景——“实现一个新功能并提交PR”：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">CLAUDE.md</span><br><span class="line">│  提供项目上下文：技术栈、目录结构、编码规范</span><br><span class="line">│</span><br><span class="line">├─→ 你输入 /plan-feature 用户通知系统</span><br><span class="line">│   （Skills 触发，进入Plan模式）</span><br><span class="line">│</span><br><span class="line">├─→ Plan Subagent 启动</span><br><span class="line">│   用只读权限扫描代码库，返回现有架构分析</span><br><span class="line">│</span><br><span class="line">├─→ Claude 制定实现方案</span><br><span class="line">│</span><br><span class="line">├─→ 开始编码</span><br><span class="line">│   ├─ PostToolUse Hook：每次写文件自动跑 ESLint</span><br><span class="line">│   ├─ code-reviewer Subagent：后台审查已写的代码</span><br><span class="line">│   └─ MCP (GitHub)：获取团队的PR模板和Issue描述</span><br><span class="line">│</span><br><span class="line">├─→ /commit 触发提交</span><br><span class="line">│   ├─ git-commit Skill 自动匹配，生成规范的commit message</span><br><span class="line">│   └─ PreToolUse Hook：提交前自动跑测试</span><br><span class="line">│</span><br><span class="line">├─→ Stop Hook：任务完成，桌面弹出通知</span><br><span class="line">│</span><br><span class="line">└─→ 这整套流程来自一个 Plugin，团队成员一键安装即可共享</span><br></pre></td></tr></table></figure><hr><h2 id="八、推荐上手路径"><a href="#八、推荐上手路径" class="headerlink" title="八、推荐上手路径"></a>八、推荐上手路径</h2><p><img src="/img/claude-code-seven-components-deep-dive/10_learning_path.png" alt="推荐上手路径"></p><p>不要试图一次性配好所有组件。按这个顺序来：</p><h3 id="第一天：打好基础（15分钟）"><a href="#第一天：打好基础（15分钟）" class="headerlink" title="第一天：打好基础（15分钟）"></a>第一天：打好基础（15分钟）</h3><table><thead><tr><th>步骤</th><th>操作</th><th>效果</th></tr></thead><tbody><tr><td>1</td><td>在项目根目录运行 <code>/init</code> 生成 CLAUDE.md</td><td>每次对话质量翻倍</td></tr><tr><td>2</td><td>手动补充项目特定信息</td><td>Claude 真正理解你的项目</td></tr></tbody></table><h3 id="第一周：建立工作流（30分钟）"><a href="#第一周：建立工作流（30分钟）" class="headerlink" title="第一周：建立工作流（30分钟）"></a>第一周：建立工作流（30分钟）</h3><table><thead><tr><th>步骤</th><th>操作</th><th>效果</th></tr></thead><tbody><tr><td>3</td><td>创建 2-3 个高频 Skills</td><td>重复操作一键化</td></tr><tr><td>4</td><td>配置「任务完成通知」Hook</td><td>不用再盯着终端</td></tr><tr><td>5</td><td>添加 1 个最需要的 MCP</td><td>连接外部工具</td></tr></tbody></table><h3 id="第二周：进阶配置（30分钟）"><a href="#第二周：进阶配置（30分钟）" class="headerlink" title="第二周：进阶配置（30分钟）"></a>第二周：进阶配置（30分钟）</h3><table><thead><tr><th>步骤</th><th>操作</th><th>效果</th></tr></thead><tbody><tr><td>6</td><td>创建 1-2 个自定义 Subagent</td><td>代码审查、文档研究自动化</td></tr><tr><td>7</td><td>配置 PostToolUse Hook 自动 lint</td><td>代码质量自动保障</td></tr><tr><td>8</td><td>安装 1-2 个社区插件</td><td>站在巨人肩膀上</td></tr></tbody></table><h3 id="长期：持续优化"><a href="#长期：持续优化" class="headerlink" title="长期：持续优化"></a>长期：持续优化</h3><ul><li>根据使用情况持续丰富 Skills</li><li>CLAUDE.md 定期更新（或用插件自动维护）</li><li>团队协作：把配置做成 Plugin 分发给队友</li></ul><hr><h2 id="九、常见误区"><a href="#九、常见误区" class="headerlink" title="九、常见误区"></a>九、常见误区</h2><p><img src="/img/claude-code-seven-components-deep-dive/11_misconceptions.png" alt="常见误区"></p><p><strong>❌ “Skills 越多越好”</strong><br>→ Skills 只在激活时加载完整内容，数量多不影响启动速度。但描述写得太模糊会导致误匹配。每个 Skill 的 description 要精准。</p><p><strong>❌ “MCP 装得越多越强”</strong><br>→ 每个 MCP Server 都有上下文开销。官方建议 2-3 个就够。MCP Tool Search 缓解了这个问题，但精简仍是好习惯。</p><p><strong>❌ “Hook 和提示词效果一样”</strong><br>→ 提示词是建议，Hook 是强制。需要100%执行的规则（lint、测试、安全检查）必须用 Hook。</p><p><strong>❌ “Subagent 什么任务都该用”</strong><br>→ 简单任务直接让主 Agent 做就行。Subagent 的优势是上下文隔离，适合需要读大量文件的任务（研究代码库、深度审查、文档生成）。顺序任务比并行任务更省 token。</p><p><strong>❌ “CLAUDE.md 写一次就不用管了”</strong><br>→ 项目在演进，CLAUDE.md 也要跟着更新。推荐装 <code>claude-code-auto-memory</code> 插件让 Claude 自动维护。</p><hr><h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><p><img src="/img/claude-code-seven-components-deep-dive/12_references.png" alt="参考资源"></p><table><thead><tr><th>资源</th><th>链接</th></tr></thead><tbody><tr><td>Claude Code 官方文档</td><td><a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a></td></tr><tr><td>插件创建指南</td><td><a href="https://code.claude.com/docs/en/plugins">https://code.claude.com/docs/en/plugins</a></td></tr><tr><td>Subagents 文档</td><td><a href="https://code.claude.com/docs/en/sub-agents">https://code.claude.com/docs/en/sub-agents</a></td></tr><tr><td>Skills vs MCP vs Plugins 指南</td><td><a href="https://www.morphllm.com/claude-code-skills-mcp-plugins">https://www.morphllm.com/claude-code-skills-mcp-plugins</a></td></tr><tr><td>everything-claude-code（最全插件）</td><td><a href="https://github.com/affaan-m/everything-claude-code">https://github.com/affaan-m/everything-claude-code</a></td></tr><tr><td>awesome-claude-code（社区精选）</td><td><a href="https://github.com/hesreallyhim/awesome-claude-code">https://github.com/hesreallyhim/awesome-claude-code</a></td></tr><tr><td>2026最新资源合集</td><td><a href="https://www.scriptbyai.com/claude-code-resource-list/">https://www.scriptbyai.com/claude-code-resource-list/</a></td></tr><tr><td>Claude Code 完全指南（中文）</td><td><a href="https://www.cnblogs.com/knqiufan/p/19449849">https://www.cnblogs.com/knqiufan/p/19449849</a></td></tr></tbody></table><hr><p><em>本文基于 Claude Code 2026年2月最新版本撰写。Skills/Commands合并、MCP Tool Search、9000+插件市场等均为最新特性。</em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/claude-code-seven-components-deep-dive/00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先用一个类比搞懂全局，再逐个击破，最后串联成完整工作流&lt;/p&gt;
+&lt;/block</summary>
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开发工具" scheme="https://insistgang.top/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深度解析：蒸汽、钢铁与无限心智</title>
-    <link href="https://insistgang.github.io/posts/steam-steel-infinite-minds-analysis.html"/>
-    <id>https://insistgang.github.io/posts/steam-steel-infinite-minds-analysis.html</id>
+    <link href="https://insistgang.top/posts/steam-steel-infinite-minds-analysis.html"/>
+    <id>https://insistgang.top/posts/steam-steel-infinite-minds-analysis.html</id>
     <published>2026-02-24T08:00:00.000Z</published>
     <updated>2026-02-24T07:44:32.451Z</updated>
     
@@ -34,27 +67,49 @@
     
     
     
-    <category term="杂谈" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="深度分析" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/"/>
+    <category term="深度分析" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/"/>
     
     
-    <category term="AI" scheme="https://insistgang.github.io/tags/AI/"/>
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="Notion" scheme="https://insistgang.github.io/tags/Notion/"/>
+    <category term="Notion" scheme="https://insistgang.top/tags/Notion/"/>
     
-    <category term="深度解析" scheme="https://insistgang.github.io/tags/%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/"/>
+    <category term="深度解析" scheme="https://insistgang.top/tags/%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/"/>
     
-    <category term="Ivan Zhao" scheme="https://insistgang.github.io/tags/Ivan-Zhao/"/>
+    <category term="Ivan Zhao" scheme="https://insistgang.top/tags/Ivan-Zhao/"/>
     
-    <category term="知识经济" scheme="https://insistgang.github.io/tags/%E7%9F%A5%E8%AF%86%E7%BB%8F%E6%B5%8E/"/>
+    <category term="知识经济" scheme="https://insistgang.top/tags/%E7%9F%A5%E8%AF%86%E7%BB%8F%E6%B5%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年2月24日</title>
+    <link href="https://insistgang.top/posts/0224b3c1.html"/>
+    <id>https://insistgang.top/posts/0224b3c1.html</id>
+    <published>2026-02-23T16:00:00.000Z</published>
+    <updated>2026-02-24T14:59:44.264Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2026年2月24日-星期一"><a href="#2026年2月24日-星期一" class="headerlink" title="2026年2月24日 星期一"></a>2026年2月24日 星期一</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 早睡早起（23:30前睡，8:30前起）- 8点醒，达标</li><li><input checked="" disabled="" type="checkbox"> 读论文（每日KPI）- 整理了claude 7大功能</li><li><input disabled="" type="checkbox"> 推进红学论文</li><li><input disabled="" type="checkbox"> 研究图片转矢量图发论文的可行性 - 有研究</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>8点钟醒，9点吃早饭（大杂烩、牛肉、肉圆、香肠）。先把昨天发的minimax agent公众号发掉了，用minimax agent给一篇notion作者的文章配了图并整理后发了公众号。10点钟睡到了11点。</p><p><strong>下午</strong></p><p>去舅奶奶家吃午饭，和亲戚唠嗑，吃了很多菜。</p><p>研究了superpowers、planning with files、notebookLM这三个claude code skills，都下载到本地了。用superpowers查看之前实习的项目，用planning with files整合博客仓库并对博客进行升级，升级过程中产生了很多问题，不断修复。</p><p>看到Qwen的coding plan模型在openclaw效果很好，以及一站式博文分发平台，加上社交平台的激励计划，能抓住这波浪潮的机会。</p><p>给minimax agent专门写了一个我需求的专家提示词，总结之前的提示词。把最新博文放到claude code里发现skills没有执行，才发现自己写的skills需要加到memory里面才可以用。</p><p>考研成绩下午五点还没出来。智谱GLM一直连不上。研究了AI绘图的矢量图。</p><p><strong>晚上</strong></p><p>又是舅奶奶家吃晚饭，吃的很多。</p><p>姐姐说网上很多人推学英语的网站俱乐部.co，发现agent for education是风口。大家开始转副业找自己能做的点，做自媒体成本越来越低。</p><p>看到EvoMap创造了AI Agent进化协议，千问模型在OpenClaw效果好，DeepSeek接OpenClaw做量化比较好（DeepSeek本身就是做量化出身的）。</p><p>Kiro免费积分还剩一天过期，约400多积分，计划用掉重构之前的项目。用claude整理了claude的7大功能，写成了公众号。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：大杂烩、牛肉、肉圆、香肠</li><li>午餐：舅奶奶家，很多菜</li><li>晚餐：舅奶奶家，很多菜</li><li>运动：未记录</li><li>喝水：2L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>研究了superpowers、planning with files、notebookLM三个claude code skills</li><li>升级了博客</li><li>写了minimax agent专家提示词</li><li>整理了claude的7大功能写成公众号</li><li>了解到agent for education是风口</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>智谱GLM一直连不上</li><li>skills需要加到memory才能用</li><li>时间精力花在有趣的事情上，而非应该做的论文</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>痛点在于把时间和精力花在有趣的事情（大语言模型研究）上，而非应该做的论文难题上。Agent for Education是风口，自媒体成本越来越低。</strong></p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 早睡早起（23:30前睡，8:30前起）</li><li><input disabled="" type="checkbox"> 读论文（每日KPI）</li><li><input disabled="" type="checkbox"> 推进红学论文</li><li><input disabled="" type="checkbox"> 用掉Kiro积分重构项目</li><li><input disabled="" type="checkbox"> 图片转矢量图研究</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2026年2月24日-星期一&quot;&gt;&lt;a href=&quot;#2026年2月24日-星期一&quot; class=&quot;headerlink&quot; title=&quot;2026年2月24日 星期一&quot;&gt;&lt;/a&gt;2026年2月24日 星期一&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>MiniMax Agent 应用场景与核心竞争力</title>
-    <link href="https://insistgang.github.io/posts/minimax-agent-analysis.html"/>
-    <id>https://insistgang.github.io/posts/minimax-agent-analysis.html</id>
+    <link href="https://insistgang.top/posts/minimax-agent-analysis.html"/>
+    <id>https://insistgang.top/posts/minimax-agent-analysis.html</id>
     <published>2026-02-23T13:00:00.000Z</published>
     <updated>2026-02-23T12:53:28.167Z</updated>
     
@@ -70,27 +125,27 @@
     
     
     
-    <category term="杂谈" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="技术研究" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="AI" scheme="https://insistgang.github.io/tags/AI/"/>
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="MiniMax" scheme="https://insistgang.github.io/tags/MiniMax/"/>
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
-    <category term="Agent" scheme="https://insistgang.github.io/tags/Agent/"/>
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
     
-    <category term="Claude" scheme="https://insistgang.github.io/tags/Claude/"/>
+    <category term="Claude" scheme="https://insistgang.top/tags/Claude/"/>
     
-    <category term="效率工具" scheme="https://insistgang.github.io/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    <category term="效率工具" scheme="https://insistgang.top/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>通义千问 (Qwen) Coding Plan 调研报告</title>
-    <link href="https://insistgang.github.io/posts/qwen-coding-plan-report.html"/>
-    <id>https://insistgang.github.io/posts/qwen-coding-plan-report.html</id>
+    <link href="https://insistgang.top/posts/qwen-coding-plan-report.html"/>
+    <id>https://insistgang.top/posts/qwen-coding-plan-report.html</id>
     <published>2026-02-23T04:00:00.000Z</published>
     <updated>2026-02-23T05:34:35.825Z</updated>
     
@@ -105,29 +160,29 @@
     
     
     
-    <category term="杂谈" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="技术研究" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="AI" scheme="https://insistgang.github.io/tags/AI/"/>
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="API" scheme="https://insistgang.github.io/tags/API/"/>
+    <category term="API" scheme="https://insistgang.top/tags/API/"/>
     
-    <category term="Coding" scheme="https://insistgang.github.io/tags/Coding/"/>
+    <category term="Coding" scheme="https://insistgang.top/tags/Coding/"/>
     
-    <category term="Qwen" scheme="https://insistgang.github.io/tags/Qwen/"/>
+    <category term="Qwen" scheme="https://insistgang.top/tags/Qwen/"/>
     
-    <category term="通义千问" scheme="https://insistgang.github.io/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/"/>
+    <category term="通义千问" scheme="https://insistgang.top/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/"/>
     
-    <category term="阿里云" scheme="https://insistgang.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    <category term="阿里云" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月23日</title>
-    <link href="https://insistgang.github.io/posts/0223f7a2.html"/>
-    <id>https://insistgang.github.io/posts/0223f7a2.html</id>
+    <link href="https://insistgang.top/posts/0223f7a2.html"/>
+    <id>https://insistgang.top/posts/0223f7a2.html</id>
     <published>2026-02-22T16:00:00.000Z</published>
     <updated>2026-02-23T16:12:18.584Z</updated>
     
@@ -142,14 +197,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>国产顶级 Coding Plan API 研究报告</title>
-    <link href="https://insistgang.github.io/posts/coding-plan-api-report.html"/>
-    <id>https://insistgang.github.io/posts/coding-plan-api-report.html</id>
+    <link href="https://insistgang.top/posts/coding-plan-api-report.html"/>
+    <id>https://insistgang.top/posts/coding-plan-api-report.html</id>
     <published>2026-02-22T04:00:00.000Z</published>
     <updated>2026-02-22T05:37:38.182Z</updated>
     
@@ -165,29 +220,29 @@
     
     
     
-    <category term="杂谈" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="技术研究" scheme="https://insistgang.github.io/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="AI" scheme="https://insistgang.github.io/tags/AI/"/>
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="MiniMax" scheme="https://insistgang.github.io/tags/MiniMax/"/>
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
-    <category term="API" scheme="https://insistgang.github.io/tags/API/"/>
+    <category term="API" scheme="https://insistgang.top/tags/API/"/>
     
-    <category term="GLM" scheme="https://insistgang.github.io/tags/GLM/"/>
+    <category term="GLM" scheme="https://insistgang.top/tags/GLM/"/>
     
-    <category term="Kimi" scheme="https://insistgang.github.io/tags/Kimi/"/>
+    <category term="Kimi" scheme="https://insistgang.top/tags/Kimi/"/>
     
-    <category term="Coding" scheme="https://insistgang.github.io/tags/Coding/"/>
+    <category term="Coding" scheme="https://insistgang.top/tags/Coding/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月22日</title>
-    <link href="https://insistgang.github.io/posts/0222a8e3.html"/>
-    <id>https://insistgang.github.io/posts/0222a8e3.html</id>
+    <link href="https://insistgang.top/posts/0222a8e3.html"/>
+    <id>https://insistgang.top/posts/0222a8e3.html</id>
     <published>2026-02-21T16:00:00.000Z</published>
     <updated>2026-02-22T14:17:37.400Z</updated>
     
@@ -202,14 +257,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>第8周复盘（2月16日-22日）</title>
-    <link href="https://insistgang.github.io/posts/week8review2026.html"/>
-    <id>https://insistgang.github.io/posts/week8review2026.html</id>
+    <link href="https://insistgang.top/posts/week8review2026.html"/>
+    <id>https://insistgang.top/posts/week8review2026.html</id>
     <published>2026-02-21T16:00:00.000Z</published>
     <updated>2026-02-22T14:24:25.966Z</updated>
     
@@ -224,14 +279,14 @@
     
     
     
-    <category term="周复盘" scheme="https://insistgang.github.io/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
+    <category term="周复盘" scheme="https://insistgang.top/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月21日</title>
-    <link href="https://insistgang.github.io/posts/0221c7f2.html"/>
-    <id>https://insistgang.github.io/posts/0221c7f2.html</id>
+    <link href="https://insistgang.top/posts/0221c7f2.html"/>
+    <id>https://insistgang.top/posts/0221c7f2.html</id>
     <published>2026-02-20T16:00:00.000Z</published>
     <updated>2026-02-21T16:39:52.559Z</updated>
     
@@ -246,14 +301,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月20日</title>
-    <link href="https://insistgang.github.io/posts/0220a8b3.html"/>
-    <id>https://insistgang.github.io/posts/0220a8b3.html</id>
+    <link href="https://insistgang.top/posts/0220a8b3.html"/>
+    <id>https://insistgang.top/posts/0220a8b3.html</id>
     <published>2026-02-19T16:00:00.000Z</published>
     <updated>2026-02-20T15:46:48.417Z</updated>
     
@@ -268,14 +323,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月19日</title>
-    <link href="https://insistgang.github.io/posts/0219c7a3.html"/>
-    <id>https://insistgang.github.io/posts/0219c7a3.html</id>
+    <link href="https://insistgang.top/posts/0219c7a3.html"/>
+    <id>https://insistgang.top/posts/0219c7a3.html</id>
     <published>2026-02-18T16:00:00.000Z</published>
     <updated>2026-02-19T16:30:14.934Z</updated>
     
@@ -290,14 +345,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月18日</title>
-    <link href="https://insistgang.github.io/posts/0218c9d4.html"/>
-    <id>https://insistgang.github.io/posts/0218c9d4.html</id>
+    <link href="https://insistgang.top/posts/0218c9d4.html"/>
+    <id>https://insistgang.top/posts/0218c9d4.html</id>
     <published>2026-02-17T16:00:00.000Z</published>
     <updated>2026-02-18T16:15:38.416Z</updated>
     
@@ -312,14 +367,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月17日</title>
-    <link href="https://insistgang.github.io/posts/0217a3b2.html"/>
-    <id>https://insistgang.github.io/posts/0217a3b2.html</id>
+    <link href="https://insistgang.top/posts/0217a3b2.html"/>
+    <id>https://insistgang.top/posts/0217a3b2.html</id>
     <published>2026-02-16T16:00:00.000Z</published>
     <updated>2026-02-17T15:53:41.173Z</updated>
     
@@ -334,14 +389,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月16日</title>
-    <link href="https://insistgang.github.io/posts/0216zk7f.html"/>
-    <id>https://insistgang.github.io/posts/0216zk7f.html</id>
+    <link href="https://insistgang.top/posts/0216zk7f.html"/>
+    <id>https://insistgang.top/posts/0216zk7f.html</id>
     <published>2026-02-15T16:00:00.000Z</published>
     <updated>2026-02-16T15:45:40.312Z</updated>
     
@@ -356,14 +411,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>第7周复盘（2月10日-2月16日）</title>
-    <link href="https://insistgang.github.io/posts/week7review2026.html"/>
-    <id>https://insistgang.github.io/posts/week7review2026.html</id>
+    <link href="https://insistgang.top/posts/week7review2026.html"/>
+    <id>https://insistgang.top/posts/week7review2026.html</id>
     <published>2026-02-15T16:00:00.000Z</published>
     <updated>2026-02-15T16:00:41.397Z</updated>
     
@@ -378,14 +433,14 @@
     
     
     
-    <category term="周复盘" scheme="https://insistgang.github.io/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
+    <category term="周复盘" scheme="https://insistgang.top/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月15日</title>
-    <link href="https://insistgang.github.io/posts/0215qm8k.html"/>
-    <id>https://insistgang.github.io/posts/0215qm8k.html</id>
+    <link href="https://insistgang.top/posts/0215qm8k.html"/>
+    <id>https://insistgang.top/posts/0215qm8k.html</id>
     <published>2026-02-14T16:00:00.000Z</published>
     <updated>2026-02-15T15:58:08.881Z</updated>
     
@@ -400,14 +455,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月14日</title>
-    <link href="https://insistgang.github.io/posts/0214sk3f.html"/>
-    <id>https://insistgang.github.io/posts/0214sk3f.html</id>
+    <link href="https://insistgang.top/posts/0214sk3f.html"/>
+    <id>https://insistgang.top/posts/0214sk3f.html</id>
     <published>2026-02-13T16:00:00.000Z</published>
     <updated>2026-02-14T15:44:21.909Z</updated>
     
@@ -422,14 +477,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月13日</title>
-    <link href="https://insistgang.github.io/posts/0213hr7n.html"/>
-    <id>https://insistgang.github.io/posts/0213hr7n.html</id>
+    <link href="https://insistgang.top/posts/0213hr7n.html"/>
+    <id>https://insistgang.top/posts/0213hr7n.html</id>
     <published>2026-02-12T16:00:00.000Z</published>
     <updated>2026-02-13T15:40:10.290Z</updated>
     
@@ -444,14 +499,14 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2026年2月12日</title>
-    <link href="https://insistgang.github.io/posts/0212qm5k.html"/>
-    <id>https://insistgang.github.io/posts/0212qm5k.html</id>
+    <link href="https://insistgang.top/posts/0212qm5k.html"/>
+    <id>https://insistgang.top/posts/0212qm5k.html</id>
     <published>2026-02-11T16:00:00.000Z</published>
     <updated>2026-02-13T15:40:09.257Z</updated>
     
@@ -466,51 +521,7 @@
     
     
     
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月11日</title>
-    <link href="https://insistgang.github.io/posts/0211bb84.html"/>
-    <id>https://insistgang.github.io/posts/0211bb84.html</id>
-    <published>2026-02-10T16:00:00.000Z</published>
-    <updated>2026-02-11T15:16:04.358Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年2月11日-星期三"><a href="#2026年2月11日-星期三" class="headerlink" title="2026年2月11日 星期三"></a>2026年2月11日 星期三</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 回家前整理物品</li><li><input disabled="" type="checkbox"> 赶高铁</li><li><input disabled="" type="checkbox"> 导师项目对接</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>昨晚火锅吃得很撑，夜里和舍友以及庭磊timi打到了3点多。睡到了早上11点，没有去享受汉庭里面的早餐。起床后又玩了几把，收拾东西、洗澡，准备退房。</p><p><strong>下午</strong></p><p>2点退了房，去了上海松江万达吃了费大厨，点了小炒肉和海鲜酱粉，味道挺好的。昨晚和峰哥聊了很多，他主要表现在对未来的恐慌与迷茫。下午在商场上乐摩吧按摩了1小时，去永辉超市买了点吃的。没赶上高铁，改签了一下。</p><p>导师又给我加了 OpenCV + C++ 的项目。中转平台那边的 Opus 也从0.8元/刀降到了0.2元/刀，买了很多人。</p><p><strong>晚上</strong></p><p>在高铁上对自己忙碌的一些事情进行了思考。晚上吃了永辉超市买的三串牛肉烤串、牛奶还有蛋糕。GLM-5 出来了，智谱也变得越来越厉害。大家都在用智能体集群去分配调控任务，AI大模型的崛起让脑力劳动的价值变得越来越低。</p><p>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设，为了自己的目的添砖加瓦。</p><p>到家后已经11点了，把笔记本显示器都装好了，准备开始新一轮的 AI 实验。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：费大厨（小炒肉、海鲜酱粉）</li><li>晚餐：牛肉烤串、牛奶、蛋糕</li><li>运动：无</li><li>喝水：未记录</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>完成回家前的物品整理</li><li>成功改签高铁并安全到家</li><li>了解到 Opus 4.6 和 GPT 5.3 的最新进展</li><li>GLM-5 发布，国内大模型竞争加剧</li><li>思考了 AI 时代脑力劳动价值的变化</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>没赶上原定高铁，需要改签</li><li>熬夜导致精神状态一般</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>AI 大模型的崛起，让脑力劳动的价值变得越来越低，就如同工业革命让脑力劳动的价值远高于体力劳动，信息革命让知识平权，脑力劳动的价值也极大的降低了。</p><p>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设。</p><p>最近都处于及格状态，管理好自己的任务，每天都要花 2h 来折腾自己喜欢的、想做的事情。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>相关领域：[[05-Tech/AI/大模型动态]]</li><li>相关项目：[[03-Projects/中电科50所/OpenCV项目]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 安顿好家里的工作环境</li><li><input disabled="" type="checkbox"> 整理带回家的项目资料</li><li><input disabled="" type="checkbox"> 继续推进论文写作</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年2月11日-星期三&quot;&gt;&lt;a href=&quot;#2026年2月11日-星期三&quot; class=&quot;headerlink&quot; title=&quot;2026年2月11日 星期三&quot;&gt;&lt;/a&gt;2026年2月11日 星期三&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月10日</title>
-    <link href="https://insistgang.github.io/posts/0210k3m9.html"/>
-    <id>https://insistgang.github.io/posts/0210k3m9.html</id>
-    <published>2026-02-09T16:00:00.000Z</published>
-    <updated>2026-02-10T07:03:54.661Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年2月10日-星期二"><a href="#2026年2月10日-星期二" class="headerlink" title="2026年2月10日 星期二"></a>2026年2月10日 星期二</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 收拾电脑主机准备寄回家</li><li><input disabled="" type="checkbox"> 查看论文生成内容（部分完成）</li><li><input checked="" disabled="" type="checkbox"> 外出游玩</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong><br>早上八点多钟醒，和庭磊一起吃早饭（香肠、油条、手抓饼、豆浆）。收拾宿舍、洗衣服、整理行李，大包小包收拾完毕后，快一点钟到达实验室。</p><p><strong>下午</strong><br>两点到实验室，把电动车从宿舍开到学校充电。查看电脑程序，文献阅读助手开了 GitHub 仓库，整合 80 多篇文献。看了各种技术学习路径，检查井盖论文内容，初稿基本出来，但网络架构图、模块图还没整好，LaTeX 也不太会用，先做了 markdown 版本。下午拆机把显卡拿出来，主机装箱准备寄回家。</p><p><strong>晚上</strong><br>去印象城吃一绪寿喜烧，晚上找电竞酒店 Timi 休息。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 5/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>早餐：香肠、油条、手抓饼、豆浆</li><li>午餐：未记录</li><li>晚餐：一绪寿喜烧</li><li>运动：无</li><li>喝水：3L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>文献阅读助手 GitHub 仓库搭建完成，整合 80 多篇文献</li><li>井盖论文初稿完成（markdown 版本）</li><li>电脑拆机，主机准备寄回家</li><li>技术学习路径梳理</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>感冒有点严重，需要休息</li><li>LaTeX 不太会用，论文配图未完成</li><li>网络架构图、模块图待整理</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p>强度大的时候，还是需要给自己放空的。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>相关领域：[[MOC-论文地图]]</li><li>工具使用：[[05-Tech/Tools/Claude-Code/使用心得]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 好好休息</li><li><input disabled="" type="checkbox"> 回家继续修改论文</li><li><input disabled="" type="checkbox"> 完善论文配图</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年2月10日-星期二&quot;&gt;&lt;a href=&quot;#2026年2月10日-星期二&quot; class=&quot;headerlink&quot; title=&quot;2026年2月10日 星期二&quot;&gt;&lt;/a&gt;2026年2月10日 星期二&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
