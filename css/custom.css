@@ -1,0 +1,277 @@
+/* ===========================================
+   Butterfly 5.5.4 自定义样式优化
+   配色方案: 极光紫青
+   =========================================== */
+
+/* -------------------------------------------
+   1. 主色调 - 极光紫青
+   ------------------------------------------- */
+:root {
+  --primary-color: #667eea;
+  --primary-light: #48c6ef;
+  --primary-dark: #764ba2;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #48c6ef 100%);
+}
+
+/* Banner 渐变背景 */
+#page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #48c6ef 100%) !important;
+}
+
+/* 导航栏渐变 */
+#nav {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* 标题链接渐变 hover */
+#site-title a,
+.layout .card-announcement .item-headline span {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 按钮渐变 */
+button,
+.btn-beautify,
+#pagination .page-number.current {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+}
+
+/* 标签渐变 */
+.tag-cloud a {
+  background: var(--primary-gradient);
+  color: #fff !important;
+  border-radius: 15px;
+  padding: 5px 12px;
+}
+
+/* -------------------------------------------
+   2. 首页 Banner - 半屏高度
+   ------------------------------------------- */
+#page-header.full_page {
+  display: block !important;
+  height: 50vh !important;
+  min-height: 300px !important;
+}
+
+/* 保留站点信息区域 */
+#page-header.full_page #site-info {
+  padding: 20px 0 !important;
+}
+
+#page-header.full_page #site-title {
+  font-size: 2rem !important;
+}
+
+/* 隐藏社交图标区域 */
+#page-header.full_page #site_social_icons {
+  display: none !important;
+}
+
+/* -------------------------------------------
+   3. 文章卡片优化
+   ------------------------------------------- */
+.recent-post-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  border-left: 3px solid #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.recent-post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+}
+
+/* 暗色模式卡片 */
+[data-theme="dark"] .recent-post-item {
+  background: rgba(30, 40, 50, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .recent-post-item:hover {
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+}
+
+/* -------------------------------------------
+   4. Footer 渐变 - 极光紫青
+   ------------------------------------------- */
+#footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
+  overflow: hidden;
+  color: #fff !important;
+}
+
+#footer a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid rgba(72, 198, 239, 0.2);
+  transform: rotate(-15deg);
+}
+
+#footer::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 8%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid rgba(255, 255, 255, 0.15);
+  transform: rotate(20deg);
+}
+
+[data-theme="dark"] #footer {
+  background: linear-gradient(135deg, #4a5db8 0%, #5a3d7a 100%) !important;
+}
+
+/* -------------------------------------------
+   5. 代码块优化
+   ------------------------------------------- */
+#article-container pre,
+#article-container code {
+  border-radius: 8px;
+}
+
+#article-container pre {
+  background: linear-gradient(135deg, #1a1f2e 0%, #2a1f3e 100%) !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+#article-container code {
+  background: rgba(102, 126, 234, 0.1);
+  color: #764ba2;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+#article-container pre code {
+  background: transparent !important;
+  color: #e0e6ed;
+}
+
+/* 行号 */
+#article-container .gist .gist-meta,
+#article-container .highlight figcaption {
+  background: rgba(118, 75, 162, 0.1) !important;
+}
+
+/* 复制按钮 */
+#article-container .highlight .copy-btn {
+  color: #667eea !important;
+  border: 1px solid #667eea !important;
+}
+
+#article-container .highlight .copy-btn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #fff !important;
+}
+
+/* -------------------------------------------
+   6. 滚动条美化
+   ------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 10px;
+  min-height: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #667eea;
+}
+
+/* Firefox 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #667eea rgba(102, 126, 234, 0.05);
+}
+
+/* -------------------------------------------
+   7. 其他细节优化
+   ------------------------------------------- */
+
+/* 链接 hover 效果 */
+#article-container a {
+  color: #667eea;
+  border-bottom: 1px dashed #764ba2;
+  transition: all 0.2s ease;
+}
+
+#article-container a:hover {
+  color: #764ba2;
+  border-bottom-color: #48c6ef;
+}
+
+/* 引用块 */
+#article-container blockquote {
+  border-left: 4px solid #667eea;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.08), transparent);
+}
+
+/* 表格 */
+#article-container table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+#article-container table tr:hover td {
+  background: rgba(76, 155, 232, 0.05);
+}
+
+/* 侧边栏卡片 */
+aside .card-widget {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(76, 155, 232, 0.08);
+  transition: all 0.3s ease;
+}
+
+aside .card-widget:hover {
+  box-shadow: 0 6px 20px rgba(76, 155, 232, 0.12);
+}
+
+/* 阅读进度条 */
+.progress-bar {
+  background: var(--primary-gradient) !important;
+}
+
+/* 返回顶部按钮 */
+#go-up {
+  background: var(--primary-gradient) !important;
+}
+
+/* 搜索按钮 */
+#search-button {
+  color: var(--primary-color);
+}
+
+#search-button:hover {
+  color: var(--primary-dark);
+}
