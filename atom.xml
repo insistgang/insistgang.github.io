@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-02-25T04:16:02.556Z</updated>
+  <updated>2026-02-25T05:29:58.522Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个拿了一堆奖却觉得自己什么都没做好的研究生</title>
+    <link href="https://insistgang.top/posts/award-winning-grad-student-reflection.html"/>
+    <id>https://insistgang.top/posts/award-winning-grad-student-reflection.html</id>
+    <published>2026-02-25T05:30:00.000Z</published>
+    <updated>2026-02-25T05:29:58.522Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="封面"></p><hr><p>我叫刘钢，英文名Leo，上海工程技术大学电子信息工程硕二，研究方向是计算机视觉和智慧城市。</p><p>如果只看履历，你可能会觉得这个人还不错——中国研究生创新实践系列大赛拿了4个国家级奖项（数学建模国二、华为杯AI国三、网络安全国三、EDA精英挑战赛国三），西门子杯省一、电子设计省三，还有其他大大小的竞赛奖项没一一列出。两年里参加了10场以上的国家级和省级竞赛。同时还是班级团支书、2021年入党、带队拿过”活力团支部”。</p><p>但如果你问我，我对自己满意吗？</p><p>说实话，不太满意。</p><p>这篇文章，我想认真聊聊一个”看起来很努力”的人，真实的状态是什么样的。</p><hr><h2 id="我的工作模式：高并发"><a href="#我的工作模式：高并发" class="headerlink" title="我的工作模式：高并发"></a>我的工作模式：高并发</h2><p><img src="/img/award-winning-grad-student-reflection/01_high_concurrency.png" alt="第一章配图"></p><p>了解我的人都知道，我习惯同时推很多件事。竞赛、论文、社会工作、副业探索、技术学习、读书打卡……我给自己的这种状态起了个名字，叫”高并发模式”，像服务器一样同时处理多个请求。</p><p>峰值效率在晚上7点到10点。那三个小时我可以切换好几个项目，每个都往前推一点。状态好的时候，12个小时连轴转，产出惊人。</p><p>听起来是不是很酷？</p><p>代价是：我的论文拖了好几个月，baseline直到最近才跑通。</p><p>9场竞赛、一堆奖项看起来很壮观，但有三场答辩，评委问到的技术细节我答不上来——蒸馏模型参数、KL散度推导、准确率的具体解释。这些不是冷门知识，是基本功。</p><p>我后来不得不承认一个事实：<strong>高并发的另一面，是每件事都浅尝辄止。</strong></p><hr><h2 id="一个让我清醒的问题"><a href="#一个让我清醒的问题" class="headerlink" title="一个让我清醒的问题"></a>一个让我清醒的问题</h2><p><img src="/img/award-winning-grad-student-reflection/02_wake_up_question.png" alt="第二章配图"></p><p>有一次，AI助手在分析完我所有的对话记录后，问了我一个问题：</p><p>“有没有哪件事，是你在没有任何外部反馈、没人看见、也不能写进简历的情况下，还是会去做的？”</p><p>我愣住了。</p><p>我仔细想了想自己做过的事——比赛是有奖项的，论文是有发表目标的，团支书工作是有评优的，帮别人做项目是有感谢和认可的。我做的几乎每一件事，背后都有一个外部反馈在驱动。</p><p>这个发现让我有点不舒服。</p><p>后来我慢慢意识到，我可能有一定程度的”成就成瘾”——用不断获得新的成就来证明自己有价值。两场决赛都拿了国三，按理说这是不错的成绩，但当时的失落感远超正常范围。不是因为奖项不够好，而是因为”没有拿到最好的”这件事，动摇了我对自我价值的确认。</p><p><strong>当一个人必须通过不停地赢来证明自己值得存在，他其实过得很累。</strong></p><hr><h2 id="用忙碌逃避的人"><a href="#用忙碌逃避的人" class="headerlink" title="用忙碌逃避的人"></a>用忙碌逃避的人</h2><p><img src="/img/award-winning-grad-student-reflection/03_escape_with_busyness.png" alt="第三章配图"></p><p>我的一个朋友曾经非常直接地说过一句话：”你天天过得像个本科生，什么都想要。”</p><p>当时听了有点刺耳，后来越想越觉得准确。</p><p>我确实很难真正停下来。即使在极度疲惫的时候，我的第一反应不是休息，而是规划下一步——“这个比赛结束了，下个月还有什么可以参加？””论文这部分搞完了，接下来该优化哪个模块？”</p><p>表面上看是勤奋，但往深了想，这种停不下来的状态里藏着一种恐惧——<strong>如果我不在”做事”，我是谁？</strong></p><p>我的身体其实已经在抗议了。BMI 29.2，体脂率29.6%，内脏脂肪14级偏高，膝盖积液了四个月才去看医生。嘴上说”健康第一”，但排计划的时候健康永远排在第十。</p><hr><h2 id="我擅长什么？不擅长什么？"><a href="#我擅长什么？不擅长什么？" class="headerlink" title="我擅长什么？不擅长什么？"></a>我擅长什么？不擅长什么？</h2><p><img src="/img/award-winning-grad-student-reflection/04_cognition_trap.png" alt="第四章配图"></p><p>经过这段时间的反思，我对自己的认知比以前清晰了很多。</p><p><strong>我确实擅长一些事情。</strong> 学习速度快，从YOLO到多模态大模型，技术栈扩展很快。执行力强，方向一旦确定就能快速推进。统筹能力还行，带过多支竞赛队伍同时作战。对AI工具的敏感度也不错，Claude Code、MCP这些新工具基本能第一时间上手。</p><p><strong>但我也有明显的短板。</strong> 深度聚焦能力不够，容易被新鲜事物吸引而偏离主线。延迟满足的能力偏弱，倾向于做有即时反馈的事，回避需要长期投入才有产出的任务。沟通的时候容易一次性塞太多信息，让对方抓不住重点。以及——静下来的能力很差，很难在”不做事”的时候觉得自己有价值。</p><p>写出来之后会发现，优势和劣势其实是一体两面的。执行力强的反面是不够深入，学得快的反面是容易浅尝辄止，高并发的反面是核心任务被挤压。</p><hr><h2 id="我正在做的改变"><a href="#我正在做的改变" class="headerlink" title="我正在做的改变"></a>我正在做的改变</h2><p><img src="/img/award-winning-grad-student-reflection/05_changes.png" alt="第五章配图"></p><p>写这篇文章的时候，我正处在一个主动调整的阶段。</p><p><strong>论文成了我的第一优先级。</strong> 不是嘴上说说，而是每天雷打不动至少30分钟推进。baseline已经跑通了，mAP50达到71.81%，正在加注意力机制做第一轮改进实验。目标是投一篇SCI二区，这也是我读博申请的基础。</p><p><strong>健康被提到了第二位。</strong> 每天19点散步，每天喝水2000毫升以上，22点30分必须收工。体重目标是先降到90公斤以下。</p><p><strong>其他的事，都在学着放手。</strong> 这对我来说是最难的部分。每当看到一个新的竞赛通知、一个有趣的技术项目、一个可以帮别人忙的机会，我的第一反应仍然是”我要参加”。现在正在练习的是——停一秒，问自己：”这件事和论文有关系吗？”如果没有，就放掉。</p><p>我还启动了一个自我纠正计划，核心是正视”成就成瘾”的问题，练习从持续的产出中而不是间歇性的爆发中获得满足感。说白了，就是从”追求赢”转向”追求稳”。</p><hr><h2 id="为什么要公开写这些？"><a href="#为什么要公开写这些？" class="headerlink" title="为什么要公开写这些？"></a>为什么要公开写这些？</h2><p><img src="/img/award-winning-grad-student-reflection/06_why_write.png" alt="第六章配图"></p><p>因为我觉得”看起来很努力但其实很迷茫”这种状态，不只是我一个人的问题。</p><p>身边很多同龄人都在经历类似的事情——简历越来越好看，但内心越来越不确定；做的事情越来越多，但真正有深度的越来越少；别人眼中的”优秀学生”，自己心里清楚有多少是注了水的。</p><p>我不想再维持那个”全能选手”的人设了。我就是一个正在从广度转向深度、从焦虑转向秩序、从证明自己转向接纳自己的普通研究生。</p><p>这条路才刚开始走。</p><hr><h2 id="关于这个公众号"><a href="#关于这个公众号" class="headerlink" title="关于这个公众号"></a>关于这个公众号</h2><p><img src="/img/award-winning-grad-student-reflection/07_about_wechat.png" alt="第七章配图"></p><p>后续我会在这里分享几类内容：</p><p>AI工具的实际使用心得——不是教程搬运，而是我在论文、竞赛、日常工作中真正用过的方法和踩过的坑。</p><p>研究生的真实生活——不只是光鲜的获奖证书，还有论文被拒、实验跑崩、和导师沟通不畅这些真实的日常。</p><p>关于个人成长的思考——我正在经历的认知转变、习惯建立、自我纠正，写下来既是给自己的记录，也希望能给类似处境的人一点参考。</p><p>不保证每篇都有用，但保证每篇都真实。</p><p><strong>我是Leo，一个正在学着”少做一点”的人。</strong></p><hr><p><em>如果你也在经历类似的挣扎，或者对上面提到的任何话题感兴趣，欢迎关注。我们慢慢聊。</em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/award-winning-grad-student-reflection/00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我叫刘钢，英文名Leo，上海工程技术大学电子信息工程硕二，研究方向是计算机视觉和智慧城市。&lt;/p</summary>
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="反思" scheme="https://insistgang.top/tags/%E5%8F%8D%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>Claude Code 七大组件深度拆解：从入门到真正会用</title>
@@ -494,28 +526,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;2026年2月13日-星期四&quot;&gt;&lt;a href=&quot;#2026年2月13日-星期四&quot; class=&quot;headerlink&quot; title=&quot;2026年2月13日 星期四&quot;&gt;&lt;/a&gt;2026年2月13日 星期四&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月12日</title>
-    <link href="https://insistgang.top/posts/0212qm5k.html"/>
-    <id>https://insistgang.top/posts/0212qm5k.html</id>
-    <published>2026-02-11T16:00:00.000Z</published>
-    <updated>2026-02-13T15:40:09.257Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2026年2月12日-星期三"><a href="#2026年2月12日-星期三" class="headerlink" title="2026年2月12日 星期三"></a>2026年2月12日 星期三</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input checked="" disabled="" type="checkbox"> 从上海松江回到家</li><li><input checked="" disabled="" type="checkbox"> 安装好笔记本和显示器，准备工作环境</li><li><input checked="" disabled="" type="checkbox"> 在高铁上对忙碌的事情进行思考</li><li><input disabled="" type="checkbox"> 早睡早起（打王者到3点，11点才醒）</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>今天回来第一天，高消费花了好多米：充值了claude 150r，买了中转平台1000刀的额度200r，给微信云平台付费20r，充值5到tikhub爬虫额度35r，给桃源买了点体力18r。</p><p>10点醒了，然后跑通了红学爬虫的内容。</p><p><strong>下午</strong></p><p>跑完了井盖论文，做出来的结果不是很好，而且没有啥科研绘图的东西，所以整篇论文虽然写成了latex的形式，但最终效果比较一般吧，在overleaf上编译了好几次才编译成功，整个改了很多模块，也谈不上什么创新点，有用了几次优化AI味的提示词，还在改模型跑代码，期待年前能把实验和论文搞定，主要差科研绘图+实验+论文。</p><p>用notebooklm分析了<strong>变分法</strong>的知识，然后去学习了一下ROF的功能，稍微归纳了自己在做什么并专门给一个智能体提示词辅助我总结，然后也去找了网上的一些claude-code的插件装一下好玩多了，kimi强大支持多模态，GLM-5并不支持。</p><p><strong>晚上</strong></p><p>现在大模型价格涨了好多，也开始收费了好多。</p><p><strong>感想</strong></p><p>大模型时代多智能体编排：我买了无数的token想去折腾很多事情，但是我的精力又是有限的，做不到能够非常有能力的精分。</p><p>我需要多个agent子代理：</p><ol><li>红学爬虫</li><li>井盖论文</li><li>祖师爷论文学习</li><li>违建论文研究</li><li>自己的爱好研究skills，mcp，openclawd组件集群等</li></ol><p>我不怕废token，我只怕claude code或者kimi code不能执行我之需求。</p><p>我还购买了很多其他的平台：比如kimi2.5 claude code的转接口，还有claude充值了pro、kimi，glm也都充值了pro以及minimax2.5。</p><p>我要做的事情还有很多很多，在家的午饭和晚饭都是青椒肉丝、香肠、排骨汤，吃的很舒服，辛苦我爸爸了。</p><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青椒肉丝、香肠、排骨汤</li><li>晚餐：青椒肉丝、香肠、排骨汤</li><li>运动：未运动</li><li>喝水：1.5L</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>跑通了红学爬虫</li><li>完成井盖论文初稿（LaTeX形式）</li><li>学习变分法和ROF功能</li><li>安装claude-code插件</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>井盖论文结果不理想，缺乏科研绘图</li><li>模型效果一般，创新点不足</li><li>第二天开始需要早睡早起</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>大模型时代的思考者与决策者</strong></p><p>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的token为自己的思想建设，为了自己的目的添砖加瓦。</p><p>在这个时代，我不怕废token，只怕AI工具不能执行我的需求。要做的事情还有很多，需要通过多智能体编排来管理有限精力。</p></blockquote><h2 id="🔗-今日知识连接"><a href="#🔗-今日知识连接" class="headerlink" title="🔗 今日知识连接"></a>🔗 今日知识连接</h2><ul><li>论文相关：[[MOC-论文地图]]</li><li>项目相关：[[03-Projects/中电科50所]]</li><li>AI工具：[[05-Tech/Tools/Claude-Code/使用心得]]</li></ul><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 继续优化井盖论文，补充科研绘图</li><li><input disabled="" type="checkbox"> 跑模型代码，完善实验部分</li><li><input disabled="" type="checkbox"> 早睡早起，恢复运动</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2026年2月12日-星期三&quot;&gt;&lt;a href=&quot;#2026年2月12日-星期三&quot; class=&quot;headerlink&quot; title=&quot;2026年2月12日 星期三&quot;&gt;&lt;/a&gt;2026年2月12日 星期三&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a href</summary>
       
     
     
