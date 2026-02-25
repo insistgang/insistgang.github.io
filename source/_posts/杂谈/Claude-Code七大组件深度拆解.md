@@ -10,6 +10,8 @@ categories:
   - 技术研究
 cover: /img/claude-code-seven-components-deep-dive/00_cover.png
 abbrlink: claude-code-components
+swiper_index: 2
+swiper_desc: "深入解析 Claude Code 的核心架构与工作流"
 ---
 
 ![封面](/img/claude-code-seven-components-deep-dive/00_cover.png)

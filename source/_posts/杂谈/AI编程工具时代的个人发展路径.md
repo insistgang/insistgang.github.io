@@ -10,6 +10,8 @@ categories:
   - 深度分析
 cover: /img/ai-coding-era-career-path/00_cover.png
 abbrlink: ai-coding-era-career-path
+swiper_index: 1
+swiper_desc: "AI时代下程序员的职业发展路径与能力矩阵分析"
 ---
 
 ![封面](/img/ai-coding-era-career-path/00_cover.png)

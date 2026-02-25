@@ -12,6 +12,8 @@ categories:
   - 技术研究
 cover: /img/minimax-agent-analysis/cover.png
 abbrlink: minimax-agent-analysis
+swiper_index: 4
+swiper_desc: "MiniMax Agent 深度分析与场景应用"
 ---
 
 ![封面 - MiniMax Agent 应用场景与核心竞争力](/img/minimax-agent-analysis/cover.png)

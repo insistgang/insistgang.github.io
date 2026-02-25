@@ -84,12 +84,8 @@ avatar:
 # Disable all banner image
 disable_top_img: false
 
-# The banner image of home page
-index_img:
-  - /img/steam-steel-infinite-minds/00_封面.png
-  - /img/minimax-agent-analysis/cover.png
-  - /img/qwen-coding-plan/cover.png
-  - /img/coding-plan-report/cover.png 
+# The banner image of home page (缩小显示，无背景图)
+index_img: 
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%)
@@ -476,15 +472,15 @@ site_verification:
 #   blockquote_background_color: "#49b1f5"
 theme_color:
   enable: true
-  main: "#49B1F5"
-  paginator: "#00c4b6"
-  button_hover: "#FF7242"
-  text_selection: "#00c4b6"
-  link_color: "#99a9bf"
+  main: "#667eea"
+  paginator: "#764ba2"
+  button_hover: "#48c6ef"
+  text_selection: "#667eea"
+  link_color: "#667eea"
   meta_color: "#858585"
-  hr_color: "#A4D8FA"
-  code_foreground: "#F47466"
-  code_background: "rgba(27, 31, 35, .05)"
+  hr_color: "#764ba2"
+  code_foreground: "#764ba2"
+  code_background: "rgba(102, 126, 234, .08)"
   toc_color: "#00c4b6"
   blockquote_padding_color: "#49b1f5"
   blockquote_background_color: "#49b1f5"
@@ -848,10 +844,11 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 
 inject:
-  head: 
-  
+  head:
+  - <link rel="stylesheet" href="/css/custom.css">
+
   bottom:
-  - <script defer src="/live2d-widget/autoload.js"></script>
+  - <script src="/live2d-widget/dist/autoload.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
