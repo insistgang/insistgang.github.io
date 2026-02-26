@@ -1,0 +1,629 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>堡垒机与踏板机深度分析 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="堡垒机 &amp;amp; 踏板机 深度分析  同一种网络拓扑，两种截然不同的使用姿势。    目录 核心概念 堡垒机深度拆解 踏板机攻击视角 技术实现细节 真实攻防对抗 主流堡垒机产品对比 搭建一个最小化堡垒机 延伸思考   一、核心概念本质是什么？堡垒机和踏板机描述的是同一种网络结构：通过一个中间..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "堡垒机与踏板机深度分析",
+  "url": "https://insistgang.top/posts/bastion-host-deep-dive.html",
+  "image": "https://insistgang.top/img/bastion-host-deep-dive/cover_01_bastion.png",
+  "datePublished": "2026-02-26T07:25:00.000Z",
+  "dateModified": "2026-02-26T07:30:51.827Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.top/posts/bastion-host-deep-dive.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '堡垒机与踏板机深度分析',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">145</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">74</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/bastion-host-deep-dive/cover_01_bastion.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">堡垒机与踏板机深度分析</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">堡垒机与踏板机深度分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-02-26T07:25:00.000Z" title="发表于 2026-02-26 15:25:00">2026-02-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-26T07:30:51.827Z" title="更新于 2026-02-26 15:30:51">2026-02-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">技术研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="堡垒机-amp-踏板机-深度分析"><a href="#堡垒机-amp-踏板机-深度分析" class="headerlink" title="堡垒机 &amp; 踏板机 深度分析"></a>堡垒机 &amp; 踏板机 深度分析</h1><p><img src="/img/bastion-host-deep-dive/cover_01_bastion.png" alt="封面"></p>
+<blockquote>
+<p>同一种网络拓扑，两种截然不同的使用姿势。</p>
+</blockquote>
+<p><img src="/img/bastion-host-deep-dive/01_bastion_concept.png" alt="核心概念配图"></p>
+<hr>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li><a href="#%E4%B8%80%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">核心概念</a></li>
+<li><a href="#%E4%BA%8C%E5%A0%A1%E5%9E%92%E6%9C%BA%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3">堡垒机深度拆解</a></li>
+<li><a href="#%E4%B8%89%E8%B8%8F%E6%9D%BF%E6%9C%BA%E6%94%BB%E5%87%BB%E8%A7%86%E8%A7%92">踏板机攻击视角</a></li>
+<li><a href="#%E5%9B%9B%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82">技术实现细节</a></li>
+<li><a href="#%E4%BA%94%E7%9C%9F%E5%AE%9E%E6%94%BB%E9%98%B2%E5%AF%B9%E6%8A%97">真实攻防对抗</a></li>
+<li><a href="#%E5%85%AD%E4%B8%BB%E6%B5%81%E5%A0%A1%E5%9E%92%E6%9C%BA%E4%BA%A7%E5%93%81%E5%AF%B9%E6%AF%94">主流堡垒机产品对比</a></li>
+<li><a href="#%E4%B8%83%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%A0%A1%E5%9E%92%E6%9C%BA">搭建一个最小化堡垒机</a></li>
+<li><a href="#%E5%85%AB%E5%BB%B6%E4%BC%B8%E6%80%9D%E8%80%83">延伸思考</a></li>
+</ol>
+<hr>
+<h2 id="一、核心概念"><a href="#一、核心概念" class="headerlink" title="一、核心概念"></a>一、核心概念</h2><h3 id="本质是什么？"><a href="#本质是什么？" class="headerlink" title="本质是什么？"></a>本质是什么？</h3><p>堡垒机和踏板机描述的是<strong>同一种网络结构</strong>：通过一个中间节点，访问原本隔离的区域。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">外部 ──→ 中间节点 ──→ 隔离区域内的目标</span><br></pre></td></tr></table></figure>
+
+<p>区别只在于<strong>谁在用、为了什么目的</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>使用者</th>
+<th>目的</th>
+<th>中文别名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>堡垒机 (Bastion Host)</td>
+<td>防守方（运维/安全团队）</td>
+<td>合法管控、审计、降低攻击面</td>
+<td>跳板机、运维审计系统</td>
+</tr>
+<tr>
+<td>踏板机 (Pivot Host)</td>
+<td>攻击方（渗透测试/黑客）</td>
+<td>横向移动、隐藏真实来源</td>
+<td>跳板、肉鸡</td>
+</tr>
+</tbody></table>
+<p>一个有趣的现实：<strong>攻击者最喜欢的踏板，往往就是企业自己的堡垒机</strong>——因为它被所有内网机器信任，一旦拿下，等于拿下整个内网的钥匙。</p>
+<hr>
+<p><img src="/img/bastion-host-deep-dive/02_bastion_deep_dive.png" alt="堡垒机深度拆解"></p>
+<h2 id="二、堡垒机深度拆解"><a href="#二、堡垒机深度拆解" class="headerlink" title="二、堡垒机深度拆解"></a>二、堡垒机深度拆解</h2><h3 id="2-1-为什么需要堡垒机？"><a href="#2-1-为什么需要堡垒机？" class="headerlink" title="2.1 为什么需要堡垒机？"></a>2.1 为什么需要堡垒机？</h3><p>没有堡垒机的企业网络通常长这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">互联网</span><br><span class="line">   │</span><br><span class="line">   ├──→ Web 服务器（开放 80/443）</span><br><span class="line">   ├──→ 数据库（开放 3306）         ← 危险！</span><br><span class="line">   ├──→ Redis（开放 6379）           ← 更危险！</span><br><span class="line">   └──→ 各种内网服务器...            ← 到处是口子</span><br></pre></td></tr></table></figure>
+
+<p>运维人员从家里 SSH 直连服务器，没有任何记录，出了事根本不知道是谁干的，也不知道干了什么。</p>
+<p>引入堡垒机之后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">互联网</span><br><span class="line">   │</span><br><span class="line">   └──→ 堡垒机（仅开放 22/443）</span><br><span class="line">              │</span><br><span class="line">              ├──→ Web 服务器</span><br><span class="line">              ├──→ 数据库（仅允许堡垒机IP访问）</span><br><span class="line">              └──→ 其他内网资源</span><br></pre></td></tr></table></figure>
+
+<p>所有内网服务器的防火墙规则只允许来自堡垒机的连接，外部完全不可达。</p>
+<h3 id="2-2-堡垒机的四大核心功能"><a href="#2-2-堡垒机的四大核心功能" class="headerlink" title="2.2 堡垒机的四大核心功能"></a>2.2 堡垒机的四大核心功能</h3><h4 id="①-认证（Authentication）"><a href="#①-认证（Authentication）" class="headerlink" title="① 认证（Authentication）"></a>① 认证（Authentication）</h4><p>堡垒机是统一的身份入口，通常支持：</p>
+<ul>
+<li>用户名/密码 + 动态口令（TOTP）</li>
+<li>证书/密钥认证</li>
+<li>LDAP/AD 域账号集成</li>
+<li>单点登录（SSO）</li>
+</ul>
+<p>登录堡垒机本身往往是双因素认证，比直接 SSH 服务器安全得多。</p>
+<h4 id="②-授权（Authorization）"><a href="#②-授权（Authorization）" class="headerlink" title="② 授权（Authorization）"></a>② 授权（Authorization）</h4><p>堡垒机做细粒度的权限管控：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">张三   →  只能访问 Web 服务器（只读权限）</span><br><span class="line">李四   →  可以访问数据库，但禁止执行 DROP 命令</span><br><span class="line">运维组 →  全量权限，但操作需要审批</span><br><span class="line">外包商 →  临时授权，有效期 2 小时，只能访问指定机器</span><br></pre></td></tr></table></figure>
+
+<h4 id="③-审计（Audit）"><a href="#③-审计（Audit）" class="headerlink" title="③ 审计（Audit）"></a>③ 审计（Audit）</h4><p>这是堡垒机最核心的能力，也是合规要求的重点：</p>
+<ul>
+<li><strong>录像回放</strong>：每次会话完整录制，可以像看视频一样回放操作过程</li>
+<li><strong>命令记录</strong>：每一条命令、每一次文件传输都有日志</li>
+<li><strong>实时监控</strong>：管理员可以实时观看任意会话，发现异常立即介入</li>
+<li><strong>行为分析</strong>：统计每个账号的操作模式，识别异常行为（如凌晨3点登录、批量删文件）</li>
+</ul>
+<h4 id="④-管控（Control）"><a href="#④-管控（Control）" class="headerlink" title="④ 管控（Control）"></a>④ 管控（Control）</h4><ul>
+<li>危险命令拦截：<code>rm -rf /</code>、<code>DROP TABLE</code> 等高危操作直接阻断</li>
+<li>实时断开：管理员可以强制踢下任意会话</li>
+<li>文件传输审计：上传/下载的文件都有记录，防止数据泄露</li>
+<li>命令审批：某些操作需要二次人工审批才能执行</li>
+</ul>
+<h3 id="2-3-堡垒机的工作原理（技术层面）"><a href="#2-3-堡垒机的工作原理（技术层面）" class="headerlink" title="2.3 堡垒机的工作原理（技术层面）"></a>2.3 堡垒机的工作原理（技术层面）</h3><p>堡垒机的代理转发有两种主要模式：</p>
+<p><strong>模式一：透明代理模式（SSH ProxyJump）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">用户 SSH 客户端</span><br><span class="line">    │  ssh -J bastion@堡垒机IP  user@目标服务器</span><br><span class="line">    ▼</span><br><span class="line">堡垒机（在中间建立 TCP 隧道）</span><br><span class="line">    │</span><br><span class="line">    ▼</span><br><span class="line">目标服务器（看到的来源 IP 是堡垒机）</span><br></pre></td></tr></table></figure>
+
+<p>用户感知上和直连没区别，堡垒机透明转发流量，同时在中间抓包分析。</p>
+<p><strong>模式二：落地跳转模式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用户先 SSH 登录到堡垒机</span><br><span class="line">堡垒机上再 SSH 到目标服务器</span><br></pre></td></tr></table></figure>
+
+<p>用户实际上是在堡垒机的 shell 里操作，目标服务器上的会话来源就是堡垒机。</p>
+<p><strong>模式三：Web 化管理（现代堡垒机主流）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">用户浏览器 → HTTPS → 堡垒机 Web 界面</span><br><span class="line">                           │ WebSocket</span><br><span class="line">                           ▼</span><br><span class="line">               Web Terminal（在浏览器里操作终端）</span><br><span class="line">                           │ SSH/RDP</span><br><span class="line">                           ▼</span><br><span class="line">                       目标服务器</span><br></pre></td></tr></table></figure>
+
+<p>用户不需要安装 SSH 客户端，浏览器就能操作服务器。JumpServer、Teleport 都是这种模式。</p>
+<hr>
+<p><img src="/img/bastion-host-deep-dive/03_pivot_attack.png" alt="踏板机攻击视角"></p>
+<h2 id="三、踏板机攻击视角"><a href="#三、踏板机攻击视角" class="headerlink" title="三、踏板机攻击视角"></a>三、踏板机攻击视角</h2><h3 id="3-1-攻击者为什么需要踏板机？"><a href="#3-1-攻击者为什么需要踏板机？" class="headerlink" title="3.1 攻击者为什么需要踏板机？"></a>3.1 攻击者为什么需要踏板机？</h3><p>攻击者打进一家公司，拿到一台边界服务器（如 Web 服务器）的权限后，发现内网还有更有价值的目标（数据库、内网 OA、代码仓库），但：</p>
+<ul>
+<li>防火墙拦截了从外部直接访问内网的流量</li>
+<li>直接用自己的 IP 去扫内网，会留下明显日志</li>
+<li>需要一个”合法”的内网节点来中转流量</li>
+</ul>
+<p>于是把已控制的机器变成踏板机，借助它访问内网深处。</p>
+<h3 id="3-2-三种核心技术手法"><a href="#3-2-三种核心技术手法" class="headerlink" title="3.2 三种核心技术手法"></a>3.2 三种核心技术手法</h3><h4 id="手法一：SSH-本地-远程-动态端口转发"><a href="#手法一：SSH-本地-远程-动态端口转发" class="headerlink" title="手法一：SSH 本地/远程/动态端口转发"></a>手法一：SSH 本地/远程/动态端口转发</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地端口转发：把内网数据库的 3306 映射到本地</span></span><br><span class="line">ssh -L 3306:内网数据库IP:3306 user@踏板机IP</span><br><span class="line"><span class="comment"># 之后连 localhost:3306 就是连内网数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 动态端口转发（SOCKS5 代理）</span></span><br><span class="line">ssh -D 1080 user@踏板机IP</span><br><span class="line"><span class="comment"># 之后配置浏览器/工具走 127.0.0.1:1080 的 socks5，流量全走踏板机</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="手法二：frp-chisel-内网穿透"><a href="#手法二：frp-chisel-内网穿透" class="headerlink" title="手法二：frp / chisel 内网穿透"></a>手法二：frp / chisel 内网穿透</h4><p>frp 是攻击者非常喜欢用的工具，可以把内网服务暴露到攻击者控制的公网服务器上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">攻击者公网服务器（frps）</span><br><span class="line">        ↑ 反向连接（踏板机主动出站，一般不被防火墙拦）</span><br><span class="line">踏板机（frpc）</span><br><span class="line">        │ 访问</span><br><span class="line">内网目标</span><br></pre></td></tr></table></figure>
+
+<p>因为是<strong>从内往外</strong>的连接，大多数防火墙默认不拦出站流量，这是内网穿透能成功的核心原因。</p>
+<h4 id="手法三：msf-cs-的路由与-socks-模块"><a href="#手法三：msf-cs-的路由与-socks-模块" class="headerlink" title="手法三：msf/cs 的路由与 socks 模块"></a>手法三：msf/cs 的路由与 socks 模块</h4><p>Metasploit 和 Cobalt Strike（CS）内置了路由转发能力：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">攻击者 MSF → 已控制的 Session（踏板）→ 内网目标</span><br><span class="line"># MSF 命令</span><br><span class="line">route add 192.168.1.0/24 [session_id]  # 添加内网路由</span><br><span class="line">use auxiliary/server/socks_proxy        # 起 socks 代理</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-踏板链（多级跳转）"><a href="#3-3-踏板链（多级跳转）" class="headerlink" title="3.3 踏板链（多级跳转）"></a>3.3 踏板链（多级跳转）</h3><p>复杂渗透场景下可能需要多级踏板：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">攻击者</span><br><span class="line">   │</span><br><span class="line">   └──→ 踏板A（互联网 → DMZ）</span><br><span class="line">              │</span><br><span class="line">              └──→ 踏板B（DMZ → 内网）</span><br><span class="line">                         │</span><br><span class="line">                         └──→ 踏板C（内网 → 核心区）</span><br><span class="line">                                    │</span><br><span class="line">                                    └──→ 最终目标（域控/数据库）</span><br></pre></td></tr></table></figure>
+
+<p>每一跳都使溯源更加困难。</p>
+<hr>
+<p><img src="/img/bastion-host-deep-dive/04_technical_implementation.png" alt="技术实现细节"></p>
+<h2 id="四、技术实现细节"><a href="#四、技术实现细节" class="headerlink" title="四、技术实现细节"></a>四、技术实现细节</h2><h3 id="4-1-SSH-ProxyJump-配置（日常运维必备）"><a href="#4-1-SSH-ProxyJump-配置（日常运维必备）" class="headerlink" title="4.1 SSH ProxyJump 配置（日常运维必备）"></a>4.1 SSH ProxyJump 配置（日常运维必备）</h3><p>在 <code>~/.ssh/config</code> 里配置，以后 SSH 自动走堡垒机：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 堡垒机配置</span><br><span class="line">Host bastion</span><br><span class="line">    HostName 1.2.3.4</span><br><span class="line">    User ops</span><br><span class="line">    IdentityFile ~/.ssh/bastion_key</span><br><span class="line"></span><br><span class="line"># 目标服务器，自动经过堡垒机</span><br><span class="line">Host prod-*</span><br><span class="line">    ProxyJump bastion</span><br><span class="line">    User ubuntu</span><br><span class="line">    IdentityFile ~/.ssh/prod_key</span><br><span class="line"></span><br><span class="line"># 使用时直接：ssh prod-web01，自动跳转</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-堡垒机的会话录制原理"><a href="#4-2-堡垒机的会话录制原理" class="headerlink" title="4.2 堡垒机的会话录制原理"></a>4.2 堡垒机的会话录制原理</h3><p>堡垕机录制 SSH 会话的核心是在 PTY（伪终端）层面拦截数据流：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">用户 SSH 客户端</span><br><span class="line">    │ 加密流量</span><br><span class="line">    ▼</span><br><span class="line">堡垒机 SSH 服务（解密）</span><br><span class="line">    │</span><br><span class="line">    ├──→ 数据流写入审计日志（asciinema 格式或私有格式）</span><br><span class="line">    │</span><br><span class="line">    ▼</span><br><span class="line">目标服务器（堡垒机作为客户端建立新连接）</span><br></pre></td></tr></table></figure>
+
+<p>录制的是原始终端字节流，包含所有字符、颜色、光标移动，可以完整回放。</p>
+<h3 id="4-3-防火墙规则配合堡垒机"><a href="#4-3-防火墙规则配合堡垒机" class="headerlink" title="4.3 防火墙规则配合堡垒机"></a>4.3 防火墙规则配合堡垒机</h3><p>内网服务器的 iptables 规则示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只允许来自堡垒机的 SSH 连接</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 22 -s 192.168.1.10 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp --dport 22 -j DROP</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库只接受堡垒机连接</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 3306 -s 192.168.1.10 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp --dport 3306 -j DROP</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="/img/bastion-host-deep-dive/05_real_battle.png" alt="真实攻防对抗"></p>
+<h2 id="五、真实攻防对抗"><a href="#五、真实攻防对抗" class="headerlink" title="五、真实攻防对抗"></a>五、真实攻防对抗</h2><h3 id="5-1-攻击者如何绕过堡垒机？"><a href="#5-1-攻击者如何绕过堡垒机？" class="headerlink" title="5.1 攻击者如何绕过堡垒机？"></a>5.1 攻击者如何绕过堡垒机？</h3><table>
+<thead>
+<tr>
+<th>攻击路径</th>
+<th>原理</th>
+<th>防御手段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>直接打堡垒机</td>
+<td>堡垒机本身有漏洞</td>
+<td>及时打补丁，堡垒机不对外暴露管理后台</td>
+</tr>
+<tr>
+<td>盗取合法账号</td>
+<td>钓鱼运维人员，拿到账号密码</td>
+<td>双因素认证，硬件密钥</td>
+</tr>
+<tr>
+<td>内鬼</td>
+<td>内部运维人员主动搞破坏</td>
+<td>操作录制 + 行为分析 + 最小权限</td>
+</tr>
+<tr>
+<td>绕过堡垒机直连</td>
+<td>发现某台服务器防火墙配置有误，允许外部直连</td>
+<td>定期扫描，确保所有机器只信任堡垒机</td>
+</tr>
+<tr>
+<td>打下堡垒机再横向</td>
+<td>堡垒机被所有内网机器信任，一台打下全网</td>
+<td>堡垒机自身做加固，与业务网络隔离</td>
+</tr>
+</tbody></table>
+<h3 id="5-2-一次完整的内网渗透路径示例"><a href="#5-2-一次完整的内网渗透路径示例" class="headerlink" title="5.2 一次完整的内网渗透路径示例"></a>5.2 一次完整的内网渗透路径示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1. 信息收集</span><br><span class="line">   └── 发现公司有个 Web 服务开放 80 端口</span><br><span class="line"></span><br><span class="line">2. 漏洞利用</span><br><span class="line">   └── SQL 注入 → 写 webshell → 获得 Web 服务器权限</span><br><span class="line"></span><br><span class="line">3. 内网探测（在踏板机上）</span><br><span class="line">   └── arp-scan、nmap 扫内网</span><br><span class="line">   └── 发现 192.168.1.10 是堡垒机（高价值目标！）</span><br><span class="line">   └── 发现 192.168.1.100 是域控服务器</span><br><span class="line"></span><br><span class="line">4. 横向移动</span><br><span class="line">   └── 在踏板机上起 socks5</span><br><span class="line">   └── 通过代理扫描堡垒机，发现 JumpServer 未授权漏洞</span><br><span class="line">   └── 拿下堡垒机，获取所有服务器的 SSH 密钥</span><br><span class="line">   └── 用堡垒机上存储的密钥直接登录所有内网服务器</span><br><span class="line"></span><br><span class="line">5. 权限维持</span><br><span class="line">   └── 在域控上创建后门账号</span><br><span class="line">   └── 清理日志（但堡垒机的日志可能已上传到日志服务器）</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-JumpServer-历史漏洞（真实案例）"><a href="#5-3-JumpServer-历史漏洞（真实案例）" class="headerlink" title="5.3 JumpServer 历史漏洞（真实案例）"></a>5.3 JumpServer 历史漏洞（真实案例）</h3><p>JumpServer 是国内最流行的开源堡垒机，历史上出现过几个严重漏洞：</p>
+<ul>
+<li><strong>CVE-2021-26832</strong>：未授权 WebSocket 访问，可以直接执行系统命令，无需任何认证</li>
+<li><strong>原因</strong>：某个 WebSocket 接口忘记加认证中间件</li>
+<li><strong>影响</strong>：攻击者只要能访问 JumpServer 的 Web 端口，就能直接拿到所有被管理服务器的权限</li>
+<li><strong>教训</strong>：堡垒机本身是最高价值目标，它的安全性必须高于任何被它管理的服务器</li>
+</ul>
+<hr>
+<p><img src="/img/bastion-host-deep-dive/06_product_comparison.png" alt="主流产品对比"></p>
+<h2 id="六、主流堡垒机产品对比"><a href="#六、主流堡垒机产品对比" class="headerlink" title="六、主流堡垒机产品对比"></a>六、主流堡垒机产品对比</h2><table>
+<thead>
+<tr>
+<th>产品</th>
+<th>类型</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JumpServer</strong></td>
+<td>开源</td>
+<td>功能完整，中文友好，社区活跃</td>
+<td>中小企业自建</td>
+</tr>
+<tr>
+<td><strong>Teleport</strong></td>
+<td>开源</td>
+<td>现代化架构，支持 K8s/数据库，证书认证</td>
+<td>云原生环境</td>
+</tr>
+<tr>
+<td><strong>阿里云堡垒机</strong></td>
+<td>商业 SaaS</td>
+<td>开箱即用，与阿里云生态集成好</td>
+<td>全部在阿里云的团队</td>
+</tr>
+<tr>
+<td><strong>CyberArk</strong></td>
+<td>商业</td>
+<td>企业级，特权账号管理最强</td>
+<td>大型金融/政府机构</td>
+</tr>
+<tr>
+<td><strong>PAM360</strong></td>
+<td>商业</td>
+<td>密码轮换自动化</td>
+<td>需要自动化密码管理的场景</td>
+</tr>
+</tbody></table>
+<h3 id="JumpServer-架构简图"><a href="#JumpServer-架构简图" class="headerlink" title="JumpServer 架构简图"></a>JumpServer 架构简图</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">                    ┌─────────────────────────────────┐</span><br><span class="line">                    │          JumpServer              │</span><br><span class="line">用户（浏览器）──HTTPS──→ │  Nginx  →  Core（Django）      │</span><br><span class="line">用户（SSH Client）──→ │  Koko（SSH/Telnet 代理）         │</span><br><span class="line">用户（RDP Client）──→ │  Lion（RDP 代理，基于 Guacamole）│</span><br><span class="line">                    │  Celery（异步任务）               │</span><br><span class="line">                    │  Redis / MySQL                   │</span><br><span class="line">                    └───────────────┬─────────────────┘</span><br><span class="line">                                    │</span><br><span class="line">                      SSH/RDP/Telnet│</span><br><span class="line">                                    ▼</span><br><span class="line">                            各被管理服务器</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="/img/bastion-host-deep-dive/07_minimal_setup.png" alt="最小化搭建"></p>
+<h2 id="七、搭建一个最小化堡垒机"><a href="#七、搭建一个最小化堡垒机" class="headerlink" title="七、搭建一个最小化堡垒机"></a>七、搭建一个最小化堡垒机</h2><h3 id="方案一：用-SSH-ProxyJump-实现最简单的堡垒机"><a href="#方案一：用-SSH-ProxyJump-实现最简单的堡垒机" class="headerlink" title="方案一：用 SSH ProxyJump 实现最简单的堡垒机"></a>方案一：用 SSH ProxyJump 实现最简单的堡垒机</h3><p>只需一台有公网 IP 的云服务器，不需要任何额外软件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 在云服务器上创建专门的堡垒机用户（不允许登录 shell）</span></span><br><span class="line">useradd -m -s /bin/false bastion_user</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 把运维人员的公钥加入 authorized_keys</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ssh-rsa AAAA...&quot;</span> &gt;&gt; /home/bastion_user/.ssh/authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 内网服务器防火墙只允许堡垒机 IP</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 22 -s &lt;堡垒机IP&gt; -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp --dport 22 -j DROP</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 运维人员 ~/.ssh/config 配置</span></span><br><span class="line">Host internal-server</span><br><span class="line">    HostName 192.168.1.100</span><br><span class="line">    User ubuntu</span><br><span class="line">    ProxyJump bastion_user@&lt;堡垒机公网IP&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二：Docker-快速部署-JumpServer"><a href="#方案二：Docker-快速部署-JumpServer" class="headerlink" title="方案二：Docker 快速部署 JumpServer"></a>方案二：Docker 快速部署 JumpServer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一键部署脚本</span></span><br><span class="line">curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v3.x.x/quick_start.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问 http://服务器IP 进行初始化配置</span></span><br></pre></td></tr></table></figure>
+
+<p>主要配置步骤：</p>
+<ol>
+<li>创建管理员账号</li>
+<li>添加资产（被管理的服务器，填 IP、SSH 端口、系统用户）</li>
+<li>创建运维账号，分配资产访问权限</li>
+<li>运维人员登录 Web 界面，点击资产直接在浏览器里操作</li>
+</ol>
+<hr>
+<p><img src="/img/bastion-host-deep-dive/08_extended_thinking.png" alt="延伸思考"></p>
+<h2 id="八、延伸思考"><a href="#八、延伸思考" class="headerlink" title="八、延伸思考"></a>八、延伸思考</h2><h3 id="8-1-云原生时代，堡垒机在演进"><a href="#8-1-云原生时代，堡垒机在演进" class="headerlink" title="8.1 云原生时代，堡垒机在演进"></a>8.1 云原生时代，堡垒机在演进</h3><p>传统堡垒机是为了管理固定 IP 的物理/虚拟机设计的。云原生时代面临新挑战：</p>
+<ul>
+<li><strong>容器</strong>：Pod 随时启停，IP 动态变化，传统 SSH 管控不适用</li>
+<li><strong>K8s</strong>：用 <code>kubectl exec</code> 进容器，绕过了 SSH 堡垒机</li>
+<li><strong>Serverless</strong>：根本没有服务器可以 SSH</li>
+</ul>
+<p>新一代方案（如 Teleport）的思路是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不再基于 IP 信任，而是基于证书信任</span><br><span class="line">每次访问动态签发短期证书（几小时有效）</span><br><span class="line">K8s、数据库、Web 应用全都纳入统一访问控制</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-零信任架构下的堡垒机"><a href="#8-2-零信任架构下的堡垒机" class="headerlink" title="8.2 零信任架构下的堡垒机"></a>8.2 零信任架构下的堡垒机</h3><p>零信任（Zero Trust）的核心理念：<strong>不因为你在内网就信任你，每次访问都要验证身份、设备、上下文</strong>。</p>
+<p>这对堡垒机的影响：</p>
+<ul>
+<li>传统堡垒机：你通过认证后，对授权的服务器有持续会话</li>
+<li>零信任堡垒机：每次连接都验证身份 + 设备健康状态 + 访问时间/地点是否异常，动态决定是否放行</li>
+</ul>
+<h3 id="8-3-一句话总结"><a href="#8-3-一句话总结" class="headerlink" title="8.3 一句话总结"></a>8.3 一句话总结</h3><blockquote>
+<p>堡垒机本质上是用”集中信任”换”降低攻击面”——把分散在几百台服务器上的认证/授权/审计，集中到一个节点统一管理。它的最大价值不是挡住攻击，而是<strong>让每一次运维操作都有迹可查，出了问题能还原事故全过程</strong>。</p>
+</blockquote>
+<hr>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.jumpserver.org/">JumpServer 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://goteleport.com/docs">Teleport 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://man.openbsd.org/ssh_config#ProxyJump">SSH ProxyJump 官方说明</a></li>
+<li><a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2021-26832">CVE-2021-26832 分析</a></li>
+<li>NIST SP 800-46：远程访问安全指南</li>
+</ul>
+<hr>
+<p><em>生成时间：2026-02-25</em><br><em>作者：Claude + Francis</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/bastion-host-deep-dive.html">https://insistgang.top/posts/bastion-host-deep-dive.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">技术研究</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a><a class="post-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></div><div class="post-share"><div class="social-share" data-image="/img/bastion-host-deep-dive/cover_01_bastion.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/order-driven-execution.html" title="我是怎么从&quot;靠状态干活&quot;变成&quot;到点就干&quot;的"><img class="cover" src="/img/order-driven-execution/cover_02_execution.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">我是怎么从"靠状态干活"变成"到点就干"的</div></div><div class="info-2"><div class="info-item-1">我是怎么从”靠状态干活”变成”到点就干”的  我曾经以为执行力强就是”每天都很猛”。 比赛季的时候一天能肝十几个小时，代码写到凌晨两点还不想停。那种状态好的时候，确实无敌——效率极高，产出惊人，感觉什么都能搞定。 但状态差的时候呢？完全是另一个人。焦虑、拖延、刷手机、找各种理由说”今天状态不好，明天再说”。一拖就是三天，三天之后更焦虑，然后用一波熬夜通宵把进度补回来，再进入下一轮循环。 这种模式我用了很久，直到有一天我意识到：这不是执行力强，这是情绪在替我做决定。   执行力其实分三种回顾自己过去几年的状态，我发现执行力不是一个单一维度的东西。它至少有三种完全不同的驱动模式。 第一种：情绪驱动型。 状态好就高效，担心失败就停滞，焦虑的时候完全瘫痪。这是我最早期的模式。它的问题很明显——波动太大，完全靠天吃饭。今天心情好多干点，明天心情差就摆烂，一周下来实际产出远没有感觉中那么多。 第二种：意志驱动型。 靠自律硬撑，强迫自己坐在桌前，强迫自己打开文件，强迫自己写下去。比情绪驱动进步了一些，短期确实有效。但意志力是会耗尽的。撑了一阵子之后突然某天完全崩溃，报复性地什么都不想做。我在备...</div></div></div></a><a class="pagination-related" href="/posts/fall-asleep-fast.html" title="躺下就睡的人都在用这几个方法"><img class="cover" src="/img/fall-asleep-fast/00_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">躺下就睡的人都在用这几个方法</div></div><div class="info-2"><div class="info-item-1">  你有没有过这种经历——明明已经很累了，躺在床上脑子却停不下来。白天没做完的事、明天要处理的问题、甚至三年前一句说错的话，全在这个时候涌上来。 翻来覆去一个小时，越想睡越睡不着，越睡不着越焦虑。 这不是你意志力不够，是你的大脑还没收到”该关机了”的信号。好消息是，让大脑关机这件事，是有具体方法的。  身体层面：先把生理开关按下去 4-7-8呼吸法 吸气4秒，屏住呼吸7秒，缓慢呼气8秒。重复3到4次。 这不是玄学，而是在主动激活副交感神经系统。当你延长呼气时间时，身体会接收到一个明确的信号——“现在是安全的，可以放松了”。心率会下降，肌肉会松弛，大脑的警觉水平会降低。 大多数人做2到3分钟就会出现明显的困意。今晚睡不着的话，第一个就试这个。 渐进式肌肉放松 从脚趾开始，刻意绷紧5秒，然后突然放松。接着是小腿、大腿、腹部、胸口、手臂、肩膀、脸部，一路往上做。 原理很简单：很多人躺在床上的时候，身体其实是紧绷的，只是自己没意识到。肌肉放松法通过”先绷紧再松开”的对比，让你的身体真正感受到什么叫”放松”。做到头部的时候，基本就困了。 房间环境 两个硬条件：凉和暗。人体入睡需要核心体温下...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/claude-skills-intro.html" title="Claude的Skills是什么"><img class="cover" src="/img/claude-skills-intro/00_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-26</div><div class="info-item-2">Claude的Skills是什么</div></div><div class="info-2"><div class="info-item-1">  用过Claude的人可能注意到，让它做PPT、写Word文档、处理Excel的时候，它不是瞎写代码碰运气，而是有一套明确的流程和规范在指导它。 这背后的机制叫Skills。 这个概念不复杂，但理解它之后，你会对”如何让AI更好地为你工作”有一个全新的认知。  Skills的本质：写给AI看的操作手册 很多人第一反应是——Skills是不是某种插件？某种程序？需要安装、编译、配置？ 都不是。 Skills本质上就是结构化的文档，主要用Markdown写成，告诉Claude在执行某类任务时应该遵循哪些最佳实践。不需要打包，不需要配置文件，不需要任何编程环境。 打个比方：你去一家餐厅后厨，墙上贴着”红烧肉标准操作流程”——用什么锅、放多少糖、炖多久、怎么收汁。厨师每次照着做，出品就稳定。 Skills就是贴在Claude”后厨墙上”的那张操作流程。  它是怎么工作的？ 整个执行机制分三步： 第一步，判断需不需要。 当你发消息给Claude，系统会根据你的需求，判断是否有相关的Skill可以调用。每个Skill都有一段简短的描述，说明自己适用于什么场景。 第二步，读取操作手册。 如果...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">145</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">74</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A0%A1%E5%9E%92%E6%9C%BA-amp-%E8%B8%8F%E6%9D%BF%E6%9C%BA-%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">堡垒机 &amp; 踏板机 深度分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">一、核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E8%B4%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">本质是什么？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A0%A1%E5%9E%92%E6%9C%BA%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3"><span class="toc-number">1.3.</span> <span class="toc-text">二、堡垒机深度拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%A0%A1%E5%9E%92%E6%9C%BA%EF%BC%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 为什么需要堡垒机？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%A0%A1%E5%9E%92%E6%9C%BA%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2 堡垒机的四大核心功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0-%E8%AE%A4%E8%AF%81%EF%BC%88Authentication%EF%BC%89"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">① 认证（Authentication）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1-%E6%8E%88%E6%9D%83%EF%BC%88Authorization%EF%BC%89"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">② 授权（Authorization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2-%E5%AE%A1%E8%AE%A1%EF%BC%88Audit%EF%BC%89"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">③ 审计（Audit）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3-%E7%AE%A1%E6%8E%A7%EF%BC%88Control%EF%BC%89"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">④ 管控（Control）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A0%A1%E5%9E%92%E6%9C%BA%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%88%E6%8A%80%E6%9C%AF%E5%B1%82%E9%9D%A2%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 堡垒机的工作原理（技术层面）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%B8%8F%E6%9D%BF%E6%9C%BA%E6%94%BB%E5%87%BB%E8%A7%86%E8%A7%92"><span class="toc-number">1.4.</span> <span class="toc-text">三、踏板机攻击视角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%94%BB%E5%87%BB%E8%80%85%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E8%B8%8F%E6%9D%BF%E6%9C%BA%EF%BC%9F"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 攻击者为什么需要踏板机？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%B8%89%E7%A7%8D%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E6%89%8B%E6%B3%95"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2 三种核心技术手法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E6%B3%95%E4%B8%80%EF%BC%9ASSH-%E6%9C%AC%E5%9C%B0-%E8%BF%9C%E7%A8%8B-%E5%8A%A8%E6%80%81%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">手法一：SSH 本地&#x2F;远程&#x2F;动态端口转发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E6%B3%95%E4%BA%8C%EF%BC%9Afrp-chisel-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">手法二：frp &#x2F; chisel 内网穿透</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E6%B3%95%E4%B8%89%EF%BC%9Amsf-cs-%E7%9A%84%E8%B7%AF%E7%94%B1%E4%B8%8E-socks-%E6%A8%A1%E5%9D%97"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">手法三：msf&#x2F;cs 的路由与 socks 模块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E8%B8%8F%E6%9D%BF%E9%93%BE%EF%BC%88%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC%EF%BC%89"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3 踏板链（多级跳转）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82"><span class="toc-number">1.5.</span> <span class="toc-text">四、技术实现细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-SSH-ProxyJump-%E9%85%8D%E7%BD%AE%EF%BC%88%E6%97%A5%E5%B8%B8%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%EF%BC%89"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 SSH ProxyJump 配置（日常运维必备）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%A0%A1%E5%9E%92%E6%9C%BA%E7%9A%84%E4%BC%9A%E8%AF%9D%E5%BD%95%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 堡垒机的会话录制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99%E9%85%8D%E5%90%88%E5%A0%A1%E5%9E%92%E6%9C%BA"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3 防火墙规则配合堡垒机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%9C%9F%E5%AE%9E%E6%94%BB%E9%98%B2%E5%AF%B9%E6%8A%97"><span class="toc-number">1.6.</span> <span class="toc-text">五、真实攻防对抗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%94%BB%E5%87%BB%E8%80%85%E5%A6%82%E4%BD%95%E7%BB%95%E8%BF%87%E5%A0%A1%E5%9E%92%E6%9C%BA%EF%BC%9F"><span class="toc-number">1.6.1.</span> <span class="toc-text">5.1 攻击者如何绕过堡垒机？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E8%B7%AF%E5%BE%84%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.6.2.</span> <span class="toc-text">5.2 一次完整的内网渗透路径示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-JumpServer-%E5%8E%86%E5%8F%B2%E6%BC%8F%E6%B4%9E%EF%BC%88%E7%9C%9F%E5%AE%9E%E6%A1%88%E4%BE%8B%EF%BC%89"><span class="toc-number">1.6.3.</span> <span class="toc-text">5.3 JumpServer 历史漏洞（真实案例）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%B8%BB%E6%B5%81%E5%A0%A1%E5%9E%92%E6%9C%BA%E4%BA%A7%E5%93%81%E5%AF%B9%E6%AF%94"><span class="toc-number">1.7.</span> <span class="toc-text">六、主流堡垒机产品对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JumpServer-%E6%9E%B6%E6%9E%84%E7%AE%80%E5%9B%BE"><span class="toc-number">1.7.1.</span> <span class="toc-text">JumpServer 架构简图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%A0%A1%E5%9E%92%E6%9C%BA"><span class="toc-number">1.8.</span> <span class="toc-text">七、搭建一个最小化堡垒机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E7%94%A8-SSH-ProxyJump-%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%A0%A1%E5%9E%92%E6%9C%BA"><span class="toc-number">1.8.1.</span> <span class="toc-text">方案一：用 SSH ProxyJump 实现最简单的堡垒机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9ADocker-%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2-JumpServer"><span class="toc-number">1.8.2.</span> <span class="toc-text">方案二：Docker 快速部署 JumpServer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%BB%B6%E4%BC%B8%E6%80%9D%E8%80%83"><span class="toc-number">1.9.</span> <span class="toc-text">八、延伸思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E4%BA%91%E5%8E%9F%E7%94%9F%E6%97%B6%E4%BB%A3%EF%BC%8C%E5%A0%A1%E5%9E%92%E6%9C%BA%E5%9C%A8%E6%BC%94%E8%BF%9B"><span class="toc-number">1.9.1.</span> <span class="toc-text">8.1 云原生时代，堡垒机在演进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%B8%8B%E7%9A%84%E5%A0%A1%E5%9E%92%E6%9C%BA"><span class="toc-number">1.9.2.</span> <span class="toc-text">8.2 零信任架构下的堡垒机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93"><span class="toc-number">1.9.3.</span> <span class="toc-text">8.3 一句话总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90"><span class="toc-number">1.10.</span> <span class="toc-text">参考资源</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/discord-x-telegram-guide.html" title="Discord、X、Telegram：三个你迟早会用到的海外平台"><img src="/img/discord-x-telegram-guide/cover_05_platforms.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Discord、X、Telegram：三个你迟早会用到的海外平台"/></a><div class="content"><a class="title" href="/posts/discord-x-telegram-guide.html" title="Discord、X、Telegram：三个你迟早会用到的海外平台">Discord、X、Telegram：三个你迟早会用到的海外平台</a><time datetime="2026-02-26T07:45:00.000Z" title="发表于 2026-02-26 15:45:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/high-roi-habits.html" title="人生回报率最高的8件小事"><img src="/img/high-roi-habits/cover_04_habits.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人生回报率最高的8件小事"/></a><div class="content"><a class="title" href="/posts/high-roi-habits.html" title="人生回报率最高的8件小事">人生回报率最高的8件小事</a><time datetime="2026-02-26T07:40:00.000Z" title="发表于 2026-02-26 15:40:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-knowledge-equality.html" title="大模型时代，知识真的平权了吗？"><img src="/img/ai-knowledge-equality/cover_03_knowledge.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型时代，知识真的平权了吗？"/></a><div class="content"><a class="title" href="/posts/ai-knowledge-equality.html" title="大模型时代，知识真的平权了吗？">大模型时代，知识真的平权了吗？</a><time datetime="2026-02-26T07:35:00.000Z" title="发表于 2026-02-26 15:35:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/order-driven-execution.html" title="我是怎么从&quot;靠状态干活&quot;变成&quot;到点就干&quot;的"><img src="/img/order-driven-execution/cover_02_execution.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我是怎么从&quot;靠状态干活&quot;变成&quot;到点就干&quot;的"/></a><div class="content"><a class="title" href="/posts/order-driven-execution.html" title="我是怎么从&quot;靠状态干活&quot;变成&quot;到点就干&quot;的">我是怎么从&quot;靠状态干活&quot;变成&quot;到点就干&quot;的</a><time datetime="2026-02-26T07:30:00.000Z" title="发表于 2026-02-26 15:30:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bastion-host-deep-dive.html" title="堡垒机与踏板机深度分析"><img src="/img/bastion-host-deep-dive/cover_01_bastion.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="堡垒机与踏板机深度分析"/></a><div class="content"><a class="title" href="/posts/bastion-host-deep-dive.html" title="堡垒机与踏板机深度分析">堡垒机与踏板机深度分析</a><time datetime="2026-02-26T07:25:00.000Z" title="发表于 2026-02-26 15:25:00">2026-02-26</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/posts/bastion-host-deep-dive.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.top/posts/bastion-host-deep-dive.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '堡垒机与踏板机深度分析'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script src="/live2d-widget/dist/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.png" alt="/img/steam-steel-infinite-minds/00_封面.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="/img/award-winning-grad-student-reflection/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="/img/claude-code-seven-components-deep-dive/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.png" alt="/img/ai-coding-era-career-path/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI编程工具时代的个人发展路径</a><div class="blog-slider__text">AI时代下程序员的职业发展路径与能力矩阵分析</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>
