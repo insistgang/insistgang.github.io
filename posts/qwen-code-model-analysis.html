@@ -1,0 +1,903 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="  2026年AI编程模型选型指南：Qwen Code 10款模型深度横评   开篇：一个困扰开发者的难题 “我想用AI写代码，但模型太多了——选GPT还是Claude？国产的行不行？API太贵怎么办？” 这是2026年初每个开发者都会问的问题。而现在，阿里给出了一个意想不到的答案：不用选，我..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2026年AI编程模型选型指南：Qwen Code 10款模型深度横评",
+  "url": "https://insistgang.top/posts/qwen-code-model-analysis.html",
+  "image": "https://insistgang.top/img/qwen-code-model-analysis/00_cover.png",
+  "datePublished": "2026-02-27T04:30:00.000Z",
+  "dateModified": "2026-02-27T05:03:08.515Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://insistgang.top/posts/qwen-code-model-analysis.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2026年AI编程模型选型指南：Qwen Code 10款模型深度横评',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">148</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">76</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/qwen-code-model-analysis/00_cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-02-27T04:30:00.000Z" title="发表于 2026-02-27 12:30:00">2026-02-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-27T05:03:08.515Z" title="更新于 2026-02-27 13:03:08">2026-02-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">技术研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/qwen-code-model-analysis/00_cover.png" alt="封面"></p>
+<blockquote>
+<p>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</p>
+</blockquote>
+<hr>
+<h2 id="开篇：一个困扰开发者的难题"><a href="#开篇：一个困扰开发者的难题" class="headerlink" title="开篇：一个困扰开发者的难题"></a>开篇：一个困扰开发者的难题</h2><p><img src="/img/qwen-code-model-analysis/01_developer_dilemma.png" alt="第一章配图"></p>
+<p>“我想用AI写代码，但模型太多了——选GPT还是Claude？国产的行不行？API太贵怎么办？”</p>
+<p>这是2026年初每个开发者都会问的问题。而现在，阿里给出了一个意想不到的答案：<strong>不用选，我全都要。</strong></p>
+<p>百炼Coding Plan一口气集成了<strong>10款模型</strong>——不仅有自己的Qwen3系列，还把GLM、MiniMax、Kimi这些”竞品”全都接进来了。一个API，十大模型，随意切换。</p>
+<p>这篇文章，我帮你把这10款模型测了一遍。</p>
+<hr>
+<h2 id="一、Qwen-Code是什么？"><a href="#一、Qwen-Code是什么？" class="headerlink" title="一、Qwen Code是什么？"></a>一、Qwen Code是什么？</h2><p><img src="/img/qwen-code-model-analysis/02_what_is_qwen_code.png" alt="第二章配图"></p>
+<p><strong>Qwen Code</strong>是阿里基于通义千问推出的AI编程助手，支持：</p>
+<ul>
+<li>代码补全、Debug、重构</li>
+<li>多文件理解和项目分析</li>
+<li>命令行工具集成（类似Claude Code、Cursor）</li>
+</ul>
+<p><strong>与同类工具的差异</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>模型来源</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub Copilot</td>
+<td>OpenAI独家</td>
+<td>闭源生态</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>Claude/GPT</td>
+<td>订阅制</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>Anthropic独家</td>
+<td>需要海外API</td>
+</tr>
+<tr>
+<td><strong>Qwen Code</strong></td>
+<td><strong>10款模型可选</strong></td>
+<td>Coding Plan月费仅¥40起</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="二、10款模型全解析"><a href="#二、10款模型全解析" class="headerlink" title="二、10款模型全解析"></a>二、10款模型全解析</h2><p><img src="/img/qwen-code-model-analysis/03_ten_models.png" alt="第三章配图"></p>
+<h3 id="Qwen3系列（阿里自研）"><a href="#Qwen3系列（阿里自研）" class="headerlink" title="Qwen3系列（阿里自研）"></a>Qwen3系列（阿里自研）</h3><h4 id="1-qwen3-coder-next-⭐-推荐"><a href="#1-qwen3-coder-next-⭐-推荐" class="headerlink" title="1. qwen3-coder-next ⭐ 推荐"></a>1. qwen3-coder-next ⭐ 推荐</h4><ul>
+<li><strong>定位</strong>：最强开源编程模型</li>
+<li><strong>参数</strong>：80B总参数 / 3B激活参数（MoE架构）</li>
+<li><strong>上下文</strong>：<strong>1M tokens</strong>（百万级）</li>
+<li><strong>定价</strong>：<strong>完全免费开源</strong></li>
+<li><strong>核心亮点</strong>：<ul>
+<li>SWE-Bench Pro: **44.3%**（开源第一）</li>
+<li>支持4-bit量化，46GB显存即可本地部署</li>
+<li>编程能力对标Claude Sonnet 4.5</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：本地部署、隐私敏感项目、预算有限</li>
+</ul>
+<h4 id="2-qwen3-coder-plus"><a href="#2-qwen3-coder-plus" class="headerlink" title="2. qwen3-coder-plus"></a>2. qwen3-coder-plus</h4><ul>
+<li><strong>定位</strong>：商业API版编程专家</li>
+<li><strong>参数</strong>：480B总参数 / 35B激活参数</li>
+<li><strong>上下文</strong>：<strong>1M tokens</strong></li>
+<li><strong>定价</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>上下文范围</th>
+<th>输入价格</th>
+<th>输出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0~32K</td>
+<td>¥4/百万tokens</td>
+<td>¥16/百万tokens</td>
+</tr>
+<tr>
+<td>32K~128K</td>
+<td>¥6/百万tokens</td>
+<td>¥24/百万tokens</td>
+</tr>
+<tr>
+<td>128K~256K</td>
+<td>¥10/百万tokens</td>
+<td>¥40/百万tokens</td>
+</tr>
+<tr>
+<td>256K~1M</td>
+<td>¥20/百万tokens</td>
+<td>¥200/百万tokens</td>
+</tr>
+<tr>
+<td><strong>缓存命中</strong></td>
+<td><strong>¥0.42/百万tokens</strong>（1折）</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>核心亮点</strong>：<ul>
+<li>支持<strong>358种编程语言</strong></li>
+<li>超长上下文，可分析整个代码仓库</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：大型项目分析、企业级开发</li>
+</ul>
+<h4 id="3-qwen3-max-2026-01-23"><a href="#3-qwen3-max-2026-01-23" class="headerlink" title="3. qwen3-max-2026-01-23"></a>3. qwen3-max-2026-01-23</h4><ul>
+<li><strong>定位</strong>：最强推理模型</li>
+<li><strong>上下文</strong>：64K（思考模式81K）</li>
+<li><strong>定价</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入范围</th>
+<th>输入价格</th>
+<th>输出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0~32K</td>
+<td>¥2.5/百万tokens</td>
+<td>¥10/百万tokens</td>
+</tr>
+<tr>
+<td>32K~128K</td>
+<td>¥4/百万tokens</td>
+<td>¥16/百万tokens</td>
+</tr>
+<tr>
+<td>128K~256K</td>
+<td>¥7/百万tokens</td>
+<td>¥28/百万tokens</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>核心亮点</strong>：<ul>
+<li>内置网络搜索、代码解释器</li>
+<li>原生支持搜索Agent功能</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：算法设计、复杂问题分解</li>
+</ul>
+<h4 id="4-qwen3-5-plus-⭐-性价比之王"><a href="#4-qwen3-5-plus-⭐-性价比之王" class="headerlink" title="4. qwen3.5-plus ⭐ 性价比之王"></a>4. qwen3.5-plus ⭐ 性价比之王</h4><ul>
+<li><strong>定位</strong>：均衡型主力模型</li>
+<li><strong>参数</strong>：397B总参数 / 17B激活参数（MoE）</li>
+<li><strong>上下文</strong>：<strong>1M tokens</strong></li>
+<li><strong>定价</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入范围</th>
+<th>输入价格</th>
+<th>输出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0~128K</td>
+<td><strong>¥0.9/百万tokens</strong></td>
+<td>¥5/百万tokens</td>
+</tr>
+<tr>
+<td>128K~256K</td>
+<td>¥2.1/百万tokens</td>
+<td>¥12.5/百万tokens</td>
+</tr>
+<tr>
+<td>256K+</td>
+<td>¥4.5/百万tokens</td>
+<td>¥25/百万tokens</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>核心亮点</strong>：<ul>
+<li><strong>仅为Gemini 3 Pro的1/18</strong></li>
+<li>原生视觉语言模型</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：日常开发、高频调用</li>
+</ul>
+<hr>
+<h3 id="跨厂商模型"><a href="#跨厂商模型" class="headerlink" title="跨厂商模型"></a>跨厂商模型</h3><h4 id="5-GLM-4-7（智谱AI）"><a href="#5-GLM-4-7（智谱AI）" class="headerlink" title="5. GLM-4.7（智谱AI）"></a>5. GLM-4.7（智谱AI）</h4><ul>
+<li><strong>定位</strong>：免费开源旗舰</li>
+<li><strong>参数</strong>：358B总参数 / 32B激活参数（MoE）</li>
+<li><strong>上下文</strong>：200K tokens / 128K输出</li>
+<li><strong>定价</strong>：¥4/百万tokens（输入）/ ¥16/百万tokens（输出）</li>
+<li><strong>核心亮点</strong>：<ul>
+<li>支持深度思考模式、交错式思考</li>
+<li>MIT许可证开源</li>
+<li>定价约为Claude Sonnet 4.5的<strong>1/5~1/7</strong></li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：智能体工作流、多Agent协作</li>
+</ul>
+<h4 id="6-GLM-5（智谱AI）⭐-新一代旗舰"><a href="#6-GLM-5（智谱AI）⭐-新一代旗舰" class="headerlink" title="6. GLM-5（智谱AI）⭐ 新一代旗舰"></a>6. GLM-5（智谱AI）⭐ 新一代旗舰</h4><ul>
+<li><strong>定位</strong>：744B超大规模模型</li>
+<li><strong>参数</strong>：744B总参数 / 40B激活参数</li>
+<li><strong>上下文</strong>：200K tokens / 128K输出</li>
+<li><strong>定价</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>范围</th>
+<th>输入价格</th>
+<th>输出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0~32K</td>
+<td>¥4/百万tokens</td>
+<td>¥18/百万tokens</td>
+</tr>
+<tr>
+<td>32K+</td>
+<td>¥6/百万tokens</td>
+<td>¥22/百万tokens</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>核心亮点</strong>：<ul>
+<li>SWE-bench Verified: **77.8%**（开源第一）</li>
+<li>推理速度比GLM-4提升40%</li>
+<li>API定价约为Claude Opus的<strong>1/7</strong></li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：复杂代码生成、长文档理解</li>
+</ul>
+<h4 id="7-MiniMax-M2-5-⭐-性价比之王"><a href="#7-MiniMax-M2-5-⭐-性价比之王" class="headerlink" title="7. MiniMax-M2.5 ⭐ 性价比之王"></a>7. MiniMax-M2.5 ⭐ 性价比之王</h4><ul>
+<li><strong>定位</strong>：成本最优选择</li>
+<li><strong>参数</strong>：229B总参数 / 10B激活参数</li>
+<li><strong>上下文</strong>：204K tokens</li>
+<li><strong>定价</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>输入价格</th>
+<th>输出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标准版</td>
+<td><strong>$0.30/百万tokens</strong></td>
+<td>$1.20/百万tokens</td>
+</tr>
+<tr>
+<td>Lightning高速版</td>
+<td>$0.30/百万tokens</td>
+<td>$2.40/百万tokens</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>核心亮点</strong>：<ul>
+<li>SWE-Bench Verified: **80.2%**（全球第一梯队）</li>
+<li>运行成本仅为Claude/GPT的<strong>1/8~1/20</strong></li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：中小企业、预算敏感项目</li>
+</ul>
+<h4 id="8-Kimi-K2-5（月之暗面）"><a href="#8-Kimi-K2-5（月之暗面）" class="headerlink" title="8. Kimi-K2.5（月之暗面）"></a>8. Kimi-K2.5（月之暗面）</h4><ul>
+<li><strong>定位</strong>：多模态+Agent集群专家</li>
+<li><strong>参数</strong>：1T总参数 / 32B激活参数</li>
+<li><strong>上下文</strong>：100K tokens</li>
+<li><strong>定价</strong>：¥3.8~4/百万tokens（输入）/ ¥21/百万tokens（输出）</li>
+<li><strong>核心亮点</strong>：<ul>
+<li><strong>原生多模态</strong>（视觉+文本一体化）</li>
+<li>支持<strong>100个智能体并行</strong>工作</li>
+<li>Agent集群效率提升最高<strong>450%</strong></li>
+<li>可在12秒内分析10万行代码</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：多模态编程、Agent系统开发</li>
+</ul>
+<hr>
+<h2 id="三、能力横评矩阵"><a href="#三、能力横评矩阵" class="headerlink" title="三、能力横评矩阵"></a>三、能力横评矩阵</h2><p><img src="/img/qwen-code-model-analysis/04_comparison_matrix.png" alt="第四章配图"></p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>代码能力</th>
+<th>推理能力</th>
+<th>上下文</th>
+<th>速度</th>
+<th>成本</th>
+<th>综合</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>qwen3-coder-next</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td><strong>4.6</strong></td>
+</tr>
+<tr>
+<td>qwen3-coder-plus</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td><strong>4.4</strong></td>
+</tr>
+<tr>
+<td>qwen3-max</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td><strong>3.6</strong></td>
+</tr>
+<tr>
+<td>qwen3.5-plus</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td><strong>4.6</strong></td>
+</tr>
+<tr>
+<td>GLM-4.7</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td><strong>4.0</strong></td>
+</tr>
+<tr>
+<td>GLM-5</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td><strong>4.2</strong></td>
+</tr>
+<tr>
+<td>MiniMax-M2.5</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td><strong>4.4</strong></td>
+</tr>
+<tr>
+<td>Kimi-K2.5</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td><strong>3.6</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="四、Coding-Plan的战略解读"><a href="#四、Coding-Plan的战略解读" class="headerlink" title="四、Coding Plan的战略解读"></a>四、Coding Plan的战略解读</h2><p><img src="/img/qwen-code-model-analysis/05_strategy_analysis.png" alt="第五章配图"></p>
+<h3 id="为什么阿里要引入竞品？"><a href="#为什么阿里要引入竞品？" class="headerlink" title="为什么阿里要引入竞品？"></a>为什么阿里要引入竞品？</h3><p>这是一个反直觉但聪明的策略：</p>
+<ol>
+<li><p><strong>生态开放 &gt; 闭源竞争</strong></p>
+<ul>
+<li>开发者要的是”好用”，不是”非要用谁”</li>
+<li>一个平台搞定所有模型，迁移成本为零</li>
+</ul>
+</li>
+<li><p><strong>数据护城河</strong></p>
+<ul>
+<li>用户用得越多，平台越了解需求</li>
+<li>反哺自家模型优化</li>
+</ul>
+</li>
+<li><p><strong>商业变现</strong></p>
+<ul>
+<li>Lite版¥40/月，Pro版¥200/月</li>
+<li>比单独订阅多个API便宜太多</li>
+</ul>
+</li>
+</ol>
+<h3 id="对开发者的实际价值"><a href="#对开发者的实际价值" class="headerlink" title="对开发者的实际价值"></a>对开发者的实际价值</h3><ul>
+<li>✅ <strong>统一API接口</strong>：换模型只需改一行代码</li>
+<li>✅ <strong>A/B测试</strong>：同一个任务跑多个模型对比效果</li>
+<li>✅ <strong>成本控制</strong>：Coding Plan有免费额度+阶梯优惠</li>
+<li>✅ <strong>无运维负担</strong>：不需要自己部署和管理</li>
+</ul>
+<hr>
+<h2 id="五、选型决策指南"><a href="#五、选型决策指南" class="headerlink" title="五、选型决策指南"></a>五、选型决策指南</h2><p><img src="/img/qwen-code-model-analysis/06_selection_guide.png" alt="第六章配图"></p>
+<h3 id="🎯-按场景推荐"><a href="#🎯-按场景推荐" class="headerlink" title="🎯 按场景推荐"></a>🎯 按场景推荐</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐模型</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>日常开发</strong></td>
+<td>qwen3.5-plus</td>
+<td>最便宜（¥0.9/百万）、速度快、够用</td>
+</tr>
+<tr>
+<td><strong>大型项目分析</strong></td>
+<td>qwen3-coder-plus</td>
+<td>1M上下文，支持358种语言</td>
+</tr>
+<tr>
+<td><strong>算法/复杂逻辑</strong></td>
+<td>GLM-5</td>
+<td>SWE-bench 77.8%，推理最强</td>
+</tr>
+<tr>
+<td><strong>本地部署/隐私</strong></td>
+<td>qwen3-coder-next</td>
+<td>免费开源，离线可用</td>
+</tr>
+<tr>
+<td><strong>预算敏感</strong></td>
+<td>MiniMax-M2.5</td>
+<td>$0.30/百万，性价比最高</td>
+</tr>
+<tr>
+<td><strong>多模态需求</strong></td>
+<td>Kimi-K2.5</td>
+<td>原生支持视觉+Agent集群</td>
+</tr>
+</tbody></table>
+<h3 id="💰-成本估算（月调用10M-tokens）"><a href="#💰-成本估算（月调用10M-tokens）" class="headerlink" title="💰 成本估算（月调用10M tokens）"></a>💰 成本估算（月调用10M tokens）</h3><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>预估费用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>qwen3.5-plus</td>
+<td><strong>¥9</strong></td>
+</tr>
+<tr>
+<td>MiniMax-M2.5</td>
+<td>¥24（$3.6）</td>
+</tr>
+<tr>
+<td>GLM-4.7</td>
+<td>¥40</td>
+</tr>
+<tr>
+<td>qwen3-coder-plus</td>
+<td>¥40~200（视上下文）</td>
+</tr>
+<tr>
+<td>GLM-5</td>
+<td>¥58</td>
+</tr>
+<tr>
+<td>Kimi-K2.5</td>
+<td>¥60</td>
+</tr>
+</tbody></table>
+<h3 id="📦-Coding-Plan-订阅套餐"><a href="#📦-Coding-Plan-订阅套餐" class="headerlink" title="📦 Coding Plan 订阅套餐"></a>📦 Coding Plan 订阅套餐</h3><table>
+<thead>
+<tr>
+<th>版本</th>
+<th>原价</th>
+<th>首月优惠</th>
+<th>适合人群</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Lite</strong></td>
+<td>¥40/月</td>
+<td><strong>¥7.9~10</strong></td>
+<td>个人开发者</td>
+</tr>
+<tr>
+<td><strong>Pro</strong></td>
+<td>¥200/月</td>
+<td><strong>¥39.9~50</strong></td>
+<td>中小团队</td>
+</tr>
+</tbody></table>
+<p><strong>2026年2月限时活动</strong>：</p>
+<ul>
+<li>新用户首购享 <strong>2折</strong></li>
+<li>18000次请求仅需 ¥7.9</li>
+<li>90000次请求仅需 ¥39.9</li>
+<li>活动至 <strong>4月1日</strong></li>
+</ul>
+<hr>
+<h2 id="六、实操配置教程"><a href="#六、实操配置教程" class="headerlink" title="六、实操配置教程"></a>六、实操配置教程</h2><p><img src="/img/qwen-code-model-analysis/07_practical_tutorial.png" alt="第七章配图"></p>
+<h3 id="1-安装Qwen-Code"><a href="#1-安装Qwen-Code" class="headerlink" title="1. 安装Qwen Code"></a>1. 安装Qwen Code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install qwen-code</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置Coding-Plan"><a href="#2-配置Coding-Plan" class="headerlink" title="2. 配置Coding Plan"></a>2. 配置Coding Plan</h3><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.qwen-code/config.toml</span></span><br><span class="line"><span class="attr">model</span> = <span class="string">&quot;qwen3-coder-next&quot;</span></span><br><span class="line"><span class="attr">model_provider</span> = <span class="string">&quot;bailian&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[model_providers.bailian]</span></span><br><span class="line"><span class="attr">base_url</span> = <span class="string">&quot;https://dashscope.aliyuncs.com/compatible-mode/v1&quot;</span></span><br><span class="line"><span class="attr">api_key</span> = <span class="string">&quot;sk-xxx&quot;</span>  <span class="comment"># 你的API Key</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-切换模型"><a href="#3-切换模型" class="headerlink" title="3. 切换模型"></a>3. 切换模型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令行指定模型</span></span><br><span class="line">qwen-code --model qwen3-coder-next <span class="string">&quot;帮我重构这个函数&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或在配置文件中修改默认模型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-常用命令"><a href="#4-常用命令" class="headerlink" title="4. 常用命令"></a>4. 常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动交互模式</span></span><br><span class="line">qwen-code</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行单次任务</span></span><br><span class="line">qwen-code <span class="string">&quot;分析这个项目的架构&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定模型</span></span><br><span class="line">qwen-code --model glm-5 <span class="string">&quot;优化这段代码&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="七、总结与展望"><a href="#七、总结与展望" class="headerlink" title="七、总结与展望"></a>七、总结与展望</h2><p><img src="/img/qwen-code-model-analysis/08_summary_outlook.png" alt="第八章配图"></p>
+<p>百炼Coding Plan做了一个大胆的尝试：<strong>与其和竞品死磕，不如把大家都请进来。</strong></p>
+<p>对开发者来说，这是好事：</p>
+<ul>
+<li>一个API，十大模型</li>
+<li>月费¥40起，比订阅多个服务便宜</li>
+<li>随时切换，迁移成本为零</li>
+</ul>
+<p><strong>2026年的AI编程市场，正在从”模型竞争”走向”平台竞争”。</strong> 谁能提供最好的开发者体验，谁就能赢得市场。</p>
+<hr>
+<p><strong>互动问题</strong>：你现在用的是哪个AI编程助手？如果有一个平台能随意切换10款模型，你会尝试吗？评论区聊聊 👇</p>
+<hr>
+<p><em>本文数据截至2026年2月，模型参数和定价可能随时更新，请以官方为准。</em></p>
+<p><strong>相关链接</strong>：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.aliyun.com/benefit/scene/codingplan">阿里云百炼Coding Plan</a></li>
+<li><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/model-pricing">模型定价页面</a></li>
+<li><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/qwen3-coder-plus-price-drop">Qwen3-Coder-Plus限时优惠</a></li>
+<li><a target="_blank" rel="noopener" href="https://open.bigmodel.cn/">智谱AI开放平台</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.minimaxi.com/">MiniMax AI Platform</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.moonshot.cn/">月之暗面Kimi</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/qwen-code-model-analysis.html">https://insistgang.top/posts/qwen-code-model-analysis.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI%E7%BC%96%E7%A8%8B/">AI编程</a><a class="post-meta__tags" href="/tags/Qwen/">Qwen</a><a class="post-meta__tags" href="/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B/">模型评测</a></div><div class="post-share"><div class="social-share" data-image="/img/qwen-code-model-analysis/00_cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/9889ca3c.html" title="Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)</div></div><div class="info-2"><div class="info-item-1">2026-02-27凌晨01:36 Cron job时间配置问题：凌晨1:36触发了”早上好”提醒 需要检查cron配置 跳过发送，不打扰睡觉   待补充 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/qwen-coding-plan-report.html" title="通义千问 (Qwen) Coding Plan 调研报告"><img class="cover" src="/img/qwen-coding-plan/cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-23</div><div class="info-item-2">通义千问 (Qwen) Coding Plan 调研报告</div></div><div class="info-2"><div class="info-item-1"> 概述本报告旨在对阿里云百炼平台推出的 通义千问 (Qwen) Coding Plan 进行全面调研，并总结其在 API 连接性、支持模型、视觉能力、语音功能、MCP 扩展、网页搜索及 GitHub 开源代码查找等方面的具体能力。通义千问作为国产大模型的代表，其 Coding Plan 旨在为开发者提供高效、高性价比的 AI 编码辅助服务。  一、 通义千问 (Qwen) Coding Plan 核心能力1.1 基本信息   项目 描述    平台 阿里云百炼 (Model Studio)   API 端点 https://coding.dashscope.aliyuncs.com/v1 (Coding Plan 专属) [1]   认证方式 Bearer Token (API Key 格式为 sk-sp-xxxx，与通用 sk-xxxx Key 不同) [1]   格式 OpenAI / Anthropic 双协议兼容 [1]   1.2 支持模型Coding Plan 主要支持以下模型，这些模型在文本生成和代码能力方面表现卓越，部分模型还具备视觉理解能力 [1]。    模型...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">148</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">76</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E7%AF%87%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%9B%B0%E6%89%B0%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E9%9A%BE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">开篇：一个困扰开发者的难题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Qwen-Code%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">一、Qwen Code是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%8110%E6%AC%BE%E6%A8%A1%E5%9E%8B%E5%85%A8%E8%A7%A3%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">二、10款模型全解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Qwen3%E7%B3%BB%E5%88%97%EF%BC%88%E9%98%BF%E9%87%8C%E8%87%AA%E7%A0%94%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">Qwen3系列（阿里自研）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-qwen3-coder-next-%E2%AD%90-%E6%8E%A8%E8%8D%90"><span class="toc-number">3.1.1.</span> <span class="toc-text">1. qwen3-coder-next ⭐ 推荐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-qwen3-coder-plus"><span class="toc-number">3.1.2.</span> <span class="toc-text">2. qwen3-coder-plus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-qwen3-max-2026-01-23"><span class="toc-number">3.1.3.</span> <span class="toc-text">3. qwen3-max-2026-01-23</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-qwen3-5-plus-%E2%AD%90-%E6%80%A7%E4%BB%B7%E6%AF%94%E4%B9%8B%E7%8E%8B"><span class="toc-number">3.1.4.</span> <span class="toc-text">4. qwen3.5-plus ⭐ 性价比之王</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%8E%82%E5%95%86%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text">跨厂商模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-GLM-4-7%EF%BC%88%E6%99%BA%E8%B0%B1AI%EF%BC%89"><span class="toc-number">3.2.1.</span> <span class="toc-text">5. GLM-4.7（智谱AI）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-GLM-5%EF%BC%88%E6%99%BA%E8%B0%B1AI%EF%BC%89%E2%AD%90-%E6%96%B0%E4%B8%80%E4%BB%A3%E6%97%97%E8%88%B0"><span class="toc-number">3.2.2.</span> <span class="toc-text">6. GLM-5（智谱AI）⭐ 新一代旗舰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-MiniMax-M2-5-%E2%AD%90-%E6%80%A7%E4%BB%B7%E6%AF%94%E4%B9%8B%E7%8E%8B"><span class="toc-number">3.2.3.</span> <span class="toc-text">7. MiniMax-M2.5 ⭐ 性价比之王</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-Kimi-K2-5%EF%BC%88%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%EF%BC%89"><span class="toc-number">3.2.4.</span> <span class="toc-text">8. Kimi-K2.5（月之暗面）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%83%BD%E5%8A%9B%E6%A8%AA%E8%AF%84%E7%9F%A9%E9%98%B5"><span class="toc-number">4.</span> <span class="toc-text">三、能力横评矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Coding-Plan%E7%9A%84%E6%88%98%E7%95%A5%E8%A7%A3%E8%AF%BB"><span class="toc-number">5.</span> <span class="toc-text">四、Coding Plan的战略解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%98%BF%E9%87%8C%E8%A6%81%E5%BC%95%E5%85%A5%E7%AB%9E%E5%93%81%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">为什么阿里要引入竞品？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E5%AE%9E%E9%99%85%E4%BB%B7%E5%80%BC"><span class="toc-number">5.2.</span> <span class="toc-text">对开发者的实际价值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%80%89%E5%9E%8B%E5%86%B3%E7%AD%96%E6%8C%87%E5%8D%97"><span class="toc-number">6.</span> <span class="toc-text">五、选型决策指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%AF-%E6%8C%89%E5%9C%BA%E6%99%AF%E6%8E%A8%E8%8D%90"><span class="toc-number">6.1.</span> <span class="toc-text">🎯 按场景推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%92%B0-%E6%88%90%E6%9C%AC%E4%BC%B0%E7%AE%97%EF%BC%88%E6%9C%88%E8%B0%83%E7%94%A810M-tokens%EF%BC%89"><span class="toc-number">6.2.</span> <span class="toc-text">💰 成本估算（月调用10M tokens）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-Coding-Plan-%E8%AE%A2%E9%98%85%E5%A5%97%E9%A4%90"><span class="toc-number">6.3.</span> <span class="toc-text">📦 Coding Plan 订阅套餐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%9E%E6%93%8D%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B"><span class="toc-number">7.</span> <span class="toc-text">六、实操配置教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Qwen-Code"><span class="toc-number">7.1.</span> <span class="toc-text">1. 安装Qwen Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AECoding-Plan"><span class="toc-number">7.2.</span> <span class="toc-text">2. 配置Coding Plan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%87%E6%8D%A2%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.3.</span> <span class="toc-text">3. 切换模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">7.4.</span> <span class="toc-text">4. 常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="toc-number">8.</span> <span class="toc-text">七、总结与展望</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/qwen-code-model-analysis.html" title="2026年AI编程模型选型指南：Qwen Code 10款模型深度横评"><img src="/img/qwen-code-model-analysis/00_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年AI编程模型选型指南：Qwen Code 10款模型深度横评"/></a><div class="content"><a class="title" href="/posts/qwen-code-model-analysis.html" title="2026年AI编程模型选型指南：Qwen Code 10款模型深度横评">2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</a><time datetime="2026-02-27T04:30:00.000Z" title="发表于 2026-02-27 12:30:00">2026-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/9889ca3c.html" title="Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)">Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)</a><time datetime="2026-02-26T17:36:00.000Z" title="发表于 2026-02-27 01:36:00">2026-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/discord-x-telegram-guide.html" title="Discord、X、Telegram：三个你迟早会用到的海外平台"><img src="/img/discord-x-telegram-guide/cover_05_platforms.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Discord、X、Telegram：三个你迟早会用到的海外平台"/></a><div class="content"><a class="title" href="/posts/discord-x-telegram-guide.html" title="Discord、X、Telegram：三个你迟早会用到的海外平台">Discord、X、Telegram：三个你迟早会用到的海外平台</a><time datetime="2026-02-26T07:45:00.000Z" title="发表于 2026-02-26 15:45:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/high-roi-habits.html" title="人生回报率最高的8件小事"><img src="/img/high-roi-habits/cover_04_habits.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人生回报率最高的8件小事"/></a><div class="content"><a class="title" href="/posts/high-roi-habits.html" title="人生回报率最高的8件小事">人生回报率最高的8件小事</a><time datetime="2026-02-26T07:40:00.000Z" title="发表于 2026-02-26 15:40:00">2026-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-knowledge-equality.html" title="大模型时代，知识真的平权了吗？"><img src="/img/ai-knowledge-equality/cover_03_knowledge.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型时代，知识真的平权了吗？"/></a><div class="content"><a class="title" href="/posts/ai-knowledge-equality.html" title="大模型时代，知识真的平权了吗？">大模型时代，知识真的平权了吗？</a><time datetime="2026-02-26T07:35:00.000Z" title="发表于 2026-02-26 15:35:00">2026-02-26</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/posts/qwen-code-model-analysis.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.top/posts/qwen-code-model-analysis.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '2026年AI编程模型选型指南：Qwen Code 10款模型深度横评'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script src="/live2d-widget/dist/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.png" alt="/img/steam-steel-infinite-minds/00_封面.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="/img/award-winning-grad-student-reflection/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="/img/claude-code-seven-components-deep-dive/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.png" alt="/img/ai-coding-era-career-path/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI编程工具时代的个人发展路径</a><div class="blog-slider__text">AI时代下程序员的职业发展路径与能力矩阵分析</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><!-- hexo injector body_end end --></body></html>

@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</title>
+      <link href="/posts/qwen-code-model-analysis.html"/>
+      <url>/posts/qwen-code-model-analysis.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/qwen-code-model-analysis/00_cover.png" alt="封面"></p><blockquote><p>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</p></blockquote><hr><h2 id="开篇：一个困扰开发者的难题"><a href="#开篇：一个困扰开发者的难题" class="headerlink" title="开篇：一个困扰开发者的难题"></a>开篇：一个困扰开发者的难题</h2><p><img src="/img/qwen-code-model-analysis/01_developer_dilemma.png" alt="第一章配图"></p><p>“我想用AI写代码，但模型太多了——选GPT还是Claude？国产的行不行？API太贵怎么办？”</p><p>这是2026年初每个开发者都会问的问题。而现在，阿里给出了一个意想不到的答案：<strong>不用选，我全都要。</strong></p><p>百炼Coding Plan一口气集成了<strong>10款模型</strong>——不仅有自己的Qwen3系列，还把GLM、MiniMax、Kimi这些”竞品”全都接进来了。一个API，十大模型，随意切换。</p><p>这篇文章，我帮你把这10款模型测了一遍。</p><hr><h2 id="一、Qwen-Code是什么？"><a href="#一、Qwen-Code是什么？" class="headerlink" title="一、Qwen Code是什么？"></a>一、Qwen Code是什么？</h2><p><img src="/img/qwen-code-model-analysis/02_what_is_qwen_code.png" alt="第二章配图"></p><p><strong>Qwen Code</strong>是阿里基于通义千问推出的AI编程助手，支持：</p><ul><li>代码补全、Debug、重构</li><li>多文件理解和项目分析</li><li>命令行工具集成（类似Claude Code、Cursor）</li></ul><p><strong>与同类工具的差异</strong>：</p><table><thead><tr><th>工具</th><th>模型来源</th><th>特点</th></tr></thead><tbody><tr><td>GitHub Copilot</td><td>OpenAI独家</td><td>闭源生态</td></tr><tr><td>Cursor</td><td>Claude/GPT</td><td>订阅制</td></tr><tr><td>Claude Code</td><td>Anthropic独家</td><td>需要海外API</td></tr><tr><td><strong>Qwen Code</strong></td><td><strong>10款模型可选</strong></td><td>Coding Plan月费仅¥40起</td></tr></tbody></table><hr><h2 id="二、10款模型全解析"><a href="#二、10款模型全解析" class="headerlink" title="二、10款模型全解析"></a>二、10款模型全解析</h2><p><img src="/img/qwen-code-model-analysis/03_ten_models.png" alt="第三章配图"></p><h3 id="Qwen3系列（阿里自研）"><a href="#Qwen3系列（阿里自研）" class="headerlink" title="Qwen3系列（阿里自研）"></a>Qwen3系列（阿里自研）</h3><h4 id="1-qwen3-coder-next-⭐-推荐"><a href="#1-qwen3-coder-next-⭐-推荐" class="headerlink" title="1. qwen3-coder-next ⭐ 推荐"></a>1. qwen3-coder-next ⭐ 推荐</h4><ul><li><strong>定位</strong>：最强开源编程模型</li><li><strong>参数</strong>：80B总参数 / 3B激活参数（MoE架构）</li><li><strong>上下文</strong>：<strong>1M tokens</strong>（百万级）</li><li><strong>定价</strong>：<strong>完全免费开源</strong></li><li><strong>核心亮点</strong>：<ul><li>SWE-Bench Pro: **44.3%**（开源第一）</li><li>支持4-bit量化，46GB显存即可本地部署</li><li>编程能力对标Claude Sonnet 4.5</li></ul></li><li><strong>适用场景</strong>：本地部署、隐私敏感项目、预算有限</li></ul><h4 id="2-qwen3-coder-plus"><a href="#2-qwen3-coder-plus" class="headerlink" title="2. qwen3-coder-plus"></a>2. qwen3-coder-plus</h4><ul><li><strong>定位</strong>：商业API版编程专家</li><li><strong>参数</strong>：480B总参数 / 35B激活参数</li><li><strong>上下文</strong>：<strong>1M tokens</strong></li><li><strong>定价</strong>：</li></ul><table><thead><tr><th>上下文范围</th><th>输入价格</th><th>输出价格</th></tr></thead><tbody><tr><td>0~32K</td><td>¥4/百万tokens</td><td>¥16/百万tokens</td></tr><tr><td>32K~128K</td><td>¥6/百万tokens</td><td>¥24/百万tokens</td></tr><tr><td>128K~256K</td><td>¥10/百万tokens</td><td>¥40/百万tokens</td></tr><tr><td>256K~1M</td><td>¥20/百万tokens</td><td>¥200/百万tokens</td></tr><tr><td><strong>缓存命中</strong></td><td><strong>¥0.42/百万tokens</strong>（1折）</td><td>-</td></tr></tbody></table><ul><li><strong>核心亮点</strong>：<ul><li>支持<strong>358种编程语言</strong></li><li>超长上下文，可分析整个代码仓库</li></ul></li><li><strong>适用场景</strong>：大型项目分析、企业级开发</li></ul><h4 id="3-qwen3-max-2026-01-23"><a href="#3-qwen3-max-2026-01-23" class="headerlink" title="3. qwen3-max-2026-01-23"></a>3. qwen3-max-2026-01-23</h4><ul><li><strong>定位</strong>：最强推理模型</li><li><strong>上下文</strong>：64K（思考模式81K）</li><li><strong>定价</strong>：</li></ul><table><thead><tr><th>输入范围</th><th>输入价格</th><th>输出价格</th></tr></thead><tbody><tr><td>0~32K</td><td>¥2.5/百万tokens</td><td>¥10/百万tokens</td></tr><tr><td>32K~128K</td><td>¥4/百万tokens</td><td>¥16/百万tokens</td></tr><tr><td>128K~256K</td><td>¥7/百万tokens</td><td>¥28/百万tokens</td></tr></tbody></table><ul><li><strong>核心亮点</strong>：<ul><li>内置网络搜索、代码解释器</li><li>原生支持搜索Agent功能</li></ul></li><li><strong>适用场景</strong>：算法设计、复杂问题分解</li></ul><h4 id="4-qwen3-5-plus-⭐-性价比之王"><a href="#4-qwen3-5-plus-⭐-性价比之王" class="headerlink" title="4. qwen3.5-plus ⭐ 性价比之王"></a>4. qwen3.5-plus ⭐ 性价比之王</h4><ul><li><strong>定位</strong>：均衡型主力模型</li><li><strong>参数</strong>：397B总参数 / 17B激活参数（MoE）</li><li><strong>上下文</strong>：<strong>1M tokens</strong></li><li><strong>定价</strong>：</li></ul><table><thead><tr><th>输入范围</th><th>输入价格</th><th>输出价格</th></tr></thead><tbody><tr><td>0~128K</td><td><strong>¥0.9/百万tokens</strong></td><td>¥5/百万tokens</td></tr><tr><td>128K~256K</td><td>¥2.1/百万tokens</td><td>¥12.5/百万tokens</td></tr><tr><td>256K+</td><td>¥4.5/百万tokens</td><td>¥25/百万tokens</td></tr></tbody></table><ul><li><strong>核心亮点</strong>：<ul><li><strong>仅为Gemini 3 Pro的1/18</strong></li><li>原生视觉语言模型</li></ul></li><li><strong>适用场景</strong>：日常开发、高频调用</li></ul><hr><h3 id="跨厂商模型"><a href="#跨厂商模型" class="headerlink" title="跨厂商模型"></a>跨厂商模型</h3><h4 id="5-GLM-4-7（智谱AI）"><a href="#5-GLM-4-7（智谱AI）" class="headerlink" title="5. GLM-4.7（智谱AI）"></a>5. GLM-4.7（智谱AI）</h4><ul><li><strong>定位</strong>：免费开源旗舰</li><li><strong>参数</strong>：358B总参数 / 32B激活参数（MoE）</li><li><strong>上下文</strong>：200K tokens / 128K输出</li><li><strong>定价</strong>：¥4/百万tokens（输入）/ ¥16/百万tokens（输出）</li><li><strong>核心亮点</strong>：<ul><li>支持深度思考模式、交错式思考</li><li>MIT许可证开源</li><li>定价约为Claude Sonnet 4.5的<strong>1/5~1/7</strong></li></ul></li><li><strong>适用场景</strong>：智能体工作流、多Agent协作</li></ul><h4 id="6-GLM-5（智谱AI）⭐-新一代旗舰"><a href="#6-GLM-5（智谱AI）⭐-新一代旗舰" class="headerlink" title="6. GLM-5（智谱AI）⭐ 新一代旗舰"></a>6. GLM-5（智谱AI）⭐ 新一代旗舰</h4><ul><li><strong>定位</strong>：744B超大规模模型</li><li><strong>参数</strong>：744B总参数 / 40B激活参数</li><li><strong>上下文</strong>：200K tokens / 128K输出</li><li><strong>定价</strong>：</li></ul><table><thead><tr><th>范围</th><th>输入价格</th><th>输出价格</th></tr></thead><tbody><tr><td>0~32K</td><td>¥4/百万tokens</td><td>¥18/百万tokens</td></tr><tr><td>32K+</td><td>¥6/百万tokens</td><td>¥22/百万tokens</td></tr></tbody></table><ul><li><strong>核心亮点</strong>：<ul><li>SWE-bench Verified: **77.8%**（开源第一）</li><li>推理速度比GLM-4提升40%</li><li>API定价约为Claude Opus的<strong>1/7</strong></li></ul></li><li><strong>适用场景</strong>：复杂代码生成、长文档理解</li></ul><h4 id="7-MiniMax-M2-5-⭐-性价比之王"><a href="#7-MiniMax-M2-5-⭐-性价比之王" class="headerlink" title="7. MiniMax-M2.5 ⭐ 性价比之王"></a>7. MiniMax-M2.5 ⭐ 性价比之王</h4><ul><li><strong>定位</strong>：成本最优选择</li><li><strong>参数</strong>：229B总参数 / 10B激活参数</li><li><strong>上下文</strong>：204K tokens</li><li><strong>定价</strong>：</li></ul><table><thead><tr><th>版本</th><th>输入价格</th><th>输出价格</th></tr></thead><tbody><tr><td>标准版</td><td><strong>$0.30/百万tokens</strong></td><td>$1.20/百万tokens</td></tr><tr><td>Lightning高速版</td><td>$0.30/百万tokens</td><td>$2.40/百万tokens</td></tr></tbody></table><ul><li><strong>核心亮点</strong>：<ul><li>SWE-Bench Verified: **80.2%**（全球第一梯队）</li><li>运行成本仅为Claude/GPT的<strong>1/8~1/20</strong></li></ul></li><li><strong>适用场景</strong>：中小企业、预算敏感项目</li></ul><h4 id="8-Kimi-K2-5（月之暗面）"><a href="#8-Kimi-K2-5（月之暗面）" class="headerlink" title="8. Kimi-K2.5（月之暗面）"></a>8. Kimi-K2.5（月之暗面）</h4><ul><li><strong>定位</strong>：多模态+Agent集群专家</li><li><strong>参数</strong>：1T总参数 / 32B激活参数</li><li><strong>上下文</strong>：100K tokens</li><li><strong>定价</strong>：¥3.8~4/百万tokens（输入）/ ¥21/百万tokens（输出）</li><li><strong>核心亮点</strong>：<ul><li><strong>原生多模态</strong>（视觉+文本一体化）</li><li>支持<strong>100个智能体并行</strong>工作</li><li>Agent集群效率提升最高<strong>450%</strong></li><li>可在12秒内分析10万行代码</li></ul></li><li><strong>适用场景</strong>：多模态编程、Agent系统开发</li></ul><hr><h2 id="三、能力横评矩阵"><a href="#三、能力横评矩阵" class="headerlink" title="三、能力横评矩阵"></a>三、能力横评矩阵</h2><p><img src="/img/qwen-code-model-analysis/04_comparison_matrix.png" alt="第四章配图"></p><table><thead><tr><th>模型</th><th>代码能力</th><th>推理能力</th><th>上下文</th><th>速度</th><th>成本</th><th>综合</th></tr></thead><tbody><tr><td>qwen3-coder-next</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td><strong>4.6</strong></td></tr><tr><td>qwen3-coder-plus</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td><strong>4.4</strong></td></tr><tr><td>qwen3-max</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td><strong>3.6</strong></td></tr><tr><td>qwen3.5-plus</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td><strong>4.6</strong></td></tr><tr><td>GLM-4.7</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td><strong>4.0</strong></td></tr><tr><td>GLM-5</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td><strong>4.2</strong></td></tr><tr><td>MiniMax-M2.5</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td><strong>4.4</strong></td></tr><tr><td>Kimi-K2.5</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td><strong>3.6</strong></td></tr></tbody></table><hr><h2 id="四、Coding-Plan的战略解读"><a href="#四、Coding-Plan的战略解读" class="headerlink" title="四、Coding Plan的战略解读"></a>四、Coding Plan的战略解读</h2><p><img src="/img/qwen-code-model-analysis/05_strategy_analysis.png" alt="第五章配图"></p><h3 id="为什么阿里要引入竞品？"><a href="#为什么阿里要引入竞品？" class="headerlink" title="为什么阿里要引入竞品？"></a>为什么阿里要引入竞品？</h3><p>这是一个反直觉但聪明的策略：</p><ol><li><p><strong>生态开放 &gt; 闭源竞争</strong></p><ul><li>开发者要的是”好用”，不是”非要用谁”</li><li>一个平台搞定所有模型，迁移成本为零</li></ul></li><li><p><strong>数据护城河</strong></p><ul><li>用户用得越多，平台越了解需求</li><li>反哺自家模型优化</li></ul></li><li><p><strong>商业变现</strong></p><ul><li>Lite版¥40/月，Pro版¥200/月</li><li>比单独订阅多个API便宜太多</li></ul></li></ol><h3 id="对开发者的实际价值"><a href="#对开发者的实际价值" class="headerlink" title="对开发者的实际价值"></a>对开发者的实际价值</h3><ul><li>✅ <strong>统一API接口</strong>：换模型只需改一行代码</li><li>✅ <strong>A/B测试</strong>：同一个任务跑多个模型对比效果</li><li>✅ <strong>成本控制</strong>：Coding Plan有免费额度+阶梯优惠</li><li>✅ <strong>无运维负担</strong>：不需要自己部署和管理</li></ul><hr><h2 id="五、选型决策指南"><a href="#五、选型决策指南" class="headerlink" title="五、选型决策指南"></a>五、选型决策指南</h2><p><img src="/img/qwen-code-model-analysis/06_selection_guide.png" alt="第六章配图"></p><h3 id="🎯-按场景推荐"><a href="#🎯-按场景推荐" class="headerlink" title="🎯 按场景推荐"></a>🎯 按场景推荐</h3><table><thead><tr><th>场景</th><th>推荐模型</th><th>理由</th></tr></thead><tbody><tr><td><strong>日常开发</strong></td><td>qwen3.5-plus</td><td>最便宜（¥0.9/百万）、速度快、够用</td></tr><tr><td><strong>大型项目分析</strong></td><td>qwen3-coder-plus</td><td>1M上下文，支持358种语言</td></tr><tr><td><strong>算法/复杂逻辑</strong></td><td>GLM-5</td><td>SWE-bench 77.8%，推理最强</td></tr><tr><td><strong>本地部署/隐私</strong></td><td>qwen3-coder-next</td><td>免费开源，离线可用</td></tr><tr><td><strong>预算敏感</strong></td><td>MiniMax-M2.5</td><td>$0.30/百万，性价比最高</td></tr><tr><td><strong>多模态需求</strong></td><td>Kimi-K2.5</td><td>原生支持视觉+Agent集群</td></tr></tbody></table><h3 id="💰-成本估算（月调用10M-tokens）"><a href="#💰-成本估算（月调用10M-tokens）" class="headerlink" title="💰 成本估算（月调用10M tokens）"></a>💰 成本估算（月调用10M tokens）</h3><table><thead><tr><th>模型</th><th>预估费用</th></tr></thead><tbody><tr><td>qwen3.5-plus</td><td><strong>¥9</strong></td></tr><tr><td>MiniMax-M2.5</td><td>¥24（$3.6）</td></tr><tr><td>GLM-4.7</td><td>¥40</td></tr><tr><td>qwen3-coder-plus</td><td>¥40~200（视上下文）</td></tr><tr><td>GLM-5</td><td>¥58</td></tr><tr><td>Kimi-K2.5</td><td>¥60</td></tr></tbody></table><h3 id="📦-Coding-Plan-订阅套餐"><a href="#📦-Coding-Plan-订阅套餐" class="headerlink" title="📦 Coding Plan 订阅套餐"></a>📦 Coding Plan 订阅套餐</h3><table><thead><tr><th>版本</th><th>原价</th><th>首月优惠</th><th>适合人群</th></tr></thead><tbody><tr><td><strong>Lite</strong></td><td>¥40/月</td><td><strong>¥7.9~10</strong></td><td>个人开发者</td></tr><tr><td><strong>Pro</strong></td><td>¥200/月</td><td><strong>¥39.9~50</strong></td><td>中小团队</td></tr></tbody></table><p><strong>2026年2月限时活动</strong>：</p><ul><li>新用户首购享 <strong>2折</strong></li><li>18000次请求仅需 ¥7.9</li><li>90000次请求仅需 ¥39.9</li><li>活动至 <strong>4月1日</strong></li></ul><hr><h2 id="六、实操配置教程"><a href="#六、实操配置教程" class="headerlink" title="六、实操配置教程"></a>六、实操配置教程</h2><p><img src="/img/qwen-code-model-analysis/07_practical_tutorial.png" alt="第七章配图"></p><h3 id="1-安装Qwen-Code"><a href="#1-安装Qwen-Code" class="headerlink" title="1. 安装Qwen Code"></a>1. 安装Qwen Code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install qwen-code</span><br></pre></td></tr></table></figure><h3 id="2-配置Coding-Plan"><a href="#2-配置Coding-Plan" class="headerlink" title="2. 配置Coding Plan"></a>2. 配置Coding Plan</h3><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.qwen-code/config.toml</span></span><br><span class="line"><span class="attr">model</span> = <span class="string">&quot;qwen3-coder-next&quot;</span></span><br><span class="line"><span class="attr">model_provider</span> = <span class="string">&quot;bailian&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[model_providers.bailian]</span></span><br><span class="line"><span class="attr">base_url</span> = <span class="string">&quot;https://dashscope.aliyuncs.com/compatible-mode/v1&quot;</span></span><br><span class="line"><span class="attr">api_key</span> = <span class="string">&quot;sk-xxx&quot;</span>  <span class="comment"># 你的API Key</span></span><br></pre></td></tr></table></figure><h3 id="3-切换模型"><a href="#3-切换模型" class="headerlink" title="3. 切换模型"></a>3. 切换模型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令行指定模型</span></span><br><span class="line">qwen-code --model qwen3-coder-next <span class="string">&quot;帮我重构这个函数&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或在配置文件中修改默认模型</span></span><br></pre></td></tr></table></figure><h3 id="4-常用命令"><a href="#4-常用命令" class="headerlink" title="4. 常用命令"></a>4. 常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动交互模式</span></span><br><span class="line">qwen-code</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行单次任务</span></span><br><span class="line">qwen-code <span class="string">&quot;分析这个项目的架构&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定模型</span></span><br><span class="line">qwen-code --model glm-5 <span class="string">&quot;优化这段代码&quot;</span></span><br></pre></td></tr></table></figure><hr><h2 id="七、总结与展望"><a href="#七、总结与展望" class="headerlink" title="七、总结与展望"></a>七、总结与展望</h2><p><img src="/img/qwen-code-model-analysis/08_summary_outlook.png" alt="第八章配图"></p><p>百炼Coding Plan做了一个大胆的尝试：<strong>与其和竞品死磕，不如把大家都请进来。</strong></p><p>对开发者来说，这是好事：</p><ul><li>一个API，十大模型</li><li>月费¥40起，比订阅多个服务便宜</li><li>随时切换，迁移成本为零</li></ul><p><strong>2026年的AI编程市场，正在从”模型竞争”走向”平台竞争”。</strong> 谁能提供最好的开发者体验，谁就能赢得市场。</p><hr><p><strong>互动问题</strong>：你现在用的是哪个AI编程助手？如果有一个平台能随意切换10款模型，你会尝试吗？评论区聊聊 👇</p><hr><p><em>本文数据截至2026年2月，模型参数和定价可能随时更新，请以官方为准。</em></p><p><strong>相关链接</strong>：</p><ul><li><a href="https://www.aliyun.com/benefit/scene/codingplan">阿里云百炼Coding Plan</a></li><li><a href="https://help.aliyun.com/zh/model-studio/model-pricing">模型定价页面</a></li><li><a href="https://help.aliyun.com/zh/model-studio/qwen3-coder-plus-price-drop">Qwen3-Coder-Plus限时优惠</a></li><li><a href="https://open.bigmodel.cn/">智谱AI开放平台</a></li><li><a href="https://www.minimaxi.com/">MiniMax AI Platform</a></li><li><a href="https://www.moonshot.cn/">月之暗面Kimi</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+          <category> 技术研究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI编程 </tag>
+            
+            <tag> Qwen </tag>
+            
+            <tag> 模型评测 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)</title>
+      <link href="/posts/9889ca3c.html"/>
+      <url>/posts/9889ca3c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026-02-27"><a href="#2026-02-27" class="headerlink" title="2026-02-27"></a>2026-02-27</h1><h2 id="凌晨01-36"><a href="#凌晨01-36" class="headerlink" title="凌晨01:36"></a>凌晨01:36</h2><ul><li>Cron job时间配置问题：凌晨1:36触发了”早上好”提醒</li><li>需要检查cron配置</li><li>跳过发送，不打扰睡觉</li></ul><hr><p><em>待补充</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Discord、X、Telegram：三个你迟早会用到的海外平台</title>
       <link href="/posts/discord-x-telegram-guide.html"/>
       <url>/posts/discord-x-telegram-guide.html</url>
@@ -461,11 +511,11 @@
             
             <tag> AI </tag>
             
+            <tag> Qwen </tag>
+            
             <tag> API </tag>
             
             <tag> Coding </tag>
-            
-            <tag> Qwen </tag>
             
             <tag> 通义千问 </tag>
             
@@ -1938,46 +1988,6 @@
     
     
     <entry>
-      <title>2026年1月1日</title>
-      <link href="/posts/d4e5f6a7.html"/>
-      <url>/posts/d4e5f6a7.html</url>
-      
-        <content type="html"><![CDATA[<table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>13:31</td><td>起床，舍友都回家了，宿舍就我一个人</td></tr><tr><td>下午</td><td>点外卖、拿快递（《您好2026》）、给电车充电</td></tr><tr><td>下午</td><td>回实验室吃饭，群里给刘导发元旦祝福</td></tr><tr><td>傍晚</td><td>和姐姐通话，讲了昨天钥匙失而复得的故事</td></tr><tr><td>晚上</td><td>整理笔记本电脑旧文件，备份到百度网盘</td></tr><tr><td>晚上</td><td>联系程果，借他网盘空间存东西</td></tr><tr><td>晚上</td><td>下载Lubuntu 24.04、Rufus，准备给笔记本装Linux</td></tr><tr><td>22:00+</td><td>和Claude复盘今天</td></tr></tbody></table><h2 id="🍚-今日饮食"><a href="#🍚-今日饮食" class="headerlink" title="🍚 今日饮食"></a>🍚 今日饮食</h2><ul><li>只吃了一顿：青椒肉丝盖饭</li></ul><h2 id="✅-今日完成"><a href="#✅-今日完成" class="headerlink" title="✅ 今日完成"></a>✅ 今日完成</h2><ul><li><input checked="" disabled="" type="checkbox"> 给刘导发元旦祝福</li><li><input checked="" disabled="" type="checkbox"> 整理笔记本电脑旧文件</li><li><input checked="" disabled="" type="checkbox"> 备份重要文件到百度网盘</li><li><input checked="" disabled="" type="checkbox"> 下载Lubuntu系统镜像</li><li><input checked="" disabled="" type="checkbox"> 下载Rufus写盘工具</li><li><input checked="" disabled="" type="checkbox"> 和姐姐通话</li><li><input checked="" disabled="" type="checkbox"> 收到快递《您好2026》</li></ul><h2 id="❌-未完成（留给明天）"><a href="#❌-未完成（留给明天）" class="headerlink" title="❌ 未完成（留给明天）"></a>❌ 未完成（留给明天）</h2><ul><li><input disabled="" type="checkbox"> 制作U盘启动盘</li><li><input disabled="" type="checkbox"> 给笔记本装Linux系统</li><li><input disabled="" type="checkbox"> 看罗振宇2026跨年演讲</li><li><input disabled="" type="checkbox"> 学agents</li><li><input disabled="" type="checkbox"> 研究Manus</li><li><input disabled="" type="checkbox"> 用《您好2026》做年度计划</li><li><input disabled="" type="checkbox"> 收拾实验室桌子</li><li><input disabled="" type="checkbox"> 台式机C盘清理</li></ul><h2 id="💭-今日感受"><a href="#💭-今日感受" class="headerlink" title="💭 今日感受"></a>💭 今日感受</h2><p>整理旧文件的时候脑子昏昏的。翻出来很多以前存的东西，很多都舍不得删，又觉得有用，能给我新想法。想做减法，结果不断在做加法。</p><p>元旦第一天，想通过整理电脑、收藏夹这些事把自己理顺，但没完全理顺。</p><p>一个人在实验室，舍友都回家了，有点安静。</p><h2 id="🔋-状态"><a href="#🔋-状态" class="headerlink" title="🔋 状态"></a>🔋 状态</h2><p>脑子有点乱，开了很多线程。竞赛后的恢复期，节奏慢一点也正常。</p><h2 id="📌-明日计划"><a href="#📌-明日计划" class="headerlink" title="📌 明日计划"></a>📌 明日计划</h2><ul><li>制作启动盘 + 装Linux</li><li>台式机C盘清理</li><li>继续学agents</li><li>收拾桌子</li></ul><hr><blockquote><p>元旦第一天，在混乱中慢慢找秩序。加油。</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2026年1月计划</title>
-      <link href="/posts/plan202601.html"/>
-      <url>/posts/plan202601.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="📅-第一周（1-1-1-5）启动"><a href="#📅-第一周（1-1-1-5）启动" class="headerlink" title="📅 第一周（1.1-1.5）启动"></a>📅 第一周（1.1-1.5）启动</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">1.1</td><td align="left">充话费、整理手机app</td></tr><tr><td align="center">1.2</td><td align="left">与客户确认需求文档、功能清单</td></tr><tr><td align="center">1.3</td><td align="left">技术选型、搭建项目框架</td></tr><tr><td align="center">1.4</td><td align="left">数据库设计、后端基础搭建</td></tr><tr><td align="center">1.5</td><td align="left">agents课程学习（穿插）</td></tr></tbody></table><p><strong>本周交付：</strong> 需求确认 + 项目框架搭好 ✓</p><hr><h2 id="📅-第二周（1-6-1-12）核心开发"><a href="#📅-第二周（1-6-1-12）核心开发" class="headerlink" title="📅 第二周（1.6-1.12）核心开发"></a>📅 第二周（1.6-1.12）核心开发</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">后端核心接口开发</td></tr><tr><td align="center">周三-周四</td><td align="left">小程序前端页面开发</td></tr><tr><td align="center">周五</td><td align="left">前后端联调</td></tr><tr><td align="center">周末</td><td align="left">测试、修bug</td></tr></tbody></table><p><strong>本周交付：</strong> 核心功能可用 ✓</p><p><strong>理财节点：</strong> 1月中旬月利宝/稳利宝解锁，执行第一次建仓（5000元）</p><hr><h2 id="📅-第三周（1-13-1-19）上线"><a href="#📅-第三周（1-13-1-19）上线" class="headerlink" title="📅 第三周（1.13-1.19）上线"></a>📅 第三周（1.13-1.19）上线</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">最终测试、优化体验</td></tr><tr><td align="center">周三</td><td align="left">小程序提交审核</td></tr><tr><td align="center">周四-周五</td><td align="left">等审核 + 准备上线</td></tr><tr><td align="center">周末</td><td align="left"><strong>上线发布</strong> 🚀</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序上线 ✓</p><hr><h2 id="📅-第四周（1-20-1-26）收尾-过渡"><a href="#📅-第四周（1-20-1-26）收尾-过渡" class="headerlink" title="📅 第四周（1.20-1.26）收尾+过渡"></a>📅 第四周（1.20-1.26）收尾+过渡</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周三</td><td align="left">客户反馈、bug修复、迭代</td></tr><tr><td align="center">周四-周五</td><td align="left">小论文框架梳理、开始写</td></tr><tr><td align="center">周末</td><td align="left">休息/机动</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序稳定运行 + 小论文启动 ✓</p><hr><h2 id="🔁-每周固定"><a href="#🔁-每周固定" class="headerlink" title="🔁 每周固定"></a>🔁 每周固定</h2><table><thead><tr><th align="center">事项</th><th align="left">频率</th></tr></thead><tbody><tr><td align="center">公司实习</td><td align="left">看情况，1次/周</td></tr><tr><td align="center">每天一句话记录</td><td align="left">每天</td></tr><tr><td align="center">健身（低冲击）</td><td align="left">3-4次/周</td></tr><tr><td align="center">理财定投扣款</td><td align="left">每周一自动</td></tr></tbody></table><hr><h2 id="🎯-1月底验收标准"><a href="#🎯-1月底验收标准" class="headerlink" title="🎯 1月底验收标准"></a>🎯 1月底验收标准</h2><ul><li><input disabled="" type="checkbox"> 体育生小程序上线</li><li><input disabled="" type="checkbox"> agents课程学完</li><li><input disabled="" type="checkbox"> 第一次建仓完成（5000元）</li><li><input disabled="" type="checkbox"> 每天一句话记录坚持30天</li><li><input disabled="" type="checkbox"> 体重≤93kg</li></ul><hr><h2 id="⏳-放到2月的事"><a href="#⏳-放到2月的事" class="headerlink" title="⏳ 放到2月的事"></a>⏳ 放到2月的事</h2><ul><li>小论文（知识蒸馏）投稿《信息网络安全》</li><li>硕士论文系统复现（大论文）</li><li>违建数据采集</li></ul><h2 id="💤-以后再说"><a href="#💤-以后再说" class="headerlink" title="💤 以后再说"></a>💤 以后再说</h2><ul><li>无人机培训（等有钱了自费）</li></ul><hr><h2 id="💡-本月原则"><a href="#💡-本月原则" class="headerlink" title="💡 本月原则"></a>💡 本月原则</h2><ol><li><strong>一月只做一件大事：小程序上线</strong></li><li>有Claude帮忙，效率拉满</li><li>身体优先，累了就休息</li><li>不看盘，按计划理财</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-            <tag> 计划 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2026年阅读计划（V2版）</title>
       <link href="/posts/reading2026v2.html"/>
       <url>/posts/reading2026v2.html</url>
@@ -2016,6 +2026,46 @@
             <tag> 计划 </tag>
             
             <tag> 阅读 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年1月1日</title>
+      <link href="/posts/d4e5f6a7.html"/>
+      <url>/posts/d4e5f6a7.html</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>13:31</td><td>起床，舍友都回家了，宿舍就我一个人</td></tr><tr><td>下午</td><td>点外卖、拿快递（《您好2026》）、给电车充电</td></tr><tr><td>下午</td><td>回实验室吃饭，群里给刘导发元旦祝福</td></tr><tr><td>傍晚</td><td>和姐姐通话，讲了昨天钥匙失而复得的故事</td></tr><tr><td>晚上</td><td>整理笔记本电脑旧文件，备份到百度网盘</td></tr><tr><td>晚上</td><td>联系程果，借他网盘空间存东西</td></tr><tr><td>晚上</td><td>下载Lubuntu 24.04、Rufus，准备给笔记本装Linux</td></tr><tr><td>22:00+</td><td>和Claude复盘今天</td></tr></tbody></table><h2 id="🍚-今日饮食"><a href="#🍚-今日饮食" class="headerlink" title="🍚 今日饮食"></a>🍚 今日饮食</h2><ul><li>只吃了一顿：青椒肉丝盖饭</li></ul><h2 id="✅-今日完成"><a href="#✅-今日完成" class="headerlink" title="✅ 今日完成"></a>✅ 今日完成</h2><ul><li><input checked="" disabled="" type="checkbox"> 给刘导发元旦祝福</li><li><input checked="" disabled="" type="checkbox"> 整理笔记本电脑旧文件</li><li><input checked="" disabled="" type="checkbox"> 备份重要文件到百度网盘</li><li><input checked="" disabled="" type="checkbox"> 下载Lubuntu系统镜像</li><li><input checked="" disabled="" type="checkbox"> 下载Rufus写盘工具</li><li><input checked="" disabled="" type="checkbox"> 和姐姐通话</li><li><input checked="" disabled="" type="checkbox"> 收到快递《您好2026》</li></ul><h2 id="❌-未完成（留给明天）"><a href="#❌-未完成（留给明天）" class="headerlink" title="❌ 未完成（留给明天）"></a>❌ 未完成（留给明天）</h2><ul><li><input disabled="" type="checkbox"> 制作U盘启动盘</li><li><input disabled="" type="checkbox"> 给笔记本装Linux系统</li><li><input disabled="" type="checkbox"> 看罗振宇2026跨年演讲</li><li><input disabled="" type="checkbox"> 学agents</li><li><input disabled="" type="checkbox"> 研究Manus</li><li><input disabled="" type="checkbox"> 用《您好2026》做年度计划</li><li><input disabled="" type="checkbox"> 收拾实验室桌子</li><li><input disabled="" type="checkbox"> 台式机C盘清理</li></ul><h2 id="💭-今日感受"><a href="#💭-今日感受" class="headerlink" title="💭 今日感受"></a>💭 今日感受</h2><p>整理旧文件的时候脑子昏昏的。翻出来很多以前存的东西，很多都舍不得删，又觉得有用，能给我新想法。想做减法，结果不断在做加法。</p><p>元旦第一天，想通过整理电脑、收藏夹这些事把自己理顺，但没完全理顺。</p><p>一个人在实验室，舍友都回家了，有点安静。</p><h2 id="🔋-状态"><a href="#🔋-状态" class="headerlink" title="🔋 状态"></a>🔋 状态</h2><p>脑子有点乱，开了很多线程。竞赛后的恢复期，节奏慢一点也正常。</p><h2 id="📌-明日计划"><a href="#📌-明日计划" class="headerlink" title="📌 明日计划"></a>📌 明日计划</h2><ul><li>制作启动盘 + 装Linux</li><li>台式机C盘清理</li><li>继续学agents</li><li>收拾桌子</li></ul><hr><blockquote><p>元旦第一天，在混乱中慢慢找秩序。加油。</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年1月计划</title>
+      <link href="/posts/plan202601.html"/>
+      <url>/posts/plan202601.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="📅-第一周（1-1-1-5）启动"><a href="#📅-第一周（1-1-1-5）启动" class="headerlink" title="📅 第一周（1.1-1.5）启动"></a>📅 第一周（1.1-1.5）启动</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">1.1</td><td align="left">充话费、整理手机app</td></tr><tr><td align="center">1.2</td><td align="left">与客户确认需求文档、功能清单</td></tr><tr><td align="center">1.3</td><td align="left">技术选型、搭建项目框架</td></tr><tr><td align="center">1.4</td><td align="left">数据库设计、后端基础搭建</td></tr><tr><td align="center">1.5</td><td align="left">agents课程学习（穿插）</td></tr></tbody></table><p><strong>本周交付：</strong> 需求确认 + 项目框架搭好 ✓</p><hr><h2 id="📅-第二周（1-6-1-12）核心开发"><a href="#📅-第二周（1-6-1-12）核心开发" class="headerlink" title="📅 第二周（1.6-1.12）核心开发"></a>📅 第二周（1.6-1.12）核心开发</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">后端核心接口开发</td></tr><tr><td align="center">周三-周四</td><td align="left">小程序前端页面开发</td></tr><tr><td align="center">周五</td><td align="left">前后端联调</td></tr><tr><td align="center">周末</td><td align="left">测试、修bug</td></tr></tbody></table><p><strong>本周交付：</strong> 核心功能可用 ✓</p><p><strong>理财节点：</strong> 1月中旬月利宝/稳利宝解锁，执行第一次建仓（5000元）</p><hr><h2 id="📅-第三周（1-13-1-19）上线"><a href="#📅-第三周（1-13-1-19）上线" class="headerlink" title="📅 第三周（1.13-1.19）上线"></a>📅 第三周（1.13-1.19）上线</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周二</td><td align="left">最终测试、优化体验</td></tr><tr><td align="center">周三</td><td align="left">小程序提交审核</td></tr><tr><td align="center">周四-周五</td><td align="left">等审核 + 准备上线</td></tr><tr><td align="center">周末</td><td align="left"><strong>上线发布</strong> 🚀</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序上线 ✓</p><hr><h2 id="📅-第四周（1-20-1-26）收尾-过渡"><a href="#📅-第四周（1-20-1-26）收尾-过渡" class="headerlink" title="📅 第四周（1.20-1.26）收尾+过渡"></a>📅 第四周（1.20-1.26）收尾+过渡</h2><table><thead><tr><th align="center">日期</th><th align="left">主要任务</th></tr></thead><tbody><tr><td align="center">周一-周三</td><td align="left">客户反馈、bug修复、迭代</td></tr><tr><td align="center">周四-周五</td><td align="left">小论文框架梳理、开始写</td></tr><tr><td align="center">周末</td><td align="left">休息/机动</td></tr></tbody></table><p><strong>本周交付：</strong> 小程序稳定运行 + 小论文启动 ✓</p><hr><h2 id="🔁-每周固定"><a href="#🔁-每周固定" class="headerlink" title="🔁 每周固定"></a>🔁 每周固定</h2><table><thead><tr><th align="center">事项</th><th align="left">频率</th></tr></thead><tbody><tr><td align="center">公司实习</td><td align="left">看情况，1次/周</td></tr><tr><td align="center">每天一句话记录</td><td align="left">每天</td></tr><tr><td align="center">健身（低冲击）</td><td align="left">3-4次/周</td></tr><tr><td align="center">理财定投扣款</td><td align="left">每周一自动</td></tr></tbody></table><hr><h2 id="🎯-1月底验收标准"><a href="#🎯-1月底验收标准" class="headerlink" title="🎯 1月底验收标准"></a>🎯 1月底验收标准</h2><ul><li><input disabled="" type="checkbox"> 体育生小程序上线</li><li><input disabled="" type="checkbox"> agents课程学完</li><li><input disabled="" type="checkbox"> 第一次建仓完成（5000元）</li><li><input disabled="" type="checkbox"> 每天一句话记录坚持30天</li><li><input disabled="" type="checkbox"> 体重≤93kg</li></ul><hr><h2 id="⏳-放到2月的事"><a href="#⏳-放到2月的事" class="headerlink" title="⏳ 放到2月的事"></a>⏳ 放到2月的事</h2><ul><li>小论文（知识蒸馏）投稿《信息网络安全》</li><li>硕士论文系统复现（大论文）</li><li>违建数据采集</li></ul><h2 id="💤-以后再说"><a href="#💤-以后再说" class="headerlink" title="💤 以后再说"></a>💤 以后再说</h2><ul><li>无人机培训（等有钱了自费）</li></ul><hr><h2 id="💡-本月原则"><a href="#💡-本月原则" class="headerlink" title="💡 本月原则"></a>💡 本月原则</h2><ol><li><strong>一月只做一件大事：小程序上线</strong></li><li>有Claude帮忙，效率拉满</li><li>身体优先，累了就休息</li><li>不看盘，按计划理财</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+            <tag> 计划 </tag>
             
         </tags>
       
