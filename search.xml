@@ -35,25 +35,6 @@
     
     
     <entry>
-      <title>Fri Feb 27 2026 00:00:00 GMT+0800 (中国标准时间)</title>
-      <link href="/posts/9889ca3c.html"/>
-      <url>/posts/9889ca3c.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="2026-02-27"><a href="#2026-02-27" class="headerlink" title="2026-02-27"></a>2026-02-27</h1><h2 id="凌晨01-36"><a href="#凌晨01-36" class="headerlink" title="凌晨01:36"></a>凌晨01:36</h2><ul><li>Cron job时间配置问题：凌晨1:36触发了”早上好”提醒</li><li>需要检查cron配置</li><li>跳过发送，不打扰睡觉</li></ul><hr><p><em>待补充</em></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 日记 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Discord、X、Telegram：三个你迟早会用到的海外平台</title>
       <link href="/posts/discord-x-telegram-guide.html"/>
       <url>/posts/discord-x-telegram-guide.html</url>
@@ -511,11 +492,11 @@
             
             <tag> AI </tag>
             
+            <tag> Qwen </tag>
+            
             <tag> API </tag>
             
             <tag> Coding </tag>
-            
-            <tag> Qwen </tag>
             
             <tag> 通义千问 </tag>
             
@@ -1085,9 +1066,9 @@
             
             <tag> Windows </tag>
             
-            <tag> 系统优化 </tag>
-            
             <tag> 磁盘清理 </tag>
+            
+            <tag> 系统优化 </tag>
             
             <tag> 经验分享 </tag>
             
@@ -2757,9 +2738,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> case </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
