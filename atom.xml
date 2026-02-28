@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-02-27T05:03:08.515Z</updated>
+  <updated>2026-02-28T10:24:33.387Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,112 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Claude Code 接入 GLM-5 实战教程</title>
+    <link href="https://insistgang.top/posts/claude-code-glm5-tutorial.html"/>
+    <id>https://insistgang.top/posts/claude-code-glm5-tutorial.html</id>
+    <published>2026-02-28T02:00:00.000Z</published>
+    <updated>2026-02-28T10:24:33.387Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/claude-code-glm5-tutorial/claude-code-glm5_00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这篇是我实测可用的一套配置，目标是：让 &lt;code&gt;claude&lt;/code&gt; 命令走</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
+    
+    <category term="GLM-5" scheme="https://insistgang.top/tags/GLM-5/"/>
+    
+    <category term="智谱AI" scheme="https://insistgang.top/tags/%E6%99%BA%E8%B0%B1AI/"/>
+    
+    <category term="配置教程" scheme="https://insistgang.top/tags/%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codex 每次都要登录？一文解决 SSH 自动登录问题</title>
+    <link href="https://insistgang.top/posts/codex-ssh-auto-login-fix.html"/>
+    <id>https://insistgang.top/posts/codex-ssh-auto-login-fix.html</id>
+    <published>2026-02-28T02:00:00.000Z</published>
+    <updated>2026-02-28T10:24:34.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/codex-ssh-auto-login-fix/codex-login_00_cover_codex.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;明明配置好了 API Key，为什么每次 SSH 连接后 Codex</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
+    
+    <category term="SSH" scheme="https://insistgang.top/tags/SSH/"/>
+    
+    <category term="配置技巧" scheme="https://insistgang.top/tags/%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年AI编程助手终极横评：五款主流工具深度测评与选型指南</title>
+    <link href="https://insistgang.top/posts/ai-coding-tools-review-2026.html"/>
+    <id>https://insistgang.top/posts/ai-coding-tools-review-2026.html</id>
+    <published>2026-02-28T02:00:00.000Z</published>
+    <updated>2026-02-28T10:24:20.928Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-coding-tools-review-2026/ai-coding-tools_00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;AI编程助手已从”锦上添花”变成”效率刚需”。Claude</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="AI编程" scheme="https://insistgang.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Qwen Code" scheme="https://insistgang.top/tags/Qwen-Code/"/>
+    
+    <category term="Kimi Code" scheme="https://insistgang.top/tags/Kimi-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</title>
@@ -46,6 +152,29 @@
     <category term="Qwen" scheme="https://insistgang.top/tags/Qwen/"/>
     
     <category term="模型评测" scheme="https://insistgang.top/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年2月27日</title>
+    <link href="https://insistgang.top/posts/0227b4e2.html"/>
+    <id>https://insistgang.top/posts/0227b4e2.html</id>
+    <published>2026-02-26T16:00:00.000Z</published>
+    <updated>2026-02-27T14:57:21.568Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026年2月27日-星期四&quot;&gt;&lt;a href=&quot;#2026年2月27日-星期四&quot; class=&quot;headerlink&quot; title=&quot;2026年2月27日 星期四&quot;&gt;&lt;/a&gt;2026年2月27日 星期四&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
@@ -496,129 +625,6 @@
     <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
     
     <category term="效率工具" scheme="https://insistgang.top/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通义千问 (Qwen) Coding Plan 调研报告</title>
-    <link href="https://insistgang.top/posts/qwen-coding-plan-report.html"/>
-    <id>https://insistgang.top/posts/qwen-coding-plan-report.html</id>
-    <published>2026-02-23T04:00:00.000Z</published>
-    <updated>2026-02-23T05:34:35.825Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/qwen-coding-plan/cover.png&quot; alt=&quot;封面 - 通义千问 Coding Plan 调研报告&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
-    
-    <category term="Qwen" scheme="https://insistgang.top/tags/Qwen/"/>
-    
-    <category term="API" scheme="https://insistgang.top/tags/API/"/>
-    
-    <category term="Coding" scheme="https://insistgang.top/tags/Coding/"/>
-    
-    <category term="通义千问" scheme="https://insistgang.top/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/"/>
-    
-    <category term="阿里云" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月23日</title>
-    <link href="https://insistgang.top/posts/0223f7a2.html"/>
-    <id>https://insistgang.top/posts/0223f7a2.html</id>
-    <published>2026-02-22T16:00:00.000Z</published>
-    <updated>2026-02-23T16:12:18.584Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2026年2月23日-星期一&quot;&gt;&lt;a href=&quot;#2026年2月23日-星期一&quot; class=&quot;headerlink&quot; title=&quot;2026年2月23日 星期一&quot;&gt;&lt;/a&gt;2026年2月23日 星期一&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>国产顶级 Coding Plan API 研究报告</title>
-    <link href="https://insistgang.top/posts/coding-plan-api-report.html"/>
-    <id>https://insistgang.top/posts/coding-plan-api-report.html</id>
-    <published>2026-02-22T04:00:00.000Z</published>
-    <updated>2026-02-22T05:37:38.182Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/coding-plan-report/cover.png&quot; alt=&quot;封面 - 国产顶级 Coding Plan API 研究报告&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;研究日期：2026-02-21 ~</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
-    
-    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
-    
-    <category term="API" scheme="https://insistgang.top/tags/API/"/>
-    
-    <category term="GLM" scheme="https://insistgang.top/tags/GLM/"/>
-    
-    <category term="Kimi" scheme="https://insistgang.top/tags/Kimi/"/>
-    
-    <category term="Coding" scheme="https://insistgang.top/tags/Coding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月22日</title>
-    <link href="https://insistgang.top/posts/0222a8e3.html"/>
-    <id>https://insistgang.top/posts/0222a8e3.html</id>
-    <published>2026-02-21T16:00:00.000Z</published>
-    <updated>2026-02-22T14:17:37.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2026年2月22日-星期日&quot;&gt;&lt;a href=&quot;#2026年2月22日-星期日&quot; class=&quot;headerlink&quot; title=&quot;2026年2月22日 星期日&quot;&gt;&lt;/a&gt;2026年2月22日 星期日&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
