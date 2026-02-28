@@ -4,9 +4,9 @@
 
 # Site
 title: Leo的笔记本
-subtitle: ''
-description: ''
-keywords: ''
+subtitle: '学习笔记与技术分享'
+description: 'Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。'
+keywords: '编程,技术博客,C语言,数据结构,Python,Linux,数据库,学习笔记'
 author: insistgang
 language: zh-CN
 timezone: ''
@@ -187,4 +187,27 @@ live2d:
     show: true
   react:
     opacity: 0.7
+
+# SEO 优化配置
+# --------------------------------------
+
+# Sitemap 生成
+sitemap:
+  path: sitemap.xml
+  rel: false
+
+# RSS 订阅
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
 
