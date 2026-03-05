@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-04T14:39:45.692Z</updated>
+  <updated>2026-03-05T08:32:05.015Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,101 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
+    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
+    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
+    <published>2026-03-05T08:30:00.000Z</published>
+    <updated>2026-03-05T08:32:05.015Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生写论文的第一课，不是写，是抄</title>
+    <link href="https://insistgang.top/posts/graduate-paper-writing.html"/>
+    <id>https://insistgang.top/posts/graduate-paper-writing.html</id>
+    <published>2026-03-05T08:30:00.000Z</published>
+    <updated>2026-03-05T08:32:05.517Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="学术" scheme="https://insistgang.top/tags/%E5%AD%A6%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生最该补的一课：怎么跟导师说话</title>
+    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
+    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
+    <published>2026-03-05T08:30:00.000Z</published>
+    <updated>2026-03-05T08:32:05.953Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年3月4日</title>
@@ -181,9 +276,9 @@
     <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
-    
     <category term="AI编程" scheme="https://insistgang.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
     
     <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
     
@@ -485,99 +580,6 @@
     <category term="习惯养成" scheme="https://insistgang.top/tags/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/"/>
     
     <category term="自我管理" scheme="https://insistgang.top/tags/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>堡垒机与踏板机深度分析</title>
-    <link href="https://insistgang.top/posts/bastion-host-deep-dive.html"/>
-    <id>https://insistgang.top/posts/bastion-host-deep-dive.html</id>
-    <published>2026-02-26T07:25:00.000Z</published>
-    <updated>2026-02-26T07:30:51.827Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;堡垒机-amp-踏板机-深度分析&quot;&gt;&lt;a href=&quot;#堡垒机-amp-踏板机-深度分析&quot; class=&quot;headerlink&quot; title=&quot;堡垒机 &amp;amp; 踏板机 深度分析&quot;&gt;&lt;/a&gt;堡垒机 &amp;amp; 踏板机 深度分析&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="技术研究" scheme="https://insistgang.top/tags/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    <category term="网络安全" scheme="https://insistgang.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    <category term="运维" scheme="https://insistgang.top/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>躺下就睡的人都在用这几个方法</title>
-    <link href="https://insistgang.top/posts/fall-asleep-fast.html"/>
-    <id>https://insistgang.top/posts/fall-asleep-fast.html</id>
-    <published>2026-02-26T06:10:00.000Z</published>
-    <updated>2026-02-26T06:10:46.074Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/fall-asleep-fast/00_cover.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="生活技巧" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="生活技巧" scheme="https://insistgang.top/tags/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="睡眠" scheme="https://insistgang.top/tags/%E7%9D%A1%E7%9C%A0/"/>
-    
-    <category term="健康" scheme="https://insistgang.top/tags/%E5%81%A5%E5%BA%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Claude的Skills是什么</title>
-    <link href="https://insistgang.top/posts/claude-skills-intro.html"/>
-    <id>https://insistgang.top/posts/claude-skills-intro.html</id>
-    <published>2026-02-26T05:50:00.000Z</published>
-    <updated>2026-02-26T06:01:25.590Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/claude-skills-intro/00_cover.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
-    
-    <category term="Claude" scheme="https://insistgang.top/tags/Claude/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/tags/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
   </entry>
   
