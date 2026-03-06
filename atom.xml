@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-05T09:21:55.844Z</updated>
+  <updated>2026-03-06T10:52:44.643Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MiniMax Agent 全新 MaxClaw 模式深度解析：开箱即用的 AI 生产力革命</title>
+    <link href="https://insistgang.top/posts/maxclaw-deep-dive.html"/>
+    <id>https://insistgang.top/posts/maxclaw-deep-dive.html</id>
+    <published>2026-03-06T10:50:00.000Z</published>
+    <updated>2026-03-06T10:52:44.643Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;原创 | 研途炼钢&lt;/p&gt;
+&lt;p&gt;当 OpenClaw 还在让开发者折腾 Docker 和 API Key 的时候，MiniMax 已经把”一键部署 AI Agent”变成了现实。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术评测" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="MaxClaw" scheme="https://insistgang.top/tags/MaxClaw/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Situational Awareness》精华提取：一个前OpenAI研究员眼中的未来十年</title>
+    <link href="https://insistgang.top/posts/situational-awareness-essence.html"/>
+    <id>https://insistgang.top/posts/situational-awareness-essence.html</id>
+    <published>2026-03-06T10:50:00.000Z</published>
+    <updated>2026-03-06T10:52:45.056Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;素材整理 | 研路炼钢&lt;/p&gt;
+&lt;p&gt;原文：Leopold Aschenbrenner，《Situational Awareness: The Decade</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
+    
+    <category term="AGI" scheme="https://insistgang.top/tags/AGI/"/>
+    
+    <category term="投资" scheme="https://insistgang.top/tags/%E6%8A%95%E8%B5%84/"/>
+    
+    <category term="趋势" scheme="https://insistgang.top/tags/%E8%B6%8B%E5%8A%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>教资科目二｜教育知识与能力·考前一夜终极速览</title>
@@ -116,37 +191,6 @@
   </entry>
   
   <entry>
-    <title>研究生最该补的一课：怎么跟导师说话</title>
-    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
-    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
-    <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.953Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
-    
-    
-    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
-    
-    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>研究生写论文的第一课，不是写，是抄</title>
     <link href="https://insistgang.top/posts/graduate-paper-writing.html"/>
     <id>https://insistgang.top/posts/graduate-paper-writing.html</id>
@@ -174,6 +218,37 @@
     <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
     
     <category term="学术" scheme="https://insistgang.top/tags/%E5%AD%A6%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生最该补的一课：怎么跟导师说话</title>
+    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
+    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
+    <published>2026-03-05T08:30:00.000Z</published>
+    <updated>2026-03-05T08:32:05.953Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
     
   </entry>
   
@@ -522,60 +597,6 @@
     <category term="Qwen" scheme="https://insistgang.top/tags/Qwen/"/>
     
     <category term="模型评测" scheme="https://insistgang.top/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年2月27日</title>
-    <link href="https://insistgang.top/posts/0227b4e2.html"/>
-    <id>https://insistgang.top/posts/0227b4e2.html</id>
-    <published>2026-02-26T16:00:00.000Z</published>
-    <updated>2026-03-02T08:10:56.986Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2026年2月27日-星期五&quot;&gt;&lt;a href=&quot;#2026年2月27日-星期五&quot; class=&quot;headerlink&quot; title=&quot;2026年2月27日 星期五&quot;&gt;&lt;/a&gt;2026年2月27日 星期五&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Discord、X、Telegram：三个你迟早会用到的海外平台</title>
-    <link href="https://insistgang.top/posts/discord-x-telegram-guide.html"/>
-    <id>https://insistgang.top/posts/discord-x-telegram-guide.html</id>
-    <published>2026-02-26T07:45:00.000Z</published>
-    <updated>2026-02-26T07:36:42.757Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Discord、X、Telegram：三个你迟早会用到的海外平台&quot;&gt;&lt;a href=&quot;#Discord、X、Telegram：三个你迟早会用到的海外平台&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="工具" scheme="https://insistgang.top/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="海外平台" scheme="https://insistgang.top/tags/%E6%B5%B7%E5%A4%96%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="信息获取" scheme="https://insistgang.top/tags/%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     
   </entry>
   
