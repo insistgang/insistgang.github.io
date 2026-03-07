@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-06T10:52:44.643Z</updated>
+  <updated>2026-03-07T14:20:26.376Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年3月7日</title>
+    <link href="https://insistgang.top/posts/0307a7bd.html"/>
+    <id>https://insistgang.top/posts/0307a7bd.html</id>
+    <published>2026-03-06T16:00:00.000Z</published>
+    <updated>2026-03-07T14:20:26.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026年3月7日-星期六&quot;&gt;&lt;a href=&quot;#2026年3月7日-星期六&quot; class=&quot;headerlink&quot; title=&quot;2026年3月7日 星期六&quot;&gt;&lt;/a&gt;2026年3月7日 星期六&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>MiniMax Agent 全新 MaxClaw 模式深度解析：开箱即用的 AI 生产力革命</title>
@@ -564,39 +587,6 @@
     
     
     <category term="月复盘" scheme="https://insistgang.top/tags/%E6%9C%88%E5%A4%8D%E7%9B%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年AI编程模型选型指南：Qwen Code 10款模型深度横评</title>
-    <link href="https://insistgang.top/posts/qwen-code-model-analysis.html"/>
-    <id>https://insistgang.top/posts/qwen-code-model-analysis.html</id>
-    <published>2026-02-27T04:30:00.000Z</published>
-    <updated>2026-02-27T05:03:08.515Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/qwen-code-model-analysis/00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2026年AI编程模型选型指南：Qwen Code</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI编程" scheme="https://insistgang.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Qwen" scheme="https://insistgang.top/tags/Qwen/"/>
-    
-    <category term="模型评测" scheme="https://insistgang.top/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B/"/>
     
   </entry>
   
