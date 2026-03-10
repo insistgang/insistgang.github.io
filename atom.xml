@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-08T14:27:07.847Z</updated>
+  <updated>2026-03-09T14:49:07.844Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年3月9日</title>
+    <link href="https://insistgang.top/posts/0309c3f8.html"/>
+    <id>https://insistgang.top/posts/0309c3f8.html</id>
+    <published>2026-03-08T16:00:00.000Z</published>
+    <updated>2026-03-09T14:49:07.844Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026年3月9日-星期日&quot;&gt;&lt;a href=&quot;#2026年3月9日-星期日&quot; class=&quot;headerlink&quot; title=&quot;2026年3月9日 星期日&quot;&gt;&lt;/a&gt;2026年3月9日 星期日&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年3月8日</title>
@@ -115,9 +138,9 @@
     
     <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
     <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
     
     <category term="MaxClaw" scheme="https://insistgang.top/tags/MaxClaw/"/>
     
@@ -184,39 +207,6 @@
   </entry>
   
   <entry>
-    <title>教资科目二｜教育知识与能力·考前一夜终极速览</title>
-    <link href="https://insistgang.top/posts/teacher-cert-education-knowledge.html"/>
-    <id>https://insistgang.top/posts/teacher-cert-education-knowledge.html</id>
-    <published>2026-03-05T09:15:00.000Z</published>
-    <updated>2026-03-05T09:21:55.844Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/teacher-cert-education-knowledge/cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="考试攻略" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E8%80%83%E8%AF%95%E6%94%BB%E7%95%A5/"/>
-    
-    
-    <category term="教资" scheme="https://insistgang.top/tags/%E6%95%99%E8%B5%84/"/>
-    
-    <category term="考试" scheme="https://insistgang.top/tags/%E8%80%83%E8%AF%95/"/>
-    
-    <category term="教育知识与能力" scheme="https://insistgang.top/tags/%E6%95%99%E8%82%B2%E7%9F%A5%E8%AF%86%E4%B8%8E%E8%83%BD%E5%8A%9B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>教资综合素质｜考前一夜速览手册</title>
     <link href="https://insistgang.top/posts/teacher-cert-comprehensive-quality.html"/>
     <id>https://insistgang.top/posts/teacher-cert-comprehensive-quality.html</id>
@@ -250,18 +240,20 @@
   </entry>
   
   <entry>
-    <title>研究生写论文的第一课，不是写，是抄</title>
-    <link href="https://insistgang.top/posts/graduate-paper-writing.html"/>
-    <id>https://insistgang.top/posts/graduate-paper-writing.html</id>
-    <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.517Z</updated>
+    <title>教资科目二｜教育知识与能力·考前一夜终极速览</title>
+    <link href="https://insistgang.top/posts/teacher-cert-education-knowledge.html"/>
+    <id>https://insistgang.top/posts/teacher-cert-education-knowledge.html</id>
+    <published>2026-03-05T09:15:00.000Z</published>
+    <updated>2026-03-05T09:21:55.844Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/teacher-cert-education-knowledge/cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡</summary>
         
       
     
@@ -269,14 +261,14 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    <category term="考试攻略" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E8%80%83%E8%AF%95%E6%94%BB%E7%95%A5/"/>
     
     
-    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    <category term="教资" scheme="https://insistgang.top/tags/%E6%95%99%E8%B5%84/"/>
     
-    <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    <category term="考试" scheme="https://insistgang.top/tags/%E8%80%83%E8%AF%95/"/>
     
-    <category term="学术" scheme="https://insistgang.top/tags/%E5%AD%A6%E6%9C%AF/"/>
+    <category term="教育知识与能力" scheme="https://insistgang.top/tags/%E6%95%99%E8%82%B2%E7%9F%A5%E8%AF%86%E4%B8%8E%E8%83%BD%E5%8A%9B/"/>
     
   </entry>
   
@@ -305,11 +297,42 @@
     
     <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
     <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
     <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生写论文的第一课，不是写，是抄</title>
+    <link href="https://insistgang.top/posts/graduate-paper-writing.html"/>
+    <id>https://insistgang.top/posts/graduate-paper-writing.html</id>
+    <published>2026-03-05T08:30:00.000Z</published>
+    <updated>2026-03-05T08:32:05.517Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="学术" scheme="https://insistgang.top/tags/%E5%AD%A6%E6%9C%AF/"/>
     
   </entry>
   
@@ -541,40 +564,6 @@
     <category term="Qwen Code" scheme="https://insistgang.top/tags/Qwen-Code/"/>
     
     <category term="Kimi Code" scheme="https://insistgang.top/tags/Kimi-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Claude Code 接入 GLM-5 实战教程</title>
-    <link href="https://insistgang.top/posts/claude-code-glm5-tutorial.html"/>
-    <id>https://insistgang.top/posts/claude-code-glm5-tutorial.html</id>
-    <published>2026-02-28T02:00:00.000Z</published>
-    <updated>2026-02-28T10:24:33.387Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/claude-code-glm5-tutorial/claude-code-glm5_00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这篇是我实测可用的一套配置，目标是：让 &lt;code&gt;claude&lt;/code&gt; 命令走</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
-    
-    <category term="GLM-5" scheme="https://insistgang.top/tags/GLM-5/"/>
-    
-    <category term="智谱AI" scheme="https://insistgang.top/tags/%E6%99%BA%E8%B0%B1AI/"/>
-    
-    <category term="配置教程" scheme="https://insistgang.top/tags/%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
