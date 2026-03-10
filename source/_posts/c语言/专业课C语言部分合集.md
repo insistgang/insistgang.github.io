@@ -3,7 +3,6 @@ title: 专业课C语言部分合集
 tags:
   - 考研
   - C语言
-cover: img/c.jpeg
 abbrlink: 69ae16d2
 date: 2022-08-07 13:48:20
 ---

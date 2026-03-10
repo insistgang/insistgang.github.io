@@ -6,7 +6,6 @@ tags:
 categories:
   - 教程
   - Python
-cover: img/Python.jpeg
 abbrlink: '56761e78'
 date: 2022-02-09 19:44:18
 ---

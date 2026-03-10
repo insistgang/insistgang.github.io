@@ -6,7 +6,6 @@ tags:
 categories:
   - 读书笔记
   - Python
-cover: img/studypython.png
 abbrlink: ae2ba9b2
 date: 2022-02-10 19:37:26
 ---
