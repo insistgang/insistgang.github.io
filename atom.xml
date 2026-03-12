@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-09T14:49:07.844Z</updated>
+  <updated>2026-03-10T14:10:31.285Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026年3月10日</title>
+    <link href="https://insistgang.top/posts/0310a7b2.html"/>
+    <id>https://insistgang.top/posts/0310a7b2.html</id>
+    <published>2026-03-09T16:00:00.000Z</published>
+    <updated>2026-03-10T14:10:31.285Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026年3月10日-星期一&quot;&gt;&lt;a href=&quot;#2026年3月10日-星期一&quot; class=&quot;headerlink&quot; title=&quot;2026年3月10日 星期一&quot;&gt;&lt;/a&gt;2026年3月10日 星期一&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026年3月9日</title>
@@ -273,18 +296,18 @@
   </entry>
   
   <entry>
-    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
-    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
-    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
+    <title>研究生最该补的一课：怎么跟导师说话</title>
+    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
+    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
     <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.015Z</updated>
+    <updated>2026-03-05T08:32:05.953Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img</summary>
         
       
     
@@ -292,16 +315,14 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
     
     
-    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
     
-    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
     
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
-    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
+    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
     
   </entry>
   
@@ -337,18 +358,18 @@
   </entry>
   
   <entry>
-    <title>研究生最该补的一课：怎么跟导师说话</title>
-    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
-    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
+    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
+    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
+    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
     <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.953Z</updated>
+    <updated>2026-03-05T08:32:05.015Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
         
       
     
@@ -356,14 +377,16 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
-    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
     
   </entry>
   
@@ -527,43 +550,6 @@
     <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
     <category term="计划" scheme="https://insistgang.top/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年AI编程助手终极横评：五款主流工具深度测评与选型指南</title>
-    <link href="https://insistgang.top/posts/ai-coding-tools-review-2026.html"/>
-    <id>https://insistgang.top/posts/ai-coding-tools-review-2026.html</id>
-    <published>2026-02-28T02:00:00.000Z</published>
-    <updated>2026-02-28T10:24:20.928Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-coding-tools-review-2026/ai-coding-tools_00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;AI编程助手已从”锦上添花”变成”效率刚需”。Claude</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI编程" scheme="https://insistgang.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Claude Code" scheme="https://insistgang.top/tags/Claude-Code/"/>
-    
-    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
-    
-    <category term="Qwen Code" scheme="https://insistgang.top/tags/Qwen-Code/"/>
-    
-    <category term="Kimi Code" scheme="https://insistgang.top/tags/Kimi-Code/"/>
     
   </entry>
   
