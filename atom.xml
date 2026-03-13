@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-12T14:14:05.368Z</updated>
+  <updated>2026-03-13T16:05:47.222Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2026 年 3 月 13 日</title>
+    <link href="https://insistgang.top/posts/0313f5a8.html"/>
+    <id>https://insistgang.top/posts/0313f5a8.html</id>
+    <published>2026-03-12T16:00:00.000Z</published>
+    <updated>2026-03-13T16:05:47.222Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026-年-3-月-13-日-星期五&quot;&gt;&lt;a href=&quot;#2026-年-3-月-13-日-星期五&quot; class=&quot;headerlink&quot; title=&quot;2026 年 3 月 13 日 星期五&quot;&gt;&lt;/a&gt;2026 年 3 月 13 日 星期五&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2026 年 3 月 12 日</title>
     <link href="https://insistgang.top/posts/0312d9e5.html"/>
     <id>https://insistgang.top/posts/0312d9e5.html</id>
     <published>2026-03-11T16:00:00.000Z</published>
-    <updated>2026-03-12T14:14:05.368Z</updated>
+    <updated>2026-03-12T15:26:28.583Z</updated>
     
     
       
@@ -342,18 +365,18 @@
   </entry>
   
   <entry>
-    <title>研究生最该补的一课：怎么跟导师说话</title>
-    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
-    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
+    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
+    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
+    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
     <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.953Z</updated>
+    <updated>2026-03-05T08:32:05.015Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
         
       
     
@@ -361,14 +384,16 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
-    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
     
   </entry>
   
@@ -404,18 +429,18 @@
   </entry>
   
   <entry>
-    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
-    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
-    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
+    <title>研究生最该补的一课：怎么跟导师说话</title>
+    <link href="https://insistgang.top/posts/graduate-efficient-communication.html"/>
+    <id>https://insistgang.top/posts/graduate-efficient-communication.html</id>
     <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.015Z</updated>
+    <updated>2026-03-05T08:32:05.953Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img</summary>
         
       
     
@@ -423,16 +448,14 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
     
     
-    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
     
-    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    <category term="沟通技巧" scheme="https://insistgang.top/tags/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
     
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
-    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
+    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
     
   </entry>
   
@@ -525,29 +548,6 @@
     
     
     <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第9周复盘（2月23日-3月1日）</title>
-    <link href="https://insistgang.top/posts/week9review2026.html"/>
-    <id>https://insistgang.top/posts/week9review2026.html</id>
-    <published>2026-03-01T16:00:00.000Z</published>
-    <updated>2026-03-02T03:02:20.985Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第9周复盘（2月23日-3月1日）&quot;&gt;&lt;a href=&quot;#第9周复盘（2月23日-3月1日）&quot; class=&quot;headerlink&quot; title=&quot;第9周复盘（2月23日 ~ 3月1日）&quot;&gt;&lt;/a&gt;第9周复盘（2月23日 ~ 3月1日）&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    
-    <category term="周复盘" scheme="https://insistgang.top/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
