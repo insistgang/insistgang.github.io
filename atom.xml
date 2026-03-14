@@ -263,9 +263,9 @@
     <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
-    
     <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
     <category term="AGI" scheme="https://insistgang.top/tags/AGI/"/>
     
@@ -387,11 +387,11 @@
     <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
     <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
     <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
     
