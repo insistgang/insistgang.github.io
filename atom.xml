@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-20T05:43:15.855Z</updated>
+  <updated>2026-03-20T06:09:36.249Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人和人说话，也是要消耗 Token 的</title>
+    <link href="https://insistgang.top/posts/token-conversation.html"/>
+    <id>https://insistgang.top/posts/token-conversation.html</id>
+    <published>2026-03-20T05:50:00.000Z</published>
+    <updated>2026-03-20T06:09:36.249Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/token-conversation/03_00_token_conversation_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;最近听到一个说法，觉得特别准：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;人和人之间的对话，也是需要消耗</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="人际关系" scheme="https://insistgang.top/tags/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB/"/>
+    
+    <category term="精力管理" scheme="https://insistgang.top/tags/%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工作与生活的平衡？算了吧</title>
+    <link href="https://insistgang.top/posts/work-life-balance.html"/>
+    <id>https://insistgang.top/posts/work-life-balance.html</id>
+    <published>2026-03-20T05:50:00.000Z</published>
+    <updated>2026-03-20T06:09:35.500Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/work-life-balance/01_00_work_life_balance_cover.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="生活感悟" scheme="https://insistgang.top/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="职场" scheme="https://insistgang.top/tags/%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>螳螂与重卡</title>
+    <link href="https://insistgang.top/posts/mantis-and-truck.html"/>
+    <id>https://insistgang.top/posts/mantis-and-truck.html</id>
+    <published>2026-03-20T05:50:00.000Z</published>
+    <updated>2026-03-20T06:09:35.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/mantis-and-truck/02_00_mantis_truck_cover.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="思考" scheme="https://insistgang.top/tags/%E6%80%9D%E8%80%83/"/>
+    
+    <category term="认知" scheme="https://insistgang.top/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenClaw 生态里，真的有人赚到钱了</title>
@@ -433,99 +516,6 @@
     <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
     
     <category term="MaxClaw" scheme="https://insistgang.top/tags/MaxClaw/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Situational Awareness》精华提取：一个前OpenAI研究员眼中的未来十年</title>
-    <link href="https://insistgang.top/posts/situational-awareness-essence.html"/>
-    <id>https://insistgang.top/posts/situational-awareness-essence.html</id>
-    <published>2026-03-06T10:50:00.000Z</published>
-    <updated>2026-03-06T10:52:45.056Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;素材整理 | 研路炼钢&lt;/p&gt;
-&lt;p&gt;原文：Leopold Aschenbrenner，《Situational Awareness: The Decade</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
-    
-    <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
-    
-    <category term="AGI" scheme="https://insistgang.top/tags/AGI/"/>
-    
-    <category term="投资" scheme="https://insistgang.top/tags/%E6%8A%95%E8%B5%84/"/>
-    
-    <category term="趋势" scheme="https://insistgang.top/tags/%E8%B6%8B%E5%8A%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年3月6日</title>
-    <link href="https://insistgang.top/posts/0306d4e1.html"/>
-    <id>https://insistgang.top/posts/0306d4e1.html</id>
-    <published>2026-03-05T16:00:00.000Z</published>
-    <updated>2026-03-08T15:12:33.492Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2026年3月6日-星期五&quot;&gt;&lt;a href=&quot;#2026年3月6日-星期五&quot; class=&quot;headerlink&quot; title=&quot;2026年3月6日 星期五&quot;&gt;&lt;/a&gt;2026年3月6日 星期五&lt;/h1&gt;&lt;h2 id=&quot;昨日计划完成情况&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>教资科目二｜教育知识与能力·考前一夜终极速览</title>
-    <link href="https://insistgang.top/posts/teacher-cert-education-knowledge.html"/>
-    <id>https://insistgang.top/posts/teacher-cert-education-knowledge.html</id>
-    <published>2026-03-05T09:15:00.000Z</published>
-    <updated>2026-03-05T09:21:55.844Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/teacher-cert-education-knowledge/cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="考试攻略" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E8%80%83%E8%AF%95%E6%94%BB%E7%95%A5/"/>
-    
-    
-    <category term="教资" scheme="https://insistgang.top/tags/%E6%95%99%E8%B5%84/"/>
-    
-    <category term="考试" scheme="https://insistgang.top/tags/%E8%80%83%E8%AF%95/"/>
-    
-    <category term="教育知识与能力" scheme="https://insistgang.top/tags/%E6%95%99%E8%82%B2%E7%9F%A5%E8%AF%86%E4%B8%8E%E8%83%BD%E5%8A%9B/"/>
     
   </entry>
   
