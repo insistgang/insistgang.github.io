@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-18T15:01:55.377Z</updated>
+  <updated>2026-03-20T04:45:52.121Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 时代，我不想再只当观众了</title>
+    <link href="https://insistgang.top/posts/ai-anxiety-action-guide.html"/>
+    <id>https://insistgang.top/posts/ai-anxiety-action-guide.html</id>
+    <published>2026-03-20T04:40:00.000Z</published>
+    <updated>2026-03-20T04:45:52.121Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-anxiety-action-guide/00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;每天刷新闻，都是”某某大模型又刷新纪录”、”AI 取代 XX</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="职业发展" scheme="https://insistgang.top/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+    <category term="行动指南" scheme="https://insistgang.top/tags/%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026 年 3 月 19 日</title>
+    <link href="https://insistgang.top/posts/0319a3f7.html"/>
+    <id>https://insistgang.top/posts/0319a3f7.html</id>
+    <published>2026-03-18T16:00:00.000Z</published>
+    <updated>2026-03-19T14:24:27.934Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026-年-3-月-19-日-星期四&quot;&gt;&lt;a href=&quot;#2026-年-3-月-19-日-星期四&quot; class=&quot;headerlink&quot; title=&quot;2026 年 3 月 19 日 星期四&quot;&gt;&lt;/a&gt;2026 年 3 月 19 日 星期四&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2026 年 3 月 18 日</title>
@@ -345,9 +398,9 @@
     
     <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
     
-    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
-    
     <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
     
     <category term="MaxClaw" scheme="https://insistgang.top/tags/MaxClaw/"/>
     
@@ -378,9 +431,9 @@
     <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
-    
     <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="OpenAI" scheme="https://insistgang.top/tags/OpenAI/"/>
     
     <category term="AGI" scheme="https://insistgang.top/tags/AGI/"/>
     
@@ -410,39 +463,6 @@
     
     
     <category term="日记" scheme="https://insistgang.top/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>教资综合素质｜考前一夜速览手册</title>
-    <link href="https://insistgang.top/posts/teacher-cert-comprehensive-quality.html"/>
-    <id>https://insistgang.top/posts/teacher-cert-comprehensive-quality.html</id>
-    <published>2026-03-05T09:15:00.000Z</published>
-    <updated>2026-03-05T09:21:55.334Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/teacher-cert-comprehensive-quality/cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="考试攻略" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E8%80%83%E8%AF%95%E6%94%BB%E7%95%A5/"/>
-    
-    
-    <category term="教资" scheme="https://insistgang.top/tags/%E6%95%99%E8%B5%84/"/>
-    
-    <category term="考试" scheme="https://insistgang.top/tags/%E8%80%83%E8%AF%95/"/>
-    
-    <category term="综合素质" scheme="https://insistgang.top/tags/%E7%BB%BC%E5%90%88%E7%B4%A0%E8%B4%A8/"/>
     
   </entry>
   
@@ -480,51 +500,20 @@
   </entry>
   
   <entry>
-    <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
-    <link href="https://insistgang.top/posts/minimax-agent-vs-qoderwork.html"/>
-    <id>https://insistgang.top/posts/minimax-agent-vs-qoderwork.html</id>
-    <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.015Z</updated>
+    <title>教资综合素质｜考前一夜速览手册</title>
+    <link href="https://insistgang.top/posts/teacher-cert-comprehensive-quality.html"/>
+    <id>https://insistgang.top/posts/teacher-cert-comprehensive-quality.html</id>
+    <published>2026-03-05T09:15:00.000Z</published>
+    <updated>2026-03-05T09:21:55.334Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-    
-    
-    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
-    
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
-    <category term="阿里" scheme="https://insistgang.top/tags/%E9%98%BF%E9%87%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>研究生写论文的第一课，不是写，是抄</title>
-    <link href="https://insistgang.top/posts/graduate-paper-writing.html"/>
-    <id>https://insistgang.top/posts/graduate-paper-writing.html</id>
-    <published>2026-03-05T08:30:00.000Z</published>
-    <updated>2026-03-05T08:32:05.517Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/teacher-cert-comprehensive-quality/cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡</summary>
         
       
     
@@ -532,14 +521,14 @@
     
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
-    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    <category term="考试攻略" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E8%80%83%E8%AF%95%E6%94%BB%E7%95%A5/"/>
     
     
-    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    <category term="教资" scheme="https://insistgang.top/tags/%E6%95%99%E8%B5%84/"/>
     
-    <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    <category term="考试" scheme="https://insistgang.top/tags/%E8%80%83%E8%AF%95/"/>
     
-    <category term="学术" scheme="https://insistgang.top/tags/%E5%AD%A6%E6%9C%AF/"/>
+    <category term="综合素质" scheme="https://insistgang.top/tags/%E7%BB%BC%E5%90%88%E7%B4%A0%E8%B4%A8/"/>
     
   </entry>
   

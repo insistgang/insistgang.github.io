@@ -4,6 +4,54 @@
   
     
     <entry>
+      <title>AI 时代，我不想再只当观众了</title>
+      <link href="/posts/ai-anxiety-action-guide.html"/>
+      <url>/posts/ai-anxiety-action-guide.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/ai-anxiety-action-guide/00_cover.png" alt="封面"></p><p>每天刷新闻，都是”某某大模型又刷新纪录”、”AI 取代 XX 岗位”。</p><p>说实话，看完之后你什么感觉？</p><p>反正我的感觉是——焦虑，但又不知道从哪下手。</p><p>FOMO（错失恐惧症）在 AI 时代被拉满了。你觉得自己落后了，但又不确定该往哪个方向追。</p><p>今天这篇文章，不讲大道理，只给你<strong>一套”从明天就能动手”的行动清单</strong>。</p><p>按门槛高低分了三层，挑一个适合自己的，先干起来再说。</p><hr><h2 id="第一层：本周就能开始"><a href="#第一层：本周就能开始" class="headerlink" title="第一层：本周就能开始"></a>第一层：本周就能开始</h2><p><img src="/img/ai-anxiety-action-guide/01_first_layer_this_week.png" alt="第一层配图"></p><h3 id="1-把-AI-变成你的「外接大脑」"><a href="#1-把-AI-变成你的「外接大脑」" class="headerlink" title="1. 把 AI 变成你的「外接大脑」"></a>1. 把 AI 变成你的「外接大脑」</h3><p>你不需要会训模型，你只需要学会<strong>用</strong>模型。</p><p>具体怎么做？找到你每天最重复、最无聊的工作，交给 AI。</p><p>比如：</p><ul><li>每天下班前，让 AI 自动总结你的工作日志</li><li>把杂乱的聊天记录、会议纪要丢给它整理摘要</li><li>让 AI 帮你分析 Excel 数据、生成周报初稿</li></ul><p>别小看这些”小事”。每周省下 5-10 小时，就是你学新东西的时间。</p><p><strong>今天就能做的一件事：</strong> 用任意一个大模型的 API，写一个 Python 小脚本，让它每天帮你总结工作日志。不需要完美，能跑就行。</p><h3 id="2-做-AI-时代的「翻译官」"><a href="#2-做-AI-时代的「翻译官」" class="headerlink" title="2. 做 AI 时代的「翻译官」"></a>2. 做 AI 时代的「翻译官」</h3><p>技术更新太快，大多数人看不懂。</p><p>但你可以做那个<strong>把技术讲清楚的人</strong>。</p><p>开一个公众号、小红书、或者即刻账号，用大白话解释新技术。你不需要发明技术，只需要翻译给更多人听。</p><p>积累 1000 个粉丝，咨询、课程、社群的商业机会就来了。</p><p>这条路的核心不是”懂多少”，而是”能讲清楚多少”。</p><hr><h2 id="第二层：用-1-3-个月建立护城河"><a href="#第二层：用-1-3-个月建立护城河" class="headerlink" title="第二层：用 1-3 个月建立护城河"></a>第二层：用 1-3 个月建立护城河</h2><p><img src="/img/ai-anxiety-action-guide/02_second_layer_moat.png" alt="第二层配图"></p><h3 id="3-做一个「小而美」的-AI-工具"><a href="#3-做一个「小而美」的-AI-工具" class="headerlink" title="3. 做一个「小而美」的 AI 工具"></a>3. 做一个「小而美」的 AI 工具</h3><p>千万不要想着做 ChatGPT 竞品。</p><p>找一个<strong>垂直到不能再垂直</strong>的场景，解决一个具体问题：</p><ul><li>你是程序员？做个 VS Code 插件、CLI 小工具</li><li>你是上班族？做个周报生成器、会议纪要整理器</li><li>你是学生？做个论文助手、错题本分析器</li><li>你有行业经验？法律合同审查、医疗报告解读、财务分析……</li></ul><p>现在大模型 API 价格已经低到离谱，正是练手的最佳时机。</p><p><strong>我的建议是：</strong> 用两周时间，做一个解决你自己痛点的工具。哪怕只是自动化你的周报，也是真正的起步。</p><h3 id="4-学习「AI-工程化」技能"><a href="#4-学习「AI-工程化」技能" class="headerlink" title="4. 学习「AI 工程化」技能"></a>4. 学习「AI 工程化」技能</h3><p>你不需要搞懂 Transformer 的数学推导，但下面这几样技能，在招聘市场非常抢手：</p><ul><li><strong>Prompt Engineering</strong>：怎么让模型输出更稳定、更可控</li><li><strong>RAG（检索增强生成）</strong>：让 AI 读懂你的私有数据</li><li><strong>Agent 框架</strong>：LangChain、AutoGen、OpenClaw 等</li><li><strong>轻量微调</strong>：LoRA、QLoRA，用很少的数据定制模型</li></ul><p>这些技能的学习曲线比算法岗平缓得多，但市场需求一点不少。</p><hr><h2 id="第三层：3-12-个月的长期布局"><a href="#第三层：3-12-个月的长期布局" class="headerlink" title="第三层：3-12 个月的长期布局"></a>第三层：3-12 个月的长期布局</h2><p><img src="/img/ai-anxiety-action-guide/03_third_layer_long_term.png" alt="第三层配图"></p><h3 id="5-成为某个细分领域的「AI-专家」"><a href="#5-成为某个细分领域的「AI-专家」" class="headerlink" title="5. 成为某个细分领域的「AI 专家」"></a>5. 成为某个细分领域的「AI 专家」</h3><p>AI 是锤子，你要找到属于自己的那颗钉子。</p><p>公式很简单：<strong>你的现有经验 × AI = 稀缺性</strong>。</p><p>法律 + AI = 合同审查专家。<br>医疗 + AI = 辅助诊断系统开发者。<br>教育 + AI = 个性化学习产品设计师。<br>制造业 + AI = 质检自动化方案专家。</p><p>不需要从零开始。你过去积累的行业知识，就是最大的壁垒。</p><h3 id="6-参与开源，建立技术影响力"><a href="#6-参与开源，建立技术影响力" class="headerlink" title="6. 参与开源，建立技术影响力"></a>6. 参与开源，建立技术影响力</h3><ul><li>给 DeepSeek、LangChain 等开源项目提 PR</li><li>把你做的小工具开源到 GitHub</li><li>写技术博客，记录你的学习和踩坑过程</li></ul><p>影响力不是”一夜爆红”，而是<strong>持续输出</strong>的复利。</p><hr><h2 id="给你的「最小可行行动」"><a href="#给你的「最小可行行动」" class="headerlink" title="给你的「最小可行行动」"></a>给你的「最小可行行动」</h2><p><img src="/img/ai-anxiety-action-guide/04_minimum_viable_action.png" alt="最小可行行动配图"></p><p>如果上面说的你都觉得好，但不知道先做哪个——</p><p>那就这周末做这一件事：</p><blockquote><p><strong>做一个「每日简报生成器」。</strong></p><p>功能很简单：每天早上自动抓取你关心的信息源（技术博客、GitHub Trending、行业新闻），用大模型总结成一份 5 分钟能读完的简报，发到你的微信或邮箱。</p></blockquote><p>为什么推荐这个？</p><p>因为它一箭四雕——</p><ol><li>解决你的信息焦虑（FOMO 的根源就是信息过载）</li><li>实践 API 调用 + 数据处理 + Prompt 设计</li><li>可以开源到 GitHub，作为你的 AI 项目起点</li><li>如果好用，身边朋友都会来问你怎么做的——影响力就是这么来的</li></ol><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/ai-anxiety-action-guide/05_ending.png" alt="结尾配图"></p><p>AI 时代最大的机遇，不是取代别人，而是<strong>放大你自己</strong>。</p><p>你不需要去卷大模型训练——那是大厂和研究院的事。<br>你也不需要焦虑”学不完”——技术永远学不完。</p><p>你真正需要做的，只有三件事：</p><p><strong>找到一个具体的小问题，用 AI 解决它。</strong><br><strong>把解决的过程分享出来。</strong><br><strong>重复十次。</strong></p><p>然后你就会发现，你已经是别人眼里的专家了。</p><p>今天能抓住的机遇，永远比昨天多。</p><p>共勉。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> 职业发展 </tag>
+            
+            <tag> 行动指南 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026 年 3 月 19 日</title>
+      <link href="/posts/0319a3f7.html"/>
+      <url>/posts/0319a3f7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026-年-3-月-19-日-星期四"><a href="#2026-年-3-月-19-日-星期四" class="headerlink" title="2026 年 3 月 19 日 星期四"></a>2026 年 3 月 19 日 星期四</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 论文阅读（打开论文 PDF 1 分钟）→ ✅ <strong>突破！</strong> 多 agent 阅读 100+ 篇论文</li><li><input disabled="" type="checkbox"> 违建数据集标注（继续用 Qwen 辅助）→ ✅ 跑 baseline + 训练模型</li><li><input disabled="" type="checkbox"> 健身（散步 30 分钟或健身房）→ ✅ 健身房 1.5h（练胸）</li><li><input disabled="" type="checkbox"> 早睡（22:00 提醒，23:00 放下手机）→ ❌ 待执行</li></ul><p><strong>完成率</strong>：3/4（论文阅读突破 + 数据集推进 + 健身恢复）</p><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午（黄金时段 9:00-12:00）</strong></p><ul><li>10:00 起床，情绪低落</li><li>10:00-12:00：处理和老师签字的问题（自己要把自己事情放在心上）、跑数据 baseline、和导师沟通奖金分配、和爸爸沟通</li></ul><p><strong>下午</strong></p><ul><li>12:00-13:00：找各年级签字，仕缘带午饭（里脊肉卷饼）</li><li>13:00-14:00：思考人生</li><li>14:00-15:00：<strong>预约心理咨询</strong>，聊天发泄怨气，感觉怨气太重了</li><li>15:00-16:00：找师弟学妹签字、送材料、和学妹聊天缓解，把党支部的书都分掉了</li><li>15:00-17:00：整理批评与自我批评材料，用 Codex 训练 baseline 模型</li></ul><p><strong>晚上</strong></p><ul><li>17:00-18:00：一食堂二楼吃饭（青菜）</li><li>18:00-19:00：在中国图像识别学报下载 100+ 篇论文，<strong>开启多 agent 阅读</strong>，花费快 1 亿 token</li><li>19:00-21:00：<strong>健身房健身</strong>（跑步 30 分钟 + 撸铁 1.5 小时，主要练胸）</li><li>21:00-21:30：买水果，准备送导员</li><li>21:30-22:30：整理电脑，准备回宿舍</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>精力：8/10（心理咨询后状态恢复，健身后更好）</li><li>情绪：6/10（和导师 battle 快崩溃了，但释放后好转）</li><li>专注：⭐⭐⭐⭐☆（论文阅读突破 + 数据集推进 + 健身完成）</li></ul><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>睡眠：约 7h（10 点起床）</li><li>喝水：2L ✅</li><li>运动：健身房 1.5h ✅（跑步 30min + 撸铁 1.5h，主要练胸）</li><li>早餐：未吃 ❌</li><li>午餐：里脊肉卷饼</li><li>晚餐：一食堂二楼（青菜）</li></ul><h2 id="习惯追踪"><a href="#习惯追踪" class="headerlink" title="习惯追踪"></a>习惯追踪</h2><ul><li><input disabled="" type="checkbox"> 论文阅读（9:00-9:01 固定时段）✅ <strong>今天突破！</strong> 多 agent 阅读 100+ 篇</li><li><input disabled="" type="checkbox"> 散步/运动 ✅ 健身房</li><li><input disabled="" type="checkbox"> 23:30 前睡觉 ❌ 待执行</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li><strong>论文阅读突破</strong>：多 agent 阅读 100+ 篇论文，花费 1 亿 token</li><li><strong>心理咨询</strong>：预约并完成，释放怨气，情绪好转</li><li><strong>违建数据集</strong>：跑 baseline + 用 Codex 训练模型</li><li><strong>健身恢复</strong>：跑步 30min + 撸铁 1.5h（练胸）</li><li><strong>党支部事务</strong>：批评与自我批评材料整理完成，书分掉</li><li><strong>沟通</strong>：和爸爸沟通，和学妹聊天</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>和导师 battle 奖金分配，情绪崩溃</li><li>早餐没吃</li><li>早睡待执行</li></ul><h2 id="自我反思"><a href="#自我反思" class="headerlink" title="自我反思"></a>自我反思</h2><p><strong>模式识别</strong>：今天情绪低落（和导师 battle），但通过心理咨询释放了怨气，状态好转。高价值任务（论文阅读 + 数据集）持续推进，健身也恢复了。心理咨询是今天的重要突破。</p><p><strong>滚动未完成检查</strong>：</p><ul><li>论文阅读连续 4 天❌ → <strong>今天突破！</strong> 多 agent 阅读 100+ 篇</li><li>违建数据集连续 3 天推进 ✅ → 保持势头</li><li>健身 3/19✅ → 恢复健身</li><li>早睡连续多天❌ → <strong>今晚强制执行 22:00 提醒</strong></li></ul><p><strong>成功条件回顾</strong>：✅ 打卡机制（健身完成）+ ✅ 约束（心理咨询 + 党支部材料按时）+ ✅ 聚焦（论文阅读突破 + 数据集推进）</p><p><strong>关键洞察</strong>：</p><ol><li>心理咨询是必要的，释放怨气后状态明显好转</li><li>和导师 battle 是正常的，要有自己的立场</li><li>少看钱的事情，多看自我提升的事情</li></ol><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>和导师 battle 快崩溃了，但心理咨询释放了怨气。有想法不要一味利他，自己的立场很重要。少看钱的事情，多看自我提升的事情。</strong></p><p><strong>论文阅读终于突破了！多 agent 阅读是一个好方法，可以把大量论文快速筛选出核心内容。</strong></p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 论文阅读（继续多 agent 阅读，筛选核心论文）9:00-10:00</li><li><input disabled="" type="checkbox"> 违建数据集（继续训练模型，看结果）10:00-12:00 <strong>黄金时段</strong></li><li><input disabled="" type="checkbox"> 健身（散步 30 分钟或健身房）傍晚</li><li><input disabled="" type="checkbox"> 早睡（22:00 提醒，23:00 放下手机）<strong>强制执行</strong></li></ul><hr><p><strong>自动链接</strong>：</p><ul><li>[[02-Thesis/MOC-论文地图]] - 论文研究</li><li>[[06-Growth/Health/体重管理.md]] - 健身打卡</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2026 年 3 月 18 日</title>
       <link href="/posts/0318c7a9.html"/>
       <url>/posts/0318c7a9.html</url>
@@ -271,9 +319,9 @@
             
             <tag> AI </tag>
             
-            <tag> MiniMax </tag>
-            
             <tag> Agent </tag>
+            
+            <tag> MiniMax </tag>
             
             <tag> MaxClaw </tag>
             
@@ -302,9 +350,9 @@
       
         <tags>
             
-            <tag> OpenAI </tag>
-            
             <tag> AI </tag>
+            
+            <tag> OpenAI </tag>
             
             <tag> AGI </tag>
             
@@ -330,37 +378,6 @@
         <tags>
             
             <tag> 日记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>教资综合素质｜考前一夜速览手册</title>
-      <link href="/posts/teacher-cert-comprehensive-quality.html"/>
-      <url>/posts/teacher-cert-comprehensive-quality.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="/img/teacher-cert-comprehensive-quality/cover.png" alt="封面"></p><blockquote><p>💡 3月7日考前最后一弹！本文浓缩《综合素质》全部核心考点，口诀+模板+避坑，助你稳过70分线。</p></blockquote><hr><h2 id="📊-科目一分值地图"><a href="#📊-科目一分值地图" class="headerlink" title="📊 科目一分值地图"></a>📊 科目一分值地图</h2><p>综合素质满分150分（卷面需达95-100分换算后过70分线），三大板块：</p><p><strong>单选29题（58分）</strong>：职业理念4题 + 法律法规8题 + 职业道德4题 + 文化素养9题 + 基本能力4题</p><p><strong>材料分析3题（42分）</strong>：职业理念 + 职业道德 + 阅读理解（各14分）</p><p><strong>作文1题（50分）</strong>：论说文，中学≥1000字，小学≥800字</p><p><strong>核心策略</strong>：职业理念/法规/道德是「必拿分模块」，文化素养靠积累可半放弃，作文是「关键拉分题」。</p><hr><h2 id="一、职业理念（材料分析-选择题）"><a href="#一、职业理念（材料分析-选择题）" class="headerlink" title="一、职业理念（材料分析+选择题）"></a>一、职业理念（材料分析+选择题）</h2><h3 id="口诀总纲：「985」记忆法"><a href="#口诀总纲：「985」记忆法" class="headerlink" title="口诀总纲：「985」记忆法"></a>口诀总纲：「985」记忆法</h3><p>教育观 <strong>9</strong> 句话 ＋ 教师观 <strong>8</strong> 句话 ＋ 学生观 <strong>5</strong> 句话</p><hr><h3 id="①-素质教育观-→-口诀「提速个性创两全」-「学习过人」"><a href="#①-素质教育观-→-口诀「提速个性创两全」-「学习过人」" class="headerlink" title="① 素质教育观 → 口诀「提速个性创两全」+「学习过人」"></a>① 素质教育观 → 口诀「提速个性创两全」+「学习过人」</h3><p><strong>素质教育5大内涵（提速个性创两全）：</strong></p><ul><li><strong>提</strong>：以提高国民素质为根本宗旨</li><li><strong>个性</strong>：促进学生个性发展</li><li><strong>创</strong>：以培养创新精神和实践能力为重点 ⭐最高频</li><li><strong>两全</strong>：面向<strong>全体</strong>学生 ＋ 促进学生<strong>全面</strong>发展</li></ul><p><strong>新课改教学观4大转变（学习过人）：</strong></p><ul><li><strong>学</strong>：从教育者中心 → 学习者中心</li><li><strong>习</strong>：从教会知识 → 教会学习</li><li><strong>过</strong>：从重结论轻过程 → 重结论更重过程</li><li><strong>人</strong>：从关注学科 → 关注人</li></ul><p><strong>⚠️ 常见误区（选择题爱考）：</strong></p><ul><li>多开艺术课 ≠ 素质教育（核心在课堂改革）</li><li>素质教育 ≠ 取消作业（合理减负）</li><li>素质教育不限于义务教育阶段，覆盖<strong>各级各类学校</strong></li><li>素质教育不会降低升学率</li></ul><hr><h3 id="②-学生观-→-口诀「两独一发加两全」"><a href="#②-学生观-→-口诀「两独一发加两全」" class="headerlink" title="② 学生观 → 口诀「两独一发加两全」"></a>② 学生观 → 口诀「两独一发加两全」</h3><ul><li><strong>独立意义的人</strong>：学生有独立思想、是学习主人、不以教师意志为转移</li><li><strong>独特的人</strong>：个性差异 → 因材施教；学生与成人有认知差异</li><li><strong>发展的人</strong>：有发展潜能、处于成长中 → 包容错误、发展眼光</li></ul><p><strong>附加两全</strong>：面向全体 ＋ 全面发展（找不全三点时用来补充）</p><p><strong>材料题关键词对应：</strong></p><ul><li>不同方法/因材施教 → <strong>独特的人</strong></li><li>关注所有学生/不偏袒 → <strong>面向全体</strong></li><li>让学生参与决策/提建议 → <strong>独立意义的人</strong></li><li>相信进步/容错 → <strong>发展的人</strong></li></ul><p><strong>个体身心发展5大规律（选择题+科目二简答）：</strong></p><ul><li><strong>顺序性</strong> → 循序渐进（反例：拔苗助长）</li><li><strong>阶段性</strong> → 分阶段教学（反例：幼儿园教小学内容）</li><li><strong>不平衡性</strong> → 抓关键期</li><li><strong>互补性</strong> → 扬长避短（例：盲人听觉灵敏）</li><li><strong>个别差异性</strong> → 因材施教（例：聪明早慧vs大器晚成）</li></ul><hr><h3 id="③-教师观-→-口诀「见醋放盐」-「你他我他」"><a href="#③-教师观-→-口诀「见醋放盐」-「你他我他」" class="headerlink" title="③ 教师观 → 口诀「见醋放盐」+「你他我他」"></a>③ 教师观 → 口诀「见醋放盐」+「你他我他」</h3><p><strong>教师角色4大转变（见醋放盐）：</strong></p><ul><li><strong>建</strong>（建设者）：课程的建设者与开发者（三级课程：国家/地方/校本）</li><li><strong>促</strong>（促进者）：学生学习的引导者与发展促进者</li><li><strong>放</strong>（开放教师）：社区型开放教师</li><li><strong>研</strong>（研究者）：教育教学的研究者</li></ul><p><strong>教师行为4大转变（你他我他）：</strong></p><ul><li><strong>你</strong>（对学生）：尊重与赞赏</li><li><strong>他</strong>（对教学）：帮助与引导</li><li><strong>我</strong>（对自我）：反思（教学前/中/后）</li><li><strong>他</strong>（对同事）：合作</li></ul><p><strong>材料关键词定位：</strong> 课程开发/校本教材→建设者；问题研究/论文→研究者；同事合作/家长沟通→合作行为</p><hr><h3 id="材料分析题万能模板"><a href="#材料分析题万能模板" class="headerlink" title="材料分析题万能模板"></a>材料分析题万能模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">总：材料中老师的教育行为是正确/错误的，符合/违背了___观的要求。</span><br><span class="line"></span><br><span class="line">分论点1：首先，___要求___。材料中[具体行为]体现了___。</span><br><span class="line">分论点2：其次，___要求___。材料中[具体行为]体现了___。</span><br><span class="line">分论点3：再次，___要求___。材料中[具体行为]体现了___。</span><br><span class="line"></span><br><span class="line">总：综上所述，作为教师应践行___理念，注重___。</span><br></pre></td></tr></table></figure><p><strong>技巧</strong>：优先选材料中最明显的2-3个理论点，每个要点必须结合材料具体描述。</p><hr><h2 id="二、职业道德（材料分析-选择题）"><a href="#二、职业道德（材料分析-选择题）" class="headerlink" title="二、职业道德（材料分析+选择题）"></a>二、职业道德（材料分析+选择题）</h2><h3 id="口诀「三爱两人一终身」"><a href="#口诀「三爱两人一终身」" class="headerlink" title="口诀「三爱两人一终身」"></a>口诀「三爱两人一终身」</h3><table><thead><tr><th>规范</th><th>地位</th><th>核心要点</th><th>材料题频率</th></tr></thead><tbody><tr><td><strong>爱国守法</strong></td><td>基本要求</td><td>遵守法规，依法履职</td><td>❌不考材料题</td></tr><tr><td><strong>爱岗敬业</strong></td><td>本质要求</td><td>认真备课授课，勤恳奉献</td><td>⭐⭐⭐</td></tr><tr><td><strong>关爱学生</strong></td><td><strong>师德灵魂</strong></td><td>全体关爱，严慈相济，禁止体罚/讽刺</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>教书育人</strong></td><td>天职核心</td><td>素质教育，因材施教，不唯分数</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>为人师表</strong></td><td>内在要求</td><td>以身作则，<strong>廉洁从教</strong>，尊重家长同事</td><td>⭐⭐⭐</td></tr><tr><td><strong>终身学习</strong></td><td>发展动力</td><td>知识更新，钻研业务，勇于创新</td><td>⭐⭐⭐</td></tr></tbody></table><p><strong>⚠️ 红线提醒：</strong></p><ul><li>接受家长礼物/礼金 → 违反「为人师表」（无论金额大小、是否主动）</li><li>可接受学生自制贺卡 ✅</li><li>有偿家教 → 违反「为人师表」</li><li>仅以成绩评价学生 → 违反「教书育人」</li></ul><hr><h2 id="三、教育法律法规（8道选择题）"><a href="#三、教育法律法规（8道选择题）" class="headerlink" title="三、教育法律法规（8道选择题）"></a>三、教育法律法规（8道选择题）</h2><h3 id="核心法律速记表"><a href="#核心法律速记表" class="headerlink" title="核心法律速记表"></a>核心法律速记表</h3><table><thead><tr><th>法律</th><th>关键年份</th><th>必记要点</th></tr></thead><tbody><tr><td><strong>《教育法》</strong></td><td>2021修正</td><td>德智体美<strong>劳</strong>；新增革命文化+先进文化；冒名顶替→弊3撤5</td></tr><tr><td><strong>《义务教育法》</strong></td><td>1986立/2006修</td><td>小学+初中9年免学杂费；免试就近入学；<strong>不得开除学生</strong>；禁止分重点校/班；教师工资≥当地公务员</td></tr><tr><td><strong>《教师法》</strong></td><td>1994施行</td><td>教师=「履行教育教学职责的专业人员」；弊3撤5终终身；申诉30日处理</td></tr><tr><td><strong>《未成年人保护法》</strong></td><td>2021.6.1施行</td><td>六大保护：家庭/学校/社会/网络/政府/司法；游戏22:00-8:00禁；不满16周岁不得单独居住</td></tr><tr><td><strong>《预防未成年人犯罪法》</strong></td><td>2021.6.1施行</td><td>不良行为→学校管教；严重不良行为→公安矫治；专门学校纳入国民教育</td></tr></tbody></table><h3 id="高频数字考点"><a href="#高频数字考点" class="headerlink" title="高频数字考点"></a>高频数字考点</h3><ul><li><strong>入学年龄</strong>：6周岁（特殊可延至7周岁）</li><li><strong>教师资格证被撤销</strong>：5年内禁考</li><li><strong>考试作弊</strong>：3年内禁考</li><li><strong>冒名顶替</strong>：2-5年禁考</li><li><strong>班主任工作量</strong>：按标准课时50%计入</li><li><strong>班主任任职</strong>：连续1学年以上</li><li><strong>申诉处理时限</strong>：30日</li></ul><h3 id="教师学历最低要求"><a href="#教师学历最低要求" class="headerlink" title="教师学历最低要求"></a>教师学历最低要求</h3><ul><li>幼儿园：幼师毕业（中专）</li><li>小学：中等师范（中专）</li><li>初中：大专</li><li>高中：本科</li></ul><h3 id="学生伤害事故责任判定口诀"><a href="#学生伤害事故责任判定口诀" class="headerlink" title="学生伤害事故责任判定口诀"></a>学生伤害事故责任判定口诀</h3><p><strong>谁有过错谁担责</strong>：学校有过错→学校担责；学生有过错→学生（监护人）担责；都有过错→各担各的。</p><p>学校<strong>不担责</strong>的典型情形：不可抗力、学生自伤自杀且学校已履行职责、学生特异体质未告知学校。</p><hr><h2 id="四、教师与学生的权利义务"><a href="#四、教师与学生的权利义务" class="headerlink" title="四、教师与学生的权利义务"></a>四、教师与学生的权利义务</h2><h3 id="教师6大权利（选择题）"><a href="#教师6大权利（选择题）" class="headerlink" title="教师6大权利（选择题）"></a>教师6大权利（选择题）</h3><p>教育教学权、科学研究权、管理学生权、获取报酬权、民主管理权、进修培训权</p><h3 id="学生权利三大类"><a href="#学生权利三大类" class="headerlink" title="学生权利三大类"></a>学生权利三大类</h3><p><strong>人身权（最高频）：</strong></p><ul><li><strong>身体健康权</strong>：禁止体罚</li><li><strong>人身自由权</strong>：不得非法搜查/拘禁</li><li><strong>人格尊严权</strong>：不得侮辱/诽谤/歧视</li><li><strong>隐私权</strong>：不得公开成绩排名/日记/信件</li><li><strong>名誉权</strong>：不得恶意评价</li></ul><p><strong>财产权</strong>：不得罚款、不得没收物品不归还、不得强制购买</p><p><strong>受教育权</strong>：受教育机会平等、不得随意开除（义务教育阶段完全禁止开除）</p><hr><h2 id="五、教育惩戒规则（选择题新考点）"><a href="#五、教育惩戒规则（选择题新考点）" class="headerlink" title="五、教育惩戒规则（选择题新考点）"></a>五、教育惩戒规则（选择题新考点）</h2><p><strong>三级惩戒体系：</strong></p><ul><li><strong>轻微违规</strong>（教师可独立实施）：点名批评、课后教导、增加额外任务</li><li><strong>严重违规</strong>（需学校介入）：校内书面检讨、校规校纪教育、暂停参加活动</li><li><strong>情节严重</strong>（小学高年级+中学）：停课停学≤1周、由法治副校长训导</li></ul><p><strong>绝对禁止：</strong> 以击打/刺扎等方式直接造成身体痛苦、超限度罚站/反复抄写、辱骂歧视、因个人情绪惩罚、连坐处罚</p><hr><h2 id="六、阅读理解题（14分）"><a href="#六、阅读理解题（14分）" class="headerlink" title="六、阅读理解题（14分）"></a>六、阅读理解题（14分）</h2><h3 id="解题四步法"><a href="#解题四步法" class="headerlink" title="解题四步法"></a>解题四步法</h3><ol><li><strong>先看题目</strong> → 标记关键词</li><li><strong>带着问题略读</strong> → 抓段落首尾句</li><li><strong>精读目标段</strong> → 关注转折词（但/然而/可是）后内容</li><li><strong>组织答案</strong> → 原文关键词+适当改写</li></ol><h3 id="得分要点"><a href="#得分要点" class="headerlink" title="得分要点"></a>得分要点</h3><ul><li><strong>第一问（4分）</strong> ：概念/词句理解，定位准确即可得分</li><li><strong>第二问（10分）</strong> ：需3-4个层次（观点+分析+例证）</li><li>严禁脱离原文主观发挥，所有分析基于文本</li><li>建议单题15分钟（阅读8分钟+作答7分钟）</li></ul><hr><h2 id="七、作文（50分）→-决定成败！"><a href="#七、作文（50分）→-决定成败！" class="headerlink" title="七、作文（50分）→ 决定成败！"></a>七、作文（50分）→ 决定成败！</h2><h3 id="审题立意4法"><a href="#审题立意4法" class="headerlink" title="审题立意4法"></a>审题立意4法</h3><ol><li><strong>关键词分析法</strong>：提取高频词→联系教育</li><li><strong>辨关系法</strong>：找对立/互补观点→选符合教育价值的角度</li><li><strong>明确褒贬法</strong>：判断价值倾向→结合教育政策</li><li><strong>主体分析法</strong>：从教师/学生/家长角度提炼</li></ol><p><strong>铁律：优先选教育主题立意，降低偏题风险！</strong></p><h3 id="五段三分式结构"><a href="#五段三分式结构" class="headerlink" title="五段三分式结构"></a>五段三分式结构</h3><table><thead><tr><th>段落</th><th>字数</th><th>内容</th></tr></thead><tbody><tr><td>开头段</td><td>~100字</td><td>名言/排比引入 + 亮明中心论点</td></tr><tr><td>分论点1</td><td>~250字</td><td>论点句 + 阐释 + 论据（职业理念知识）</td></tr><tr><td>分论点2</td><td>~250字</td><td>论点句 + 阐释 + 论据（名人名言/政策）</td></tr><tr><td>分论点3</td><td>~250字</td><td>论点句 + 阐释 + 论据（案例/故事）</td></tr><tr><td>结尾段</td><td>~100字</td><td>呼应开头 + 升华意义</td></tr></tbody></table><h3 id="万能素材库"><a href="#万能素材库" class="headerlink" title="万能素材库"></a>万能素材库</h3><p><strong>教育名言：</strong></p><ul><li>孔子：「因材施教」「有教无类」</li><li>陶行知：「生活即教育」「教学做合一」</li><li>叶圣陶：「教育是农业，不是工业」</li><li>苏霍姆林斯基：「没有爱就没有教育」</li></ul><p><strong>万能案例：</strong> 杨昌济与毛泽东（师德/师生关系）、支月英/莫振高（乡村教育奉献精神）</p><p><strong>⚠️ 避坑：</strong> 阅卷30-60秒/篇，结构清晰比文采重要！分论点必须放段首，字数建议多写50字保险。</p><hr><h2 id="八、教育政策文件速记"><a href="#八、教育政策文件速记" class="headerlink" title="八、教育政策文件速记"></a>八、教育政策文件速记</h2><h3 id="《教育强国建设规划纲要（2024-2035年）》"><a href="#《教育强国建设规划纲要（2024-2035年）》" class="headerlink" title="《教育强国建设规划纲要（2024-2035年）》"></a>《教育强国建设规划纲要（2024-2035年）》</h3><ul><li>根本任务：立德树人</li><li>培养目标：德智体美劳全面发展的社会主义建设者和接班人</li><li>2027年目标：教育强国建设取得重大进展</li><li>2035年目标：建成教育强国</li></ul><h3 id="《中国教育现代化2035》八大理念"><a href="#《中国教育现代化2035》八大理念" class="headerlink" title="《中国教育现代化2035》八大理念"></a>《中国教育现代化2035》八大理念</h3><p>更加注重：以德为先、全面发展、面向人人、终身学习、因材施教、知行合一、融合发展、共建共享</p><hr><h2 id="🎯-考前最后checklist"><a href="#🎯-考前最后checklist" class="headerlink" title="🎯 考前最后checklist"></a>🎯 考前最后checklist</h2><ul><li><input disabled="" type="checkbox"> 背熟三大口诀：「提速个性创两全+学习过人」「两独一发加两全」「见醋放盐+你他我他」</li><li><input disabled="" type="checkbox"> 背熟职业道德「三爱两人一终身」</li><li><input disabled="" type="checkbox"> 熟记材料分析题「总-分-总」模板</li><li><input disabled="" type="checkbox"> 掌握法律关键数字（年龄/年限/比例）</li><li><input disabled="" type="checkbox"> 准备3-5个万能作文素材</li><li><input disabled="" type="checkbox"> 作文结构默写一遍「五段三分式」</li></ul><hr><blockquote><p>✊ 认真努力的人都会顺利通过！3月7日，稳了！</p></blockquote><p><strong>Francis | 研途炼钢</strong></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 杂谈 </category>
-          
-          <category> 考试攻略 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教资 </tag>
-            
-            <tag> 考试 </tag>
-            
-            <tag> 综合素质 </tag>
             
         </tags>
       
@@ -400,6 +417,37 @@
     
     
     <entry>
+      <title>教资综合素质｜考前一夜速览手册</title>
+      <link href="/posts/teacher-cert-comprehensive-quality.html"/>
+      <url>/posts/teacher-cert-comprehensive-quality.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/teacher-cert-comprehensive-quality/cover.png" alt="封面"></p><blockquote><p>💡 3月7日考前最后一弹！本文浓缩《综合素质》全部核心考点，口诀+模板+避坑，助你稳过70分线。</p></blockquote><hr><h2 id="📊-科目一分值地图"><a href="#📊-科目一分值地图" class="headerlink" title="📊 科目一分值地图"></a>📊 科目一分值地图</h2><p>综合素质满分150分（卷面需达95-100分换算后过70分线），三大板块：</p><p><strong>单选29题（58分）</strong>：职业理念4题 + 法律法规8题 + 职业道德4题 + 文化素养9题 + 基本能力4题</p><p><strong>材料分析3题（42分）</strong>：职业理念 + 职业道德 + 阅读理解（各14分）</p><p><strong>作文1题（50分）</strong>：论说文，中学≥1000字，小学≥800字</p><p><strong>核心策略</strong>：职业理念/法规/道德是「必拿分模块」，文化素养靠积累可半放弃，作文是「关键拉分题」。</p><hr><h2 id="一、职业理念（材料分析-选择题）"><a href="#一、职业理念（材料分析-选择题）" class="headerlink" title="一、职业理念（材料分析+选择题）"></a>一、职业理念（材料分析+选择题）</h2><h3 id="口诀总纲：「985」记忆法"><a href="#口诀总纲：「985」记忆法" class="headerlink" title="口诀总纲：「985」记忆法"></a>口诀总纲：「985」记忆法</h3><p>教育观 <strong>9</strong> 句话 ＋ 教师观 <strong>8</strong> 句话 ＋ 学生观 <strong>5</strong> 句话</p><hr><h3 id="①-素质教育观-→-口诀「提速个性创两全」-「学习过人」"><a href="#①-素质教育观-→-口诀「提速个性创两全」-「学习过人」" class="headerlink" title="① 素质教育观 → 口诀「提速个性创两全」+「学习过人」"></a>① 素质教育观 → 口诀「提速个性创两全」+「学习过人」</h3><p><strong>素质教育5大内涵（提速个性创两全）：</strong></p><ul><li><strong>提</strong>：以提高国民素质为根本宗旨</li><li><strong>个性</strong>：促进学生个性发展</li><li><strong>创</strong>：以培养创新精神和实践能力为重点 ⭐最高频</li><li><strong>两全</strong>：面向<strong>全体</strong>学生 ＋ 促进学生<strong>全面</strong>发展</li></ul><p><strong>新课改教学观4大转变（学习过人）：</strong></p><ul><li><strong>学</strong>：从教育者中心 → 学习者中心</li><li><strong>习</strong>：从教会知识 → 教会学习</li><li><strong>过</strong>：从重结论轻过程 → 重结论更重过程</li><li><strong>人</strong>：从关注学科 → 关注人</li></ul><p><strong>⚠️ 常见误区（选择题爱考）：</strong></p><ul><li>多开艺术课 ≠ 素质教育（核心在课堂改革）</li><li>素质教育 ≠ 取消作业（合理减负）</li><li>素质教育不限于义务教育阶段，覆盖<strong>各级各类学校</strong></li><li>素质教育不会降低升学率</li></ul><hr><h3 id="②-学生观-→-口诀「两独一发加两全」"><a href="#②-学生观-→-口诀「两独一发加两全」" class="headerlink" title="② 学生观 → 口诀「两独一发加两全」"></a>② 学生观 → 口诀「两独一发加两全」</h3><ul><li><strong>独立意义的人</strong>：学生有独立思想、是学习主人、不以教师意志为转移</li><li><strong>独特的人</strong>：个性差异 → 因材施教；学生与成人有认知差异</li><li><strong>发展的人</strong>：有发展潜能、处于成长中 → 包容错误、发展眼光</li></ul><p><strong>附加两全</strong>：面向全体 ＋ 全面发展（找不全三点时用来补充）</p><p><strong>材料题关键词对应：</strong></p><ul><li>不同方法/因材施教 → <strong>独特的人</strong></li><li>关注所有学生/不偏袒 → <strong>面向全体</strong></li><li>让学生参与决策/提建议 → <strong>独立意义的人</strong></li><li>相信进步/容错 → <strong>发展的人</strong></li></ul><p><strong>个体身心发展5大规律（选择题+科目二简答）：</strong></p><ul><li><strong>顺序性</strong> → 循序渐进（反例：拔苗助长）</li><li><strong>阶段性</strong> → 分阶段教学（反例：幼儿园教小学内容）</li><li><strong>不平衡性</strong> → 抓关键期</li><li><strong>互补性</strong> → 扬长避短（例：盲人听觉灵敏）</li><li><strong>个别差异性</strong> → 因材施教（例：聪明早慧vs大器晚成）</li></ul><hr><h3 id="③-教师观-→-口诀「见醋放盐」-「你他我他」"><a href="#③-教师观-→-口诀「见醋放盐」-「你他我他」" class="headerlink" title="③ 教师观 → 口诀「见醋放盐」+「你他我他」"></a>③ 教师观 → 口诀「见醋放盐」+「你他我他」</h3><p><strong>教师角色4大转变（见醋放盐）：</strong></p><ul><li><strong>建</strong>（建设者）：课程的建设者与开发者（三级课程：国家/地方/校本）</li><li><strong>促</strong>（促进者）：学生学习的引导者与发展促进者</li><li><strong>放</strong>（开放教师）：社区型开放教师</li><li><strong>研</strong>（研究者）：教育教学的研究者</li></ul><p><strong>教师行为4大转变（你他我他）：</strong></p><ul><li><strong>你</strong>（对学生）：尊重与赞赏</li><li><strong>他</strong>（对教学）：帮助与引导</li><li><strong>我</strong>（对自我）：反思（教学前/中/后）</li><li><strong>他</strong>（对同事）：合作</li></ul><p><strong>材料关键词定位：</strong> 课程开发/校本教材→建设者；问题研究/论文→研究者；同事合作/家长沟通→合作行为</p><hr><h3 id="材料分析题万能模板"><a href="#材料分析题万能模板" class="headerlink" title="材料分析题万能模板"></a>材料分析题万能模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">总：材料中老师的教育行为是正确/错误的，符合/违背了___观的要求。</span><br><span class="line"></span><br><span class="line">分论点1：首先，___要求___。材料中[具体行为]体现了___。</span><br><span class="line">分论点2：其次，___要求___。材料中[具体行为]体现了___。</span><br><span class="line">分论点3：再次，___要求___。材料中[具体行为]体现了___。</span><br><span class="line"></span><br><span class="line">总：综上所述，作为教师应践行___理念，注重___。</span><br></pre></td></tr></table></figure><p><strong>技巧</strong>：优先选材料中最明显的2-3个理论点，每个要点必须结合材料具体描述。</p><hr><h2 id="二、职业道德（材料分析-选择题）"><a href="#二、职业道德（材料分析-选择题）" class="headerlink" title="二、职业道德（材料分析+选择题）"></a>二、职业道德（材料分析+选择题）</h2><h3 id="口诀「三爱两人一终身」"><a href="#口诀「三爱两人一终身」" class="headerlink" title="口诀「三爱两人一终身」"></a>口诀「三爱两人一终身」</h3><table><thead><tr><th>规范</th><th>地位</th><th>核心要点</th><th>材料题频率</th></tr></thead><tbody><tr><td><strong>爱国守法</strong></td><td>基本要求</td><td>遵守法规，依法履职</td><td>❌不考材料题</td></tr><tr><td><strong>爱岗敬业</strong></td><td>本质要求</td><td>认真备课授课，勤恳奉献</td><td>⭐⭐⭐</td></tr><tr><td><strong>关爱学生</strong></td><td><strong>师德灵魂</strong></td><td>全体关爱，严慈相济，禁止体罚/讽刺</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>教书育人</strong></td><td>天职核心</td><td>素质教育，因材施教，不唯分数</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>为人师表</strong></td><td>内在要求</td><td>以身作则，<strong>廉洁从教</strong>，尊重家长同事</td><td>⭐⭐⭐</td></tr><tr><td><strong>终身学习</strong></td><td>发展动力</td><td>知识更新，钻研业务，勇于创新</td><td>⭐⭐⭐</td></tr></tbody></table><p><strong>⚠️ 红线提醒：</strong></p><ul><li>接受家长礼物/礼金 → 违反「为人师表」（无论金额大小、是否主动）</li><li>可接受学生自制贺卡 ✅</li><li>有偿家教 → 违反「为人师表」</li><li>仅以成绩评价学生 → 违反「教书育人」</li></ul><hr><h2 id="三、教育法律法规（8道选择题）"><a href="#三、教育法律法规（8道选择题）" class="headerlink" title="三、教育法律法规（8道选择题）"></a>三、教育法律法规（8道选择题）</h2><h3 id="核心法律速记表"><a href="#核心法律速记表" class="headerlink" title="核心法律速记表"></a>核心法律速记表</h3><table><thead><tr><th>法律</th><th>关键年份</th><th>必记要点</th></tr></thead><tbody><tr><td><strong>《教育法》</strong></td><td>2021修正</td><td>德智体美<strong>劳</strong>；新增革命文化+先进文化；冒名顶替→弊3撤5</td></tr><tr><td><strong>《义务教育法》</strong></td><td>1986立/2006修</td><td>小学+初中9年免学杂费；免试就近入学；<strong>不得开除学生</strong>；禁止分重点校/班；教师工资≥当地公务员</td></tr><tr><td><strong>《教师法》</strong></td><td>1994施行</td><td>教师=「履行教育教学职责的专业人员」；弊3撤5终终身；申诉30日处理</td></tr><tr><td><strong>《未成年人保护法》</strong></td><td>2021.6.1施行</td><td>六大保护：家庭/学校/社会/网络/政府/司法；游戏22:00-8:00禁；不满16周岁不得单独居住</td></tr><tr><td><strong>《预防未成年人犯罪法》</strong></td><td>2021.6.1施行</td><td>不良行为→学校管教；严重不良行为→公安矫治；专门学校纳入国民教育</td></tr></tbody></table><h3 id="高频数字考点"><a href="#高频数字考点" class="headerlink" title="高频数字考点"></a>高频数字考点</h3><ul><li><strong>入学年龄</strong>：6周岁（特殊可延至7周岁）</li><li><strong>教师资格证被撤销</strong>：5年内禁考</li><li><strong>考试作弊</strong>：3年内禁考</li><li><strong>冒名顶替</strong>：2-5年禁考</li><li><strong>班主任工作量</strong>：按标准课时50%计入</li><li><strong>班主任任职</strong>：连续1学年以上</li><li><strong>申诉处理时限</strong>：30日</li></ul><h3 id="教师学历最低要求"><a href="#教师学历最低要求" class="headerlink" title="教师学历最低要求"></a>教师学历最低要求</h3><ul><li>幼儿园：幼师毕业（中专）</li><li>小学：中等师范（中专）</li><li>初中：大专</li><li>高中：本科</li></ul><h3 id="学生伤害事故责任判定口诀"><a href="#学生伤害事故责任判定口诀" class="headerlink" title="学生伤害事故责任判定口诀"></a>学生伤害事故责任判定口诀</h3><p><strong>谁有过错谁担责</strong>：学校有过错→学校担责；学生有过错→学生（监护人）担责；都有过错→各担各的。</p><p>学校<strong>不担责</strong>的典型情形：不可抗力、学生自伤自杀且学校已履行职责、学生特异体质未告知学校。</p><hr><h2 id="四、教师与学生的权利义务"><a href="#四、教师与学生的权利义务" class="headerlink" title="四、教师与学生的权利义务"></a>四、教师与学生的权利义务</h2><h3 id="教师6大权利（选择题）"><a href="#教师6大权利（选择题）" class="headerlink" title="教师6大权利（选择题）"></a>教师6大权利（选择题）</h3><p>教育教学权、科学研究权、管理学生权、获取报酬权、民主管理权、进修培训权</p><h3 id="学生权利三大类"><a href="#学生权利三大类" class="headerlink" title="学生权利三大类"></a>学生权利三大类</h3><p><strong>人身权（最高频）：</strong></p><ul><li><strong>身体健康权</strong>：禁止体罚</li><li><strong>人身自由权</strong>：不得非法搜查/拘禁</li><li><strong>人格尊严权</strong>：不得侮辱/诽谤/歧视</li><li><strong>隐私权</strong>：不得公开成绩排名/日记/信件</li><li><strong>名誉权</strong>：不得恶意评价</li></ul><p><strong>财产权</strong>：不得罚款、不得没收物品不归还、不得强制购买</p><p><strong>受教育权</strong>：受教育机会平等、不得随意开除（义务教育阶段完全禁止开除）</p><hr><h2 id="五、教育惩戒规则（选择题新考点）"><a href="#五、教育惩戒规则（选择题新考点）" class="headerlink" title="五、教育惩戒规则（选择题新考点）"></a>五、教育惩戒规则（选择题新考点）</h2><p><strong>三级惩戒体系：</strong></p><ul><li><strong>轻微违规</strong>（教师可独立实施）：点名批评、课后教导、增加额外任务</li><li><strong>严重违规</strong>（需学校介入）：校内书面检讨、校规校纪教育、暂停参加活动</li><li><strong>情节严重</strong>（小学高年级+中学）：停课停学≤1周、由法治副校长训导</li></ul><p><strong>绝对禁止：</strong> 以击打/刺扎等方式直接造成身体痛苦、超限度罚站/反复抄写、辱骂歧视、因个人情绪惩罚、连坐处罚</p><hr><h2 id="六、阅读理解题（14分）"><a href="#六、阅读理解题（14分）" class="headerlink" title="六、阅读理解题（14分）"></a>六、阅读理解题（14分）</h2><h3 id="解题四步法"><a href="#解题四步法" class="headerlink" title="解题四步法"></a>解题四步法</h3><ol><li><strong>先看题目</strong> → 标记关键词</li><li><strong>带着问题略读</strong> → 抓段落首尾句</li><li><strong>精读目标段</strong> → 关注转折词（但/然而/可是）后内容</li><li><strong>组织答案</strong> → 原文关键词+适当改写</li></ol><h3 id="得分要点"><a href="#得分要点" class="headerlink" title="得分要点"></a>得分要点</h3><ul><li><strong>第一问（4分）</strong> ：概念/词句理解，定位准确即可得分</li><li><strong>第二问（10分）</strong> ：需3-4个层次（观点+分析+例证）</li><li>严禁脱离原文主观发挥，所有分析基于文本</li><li>建议单题15分钟（阅读8分钟+作答7分钟）</li></ul><hr><h2 id="七、作文（50分）→-决定成败！"><a href="#七、作文（50分）→-决定成败！" class="headerlink" title="七、作文（50分）→ 决定成败！"></a>七、作文（50分）→ 决定成败！</h2><h3 id="审题立意4法"><a href="#审题立意4法" class="headerlink" title="审题立意4法"></a>审题立意4法</h3><ol><li><strong>关键词分析法</strong>：提取高频词→联系教育</li><li><strong>辨关系法</strong>：找对立/互补观点→选符合教育价值的角度</li><li><strong>明确褒贬法</strong>：判断价值倾向→结合教育政策</li><li><strong>主体分析法</strong>：从教师/学生/家长角度提炼</li></ol><p><strong>铁律：优先选教育主题立意，降低偏题风险！</strong></p><h3 id="五段三分式结构"><a href="#五段三分式结构" class="headerlink" title="五段三分式结构"></a>五段三分式结构</h3><table><thead><tr><th>段落</th><th>字数</th><th>内容</th></tr></thead><tbody><tr><td>开头段</td><td>~100字</td><td>名言/排比引入 + 亮明中心论点</td></tr><tr><td>分论点1</td><td>~250字</td><td>论点句 + 阐释 + 论据（职业理念知识）</td></tr><tr><td>分论点2</td><td>~250字</td><td>论点句 + 阐释 + 论据（名人名言/政策）</td></tr><tr><td>分论点3</td><td>~250字</td><td>论点句 + 阐释 + 论据（案例/故事）</td></tr><tr><td>结尾段</td><td>~100字</td><td>呼应开头 + 升华意义</td></tr></tbody></table><h3 id="万能素材库"><a href="#万能素材库" class="headerlink" title="万能素材库"></a>万能素材库</h3><p><strong>教育名言：</strong></p><ul><li>孔子：「因材施教」「有教无类」</li><li>陶行知：「生活即教育」「教学做合一」</li><li>叶圣陶：「教育是农业，不是工业」</li><li>苏霍姆林斯基：「没有爱就没有教育」</li></ul><p><strong>万能案例：</strong> 杨昌济与毛泽东（师德/师生关系）、支月英/莫振高（乡村教育奉献精神）</p><p><strong>⚠️ 避坑：</strong> 阅卷30-60秒/篇，结构清晰比文采重要！分论点必须放段首，字数建议多写50字保险。</p><hr><h2 id="八、教育政策文件速记"><a href="#八、教育政策文件速记" class="headerlink" title="八、教育政策文件速记"></a>八、教育政策文件速记</h2><h3 id="《教育强国建设规划纲要（2024-2035年）》"><a href="#《教育强国建设规划纲要（2024-2035年）》" class="headerlink" title="《教育强国建设规划纲要（2024-2035年）》"></a>《教育强国建设规划纲要（2024-2035年）》</h3><ul><li>根本任务：立德树人</li><li>培养目标：德智体美劳全面发展的社会主义建设者和接班人</li><li>2027年目标：教育强国建设取得重大进展</li><li>2035年目标：建成教育强国</li></ul><h3 id="《中国教育现代化2035》八大理念"><a href="#《中国教育现代化2035》八大理念" class="headerlink" title="《中国教育现代化2035》八大理念"></a>《中国教育现代化2035》八大理念</h3><p>更加注重：以德为先、全面发展、面向人人、终身学习、因材施教、知行合一、融合发展、共建共享</p><hr><h2 id="🎯-考前最后checklist"><a href="#🎯-考前最后checklist" class="headerlink" title="🎯 考前最后checklist"></a>🎯 考前最后checklist</h2><ul><li><input disabled="" type="checkbox"> 背熟三大口诀：「提速个性创两全+学习过人」「两独一发加两全」「见醋放盐+你他我他」</li><li><input disabled="" type="checkbox"> 背熟职业道德「三爱两人一终身」</li><li><input disabled="" type="checkbox"> 熟记材料分析题「总-分-总」模板</li><li><input disabled="" type="checkbox"> 掌握法律关键数字（年龄/年限/比例）</li><li><input disabled="" type="checkbox"> 准备3-5个万能作文素材</li><li><input disabled="" type="checkbox"> 作文结构默写一遍「五段三分式」</li></ul><hr><blockquote><p>✊ 认真努力的人都会顺利通过！3月7日，稳了！</p></blockquote><p><strong>Francis | 研途炼钢</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+          <category> 考试攻略 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教资 </tag>
+            
+            <tag> 考试 </tag>
+            
+            <tag> 综合素质 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
       <link href="/posts/minimax-agent-vs-qoderwork.html"/>
       <url>/posts/minimax-agent-vs-qoderwork.html</url>
@@ -420,42 +468,11 @@
             
             <tag> AI工具 </tag>
             
-            <tag> MiniMax </tag>
-            
             <tag> Agent </tag>
             
+            <tag> MiniMax </tag>
+            
             <tag> 阿里 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>研究生写论文的第一课，不是写，是抄</title>
-      <link href="/posts/graduate-paper-writing.html"/>
-      <url>/posts/graduate-paper-writing.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_01_cover_paper_writing.png" alt="封面"></p><blockquote><p>景哥说：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p></blockquote><hr><h2 id="我的论文被AI”打架”打回来了"><a href="#我的论文被AI”打架”打回来了" class="headerlink" title="我的论文被AI”打架”打回来了"></a>我的论文被AI”打架”打回来了</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_02_ai_feedback.png" alt="我的论文被AI&quot;打架&quot;打回来了"></p><p>前阵子我把自己那篇井盖检测的论文发给景哥看，想让他帮忙把把关。</p><p>景哥收到之后，做了一件我没想到的事——他把我的论文同时丢给了Gemini和Claude，让两个AI互相挑毛病。</p><p>结果是：”你那篇论文公式太多了，我让Gemini和Claude打架，疯狂的说一堆致命的问题。”</p><p>我当时心态还挺稳的。毕竟论文还在改，有问题正常。但接下来景哥说的话，才是真正让我重新审视自己写论文方式的开始。</p><hr><h2 id="“你模仿的那篇，没啥参考价值”"><a href="#“你模仿的那篇，没啥参考价值”" class="headerlink" title="“你模仿的那篇，没啥参考价值”"></a>“你模仿的那篇，没啥参考价值”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_03_imitate_worthless.png" alt="你模仿的那篇，没啥参考价值"></p><p>我之前写论文的方法很朴素：读了一些论文，觉得差不多理解了方法，就开始动笔写。格式嘛，找了一篇看起来结构类似的文章照着来。</p><p>景哥问我：”你打算和这个发一样的期刊吗？”</p><p>我说不是。</p><p>他说：”那你模仿它干嘛。”</p><p>然后他点开我参考的那篇论文，直接下了判断：”这个做的一般，写的也不行。没啥参考价值，而且还是本科毕业论文。”</p><p>我才意识到，<strong>我连”该模仿谁”都没搞清楚，就开始模仿了。</strong></p><hr><h2 id="景哥的论文写作方法论"><a href="#景哥的论文写作方法论" class="headerlink" title="景哥的论文写作方法论"></a>景哥的论文写作方法论</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_04_writing_methodology.png" alt="景哥的论文写作方法论"></p><p>接下来的对话，景哥系统地给我拆解了一套论文写作的底层逻辑。不是那种教科书式的”摘要怎么写、引言怎么写”，而是更实战的东西。</p><h3 id="1-先选目标期刊，再写论文"><a href="#1-先选目标期刊，再写论文" class="headerlink" title="1. 先选目标期刊，再写论文"></a>1. 先选目标期刊，再写论文</h3><p>这个顺序很多人搞反了。</p><p>大部分研究生（包括之前的我）是先写完论文，然后再去想”这篇能发哪儿”。但景哥的思路完全反过来：<strong>先确定你要投哪个期刊，然后按那个期刊的风格和标准去写。</strong></p><p>为什么？因为每个期刊都有自己的写作偏好。行文风格、段落结构、公式密度、图表规范、参考文献的引用习惯——这些东西期刊之间差异不小。</p><p>景哥原话：”每个期刊都有自己的写作风格和表达方式，投哪个就模仿哪个期刊的表达和风格。”</p><h3 id="2-在目标期刊里找一篇”范文”"><a href="#2-在目标期刊里找一篇”范文”" class="headerlink" title="2. 在目标期刊里找一篇”范文”"></a>2. 在目标期刊里找一篇”范文”</h3><p>确定了目标期刊之后，下一步不是动笔，而是去这个期刊里找一篇和你研究方向最接近的已发表论文。</p><p>这篇论文就是你的”模板”——不是抄它的内容，而是学它的：</p><ul><li><strong>格式和结构</strong>：章节怎么划分的，每个部分大概多长</li><li><strong>写作技巧</strong>：怎么引出问题的，怎么描述方法的，实验部分怎么组织的</li><li><strong>公式的密度和呈现方式</strong>：别人核心放了哪些公式，你也需要有对应的</li><li><strong>参考文献的构成</strong>：引了哪些层次的文献，顶刊顶会占多少比例</li></ul><p>景哥反复强调：”你在这个期刊里面找一个和你写的类似的文章，模仿一下。然后模仿他的，来写你的。”</p><h3 id="3-参考文献是论文的”名片”"><a href="#3-参考文献是论文的”名片”" class="headerlink" title="3. 参考文献是论文的”名片”"></a>3. 参考文献是论文的”名片”</h3><p>这一点我之前完全没意识到。</p><p>景哥让我把参考文献全部换成IEEE Transactions或计算机顶会的论文。我不太理解，问他为什么。</p><p>他的解释很直白：**”引用顶刊顶会是说明你这个有价值。如果引用的内容都是水刊，那不用看你内容，你做的也不行。”**</p><p>更深一层，他说这也是”人情世故”——“换成你是主编、副主编，你也会这样做，希望看到自己期刊类型的东西。引用你想投的这个期刊的，是人情世故。”</p><p>所以参考文献不是写完论文之后随便补的，它是你论文学术定位的一部分。引用什么层次的文献，某种程度上就决定了审稿人对你工作的第一印象。</p><h3 id="4-公式不是越多越好"><a href="#4-公式不是越多越好" class="headerlink" title="4. 公式不是越多越好"></a>4. 公式不是越多越好</h3><p>我的井盖论文里堆了很多公式，我觉得这样显得严谨。</p><p>景哥的看法正好相反——公式太多，反而给审稿人更多的攻击面。他用AI工具去检验，每个公式都可能被挑出问题。</p><p>他说：”Nature、Science文章也有问题，都是自己加限制条件，然后逻辑自恰就行。”</p><p>这句话信息量很大。意思是：<strong>论文不是要证明你的方法”绝对正确”，而是在你设定的条件和范围内，逻辑自洽、实验支撑。</strong> 公式是为了支撑论理，不是为了炫技。不需要推导的公式，直接引用就好；核心创新点的公式，才值得展开。</p><hr><h2 id="论文阅读的正确打开方式"><a href="#论文阅读的正确打开方式" class="headerlink" title="论文阅读的正确打开方式"></a>论文阅读的正确打开方式</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_05_reading_method.png" alt="论文阅读的正确打开方式"></p><p>景哥还纠正了我读论文的习惯。</p><p>我之前的做法是：什么论文都读，学位论文、期刊论文、会议论文混着看，觉得看得越多越好。</p><p>景哥给了一个更清晰的优先级：</p><p><strong>主要看期刊论文。</strong> 期刊论文是你最终要写的东西，它的篇幅、深度、写作方式就是你的目标。先看目标期刊的论文，理解它的”语言”和”套路”。</p><p><strong>想深入理解某个方法，就去看博士论文。</strong> 博士论文写得细、推导完整、解释充分，非常适合用来弄懂一个你在期刊论文里看不明白的技术点。</p><p><strong>学位论文别当主要参考。</strong> 景哥直接说”学位论文，别再看了”（指作为写作参考），因为学位论文的写作标准和期刊论文差距很大。</p><p>用他的话来总结路径就是：<strong>先看期刊论文学写法，不懂的点去博士论文里找解释，弄懂了再回来继续看期刊。</strong></p><hr><h2 id="“做的好很重要，能把事情讲清楚更重要”"><a href="#“做的好很重要，能把事情讲清楚更重要”" class="headerlink" title="“做的好很重要，能把事情讲清楚更重要”"></a>“做的好很重要，能把事情讲清楚更重要”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_06_express_matters.png" alt="做的好很重要，能把事情讲清楚更重要"></p><p>景哥在聊天中反复提到的一个观点是：<strong>论文的核心不是你做了什么，而是你怎么把做的事情讲清楚。</strong></p><p>他举了一个例子——他有个同学在某211高校，他们组的分工方式是”导师写作，学生只负责做实验”。这样半年就能出一篇一区，运气好还有顶刊。</p><p>这当然不是说学生不需要学写作，而是说明一个事实：<strong>写作能力是论文发表中极其关键的变量，甚至比实验本身更关键。</strong> 同样的实验结果，一个人能写成顶刊，另一个人可能连二区都挂不上。</p><p>对我们这种导师不帮写、全靠自己的研究生来说，这意味着写作能力必须自己练。而练的方式不是”多写”，是**”多看、多模仿、多对照”**。</p><p>景哥说得很实在：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p><hr><h2 id="我的行动计划"><a href="#我的行动计划" class="headerlink" title="我的行动计划"></a>我的行动计划</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_07_action_plan.png" alt="我的行动计划"></p><p>基于景哥的指导，我给自己定了一个调整方案：</p><p><strong>第一步</strong>：确定井盖论文的目标期刊，先锁定一个中文核心期刊作为练手。</p><p><strong>第二步</strong>：在目标期刊中找到一篇和我方向最接近的论文，逐段拆解它的结构、写法、公式密度、参考文献构成。</p><p><strong>第三步</strong>：按照这篇”范文”的框架，重新组织我的论文。不是重写内容，而是调整表达方式和呈现逻辑。</p><p><strong>第四步</strong>：参考文献全面升级，替换成目标期刊级别及以上的文献，同时适当引用目标期刊已发表的相关工作。</p><p><strong>第五步</strong>：精简公式，只保留核心创新点相关的推导，其余直接引用原文献。</p><p>景哥说：”这样弄好了这个，后边再想投别的期刊，就知道咋弄了。这个就当练手。”</p><p>练手就对了。第一篇不追求完美，追求的是<strong>把整个流程跑通一遍</strong>。</p><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_08_conclusion.png" alt="写在最后"></p><p>回头看，我之前写论文最大的问题不是”写不好”，而是**从来没认真研究过”好论文是怎么写出来的”**。</p><p>我只看了方法，没看写法。只关注了技术创新点，忽略了表达和呈现。像景哥说的，我一直在”自己瞎弄”，而不是先站在已有的好论文上去学习和模仿。</p><p>“模仿”这个词听起来不高级，但它其实是最高效的学习方式——你不是在抄别人的内容，你是在学习一种被验证过的表达框架。等你模仿够了，自然就有了自己的风格。</p><p>这大概就是景哥说的”知行合一”的又一个注脚吧。</p><hr><p><em>你写第一篇论文的时候，走了哪些弯路？欢迎在评论区聊聊。</em></p><p><em>关注「研途炼钢」，一个研究生的真实成长记录。</em></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 杂谈 </category>
-          
-          <category> 研究生成长 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 研究生 </tag>
-            
-            <tag> 论文写作 </tag>
-            
-            <tag> 学术 </tag>
             
         </tags>
       
@@ -487,6 +504,37 @@
             <tag> 沟通技巧 </tag>
             
             <tag> 职场 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>研究生写论文的第一课，不是写，是抄</title>
+      <link href="/posts/graduate-paper-writing.html"/>
+      <url>/posts/graduate-paper-writing.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_01_cover_paper_writing.png" alt="封面"></p><blockquote><p>景哥说：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p></blockquote><hr><h2 id="我的论文被AI”打架”打回来了"><a href="#我的论文被AI”打架”打回来了" class="headerlink" title="我的论文被AI”打架”打回来了"></a>我的论文被AI”打架”打回来了</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_02_ai_feedback.png" alt="我的论文被AI&quot;打架&quot;打回来了"></p><p>前阵子我把自己那篇井盖检测的论文发给景哥看，想让他帮忙把把关。</p><p>景哥收到之后，做了一件我没想到的事——他把我的论文同时丢给了Gemini和Claude，让两个AI互相挑毛病。</p><p>结果是：”你那篇论文公式太多了，我让Gemini和Claude打架，疯狂的说一堆致命的问题。”</p><p>我当时心态还挺稳的。毕竟论文还在改，有问题正常。但接下来景哥说的话，才是真正让我重新审视自己写论文方式的开始。</p><hr><h2 id="“你模仿的那篇，没啥参考价值”"><a href="#“你模仿的那篇，没啥参考价值”" class="headerlink" title="“你模仿的那篇，没啥参考价值”"></a>“你模仿的那篇，没啥参考价值”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_03_imitate_worthless.png" alt="你模仿的那篇，没啥参考价值"></p><p>我之前写论文的方法很朴素：读了一些论文，觉得差不多理解了方法，就开始动笔写。格式嘛，找了一篇看起来结构类似的文章照着来。</p><p>景哥问我：”你打算和这个发一样的期刊吗？”</p><p>我说不是。</p><p>他说：”那你模仿它干嘛。”</p><p>然后他点开我参考的那篇论文，直接下了判断：”这个做的一般，写的也不行。没啥参考价值，而且还是本科毕业论文。”</p><p>我才意识到，<strong>我连”该模仿谁”都没搞清楚，就开始模仿了。</strong></p><hr><h2 id="景哥的论文写作方法论"><a href="#景哥的论文写作方法论" class="headerlink" title="景哥的论文写作方法论"></a>景哥的论文写作方法论</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_04_writing_methodology.png" alt="景哥的论文写作方法论"></p><p>接下来的对话，景哥系统地给我拆解了一套论文写作的底层逻辑。不是那种教科书式的”摘要怎么写、引言怎么写”，而是更实战的东西。</p><h3 id="1-先选目标期刊，再写论文"><a href="#1-先选目标期刊，再写论文" class="headerlink" title="1. 先选目标期刊，再写论文"></a>1. 先选目标期刊，再写论文</h3><p>这个顺序很多人搞反了。</p><p>大部分研究生（包括之前的我）是先写完论文，然后再去想”这篇能发哪儿”。但景哥的思路完全反过来：<strong>先确定你要投哪个期刊，然后按那个期刊的风格和标准去写。</strong></p><p>为什么？因为每个期刊都有自己的写作偏好。行文风格、段落结构、公式密度、图表规范、参考文献的引用习惯——这些东西期刊之间差异不小。</p><p>景哥原话：”每个期刊都有自己的写作风格和表达方式，投哪个就模仿哪个期刊的表达和风格。”</p><h3 id="2-在目标期刊里找一篇”范文”"><a href="#2-在目标期刊里找一篇”范文”" class="headerlink" title="2. 在目标期刊里找一篇”范文”"></a>2. 在目标期刊里找一篇”范文”</h3><p>确定了目标期刊之后，下一步不是动笔，而是去这个期刊里找一篇和你研究方向最接近的已发表论文。</p><p>这篇论文就是你的”模板”——不是抄它的内容，而是学它的：</p><ul><li><strong>格式和结构</strong>：章节怎么划分的，每个部分大概多长</li><li><strong>写作技巧</strong>：怎么引出问题的，怎么描述方法的，实验部分怎么组织的</li><li><strong>公式的密度和呈现方式</strong>：别人核心放了哪些公式，你也需要有对应的</li><li><strong>参考文献的构成</strong>：引了哪些层次的文献，顶刊顶会占多少比例</li></ul><p>景哥反复强调：”你在这个期刊里面找一个和你写的类似的文章，模仿一下。然后模仿他的，来写你的。”</p><h3 id="3-参考文献是论文的”名片”"><a href="#3-参考文献是论文的”名片”" class="headerlink" title="3. 参考文献是论文的”名片”"></a>3. 参考文献是论文的”名片”</h3><p>这一点我之前完全没意识到。</p><p>景哥让我把参考文献全部换成IEEE Transactions或计算机顶会的论文。我不太理解，问他为什么。</p><p>他的解释很直白：**”引用顶刊顶会是说明你这个有价值。如果引用的内容都是水刊，那不用看你内容，你做的也不行。”**</p><p>更深一层，他说这也是”人情世故”——“换成你是主编、副主编，你也会这样做，希望看到自己期刊类型的东西。引用你想投的这个期刊的，是人情世故。”</p><p>所以参考文献不是写完论文之后随便补的，它是你论文学术定位的一部分。引用什么层次的文献，某种程度上就决定了审稿人对你工作的第一印象。</p><h3 id="4-公式不是越多越好"><a href="#4-公式不是越多越好" class="headerlink" title="4. 公式不是越多越好"></a>4. 公式不是越多越好</h3><p>我的井盖论文里堆了很多公式，我觉得这样显得严谨。</p><p>景哥的看法正好相反——公式太多，反而给审稿人更多的攻击面。他用AI工具去检验，每个公式都可能被挑出问题。</p><p>他说：”Nature、Science文章也有问题，都是自己加限制条件，然后逻辑自恰就行。”</p><p>这句话信息量很大。意思是：<strong>论文不是要证明你的方法”绝对正确”，而是在你设定的条件和范围内，逻辑自洽、实验支撑。</strong> 公式是为了支撑论理，不是为了炫技。不需要推导的公式，直接引用就好；核心创新点的公式，才值得展开。</p><hr><h2 id="论文阅读的正确打开方式"><a href="#论文阅读的正确打开方式" class="headerlink" title="论文阅读的正确打开方式"></a>论文阅读的正确打开方式</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_05_reading_method.png" alt="论文阅读的正确打开方式"></p><p>景哥还纠正了我读论文的习惯。</p><p>我之前的做法是：什么论文都读，学位论文、期刊论文、会议论文混着看，觉得看得越多越好。</p><p>景哥给了一个更清晰的优先级：</p><p><strong>主要看期刊论文。</strong> 期刊论文是你最终要写的东西，它的篇幅、深度、写作方式就是你的目标。先看目标期刊的论文，理解它的”语言”和”套路”。</p><p><strong>想深入理解某个方法，就去看博士论文。</strong> 博士论文写得细、推导完整、解释充分，非常适合用来弄懂一个你在期刊论文里看不明白的技术点。</p><p><strong>学位论文别当主要参考。</strong> 景哥直接说”学位论文，别再看了”（指作为写作参考），因为学位论文的写作标准和期刊论文差距很大。</p><p>用他的话来总结路径就是：<strong>先看期刊论文学写法，不懂的点去博士论文里找解释，弄懂了再回来继续看期刊。</strong></p><hr><h2 id="“做的好很重要，能把事情讲清楚更重要”"><a href="#“做的好很重要，能把事情讲清楚更重要”" class="headerlink" title="“做的好很重要，能把事情讲清楚更重要”"></a>“做的好很重要，能把事情讲清楚更重要”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_06_express_matters.png" alt="做的好很重要，能把事情讲清楚更重要"></p><p>景哥在聊天中反复提到的一个观点是：<strong>论文的核心不是你做了什么，而是你怎么把做的事情讲清楚。</strong></p><p>他举了一个例子——他有个同学在某211高校，他们组的分工方式是”导师写作，学生只负责做实验”。这样半年就能出一篇一区，运气好还有顶刊。</p><p>这当然不是说学生不需要学写作，而是说明一个事实：<strong>写作能力是论文发表中极其关键的变量，甚至比实验本身更关键。</strong> 同样的实验结果，一个人能写成顶刊，另一个人可能连二区都挂不上。</p><p>对我们这种导师不帮写、全靠自己的研究生来说，这意味着写作能力必须自己练。而练的方式不是”多写”，是**”多看、多模仿、多对照”**。</p><p>景哥说得很实在：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p><hr><h2 id="我的行动计划"><a href="#我的行动计划" class="headerlink" title="我的行动计划"></a>我的行动计划</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_07_action_plan.png" alt="我的行动计划"></p><p>基于景哥的指导，我给自己定了一个调整方案：</p><p><strong>第一步</strong>：确定井盖论文的目标期刊，先锁定一个中文核心期刊作为练手。</p><p><strong>第二步</strong>：在目标期刊中找到一篇和我方向最接近的论文，逐段拆解它的结构、写法、公式密度、参考文献构成。</p><p><strong>第三步</strong>：按照这篇”范文”的框架，重新组织我的论文。不是重写内容，而是调整表达方式和呈现逻辑。</p><p><strong>第四步</strong>：参考文献全面升级，替换成目标期刊级别及以上的文献，同时适当引用目标期刊已发表的相关工作。</p><p><strong>第五步</strong>：精简公式，只保留核心创新点相关的推导，其余直接引用原文献。</p><p>景哥说：”这样弄好了这个，后边再想投别的期刊，就知道咋弄了。这个就当练手。”</p><p>练手就对了。第一篇不追求完美，追求的是<strong>把整个流程跑通一遍</strong>。</p><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_08_conclusion.png" alt="写在最后"></p><p>回头看，我之前写论文最大的问题不是”写不好”，而是**从来没认真研究过”好论文是怎么写出来的”**。</p><p>我只看了方法，没看写法。只关注了技术创新点，忽略了表达和呈现。像景哥说的，我一直在”自己瞎弄”，而不是先站在已有的好论文上去学习和模仿。</p><p>“模仿”这个词听起来不高级，但它其实是最高效的学习方式——你不是在抄别人的内容，你是在学习一种被验证过的表达框架。等你模仿够了，自然就有了自己的风格。</p><p>这大概就是景哥说的”知行合一”的又一个注脚吧。</p><hr><p><em>你写第一篇论文的时候，走了哪些弯路？欢迎在评论区聊聊。</em></p><p><em>关注「研途炼钢」，一个研究生的真实成长记录。</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+          <category> 研究生成长 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 研究生 </tag>
+            
+            <tag> 论文写作 </tag>
+            
+            <tag> 学术 </tag>
             
         </tags>
       
@@ -630,6 +678,41 @@
     
     
     <entry>
+      <title>2026年AI编程助手终极横评：五款主流工具深度测评与选型指南</title>
+      <link href="/posts/ai-coding-tools-review-2026.html"/>
+      <url>/posts/ai-coding-tools-review-2026.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_00_cover.png" alt="封面"></p><hr><p>AI编程助手已从”锦上添花”变成”效率刚需”。Claude Code以$200/月的高端定价领跑，OpenAI的Codex强势回归，国产阵营的Qwen Code和Kimi Code免费入场，开源社区也贡献了Open Code这样的良心之作。作为深耕技术内容多年的创作者，我花费两周时间深度体验了这五款工具，从产品能力、上手难度、性价比到实际编码场景，为你呈现一份真正能指导选型的深度横评。无论你是个人开发者、技术Leader还是AI从业者，这篇文章都值得你收藏。</p><hr><h2 id="一、背景与动机：为什么我们需要这场横评？"><a href="#一、背景与动机：为什么我们需要这场横评？" class="headerlink" title="一、背景与动机：为什么我们需要这场横评？"></a>一、背景与动机：为什么我们需要这场横评？</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_01_background.png" alt="第一章配图"></p><p>2024年被称作”AI编程元年”，GitHub Copilot一骑绝尘。但到了2026年，格局已经完全不同——Anthropic的Claude Code异军突起，OpenAI发布了基于GPT-5.2的Codex，阿里云的Qwen Code整合了超过100个模型，月之暗面的Kimi Code凭借K2 MoE架构免费开放，开源社区的Open Code也聚合了75+主流模型。</p><p><strong>为什么这场横评如此重要？</strong></p><p>首先，<strong>选择成本极高</strong>。每款工具都有自己的生态和习惯养成成本，一旦选定，迁移成本可能高达数周。其次，<strong>定价策略分化明显</strong>。从完全免费到每月$200，差价足以购买一台中端服务器。第三，<strong>能力边界各有千秋</strong>。有的擅长架构设计，有的精于代码补全，有的在中文场景表现优异。</p><p>作为技术内容创作者，我收到过上百条关于”AI编程助手怎么选”的私信。大家的困惑高度一致：<strong>贵的一定好吗？免费的能用吗？国产和海外产品差距有多大？</strong></p><p>带着这些问题，我以一个真实开发者的视角，完成了这场横评。不吹不黑，只讲事实和体验。</p><hr><h2 id="二、选手介绍：五款工具的前世今生"><a href="#二、选手介绍：五款工具的前世今生" class="headerlink" title="二、选手介绍：五款工具的前世今生"></a>二、选手介绍：五款工具的前世今生</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_02_introduction.png" alt="第二章配图"></p><h3 id="2-1-Claude-Code：Anthropic的高端旗舰"><a href="#2-1-Claude-Code：Anthropic的高端旗舰" class="headerlink" title="2.1 Claude Code：Anthropic的高端旗舰"></a>2.1 Claude Code：Anthropic的高端旗舰</h3><p><strong>出品方</strong>：Anthropic<br><strong>定价</strong>：$200/月（Pro Max计划）<br><strong>底层模型</strong>：Claude Opus 4</p><p>Claude Code是Anthropic在2025年推出的命令行AI编程助手，定位是”理解你的代码库的智能Agent”。与传统的代码补全工具不同，Claude Code更像是一个可以独立完成复杂任务的AI同事。</p><p><strong>核心特点</strong>：</p><ul><li>深度代码库理解能力，能追踪跨文件的依赖关系</li><li>支持自然语言驱动的Git工作流</li><li>可执行复杂的多步骤任务（如重构整个模块）</li><li>提供Sonnet、Opus、Haiku三档模型选择，平衡成本与能力</li></ul><p>Claude Code的定价确实不菲，但Anthropic给出的理由是：Opus 4是目前最强大的编程模型之一，单次调用的算力成本就远超普通对话。</p><h3 id="2-2-Codex：OpenAI的强势回归"><a href="#2-2-Codex：OpenAI的强势回归" class="headerlink" title="2.2 Codex：OpenAI的强势回归"></a>2.2 Codex：OpenAI的强势回归</h3><p><strong>出品方</strong>：OpenAI<br><strong>定价</strong>：$60-100/月（按用量阶梯计费）<br><strong>底层模型</strong>：GPT-5.2-Codex</p><p>Codex这个名字对老开发者来说并不陌生——它曾是GitHub Copilot的底层引擎。2025年，OpenAI将Codex独立成产品，并搭载了最新的GPT-5.2模型。</p><p><strong>核心特点</strong>：</p><ul><li>与OpenAI生态深度整合（ChatGPT、API等）</li><li>支持多模态输入（可以”看”设计图生成代码）</li><li>拥有业界最丰富的训练数据</li><li>提供API接入，适合企业定制化需求</li></ul><p>Codex的定价采用阶梯模式，轻度用户$60/月即可满足需求，重度用户则可能达到$100+。</p><h3 id="2-3-Qwen-Code：阿里云的百模型平台"><a href="#2-3-Qwen-Code：阿里云的百模型平台" class="headerlink" title="2.3 Qwen Code：阿里云的百模型平台"></a>2.3 Qwen Code：阿里云的百模型平台</h3><p><strong>出品方</strong>：阿里云<br><strong>定价</strong>：免费版 + ¥40/月专业版<br><strong>底层模型</strong>：100+模型集成（Qwen系列为主）</p><p>Qwen Code是国产AI编程助手的代表作品，最大的卖点是”模型超市”——集成了超过100个主流模型，用户可以根据任务类型灵活选择。</p><p><strong>核心特点</strong>：</p><ul><li>支持DeepSeek、Llama、Qwen等主流模型切换</li><li>中文场景优化出色</li><li>与阿里云生态无缝对接（OSS、函数计算等）</li><li>提供云端IDE和本地CLI两种形态</li></ul><p>免费版每天有调用次数限制，专业版¥40/月的价格对国内开发者非常友好。</p><h3 id="2-4-Kimi-Code：月之暗面的免费诚意"><a href="#2-4-Kimi-Code：月之暗面的免费诚意" class="headerlink" title="2.4 Kimi Code：月之暗面的免费诚意"></a>2.4 Kimi Code：月之暗面的免费诚意</h3><p><strong>出品方</strong>：月之暗面<br><strong>定价</strong>：完全免费<br><strong>底层模型</strong>：Kimi K2（MoE架构）</p><p>Kimi Code是这场横评中最”良心”的产品——完全免费，没有隐藏收费。背后的Kimi K2模型采用MoE（混合专家）架构，在保持高效的同时降低了推理成本。</p><p><strong>核心特点</strong>：</p><ul><li>零成本使用，无调用次数限制</li><li>中文理解和生成能力顶尖</li><li>支持超长上下文（200K tokens）</li><li>界面简洁，上手门槛极低</li></ul><p>月之暗面的策略很明确：用免费换取用户规模，为未来的企业版铺路。</p><h3 id="2-5-Open-Code：开源社区的集体智慧"><a href="#2-5-Open-Code：开源社区的集体智慧" class="headerlink" title="2.5 Open Code：开源社区的集体智慧"></a>2.5 Open Code：开源社区的集体智慧</h3><p><strong>出品方</strong>：开源社区<br><strong>定价</strong>：完全免费<br><strong>底层模型</strong>：75+模型可选</p><p>Open Code不是一个单一产品，而是一个开源框架，允许用户接入各种开源和商业模型。它代表了开源社区对”AI编程民主化”的追求。</p><p><strong>核心特点</strong>：</p><ul><li>完全开源，代码托管在GitHub</li><li>支持75+模型接入（包括本地部署的模型）</li><li>高度可定制，适合有技术能力的团队</li><li>社区活跃，插件生态丰富</li></ul><p>Open Code的门槛在于：你需要有一定的技术能力来配置和部署。</p><hr><h2 id="三、能力横评：谁才是真正的代码高手？"><a href="#三、能力横评：谁才是真正的代码高手？" class="headerlink" title="三、能力横评：谁才是真正的代码高手？"></a>三、能力横评：谁才是真正的代码高手？</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_03_capability_review.png" alt="第三章配图"></p><p>为了公平评价这五款工具，我从六个维度进行了量化评分（满分5分）：</p><h3 id="3-1-代码理解能力"><a href="#3-1-代码理解能力" class="headerlink" title="3.1 代码理解能力"></a>3.1 代码理解能力</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>跨文件追踪能力最强，能理解复杂的架构设计</td></tr><tr><td>Codex</td><td>4.80</td><td>训练数据最丰富，但对小众框架支持一般</td></tr><tr><td>Qwen Code</td><td>4.70</td><td>中文代码注释理解出色，整体表现均衡</td></tr><tr><td>Kimi Code</td><td>4.50</td><td>长上下文优势明显，但复杂逻辑追踪略弱</td></tr><tr><td>Open Code</td><td>4.20</td><td>取决于所选模型，上限高但下限也低</td></tr></tbody></table><h3 id="3-2-代码生成质量"><a href="#3-2-代码生成质量" class="headerlink" title="3.2 代码生成质量"></a>3.2 代码生成质量</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.90</td><td>生成的代码规范、可维护性强，注释详尽</td></tr><tr><td>Codex</td><td>4.85</td><td>代码风格多样，能模仿项目现有风格</td></tr><tr><td>Qwen Code</td><td>4.75</td><td>中文注释和文档生成最优</td></tr><tr><td>Kimi Code</td><td>4.60</td><td>生成速度快，但有时过于简洁</td></tr><tr><td>Open Code</td><td>4.00</td><td>质量波动大，需要选择合适的模型</td></tr></tbody></table><h3 id="3-3-调试与问题定位"><a href="#3-3-调试与问题定位" class="headerlink" title="3.3 调试与问题定位"></a>3.3 调试与问题定位</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>能独立完成”复现-定位-修复”全流程</td></tr><tr><td>Codex</td><td>4.70</td><td>擅长解释错误信息，但自动修复能力一般</td></tr><tr><td>Qwen Code</td><td>4.65</td><td>对国产框架（如MyBatis）的报错理解更好</td></tr><tr><td>Kimi Code</td><td>4.40</td><td>能找到大部分问题，但深层原因分析较弱</td></tr><tr><td>Open Code</td><td>3.90</td><td>需要用户具备一定调试经验配合使用</td></tr></tbody></table><h3 id="3-4-中文支持能力"><a href="#3-4-中文支持能力" class="headerlink" title="3.4 中文支持能力"></a>3.4 中文支持能力</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Kimi Code</td><td>4.95</td><td>原生中文模型，理解和表达都最自然</td></tr><tr><td>Qwen Code</td><td>4.90</td><td>中文场景深度优化，术语使用准确</td></tr><tr><td>Claude Code</td><td>4.50</td><td>支持中文，但偶尔有翻译腔</td></tr><tr><td>Codex</td><td>4.30</td><td>中文支持有，但不如英文流畅</td></tr><tr><td>Open Code</td><td>4.00</td><td>取决于所选模型</td></tr></tbody></table><h3 id="3-5-上手难度"><a href="#3-5-上手难度" class="headerlink" title="3.5 上手难度"></a>3.5 上手难度</h3><table><thead><tr><th>工具</th><th>评分（越高越易上手）</th><th>评价</th></tr></thead><tbody><tr><td>Codex</td><td>4.5</td><td>与OpenAI生态整合，用户基础好</td></tr><tr><td>Qwen Code</td><td>4.2</td><td>功能丰富但略显复杂</td></tr><tr><td>Kimi Code</td><td>4.0</td><td>界面简洁，几乎零学习成本</td></tr><tr><td>Claude Code</td><td>3.5</td><td>CLI操作需要适应，但文档完善</td></tr><tr><td>Open Code</td><td>3.0</td><td>需要配置环境，对新手不友好</td></tr></tbody></table><h3 id="3-6-综合评分汇总"><a href="#3-6-综合评分汇总" class="headerlink" title="3.6 综合评分汇总"></a>3.6 综合评分汇总</h3><table><thead><tr><th>工具</th><th>代码理解</th><th>代码生成</th><th>调试能力</th><th>中文支持</th><th>易用性</th><th><strong>综合评分</strong></th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>4.90</td><td>4.95</td><td>4.50</td><td>3.50</td><td><strong>4.90</strong></td></tr><tr><td>Qwen Code</td><td>4.70</td><td>4.75</td><td>4.65</td><td>4.90</td><td>4.20</td><td><strong>4.65</strong></td></tr><tr><td>Codex</td><td>4.80</td><td>4.85</td><td>4.70</td><td>4.30</td><td>4.50</td><td><strong>4.63</strong></td></tr><tr><td>Kimi Code</td><td>4.50</td><td>4.60</td><td>4.40</td><td>4.95</td><td>4.00</td><td><strong>4.38</strong></td></tr><tr><td>Open Code</td><td>4.20</td><td>4.00</td><td>3.90</td><td>4.00</td><td>3.00</td><td><strong>4.00</strong></td></tr></tbody></table><hr><h2 id="四、上手体验实录：真实开发场景中的表现"><a href="#四、上手体验实录：真实开发场景中的表现" class="headerlink" title="四、上手体验实录：真实开发场景中的表现"></a>四、上手体验实录：真实开发场景中的表现</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_04_experience.png" alt="第四章配图"></p><h3 id="场景一：从零搭建一个Next-js项目"><a href="#场景一：从零搭建一个Next-js项目" class="headerlink" title="场景一：从零搭建一个Next.js项目"></a>场景一：从零搭建一个Next.js项目</h3><p><strong>Claude Code体验</strong>：</p><ul><li>能独立完成整个流程</li><li>生成的代码规范且包含必要的错误处理</li><li>全程无需人工干预，耗时约3分钟</li></ul><p><strong>Kimi Code体验</strong>：</p><ul><li>给出了完整的指导，但需要手动执行</li><li>更适合作为”教学助手”而非”自动化工具”</li><li>耗时约15分钟</li></ul><h3 id="场景二：重构遗留代码"><a href="#场景二：重构遗留代码" class="headerlink" title="场景二：重构遗留代码"></a>场景二：重构遗留代码</h3><p><strong>Codex体验</strong>：</p><ul><li>在理解旧代码和生成新代码之间取得了很好的平衡</li><li>主动给出了优化建议</li><li>重构质量高，保持了原有功能的同时提升了代码可维护性</li></ul><h3 id="场景三：调试一个诡异的Bug"><a href="#场景三：调试一个诡异的Bug" class="headerlink" title="场景三：调试一个诡异的Bug"></a>场景三：调试一个诡异的Bug</h3><p><strong>Claude Code体验</strong>：</p><ul><li>不仅能定位问题，还能给出多个解决方案并解释利弊</li><li>这种”独立思考”的能力是它最大的优势</li></ul><hr><h2 id="五、选型指南：不同场景下的最佳选择"><a href="#五、选型指南：不同场景下的最佳选择" class="headerlink" title="五、选型指南：不同场景下的最佳选择"></a>五、选型指南：不同场景下的最佳选择</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_05_selection_guide.png" alt="第五章配图"></p><h3 id="5-1-个人开发者-独立开发者"><a href="#5-1-个人开发者-独立开发者" class="headerlink" title="5.1 个人开发者 / 独立开发者"></a>5.1 个人开发者 / 独立开发者</h3><p><strong>推荐：Kimi Code 或 Qwen Code免费版</strong></p><p>理由：</p><ul><li>零成本或极低成本</li><li>中文支持优秀，沟通效率高</li><li>能满足80%的日常开发需求</li></ul><h3 id="5-2-初创团队-小型公司"><a href="#5-2-初创团队-小型公司" class="headerlink" title="5.2 初创团队 / 小型公司"></a>5.2 初创团队 / 小型公司</h3><p><strong>推荐：Qwen Code专业版（¥40/月）</strong></p><p>理由：</p><ul><li>性价比最高</li><li>支持多人协作</li><li>与阿里云生态整合，部署方便</li><li>100+模型可选，适应不同场景</li></ul><h3 id="5-3-中大型企业"><a href="#5-3-中大型企业" class="headerlink" title="5.3 中大型企业"></a>5.3 中大型企业</h3><p><strong>推荐：Claude Code 或 Codex</strong></p><p>理由：</p><ul><li>能力最强，能处理复杂的企业级项目</li><li>安全性和合规性有保障</li><li>提供企业版和支持服务</li></ul><h3 id="5-4-有技术能力的极客-开源爱好者"><a href="#5-4-有技术能力的极客-开源爱好者" class="headerlink" title="5.4 有技术能力的极客 / 开源爱好者"></a>5.4 有技术能力的极客 / 开源爱好者</h3><p><strong>推荐：Open Code</strong></p><p>理由：</p><ul><li>完全开源，可自定义</li><li>可以接入本地模型，数据完全可控</li><li>社区活跃，持续进化</li></ul><h3 id="5-5-快速决策表"><a href="#5-5-快速决策表" class="headerlink" title="5.5 快速决策表"></a>5.5 快速决策表</h3><table><thead><tr><th>你的情况</th><th>推荐选择</th></tr></thead><tbody><tr><td>预算有限，主要写中文代码</td><td>Kimi Code</td></tr><tr><td>想要免费但功能丰富</td><td>Qwen Code免费版</td></tr><tr><td>愿意付费，追求性价比</td><td>Qwen Code专业版</td></tr><tr><td>预算充足，追求极致能力</td><td>Claude Code</td></tr><tr><td>已在使用OpenAI生态</td><td>Codex</td></tr><tr><td>技术能力强，追求数据主权</td><td>Open Code</td></tr></tbody></table><hr><h2 id="六、作者观点：我对AI编程助手的思考"><a href="#六、作者观点：我对AI编程助手的思考" class="headerlink" title="六、作者观点：我对AI编程助手的思考"></a>六、作者观点：我对AI编程助手的思考</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_06_author_view.png" alt="第六章配图"></p><p><strong>第一，AI不是替代，是增强。</strong></p><p>AI让我成为了一个更好的程序员。它处理了重复性工作，让我能专注于架构设计和业务逻辑。</p><p><strong>第二，贵的确实好，但不一定适合你。</strong></p><p>Claude Code的能力毋庸置疑，但$200/月的价格对很多开发者来说是一笔不小的开支。如果你的日常开发主要是CRUD和简单功能，Kimi Code或Qwen Code完全够用。</p><p><strong>第三，国产AI已经很强了。</strong></p><p>Kimi Code和Qwen Code在中文场景的表现甚至超过了海外产品。如果你主要用中文工作，国产产品可能更适合你。</p><p><strong>第四，AI编程助手正在快速进化。</strong></p><p>今天的测评结果可能三个月后就过时了。保持关注，定期评估，不要被单一工具绑定。</p><p><strong>第五，学会与AI协作是未来的核心技能。</strong></p><p>学会如何向AI提问、如何验证AI的输出、如何与AI协作完成复杂任务，这些才是未来程序员的核心竞争力。</p><hr><h2 id="七、结语与互动"><a href="#七、结语与互动" class="headerlink" title="七、结语与互动"></a>七、结语与互动</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_07_conclusion.png" alt="第七章配图"></p><p>这场横评历时两周，覆盖了从产品功能到实际场景的方方面面。希望这些信息能帮助你做出明智的选择。</p><p><strong>互动话题</strong>：</p><ol><li>你目前在使用哪款AI编程助手？体验如何？</li><li>你认为AI编程助手最应该改进的是什么？</li><li>如果预算 unlimited，你会选择哪款工具？</li></ol><p>欢迎在评论区分享你的观点！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+          <category> 技术研究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI编程 </tag>
+            
+            <tag> Claude Code </tag>
+            
+            <tag> Codex </tag>
+            
+            <tag> Qwen Code </tag>
+            
+            <tag> Kimi Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Claude Code 接入 GLM-5 实战教程</title>
       <link href="/posts/claude-code-glm5-tutorial.html"/>
       <url>/posts/claude-code-glm5-tutorial.html</url>
@@ -696,33 +779,17 @@
     
     
     <entry>
-      <title>2026年AI编程助手终极横评：五款主流工具深度测评与选型指南</title>
-      <link href="/posts/ai-coding-tools-review-2026.html"/>
-      <url>/posts/ai-coding-tools-review-2026.html</url>
+      <title>2026年2月28日</title>
+      <link href="/posts/0228f515.html"/>
+      <url>/posts/0228f515.html</url>
       
-        <content type="html"><![CDATA[<p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_00_cover.png" alt="封面"></p><hr><p>AI编程助手已从”锦上添花”变成”效率刚需”。Claude Code以$200/月的高端定价领跑，OpenAI的Codex强势回归，国产阵营的Qwen Code和Kimi Code免费入场，开源社区也贡献了Open Code这样的良心之作。作为深耕技术内容多年的创作者，我花费两周时间深度体验了这五款工具，从产品能力、上手难度、性价比到实际编码场景，为你呈现一份真正能指导选型的深度横评。无论你是个人开发者、技术Leader还是AI从业者，这篇文章都值得你收藏。</p><hr><h2 id="一、背景与动机：为什么我们需要这场横评？"><a href="#一、背景与动机：为什么我们需要这场横评？" class="headerlink" title="一、背景与动机：为什么我们需要这场横评？"></a>一、背景与动机：为什么我们需要这场横评？</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_01_background.png" alt="第一章配图"></p><p>2024年被称作”AI编程元年”，GitHub Copilot一骑绝尘。但到了2026年，格局已经完全不同——Anthropic的Claude Code异军突起，OpenAI发布了基于GPT-5.2的Codex，阿里云的Qwen Code整合了超过100个模型，月之暗面的Kimi Code凭借K2 MoE架构免费开放，开源社区的Open Code也聚合了75+主流模型。</p><p><strong>为什么这场横评如此重要？</strong></p><p>首先，<strong>选择成本极高</strong>。每款工具都有自己的生态和习惯养成成本，一旦选定，迁移成本可能高达数周。其次，<strong>定价策略分化明显</strong>。从完全免费到每月$200，差价足以购买一台中端服务器。第三，<strong>能力边界各有千秋</strong>。有的擅长架构设计，有的精于代码补全，有的在中文场景表现优异。</p><p>作为技术内容创作者，我收到过上百条关于”AI编程助手怎么选”的私信。大家的困惑高度一致：<strong>贵的一定好吗？免费的能用吗？国产和海外产品差距有多大？</strong></p><p>带着这些问题，我以一个真实开发者的视角，完成了这场横评。不吹不黑，只讲事实和体验。</p><hr><h2 id="二、选手介绍：五款工具的前世今生"><a href="#二、选手介绍：五款工具的前世今生" class="headerlink" title="二、选手介绍：五款工具的前世今生"></a>二、选手介绍：五款工具的前世今生</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_02_introduction.png" alt="第二章配图"></p><h3 id="2-1-Claude-Code：Anthropic的高端旗舰"><a href="#2-1-Claude-Code：Anthropic的高端旗舰" class="headerlink" title="2.1 Claude Code：Anthropic的高端旗舰"></a>2.1 Claude Code：Anthropic的高端旗舰</h3><p><strong>出品方</strong>：Anthropic<br><strong>定价</strong>：$200/月（Pro Max计划）<br><strong>底层模型</strong>：Claude Opus 4</p><p>Claude Code是Anthropic在2025年推出的命令行AI编程助手，定位是”理解你的代码库的智能Agent”。与传统的代码补全工具不同，Claude Code更像是一个可以独立完成复杂任务的AI同事。</p><p><strong>核心特点</strong>：</p><ul><li>深度代码库理解能力，能追踪跨文件的依赖关系</li><li>支持自然语言驱动的Git工作流</li><li>可执行复杂的多步骤任务（如重构整个模块）</li><li>提供Sonnet、Opus、Haiku三档模型选择，平衡成本与能力</li></ul><p>Claude Code的定价确实不菲，但Anthropic给出的理由是：Opus 4是目前最强大的编程模型之一，单次调用的算力成本就远超普通对话。</p><h3 id="2-2-Codex：OpenAI的强势回归"><a href="#2-2-Codex：OpenAI的强势回归" class="headerlink" title="2.2 Codex：OpenAI的强势回归"></a>2.2 Codex：OpenAI的强势回归</h3><p><strong>出品方</strong>：OpenAI<br><strong>定价</strong>：$60-100/月（按用量阶梯计费）<br><strong>底层模型</strong>：GPT-5.2-Codex</p><p>Codex这个名字对老开发者来说并不陌生——它曾是GitHub Copilot的底层引擎。2025年，OpenAI将Codex独立成产品，并搭载了最新的GPT-5.2模型。</p><p><strong>核心特点</strong>：</p><ul><li>与OpenAI生态深度整合（ChatGPT、API等）</li><li>支持多模态输入（可以”看”设计图生成代码）</li><li>拥有业界最丰富的训练数据</li><li>提供API接入，适合企业定制化需求</li></ul><p>Codex的定价采用阶梯模式，轻度用户$60/月即可满足需求，重度用户则可能达到$100+。</p><h3 id="2-3-Qwen-Code：阿里云的百模型平台"><a href="#2-3-Qwen-Code：阿里云的百模型平台" class="headerlink" title="2.3 Qwen Code：阿里云的百模型平台"></a>2.3 Qwen Code：阿里云的百模型平台</h3><p><strong>出品方</strong>：阿里云<br><strong>定价</strong>：免费版 + ¥40/月专业版<br><strong>底层模型</strong>：100+模型集成（Qwen系列为主）</p><p>Qwen Code是国产AI编程助手的代表作品，最大的卖点是”模型超市”——集成了超过100个主流模型，用户可以根据任务类型灵活选择。</p><p><strong>核心特点</strong>：</p><ul><li>支持DeepSeek、Llama、Qwen等主流模型切换</li><li>中文场景优化出色</li><li>与阿里云生态无缝对接（OSS、函数计算等）</li><li>提供云端IDE和本地CLI两种形态</li></ul><p>免费版每天有调用次数限制，专业版¥40/月的价格对国内开发者非常友好。</p><h3 id="2-4-Kimi-Code：月之暗面的免费诚意"><a href="#2-4-Kimi-Code：月之暗面的免费诚意" class="headerlink" title="2.4 Kimi Code：月之暗面的免费诚意"></a>2.4 Kimi Code：月之暗面的免费诚意</h3><p><strong>出品方</strong>：月之暗面<br><strong>定价</strong>：完全免费<br><strong>底层模型</strong>：Kimi K2（MoE架构）</p><p>Kimi Code是这场横评中最”良心”的产品——完全免费，没有隐藏收费。背后的Kimi K2模型采用MoE（混合专家）架构，在保持高效的同时降低了推理成本。</p><p><strong>核心特点</strong>：</p><ul><li>零成本使用，无调用次数限制</li><li>中文理解和生成能力顶尖</li><li>支持超长上下文（200K tokens）</li><li>界面简洁，上手门槛极低</li></ul><p>月之暗面的策略很明确：用免费换取用户规模，为未来的企业版铺路。</p><h3 id="2-5-Open-Code：开源社区的集体智慧"><a href="#2-5-Open-Code：开源社区的集体智慧" class="headerlink" title="2.5 Open Code：开源社区的集体智慧"></a>2.5 Open Code：开源社区的集体智慧</h3><p><strong>出品方</strong>：开源社区<br><strong>定价</strong>：完全免费<br><strong>底层模型</strong>：75+模型可选</p><p>Open Code不是一个单一产品，而是一个开源框架，允许用户接入各种开源和商业模型。它代表了开源社区对”AI编程民主化”的追求。</p><p><strong>核心特点</strong>：</p><ul><li>完全开源，代码托管在GitHub</li><li>支持75+模型接入（包括本地部署的模型）</li><li>高度可定制，适合有技术能力的团队</li><li>社区活跃，插件生态丰富</li></ul><p>Open Code的门槛在于：你需要有一定的技术能力来配置和部署。</p><hr><h2 id="三、能力横评：谁才是真正的代码高手？"><a href="#三、能力横评：谁才是真正的代码高手？" class="headerlink" title="三、能力横评：谁才是真正的代码高手？"></a>三、能力横评：谁才是真正的代码高手？</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_03_capability_review.png" alt="第三章配图"></p><p>为了公平评价这五款工具，我从六个维度进行了量化评分（满分5分）：</p><h3 id="3-1-代码理解能力"><a href="#3-1-代码理解能力" class="headerlink" title="3.1 代码理解能力"></a>3.1 代码理解能力</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>跨文件追踪能力最强，能理解复杂的架构设计</td></tr><tr><td>Codex</td><td>4.80</td><td>训练数据最丰富，但对小众框架支持一般</td></tr><tr><td>Qwen Code</td><td>4.70</td><td>中文代码注释理解出色，整体表现均衡</td></tr><tr><td>Kimi Code</td><td>4.50</td><td>长上下文优势明显，但复杂逻辑追踪略弱</td></tr><tr><td>Open Code</td><td>4.20</td><td>取决于所选模型，上限高但下限也低</td></tr></tbody></table><h3 id="3-2-代码生成质量"><a href="#3-2-代码生成质量" class="headerlink" title="3.2 代码生成质量"></a>3.2 代码生成质量</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.90</td><td>生成的代码规范、可维护性强，注释详尽</td></tr><tr><td>Codex</td><td>4.85</td><td>代码风格多样，能模仿项目现有风格</td></tr><tr><td>Qwen Code</td><td>4.75</td><td>中文注释和文档生成最优</td></tr><tr><td>Kimi Code</td><td>4.60</td><td>生成速度快，但有时过于简洁</td></tr><tr><td>Open Code</td><td>4.00</td><td>质量波动大，需要选择合适的模型</td></tr></tbody></table><h3 id="3-3-调试与问题定位"><a href="#3-3-调试与问题定位" class="headerlink" title="3.3 调试与问题定位"></a>3.3 调试与问题定位</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>能独立完成”复现-定位-修复”全流程</td></tr><tr><td>Codex</td><td>4.70</td><td>擅长解释错误信息，但自动修复能力一般</td></tr><tr><td>Qwen Code</td><td>4.65</td><td>对国产框架（如MyBatis）的报错理解更好</td></tr><tr><td>Kimi Code</td><td>4.40</td><td>能找到大部分问题，但深层原因分析较弱</td></tr><tr><td>Open Code</td><td>3.90</td><td>需要用户具备一定调试经验配合使用</td></tr></tbody></table><h3 id="3-4-中文支持能力"><a href="#3-4-中文支持能力" class="headerlink" title="3.4 中文支持能力"></a>3.4 中文支持能力</h3><table><thead><tr><th>工具</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>Kimi Code</td><td>4.95</td><td>原生中文模型，理解和表达都最自然</td></tr><tr><td>Qwen Code</td><td>4.90</td><td>中文场景深度优化，术语使用准确</td></tr><tr><td>Claude Code</td><td>4.50</td><td>支持中文，但偶尔有翻译腔</td></tr><tr><td>Codex</td><td>4.30</td><td>中文支持有，但不如英文流畅</td></tr><tr><td>Open Code</td><td>4.00</td><td>取决于所选模型</td></tr></tbody></table><h3 id="3-5-上手难度"><a href="#3-5-上手难度" class="headerlink" title="3.5 上手难度"></a>3.5 上手难度</h3><table><thead><tr><th>工具</th><th>评分（越高越易上手）</th><th>评价</th></tr></thead><tbody><tr><td>Codex</td><td>4.5</td><td>与OpenAI生态整合，用户基础好</td></tr><tr><td>Qwen Code</td><td>4.2</td><td>功能丰富但略显复杂</td></tr><tr><td>Kimi Code</td><td>4.0</td><td>界面简洁，几乎零学习成本</td></tr><tr><td>Claude Code</td><td>3.5</td><td>CLI操作需要适应，但文档完善</td></tr><tr><td>Open Code</td><td>3.0</td><td>需要配置环境，对新手不友好</td></tr></tbody></table><h3 id="3-6-综合评分汇总"><a href="#3-6-综合评分汇总" class="headerlink" title="3.6 综合评分汇总"></a>3.6 综合评分汇总</h3><table><thead><tr><th>工具</th><th>代码理解</th><th>代码生成</th><th>调试能力</th><th>中文支持</th><th>易用性</th><th><strong>综合评分</strong></th></tr></thead><tbody><tr><td>Claude Code</td><td>4.95</td><td>4.90</td><td>4.95</td><td>4.50</td><td>3.50</td><td><strong>4.90</strong></td></tr><tr><td>Qwen Code</td><td>4.70</td><td>4.75</td><td>4.65</td><td>4.90</td><td>4.20</td><td><strong>4.65</strong></td></tr><tr><td>Codex</td><td>4.80</td><td>4.85</td><td>4.70</td><td>4.30</td><td>4.50</td><td><strong>4.63</strong></td></tr><tr><td>Kimi Code</td><td>4.50</td><td>4.60</td><td>4.40</td><td>4.95</td><td>4.00</td><td><strong>4.38</strong></td></tr><tr><td>Open Code</td><td>4.20</td><td>4.00</td><td>3.90</td><td>4.00</td><td>3.00</td><td><strong>4.00</strong></td></tr></tbody></table><hr><h2 id="四、上手体验实录：真实开发场景中的表现"><a href="#四、上手体验实录：真实开发场景中的表现" class="headerlink" title="四、上手体验实录：真实开发场景中的表现"></a>四、上手体验实录：真实开发场景中的表现</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_04_experience.png" alt="第四章配图"></p><h3 id="场景一：从零搭建一个Next-js项目"><a href="#场景一：从零搭建一个Next-js项目" class="headerlink" title="场景一：从零搭建一个Next.js项目"></a>场景一：从零搭建一个Next.js项目</h3><p><strong>Claude Code体验</strong>：</p><ul><li>能独立完成整个流程</li><li>生成的代码规范且包含必要的错误处理</li><li>全程无需人工干预，耗时约3分钟</li></ul><p><strong>Kimi Code体验</strong>：</p><ul><li>给出了完整的指导，但需要手动执行</li><li>更适合作为”教学助手”而非”自动化工具”</li><li>耗时约15分钟</li></ul><h3 id="场景二：重构遗留代码"><a href="#场景二：重构遗留代码" class="headerlink" title="场景二：重构遗留代码"></a>场景二：重构遗留代码</h3><p><strong>Codex体验</strong>：</p><ul><li>在理解旧代码和生成新代码之间取得了很好的平衡</li><li>主动给出了优化建议</li><li>重构质量高，保持了原有功能的同时提升了代码可维护性</li></ul><h3 id="场景三：调试一个诡异的Bug"><a href="#场景三：调试一个诡异的Bug" class="headerlink" title="场景三：调试一个诡异的Bug"></a>场景三：调试一个诡异的Bug</h3><p><strong>Claude Code体验</strong>：</p><ul><li>不仅能定位问题，还能给出多个解决方案并解释利弊</li><li>这种”独立思考”的能力是它最大的优势</li></ul><hr><h2 id="五、选型指南：不同场景下的最佳选择"><a href="#五、选型指南：不同场景下的最佳选择" class="headerlink" title="五、选型指南：不同场景下的最佳选择"></a>五、选型指南：不同场景下的最佳选择</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_05_selection_guide.png" alt="第五章配图"></p><h3 id="5-1-个人开发者-独立开发者"><a href="#5-1-个人开发者-独立开发者" class="headerlink" title="5.1 个人开发者 / 独立开发者"></a>5.1 个人开发者 / 独立开发者</h3><p><strong>推荐：Kimi Code 或 Qwen Code免费版</strong></p><p>理由：</p><ul><li>零成本或极低成本</li><li>中文支持优秀，沟通效率高</li><li>能满足80%的日常开发需求</li></ul><h3 id="5-2-初创团队-小型公司"><a href="#5-2-初创团队-小型公司" class="headerlink" title="5.2 初创团队 / 小型公司"></a>5.2 初创团队 / 小型公司</h3><p><strong>推荐：Qwen Code专业版（¥40/月）</strong></p><p>理由：</p><ul><li>性价比最高</li><li>支持多人协作</li><li>与阿里云生态整合，部署方便</li><li>100+模型可选，适应不同场景</li></ul><h3 id="5-3-中大型企业"><a href="#5-3-中大型企业" class="headerlink" title="5.3 中大型企业"></a>5.3 中大型企业</h3><p><strong>推荐：Claude Code 或 Codex</strong></p><p>理由：</p><ul><li>能力最强，能处理复杂的企业级项目</li><li>安全性和合规性有保障</li><li>提供企业版和支持服务</li></ul><h3 id="5-4-有技术能力的极客-开源爱好者"><a href="#5-4-有技术能力的极客-开源爱好者" class="headerlink" title="5.4 有技术能力的极客 / 开源爱好者"></a>5.4 有技术能力的极客 / 开源爱好者</h3><p><strong>推荐：Open Code</strong></p><p>理由：</p><ul><li>完全开源，可自定义</li><li>可以接入本地模型，数据完全可控</li><li>社区活跃，持续进化</li></ul><h3 id="5-5-快速决策表"><a href="#5-5-快速决策表" class="headerlink" title="5.5 快速决策表"></a>5.5 快速决策表</h3><table><thead><tr><th>你的情况</th><th>推荐选择</th></tr></thead><tbody><tr><td>预算有限，主要写中文代码</td><td>Kimi Code</td></tr><tr><td>想要免费但功能丰富</td><td>Qwen Code免费版</td></tr><tr><td>愿意付费，追求性价比</td><td>Qwen Code专业版</td></tr><tr><td>预算充足，追求极致能力</td><td>Claude Code</td></tr><tr><td>已在使用OpenAI生态</td><td>Codex</td></tr><tr><td>技术能力强，追求数据主权</td><td>Open Code</td></tr></tbody></table><hr><h2 id="六、作者观点：我对AI编程助手的思考"><a href="#六、作者观点：我对AI编程助手的思考" class="headerlink" title="六、作者观点：我对AI编程助手的思考"></a>六、作者观点：我对AI编程助手的思考</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_06_author_view.png" alt="第六章配图"></p><p><strong>第一，AI不是替代，是增强。</strong></p><p>AI让我成为了一个更好的程序员。它处理了重复性工作，让我能专注于架构设计和业务逻辑。</p><p><strong>第二，贵的确实好，但不一定适合你。</strong></p><p>Claude Code的能力毋庸置疑，但$200/月的价格对很多开发者来说是一笔不小的开支。如果你的日常开发主要是CRUD和简单功能，Kimi Code或Qwen Code完全够用。</p><p><strong>第三，国产AI已经很强了。</strong></p><p>Kimi Code和Qwen Code在中文场景的表现甚至超过了海外产品。如果你主要用中文工作，国产产品可能更适合你。</p><p><strong>第四，AI编程助手正在快速进化。</strong></p><p>今天的测评结果可能三个月后就过时了。保持关注，定期评估，不要被单一工具绑定。</p><p><strong>第五，学会与AI协作是未来的核心技能。</strong></p><p>学会如何向AI提问、如何验证AI的输出、如何与AI协作完成复杂任务，这些才是未来程序员的核心竞争力。</p><hr><h2 id="七、结语与互动"><a href="#七、结语与互动" class="headerlink" title="七、结语与互动"></a>七、结语与互动</h2><p><img src="/img/ai-coding-tools-review-2026/ai-coding-tools_07_conclusion.png" alt="第七章配图"></p><p>这场横评历时两周，覆盖了从产品功能到实际场景的方方面面。希望这些信息能帮助你做出明智的选择。</p><p><strong>互动话题</strong>：</p><ol><li>你目前在使用哪款AI编程助手？体验如何？</li><li>你认为AI编程助手最应该改进的是什么？</li><li>如果预算 unlimited，你会选择哪款工具？</li></ol><p>欢迎在评论区分享你的观点！</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="2026年2月28日-星期六"><a href="#2026年2月28日-星期六" class="headerlink" title="2026年2月28日 星期六"></a>2026年2月28日 星期六</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 查考研分数</li><li><input disabled="" type="checkbox"> 改论文数据</li><li><input disabled="" type="checkbox"> 教资3小时</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>10:00起床，和学生沟通考研分数以及后续安排。10:59-12:00论文环境配置+数据下载。</p><p><strong>下午</strong></p><p>12:00-17:30租服务器、下载数据、配置环境、跑模型，中间出了很多错误。</p><ul><li>13:00-14:30打Timi游戏1.5小时</li><li>14:00-15:00整理公众号工作流并发了一篇</li><li>16:00-16:30去激活银行卡</li><li>16:30-17:30写论文，补实验</li></ul><p><strong>晚上</strong></p><ul><li>17:30-18:00 吃晚饭+散步（晚饭同午饭：青椒肉丝、青菜牛肉、香肠+肉圆）</li><li>18:00-19:00补实验、写论文、定时发公众号</li><li>19:00-21:00做实验、写论文、改公式、改格式</li><li>21:00-22:00降AIGC，把论文交付给实习单位</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青椒肉丝、青菜牛肉、香肠+肉圆</li><li>晚餐：同午餐</li><li>运动：散步3000步（外面太冷，没有散步多久）</li><li>喝水：未记录</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>完成论文实验环境配置和数据下载</li><li>交付论文给实习单位</li><li>公众号工作流优化</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>服务器配置过程中遇到很多错误</li><li>中间打游戏拖延了1.5小时</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>外面的寒冷天气影响了散步习惯，需要找到室内的替代运动方式。</strong></p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 学习教资</li><li><input disabled="" type="checkbox"> 开红学论文</li><li><input disabled="" type="checkbox"> 沟井盖论文要改的内容</li></ul>]]></content>
       
-      
-      <categories>
-          
-          <category> 杂谈 </category>
-          
-          <category> 技术研究 </category>
-          
-      </categories>
       
       
         <tags>
             
-            <tag> Claude Code </tag>
-            
-            <tag> Codex </tag>
-            
-            <tag> AI编程 </tag>
-            
-            <tag> Qwen Code </tag>
-            
-            <tag> Kimi Code </tag>
+            <tag> 日记 </tag>
             
         </tags>
       
@@ -742,25 +809,6 @@
         <tags>
             
             <tag> 月复盘 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2026年2月28日</title>
-      <link href="/posts/0228f515.html"/>
-      <url>/posts/0228f515.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="2026年2月28日-星期六"><a href="#2026年2月28日-星期六" class="headerlink" title="2026年2月28日 星期六"></a>2026年2月28日 星期六</h1><h2 id="昨日计划完成情况"><a href="#昨日计划完成情况" class="headerlink" title="昨日计划完成情况"></a>昨日计划完成情况</h2><ul><li><input disabled="" type="checkbox"> 查考研分数</li><li><input disabled="" type="checkbox"> 改论文数据</li><li><input disabled="" type="checkbox"> 教资3小时</li></ul><h2 id="今日记录"><a href="#今日记录" class="headerlink" title="今日记录"></a>今日记录</h2><p><strong>上午</strong></p><p>10:00起床，和学生沟通考研分数以及后续安排。10:59-12:00论文环境配置+数据下载。</p><p><strong>下午</strong></p><p>12:00-17:30租服务器、下载数据、配置环境、跑模型，中间出了很多错误。</p><ul><li>13:00-14:30打Timi游戏1.5小时</li><li>14:00-15:00整理公众号工作流并发了一篇</li><li>16:00-16:30去激活银行卡</li><li>16:30-17:30写论文，补实验</li></ul><p><strong>晚上</strong></p><ul><li>17:30-18:00 吃晚饭+散步（晚饭同午饭：青椒肉丝、青菜牛肉、香肠+肉圆）</li><li>18:00-19:00补实验、写论文、定时发公众号</li><li>19:00-21:00做实验、写论文、改公式、改格式</li><li>21:00-22:00降AIGC，把论文交付给实习单位</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>精力 6/10，情绪 6/10</p><h2 id="健康打卡"><a href="#健康打卡" class="headerlink" title="健康打卡"></a>健康打卡</h2><ul><li>午餐：青椒肉丝、青菜牛肉、香肠+肉圆</li><li>晚餐：同午餐</li><li>运动：散步3000步（外面太冷，没有散步多久）</li><li>喝水：未记录</li></ul><h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><ul><li>完成论文实验环境配置和数据下载</li><li>交付论文给实习单位</li><li>公众号工作流优化</li></ul><h2 id="今日卡点"><a href="#今日卡点" class="headerlink" title="今日卡点"></a>今日卡点</h2><ul><li>服务器配置过程中遇到很多错误</li><li>中间打游戏拖延了1.5小时</li></ul><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><blockquote><p><strong>外面的寒冷天气影响了散步习惯，需要找到室内的替代运动方式。</strong></p></blockquote><h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul><li><input disabled="" type="checkbox"> 学习教资</li><li><input disabled="" type="checkbox"> 开红学论文</li><li><input disabled="" type="checkbox"> 沟井盖论文要改的内容</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
             
         </tags>
       
@@ -1243,9 +1291,9 @@
             
             <tag> Claude </tag>
             
-            <tag> MiniMax </tag>
-            
             <tag> Agent </tag>
+            
+            <tag> MiniMax </tag>
             
             <tag> 效率工具 </tag>
             
@@ -1751,11 +1799,11 @@
             
             <tag> 磁盘清理 </tag>
             
-            <tag> 存储优化 </tag>
-            
             <tag> E盘整理 </tag>
             
             <tag> 微信文件管理 </tag>
+            
+            <tag> 存储优化 </tag>
             
         </tags>
       
@@ -1786,9 +1834,9 @@
             
             <tag> 磁盘清理 </tag>
             
-            <tag> D盘整理 </tag>
-            
             <tag> 存储优化 </tag>
+            
+            <tag> D盘整理 </tag>
             
         </tags>
       
@@ -1850,9 +1898,9 @@
             
             <tag> Windows </tag>
             
-            <tag> 磁盘清理 </tag>
-            
             <tag> 系统优化 </tag>
+            
+            <tag> 磁盘清理 </tag>
             
             <tag> 经验分享 </tag>
             
@@ -3957,9 +4005,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> shell </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -3986,9 +4034,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> shell </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -4015,9 +4063,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> shell </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
