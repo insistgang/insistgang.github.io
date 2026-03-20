@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>读博还是工作？一个 AI 方向硕士生的真实纠结 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 这个问题我想了很久。 作为一个电子信息工程的硕二学生，做计算机视觉方向，身边的人大致分两拨：一拨准备读博，一拨准备找工作。两边都有道理，两边都有风险。 我自己目前倾向读博，目标是东华大学和上海交大。但我不会告诉你”读博一定好”或者”工作一定好”——因为这取决于太多个人因素。 我只说我看到的事..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "读博还是工作？一个 AI 方向硕士生的真实纠结",
+  "url": "https://insistgang.top/posts/phd-vs-work.html",
+  "image": "https://insistgang.top/img/phd-vs-work/05_00_phd_vs_work_cover.png",
+  "datePublished": "2026-03-20T06:15:00.000Z",
+  "dateModified": "2026-03-20T07:00:04.036Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/phd-vs-work.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '读博还是工作？一个 AI 方向硕士生的真实纠结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">194</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">118</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/phd-vs-work/05_00_phd_vs_work_cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">读博还是工作？一个 AI 方向硕士生的真实纠结</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">读博还是工作？一个 AI 方向硕士生的真实纠结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-20T07:00:04.036Z" title="更新于 2026-03-20 15:00:04">2026-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/phd-vs-work/05_00_phd_vs_work_cover.png" alt="封面"></p>
+<p>这个问题我想了很久。</p>
+<p>作为一个电子信息工程的硕二学生，做计算机视觉方向，身边的人大致分两拨：一拨准备读博，一拨准备找工作。两边都有道理，两边都有风险。</p>
+<p>我自己目前倾向读博，目标是东华大学和上海交大。但我不会告诉你”读博一定好”或者”工作一定好”——因为这取决于太多个人因素。</p>
+<p>我只说我看到的事实，和我自己的思考。</p>
+<hr>
+<h2 id="学术界的风险，比你想象的大"><a href="#学术界的风险，比你想象的大" class="headerlink" title="学术界的风险，比你想象的大"></a>学术界的风险，比你想象的大</h2><p><img src="/img/phd-vs-work/05_01_academia_risks.png" alt="第一章配图"></p>
+<p>AI 领域有一个很残酷的现实：技术迭代太快了。</p>
+<p>2017 年 Transformer 出来，之前做 RNN/LSTM 的研究基本一夜过时。2022 年 ChatGPT 出来，传统 NLP 的研究范式整个被改写。2024 年 Sora 出来，视频生成领域重新洗牌。</p>
+<p>一个博士读四到六年，而 AI 的技术范式迭代周期大概只有两到三年。这意味着你读博期间，研究方向可能被颠覆一到两次。</p>
+<p><strong>毕业时发现自己做的东西已经没人关心了——这不是极端情况，是真实发生过的事。</strong></p>
+<p>另一个问题是学术界和工业界的脱节。以强化学习为例，学术界大量论文在卷 Atari 游戏的分数——“在 100k 步的时候谁分数高”。但工业界需要的是能落地的东西：机器人控制、推荐系统、自动驾驶。学术界 overfit 到 benchmark 上了，和真实需求之间有一道很深的沟。</p>
+<p>这不是说学术研究没价值，而是说如果你的目标是”进 AI Lab 做研究”，那 PhD 可能不是唯一的路，甚至不是最优的路。</p>
+<hr>
+<h2 id="工业界的逻辑：经验比学历值钱"><a href="#工业界的逻辑：经验比学历值钱" class="headerlink" title="工业界的逻辑：经验比学历值钱"></a>工业界的逻辑：经验比学历值钱</h2><p><img src="/img/phd-vs-work/05_02_industry_logic.png" alt="第二章配图"></p>
+<p>我跟几个在 AI 公司工作的师兄聊过，他们给我最大的感受是：<strong>工业界招人，看的是你能解决什么问题，不是你有什么学历。</strong></p>
+<p>有没有 PhD 不是决定性因素，关键是你的经验和岗位的匹配度。你做过什么项目？解决过什么实际问题？能不能上手就干？这些比一纸学位重要得多。</p>
+<p>而且工业界有一些学术界很难获得的资源：海量的真实数据（TB 甚至 PB 级别）、充足的计算资源（几百张 GPU）、以及最重要的——真实的业务场景。这些东西在学校里是很难接触到的。</p>
+<p>从收入角度算一笔账：本科毕业直接工作，假设年薪 30 万，四年下来至少 120 万的收入和四年的职业经验。读博四年，收入接近零，毕业后起薪可能高一些，但要把前四年的机会成本追回来，需要很长时间。</p>
+<hr>
+<h2 id="工业界最缺什么人？"><a href="#工业界最缺什么人？" class="headerlink" title="工业界最缺什么人？"></a>工业界最缺什么人？</h2><p><img src="/img/phd-vs-work/05_03_industry_demand.png" alt="第三章配图"></p>
+<p>从我了解到的信息来看，AI 行业现在最稀缺的不是算法工程师，而是 Infra 人才。</p>
+<p>Infra 就是基础设施——训练框架（DeepSpeed、Megatron）、推理优化（vLLM、TensorRT）、分布式系统（Kubernetes、Ray）、硬件优化（CUDA）。这些东西门槛高，培养难、学术界基本不教，但每个 AI Lab 都急需。</p>
+<p>有师兄跟我说，Infra 方向有三年以上经验的人才”屈指可数”，薪资比普通算法岗高出 30%-50%。</p>
+<p>另一个关键能力是 Scalability——你能处理多大规模的数据、训练多大的模型、跑多快的推理。这些能力只有在工业界的实际项目中才能积累。</p>
+<hr>
+<h2 id="那我为什么还是想读博？"><a href="#那我为什么还是想读博？" class="headerlink" title="那我为什么还是想读博？"></a>那我为什么还是想读博？</h2><p><img src="/img/phd-vs-work/05_04_why_phd.png" alt="第四章配图"></p>
+<p>说了这么多工业界的好处，但我自己还是倾向读博。不是因为不认同上面的分析，而是因为几个个人原因：</p>
+<p>第一，我的研究方向（多尺度图像检测、违章建筑识别）目前还在早期阶段，我觉得值得深入做下去。这不是一个已经被卷烂的方向，还有空间。</p>
+<p>第二，我本科背景不是 985/211，硕士也是普通学校。在当前的就业市场上，博士学位对我来说是一个信号——它证明我在某个方向有深度积累。这个信号对我比对清北的学生更重要。</p>
+<p>第三，我确实喜欢做研究。写论文的过程虽然痛苦，但想通一个问题、跑通一个实验的那种满足感，是工程任务给不了的。</p>
+<p><strong>但我也给自己设了一条底线：读博期间必须保持和工业界的连接。</strong> 每年找机会实习，学习工程化技能，关注真实的行业需求。不能把自己关在象牙塔里。</p>
+<hr>
+<h2 id="给同样在纠结的人"><a href="#给同样在纠结的人" class="headerlink" title="给同样在纠结的人"></a>给同样在纠结的人</h2><p><img src="/img/phd-vs-work/05_05_decision_advice.png" alt="第五章配图"></p>
+<p>如果你也在犹豫读博还是工作，几个建议：</p>
+<p><strong>如果你目标是进 AI Lab 做研究员</strong>，工业界可能比 PhD 更快到达。经验匹配度比学历更重要。</p>
+<p><strong>如果你目标是学术界教职</strong>，PhD 是必须的，没有替代方案。</p>
+<p><strong>如果你不确定</strong>，我的建议是先工作。工作两三年再决定要不要读博，不晚。反过来，读了博再后悔，沉没成本就大了。</p>
+<p><strong>如果你像我一样，明确想深入一个研究方向</strong>，那就读。但要清醒地知道风险：技术可能过时、机会成本很高、毕业后的路可能比你想的窄。</p>
+<p>没有标准答案。重要的是你想清楚自己要什么，然后为自己的选择负责。</p>
+<hr>
+<p><em>本文来自「研路炼钢」</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/phd-vs-work.html">https://insistgang.top/posts/phd-vs-work.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">职业规划</a><a class="post-meta__tags" href="/tags/%E8%AF%BB%E5%8D%9A/">读博</a></div><div class="post-share"><div class="social-share" data-image="/img/phd-vs-work/05_00_phd_vs_work_cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/fate-and-destiny.html" title="逆天改命，改的到底是什么？"><img class="cover" src="/img/fate-and-destiny/08_00_change_destiny_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">逆天改命，改的到底是什么？</div></div><div class="info-2"><div class="info-item-1"> 最近听到一个对”命”和”运”的解释，觉得特别通透。 命，就是当你面对一件事情的时候，按照你过往的性格和习惯会做出的行为。不假思索，自动反应——遇到冲突就回避，遇到困难就放弃，遇到机会就犹豫。这些刻在你身体里的默认反应，就是你的命。 运，是你停下来想了一想，然后做出了一个跟你平时不一样的选择。逆着本能，做出不同的行为，产生不同的结果。这就是运。 所以所谓”逆天改命”，逆的不是天，是自己的本能。改的不是命，改的是运。  命为什么难改？ 因为习惯的力量太大了。 心理学研究说，人每天 40% 的行为是习惯性的——不经过思考，自动执行。你遇到一件事，大脑会下意识地调用以前的应对模式，就像自动驾驶一样。 这些模式是你十几二十年养成的。内向的人遇到社交场合就想躲，悲观的人遇到困难第一反应是”算了”，冲动的人看到机会就直接冲——不是他们不知道有更好的选择，是身体比脑子快。 而且这些模式是可预测的。你身边的人大概率能猜到你面对某件事会怎么做。别人能预测你的行为，你的结果就基本是固定的。 这就是”命是定数”的意思。  运怎么来？ 运来自一个动作：暂停。 遇到事情的时候，不是立刻按习惯反应，而是停一...</div></div></div></a><a class="pagination-related" href="/posts/survival-philosophy.html" title="活着是硬道理，但怎么活是个技术活"><img class="cover" src="/img/survival-philosophy/09_00_survival_philosophy_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">活着是硬道理，但怎么活是个技术活</div></div><div class="info-2"><div class="info-item-1"> 如果让我用一句话总结这两年最大的感悟，大概就是： 健康幸福地活着，活得长长久久高高兴兴，是硬硬硬的硬道理。 听起来像废话，但你真的做到了吗？  真正的痛苦和自己制造的痛苦 我后来想明白一件事：痛苦分两种。 第一种是真实的物质匮乏——吃不饱、穿不暖、交不起房租、看不起病。这种痛苦是真的，也是最优先要解决的。没有物质基础谈精神追求，是空中楼阁。 第二种是自己制造的精神痛苦——觉得别人应该按你的想法做但他没做，期待落空了，在意别人的评价了。这种痛苦本质上是你把自己的想法强加给了外界，外界没接受，你就难受。 分清这两种痛苦很重要。对第一种，想办法解决。对第二种，想办法化解。  物质基础：先确保自己能活下去 这话说得糙，但是真的。 我是一个研究生，有奖学金、有基本的生活保障。每次焦虑的时候我会提醒自己：你有一份收入，你吃饱了，你有地方住，你的基本需求是满足的。 这不是自我安慰，是在锚定一个事实——你的处境没有你情绪告诉你的那么糟糕。 马斯洛说得对：先满足底层需求，再追求高层的东西。物质基础没解决的时候，不要跟自己谈理想谈情怀。先确保稳定收入、建立紧急储蓄、买必要的保险。这些是地基。  精...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/ai-coding-era-career-path.html" title="AI编程工具时代的个人发展路径"><img class="cover" src="/img/ai-coding-era-career-path/00_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">AI编程工具时代的个人发展路径</div></div><div class="info-2"><div class="info-item-1"> ——一场关于AI工具时代个人发展路径的深度对话  最近看到一段很有启发性的对话，一位留美金融硕士，靠自学AI编程工具一个月写出十万行代码，帮幼儿园做数字化、给妈妈做网站、开发MBTI测试应用……听起来是不是很厉害？ 但对话的另一方却泼了一盆冷水：你这是拿关羽的青龙偃月刀在砍苍蝇。 这句话值得每一个正在拥抱AI工具的人停下来想一想。  一个典型的”AI原住民”画像 故事的主角背景并不复杂：本科经济学，研究生金融学，都在美国读的。编程基础有一些，系统学过Python，但自认不是传统意义上的程序员。 真正的转折点是研究生期间的一门课——《AI Essentials for Business》。通过这门课，他上手了Sonnet 3.5/3.7、Claude Code 4.5/4.6 Max等AI编程工具，发现自己能以惊人的速度把想法变成产品。一个月写十万行代码，这在传统开发模式下几乎不可想象。 于是他开始行动：帮家附近经营困难的幼儿园做网页、公众号、小程序；给母亲定制个人网站；开发了一个AI对话式MBTI测试；第一时间把OpenCloud部署到AWS服务器…… 他的自我定位也很明确——...</div></div></div></a><a class="pagination-related" href="/posts/situational-awareness-essence.html" title="《Situational Awareness》精华提取：一个前OpenAI研究员眼中的未来十年"><img class="cover" src="/img/situational-awareness-essence/Situational_Awareness_00_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-06</div><div class="info-item-2">《Situational Awareness》精华提取：一个前OpenAI研究员眼中的未来十年</div></div><div class="info-2"><div class="info-item-1"> 素材整理 | 研路炼钢 原文：Leopold Aschenbrenner，《Situational Awareness: The Decade Ahead》，2024年6月，165页，5万字    一、作者是谁？为什么值得认真读？ Leopold Aschenbrenner（利奥波德·阿申布伦纳），德裔美国人，19岁以最优毕业生身份从哥伦比亚大学毕业，主修经济学和数学统计。2023年加入OpenAI的”超级对齐”（Superalignment）团队，师从Ilya Sutskever。2024年4月因涉嫌泄露内部安全备忘录被解雇（他本人否认泄密，称只是与外部研究者分享了一份关于安全措施的头脑风暴文件）。 离开两个月后，他发布了这篇165页的研究报告，在硅谷迅速传播。特朗普女儿伊万卡都在社交媒体上推荐过。随后他创办了以此文命名的对冲基金”Situational Awareness LP”，获得Stripe创始人Patrick和John Collison等人投资，截至2025年管理规模超过15亿美元。 他不是旁观者，他是参与构建这项技术的人。 这篇文章也因此被一些人比作冷战初期外交官...</div></div></div></a><a class="pagination-related" href="/posts/ai-knowledge-equality.html" title="大模型时代，知识真的平权了吗？"><img class="cover" src="/img/ai-knowledge-equality/cover_03_knowledge.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-26</div><div class="info-item-2">大模型时代，知识真的平权了吗？</div></div><div class="info-2"><div class="info-item-1">大模型时代，知识真的平权了吗？  ChatGPT、Claude、Gemini、DeepSeek……大模型一个接一个地涌现，而且还在快速进化。一个很自然的问题浮出水面： 我们是不是终于实现知识平权了？ 答案可能没有想象中那么乐观。   进步是真实的先说好的一面。大模型确实在做一些以前不可能的事： 以前想搞懂一个法律问题，要花钱请律师；想看病前做功课，要翻大量医学资料；偏远山区的学生遇到不会的题，身边没有好老师能问。现在，打开一个对话框，输入你的问题，几秒钟就能得到一个相当专业的初步回答。 语言壁垒也在被削弱。不懂英文的人，也能通过大模型高效获取英文世界的知识。理论上，一个县城中学的学生和北京四中的学生，可以获得同样质量的答疑服务。 这些进步是真实的，也是了不起的。   但新的不平等正在形成问题是，工具的可及性只是知识链条上最表层的一环。大模型在拉平旧差距的同时，正在制造新的分层。 第一层：数字鸿沟依然存在。 你需要有设备、有网络，甚至需要”知道这个工具存在”。这听起来简单，但对很多人来说并不是。 第二层：”会问问题”本身就是一种稀缺能力。 同样一个大模型，一个懂得如何精准描述需求的...</div></div></div></a><a class="pagination-related" href="/posts/claude-skills-intro.html" title="Claude的Skills是什么"><img class="cover" src="/img/claude-skills-intro/00_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-26</div><div class="info-item-2">Claude的Skills是什么</div></div><div class="info-2"><div class="info-item-1">  用过Claude的人可能注意到，让它做PPT、写Word文档、处理Excel的时候，它不是瞎写代码碰运气，而是有一套明确的流程和规范在指导它。 这背后的机制叫Skills。 这个概念不复杂，但理解它之后，你会对”如何让AI更好地为你工作”有一个全新的认知。  Skills的本质：写给AI看的操作手册 很多人第一反应是——Skills是不是某种插件？某种程序？需要安装、编译、配置？ 都不是。 Skills本质上就是结构化的文档，主要用Markdown写成，告诉Claude在执行某类任务时应该遵循哪些最佳实践。不需要打包，不需要配置文件，不需要任何编程环境。 打个比方：你去一家餐厅后厨，墙上贴着”红烧肉标准操作流程”——用什么锅、放多少糖、炖多久、怎么收汁。厨师每次照着做，出品就稳定。 Skills就是贴在Claude”后厨墙上”的那张操作流程。  它是怎么工作的？ 整个执行机制分三步： 第一步，判断需不需要。 当你发消息给Claude，系统会根据你的需求，判断是否有相关的Skill可以调用。每个Skill都有一段简短的描述，说明自己适用于什么场景。 第二步，读取操作手册。 如果...</div></div></div></a><a class="pagination-related" href="/posts/coding-plan-api-report.html" title="国产顶级 Coding Plan API 研究报告"><img class="cover" src="/img/coding-plan-report/cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-22</div><div class="info-item-2">国产顶级 Coding Plan API 研究报告</div></div><div class="info-2"><div class="info-item-1">  研究日期：2026-02-21 ~ 2026-02-22研究者：Claude Code  概述本研究对三个国产顶级大模型的 Coding Plan API 进行了全面测试，包括：  GLM (智谱AI) Kimi (月之暗面) MiniMax  重点关注：API 连接性、文本生成能力、视觉/图片理解能力。   一、GLM (智谱AI)1.1 基本信息   项目 值    平台 智谱AI 开放平台   API 端点 https://open.bigmodel.cn/api/coding/paas/v4/chat/completions   认证方式 Bearer Token   格式 OpenAI 兼容   1.2 支持模型   模型 类型 说明    glm-4.6V 视觉 最强视觉推理，带 reasoning_content   glm-4.6V-Flash 视觉 性价比视觉模型，带 reasoning_content   glm-4v-flash 视觉 轻量级图像理解，无推理链   1.3 视觉能力 外部 URL: ✅ 支持 本地图片 (base64): ✅ 支持 原生视...</div></div></div></a><a class="pagination-related" href="/posts/maxclaw-deep-dive.html" title="MiniMax Agent 全新 MaxClaw 模式深度解析：开箱即用的 AI 生产力革命"><img class="cover" src="/img/maxclaw-deep-dive/MaxClaw_00_maxclaw_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-06</div><div class="info-item-2">MiniMax Agent 全新 MaxClaw 模式深度解析：开箱即用的 AI 生产力革命</div></div><div class="info-2"><div class="info-item-1"> 原创 | 研途炼钢 当 OpenClaw 还在让开发者折腾 Docker 和 API Key 的时候，MiniMax 已经把”一键部署 AI Agent”变成了现实。    写在前面 最近 AI Agent 赛道热闹非凡——OpenClaw 开源即火爆，各家平台纷纷跟进。就在这个节骨眼上，MiniMax 在 2026 年 2 月 25 日正式推出了 MaxClaw，直接把 OpenClaw 框架搬上云端，用自家 M2.5 大模型（229B 参数 MoE 架构）驱动，打出了”10 秒部署、开箱即用”的口号。 我这几天深度体验了一番，说说真实感受。  一、MaxClaw 到底是什么？ 先厘清一个容易混淆的概念：市面上有两个 MaxClaw。 云端 MaxClaw（MiniMax 官方托管版）：你在 MiniMax Agent 平台（国际版 agent.minimax.io / 国内版 agent.minimaxi.com）上直接使用，所有计算和执行都在 MiniMax 的云端沙盒完成。这是本文的主角。 开源 maxclaw（GitHub Lichas/maxclaw）：一个 Go ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">194</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">118</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%9C%AF%E7%95%8C%E7%9A%84%E9%A3%8E%E9%99%A9%EF%BC%8C%E6%AF%94%E4%BD%A0%E6%83%B3%E8%B1%A1%E7%9A%84%E5%A4%A7"><span class="toc-number">1.</span> <span class="toc-text">学术界的风险，比你想象的大</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%B8%9A%E7%95%8C%E7%9A%84%E9%80%BB%E8%BE%91%EF%BC%9A%E7%BB%8F%E9%AA%8C%E6%AF%94%E5%AD%A6%E5%8E%86%E5%80%BC%E9%92%B1"><span class="toc-number">2.</span> <span class="toc-text">工业界的逻辑：经验比学历值钱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%B8%9A%E7%95%8C%E6%9C%80%E7%BC%BA%E4%BB%80%E4%B9%88%E4%BA%BA%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">工业界最缺什么人？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%A3%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E6%83%B3%E8%AF%BB%E5%8D%9A%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">那我为什么还是想读博？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%90%8C%E6%A0%B7%E5%9C%A8%E7%BA%A0%E7%BB%93%E7%9A%84%E4%BA%BA"><span class="toc-number">5.</span> <span class="toc-text">给同样在纠结的人</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/hualuogeng-speech.html" title="华罗庚 70 年前说的两句话，我到现在才真正听懂"><img src="/img/hualuogeng-speech/04_00_hualuogeng_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="华罗庚 70 年前说的两句话，我到现在才真正听懂"/></a><div class="content"><a class="title" href="/posts/hualuogeng-speech.html" title="华罗庚 70 年前说的两句话，我到现在才真正听懂">华罗庚 70 年前说的两句话，我到现在才真正听懂</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/70-year-letter.html" title="如果 70 岁的你给现在的你写一封信"><img src="/img/70-year-letter/07_00_70_year_letter_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果 70 岁的你给现在的你写一封信"/></a><div class="content"><a class="title" href="/posts/70-year-letter.html" title="如果 70 岁的你给现在的你写一封信">如果 70 岁的你给现在的你写一封信</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/partner-selection.html" title="找对象这件事，我想通了一个标准"><img src="/img/partner-selection/10_00_partner_selection_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="找对象这件事，我想通了一个标准"/></a><div class="content"><a class="title" href="/posts/partner-selection.html" title="找对象这件事，我想通了一个标准">找对象这件事，我想通了一个标准</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/sci-submission-checklist.html" title="投稿 SCI，我因为漏了一个文件被退回过"><img src="/img/sci-submission-checklist/06_00_sci_submission_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="投稿 SCI，我因为漏了一个文件被退回过"/></a><div class="content"><a class="title" href="/posts/sci-submission-checklist.html" title="投稿 SCI，我因为漏了一个文件被退回过">投稿 SCI，我因为漏了一个文件被退回过</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/survival-philosophy.html" title="活着是硬道理，但怎么活是个技术活"><img src="/img/survival-philosophy/09_00_survival_philosophy_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="活着是硬道理，但怎么活是个技术活"/></a><div class="content"><a class="title" href="/posts/survival-philosophy.html" title="活着是硬道理，但怎么活是个技术活">活着是硬道理，但怎么活是个技术活</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/posts/phd-vs-work.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.top/posts/phd-vs-work.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '读博还是工作？一个 AI 方向硕士生的真实纠结'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script src="/live2d-widget/dist/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.png" alt="/img/steam-steel-infinite-minds/00_封面.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="/img/award-winning-grad-student-reflection/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="/img/claude-code-seven-components-deep-dive/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.png" alt="/img/ai-coding-era-career-path/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI编程工具时代的个人发展路径</a><div class="blog-slider__text">AI时代下程序员的职业发展路径与能力矩阵分析</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>
