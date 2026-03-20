@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>我每天都在用的 6 个 AI 工具，说说真实体验</title>
+      <link href="/posts/six-ai-tools.html"/>
+      <url>/posts/six-ai-tools.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/six-ai-tools/11_00_six_ai_tools_cover.png" alt="封面"></p><p>标题党文章里动不动就”效率提升 10 倍”，但实际上大部分 AI 工具用下来，体感提升可能也就两三倍——不过这两三倍已经足够改变工作节奏了。</p><p>今天不写测评，就说说我自己每天在用的几个工具，好用在哪、坑在哪，一起说。</p><hr><h2 id="Skill-Create：把重复劳动变成一键执行"><a href="#Skill-Create：把重复劳动变成一键执行" class="headerlink" title="Skill Create：把重复劳动变成一键执行"></a>Skill Create：把重复劳动变成一键执行</h2><p><img src="/img/six-ai-tools/11_01_skill_create.png" alt="第一章配图"></p><p>这是我觉得最被低估的一个工具。</p><p>它干的事很简单：把你已经跑通的工作流程，转化成一个可以复用的 Skill。下次遇到同样的任务，直接调用就行。</p><p>我用它干过最实际的一件事：把我每周写研究进展总结的流程做成了一个 Skill。以前每次要花一个多小时回顾这周干了什么、整理成文字，现在基本半小时搞定。</p><p><strong>优点：</strong> 一次投入，长期受益。适合任何有重复性的工作流程。</p><p><strong>坑：</strong> 你的工作流本身要先跑通。如果流程本身就是混乱的，Skill 只会把混乱自动化。</p><hr><h2 id="Document-Skills：处理文档的效率确实高"><a href="#Document-Skills：处理文档的效率确实高" class="headerlink" title="Document Skills：处理文档的效率确实高"></a>Document Skills：处理文档的效率确实高</h2><p><img src="/img/six-ai-tools/11_02_document_skills.png" alt="第二章配图"></p><p>这个是官方出品的，主要处理 Excel、PPT、PDF 这些文档。</p><p>我用得最多的场景是 Excel 数据处理。实验数据整理、格式清洗、批量分析——以前手动搞几个小时的活，现在十几分钟能跑完。PPT 生成我试过几次，能用，但生成出来的排版还是需要手动调，不是真的”一键完美”。</p><p>PDF 阅读也不错，特别是论文。丢进去之后让它提取关键信息、做摘要，省了不少粗读的时间。但细读还是得自己来，AI 的总结有时候会漏掉你真正关心的细节。</p><p><strong>真实体感：</strong> Excel 处理大概能提升 5-8 倍效率，PPT 生成 3-4 倍，PDF 阅读 2-3 倍。没有宣传说的 10 倍那么夸张，但确实省了不少时间。</p><hr><h2 id="Find-Skill：找现成方案，别重复造轮子"><a href="#Find-Skill：找现成方案，别重复造轮子" class="headerlink" title="Find Skill：找现成方案，别重复造轮子"></a>Find Skill：找现成方案，别重复造轮子</h2><p><img src="/img/six-ai-tools/11_03_find_skill.png" alt="第三章配图"></p><p>处理复杂任务之前，我会先用这个工具搜一下有没有别人做好的 Skill。</p><p>很多时候你以为自己要从零开始的事情，其实已经有人做过了。直接装一个现成的 Skill，比自己从头搭省太多时间。</p><p><strong>使用频率不算高，但每次用到都觉得值。</strong> 就像你写代码之前先搜一下有没有现成的库——大部分时候真的有。</p><hr><h2 id="Front-End-Design：前端不丑了"><a href="#Front-End-Design：前端不丑了" class="headerlink" title="Front End Design：前端不丑了"></a>Front End Design：前端不丑了</h2><p><img src="/img/six-ai-tools/11_04_frontend_design.png" alt="第四章配图"></p><p>AI 生成的代码有一个通病：功能能用，但丑。</p><p>这个工具专门解决这个问题。你让 AI 生成了一个网页或组件，再用 Front End Design 跑一遍，界面质量会有一个明显的提升。响应式布局、配色、排版，它都能帮你优化。</p><p>我做过一个小工具的前端页面，自己写的 CSS 惨不忍睹，用这个工具美化了一遍之后，至少看起来像个正经产品了。</p><p><strong>局限：</strong> 它能提升”及格线以上”的设计水平，但如果你要做真正独特的设计，还是得自己来。</p><hr><h2 id="Code-Simplifier：治-AI-写的烂代码"><a href="#Code-Simplifier：治-AI-写的烂代码" class="headerlink" title="Code Simplifier：治 AI 写的烂代码"></a>Code Simplifier：治 AI 写的烂代码</h2><p><img src="/img/six-ai-tools/11_05_code_simplifier.png" alt="第五章配图"></p><p>AI 写代码的另一个通病：冗余。</p><p>一段逻辑能用 10 行写完，AI 给你写 50 行，还嵌套了三层 if-else。Code Simplifier 能自动简化这些复杂逻辑、消除重复代码、优化结构。</p><p>我现在的习惯是：让 AI 先写一版代码，然后用 Code Simplifier 跑一遍清理。相当于一个自动代码审查员。</p><p><strong>不是每次都需要，但处理长代码的时候特别管用。</strong></p><hr><h2 id="Reflue：让-AI-自己死磕到底"><a href="#Reflue：让-AI-自己死磕到底" class="headerlink" title="Reflue：让 AI 自己死磕到底"></a>Reflue：让 AI 自己死磕到底</h2><p><img src="/img/six-ai-tools/11_06_reflue.png" alt="第六章配图"></p><p>这个工具的逻辑是：给它一个任务，它就会自动循环执行，直到任务完成。</p><p>我用它做过一次大量资料搜索——要找某个研究方向近三年的所有相关论文。如果我自己搜，得搜好几个小时。扔给 Reflue，让它自己跑，我去干别的。回来的时候资料已经整理好了。</p><p><strong>但要注意成本。</strong> 这东西每跑一轮都在消耗 Token，任务复杂的话费用会上去。建议搭配包月套餐用。</p><hr><h2 id="真实的使用感受"><a href="#真实的使用感受" class="headerlink" title="真实的使用感受"></a>真实的使用感受</h2><p><img src="/img/six-ai-tools/11_07_real_usage.png" alt="第七章配图"></p><p>这 6 个工具里，我用得最频繁的是 Document Skills 和 Skill Create，因为它们解决的是我每天都会遇到的问题。Code Simplifier 和 Front End Design 是写代码时的标配。Find Skill 和 Reflue 偶尔用，但用到的时候效果很明显。</p><p>其中 Skill Create、Document Skills、Front End Design 三个是官方出品的，稳定性和可靠性更高一些。</p><p>说到底，工具好不好用不取决于它的功能有多炫，取决于它能不能解决你每天的实际问题。如果你每天的工作里有大量重复劳动和文档处理，这几个工具值得试试。</p><p>如果你的工作主要是创意性的、非结构化的——那 AI 工具目前帮不了你太多，这也是实话。</p><hr><p><em>本文来自「研路炼钢」</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI工具 </tag>
+            
+            <tag> 效率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读完 6 个巨富的金钱观，我一个研究生想了很多</title>
+      <link href="/posts/six-wealthy-money.html"/>
+      <url>/posts/six-wealthy-money.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/six-wealthy-money/13_00_six_wealthy_money_cover.png" alt="封面"></p><p>最近读了一些关于洛克菲勒、巴菲特、福特、卡内基、比尔·盖茨、马斯克的金钱观。</p><p>本来只是随便翻翻，但越看越觉得有意思——不是因为他们有多少钱，而是因为他们对钱的理解，和我们普通人完全不一样。</p><p>我一个月奖学金几千块的研究生，聊巨富的金钱观可能有点搞笑。但有些道理跟你有多少钱没关系，跟你怎么看待钱有关。</p><hr><h2 id="福特那句话，戳到我了"><a href="#福特那句话，戳到我了" class="headerlink" title="福特那句话，戳到我了"></a>福特那句话，戳到我了</h2><p><img src="/img/six-wealthy-money/13_01_ford_quote.png" alt="第一章配图"></p><p>福特说过：”如果金钱是你获得独立的希望，你将永远也不会得到独立。在这个世界上，一个人所能拥有的唯一真正的安全保障，就是知识、经验和能力的储备。”</p><p>这句话让我想了很久。</p><p>作为一个研究生，我现在的经济状况就是”基本够用但没有余裕”。以前我会想，等以后赚够了钱就安全了。但福特说的是：钱可以贬值、可以损失、可以被各种意外吃掉，唯一不会被拿走的是你脑子里的东西。</p><p>知识、经验、能力——这些才是真正的安全感来源。不会贬值，不会被偷走，而且越用越值钱。</p><p>想通这一点之后，我对读研这件事的心态变了。以前觉得读研是延迟赚钱，现在觉得读研就是在投资自己——用两三年时间换一套别人拿不走的能力。这个回报率，比任何理财产品都高。</p><hr><h2 id="巴菲特：越早开始越好"><a href="#巴菲特：越早开始越好" class="headerlink" title="巴菲特：越早开始越好"></a>巴菲特：越早开始越好</h2><p><img src="/img/six-wealthy-money/13_02_buffett.png" alt="第二章配图"></p><p>巴菲特的核心观点很简单：开始存钱并及早投资。</p><p>他最爱讲复利。同样每个月投 1000 块，25 岁开始和 35 岁开始，30 年后的差距不是 10 年的线性差，而是翻倍级别的差距。时间是复利最大的朋友。</p><p>但对研究生来说，”投资”不一定是买股票。你现在最该投资的是你自己——你的技能、你的认知、你的行业积累。这些东西的复利效应，比任何金融产品都猛。</p><p>今天多读一篇论文、多掌握一个工具、多理解一个行业——这些”投入”在当下看不到回报，但五年后回头看，每一个都在产生复利。</p><p>巴菲特还有一个原则我很认同：只投你懂的东西。翻译到我们的语境就是：<strong>在你能力圈里深耕，不要什么热门就追什么。</strong></p><hr><h2 id="洛克菲勒和卡内基：赚钱是能力，花钱是艺术"><a href="#洛克菲勒和卡内基：赚钱是能力，花钱是艺术" class="headerlink" title="洛克菲勒和卡内基：赚钱是能力，花钱是艺术"></a>洛克菲勒和卡内基：赚钱是能力，花钱是艺术</h2><p><img src="/img/six-wealthy-money/13_03_rockefeller_carnegie.png" alt="第三章配图"></p><p>洛克菲勒说财富意味着责任。卡内基说一个人死的时候如果还很富有，那是一种耻辱。</p><p>这两位在价值观上有一个共同点：<strong>钱不是用来囤的，是用来创造价值的。</strong></p><p>洛克菲勒一生捐了相当于今天 100 亿美元，创办了洛克菲勒大学。卡内基捐了相当于 70 亿美元，建了 2500 多座图书馆。他们不是不爱钱——他们是觉得钱放在那里不用，才是最大的浪费。</p><p>对我这种还没什么钱的人来说，这个观点的启发在于：<strong>赚钱和花钱都需要学习。</strong> 不是有了钱就自动会用。怎么合理分配资源、怎么让每一分钱产生最大价值，这也是一种能力。</p><p>哪怕现在每个月只有几千块，也值得认真想一想：哪些钱花在了刀刃上，哪些钱被无意义地消耗了。</p><hr><h2 id="盖茨和马斯克：钱是工具，不是目的"><a href="#盖茨和马斯克：钱是工具，不是目的" class="headerlink" title="盖茨和马斯克：钱是工具，不是目的"></a>盖茨和马斯克：钱是工具，不是目的</h2><p><img src="/img/six-wealthy-money/13_04_gates_musk.png" alt="第四章配图"></p><p>比尔·盖茨把钱当工具——用来解决全球健康、气候变化、教育公平这些大问题。马斯克把钱当资源——用来造火箭、做电动车、搞脑机接口。</p><p>他们的共同点是：<strong>先有梦想，再用钱去实现。</strong> 不是先赚钱再想干什么。</p><p>这一点对我的启发最大。</p><p>我以前想的是”先赚够钱，再做自己想做的事”。但这些人的逻辑是反过来的：先想清楚你要解决什么问题，钱会在这个过程中自然到来。</p><p>当然，他们的起点和我们不一样。但这个思维方式是可以借鉴的——<strong>别被钱牵着鼻子走。</strong> 先想清楚你要什么，再想怎么用资源去实现它。</p><hr><h2 id="这些巨富教会我的一件事"><a href="#这些巨富教会我的一件事" class="headerlink" title="这些巨富教会我的一件事"></a>这些巨富教会我的一件事</h2><p><img src="/img/six-wealthy-money/13_05_common_lesson.png" alt="第五章配图"></p><p>读完这 6 个人的故事，我发现他们的金钱观有一个最大的共同点：</p><p><strong>没有一个人把钱本身当成目的。</strong></p><p>洛克菲勒把钱当责任，巴菲特把钱当复利的种子，福特把钱看得比知识轻，卡内基觉得带走钱是耻辱，盖茨把钱当改变世界的工具，马斯克把钱当实现梦想的燃料。</p><p>他们眼里的”真正的财富”，是知识、经验、能力、影响力——这些不会贬值、不会被拿走的东西。</p><p>作为一个还在读研的人，我现在没多少钱。但我可以开始积累那些真正有价值的东西。</p><p><img src="/img/six-wealthy-money/13_06_grad_student_action.png" alt="第六章配图"></p><p>这或许就是现阶段最好的”投资”。</p><hr><p><em>本文来自「研路炼钢」</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 成长 </tag>
+            
+            <tag> 金钱观 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这么多 AI 工具，我是怎么分工的</title>
+      <link href="/posts/ai-tool-division.html"/>
+      <url>/posts/ai-tool-division.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/ai-tool-division/12_00_ai_tool_division_cover.png" alt="封面"></p><p>我现在每天同时用好几个 AI 工具：Claude Code、Gemini CLI、Kimi、DeepSeek、ChatGPT、OpenClaw……</p><p>刚开始的时候很混乱，什么事都问 ChatGPT，有时候效果好有时候效果差，也说不清为什么。后来慢慢摸出来一个规律：<strong>不同的工具有不同的长处，用对了效率翻倍，用错了事倍功半。</strong></p><p>今天分享一下我自己的分工方式。不一定适合所有人，但至少是我实际验证过的。</p><hr><h2 id="我的分工逻辑"><a href="#我的分工逻辑" class="headerlink" title="我的分工逻辑"></a>我的分工逻辑</h2><p><img src="/img/ai-tool-division/12_01_division_logic.png" alt="第一章配图"></p><p><strong>想通一个概念、学一个新东西 → ChatGPT</strong></p><p>ChatGPT 的知识面最广，解释能力最强。你问它一个你不懂的概念，它能用你能理解的语言讲清楚，还能根据你的追问不断深入。</p><p>我读论文遇到不理解的方法时，第一个问的就是它。不是让它帮我读论文，而是让它帮我理解论文背后的原理。</p><p><strong>写代码、调 bug → Claude Code / Gemini CLI</strong></p><p>写代码这件事，我目前的体感是 Claude Code 和 Gemini 都很强，各有优势。Claude Code 在理解复杂上下文方面更好，Gemini 在快速生成和调试方面效率高。</p><p>我的习惯是用 Claude Code 做比较复杂的项目（比如论文实验的代码），用 Gemini CLI 做快速的脚本和小工具。</p><p><strong>搜中文资料、查最新消息 → DeepSeek / Kimi</strong></p><p>涉及到中文内容的搜索和理解，国产模型确实更强。DeepSeek 的中文资料检索能力不错，Kimi 的长文档处理很方便。</p><p>我查国内的政策信息、中文论文背景、行业动态的时候，优先用这两个。</p><p><strong>自动化工作流、多 Agent 编排 → OpenClaw</strong></p><p>需要把多个任务串起来自动执行的时候，OpenClaw 是我的主力。比如每天自动整理信息、多个 Agent 协同完成一个复杂任务。</p><p>这个工具的学习曲线比前面几个都陡，但一旦配好了，省的时间是最多的。</p><p><strong>画图、做设计 → 专门的图像生成工具</strong></p><p>文字类的 AI 工具画图能力都一般。需要高质量图像的时候，我会用专门的图像生成工具，不勉强让文字模型干它不擅长的事。</p><hr><h2 id="最常犯的错误：一个工具打天下"><a href="#最常犯的错误：一个工具打天下" class="headerlink" title="最常犯的错误：一个工具打天下"></a>最常犯的错误：一个工具打天下</h2><p><img src="/img/ai-tool-division/12_02_one_tool_mistake.png" alt="第二章配图"></p><p>我以前的问题就是什么都用 ChatGPT。</p><p>结果就是：写代码的时候效果不如专门的编程工具，搜中文资料的时候不如国产模型，做自动化的时候不如 OpenClaw。</p><p>就像你不会用一把螺丝刀修所有东西一样，AI 工具也需要对症下药。</p><p>另一个常犯的错误是盲目追新。每隔几天就有新工具发布，但大部分新工具不稳定、生态不完善、学习成本高。我的原则是：新工具先观望，等稳定了再小规模试用，确认好用了再替换旧工具。</p><hr><h2 id="一个实际的选择流程"><a href="#一个实际的选择流程" class="headerlink" title="一个实际的选择流程"></a>一个实际的选择流程</h2><p><img src="/img/ai-tool-division/12_03_decision_flow.png" alt="第三章配图"></p><p>现在我遇到一个任务，脑子里会自动跑一遍：</p><p>这是学习型任务还是执行型任务？学习型的找 ChatGPT。</p><p>需要写代码吗？找 Claude Code 或 Gemini。</p><p>涉及中文内容吗？找 DeepSeek 或 Kimi。</p><p>需要自动化吗？上 OpenClaw。</p><p>需要图像吗？用专门的图像工具。</p><p>这个分类不是死板的，有时候一个任务会用到两三个工具。比如我写论文实验部分：先用 ChatGPT 理解某个方法的原理，再用 Claude Code 写实验代码，最后用 DeepSeek 搜一些中文参考文献。</p><hr><h2 id="国产工具的进步确实很快"><a href="#国产工具的进步确实很快" class="headerlink" title="国产工具的进步确实很快"></a>国产工具的进步确实很快</h2><p><img src="/img/ai-tool-division/12_04_domestic_tools.png" alt="第四章配图"></p><p>顺便说一句，国产 AI 工具这两年进步很明显。</p><p>在中文理解、本地化、价格这些方面，国产工具已经有明显优势了。特别是成本——同样的任务，国产模型的 API 价格可能只有国外的十分之一。</p><p>对于中文为主的工作场景，国产工具完全可以作为主力。我现在的工具箱里，国产和国外的比例大概是一半一半。</p><hr><h2 id="说到底"><a href="#说到底" class="headerlink" title="说到底"></a>说到底</h2><p><img src="/img/ai-tool-division/12_05_key_point.png" alt="第五章配图"></p><p>工具选择这件事，没有标准答案。</p><p>我的分工方式是根据我自己的工作场景——研究生、写论文、做实验、搞公众号——摸索出来的。你的场景可能完全不同，适合你的组合也不一样。</p><p>但有一个原则是通用的：<strong>别用一个工具干所有事。</strong> 花一点时间了解每个工具的长处，然后让对的工具做对的事。</p><p>这就是这个时代给我们的红利。善用工具的人和不善用工具的人之间的效率差距，只会越来越大。</p><hr><p><em>本文来自「研路炼钢」</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI工具 </tag>
+            
+            <tag> 工作流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>华罗庚 70 年前说的两句话，我到现在才真正听懂</title>
       <link href="/posts/hualuogeng-speech.html"/>
       <url>/posts/hualuogeng-speech.html</url>
@@ -58,33 +139,6 @@
     
     
     <entry>
-      <title>找对象这件事，我想通了一个标准</title>
-      <link href="/posts/partner-selection.html"/>
-      <url>/posts/partner-selection.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="/img/partner-selection/10_00_partner_selection_cover.png" alt="封面"></p><p>前段时间看到一个说法，觉得特别准：</p><p><strong>真正厉害的人挑选伴侣，只看一件事——和对方在一起，你是更有能量，还是更疲惫？</strong></p><p>不是看对方多好看、多有钱、多优秀。而是看：和这个人在一起之后，你是更自由、更松弛、更有劲头去干事情？还是更压抑、更内耗、更想逃？</p><p>这个标准听起来简单，但我觉得它比所有”高价值伴侣清单”都管用。</p><hr><h2 id="“对你好”不是决定性因素"><a href="#“对你好”不是决定性因素" class="headerlink" title="“对你好”不是决定性因素"></a>“对你好”不是决定性因素</h2><p><img src="/img/partner-selection/10_01_not_just_nice.png" alt="第一章配图"></p><p>很多人找对象的标准是”对我好”。</p><p>这当然重要，但问题是——“对你好”是最低要求。任何一个正常人都应该对伴侣好。把最低要求当成核心标准，很容易踩坑。</p><p>更大的问题是，恋爱期的”好”可能是表演。有些人在追你的时候送花接送嘘寒问暖，目的达成之后就变了一个人。不是所有的”好”都是真的，有些”好”是有条件的。</p><p>“我对你好，但你要听我的。”<br>“我对你好，但你不能让我不高兴。”</p><p>这不是爱，是交易。</p><hr><h2 id="生命力才是核心标准"><a href="#生命力才是核心标准" class="headerlink" title="生命力才是核心标准"></a>生命力才是核心标准</h2><p><img src="/img/partner-selection/10_02_vitality_core.png" alt="第二章配图"></p><p>我后来觉得，真正重要的判断标准就三个问题：</p><p><strong>第一，和这个人相处完，你是更有能量还是更累？</strong> 有些人自带能量场，跟他们聊完天你觉得充了电。有些人像一个黑洞，你的精力被源源不断地吸走。</p><p><strong>第二，你能不能在这个人面前做真实的自己？</strong> 不需要伪装、不需要压抑、不需要时刻端着。如果你在对方面前表达一个负面情绪都要小心翼翼，这段关系就有问题。</p><p><strong>第三，你是更松弛了还是更紧绷了？</strong> 好的关系让人放松，坏的关系让人紧绷。长期紧绷的关系，迟早会断。</p><p>这三个问题的答案如果都是正面的，大概率是对的人。如果有一个以上是负面的，不管对方多优秀、条件多好，都要慎重。</p><hr><h2 id="对方的能量状态比条件重要"><a href="#对方的能量状态比条件重要" class="headerlink" title="对方的能量状态比条件重要"></a>对方的能量状态比条件重要</h2><p><img src="/img/partner-selection/10_03_energy_state.png" alt="第三章配图"></p><p>我观察身边过得好的情侣，有一个共同点：双方各自的能量都是充足的。</p><p>什么意思？就是这个人不需要从你身上汲取能量来维持自己的情绪稳定。他自己独处的时候也是开心的，遇到挫折的时候能自己消化，不会把你当成唯一的情绪出口。</p><p>反过来，如果对方的能量是匮乏的——高度依赖你、情绪化、什么事都要你来兜底——那你在这段关系里就不是伴侣，是充电宝。</p><p>一个能量充足的人，遇到问题会主动解决，看到你的优点会主动表达，和你在一起的时候会给你带来活力而不是压力。</p><p><strong>这种人不一定最优秀，但一定最值得在一起。</strong></p><hr><h2 id="但前提是你自己也得行"><a href="#但前提是你自己也得行" class="headerlink" title="但前提是你自己也得行"></a>但前提是你自己也得行</h2><p><img src="/img/partner-selection/10_04_yourself_first.png" alt="第四章配图"></p><p>说到这里有一个很现实的问题：你想找一个能量充足、尊重真实的你、让你松弛的人，那你自己是这样的人吗？</p><p>如果你自己情绪不稳定、高度依赖对方、无法接纳自己的不完美——你吸引来的大概率也是类似的人。或者你遇到了好的人，但你的状态留不住对方。</p><p>所以这件事的底层逻辑其实是：<strong>先把自己调整好。</strong></p><p>情绪稳定、有自己的生活、有自己的判断力、能接纳不完美、有边界感。这些不是为了”变得更有吸引力”（虽然确实会），而是为了让你有能力识别和筛选——知道什么样的人适合你，什么样的人在表演。</p><p>认知水平决定了你的选择质量。高认知的人能识别高认知的人，低认知的人容易被表象迷惑。这不是歧视，是事实。</p><hr><h2 id="说到底"><a href="#说到底" class="headerlink" title="说到底"></a>说到底</h2><p><img src="/img/partner-selection/10_05_final.png" alt="第五章配图"></p><p>找对象不是做采购，不需要拿着一张清单逐项打钩。</p><p>就记住一个感觉：和这个人在一起之后，你是不是更有生命力了？</p><p>如果是，就对了。</p><p>如果不是，条件再好也别勉强。</p><hr><p><em>本文来自「研路炼钢」</em></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 杂谈 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 情感 </tag>
-            
-            <tag> 恋爱 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>投稿 SCI，我因为漏了一个文件被退回过</title>
       <link href="/posts/sci-submission-checklist.html"/>
       <url>/posts/sci-submission-checklist.html</url>
@@ -106,6 +160,33 @@
             <tag> SCI投稿 </tag>
             
             <tag> 论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找对象这件事，我想通了一个标准</title>
+      <link href="/posts/partner-selection.html"/>
+      <url>/posts/partner-selection.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/partner-selection/10_00_partner_selection_cover.png" alt="封面"></p><p>前段时间看到一个说法，觉得特别准：</p><p><strong>真正厉害的人挑选伴侣，只看一件事——和对方在一起，你是更有能量，还是更疲惫？</strong></p><p>不是看对方多好看、多有钱、多优秀。而是看：和这个人在一起之后，你是更自由、更松弛、更有劲头去干事情？还是更压抑、更内耗、更想逃？</p><p>这个标准听起来简单，但我觉得它比所有”高价值伴侣清单”都管用。</p><hr><h2 id="“对你好”不是决定性因素"><a href="#“对你好”不是决定性因素" class="headerlink" title="“对你好”不是决定性因素"></a>“对你好”不是决定性因素</h2><p><img src="/img/partner-selection/10_01_not_just_nice.png" alt="第一章配图"></p><p>很多人找对象的标准是”对我好”。</p><p>这当然重要，但问题是——“对你好”是最低要求。任何一个正常人都应该对伴侣好。把最低要求当成核心标准，很容易踩坑。</p><p>更大的问题是，恋爱期的”好”可能是表演。有些人在追你的时候送花接送嘘寒问暖，目的达成之后就变了一个人。不是所有的”好”都是真的，有些”好”是有条件的。</p><p>“我对你好，但你要听我的。”<br>“我对你好，但你不能让我不高兴。”</p><p>这不是爱，是交易。</p><hr><h2 id="生命力才是核心标准"><a href="#生命力才是核心标准" class="headerlink" title="生命力才是核心标准"></a>生命力才是核心标准</h2><p><img src="/img/partner-selection/10_02_vitality_core.png" alt="第二章配图"></p><p>我后来觉得，真正重要的判断标准就三个问题：</p><p><strong>第一，和这个人相处完，你是更有能量还是更累？</strong> 有些人自带能量场，跟他们聊完天你觉得充了电。有些人像一个黑洞，你的精力被源源不断地吸走。</p><p><strong>第二，你能不能在这个人面前做真实的自己？</strong> 不需要伪装、不需要压抑、不需要时刻端着。如果你在对方面前表达一个负面情绪都要小心翼翼，这段关系就有问题。</p><p><strong>第三，你是更松弛了还是更紧绷了？</strong> 好的关系让人放松，坏的关系让人紧绷。长期紧绷的关系，迟早会断。</p><p>这三个问题的答案如果都是正面的，大概率是对的人。如果有一个以上是负面的，不管对方多优秀、条件多好，都要慎重。</p><hr><h2 id="对方的能量状态比条件重要"><a href="#对方的能量状态比条件重要" class="headerlink" title="对方的能量状态比条件重要"></a>对方的能量状态比条件重要</h2><p><img src="/img/partner-selection/10_03_energy_state.png" alt="第三章配图"></p><p>我观察身边过得好的情侣，有一个共同点：双方各自的能量都是充足的。</p><p>什么意思？就是这个人不需要从你身上汲取能量来维持自己的情绪稳定。他自己独处的时候也是开心的，遇到挫折的时候能自己消化，不会把你当成唯一的情绪出口。</p><p>反过来，如果对方的能量是匮乏的——高度依赖你、情绪化、什么事都要你来兜底——那你在这段关系里就不是伴侣，是充电宝。</p><p>一个能量充足的人，遇到问题会主动解决，看到你的优点会主动表达，和你在一起的时候会给你带来活力而不是压力。</p><p><strong>这种人不一定最优秀，但一定最值得在一起。</strong></p><hr><h2 id="但前提是你自己也得行"><a href="#但前提是你自己也得行" class="headerlink" title="但前提是你自己也得行"></a>但前提是你自己也得行</h2><p><img src="/img/partner-selection/10_04_yourself_first.png" alt="第四章配图"></p><p>说到这里有一个很现实的问题：你想找一个能量充足、尊重真实的你、让你松弛的人，那你自己是这样的人吗？</p><p>如果你自己情绪不稳定、高度依赖对方、无法接纳自己的不完美——你吸引来的大概率也是类似的人。或者你遇到了好的人，但你的状态留不住对方。</p><p>所以这件事的底层逻辑其实是：<strong>先把自己调整好。</strong></p><p>情绪稳定、有自己的生活、有自己的判断力、能接纳不完美、有边界感。这些不是为了”变得更有吸引力”（虽然确实会），而是为了让你有能力识别和筛选——知道什么样的人适合你，什么样的人在表演。</p><p>认知水平决定了你的选择质量。高认知的人能识别高认知的人，低认知的人容易被表象迷惑。这不是歧视，是事实。</p><hr><h2 id="说到底"><a href="#说到底" class="headerlink" title="说到底"></a>说到底</h2><p><img src="/img/partner-selection/10_05_final.png" alt="第五章配图"></p><p>找对象不是做采购，不需要拿着一张清单逐项打钩。</p><p>就记住一个感觉：和这个人在一起之后，你是不是更有生命力了？</p><p>如果是，就对了。</p><p>如果不是，条件再好也别勉强。</p><hr><p><em>本文来自「研路炼钢」</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 情感 </tag>
+            
+            <tag> 恋爱 </tag>
             
         </tags>
       
@@ -622,9 +703,9 @@
             
             <tag> AI </tag>
             
-            <tag> Agent </tag>
-            
             <tag> MiniMax </tag>
+            
+            <tag> Agent </tag>
             
             <tag> MaxClaw </tag>
             
@@ -751,29 +832,31 @@
     
     
     <entry>
-      <title>研究生写论文的第一课，不是写，是抄</title>
-      <link href="/posts/graduate-paper-writing.html"/>
-      <url>/posts/graduate-paper-writing.html</url>
+      <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
+      <link href="/posts/minimax-agent-vs-qoderwork.html"/>
+      <url>/posts/minimax-agent-vs-qoderwork.html</url>
       
-        <content type="html"><![CDATA[<p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_01_cover_paper_writing.png" alt="封面"></p><blockquote><p>景哥说：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p></blockquote><hr><h2 id="我的论文被AI”打架”打回来了"><a href="#我的论文被AI”打架”打回来了" class="headerlink" title="我的论文被AI”打架”打回来了"></a>我的论文被AI”打架”打回来了</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_02_ai_feedback.png" alt="我的论文被AI&quot;打架&quot;打回来了"></p><p>前阵子我把自己那篇井盖检测的论文发给景哥看，想让他帮忙把把关。</p><p>景哥收到之后，做了一件我没想到的事——他把我的论文同时丢给了Gemini和Claude，让两个AI互相挑毛病。</p><p>结果是：”你那篇论文公式太多了，我让Gemini和Claude打架，疯狂的说一堆致命的问题。”</p><p>我当时心态还挺稳的。毕竟论文还在改，有问题正常。但接下来景哥说的话，才是真正让我重新审视自己写论文方式的开始。</p><hr><h2 id="“你模仿的那篇，没啥参考价值”"><a href="#“你模仿的那篇，没啥参考价值”" class="headerlink" title="“你模仿的那篇，没啥参考价值”"></a>“你模仿的那篇，没啥参考价值”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_03_imitate_worthless.png" alt="你模仿的那篇，没啥参考价值"></p><p>我之前写论文的方法很朴素：读了一些论文，觉得差不多理解了方法，就开始动笔写。格式嘛，找了一篇看起来结构类似的文章照着来。</p><p>景哥问我：”你打算和这个发一样的期刊吗？”</p><p>我说不是。</p><p>他说：”那你模仿它干嘛。”</p><p>然后他点开我参考的那篇论文，直接下了判断：”这个做的一般，写的也不行。没啥参考价值，而且还是本科毕业论文。”</p><p>我才意识到，<strong>我连”该模仿谁”都没搞清楚，就开始模仿了。</strong></p><hr><h2 id="景哥的论文写作方法论"><a href="#景哥的论文写作方法论" class="headerlink" title="景哥的论文写作方法论"></a>景哥的论文写作方法论</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_04_writing_methodology.png" alt="景哥的论文写作方法论"></p><p>接下来的对话，景哥系统地给我拆解了一套论文写作的底层逻辑。不是那种教科书式的”摘要怎么写、引言怎么写”，而是更实战的东西。</p><h3 id="1-先选目标期刊，再写论文"><a href="#1-先选目标期刊，再写论文" class="headerlink" title="1. 先选目标期刊，再写论文"></a>1. 先选目标期刊，再写论文</h3><p>这个顺序很多人搞反了。</p><p>大部分研究生（包括之前的我）是先写完论文，然后再去想”这篇能发哪儿”。但景哥的思路完全反过来：<strong>先确定你要投哪个期刊，然后按那个期刊的风格和标准去写。</strong></p><p>为什么？因为每个期刊都有自己的写作偏好。行文风格、段落结构、公式密度、图表规范、参考文献的引用习惯——这些东西期刊之间差异不小。</p><p>景哥原话：”每个期刊都有自己的写作风格和表达方式，投哪个就模仿哪个期刊的表达和风格。”</p><h3 id="2-在目标期刊里找一篇”范文”"><a href="#2-在目标期刊里找一篇”范文”" class="headerlink" title="2. 在目标期刊里找一篇”范文”"></a>2. 在目标期刊里找一篇”范文”</h3><p>确定了目标期刊之后，下一步不是动笔，而是去这个期刊里找一篇和你研究方向最接近的已发表论文。</p><p>这篇论文就是你的”模板”——不是抄它的内容，而是学它的：</p><ul><li><strong>格式和结构</strong>：章节怎么划分的，每个部分大概多长</li><li><strong>写作技巧</strong>：怎么引出问题的，怎么描述方法的，实验部分怎么组织的</li><li><strong>公式的密度和呈现方式</strong>：别人核心放了哪些公式，你也需要有对应的</li><li><strong>参考文献的构成</strong>：引了哪些层次的文献，顶刊顶会占多少比例</li></ul><p>景哥反复强调：”你在这个期刊里面找一个和你写的类似的文章，模仿一下。然后模仿他的，来写你的。”</p><h3 id="3-参考文献是论文的”名片”"><a href="#3-参考文献是论文的”名片”" class="headerlink" title="3. 参考文献是论文的”名片”"></a>3. 参考文献是论文的”名片”</h3><p>这一点我之前完全没意识到。</p><p>景哥让我把参考文献全部换成IEEE Transactions或计算机顶会的论文。我不太理解，问他为什么。</p><p>他的解释很直白：**”引用顶刊顶会是说明你这个有价值。如果引用的内容都是水刊，那不用看你内容，你做的也不行。”**</p><p>更深一层，他说这也是”人情世故”——“换成你是主编、副主编，你也会这样做，希望看到自己期刊类型的东西。引用你想投的这个期刊的，是人情世故。”</p><p>所以参考文献不是写完论文之后随便补的，它是你论文学术定位的一部分。引用什么层次的文献，某种程度上就决定了审稿人对你工作的第一印象。</p><h3 id="4-公式不是越多越好"><a href="#4-公式不是越多越好" class="headerlink" title="4. 公式不是越多越好"></a>4. 公式不是越多越好</h3><p>我的井盖论文里堆了很多公式，我觉得这样显得严谨。</p><p>景哥的看法正好相反——公式太多，反而给审稿人更多的攻击面。他用AI工具去检验，每个公式都可能被挑出问题。</p><p>他说：”Nature、Science文章也有问题，都是自己加限制条件，然后逻辑自恰就行。”</p><p>这句话信息量很大。意思是：<strong>论文不是要证明你的方法”绝对正确”，而是在你设定的条件和范围内，逻辑自洽、实验支撑。</strong> 公式是为了支撑论理，不是为了炫技。不需要推导的公式，直接引用就好；核心创新点的公式，才值得展开。</p><hr><h2 id="论文阅读的正确打开方式"><a href="#论文阅读的正确打开方式" class="headerlink" title="论文阅读的正确打开方式"></a>论文阅读的正确打开方式</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_05_reading_method.png" alt="论文阅读的正确打开方式"></p><p>景哥还纠正了我读论文的习惯。</p><p>我之前的做法是：什么论文都读，学位论文、期刊论文、会议论文混着看，觉得看得越多越好。</p><p>景哥给了一个更清晰的优先级：</p><p><strong>主要看期刊论文。</strong> 期刊论文是你最终要写的东西，它的篇幅、深度、写作方式就是你的目标。先看目标期刊的论文，理解它的”语言”和”套路”。</p><p><strong>想深入理解某个方法，就去看博士论文。</strong> 博士论文写得细、推导完整、解释充分，非常适合用来弄懂一个你在期刊论文里看不明白的技术点。</p><p><strong>学位论文别当主要参考。</strong> 景哥直接说”学位论文，别再看了”（指作为写作参考），因为学位论文的写作标准和期刊论文差距很大。</p><p>用他的话来总结路径就是：<strong>先看期刊论文学写法，不懂的点去博士论文里找解释，弄懂了再回来继续看期刊。</strong></p><hr><h2 id="“做的好很重要，能把事情讲清楚更重要”"><a href="#“做的好很重要，能把事情讲清楚更重要”" class="headerlink" title="“做的好很重要，能把事情讲清楚更重要”"></a>“做的好很重要，能把事情讲清楚更重要”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_06_express_matters.png" alt="做的好很重要，能把事情讲清楚更重要"></p><p>景哥在聊天中反复提到的一个观点是：<strong>论文的核心不是你做了什么，而是你怎么把做的事情讲清楚。</strong></p><p>他举了一个例子——他有个同学在某211高校，他们组的分工方式是”导师写作，学生只负责做实验”。这样半年就能出一篇一区，运气好还有顶刊。</p><p>这当然不是说学生不需要学写作，而是说明一个事实：<strong>写作能力是论文发表中极其关键的变量，甚至比实验本身更关键。</strong> 同样的实验结果，一个人能写成顶刊，另一个人可能连二区都挂不上。</p><p>对我们这种导师不帮写、全靠自己的研究生来说，这意味着写作能力必须自己练。而练的方式不是”多写”，是**”多看、多模仿、多对照”**。</p><p>景哥说得很实在：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p><hr><h2 id="我的行动计划"><a href="#我的行动计划" class="headerlink" title="我的行动计划"></a>我的行动计划</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_07_action_plan.png" alt="我的行动计划"></p><p>基于景哥的指导，我给自己定了一个调整方案：</p><p><strong>第一步</strong>：确定井盖论文的目标期刊，先锁定一个中文核心期刊作为练手。</p><p><strong>第二步</strong>：在目标期刊中找到一篇和我方向最接近的论文，逐段拆解它的结构、写法、公式密度、参考文献构成。</p><p><strong>第三步</strong>：按照这篇”范文”的框架，重新组织我的论文。不是重写内容，而是调整表达方式和呈现逻辑。</p><p><strong>第四步</strong>：参考文献全面升级，替换成目标期刊级别及以上的文献，同时适当引用目标期刊已发表的相关工作。</p><p><strong>第五步</strong>：精简公式，只保留核心创新点相关的推导，其余直接引用原文献。</p><p>景哥说：”这样弄好了这个，后边再想投别的期刊，就知道咋弄了。这个就当练手。”</p><p>练手就对了。第一篇不追求完美，追求的是<strong>把整个流程跑通一遍</strong>。</p><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_08_conclusion.png" alt="写在最后"></p><p>回头看，我之前写论文最大的问题不是”写不好”，而是**从来没认真研究过”好论文是怎么写出来的”**。</p><p>我只看了方法，没看写法。只关注了技术创新点，忽略了表达和呈现。像景哥说的，我一直在”自己瞎弄”，而不是先站在已有的好论文上去学习和模仿。</p><p>“模仿”这个词听起来不高级，但它其实是最高效的学习方式——你不是在抄别人的内容，你是在学习一种被验证过的表达框架。等你模仿够了，自然就有了自己的风格。</p><p>这大概就是景哥说的”知行合一”的又一个注脚吧。</p><hr><p><em>你写第一篇论文的时候，走了哪些弯路？欢迎在评论区聊聊。</em></p><p><em>关注「研途炼钢」，一个研究生的真实成长记录。</em></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png" alt="封面"></p><blockquote><p>2026年，AI终于从”聊天框”走向了”桌面”。MiniMax和阿里几乎同时出手，一个要当你的”云端专家”，一个要当你的”桌面同事”。作为一个重度AI工具用户，我花了两周时间深度体验了两款产品，今天来聊聊它们的真实差距。</p></blockquote><hr><h2 id="一、先说结论"><a href="#一、先说结论" class="headerlink" title="一、先说结论"></a>一、先说结论</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_02_conclusion.png" alt="一、先说结论"></p><p><strong>MiniMax Agent 和 QoderWork 根本不是同一类产品。</strong></p><p>很多人把它们放在一起比较，觉得都是”Agent”，都能帮你干活。但用下来你会发现，它们解决的是完全不同的问题：</p><ul><li><strong>MiniMax Agent</strong>：我帮你<strong>做出</strong>高质量的东西（报告、网页、PPT、代码、研究）</li><li><strong>QoderWork</strong>：我帮你<strong>操作</strong>电脑上的东西（整理文件、处理数据、调用本地应用）</li></ul><p>一个是”全能创作者”，一个是”超级助理”。</p><p>搞清楚这个定位差异，后面的分析才有意义。</p><hr><h2 id="二、产品定位：云端工作台-vs-本地操作员"><a href="#二、产品定位：云端工作台-vs-本地操作员" class="headerlink" title="二、产品定位：云端工作台 vs 本地操作员"></a>二、产品定位：云端工作台 vs 本地操作员</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_03_product_positioning.png" alt="二、产品定位：云端工作台 vs 本地操作员"></p><h3 id="MiniMax-Agent：AI原生工作台"><a href="#MiniMax-Agent：AI原生工作台" class="headerlink" title="MiniMax Agent：AI原生工作台"></a>MiniMax Agent：AI原生工作台</h3><p>MiniMax Agent 的野心很大——它想做一个能独立完成复杂任务的”AI专家”。</p><p>从最早的”万物追踪”到现在的通用Agent，MiniMax走的是一条从垂直到通用的路径。它的核心理念是：<strong>你只需要描述需求，Agent替你规划、拆解、执行、交付</strong>。</p><p>它提供两种模式：</p><ul><li><strong>Lightning模式</strong>：轻量快速，适合日常对话和简单搜索</li><li><strong>Pro/MAX模式</strong>：专业Agent能力，处理深度研究、全栈开发、PPT/报告撰写等复杂任务</li></ul><p>底层驱动力是MiniMax自研的M2系列模型（目前已迭代到M2.5），这个模型专门为Agent和编码场景优化，在SWE-Bench Verified上达到80.2%，速度是主流模型的两倍，价格只有Claude的8%。</p><p><strong>一句话概括：MiniMax Agent是一个云端的AI全能选手，什么都能做，做出来的东西质量还不错。</strong></p><h3 id="QoderWork：桌面级AI助理"><a href="#QoderWork：桌面级AI助理" class="headerlink" title="QoderWork：桌面级AI助理"></a>QoderWork：桌面级AI助理</h3><p>QoderWork的定位完全不同。它是2026年1月30日阿里发布的桌面Agent工具，3月3日全面开放了Mac和Windows双平台。</p><p>核心卖点是<strong>本地化执行</strong>——它是一个安装在你电脑上的软件，拥有系统级文件权限，能直接操作你的文件和应用。你跟它说一句话，它就能帮你整理下载文件夹、批量处理Excel、提取PDF文献……</p><p>它支持三种工作模式：</p><ul><li><strong>Ask模式</strong>：简单问答</li><li><strong>Agent模式</strong>：复杂任务自动拆解执行</li><li><strong>Quest模式</strong>：任务委派，后台持续运行</li></ul><p>还内置了MCP协议支持和自定义Skills功能，扩展性不错。</p><p><strong>一句话概括：QoderWork是一个坐在你电脑旁边的AI助理，它不创造内容，但它帮你把电脑上的活干了。</strong></p><hr><h2 id="三、核心能力深度对比"><a href="#三、核心能力深度对比" class="headerlink" title="三、核心能力深度对比"></a>三、核心能力深度对比</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_04_core_abilities.png" alt="三、核心能力深度对比"></p><h3 id="1-内容创作能力"><a href="#1-内容创作能力" class="headerlink" title="1. 内容创作能力"></a>1. 内容创作能力</h3><p><strong>MiniMax Agent &gt;&gt; QoderWork</strong></p><p>这是MiniMax Agent的绝对主场。它的多模态能力几乎是目前国产Agent中最全的：</p><ul><li><strong>编程</strong>：能生成包含复杂交互逻辑的完整网页，还会自己做测试</li><li><strong>图片生成</strong>：内置生图能力，不用调外部API</li><li><strong>音频生成</strong>：能自动选择合适的中文音色生成配音</li><li><strong>视频生成</strong>：集成了海螺视频的能力</li><li><strong>文档处理</strong>：M2.5版本深度集成了Office Skills，Word排版、PPT编辑、Excel建模都支持</li></ul><p>QoderWork在内容创作上主要依赖调用云端模型生成文本，本身不具备图片/音频/视频的内生能力。它更擅长的是”搬运”和”整理”，而不是”创造”。</p><h3 id="2-本地操作能力"><a href="#2-本地操作能力" class="headerlink" title="2. 本地操作能力"></a>2. 本地操作能力</h3><p><strong>QoderWork &gt;&gt; MiniMax Agent</strong></p><p>这是QoderWork的核心护城河。它能做到MiniMax Agent做不到的事情：</p><ul><li><strong>直接操作本地文件系统</strong>：批量重命名、分类整理、跨文件夹移动</li><li><strong>调用本地应用</strong>：打开Excel修改格式，不只是”生成建议”</li><li><strong>沙盒环境</strong>：敏感数据可以在隔离环境中处理，不上传云端</li><li><strong>系统级权限</strong>：能做真正的”操作”，而不只是”输出”</li></ul><p>举个具体例子：如果你下载文件夹里有1000个文件乱成一团，QoderWork能直接帮你按类型/日期/项目分类整理好。MiniMax Agent只能给你一个”整理方案”的文档，你还得自己动手。</p><h3 id="3-复杂任务处理"><a href="#3-复杂任务处理" class="headerlink" title="3. 复杂任务处理"></a>3. 复杂任务处理</h3><p><strong>MiniMax Agent ≥ QoderWork</strong></p><p>在需要多步规划、深度研究、长链路工具调用的场景下，MiniMax Agent表现更优。</p><p>M2.5模型经过大规模强化学习训练，在BrowseComp（深度搜索评测）上达到76.3%，在Multi-SWE-Bench（多语言编程）上达到51.3%。更重要的是，它完成SWE-Bench任务的平均时间从31.3分钟降到了22.8分钟，基本追平了Claude Opus 4.6。</p><p>QoderWork也支持复杂任务拆解，但它的”复杂”更多体现在<strong>跨应用协调</strong>——比如从Excel提取数据、生成分析报告、同步到日历——而不是深层推理或研究类任务。</p><h3 id="4-数据隐私与安全"><a href="#4-数据隐私与安全" class="headerlink" title="4. 数据隐私与安全"></a>4. 数据隐私与安全</h3><p><strong>QoderWork &gt; MiniMax Agent</strong></p><p>QoderWork的本地化架构天然具备隐私优势。数据不出本地，预制沙盒环境进一步隔离风险。对于处理企业敏感数据、个人隐私信息的场景，这是硬需求。</p><p>MiniMax Agent作为云端产品，所有数据都需要上传到服务器处理。虽然MiniMax没有明确曝出过数据安全问题，但架构上它就是需要你”交出数据”的。</p><h3 id="5-成本与可用性"><a href="#5-成本与可用性" class="headerlink" title="5. 成本与可用性"></a>5. 成本与可用性</h3><table><thead><tr><th>维度</th><th>MiniMax Agent</th><th>QoderWork</th></tr></thead><tbody><tr><td>价格</td><td>目前限时免费</td><td>Credits制，有标准/旗舰两档</td></tr><tr><td>平台</td><td>Web端，随时可用</td><td>桌面客户端，Mac/Windows</td></tr><tr><td>上手门槛</td><td>低，打开网页即用</td><td>低，下载安装即用</td></tr><tr><td>模型选择</td><td>M2.5（固定）</td><td>多模型可选（分级选择器）</td></tr><tr><td>生态扩展</td><td>专家Agents（1万+）</td><td>Skills广场 + 自定义MCP</td></tr></tbody></table><hr><h2 id="四、实际场景选择指南"><a href="#四、实际场景选择指南" class="headerlink" title="四、实际场景选择指南"></a>四、实际场景选择指南</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_05_scenario_guide.png" alt="四、实际场景选择指南"></p><p>这里是我总结的<strong>场景-工具匹配表</strong>，供大家参考：</p><p><strong>选MiniMax Agent的场景：</strong></p><ul><li>需要从零生成一份完整的研究报告/PPT/网页</li><li>深度研究某个课题，需要搜索+分析+整合</li><li>全栈开发，生成可运行的代码项目</li><li>需要图文音视频混合产出的创意内容</li><li>编程调试、代码审查</li></ul><p><strong>选QoderWork的场景：</strong></p><ul><li>整理电脑上的文件和文件夹</li><li>批量处理本地Excel/PDF/Word文件</li><li>从多个本地文件中提取、汇总信息</li><li>需要操作本地应用完成工作流</li><li>对数据隐私要求高，不希望上传云端</li></ul><p><strong>两者都可以的场景：</strong></p><ul><li>日常问答和简单搜索</li><li>生成普通文档和文案</li><li>数据分析和可视化（MiniMax云端做，Q）</li></ul><hr><h2 id="五、行业视角：桌面Agent赛道格局"><a href="#五、行业视角：桌面Agent赛道格局" class="headerlink" title="五、行业视角：桌面Agent赛道格局"></a>五、行业视角：桌面Agent赛道格局</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_05_industry_perspective.png" alt="五、行业视角：桌面Agent赛道格局"></p><p>2026年初，桌面Agent突然成为AI领域最热的赛道之一。海外Anthropic推出Claude Cowork引爆了市场，国内迅速跟进：</p><ul><li><strong>MiniMax</strong>：Agent 2.0 + M2.5模型，定位AI原生工作台</li><li><strong>阿里QoderWork</strong>：桌面级Agent，本地优先</li><li><strong>阶跃星辰</strong>：桌面伙伴，Mac/Windows双端</li><li><strong>Anthropic Cowork</strong>：桌面Agent鼻祖</li></ul><p>这个赛道的核心逻辑是：**AI从”给答案”进化到”干活”**。过去你跟AI聊天，它给你一段文字；现在你给AI一个任务，它替你完成整个工作流程。</p><p>MiniMax走的是”模型驱动Agent”的路线——先做好模型，再用模型驱动Agent。闫俊杰说过，大模型的创新打开了Agent的能力天花板，Agent的增长让模型的方向更清晰，两者是飞轮关系。</p><p>阿里走的是”工具驱动Agent”的路线——QoderWork从Qoder（智能编程平台）延伸而来，把Agent能力从代码领域扩展到日常办公。它的优势不在模型本身，而在工程化的本地集成能力。</p><hr><h2 id="六、我的选择"><a href="#六、我的选择" class="headerlink" title="六、我的选择"></a>六、我的选择</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_06_my_choice.png" alt="六、我的选择"></p><p>作为一个每天在论文、代码、数据、内容创作之间并行切换的研究生，我的策略是：<strong>两个都用，但场景严格区分。</strong></p><ul><li>写论文、做实验报告、生成架构图、深度调研 → <strong>MiniMax Agent</strong>（创作能力强，免费）</li><li>整理数据集文件、批量处理标注文件、管理本地文档 → <strong>QoderWork</strong>（本地操作，隐私安全）</li><li>日常编程和代码调试 → 继续用<strong>Claude Code</strong>（专业编程Agent还是更稳）</li></ul><p>不要执着于”哪个更好”，而是想清楚”我需要它帮我做什么”。</p><p>工具是为人服务的，选对场景比选对工具重要。</p><hr><p><em>你用过这两款产品吗？欢迎在评论区分享你的体验。</em></p>]]></content>
       
       
       <categories>
           
           <category> 杂谈 </category>
           
-          <category> 研究生成长 </category>
+          <category> 技术研究 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 研究生 </tag>
+            <tag> AI工具 </tag>
             
-            <tag> 学术 </tag>
+            <tag> MiniMax </tag>
             
-            <tag> 论文写作 </tag>
+            <tag> Agent </tag>
+            
+            <tag> 阿里 </tag>
             
         </tags>
       
@@ -813,31 +896,29 @@
     
     
     <entry>
-      <title>桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</title>
-      <link href="/posts/minimax-agent-vs-qoderwork.html"/>
-      <url>/posts/minimax-agent-vs-qoderwork.html</url>
+      <title>研究生写论文的第一课，不是写，是抄</title>
+      <link href="/posts/graduate-paper-writing.html"/>
+      <url>/posts/graduate-paper-writing.html</url>
       
-        <content type="html"><![CDATA[<p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png" alt="封面"></p><blockquote><p>2026年，AI终于从”聊天框”走向了”桌面”。MiniMax和阿里几乎同时出手，一个要当你的”云端专家”，一个要当你的”桌面同事”。作为一个重度AI工具用户，我花了两周时间深度体验了两款产品，今天来聊聊它们的真实差距。</p></blockquote><hr><h2 id="一、先说结论"><a href="#一、先说结论" class="headerlink" title="一、先说结论"></a>一、先说结论</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_02_conclusion.png" alt="一、先说结论"></p><p><strong>MiniMax Agent 和 QoderWork 根本不是同一类产品。</strong></p><p>很多人把它们放在一起比较，觉得都是”Agent”，都能帮你干活。但用下来你会发现，它们解决的是完全不同的问题：</p><ul><li><strong>MiniMax Agent</strong>：我帮你<strong>做出</strong>高质量的东西（报告、网页、PPT、代码、研究）</li><li><strong>QoderWork</strong>：我帮你<strong>操作</strong>电脑上的东西（整理文件、处理数据、调用本地应用）</li></ul><p>一个是”全能创作者”，一个是”超级助理”。</p><p>搞清楚这个定位差异，后面的分析才有意义。</p><hr><h2 id="二、产品定位：云端工作台-vs-本地操作员"><a href="#二、产品定位：云端工作台-vs-本地操作员" class="headerlink" title="二、产品定位：云端工作台 vs 本地操作员"></a>二、产品定位：云端工作台 vs 本地操作员</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_03_product_positioning.png" alt="二、产品定位：云端工作台 vs 本地操作员"></p><h3 id="MiniMax-Agent：AI原生工作台"><a href="#MiniMax-Agent：AI原生工作台" class="headerlink" title="MiniMax Agent：AI原生工作台"></a>MiniMax Agent：AI原生工作台</h3><p>MiniMax Agent 的野心很大——它想做一个能独立完成复杂任务的”AI专家”。</p><p>从最早的”万物追踪”到现在的通用Agent，MiniMax走的是一条从垂直到通用的路径。它的核心理念是：<strong>你只需要描述需求，Agent替你规划、拆解、执行、交付</strong>。</p><p>它提供两种模式：</p><ul><li><strong>Lightning模式</strong>：轻量快速，适合日常对话和简单搜索</li><li><strong>Pro/MAX模式</strong>：专业Agent能力，处理深度研究、全栈开发、PPT/报告撰写等复杂任务</li></ul><p>底层驱动力是MiniMax自研的M2系列模型（目前已迭代到M2.5），这个模型专门为Agent和编码场景优化，在SWE-Bench Verified上达到80.2%，速度是主流模型的两倍，价格只有Claude的8%。</p><p><strong>一句话概括：MiniMax Agent是一个云端的AI全能选手，什么都能做，做出来的东西质量还不错。</strong></p><h3 id="QoderWork：桌面级AI助理"><a href="#QoderWork：桌面级AI助理" class="headerlink" title="QoderWork：桌面级AI助理"></a>QoderWork：桌面级AI助理</h3><p>QoderWork的定位完全不同。它是2026年1月30日阿里发布的桌面Agent工具，3月3日全面开放了Mac和Windows双平台。</p><p>核心卖点是<strong>本地化执行</strong>——它是一个安装在你电脑上的软件，拥有系统级文件权限，能直接操作你的文件和应用。你跟它说一句话，它就能帮你整理下载文件夹、批量处理Excel、提取PDF文献……</p><p>它支持三种工作模式：</p><ul><li><strong>Ask模式</strong>：简单问答</li><li><strong>Agent模式</strong>：复杂任务自动拆解执行</li><li><strong>Quest模式</strong>：任务委派，后台持续运行</li></ul><p>还内置了MCP协议支持和自定义Skills功能，扩展性不错。</p><p><strong>一句话概括：QoderWork是一个坐在你电脑旁边的AI助理，它不创造内容，但它帮你把电脑上的活干了。</strong></p><hr><h2 id="三、核心能力深度对比"><a href="#三、核心能力深度对比" class="headerlink" title="三、核心能力深度对比"></a>三、核心能力深度对比</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_04_core_abilities.png" alt="三、核心能力深度对比"></p><h3 id="1-内容创作能力"><a href="#1-内容创作能力" class="headerlink" title="1. 内容创作能力"></a>1. 内容创作能力</h3><p><strong>MiniMax Agent &gt;&gt; QoderWork</strong></p><p>这是MiniMax Agent的绝对主场。它的多模态能力几乎是目前国产Agent中最全的：</p><ul><li><strong>编程</strong>：能生成包含复杂交互逻辑的完整网页，还会自己做测试</li><li><strong>图片生成</strong>：内置生图能力，不用调外部API</li><li><strong>音频生成</strong>：能自动选择合适的中文音色生成配音</li><li><strong>视频生成</strong>：集成了海螺视频的能力</li><li><strong>文档处理</strong>：M2.5版本深度集成了Office Skills，Word排版、PPT编辑、Excel建模都支持</li></ul><p>QoderWork在内容创作上主要依赖调用云端模型生成文本，本身不具备图片/音频/视频的内生能力。它更擅长的是”搬运”和”整理”，而不是”创造”。</p><h3 id="2-本地操作能力"><a href="#2-本地操作能力" class="headerlink" title="2. 本地操作能力"></a>2. 本地操作能力</h3><p><strong>QoderWork &gt;&gt; MiniMax Agent</strong></p><p>这是QoderWork的核心护城河。它能做到MiniMax Agent做不到的事情：</p><ul><li><strong>直接操作本地文件系统</strong>：批量重命名、分类整理、跨文件夹移动</li><li><strong>调用本地应用</strong>：打开Excel修改格式，不只是”生成建议”</li><li><strong>沙盒环境</strong>：敏感数据可以在隔离环境中处理，不上传云端</li><li><strong>系统级权限</strong>：能做真正的”操作”，而不只是”输出”</li></ul><p>举个具体例子：如果你下载文件夹里有1000个文件乱成一团，QoderWork能直接帮你按类型/日期/项目分类整理好。MiniMax Agent只能给你一个”整理方案”的文档，你还得自己动手。</p><h3 id="3-复杂任务处理"><a href="#3-复杂任务处理" class="headerlink" title="3. 复杂任务处理"></a>3. 复杂任务处理</h3><p><strong>MiniMax Agent ≥ QoderWork</strong></p><p>在需要多步规划、深度研究、长链路工具调用的场景下，MiniMax Agent表现更优。</p><p>M2.5模型经过大规模强化学习训练，在BrowseComp（深度搜索评测）上达到76.3%，在Multi-SWE-Bench（多语言编程）上达到51.3%。更重要的是，它完成SWE-Bench任务的平均时间从31.3分钟降到了22.8分钟，基本追平了Claude Opus 4.6。</p><p>QoderWork也支持复杂任务拆解，但它的”复杂”更多体现在<strong>跨应用协调</strong>——比如从Excel提取数据、生成分析报告、同步到日历——而不是深层推理或研究类任务。</p><h3 id="4-数据隐私与安全"><a href="#4-数据隐私与安全" class="headerlink" title="4. 数据隐私与安全"></a>4. 数据隐私与安全</h3><p><strong>QoderWork &gt; MiniMax Agent</strong></p><p>QoderWork的本地化架构天然具备隐私优势。数据不出本地，预制沙盒环境进一步隔离风险。对于处理企业敏感数据、个人隐私信息的场景，这是硬需求。</p><p>MiniMax Agent作为云端产品，所有数据都需要上传到服务器处理。虽然MiniMax没有明确曝出过数据安全问题，但架构上它就是需要你”交出数据”的。</p><h3 id="5-成本与可用性"><a href="#5-成本与可用性" class="headerlink" title="5. 成本与可用性"></a>5. 成本与可用性</h3><table><thead><tr><th>维度</th><th>MiniMax Agent</th><th>QoderWork</th></tr></thead><tbody><tr><td>价格</td><td>目前限时免费</td><td>Credits制，有标准/旗舰两档</td></tr><tr><td>平台</td><td>Web端，随时可用</td><td>桌面客户端，Mac/Windows</td></tr><tr><td>上手门槛</td><td>低，打开网页即用</td><td>低，下载安装即用</td></tr><tr><td>模型选择</td><td>M2.5（固定）</td><td>多模型可选（分级选择器）</td></tr><tr><td>生态扩展</td><td>专家Agents（1万+）</td><td>Skills广场 + 自定义MCP</td></tr></tbody></table><hr><h2 id="四、实际场景选择指南"><a href="#四、实际场景选择指南" class="headerlink" title="四、实际场景选择指南"></a>四、实际场景选择指南</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_05_scenario_guide.png" alt="四、实际场景选择指南"></p><p>这里是我总结的<strong>场景-工具匹配表</strong>，供大家参考：</p><p><strong>选MiniMax Agent的场景：</strong></p><ul><li>需要从零生成一份完整的研究报告/PPT/网页</li><li>深度研究某个课题，需要搜索+分析+整合</li><li>全栈开发，生成可运行的代码项目</li><li>需要图文音视频混合产出的创意内容</li><li>编程调试、代码审查</li></ul><p><strong>选QoderWork的场景：</strong></p><ul><li>整理电脑上的文件和文件夹</li><li>批量处理本地Excel/PDF/Word文件</li><li>从多个本地文件中提取、汇总信息</li><li>需要操作本地应用完成工作流</li><li>对数据隐私要求高，不希望上传云端</li></ul><p><strong>两者都可以的场景：</strong></p><ul><li>日常问答和简单搜索</li><li>生成普通文档和文案</li><li>数据分析和可视化（MiniMax云端做，Q）</li></ul><hr><h2 id="五、行业视角：桌面Agent赛道格局"><a href="#五、行业视角：桌面Agent赛道格局" class="headerlink" title="五、行业视角：桌面Agent赛道格局"></a>五、行业视角：桌面Agent赛道格局</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_05_industry_perspective.png" alt="五、行业视角：桌面Agent赛道格局"></p><p>2026年初，桌面Agent突然成为AI领域最热的赛道之一。海外Anthropic推出Claude Cowork引爆了市场，国内迅速跟进：</p><ul><li><strong>MiniMax</strong>：Agent 2.0 + M2.5模型，定位AI原生工作台</li><li><strong>阿里QoderWork</strong>：桌面级Agent，本地优先</li><li><strong>阶跃星辰</strong>：桌面伙伴，Mac/Windows双端</li><li><strong>Anthropic Cowork</strong>：桌面Agent鼻祖</li></ul><p>这个赛道的核心逻辑是：**AI从”给答案”进化到”干活”**。过去你跟AI聊天，它给你一段文字；现在你给AI一个任务，它替你完成整个工作流程。</p><p>MiniMax走的是”模型驱动Agent”的路线——先做好模型，再用模型驱动Agent。闫俊杰说过，大模型的创新打开了Agent的能力天花板，Agent的增长让模型的方向更清晰，两者是飞轮关系。</p><p>阿里走的是”工具驱动Agent”的路线——QoderWork从Qoder（智能编程平台）延伸而来，把Agent能力从代码领域扩展到日常办公。它的优势不在模型本身，而在工程化的本地集成能力。</p><hr><h2 id="六、我的选择"><a href="#六、我的选择" class="headerlink" title="六、我的选择"></a>六、我的选择</h2><p><img src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_06_my_choice.png" alt="六、我的选择"></p><p>作为一个每天在论文、代码、数据、内容创作之间并行切换的研究生，我的策略是：<strong>两个都用，但场景严格区分。</strong></p><ul><li>写论文、做实验报告、生成架构图、深度调研 → <strong>MiniMax Agent</strong>（创作能力强，免费）</li><li>整理数据集文件、批量处理标注文件、管理本地文档 → <strong>QoderWork</strong>（本地操作，隐私安全）</li><li>日常编程和代码调试 → 继续用<strong>Claude Code</strong>（专业编程Agent还是更稳）</li></ul><p>不要执着于”哪个更好”，而是想清楚”我需要它帮我做什么”。</p><p>工具是为人服务的，选对场景比选对工具重要。</p><hr><p><em>你用过这两款产品吗？欢迎在评论区分享你的体验。</em></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_01_cover_paper_writing.png" alt="封面"></p><blockquote><p>景哥说：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p></blockquote><hr><h2 id="我的论文被AI”打架”打回来了"><a href="#我的论文被AI”打架”打回来了" class="headerlink" title="我的论文被AI”打架”打回来了"></a>我的论文被AI”打架”打回来了</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_02_ai_feedback.png" alt="我的论文被AI&quot;打架&quot;打回来了"></p><p>前阵子我把自己那篇井盖检测的论文发给景哥看，想让他帮忙把把关。</p><p>景哥收到之后，做了一件我没想到的事——他把我的论文同时丢给了Gemini和Claude，让两个AI互相挑毛病。</p><p>结果是：”你那篇论文公式太多了，我让Gemini和Claude打架，疯狂的说一堆致命的问题。”</p><p>我当时心态还挺稳的。毕竟论文还在改，有问题正常。但接下来景哥说的话，才是真正让我重新审视自己写论文方式的开始。</p><hr><h2 id="“你模仿的那篇，没啥参考价值”"><a href="#“你模仿的那篇，没啥参考价值”" class="headerlink" title="“你模仿的那篇，没啥参考价值”"></a>“你模仿的那篇，没啥参考价值”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_03_imitate_worthless.png" alt="你模仿的那篇，没啥参考价值"></p><p>我之前写论文的方法很朴素：读了一些论文，觉得差不多理解了方法，就开始动笔写。格式嘛，找了一篇看起来结构类似的文章照着来。</p><p>景哥问我：”你打算和这个发一样的期刊吗？”</p><p>我说不是。</p><p>他说：”那你模仿它干嘛。”</p><p>然后他点开我参考的那篇论文，直接下了判断：”这个做的一般，写的也不行。没啥参考价值，而且还是本科毕业论文。”</p><p>我才意识到，<strong>我连”该模仿谁”都没搞清楚，就开始模仿了。</strong></p><hr><h2 id="景哥的论文写作方法论"><a href="#景哥的论文写作方法论" class="headerlink" title="景哥的论文写作方法论"></a>景哥的论文写作方法论</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_04_writing_methodology.png" alt="景哥的论文写作方法论"></p><p>接下来的对话，景哥系统地给我拆解了一套论文写作的底层逻辑。不是那种教科书式的”摘要怎么写、引言怎么写”，而是更实战的东西。</p><h3 id="1-先选目标期刊，再写论文"><a href="#1-先选目标期刊，再写论文" class="headerlink" title="1. 先选目标期刊，再写论文"></a>1. 先选目标期刊，再写论文</h3><p>这个顺序很多人搞反了。</p><p>大部分研究生（包括之前的我）是先写完论文，然后再去想”这篇能发哪儿”。但景哥的思路完全反过来：<strong>先确定你要投哪个期刊，然后按那个期刊的风格和标准去写。</strong></p><p>为什么？因为每个期刊都有自己的写作偏好。行文风格、段落结构、公式密度、图表规范、参考文献的引用习惯——这些东西期刊之间差异不小。</p><p>景哥原话：”每个期刊都有自己的写作风格和表达方式，投哪个就模仿哪个期刊的表达和风格。”</p><h3 id="2-在目标期刊里找一篇”范文”"><a href="#2-在目标期刊里找一篇”范文”" class="headerlink" title="2. 在目标期刊里找一篇”范文”"></a>2. 在目标期刊里找一篇”范文”</h3><p>确定了目标期刊之后，下一步不是动笔，而是去这个期刊里找一篇和你研究方向最接近的已发表论文。</p><p>这篇论文就是你的”模板”——不是抄它的内容，而是学它的：</p><ul><li><strong>格式和结构</strong>：章节怎么划分的，每个部分大概多长</li><li><strong>写作技巧</strong>：怎么引出问题的，怎么描述方法的，实验部分怎么组织的</li><li><strong>公式的密度和呈现方式</strong>：别人核心放了哪些公式，你也需要有对应的</li><li><strong>参考文献的构成</strong>：引了哪些层次的文献，顶刊顶会占多少比例</li></ul><p>景哥反复强调：”你在这个期刊里面找一个和你写的类似的文章，模仿一下。然后模仿他的，来写你的。”</p><h3 id="3-参考文献是论文的”名片”"><a href="#3-参考文献是论文的”名片”" class="headerlink" title="3. 参考文献是论文的”名片”"></a>3. 参考文献是论文的”名片”</h3><p>这一点我之前完全没意识到。</p><p>景哥让我把参考文献全部换成IEEE Transactions或计算机顶会的论文。我不太理解，问他为什么。</p><p>他的解释很直白：**”引用顶刊顶会是说明你这个有价值。如果引用的内容都是水刊，那不用看你内容，你做的也不行。”**</p><p>更深一层，他说这也是”人情世故”——“换成你是主编、副主编，你也会这样做，希望看到自己期刊类型的东西。引用你想投的这个期刊的，是人情世故。”</p><p>所以参考文献不是写完论文之后随便补的，它是你论文学术定位的一部分。引用什么层次的文献，某种程度上就决定了审稿人对你工作的第一印象。</p><h3 id="4-公式不是越多越好"><a href="#4-公式不是越多越好" class="headerlink" title="4. 公式不是越多越好"></a>4. 公式不是越多越好</h3><p>我的井盖论文里堆了很多公式，我觉得这样显得严谨。</p><p>景哥的看法正好相反——公式太多，反而给审稿人更多的攻击面。他用AI工具去检验，每个公式都可能被挑出问题。</p><p>他说：”Nature、Science文章也有问题，都是自己加限制条件，然后逻辑自恰就行。”</p><p>这句话信息量很大。意思是：<strong>论文不是要证明你的方法”绝对正确”，而是在你设定的条件和范围内，逻辑自洽、实验支撑。</strong> 公式是为了支撑论理，不是为了炫技。不需要推导的公式，直接引用就好；核心创新点的公式，才值得展开。</p><hr><h2 id="论文阅读的正确打开方式"><a href="#论文阅读的正确打开方式" class="headerlink" title="论文阅读的正确打开方式"></a>论文阅读的正确打开方式</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_05_reading_method.png" alt="论文阅读的正确打开方式"></p><p>景哥还纠正了我读论文的习惯。</p><p>我之前的做法是：什么论文都读，学位论文、期刊论文、会议论文混着看，觉得看得越多越好。</p><p>景哥给了一个更清晰的优先级：</p><p><strong>主要看期刊论文。</strong> 期刊论文是你最终要写的东西，它的篇幅、深度、写作方式就是你的目标。先看目标期刊的论文，理解它的”语言”和”套路”。</p><p><strong>想深入理解某个方法，就去看博士论文。</strong> 博士论文写得细、推导完整、解释充分，非常适合用来弄懂一个你在期刊论文里看不明白的技术点。</p><p><strong>学位论文别当主要参考。</strong> 景哥直接说”学位论文，别再看了”（指作为写作参考），因为学位论文的写作标准和期刊论文差距很大。</p><p>用他的话来总结路径就是：<strong>先看期刊论文学写法，不懂的点去博士论文里找解释，弄懂了再回来继续看期刊。</strong></p><hr><h2 id="“做的好很重要，能把事情讲清楚更重要”"><a href="#“做的好很重要，能把事情讲清楚更重要”" class="headerlink" title="“做的好很重要，能把事情讲清楚更重要”"></a>“做的好很重要，能把事情讲清楚更重要”</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_06_express_matters.png" alt="做的好很重要，能把事情讲清楚更重要"></p><p>景哥在聊天中反复提到的一个观点是：<strong>论文的核心不是你做了什么，而是你怎么把做的事情讲清楚。</strong></p><p>他举了一个例子——他有个同学在某211高校，他们组的分工方式是”导师写作，学生只负责做实验”。这样半年就能出一篇一区，运气好还有顶刊。</p><p>这当然不是说学生不需要学写作，而是说明一个事实：<strong>写作能力是论文发表中极其关键的变量，甚至比实验本身更关键。</strong> 同样的实验结果，一个人能写成顶刊，另一个人可能连二区都挂不上。</p><p>对我们这种导师不帮写、全靠自己的研究生来说，这意味着写作能力必须自己练。而练的方式不是”多写”，是**”多看、多模仿、多对照”**。</p><p>景哥说得很实在：”你别自己在那瞎弄，你得看别人的。看别人的咋写的，咋表达的。”</p><hr><h2 id="我的行动计划"><a href="#我的行动计划" class="headerlink" title="我的行动计划"></a>我的行动计划</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_07_action_plan.png" alt="我的行动计划"></p><p>基于景哥的指导，我给自己定了一个调整方案：</p><p><strong>第一步</strong>：确定井盖论文的目标期刊，先锁定一个中文核心期刊作为练手。</p><p><strong>第二步</strong>：在目标期刊中找到一篇和我方向最接近的论文，逐段拆解它的结构、写法、公式密度、参考文献构成。</p><p><strong>第三步</strong>：按照这篇”范文”的框架，重新组织我的论文。不是重写内容，而是调整表达方式和呈现逻辑。</p><p><strong>第四步</strong>：参考文献全面升级，替换成目标期刊级别及以上的文献，同时适当引用目标期刊已发表的相关工作。</p><p><strong>第五步</strong>：精简公式，只保留核心创新点相关的推导，其余直接引用原文献。</p><p>景哥说：”这样弄好了这个，后边再想投别的期刊，就知道咋弄了。这个就当练手。”</p><p>练手就对了。第一篇不追求完美，追求的是<strong>把整个流程跑通一遍</strong>。</p><hr><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/graduate-paper-writing/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8A%95%E7%A8%BF_08_conclusion.png" alt="写在最后"></p><p>回头看，我之前写论文最大的问题不是”写不好”，而是**从来没认真研究过”好论文是怎么写出来的”**。</p><p>我只看了方法，没看写法。只关注了技术创新点，忽略了表达和呈现。像景哥说的，我一直在”自己瞎弄”，而不是先站在已有的好论文上去学习和模仿。</p><p>“模仿”这个词听起来不高级，但它其实是最高效的学习方式——你不是在抄别人的内容，你是在学习一种被验证过的表达框架。等你模仿够了，自然就有了自己的风格。</p><p>这大概就是景哥说的”知行合一”的又一个注脚吧。</p><hr><p><em>你写第一篇论文的时候，走了哪些弯路？欢迎在评论区聊聊。</em></p><p><em>关注「研途炼钢」，一个研究生的真实成长记录。</em></p>]]></content>
       
       
       <categories>
           
           <category> 杂谈 </category>
           
-          <category> 技术研究 </category>
+          <category> 研究生成长 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> AI工具 </tag>
+            <tag> 研究生 </tag>
             
-            <tag> Agent </tag>
+            <tag> 学术 </tag>
             
-            <tag> MiniMax </tag>
-            
-            <tag> 阿里 </tag>
+            <tag> 论文写作 </tag>
             
         </tags>
       
@@ -999,9 +1080,9 @@
       
         <tags>
             
-            <tag> Claude Code </tag>
-            
             <tag> AI编程 </tag>
+            
+            <tag> Claude Code </tag>
             
             <tag> Codex </tag>
             
@@ -1082,25 +1163,6 @@
     
     
     <entry>
-      <title>2026年2月复盘</title>
-      <link href="/posts/20262review.html"/>
-      <url>/posts/20262review.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="2026年2月复盘"><a href="#2026年2月复盘" class="headerlink" title="2026年2月复盘"></a>2026年2月复盘</h1><h2 id="月度关键词"><a href="#月度关键词" class="headerlink" title="月度关键词"></a>月度关键词</h2><p>AI工具狂热 | 论文缓慢推进 | 教资临阵磨枪 | 作息持续失败</p><hr><h2 id="核心成果（Top-5）"><a href="#核心成果（Top-5）" class="headerlink" title="核心成果（Top 5）"></a>核心成果（Top 5）</h2><ol><li><strong>井盖论文初稿完成</strong> - 8000字初稿完成，LaTeX形式，实验环境配置完成，交付给实习单位</li><li><strong>祖师爷论文整合完成</strong> - 80篇论文全部找齐，多Agent四方验证，整合推送完成</li><li><strong>教资综合素质通关</strong> - 2月27日7个模块全部通关（写作87%、职业道德81%、教师观80%、文化素养75%、教育观73%、学生观67%、教育法律法规59%）</li><li><strong>AI工具矩阵完善</strong> - Kimi Code、OpenClaud、7个AI供应商、Claude Code Opus 4.6、MiniMax Agent、智谱大龙虾全部配置完成</li><li><strong>知识体系可视化</strong> - 论文阅读前端完成、项目Dashboard制作、博客CSS优化、公众号工作流跑通</li></ol><hr><h2 id="2月计划-vs-实际"><a href="#2月计划-vs-实际" class="headerlink" title="2月计划 vs 实际"></a>2月计划 vs 实际</h2><table><thead><tr><th>目标</th><th>计划</th><th>实际</th><th>完成度</th></tr></thead><tbody><tr><td>论文Baseline跑出结果</td><td>启动实验</td><td>初稿完成，实验进行中</td><td>70%</td></tr><tr><td>教资科目一完成</td><td>每天30分钟</td><td>最后几天突击通关</td><td>60%</td></tr><tr><td>作息恢复规律</td><td>23点前睡，7:30起</td><td>持续失败</td><td>10%</td></tr></tbody></table><p><strong>核心结论</strong>：论文和教资在月末冲刺有进展，作息管理彻底失败。</p><hr><h2 id="习惯达成情况"><a href="#习惯达成情况" class="headerlink" title="习惯达成情况"></a>习惯达成情况</h2><table><thead><tr><th>习惯</th><th>目标</th><th>完成天数</th><th>完成率</th><th>评价</th></tr></thead><tbody><tr><td>论文30分钟</td><td>28天</td><td>约18天</td><td>64%</td><td>⚠️ 不稳定</td></tr><tr><td>散步/运动</td><td>28天</td><td>约18天</td><td>64%</td><td>⚠️ 后半周中断</td></tr><tr><td>饮水2000ml</td><td>28天</td><td>约20天</td><td>71%</td><td>✅ 保持良好</td></tr><tr><td>教资学习</td><td>28天</td><td>约5天</td><td>18%</td><td>❌ 临时抱佛脚</td></tr><tr><td>早睡（23:30前）</td><td>28天</td><td>约2天</td><td>7%</td><td>❌ 彻底失败</td></tr></tbody></table><hr><h2 id="时间分配分析"><a href="#时间分配分析" class="headerlink" title="时间分配分析"></a>时间分配分析</h2><p>基于日记内容估算：</p><table><thead><tr><th>领域</th><th>占比</th><th>评价</th></tr></thead><tbody><tr><td>AI工具配置/折腾</td><td>35%</td><td><strong>严重过多</strong></td></tr><tr><td>论文研究/实验</td><td>25%</td><td>不够专注</td></tr><tr><td>公众号/自媒体</td><td>15%</td><td>新增方向</td></tr><tr><td>教资备考</td><td>10%</td><td>末尾突击</td></tr><tr><td>帮人配置工具</td><td>10%</td><td>知识布道</td></tr><tr><td>运动/生活</td><td>5%</td><td>偏少</td></tr></tbody></table><p><strong>核心问题</strong>：把35%的时间花在”磨刀”上，而非”砍柴”上。与月度计划口号”少折腾工具，多做难事”背道而驰。</p><hr><h2 id="精力-情绪趋势"><a href="#精力-情绪趋势" class="headerlink" title="精力/情绪趋势"></a>精力/情绪趋势</h2><table><thead><tr><th>指标</th><th>2月均值</th><th>1月对比</th><th>趋势</th></tr></thead><tbody><tr><td>平均精力</td><td>6.0/10</td><td>~6.0/10</td><td>→ 持平</td></tr><tr><td>平均情绪</td><td>6.0/10</td><td>~6.5/10</td><td>↓ 略降</td></tr><tr><td>最高精力周</td><td>第7周（6.0）</td><td>-</td><td>整体偏低</td></tr><tr><td>最低精力周</td><td>第6周（5.7）</td><td>-</td><td>通宵后</td></tr></tbody></table><p><strong>模式识别</strong>：精力长期处于及格线附近，没有高峰也没有低谷，说明缺乏深度投入和充分休息的节奏感。</p><hr><h2 id="项目进展"><a href="#项目进展" class="headerlink" title="项目进展"></a>项目进展</h2><table><thead><tr><th>项目</th><th>月初状态</th><th>月末状态</th><th>进展</th></tr></thead><tbody><tr><td>井盖论文</td><td>有想法</td><td>初稿完成+实验配置</td><td>+50%</td></tr><tr><td>红学论文</td><td>未启动</td><td>方向整合完毕</td><td>+30%</td></tr><tr><td>祖师爷论文</td><td>下载中</td><td>80篇全部整合</td><td>+80%</td></tr><tr><td>违建论文</td><td>数据采集中</td><td>暂停</td><td>0%</td></tr><tr><td>教资备考</td><td>未开始</td><td>综合素质通关</td><td>+40%</td></tr><tr><td>软著申请</td><td>未开始</td><td>5个项目文档完成</td><td>+50%</td></tr></tbody></table><hr><h2 id="本月亮点"><a href="#本月亮点" class="headerlink" title="本月亮点"></a>本月亮点</h2><h3 id="做得好的地方"><a href="#做得好的地方" class="headerlink" title="做得好的地方"></a>做得好的地方</h3><ol><li><strong>多Agent协作模式成熟</strong> - Kimi/Claude/MiniMax/GLM四方验证，论文整合效率大幅提升</li><li><strong>月末冲刺能力</strong> - 教资综合素质在最后几天突击通关</li><li><strong>知识布道价值</strong> - 帮Andy、发小配置AI工具，有成就感</li><li><strong>公众号工作流跑通</strong> - 调研→文本→配图→博文全链路完成</li><li><strong>GitHub推送问题解决</strong> - SSH转HTTPS，代理问题修复</li></ol><h3 id="突破性进展"><a href="#突破性进展" class="headerlink" title="突破性进展"></a>突破性进展</h3><blockquote><p><strong>祖师爷论文项目从混乱到完成</strong>：用多Agent验证的方式，把80篇论文全部找齐并整理。这是AI工具深度协作的典型案例，证明了”集群作战”的效果。</p></blockquote><hr><h2 id="本月挑战"><a href="#本月挑战" class="headerlink" title="本月挑战"></a>本月挑战</h2><h3 id="主要困难"><a href="#主要困难" class="headerlink" title="主要困难"></a>主要困难</h3><ol><li><strong>作息管理彻底失败</strong> - 每天23:30前睡觉的计划，28天只达成约2天</li><li><strong>论文实验拖延</strong> - 多次计划跑baseline，被工具配置挤占时间</li><li><strong>抓手缺失焦虑</strong> - 2月13日对着五六条命令行发呆，买了很多token不知道干什么</li><li><strong>信息过载</strong> - “大脑消耗不了这么多信息”，大量无用功</li><li><strong>计划完成率低</strong> - 每日计划完成率约30-50%</li></ol><h3 id="如何应对"><a href="#如何应对" class="headerlink" title="如何应对"></a>如何应对</h3><table><thead><tr><th>困难</th><th>应对措施</th><th>效果</th></tr></thead><tbody><tr><td>作息混乱</td><td>设23:00闹钟</td><td>❌ 失败</td></tr><tr><td>实验拖延</td><td>工具够了直接干</td><td>⚠️ 部分有效</td></tr><tr><td>抓手缺失</td><td>和Sonnet聊天定目标</td><td>✅ 有效</td></tr><tr><td>信息过载</td><td>减少工具折腾</td><td>⚠️ 效果有限</td></tr></tbody></table><hr><h2 id="月度感悟"><a href="#月度感悟" class="headerlink" title="月度感悟"></a>月度感悟</h2><blockquote><p><strong>大模型时代的核心用户（20%）的特征不是”用得多”，而是把 token 转化成了可交付的成果。</strong></p></blockquote><blockquote><p><strong>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设。</strong></p></blockquote><blockquote><p><strong>每天都在让很多大模型帮我去跑一些项目，不断在做熵增的过程，然后得到一些结论之后就不怎么管之前做过的一些事情了，没有进行总结归纳整理这种熵减的算法。</strong></p></blockquote><blockquote><p><strong>当生产成本几乎为0时，需要的是想象力、洞察力。隐性门槛更高了——必须锻炼跨界思维，AI才是你的工具，不然人类就是AI的奴隶。</strong></p></blockquote><blockquote><p><strong>以事件为管理忽视了时间的力量。需要给自己deadline，有压力才能出成果。一件事以五天为周期才能做好。</strong></p></blockquote><hr><h2 id="下月重点（3月）"><a href="#下月重点（3月）" class="headerlink" title="下月重点（3月）"></a>下月重点（3月）</h2><h3 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h3><ol><li><strong>井盖论文定稿</strong> - 目标：完成实验+科研绘图+格式修改，行动：每天上午2小时固定时间</li><li><strong>红学论文启动</strong> - 目标：爬虫方案落地+初稿框架，行动：3月15日前出方案</li><li><strong>作息恢复</strong> - 目标：23:00前睡觉达成20天，行动：22:00后不开启新任务</li></ol><h3 id="习惯重塑"><a href="#习惯重塑" class="headerlink" title="习惯重塑"></a>习惯重塑</h3><table><thead><tr><th>习惯</th><th>目标</th><th>检查方式</th></tr></thead><tbody><tr><td>论文时间</td><td>每天2小时（上午9-11点）</td><td>时间块锁定</td></tr><tr><td>教资刷题</td><td>每天30题（睡前）</td><td>题库记录</td></tr><tr><td>散步/运动</td><td>每周4次</td><td>运动打卡</td></tr><tr><td>早睡</td><td>23:00前</td><td>闹钟强制</td></tr></tbody></table><h3 id="时间分配调整"><a href="#时间分配调整" class="headerlink" title="时间分配调整"></a>时间分配调整</h3><ul><li>AI工具配置：从35% → **10%**（只维护，不折腾）</li><li>论文研究：从25% → **40%**（核心优先）</li><li>教资备考：从10% → **20%**（稳定推进）</li><li>其他：保持不变</li></ul><hr><h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul><li>[[2026-02-月度计划]] - 2月初制定的目标</li><li>[[第6周复盘（2.2-2.8）]] - AI工具深度应用周</li><li>[[第7周复盘（2.10-2.16）]] - 回家周，多而散</li><li>[[第8周复盘（2.16-2.22）]] - 春节周，祖师爷论文完成</li><li>[[02-Thesis/MOC-论文地图]] - 论文阅读进度</li><li>[[03-Projects/francis_12_week_plan]] - 12周行动计划</li></ul><hr><h2 id="📊-2月数据看板"><a href="#📊-2月数据看板" class="headerlink" title="📊 2月数据看板"></a>📊 2月数据看板</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">论文推进：████████░░ 70%</span><br><span class="line">教资备考：██████░░░░ 60%</span><br><span class="line">作息恢复：█░░░░░░░░░ 10%</span><br><span class="line">AI工具配置：██████████ 100%</span><br><span class="line">知识输出：█████████░ 90%</span><br><span class="line">精力状态：██████░░░░ 60%</span><br></pre></td></tr></table></figure><hr><p><strong>3月口号</strong>：**”少折腾工具，多出成果。”**</p><blockquote><p>2月把刀磨得够锋利了，3月要开始砍柴了。<br>23:00前睡觉，9:00-11:00论文雷打不动。<br>把token转化成可交付成果，而不是单纯烧量。</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 月复盘 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2026年2月28日</title>
       <link href="/posts/0228f515.html"/>
       <url>/posts/0228f515.html</url>
@@ -1112,6 +1174,25 @@
         <tags>
             
             <tag> 日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2026年2月复盘</title>
+      <link href="/posts/20262review.html"/>
+      <url>/posts/20262review.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2026年2月复盘"><a href="#2026年2月复盘" class="headerlink" title="2026年2月复盘"></a>2026年2月复盘</h1><h2 id="月度关键词"><a href="#月度关键词" class="headerlink" title="月度关键词"></a>月度关键词</h2><p>AI工具狂热 | 论文缓慢推进 | 教资临阵磨枪 | 作息持续失败</p><hr><h2 id="核心成果（Top-5）"><a href="#核心成果（Top-5）" class="headerlink" title="核心成果（Top 5）"></a>核心成果（Top 5）</h2><ol><li><strong>井盖论文初稿完成</strong> - 8000字初稿完成，LaTeX形式，实验环境配置完成，交付给实习单位</li><li><strong>祖师爷论文整合完成</strong> - 80篇论文全部找齐，多Agent四方验证，整合推送完成</li><li><strong>教资综合素质通关</strong> - 2月27日7个模块全部通关（写作87%、职业道德81%、教师观80%、文化素养75%、教育观73%、学生观67%、教育法律法规59%）</li><li><strong>AI工具矩阵完善</strong> - Kimi Code、OpenClaud、7个AI供应商、Claude Code Opus 4.6、MiniMax Agent、智谱大龙虾全部配置完成</li><li><strong>知识体系可视化</strong> - 论文阅读前端完成、项目Dashboard制作、博客CSS优化、公众号工作流跑通</li></ol><hr><h2 id="2月计划-vs-实际"><a href="#2月计划-vs-实际" class="headerlink" title="2月计划 vs 实际"></a>2月计划 vs 实际</h2><table><thead><tr><th>目标</th><th>计划</th><th>实际</th><th>完成度</th></tr></thead><tbody><tr><td>论文Baseline跑出结果</td><td>启动实验</td><td>初稿完成，实验进行中</td><td>70%</td></tr><tr><td>教资科目一完成</td><td>每天30分钟</td><td>最后几天突击通关</td><td>60%</td></tr><tr><td>作息恢复规律</td><td>23点前睡，7:30起</td><td>持续失败</td><td>10%</td></tr></tbody></table><p><strong>核心结论</strong>：论文和教资在月末冲刺有进展，作息管理彻底失败。</p><hr><h2 id="习惯达成情况"><a href="#习惯达成情况" class="headerlink" title="习惯达成情况"></a>习惯达成情况</h2><table><thead><tr><th>习惯</th><th>目标</th><th>完成天数</th><th>完成率</th><th>评价</th></tr></thead><tbody><tr><td>论文30分钟</td><td>28天</td><td>约18天</td><td>64%</td><td>⚠️ 不稳定</td></tr><tr><td>散步/运动</td><td>28天</td><td>约18天</td><td>64%</td><td>⚠️ 后半周中断</td></tr><tr><td>饮水2000ml</td><td>28天</td><td>约20天</td><td>71%</td><td>✅ 保持良好</td></tr><tr><td>教资学习</td><td>28天</td><td>约5天</td><td>18%</td><td>❌ 临时抱佛脚</td></tr><tr><td>早睡（23:30前）</td><td>28天</td><td>约2天</td><td>7%</td><td>❌ 彻底失败</td></tr></tbody></table><hr><h2 id="时间分配分析"><a href="#时间分配分析" class="headerlink" title="时间分配分析"></a>时间分配分析</h2><p>基于日记内容估算：</p><table><thead><tr><th>领域</th><th>占比</th><th>评价</th></tr></thead><tbody><tr><td>AI工具配置/折腾</td><td>35%</td><td><strong>严重过多</strong></td></tr><tr><td>论文研究/实验</td><td>25%</td><td>不够专注</td></tr><tr><td>公众号/自媒体</td><td>15%</td><td>新增方向</td></tr><tr><td>教资备考</td><td>10%</td><td>末尾突击</td></tr><tr><td>帮人配置工具</td><td>10%</td><td>知识布道</td></tr><tr><td>运动/生活</td><td>5%</td><td>偏少</td></tr></tbody></table><p><strong>核心问题</strong>：把35%的时间花在”磨刀”上，而非”砍柴”上。与月度计划口号”少折腾工具，多做难事”背道而驰。</p><hr><h2 id="精力-情绪趋势"><a href="#精力-情绪趋势" class="headerlink" title="精力/情绪趋势"></a>精力/情绪趋势</h2><table><thead><tr><th>指标</th><th>2月均值</th><th>1月对比</th><th>趋势</th></tr></thead><tbody><tr><td>平均精力</td><td>6.0/10</td><td>~6.0/10</td><td>→ 持平</td></tr><tr><td>平均情绪</td><td>6.0/10</td><td>~6.5/10</td><td>↓ 略降</td></tr><tr><td>最高精力周</td><td>第7周（6.0）</td><td>-</td><td>整体偏低</td></tr><tr><td>最低精力周</td><td>第6周（5.7）</td><td>-</td><td>通宵后</td></tr></tbody></table><p><strong>模式识别</strong>：精力长期处于及格线附近，没有高峰也没有低谷，说明缺乏深度投入和充分休息的节奏感。</p><hr><h2 id="项目进展"><a href="#项目进展" class="headerlink" title="项目进展"></a>项目进展</h2><table><thead><tr><th>项目</th><th>月初状态</th><th>月末状态</th><th>进展</th></tr></thead><tbody><tr><td>井盖论文</td><td>有想法</td><td>初稿完成+实验配置</td><td>+50%</td></tr><tr><td>红学论文</td><td>未启动</td><td>方向整合完毕</td><td>+30%</td></tr><tr><td>祖师爷论文</td><td>下载中</td><td>80篇全部整合</td><td>+80%</td></tr><tr><td>违建论文</td><td>数据采集中</td><td>暂停</td><td>0%</td></tr><tr><td>教资备考</td><td>未开始</td><td>综合素质通关</td><td>+40%</td></tr><tr><td>软著申请</td><td>未开始</td><td>5个项目文档完成</td><td>+50%</td></tr></tbody></table><hr><h2 id="本月亮点"><a href="#本月亮点" class="headerlink" title="本月亮点"></a>本月亮点</h2><h3 id="做得好的地方"><a href="#做得好的地方" class="headerlink" title="做得好的地方"></a>做得好的地方</h3><ol><li><strong>多Agent协作模式成熟</strong> - Kimi/Claude/MiniMax/GLM四方验证，论文整合效率大幅提升</li><li><strong>月末冲刺能力</strong> - 教资综合素质在最后几天突击通关</li><li><strong>知识布道价值</strong> - 帮Andy、发小配置AI工具，有成就感</li><li><strong>公众号工作流跑通</strong> - 调研→文本→配图→博文全链路完成</li><li><strong>GitHub推送问题解决</strong> - SSH转HTTPS，代理问题修复</li></ol><h3 id="突破性进展"><a href="#突破性进展" class="headerlink" title="突破性进展"></a>突破性进展</h3><blockquote><p><strong>祖师爷论文项目从混乱到完成</strong>：用多Agent验证的方式，把80篇论文全部找齐并整理。这是AI工具深度协作的典型案例，证明了”集群作战”的效果。</p></blockquote><hr><h2 id="本月挑战"><a href="#本月挑战" class="headerlink" title="本月挑战"></a>本月挑战</h2><h3 id="主要困难"><a href="#主要困难" class="headerlink" title="主要困难"></a>主要困难</h3><ol><li><strong>作息管理彻底失败</strong> - 每天23:30前睡觉的计划，28天只达成约2天</li><li><strong>论文实验拖延</strong> - 多次计划跑baseline，被工具配置挤占时间</li><li><strong>抓手缺失焦虑</strong> - 2月13日对着五六条命令行发呆，买了很多token不知道干什么</li><li><strong>信息过载</strong> - “大脑消耗不了这么多信息”，大量无用功</li><li><strong>计划完成率低</strong> - 每日计划完成率约30-50%</li></ol><h3 id="如何应对"><a href="#如何应对" class="headerlink" title="如何应对"></a>如何应对</h3><table><thead><tr><th>困难</th><th>应对措施</th><th>效果</th></tr></thead><tbody><tr><td>作息混乱</td><td>设23:00闹钟</td><td>❌ 失败</td></tr><tr><td>实验拖延</td><td>工具够了直接干</td><td>⚠️ 部分有效</td></tr><tr><td>抓手缺失</td><td>和Sonnet聊天定目标</td><td>✅ 有效</td></tr><tr><td>信息过载</td><td>减少工具折腾</td><td>⚠️ 效果有限</td></tr></tbody></table><hr><h2 id="月度感悟"><a href="#月度感悟" class="headerlink" title="月度感悟"></a>月度感悟</h2><blockquote><p><strong>大模型时代的核心用户（20%）的特征不是”用得多”，而是把 token 转化成了可交付的成果。</strong></p></blockquote><blockquote><p><strong>我们从一个思考者变成决策者，能做的事情越来越多了，也越来越忙了，消耗着无数的 token 为自己的思想建设。</strong></p></blockquote><blockquote><p><strong>每天都在让很多大模型帮我去跑一些项目，不断在做熵增的过程，然后得到一些结论之后就不怎么管之前做过的一些事情了，没有进行总结归纳整理这种熵减的算法。</strong></p></blockquote><blockquote><p><strong>当生产成本几乎为0时，需要的是想象力、洞察力。隐性门槛更高了——必须锻炼跨界思维，AI才是你的工具，不然人类就是AI的奴隶。</strong></p></blockquote><blockquote><p><strong>以事件为管理忽视了时间的力量。需要给自己deadline，有压力才能出成果。一件事以五天为周期才能做好。</strong></p></blockquote><hr><h2 id="下月重点（3月）"><a href="#下月重点（3月）" class="headerlink" title="下月重点（3月）"></a>下月重点（3月）</h2><h3 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h3><ol><li><strong>井盖论文定稿</strong> - 目标：完成实验+科研绘图+格式修改，行动：每天上午2小时固定时间</li><li><strong>红学论文启动</strong> - 目标：爬虫方案落地+初稿框架，行动：3月15日前出方案</li><li><strong>作息恢复</strong> - 目标：23:00前睡觉达成20天，行动：22:00后不开启新任务</li></ol><h3 id="习惯重塑"><a href="#习惯重塑" class="headerlink" title="习惯重塑"></a>习惯重塑</h3><table><thead><tr><th>习惯</th><th>目标</th><th>检查方式</th></tr></thead><tbody><tr><td>论文时间</td><td>每天2小时（上午9-11点）</td><td>时间块锁定</td></tr><tr><td>教资刷题</td><td>每天30题（睡前）</td><td>题库记录</td></tr><tr><td>散步/运动</td><td>每周4次</td><td>运动打卡</td></tr><tr><td>早睡</td><td>23:00前</td><td>闹钟强制</td></tr></tbody></table><h3 id="时间分配调整"><a href="#时间分配调整" class="headerlink" title="时间分配调整"></a>时间分配调整</h3><ul><li>AI工具配置：从35% → **10%**（只维护，不折腾）</li><li>论文研究：从25% → **40%**（核心优先）</li><li>教资备考：从10% → **20%**（稳定推进）</li><li>其他：保持不变</li></ul><hr><h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul><li>[[2026-02-月度计划]] - 2月初制定的目标</li><li>[[第6周复盘（2.2-2.8）]] - AI工具深度应用周</li><li>[[第7周复盘（2.10-2.16）]] - 回家周，多而散</li><li>[[第8周复盘（2.16-2.22）]] - 春节周，祖师爷论文完成</li><li>[[02-Thesis/MOC-论文地图]] - 论文阅读进度</li><li>[[03-Projects/francis_12_week_plan]] - 12周行动计划</li></ul><hr><h2 id="📊-2月数据看板"><a href="#📊-2月数据看板" class="headerlink" title="📊 2月数据看板"></a>📊 2月数据看板</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">论文推进：████████░░ 70%</span><br><span class="line">教资备考：██████░░░░ 60%</span><br><span class="line">作息恢复：█░░░░░░░░░ 10%</span><br><span class="line">AI工具配置：██████████ 100%</span><br><span class="line">知识输出：█████████░ 90%</span><br><span class="line">精力状态：██████░░░░ 60%</span><br></pre></td></tr></table></figure><hr><p><strong>3月口号</strong>：**”少折腾工具，多出成果。”**</p><blockquote><p>2月把刀磨得够锋利了，3月要开始砍柴了。<br>23:00前睡觉，9:00-11:00论文雷打不动。<br>把token转化成可交付成果，而不是单纯烧量。</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 月复盘 </tag>
             
         </tags>
       
@@ -1594,9 +1675,9 @@
             
             <tag> Claude </tag>
             
-            <tag> Agent </tag>
-            
             <tag> MiniMax </tag>
+            
+            <tag> Agent </tag>
             
             <tag> 效率工具 </tag>
             
@@ -2102,11 +2183,11 @@
             
             <tag> 磁盘清理 </tag>
             
+            <tag> 存储优化 </tag>
+            
             <tag> E盘整理 </tag>
             
             <tag> 微信文件管理 </tag>
-            
-            <tag> 存储优化 </tag>
             
         </tags>
       
@@ -2137,9 +2218,9 @@
             
             <tag> 磁盘清理 </tag>
             
-            <tag> 存储优化 </tag>
-            
             <tag> D盘整理 </tag>
+            
+            <tag> 存储优化 </tag>
             
         </tags>
       

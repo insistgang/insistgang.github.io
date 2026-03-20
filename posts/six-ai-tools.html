@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我每天都在用的 6 个 AI 工具，说说真实体验 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 标题党文章里动不动就”效率提升 10 倍”，但实际上大部分 AI 工具用下来，体感提升可能也就两三倍——不过这两三倍已经足够改变工作节奏了。 今天不写测评，就说说我自己每天在用的几个工具，好用在哪、坑在哪，一起说。  Skill Create：把重复劳动变成一键执行 这是我觉得最被低估的一个..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我每天都在用的 6 个 AI 工具，说说真实体验",
+  "url": "https://insistgang.top/posts/six-ai-tools.html",
+  "image": "https://insistgang.top/img/six-ai-tools/11_00_six_ai_tools_cover.png",
+  "datePublished": "2026-03-20T06:40:00.000Z",
+  "dateModified": "2026-03-20T11:39:13.654Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/six-ai-tools.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我每天都在用的 6 个 AI 工具，说说真实体验',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">197</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">121</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/six-ai-tools/11_00_six_ai_tools_cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">我每天都在用的 6 个 AI 工具，说说真实体验</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我每天都在用的 6 个 AI 工具，说说真实体验</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-20T06:40:00.000Z" title="发表于 2026-03-20 14:40:00">2026-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-20T11:39:13.654Z" title="更新于 2026-03-20 19:39:13">2026-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/six-ai-tools/11_00_six_ai_tools_cover.png" alt="封面"></p>
+<p>标题党文章里动不动就”效率提升 10 倍”，但实际上大部分 AI 工具用下来，体感提升可能也就两三倍——不过这两三倍已经足够改变工作节奏了。</p>
+<p>今天不写测评，就说说我自己每天在用的几个工具，好用在哪、坑在哪，一起说。</p>
+<hr>
+<h2 id="Skill-Create：把重复劳动变成一键执行"><a href="#Skill-Create：把重复劳动变成一键执行" class="headerlink" title="Skill Create：把重复劳动变成一键执行"></a>Skill Create：把重复劳动变成一键执行</h2><p><img src="/img/six-ai-tools/11_01_skill_create.png" alt="第一章配图"></p>
+<p>这是我觉得最被低估的一个工具。</p>
+<p>它干的事很简单：把你已经跑通的工作流程，转化成一个可以复用的 Skill。下次遇到同样的任务，直接调用就行。</p>
+<p>我用它干过最实际的一件事：把我每周写研究进展总结的流程做成了一个 Skill。以前每次要花一个多小时回顾这周干了什么、整理成文字，现在基本半小时搞定。</p>
+<p><strong>优点：</strong> 一次投入，长期受益。适合任何有重复性的工作流程。</p>
+<p><strong>坑：</strong> 你的工作流本身要先跑通。如果流程本身就是混乱的，Skill 只会把混乱自动化。</p>
+<hr>
+<h2 id="Document-Skills：处理文档的效率确实高"><a href="#Document-Skills：处理文档的效率确实高" class="headerlink" title="Document Skills：处理文档的效率确实高"></a>Document Skills：处理文档的效率确实高</h2><p><img src="/img/six-ai-tools/11_02_document_skills.png" alt="第二章配图"></p>
+<p>这个是官方出品的，主要处理 Excel、PPT、PDF 这些文档。</p>
+<p>我用得最多的场景是 Excel 数据处理。实验数据整理、格式清洗、批量分析——以前手动搞几个小时的活，现在十几分钟能跑完。PPT 生成我试过几次，能用，但生成出来的排版还是需要手动调，不是真的”一键完美”。</p>
+<p>PDF 阅读也不错，特别是论文。丢进去之后让它提取关键信息、做摘要，省了不少粗读的时间。但细读还是得自己来，AI 的总结有时候会漏掉你真正关心的细节。</p>
+<p><strong>真实体感：</strong> Excel 处理大概能提升 5-8 倍效率，PPT 生成 3-4 倍，PDF 阅读 2-3 倍。没有宣传说的 10 倍那么夸张，但确实省了不少时间。</p>
+<hr>
+<h2 id="Find-Skill：找现成方案，别重复造轮子"><a href="#Find-Skill：找现成方案，别重复造轮子" class="headerlink" title="Find Skill：找现成方案，别重复造轮子"></a>Find Skill：找现成方案，别重复造轮子</h2><p><img src="/img/six-ai-tools/11_03_find_skill.png" alt="第三章配图"></p>
+<p>处理复杂任务之前，我会先用这个工具搜一下有没有别人做好的 Skill。</p>
+<p>很多时候你以为自己要从零开始的事情，其实已经有人做过了。直接装一个现成的 Skill，比自己从头搭省太多时间。</p>
+<p><strong>使用频率不算高，但每次用到都觉得值。</strong> 就像你写代码之前先搜一下有没有现成的库——大部分时候真的有。</p>
+<hr>
+<h2 id="Front-End-Design：前端不丑了"><a href="#Front-End-Design：前端不丑了" class="headerlink" title="Front End Design：前端不丑了"></a>Front End Design：前端不丑了</h2><p><img src="/img/six-ai-tools/11_04_frontend_design.png" alt="第四章配图"></p>
+<p>AI 生成的代码有一个通病：功能能用，但丑。</p>
+<p>这个工具专门解决这个问题。你让 AI 生成了一个网页或组件，再用 Front End Design 跑一遍，界面质量会有一个明显的提升。响应式布局、配色、排版，它都能帮你优化。</p>
+<p>我做过一个小工具的前端页面，自己写的 CSS 惨不忍睹，用这个工具美化了一遍之后，至少看起来像个正经产品了。</p>
+<p><strong>局限：</strong> 它能提升”及格线以上”的设计水平，但如果你要做真正独特的设计，还是得自己来。</p>
+<hr>
+<h2 id="Code-Simplifier：治-AI-写的烂代码"><a href="#Code-Simplifier：治-AI-写的烂代码" class="headerlink" title="Code Simplifier：治 AI 写的烂代码"></a>Code Simplifier：治 AI 写的烂代码</h2><p><img src="/img/six-ai-tools/11_05_code_simplifier.png" alt="第五章配图"></p>
+<p>AI 写代码的另一个通病：冗余。</p>
+<p>一段逻辑能用 10 行写完，AI 给你写 50 行，还嵌套了三层 if-else。Code Simplifier 能自动简化这些复杂逻辑、消除重复代码、优化结构。</p>
+<p>我现在的习惯是：让 AI 先写一版代码，然后用 Code Simplifier 跑一遍清理。相当于一个自动代码审查员。</p>
+<p><strong>不是每次都需要，但处理长代码的时候特别管用。</strong></p>
+<hr>
+<h2 id="Reflue：让-AI-自己死磕到底"><a href="#Reflue：让-AI-自己死磕到底" class="headerlink" title="Reflue：让 AI 自己死磕到底"></a>Reflue：让 AI 自己死磕到底</h2><p><img src="/img/six-ai-tools/11_06_reflue.png" alt="第六章配图"></p>
+<p>这个工具的逻辑是：给它一个任务，它就会自动循环执行，直到任务完成。</p>
+<p>我用它做过一次大量资料搜索——要找某个研究方向近三年的所有相关论文。如果我自己搜，得搜好几个小时。扔给 Reflue，让它自己跑，我去干别的。回来的时候资料已经整理好了。</p>
+<p><strong>但要注意成本。</strong> 这东西每跑一轮都在消耗 Token，任务复杂的话费用会上去。建议搭配包月套餐用。</p>
+<hr>
+<h2 id="真实的使用感受"><a href="#真实的使用感受" class="headerlink" title="真实的使用感受"></a>真实的使用感受</h2><p><img src="/img/six-ai-tools/11_07_real_usage.png" alt="第七章配图"></p>
+<p>这 6 个工具里，我用得最频繁的是 Document Skills 和 Skill Create，因为它们解决的是我每天都会遇到的问题。Code Simplifier 和 Front End Design 是写代码时的标配。Find Skill 和 Reflue 偶尔用，但用到的时候效果很明显。</p>
+<p>其中 Skill Create、Document Skills、Front End Design 三个是官方出品的，稳定性和可靠性更高一些。</p>
+<p>说到底，工具好不好用不取决于它的功能有多炫，取决于它能不能解决你每天的实际问题。如果你每天的工作里有大量重复劳动和文档处理，这几个工具值得试试。</p>
+<p>如果你的工作主要是创意性的、非结构化的——那 AI 工具目前帮不了你太多，这也是实话。</p>
+<hr>
+<p><em>本文来自「研路炼钢」</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/six-ai-tools.html">https://insistgang.top/posts/six-ai-tools.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI%E5%B7%A5%E5%85%B7/">AI工具</a><a class="post-meta__tags" href="/tags/%E6%95%88%E7%8E%87/">效率</a></div><div class="post-share"><div class="social-share" data-image="/img/six-ai-tools/11_00_six_ai_tools_cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/six-wealthy-money.html" title="读完 6 个巨富的金钱观，我一个研究生想了很多"><img class="cover" src="/img/six-wealthy-money/13_00_six_wealthy_money_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">读完 6 个巨富的金钱观，我一个研究生想了很多</div></div><div class="info-2"><div class="info-item-1"> 最近读了一些关于洛克菲勒、巴菲特、福特、卡内基、比尔·盖茨、马斯克的金钱观。 本来只是随便翻翻，但越看越觉得有意思——不是因为他们有多少钱，而是因为他们对钱的理解，和我们普通人完全不一样。 我一个月奖学金几千块的研究生，聊巨富的金钱观可能有点搞笑。但有些道理跟你有多少钱没关系，跟你怎么看待钱有关。  福特那句话，戳到我了 福特说过：”如果金钱是你获得独立的希望，你将永远也不会得到独立。在这个世界上，一个人所能拥有的唯一真正的安全保障，就是知识、经验和能力的储备。” 这句话让我想了很久。 作为一个研究生，我现在的经济状况就是”基本够用但没有余裕”。以前我会想，等以后赚够了钱就安全了。但福特说的是：钱可以贬值、可以损失、可以被各种意外吃掉，唯一不会被拿走的是你脑子里的东西。 知识、经验、能力——这些才是真正的安全感来源。不会贬值，不会被偷走，而且越用越值钱。 想通这一点之后，我对读研这件事的心态变了。以前觉得读研是延迟赚钱，现在觉得读研就是在投资自己——用两三年时间换一套别人拿不走的能力。这个回报率，比任何理财产品都高。  巴菲特：越早开始越好 巴菲特的核心观点很简单：开始存钱并及...</div></div></div></a><a class="pagination-related" href="/posts/fate-and-destiny.html" title="逆天改命，改的到底是什么？"><img class="cover" src="/img/fate-and-destiny/08_00_change_destiny_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">逆天改命，改的到底是什么？</div></div><div class="info-2"><div class="info-item-1"> 最近听到一个对”命”和”运”的解释，觉得特别通透。 命，就是当你面对一件事情的时候，按照你过往的性格和习惯会做出的行为。不假思索，自动反应——遇到冲突就回避，遇到困难就放弃，遇到机会就犹豫。这些刻在你身体里的默认反应，就是你的命。 运，是你停下来想了一想，然后做出了一个跟你平时不一样的选择。逆着本能，做出不同的行为，产生不同的结果。这就是运。 所以所谓”逆天改命”，逆的不是天，是自己的本能。改的不是命，改的是运。  命为什么难改？ 因为习惯的力量太大了。 心理学研究说，人每天 40% 的行为是习惯性的——不经过思考，自动执行。你遇到一件事，大脑会下意识地调用以前的应对模式，就像自动驾驶一样。 这些模式是你十几二十年养成的。内向的人遇到社交场合就想躲，悲观的人遇到困难第一反应是”算了”，冲动的人看到机会就直接冲——不是他们不知道有更好的选择，是身体比脑子快。 而且这些模式是可预测的。你身边的人大概率能猜到你面对某件事会怎么做。别人能预测你的行为，你的结果就基本是固定的。 这就是”命是定数”的意思。  运怎么来？ 运来自一个动作：暂停。 遇到事情的时候，不是立刻按习惯反应，而是停一...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/minimax-agent-vs-qoderwork.html" title="桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？"><img class="cover" src="/img/minimax-agent-vs-qoderwork/MiniMax_Agent_vs_QoderWork_01_cover_minimax_agent_vs_qoderwork.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-05</div><div class="info-item-2">桌面Agent大战：MiniMax Agent vs 阿里QoderWork，谁才是你的AI打工搭子？</div></div><div class="info-2"><div class="info-item-1">  2026年，AI终于从”聊天框”走向了”桌面”。MiniMax和阿里几乎同时出手，一个要当你的”云端专家”，一个要当你的”桌面同事”。作为一个重度AI工具用户，我花了两周时间深度体验了两款产品，今天来聊聊它们的真实差距。   一、先说结论 MiniMax Agent 和 QoderWork 根本不是同一类产品。 很多人把它们放在一起比较，觉得都是”Agent”，都能帮你干活。但用下来你会发现，它们解决的是完全不同的问题：  MiniMax Agent：我帮你做出高质量的东西（报告、网页、PPT、代码、研究） QoderWork：我帮你操作电脑上的东西（整理文件、处理数据、调用本地应用）  一个是”全能创作者”，一个是”超级助理”。 搞清楚这个定位差异，后面的分析才有意义。  二、产品定位：云端工作台 vs 本地操作员 MiniMax Agent：AI原生工作台MiniMax Agent 的野心很大——它想做一个能独立完成复杂任务的”AI专家”。 从最早的”万物追踪”到现在的通用Agent，MiniMax走的是一条从垂直到通用的路径。它的核心理念是：你只需要描述需求，Agent...</div></div></div></a><a class="pagination-related" href="/posts/ai-tool-division.html" title="这么多 AI 工具，我是怎么分工的"><img class="cover" src="/img/ai-tool-division/12_00_ai_tool_division_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-20</div><div class="info-item-2">这么多 AI 工具，我是怎么分工的</div></div><div class="info-2"><div class="info-item-1"> 我现在每天同时用好几个 AI 工具：Claude Code、Gemini CLI、Kimi、DeepSeek、ChatGPT、OpenClaw…… 刚开始的时候很混乱，什么事都问 ChatGPT，有时候效果好有时候效果差，也说不清为什么。后来慢慢摸出来一个规律：不同的工具有不同的长处，用对了效率翻倍，用错了事倍功半。 今天分享一下我自己的分工方式。不一定适合所有人，但至少是我实际验证过的。  我的分工逻辑 想通一个概念、学一个新东西 → ChatGPT ChatGPT 的知识面最广，解释能力最强。你问它一个你不懂的概念，它能用你能理解的语言讲清楚，还能根据你的追问不断深入。 我读论文遇到不理解的方法时，第一个问的就是它。不是让它帮我读论文，而是让它帮我理解论文背后的原理。 写代码、调 bug → Claude Code / Gemini CLI 写代码这件事，我目前的体感是 Claude Code 和 Gemini 都很强，各有优势。Claude Code 在理解复杂上下文方面更好，Gemini 在快速生成和调试方面效率高。 我的习惯是用 Claude Code 做比较复杂的项...</div></div></div></a><a class="pagination-related" href="/posts/claude-code-components.html" title="Claude Code 七大组件深度拆解：从入门到真正会用"><img class="cover" src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">Claude Code 七大组件深度拆解：从入门到真正会用</div></div><div class="info-2"><div class="info-item-1">  先用一个类比搞懂全局，再逐个击破，最后串联成完整工作流   为什么写这篇 Claude Code 的功能越来越多，但大多数人只会用最基础的对话。问题不是工具不强，而是组件太多、关系不清楚、不知道该从哪个开始。 这篇文章把 Claude Code 的七大核心组件一次性讲透：它们分别是什么、怎么配、什么时候该用哪个。文末附完整的协同工作流图和推荐上手顺序。  全局类比：Claude Code 是一个什么结构？ 把 Claude Code 想象成一个新员工入职系统：    组件 类比 一句话说明    CLAUDE.md 项目交接文档 告诉AI”这个项目是什么、怎么做”   Commands/Skills 标准操作手册 把高频操作固化成一键命令   MCP 办公软件账号 让AI连接GitHub、数据库等外部工具   Hooks 自动化规则 “每次提交前必须跑lint”这种强制规则   Subagents 专项小组 把任务委派给专家，结果汇总给你   Plugins 入职大礼包 一键安装别人配好的全套工具    注：2026年2月起，Claude Code 已将 Skills 和 S...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">197</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">121</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Skill-Create%EF%BC%9A%E6%8A%8A%E9%87%8D%E5%A4%8D%E5%8A%B3%E5%8A%A8%E5%8F%98%E6%88%90%E4%B8%80%E9%94%AE%E6%89%A7%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">Skill Create：把重复劳动变成一键执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Document-Skills%EF%BC%9A%E5%A4%84%E7%90%86%E6%96%87%E6%A1%A3%E7%9A%84%E6%95%88%E7%8E%87%E7%A1%AE%E5%AE%9E%E9%AB%98"><span class="toc-number">2.</span> <span class="toc-text">Document Skills：处理文档的效率确实高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-Skill%EF%BC%9A%E6%89%BE%E7%8E%B0%E6%88%90%E6%96%B9%E6%A1%88%EF%BC%8C%E5%88%AB%E9%87%8D%E5%A4%8D%E9%80%A0%E8%BD%AE%E5%AD%90"><span class="toc-number">3.</span> <span class="toc-text">Find Skill：找现成方案，别重复造轮子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-End-Design%EF%BC%9A%E5%89%8D%E7%AB%AF%E4%B8%8D%E4%B8%91%E4%BA%86"><span class="toc-number">4.</span> <span class="toc-text">Front End Design：前端不丑了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Simplifier%EF%BC%9A%E6%B2%BB-AI-%E5%86%99%E7%9A%84%E7%83%82%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">Code Simplifier：治 AI 写的烂代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflue%EF%BC%9A%E8%AE%A9-AI-%E8%87%AA%E5%B7%B1%E6%AD%BB%E7%A3%95%E5%88%B0%E5%BA%95"><span class="toc-number">6.</span> <span class="toc-text">Reflue：让 AI 自己死磕到底</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E5%AE%9E%E7%9A%84%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97"><span class="toc-number">7.</span> <span class="toc-text">真实的使用感受</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/six-ai-tools.html" title="我每天都在用的 6 个 AI 工具，说说真实体验"><img src="/img/six-ai-tools/11_00_six_ai_tools_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我每天都在用的 6 个 AI 工具，说说真实体验"/></a><div class="content"><a class="title" href="/posts/six-ai-tools.html" title="我每天都在用的 6 个 AI 工具，说说真实体验">我每天都在用的 6 个 AI 工具，说说真实体验</a><time datetime="2026-03-20T06:40:00.000Z" title="发表于 2026-03-20 14:40:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/six-wealthy-money.html" title="读完 6 个巨富的金钱观，我一个研究生想了很多"><img src="/img/six-wealthy-money/13_00_six_wealthy_money_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读完 6 个巨富的金钱观，我一个研究生想了很多"/></a><div class="content"><a class="title" href="/posts/six-wealthy-money.html" title="读完 6 个巨富的金钱观，我一个研究生想了很多">读完 6 个巨富的金钱观，我一个研究生想了很多</a><time datetime="2026-03-20T06:40:00.000Z" title="发表于 2026-03-20 14:40:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-tool-division.html" title="这么多 AI 工具，我是怎么分工的"><img src="/img/ai-tool-division/12_00_ai_tool_division_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这么多 AI 工具，我是怎么分工的"/></a><div class="content"><a class="title" href="/posts/ai-tool-division.html" title="这么多 AI 工具，我是怎么分工的">这么多 AI 工具，我是怎么分工的</a><time datetime="2026-03-20T06:40:00.000Z" title="发表于 2026-03-20 14:40:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/hualuogeng-speech.html" title="华罗庚 70 年前说的两句话，我到现在才真正听懂"><img src="/img/hualuogeng-speech/04_00_hualuogeng_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="华罗庚 70 年前说的两句话，我到现在才真正听懂"/></a><div class="content"><a class="title" href="/posts/hualuogeng-speech.html" title="华罗庚 70 年前说的两句话，我到现在才真正听懂">华罗庚 70 年前说的两句话，我到现在才真正听懂</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/70-year-letter.html" title="如果 70 岁的你给现在的你写一封信"><img src="/img/70-year-letter/07_00_70_year_letter_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果 70 岁的你给现在的你写一封信"/></a><div class="content"><a class="title" href="/posts/70-year-letter.html" title="如果 70 岁的你给现在的你写一封信">如果 70 岁的你给现在的你写一封信</a><time datetime="2026-03-20T06:15:00.000Z" title="发表于 2026-03-20 14:15:00">2026-03-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/posts/six-ai-tools.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.top/posts/six-ai-tools.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '我每天都在用的 6 个 AI 工具，说说真实体验'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script src="/live2d-widget/dist/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.png" alt="/img/steam-steel-infinite-minds/00_封面.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="/img/award-winning-grad-student-reflection/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="/img/claude-code-seven-components-deep-dive/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.png" alt="/img/ai-coding-era-career-path/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI编程工具时代的个人发展路径</a><div class="blog-slider__text">AI时代下程序员的职业发展路径与能力矩阵分析</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><!-- hexo injector body_end end --></body></html>
