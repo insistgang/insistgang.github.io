@@ -6,7 +6,7 @@
   <link href="https://insistgang.top/atom.xml" rel="self"/>
   
   <link href="https://insistgang.top/"/>
-  <updated>2026-03-25T08:30:17.440Z</updated>
+  <updated>2026-03-26T12:08:31.966Z</updated>
   <id>https://insistgang.top/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MiniMax 年度会员 API 实测：图像生成 + 语音合成，到底好不好用？</title>
+    <link href="https://insistgang.top/posts/minimax-api-annual-member-review.html"/>
+    <id>https://insistgang.top/posts/minimax-api-annual-member-review.html</id>
+    <published>2026-03-26T11:59:00.000Z</published>
+    <updated>2026-03-26T12:08:31.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/minimax-api-annual-member-review/minimax_api_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;MiniMax-年度会员-API-实测：图像生成-语音合成，到底好不好用？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="API" scheme="https://insistgang.top/tags/API/"/>
+    
+    <category term="TTS" scheme="https://insistgang.top/tags/TTS/"/>
+    
+  </entry>
   
   <entry>
     <title>2026 年 3 月 24 日</title>
@@ -169,36 +203,6 @@
   </entry>
   
   <entry>
-    <title>OpenClaw 的主智能体和子智能体，为什么加载的东西不一样？</title>
-    <link href="https://insistgang.top/posts/openclaw-architecture.html"/>
-    <id>https://insistgang.top/posts/openclaw-architecture.html</id>
-    <published>2026-03-20T11:50:00.000Z</published>
-    <updated>2026-03-20T11:57:54.926Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/openclaw-architecture/17_00_openclaw_architecture_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;p&gt;我在配置 OpenClaw 多 Agent</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
-    <category term="OpenClaw" scheme="https://insistgang.top/tags/OpenClaw/"/>
-    
-    <category term="AI架构" scheme="https://insistgang.top/tags/AI%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>一个工科生从亏 30% 到跑通 AI 量化策略，他踩的坑比方法更有价值</title>
     <link href="https://insistgang.top/posts/quant-investment.html"/>
     <id>https://insistgang.top/posts/quant-investment.html</id>
@@ -225,6 +229,36 @@
     <category term="量化投资" scheme="https://insistgang.top/tags/%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84/"/>
     
     <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenClaw 的主智能体和子智能体，为什么加载的东西不一样？</title>
+    <link href="https://insistgang.top/posts/openclaw-architecture.html"/>
+    <id>https://insistgang.top/posts/openclaw-architecture.html</id>
+    <published>2026-03-20T11:50:00.000Z</published>
+    <updated>2026-03-20T11:57:54.926Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/openclaw-architecture/17_00_openclaw_architecture_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我在配置 OpenClaw 多 Agent</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="OpenClaw" scheme="https://insistgang.top/tags/OpenClaw/"/>
+    
+    <category term="AI架构" scheme="https://insistgang.top/tags/AI%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
@@ -376,6 +410,33 @@
   </entry>
   
   <entry>
+    <title>读完 6 个巨富的金钱观，我一个研究生想了很多</title>
+    <link href="https://insistgang.top/posts/six-wealthy-money.html"/>
+    <id>https://insistgang.top/posts/six-wealthy-money.html</id>
+    <published>2026-03-20T06:40:00.000Z</published>
+    <updated>2026-03-20T11:39:14.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/six-wealthy-money/13_00_six_wealthy_money_cover.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="金钱观" scheme="https://insistgang.top/tags/%E9%87%91%E9%92%B1%E8%A7%82/"/>
+    
+  </entry>
+  
+  <entry>
     <title>这么多 AI 工具，我是怎么分工的</title>
     <link href="https://insistgang.top/posts/ai-tool-division.html"/>
     <id>https://insistgang.top/posts/ai-tool-division.html</id>
@@ -400,33 +461,6 @@
     <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
     <category term="工作流" scheme="https://insistgang.top/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读完 6 个巨富的金钱观，我一个研究生想了很多</title>
-    <link href="https://insistgang.top/posts/six-wealthy-money.html"/>
-    <id>https://insistgang.top/posts/six-wealthy-money.html</id>
-    <published>2026-03-20T06:40:00.000Z</published>
-    <updated>2026-03-20T11:39:14.409Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/six-wealthy-money/13_00_six_wealthy_money_cover.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
-    
-    <category term="金钱观" scheme="https://insistgang.top/tags/%E9%87%91%E9%92%B1%E8%A7%82/"/>
     
   </entry>
   
@@ -488,33 +522,6 @@
   </entry>
   
   <entry>
-    <title>找对象这件事，我想通了一个标准</title>
-    <link href="https://insistgang.top/posts/partner-selection.html"/>
-    <id>https://insistgang.top/posts/partner-selection.html</id>
-    <published>2026-03-20T06:15:00.000Z</published>
-    <updated>2026-03-20T07:00:05.912Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/partner-selection/10_00_partner_selection_cover.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="情感" scheme="https://insistgang.top/tags/%E6%83%85%E6%84%9F/"/>
-    
-    <category term="恋爱" scheme="https://insistgang.top/tags/%E6%81%8B%E7%88%B1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>投稿 SCI，我因为漏了一个文件被退回过</title>
     <link href="https://insistgang.top/posts/sci-submission-checklist.html"/>
     <id>https://insistgang.top/posts/sci-submission-checklist.html</id>
@@ -544,18 +551,18 @@
   </entry>
   
   <entry>
-    <title>活着是硬道理，但怎么活是个技术活</title>
-    <link href="https://insistgang.top/posts/survival-philosophy.html"/>
-    <id>https://insistgang.top/posts/survival-philosophy.html</id>
+    <title>找对象这件事，我想通了一个标准</title>
+    <link href="https://insistgang.top/posts/partner-selection.html"/>
+    <id>https://insistgang.top/posts/partner-selection.html</id>
     <published>2026-03-20T06:15:00.000Z</published>
-    <updated>2026-03-20T07:00:05.551Z</updated>
+    <updated>2026-03-20T07:00:05.912Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/survival-philosophy/09_00_survival_philosophy_cover.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/partner-selection/10_00_partner_selection_cover.png&quot;</summary>
         
       
     
@@ -564,9 +571,9 @@
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-    <category term="生活感悟" scheme="https://insistgang.top/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    <category term="情感" scheme="https://insistgang.top/tags/%E6%83%85%E6%84%9F/"/>
     
-    <category term="生存哲学" scheme="https://insistgang.top/tags/%E7%94%9F%E5%AD%98%E5%93%B2%E5%AD%A6/"/>
+    <category term="恋爱" scheme="https://insistgang.top/tags/%E6%81%8B%E7%88%B1/"/>
     
   </entry>
   
