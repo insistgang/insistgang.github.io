@@ -41,9 +41,9 @@
     
     <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="数字资产" scheme="https://insistgang.top/tags/%E6%95%B0%E5%AD%97%E8%B5%84%E4%BA%A7/"/>
-    
     <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="数字资产" scheme="https://insistgang.top/tags/%E6%95%B0%E5%AD%97%E8%B5%84%E4%BA%A7/"/>
     
   </entry>
   
@@ -136,6 +136,38 @@
     <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
     
     <category term="技能变现" scheme="https://insistgang.top/tags/%E6%8A%80%E8%83%BD%E5%8F%98%E7%8E%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>少烧 token，多出 completion</title>
+    <link href="https://insistgang.top/posts/shaoshaotoken-completion.html"/>
+    <id>https://insistgang.top/posts/shaoshaotoken-completion.html</id>
+    <published>2026-03-29T02:00:00.000Z</published>
+    <updated>2026-03-29T07:45:41.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/shaoshaotoken-completion/shaoshaotoken_00_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;少烧-token，多出-completion&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="成长记录" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="效率提升" scheme="https://insistgang.top/tags/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="深度工作" scheme="https://insistgang.top/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
@@ -439,9 +471,9 @@
     <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
-    
     <category term="OpenClaw" scheme="https://insistgang.top/tags/OpenClaw/"/>
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
     
     <category term="AI架构" scheme="https://insistgang.top/tags/AI%E6%9E%B6%E6%9E%84/"/>
     
@@ -534,36 +566,6 @@
     <category term="论文写作" scheme="https://insistgang.top/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
     
     <category term="SCI" scheme="https://insistgang.top/tags/SCI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用了半年 Claude，我摸出来的几个真实好用的用法</title>
-    <link href="https://insistgang.top/posts/claude-half-year.html"/>
-    <id>https://insistgang.top/posts/claude-half-year.html</id>
-    <published>2026-03-20T11:50:00.000Z</published>
-    <updated>2026-03-20T11:59:42.018Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/claude-half-year/20_00_claude_half_year_cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
-&lt;p&gt;标题党文章里说”Claude 让效率提升 100</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Claude" scheme="https://insistgang.top/tags/Claude/"/>
-    
-    <category term="效率" scheme="https://insistgang.top/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
