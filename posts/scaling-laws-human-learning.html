@@ -1,0 +1,544 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>当我把AI的&quot;缩放定律&quot;迁移到人类学习上 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 今天读了OpenAI的经典论文《Scaling Laws for Neural Language Models》。 读完第一反应是：就这？跑了一堆实验，拟合了几条幂律曲线，也没什么高级的数学推导，凭什么成为大模型领域的奠基之作？ 但仔细想想，这篇论文的经典之处恰恰在于——它用一个简单的规律，..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "当我把AI的\"缩放定律\"迁移到人类学习上",
+  "url": "https://insistgang.top/posts/scaling-laws-human-learning.html",
+  "image": "https://insistgang.top/img/scaling-laws-human-learning/00_scaling_laws_human_learning.png",
+  "datePublished": "2026-03-29T07:35:00.000Z",
+  "dateModified": "2026-03-29T07:20:16.332Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/scaling-laws-human-learning.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '当我把AI的"缩放定律"迁移到人类学习上',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">219</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">134</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/scaling-laws-human-learning/00_scaling_laws_human_learning.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">当我把AI的&quot;缩放定律&quot;迁移到人类学习上</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">当我把AI的&quot;缩放定律&quot;迁移到人类学习上</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-29T07:35:00.000Z" title="发表于 2026-03-29 15:35:00">2026-03-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-29T07:20:16.332Z" title="更新于 2026-03-29 15:20:16">2026-03-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">技术研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/scaling-laws-human-learning/00_scaling_laws_human_learning.png" alt="封面"></p>
+<p>今天读了OpenAI的经典论文《Scaling Laws for Neural Language Models》。</p>
+<p>读完第一反应是：就这？跑了一堆实验，拟合了几条幂律曲线，也没什么高级的数学推导，凭什么成为大模型领域的奠基之作？</p>
+<p>但仔细想想，这篇论文的经典之处恰恰在于——<strong>它用一个简单的规律，改变了整个AI行业的方向。</strong></p>
+<hr>
+<h2 id="论文到底说了什么？"><a href="#论文到底说了什么？" class="headerlink" title="论文到底说了什么？"></a>论文到底说了什么？</h2><p><img src="/img/scaling-laws-human-learning/01_paper_core_findings.png" alt="第一章配图"></p>
+<p>一句话概括：</p>
+<blockquote>
+<p><strong>语言模型的性能，与模型规模、数据量、计算量呈幂律关系。规模越大，效果越好，而且是可以预测的。</strong></p>
+</blockquote>
+<p>三个核心公式：</p>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>公式</th>
+<th>意思</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>参数规模</td>
+<td>L(N) ∝ N^-0.076</td>
+<td>参数翻倍，损失降5%</td>
+</tr>
+<tr>
+<td>数据规模</td>
+<td>L(D) ∝ D^-0.095</td>
+<td>数据翻倍，损失降6.6%</td>
+</tr>
+<tr>
+<td>计算预算</td>
+<td>L(C) ∝ C^-0.050</td>
+<td>计算翻倍，损失降3.4%</td>
+</tr>
+</tbody></table>
+<p>看起来很朴素对吧？但就是这些简单的幂律关系，回答了一个所有人都想知道的问题：</p>
+<p><strong>“扩大规模到底值不值？”</strong></p>
+<p>在这篇论文之前，没人敢确定。在这篇论文之后，整个行业开始疯狂卷规模——GPT-3、GPT-4、LLaMA、PaLM……所有大模型的训练策略，都直接或间接基于这篇论文的发现。</p>
+<hr>
+<h2 id="最反直觉的结论"><a href="#最反直觉的结论" class="headerlink" title="最反直觉的结论"></a>最反直觉的结论</h2><p><img src="/img/scaling-laws-human-learning/02_counterintuitive_conclusion.png" alt="第二章配图"></p>
+<p>论文里有一个让我印象很深的发现：</p>
+<blockquote>
+<p><strong>训练到收敛是低效的。最优策略是：训练超大模型，然后提前停止。</strong></p>
+</blockquote>
+<p>这完全颠覆了当时的直觉——大家都觉得”训练越久越好”。但论文用数据证明了：</p>
+<p><strong>大模型 + 早停 &gt; 小模型 + 训练到底</strong></p>
+<p>在固定计算预算下，与其把一个小模型训练到极致，不如训练一个更大的模型，然后在它还没完全收敛时就停下来。这样反而效果更好。</p>
+<p>这个发现直接指导了GPT-3的训练策略。</p>
+<hr>
+<h2 id="我开始想：人类学习是不是也有”缩放定律”？"><a href="#我开始想：人类学习是不是也有”缩放定律”？" class="headerlink" title="我开始想：人类学习是不是也有”缩放定律”？"></a>我开始想：人类学习是不是也有”缩放定律”？</h2><p><img src="/img/scaling-laws-human-learning/03_human_learning_scaling.png" alt="第三章配图"></p>
+<p>如果把深度学习的概念迁移到人类学习上：</p>
+<table>
+<thead>
+<tr>
+<th>深度学习</th>
+<th>人类学习</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型参数 N</td>
+<td>知识储备/认知框架</td>
+</tr>
+<tr>
+<td>训练数据 D</td>
+<td>学习材料/人生经历</td>
+</tr>
+<tr>
+<td>计算预算 C</td>
+<td>时间和精力</td>
+</tr>
+<tr>
+<td>损失函数 L</td>
+<td>能力水平/解决问题的效果</td>
+</tr>
+</tbody></table>
+<p>然后我发现，这篇论文的几个核心发现，对人类学习竟然也有启发。</p>
+<hr>
+<h3 id="启示一：知识越多，学新东西越快"><a href="#启示一：知识越多，学新东西越快" class="headerlink" title="启示一：知识越多，学新东西越快"></a>启示一：知识越多，学新东西越快</h3><p>论文发现：<strong>参数越多的模型，学同样的东西需要的数据越少。</strong> 大模型更”样本高效”。</p>
+<p>对应到人，就是：</p>
+<blockquote>
+<p><strong>知识储备越多，学新东西越快。</strong></p>
+</blockquote>
+<p>这不是说”聪明人学得快”，而是<strong>知识之间的连接</strong>让你能快速理解新概念。</p>
+<p>懂编程的人学新语言，比从零开始快得多。懂经济学的人看政策新闻，比普通人理解更深。懂历史的人看国际局势，能快速找到参照系。</p>
+<p><strong>前期积累看似慢，但会加速后续学习。</strong></p>
+<p>这让我想到一个比喻：知识就像一张网。网越大，新知识越容易被”捕获”进来。网越小，新知识就像流沙一样滑走。</p>
+<hr>
+<h3 id="启示二：广度学习-适度深入-gt-单一领域死磕"><a href="#启示二：广度学习-适度深入-gt-单一领域死磕" class="headerlink" title="启示二：广度学习 + 适度深入 &gt; 单一领域死磕"></a>启示二：广度学习 + 适度深入 &gt; 单一领域死磕</h3><p>论文最核心的结论是：<strong>大模型 + 早停 &gt; 小模型 + 训练到底。</strong></p>
+<p>对应到人类学习，就是：</p>
+<blockquote>
+<p><strong>广度覆盖多个领域，每个领域学到”够用”就停，比单一领域死磕到底更有价值。</strong></p>
+</blockquote>
+<p>这挑战了”一万小时定律”——不是所有领域都需要精通到收敛。</p>
+<p>学编程，掌握核心概念后转战其他领域，比死磕某个框架更有价值。学语言，能交流就够了，不必追求母语级。学投资，理解核心原理就行，不必成为巴菲特。</p>
+<p>人的”计算预算”（时间精力）是有限的。<strong>把预算分配给多个领域，每个领域学到”边际收益递减”的点就切换，整体收益更高。</strong> 这让我重新思考”专精”和”广博”的平衡。也许最优策略不是”在一个领域深耕一万小时”，而是”在多个领域各投入几百小时，形成知识网络”。</p>
+<hr>
+<h3 id="启示三：只读书不实践-过拟合"><a href="#启示三：只读书不实践-过拟合" class="headerlink" title="启示三：只读书不实践 = 过拟合"></a>启示三：只读书不实践 = 过拟合</h3><p>论文里有一个过拟合方程：</p>
+<p><code>L(N,D) = [(Nc/N)^(αN/αD) + Dc/D]^αD</code></p>
+<p>意思是：模型太大、数据太少，就会过拟合——记住训练数据但无法泛化。</p>
+<p>对应到人：</p>
+<blockquote>
+<p><strong>知识储备丰富但经历单一，容易”钻牛角尖”。</strong></p>
+</blockquote>
+<p>读了很多书但没实践 → 纸上谈兵。只在一个领域深耕 → 看什么问题都用那个领域的视角。</p>
+<p><strong>知识规模（N）和经历多样性（D）需要同步增长。</strong></p>
+<p>这让我意识到：学习不能只停留在”输入”层面。读书、听课、看视频，都是在增加N（知识储备）。但如果没有足够的D（实践经历），就会过拟合——考试能拿高分，但遇到真实问题就傻眼。</p>
+<hr>
+<h3 id="启示四：学习方法不如学习量重要"><a href="#启示四：学习方法不如学习量重要" class="headerlink" title="启示四：学习方法不如学习量重要"></a>启示四：学习方法不如学习量重要</h3><p>论文还有一个发现：<strong>模型架构（深度、宽度、注意力头数）在合理范围内影响很小。</strong> 真正决定性能的是规模。</p>
+<p>对应到人：</p>
+<blockquote>
+<p><strong>学习方法不如学习量重要。</strong></p>
+</blockquote>
+<p>各种”高效学习法”——番茄钟、费曼技巧、间隔重复、思维导图——就像模型的架构细节。有用，但<strong>不如多学多练</strong>带来的提升大。</p>
+<p>这让我释然了。之前总在纠结”最优学习方法”，试了各种工具和技巧。但也许<strong>先学起来，量上去了一切都好说</strong>。</p>
+<p>当然，这不是说方法没用。而是说，在规模不够的时候，纠结方法是本末倒置。</p>
+<hr>
+<h3 id="启示五：知道什么时候”早停”"><a href="#启示五：知道什么时候”早停”" class="headerlink" title="启示五：知道什么时候”早停”"></a>启示五：知道什么时候”早停”</h3><p>Scaling Law是幂律关系，特点是：</p>
+<ul>
+<li>投入翻倍，收益递减（不是线性）</li>
+<li>但永远不会到零</li>
+</ul>
+<p>学一个领域：</p>
+<ul>
+<li>前100小时：快速上手，收益最大</li>
+<li>100-1000小时：稳步提升</li>
+<li>1000小时后：边际收益变小</li>
+</ul>
+<p><strong>启示：知道什么时候该”早停”。</strong></p>
+<p>当在一个领域的投入产出比，低于转向新领域的收益时，就该切换了。不是放弃，而是”早停”——把精力分配到下一个领域。</p>
+<hr>
+<h2 id="总结：人类学习的缩放定律"><a href="#总结：人类学习的缩放定律" class="headerlink" title="总结：人类学习的缩放定律"></a>总结：人类学习的缩放定律</h2><p><img src="/img/scaling-laws-human-learning/04_learning_scaling_summary.png" alt="第四章配图"></p>
+<p>读完这篇论文，我试着总结一个”人类学习的缩放定律”：</p>
+<table>
+<thead>
+<tr>
+<th>论文发现</th>
+<th>个人学习启示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大模型更样本高效</td>
+<td>知识越多，学新东西越快</td>
+</tr>
+<tr>
+<td>大模型+早停最优</td>
+<td>广度学习 &gt; 单一领域死磕</td>
+</tr>
+<tr>
+<td>N和D要同步增长</td>
+<td>知识和经历要同步积累</td>
+</tr>
+<tr>
+<td>架构不如规模</td>
+<td>方法不如量重要</td>
+</tr>
+<tr>
+<td>幂律递减</td>
+<td>知道何时”早停”</td>
+</tr>
+</tbody></table>
+<p>一句话概括：</p>
+<blockquote>
+<p><strong>前期积累知识框架（增大N），中期广度探索（早停策略），全程保持输入多样性（避免过拟合）。</strong></p>
+</blockquote>
+<hr>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/scaling-laws-human-learning/05_closing_reflection.png" alt="第五章配图"></p>
+<p>这篇论文之所以经典，不是因为它发明了什么高级技术，而是因为它<strong>发现了一个简单的规律，然后整个行业都按这个规律走了</strong>。</p>
+<p>有点像摩尔定律——本身不是技术突破，但它指导了芯片行业几十年的发展方向。</p>
+<p>而当我把这个规律迁移到人类学习上，发现它依然有启发意义。</p>
+<p>也许，学习的本质就是不断扩大自己的”模型规模”，同时保持”训练数据”的多样性，在合适的时机”早停”，把精力分配到下一个领域。</p>
+<p><strong>规模是可预测的。学习也是。</strong></p>
+<hr>
+<p><em>今天读了《Scaling Laws for Neural Language Models》，写下这些思考。</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/scaling-laws-human-learning.html">https://insistgang.top/posts/scaling-laws-human-learning.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">学习方法</a><a class="post-meta__tags" href="/tags/AI%E8%AE%BA%E6%96%87/">AI论文</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post-share"><div class="social-share" data-image="/img/scaling-laws-human-learning/00_scaling_laws_human_learning.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/ai-money-paper-zero.html" title="我用 AI 烧了很多钱，但论文一个字没多"><img class="cover" src="/img/ai-money-paper-zero/ai_money_paper_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">我用 AI 烧了很多钱，但论文一个字没多</div></div><div class="info-2"><div class="info-item-1">  研二下学期，我突然意识到自己在干一件很蠢的事。   我的 AI 工具全家桶 我手上有多少个 AI 工具？数一下：Claude Code、Kimi Code、Qwen Code、Codex、OpenClaw、MiniMax——光命令行工具就六个。再加上各种 API key：Anthropic、智谱、豪卓云、MiniMax……每个月订阅费加起来不是小数目。 每出一个新工具，我第一时间注册、配置环境、跑通 demo、写个使用心得、发个朋友圈。 然后呢？ 然后就没有然后了。 我的论文还是那个论文，草稿还是那个草稿，该画的图一张没画完。 我以为我在提效，其实我在逛街 回过头看，我使用 AI 的方式，本质上跟逛淘宝没有区别。 逛淘宝的人觉得自己在”挑选最好的商品”，实际上大部分时间花在了浏览、比较、加购物车上，最后真正需要的东西可能一件都没买。 我也是。我觉得自己在”寻找最高效的工具”，实际上大部分时间花在了安装、配置、测评、切换上，最后真正用工具完成的成果可能一个都没有。 更讽刺的是，我还专门写了一篇公众号文章来对比这六个工具的优劣——那篇文章本身花了三个小时。三个小时，够我把论文结论...</div></div></div></a><a class="pagination-related" href="/posts/ai-skill-monetization-truth.html" title="人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相"><img class="cover" src="/img/ai-skill-monetization-truth/ai_skill_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相</div></div><div class="info-2"><div class="info-item-1"> 最近和一个朋友聊了很久，关于AI技能怎么变现的问题。 他在一家公司做技术，我在学校搞研究，两个人的视角不一样，但聊到最后得出了一个共同的结论： 大部分人搞反了方向。  01 一个很朴素的商业逻辑 我朋友提了一个链条：  你有一项技能 → 把它写进代码和Prompt里 → 封装成一个应用 → 用户订阅你的服务，按年付费。  听起来很完美，对吧？ 传统SaaS是”你付钱用我的软件，但活还是你自己干”。AI时代的SaaS进化了——“你付钱，活直接给你干完”。 他举了个例子：以前做财务系统，用户付了钱还得自己登录、勾选、确认，操作一大堆。现在呢？理论上用户付完钱，AI把活全干了，用户甚至不需要打开软件。 这就是AI带来的质变。 但问题来了——这条链路上最难的环节是什么？ 不是写代码，不是调Prompt，不是封装应用。 是找到愿意付钱的人。  02 豆浆鸡蛋的困境 我跟他说了一个比喻：你发现人人都吃早餐，于是你做了豆浆鸡蛋。但人人都吃早餐，不代表人人都会买你的豆浆。 Skill变现难，本质上不是技术问题，是分发问题。 第一，需求太分散。 我自己写了不少Skill，比如一套公众号配图+小红...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/hualuogeng-speech.html" title="华罗庚 70 年前说的两句话，我到现在才真正听懂"><img class="cover" src="/img/hualuogeng-speech/04_00_hualuogeng_cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-20</div><div class="info-item-2">华罗庚 70 年前说的两句话，我到现在才真正听懂</div></div><div class="info-2"><div class="info-item-1"> 1956 年，华罗庚在北京大学做了一场演讲。 核心就两句话：聪明在于学习，天才在于积累。 70 年前的道理，今天听起来还是觉得扎心。不是因为道理老了，是因为我们还是没做到。  “他天生就聪明，我比不了” 你是不是也这么想过？ 看到别人发了顶会，觉得人家就是聪明。看到别人代码写得快，觉得人家就是有天赋。 华罗庚不同意。 他初中数学并不好，被老师批评过。他后来回忆说：”我小时候并不聪明，只是比别人多用了一些时间。” 他所谓的”多用时间”是什么概念？别人每天学一小时，他学三小时。别人做一道题，他做十道。别人遇到难题跳过去，他反复琢磨到想通为止。别人坚持几个月就放弃了，他坚持了一辈子。 他的”聪明”不是天赋，是时间的累积。 只不过这个过程别人看不到。  天才的真相 华罗庚说：”天才在于积累。” 这句话我以前觉得是鸡汤，最近才真正体会到它的意思。 我从去年开始每天读一篇论文。刚开始很痛苦，一篇 DETR 的论文能啃三天，读完了也说不清楚核心思路。但读到第 30 篇的时候，我发现自己看新论文的速度快了很多——不是因为我变聪明了，而是积累到了一个临界点，很多概念已经不需要重新理解了。 这就是...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">219</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">134</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E5%88%B0%E5%BA%95%E8%AF%B4%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">论文到底说了什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%8F%8D%E7%9B%B4%E8%A7%89%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="toc-number">2.</span> <span class="toc-text">最反直觉的结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E5%BC%80%E5%A7%8B%E6%83%B3%EF%BC%9A%E4%BA%BA%E7%B1%BB%E5%AD%A6%E4%B9%A0%E6%98%AF%E4%B8%8D%E6%98%AF%E4%B9%9F%E6%9C%89%E2%80%9D%E7%BC%A9%E6%94%BE%E5%AE%9A%E5%BE%8B%E2%80%9D%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">我开始想：人类学习是不是也有”缩放定律”？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%A4%BA%E4%B8%80%EF%BC%9A%E7%9F%A5%E8%AF%86%E8%B6%8A%E5%A4%9A%EF%BC%8C%E5%AD%A6%E6%96%B0%E4%B8%9C%E8%A5%BF%E8%B6%8A%E5%BF%AB"><span class="toc-number">3.1.</span> <span class="toc-text">启示一：知识越多，学新东西越快</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%A4%BA%E4%BA%8C%EF%BC%9A%E5%B9%BF%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E9%80%82%E5%BA%A6%E6%B7%B1%E5%85%A5-gt-%E5%8D%95%E4%B8%80%E9%A2%86%E5%9F%9F%E6%AD%BB%E7%A3%95"><span class="toc-number">3.2.</span> <span class="toc-text">启示二：广度学习 + 适度深入 &gt; 单一领域死磕</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%A4%BA%E4%B8%89%EF%BC%9A%E5%8F%AA%E8%AF%BB%E4%B9%A6%E4%B8%8D%E5%AE%9E%E8%B7%B5-%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-number">3.3.</span> <span class="toc-text">启示三：只读书不实践 &#x3D; 过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%A4%BA%E5%9B%9B%EF%BC%9A%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%8D%E5%A6%82%E5%AD%A6%E4%B9%A0%E9%87%8F%E9%87%8D%E8%A6%81"><span class="toc-number">3.4.</span> <span class="toc-text">启示四：学习方法不如学习量重要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%A4%BA%E4%BA%94%EF%BC%9A%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E2%80%9D%E6%97%A9%E5%81%9C%E2%80%9D"><span class="toc-number">3.5.</span> <span class="toc-text">启示五：知道什么时候”早停”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A%E4%BA%BA%E7%B1%BB%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%BC%A9%E6%94%BE%E5%AE%9A%E5%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">总结：人类学习的缩放定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">5.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/digital-asset-accumulation.html" title="你每天都在消费Token，但你积累数字资产了吗？"><img src="/img/digital-asset-accumulation/digital_asset_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="你每天都在消费Token，但你积累数字资产了吗？"/></a><div class="content"><a class="title" href="/posts/digital-asset-accumulation.html" title="你每天都在消费Token，但你积累数字资产了吗？">你每天都在消费Token，但你积累数字资产了吗？</a><time datetime="2026-03-29T07:45:00.000Z" title="发表于 2026-03-29 15:45:00">2026-03-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-money-paper-zero.html" title="我用 AI 烧了很多钱，但论文一个字没多"><img src="/img/ai-money-paper-zero/ai_money_paper_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我用 AI 烧了很多钱，但论文一个字没多"/></a><div class="content"><a class="title" href="/posts/ai-money-paper-zero.html" title="我用 AI 烧了很多钱，但论文一个字没多">我用 AI 烧了很多钱，但论文一个字没多</a><time datetime="2026-03-29T07:40:00.000Z" title="发表于 2026-03-29 15:40:00">2026-03-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/scaling-laws-human-learning.html" title="当我把AI的&quot;缩放定律&quot;迁移到人类学习上"><img src="/img/scaling-laws-human-learning/00_scaling_laws_human_learning.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="当我把AI的&quot;缩放定律&quot;迁移到人类学习上"/></a><div class="content"><a class="title" href="/posts/scaling-laws-human-learning.html" title="当我把AI的&quot;缩放定律&quot;迁移到人类学习上">当我把AI的&quot;缩放定律&quot;迁移到人类学习上</a><time datetime="2026-03-29T07:35:00.000Z" title="发表于 2026-03-29 15:35:00">2026-03-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-skill-monetization-truth.html" title="人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相"><img src="/img/ai-skill-monetization-truth/ai_skill_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相"/></a><div class="content"><a class="title" href="/posts/ai-skill-monetization-truth.html" title="人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相">人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相</a><time datetime="2026-03-29T07:30:00.000Z" title="发表于 2026-03-29 15:30:00">2026-03-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0328e7b2.html" title="2026年3月28日"><img src="/img/riji.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年3月28日"/></a><div class="content"><a class="title" href="/posts/0328e7b2.html" title="2026年3月28日">2026年3月28日</a><time datetime="2026-03-27T16:00:00.000Z" title="发表于 2026-03-28 00:00:00">2026-03-28</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/posts/scaling-laws-human-learning.html'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://insistgang.top/posts/scaling-laws-human-learning.html'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '当我把AI的"缩放定律"迁移到人类学习上'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Valine' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script src="/live2d-widget/dist/autoload.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.png" alt="/img/steam-steel-infinite-minds/00_封面.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.png" alt="/img/award-winning-grad-student-reflection/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.png" alt="/img/claude-code-seven-components-deep-dive/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.png" alt="/img/ai-coding-era-career-path/00_cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI编程工具时代的个人发展路径</a><div class="blog-slider__text">AI时代下程序员的职业发展路径与能力矩阵分析</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@1.0.11/lib/gitcalendar.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><!-- hexo injector body_end end --></body></html>
