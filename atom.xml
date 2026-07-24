@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leo的笔记本</title>
+  <icon>https://insistgang.top/img/favicon.svg</icon>
+  <subtitle>学习笔记与技术分享</subtitle>
+  <link href="https://insistgang.top/atom.xml" rel="self"/>
+  
+  <link href="https://insistgang.top/"/>
+  <updated>2026-07-24T06:26:50.020Z</updated>
+  <id>https://insistgang.top/</id>
+  
+  <author>
+    <name>insistgang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读研最怕的不是没工具，是没有自己的龙</title>
+    <link href="https://insistgang.top/posts/yanlu-liangang-find-dragon.html"/>
+    <id>https://insistgang.top/posts/yanlu-liangang-find-dragon.html</id>
+    <published>2026-07-24T06:26:50.020Z</published>
+    <updated>2026-07-24T06:26:50.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;读研最怕的不是没工具，是没有自己的龙&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="科研方法" scheme="https://insistgang.top/tags/%E7%A7%91%E7%A0%94%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="问题意识" scheme="https://insistgang.top/tags/%E9%97%AE%E9%A2%98%E6%84%8F%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</title>
+    <link href="https://insistgang.top/posts/three-cloud-sop.html"/>
+    <id>https://insistgang.top/posts/three-cloud-sop.html</id>
+    <published>2026-07-23T21:05:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/three-cloud-sop/00_cover-zh-v2.png&quot; alt=&quot;三个云端工具组成一条可验证的闭环&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这两天，我把 Vercel、Supabase 和 Surge</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Vercel" scheme="https://insistgang.top/tags/Vercel/"/>
+    
+    <category term="Supabase" scheme="https://insistgang.top/tags/Supabase/"/>
+    
+    <category term="Surge" scheme="https://insistgang.top/tags/Surge/"/>
+    
+    <category term="云端工作流" scheme="https://insistgang.top/tags/%E4%BA%91%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="SOP" scheme="https://insistgang.top/tags/SOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</title>
+    <link href="https://insistgang.top/posts/ai-project-orchestration-retro.html"/>
+    <id>https://insistgang.top/posts/ai-project-orchestration-retro.html</id>
+    <published>2026-07-18T03:00:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-project-orchestration-retro/00_cover.webp&quot; alt=&quot;封面：把自己外包给一个主控&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-我把自己外包给-AI-一周后，发现真正不能外包的是判断&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI工作流" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="项目管理" scheme="https://insistgang.top/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</title>
+    <link href="https://insistgang.top/posts/ai-personal-control-tower.html"/>
+    <id>https://insistgang.top/posts/ai-personal-control-tower.html</id>
+    <published>2026-07-11T13:00:23.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-personal-control-tower/00_ai-control-tower-cover.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-我想把自己外包给-AI，最后先搭了一座“控制塔”&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI工作流" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="项目管理" scheme="https://insistgang.top/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链</title>
+    <link href="https://insistgang.top/posts/competition-evidence-chain.html"/>
+    <id>https://insistgang.top/posts/competition-evidence-chain.html</id>
+    <published>2026-07-11T12:10:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/competition-evidence-chain/00_platform-vision-evidence-chain.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="创新竞赛" scheme="https://insistgang.top/tags/%E5%88%9B%E6%96%B0%E7%AB%9E%E8%B5%9B/"/>
+    
+    <category term="产品复盘" scheme="https://insistgang.top/tags/%E4%BA%A7%E5%93%81%E5%A4%8D%E7%9B%98/"/>
+    
+    <category term="工程实践" scheme="https://insistgang.top/tags/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一次局域网部署排障：为什么 Linux 能访问，Windows 却不行？</title>
+    <link href="https://insistgang.top/posts/local-network-troubleshooting.html"/>
+    <id>https://insistgang.top/posts/local-network-troubleshooting.html</id>
+    <published>2026-07-08T20:00:00.000Z</published>
+    <updated>2026-07-24T06:26:50.018Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/local-network-troubleshooting/00_cover.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="Windows" scheme="https://insistgang.top/tags/Windows/"/>
+    
+    <category term="局域网" scheme="https://insistgang.top/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
+    
+    <category term="Cloudflare Tunnel" scheme="https://insistgang.top/tags/Cloudflare-Tunnel/"/>
+    
+    <category term="部署排障" scheme="https://insistgang.top/tags/%E9%83%A8%E7%BD%B2%E6%8E%92%E9%9A%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我用 AI 做了一个 20 秒视频，最后把项目删了</title>
+    <link href="https://insistgang.top/posts/ai-video-workflow-deleted.html"/>
+    <id>https://insistgang.top/posts/ai-video-workflow-deleted.html</id>
+    <published>2026-07-08T18:00:00.000Z</published>
+    <updated>2026-07-24T06:26:49.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;我用-AI-做了一个-20-秒视频，最后把项目删了&quot;&gt;&lt;a href=&quot;#我用-AI-做了一个-20-秒视频，最后把项目删了&quot; class=&quot;headerlink&quot; title=&quot;我用 AI 做了一个 20 秒视频，最后把项目删了&quot;&gt;&lt;/a&gt;我用 AI 做了一个</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="AI工具实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/AI%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="HyperFrames" scheme="https://insistgang.top/tags/HyperFrames/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="工作流" scheme="https://insistgang.top/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 从卖产品到卖技能——一顿火锅，我把 Agent 的底层逻辑又梳理了一遍</title>
+    <link href="https://insistgang.top/posts/agent-skill-sdd.html"/>
+    <id>https://insistgang.top/posts/agent-skill-sdd.html</id>
+    <published>2026-05-06T22:00:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/agent-skill-sdd/00-cover.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Skill" scheme="https://insistgang.top/tags/Skill/"/>
+    
+    <category term="SDD" scheme="https://insistgang.top/tags/SDD/"/>
+    
+    <category term="Token经济学" scheme="https://insistgang.top/tags/Token%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（六）——简历不要写你做了什么，要写你能做什么</title>
+    <link href="https://insistgang.top/posts/resume-tips.html"/>
+    <id>https://insistgang.top/posts/resume-tips.html</id>
+    <published>2026-04-29T10:40:00.000Z</published>
+    <updated>2026-07-24T06:26:50.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/resume-tips/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（六）——简历不要写你做了什么，要写你能做什么&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="求职" scheme="https://insistgang.top/tags/%E6%B1%82%E8%81%8C/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="简历" scheme="https://insistgang.top/tags/%E7%AE%80%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——&quot;技术是最不值钱的东西&quot;</title>
+    <link href="https://insistgang.top/posts/tech-value.html"/>
+    <id>https://insistgang.top/posts/tech-value.html</id>
+    <published>2026-04-29T10:39:00.000Z</published>
+    <updated>2026-07-24T06:26:50.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/tech-value/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——“技术是最不值钱的东西”&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="技术" scheme="https://insistgang.top/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（四）——比赛到底有没有用篇</title>
+    <link href="https://insistgang.top/posts/competition-reflection.html"/>
+    <id>https://insistgang.top/posts/competition-reflection.html</id>
+    <published>2026-04-29T10:38:00.000Z</published>
+    <updated>2026-07-24T06:26:50.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/competition-reflection/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（四）——比赛到底有没有用篇&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="竞赛" scheme="https://insistgang.top/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇</title>
+    <link href="https://insistgang.top/posts/ai-usage.html"/>
+    <id>https://insistgang.top/posts/ai-usage.html</id>
+    <published>2026-04-29T10:37:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-usage/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研路上的体会全讲了（二）——研究生创业篇</title>
+    <link href="https://insistgang.top/posts/startup-journey.html"/>
+    <id>https://insistgang.top/posts/startup-journey.html</id>
+    <published>2026-04-29T10:36:00.000Z</published>
+    <updated>2026-07-24T06:26:50.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/startup-journey/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研路上的体会全讲了（二）——研究生创业篇&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="创业" scheme="https://insistgang.top/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇</title>
+    <link href="https://insistgang.top/posts/mentor-relationship.html"/>
+    <id>https://insistgang.top/posts/mentor-relationship.html</id>
+    <published>2026-04-29T10:35:00.000Z</published>
+    <updated>2026-07-24T06:26:50.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/mentor-relationship/00_yanlu_steel.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;研路炼钢-和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="导师" scheme="https://insistgang.top/tags/%E5%AF%BC%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI时代，你的带宽够用吗？</title>
+    <link href="https://insistgang.top/posts/ai-era-bandwidth.html"/>
+    <id>https://insistgang.top/posts/ai-era-bandwidth.html</id>
+    <published>2026-04-13T20:57:38.000Z</published>
+    <updated>2026-07-24T06:26:50.015Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-era-bandwidth/00_ai_bandwidth.png&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;AI时代，你的带宽够用吗？&quot;&gt;&lt;a href=&quot;#AI时代，你的带宽够用吗？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="读书" scheme="https://insistgang.top/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你每天都在消费Token，但你积累数字资产了吗？</title>
+    <link href="https://insistgang.top/posts/digital-asset-accumulation.html"/>
+    <id>https://insistgang.top/posts/digital-asset-accumulation.html</id>
+    <published>2026-03-29T15:45:00.000Z</published>
+    <updated>2026-07-24T06:26:50.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/digital-asset-accumulation/digital_asset_cover.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="数字资产" scheme="https://insistgang.top/tags/%E6%95%B0%E5%AD%97%E8%B5%84%E4%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我用 AI 烧了很多钱，但论文一个字没多</title>
+    <link href="https://insistgang.top/posts/ai-money-paper-zero.html"/>
+    <id>https://insistgang.top/posts/ai-money-paper-zero.html</id>
+    <published>2026-03-29T15:40:00.000Z</published>
+    <updated>2026-07-24T06:26:50.018Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-money-paper-zero/ai_money_paper_cover.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="反思" scheme="https://insistgang.top/tags/%E5%8F%8D%E6%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当我把AI的&quot;缩放定律&quot;迁移到人类学习上</title>
+    <link href="https://insistgang.top/posts/scaling-laws-human-learning.html"/>
+    <id>https://insistgang.top/posts/scaling-laws-human-learning.html</id>
+    <published>2026-03-29T15:35:00.000Z</published>
+    <updated>2026-07-24T06:26:50.018Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/scaling-laws-human-learning/00_scaling_laws_human_learning.jpg&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天读了OpenAI的经典论文《Scaling Laws for Neural</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="学习方法" scheme="https://insistgang.top/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="AI论文" scheme="https://insistgang.top/tags/AI%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="深度学习" scheme="https://insistgang.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相</title>
+    <link href="https://insistgang.top/posts/ai-skill-monetization-truth.html"/>
+    <id>https://insistgang.top/posts/ai-skill-monetization-truth.html</id>
+    <published>2026-03-29T15:30:00.000Z</published>
+    <updated>2026-07-24T06:26:50.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/ai-skill-monetization-truth/ai_skill_cover.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术研究" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="技能变现" scheme="https://insistgang.top/tags/%E6%8A%80%E8%83%BD%E5%8F%98%E7%8E%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>少烧 token，多出 completion</title>
+    <link href="https://insistgang.top/posts/shaoshaotoken-completion.html"/>
+    <id>https://insistgang.top/posts/shaoshaotoken-completion.html</id>
+    <published>2026-03-29T10:00:00.000Z</published>
+    <updated>2026-07-24T06:26:50.018Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/shaoshaotoken-completion/shaoshaotoken_00_cover.jpg&quot; alt=&quot;封面&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;少烧-token，多出-completion&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="成长记录" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="效率提升" scheme="https://insistgang.top/tags/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="深度工作" scheme="https://insistgang.top/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+</feed>

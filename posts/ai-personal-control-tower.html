@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔” | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔” 多窗口不是生产力系统。没有主控、并发上限和验收回流，窗口开得越多，只是在用更高级的方式制造上下文切换。  有一次，我盯着 Codex 里一排正在工作的窗口，突然不知道自己应该先点开哪一个。 一个窗口在跑论文实验，一个窗口在改项目..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”",
+  "url": "https://insistgang.top/posts/ai-personal-control-tower.html",
+  "image": "https://insistgang.top/img/ai-personal-control-tower/00_ai-control-tower-cover.png",
+  "datePublished": "2026-07-11T13:00:23.000Z",
+  "dateModified": "2026-07-24T06:26:50.019Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/ai-personal-control-tower.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/gitcalendar/css/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">75</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">139</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/ai-personal-control-tower/00_ai-control-tower-cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-11T13:00:23.000Z" title="发表于 2026-07-11 13:00:23">2026-07-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-24T06:26:50.019Z" title="更新于 2026-07-24 06:26:50">2026-07-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/ai-personal-control-tower/00_ai-control-tower-cover.png" alt="封面"></p>
+<h1 id="研路炼钢-我想把自己外包给-AI，最后先搭了一座“控制塔”"><a href="#研路炼钢-我想把自己外包给-AI，最后先搭了一座“控制塔”" class="headerlink" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"></a>研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</h1><blockquote>
+<p>多窗口不是生产力系统。没有主控、并发上限和验收回流，窗口开得越多，只是在用更高级的方式制造上下文切换。</p>
+</blockquote>
+<p>有一次，我盯着 Codex 里一排正在工作的窗口，突然不知道自己应该先点开哪一个。</p>
+<p>一个窗口在跑论文实验，一个窗口在改项目代码，一个窗口准备博文和配图，还有一个窗口在整理知识库。每个窗口都很忙，每件事也都看起来有价值。</p>
+<p>问题是，我自己反而成了最忙的那个调度器：不断切窗口、补背景、确认方向、处理新的想法，再去检查哪些任务到底做完了。</p>
+<p>我原来想把自己外包给 AI。后来发现，真正需要外包的不是“我”，而是我的项目调度系统。</p>
+<hr>
+<h2 id="01｜我以为自己缺的是一个更强的-Agent"><a href="#01｜我以为自己缺的是一个更强的-Agent" class="headerlink" title="01｜我以为自己缺的是一个更强的 Agent"></a>01｜我以为自己缺的是一个更强的 Agent</h2><p><img src="/img/ai-personal-control-tower/03_agent-sprawl.webp" alt="多 Agent 失控扩张"></p>
+<p>最开始，我的解决办法很直接：任务多，就多开几个窗口；一个模型不够，就再加一个 Agent。</p>
+<p>这套方法确实有效。AI 可以读论文、写代码、做图、检查材料，也可以同时推进几个互不相关的项目。以前需要排队处理的事情，现在可以并行。</p>
+<p>但能力被放大之后，我原来的行为模式也被放大了。</p>
+<p>我本来就容易“全都要”。看到一个想法会先启动，碰到一个项目会顺手优化，工具能跑起来以后，又想把它接进更大的工作流。AI 没有自动让我聚焦，它只是让我能以更低的成本启动更多事情。</p>
+<p><strong>高并发是能力，但不应该成为默认生活方式。</strong></p>
+<p>如果没有一个明确的收口机制，多 Agent 最后会变成多条无人验收的流水线。</p>
+<h2 id="02｜一直在烧-token，不代表真的有-completion"><a href="#02｜一直在烧-token，不代表真的有-completion" class="headerlink" title="02｜一直在烧 token，不代表真的有 completion"></a>02｜一直在烧 token，不代表真的有 completion</h2><p><img src="/img/ai-personal-control-tower/04_token-without-completion.webp" alt="从 token 消耗到可验收交付"></p>
+<p>对不了解大模型的人解释一下：token 可以理解成系统投入的计算和上下文，completion 则是最终生成的结果。</p>
+<p>现实里也一样。</p>
+<p>我可以同时让几个窗口分析、重构、搜索和生成，屏幕上每一秒都有新内容。可如果论文没有形成稳定稿、代码没有通过测试、博文没有发布、知识没有进入索引，这些工作就只是在持续烧 token。</p>
+<p>我以前很容易把“系统在运行”误认为“项目在推进”。</p>
+<p>后来我给完成重新下了一个定义：</p>
+<blockquote>
+<p><strong>完成不是做过了，而是交付物已经被验证、保存，并且下一次能够接着用。</strong></p>
+</blockquote>
+<p>代码要有测试、构建和提交；论文要有原始结果、引用检查和可编译稿；文章要有移动端预览和发布记录；知识蒸馏要能回到索引里被再次找到。</p>
+<p>没有证据回流的 Agent，只是一个很会说“已经完成”的后台进程。</p>
+<h2 id="03｜主控不是万能助手，而是一座控制塔"><a href="#03｜主控不是万能助手，而是一座控制塔" class="headerlink" title="03｜主控不是万能助手，而是一座控制塔"></a>03｜主控不是万能助手，而是一座控制塔</h2><p><img src="/img/ai-personal-control-tower/01_control-tower.png" alt="个人项目控制塔"></p>
+<p>我现在更想要的，不是一个无所不能的超级 Agent，而是一座个人控制塔。</p>
+<p>它自己不写论文、不改代码，也不直接发布内容。它只做四件事：</p>
+<ol>
+<li>收下所有新任务和碎片想法；</li>
+<li>判断优先级，选出当日真正要推进的事情；</li>
+<li>把任务派到对应的项目窗口；</li>
+<li>根据测试、构建、提交和交付物进行验收。</li>
+</ol>
+<p>主控和项目窗口必须分开。</p>
+<p>主控只看全局：哪些任务有硬截止，哪些人在等待，哪条主线最重要，哪个项目已经临门一脚。项目窗口只看局部：本轮改哪些文件、完成标准是什么、跑什么验证、最后交什么结果。</p>
+<p>这相当于把“思考先做什么”和“具体怎么做”拆成了两个不同的进程。</p>
+<h2 id="04｜所有项目必须说同一种状态语言"><a href="#04｜所有项目必须说同一种状态语言" class="headerlink" title="04｜所有项目必须说同一种状态语言"></a>04｜所有项目必须说同一种状态语言</h2><p><img src="/img/ai-personal-control-tower/05_shared-state-language.webp" alt="项目统一状态语言"></p>
+<p>论文、代码、博客和知识库看起来完全不同，但对主控来说，它们都可以用同一组字段描述：</p>
+<ul>
+<li>这个项目最终想交付什么？</li>
+<li>现在处于准备、执行、验证还是等待？</li>
+<li>唯一下一步是什么？</li>
+<li>完成标准是什么？</li>
+<li>证据在哪里？</li>
+<li>哪个窗口正在负责？</li>
+</ul>
+<p>状态也不需要复杂。我只保留六个：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Inbox → Ready → Active → Verify → Waiting → Done</span><br></pre></td></tr></table></figure>
+
+<p><code>Idle</code> 不代表完成，文件生成了也不代表完成。只有通过验收、形成稳定版本，才可以进入 <code>Done</code>。</p>
+<p>每个项目还必须只有一个权威文件夹。需要并行开发时用 Git worktree，而不是复制一整份项目再分别修改。一个项目出现两个“最终版”，控制塔就已经失去雷达。</p>
+<h2 id="05｜每天-Top-3，但同时只跑两条线"><a href="#05｜每天-Top-3，但同时只跑两条线" class="headerlink" title="05｜每天 Top 3，但同时只跑两条线"></a>05｜每天 Top 3，但同时只跑两条线</h2><p><img src="/img/ai-personal-control-tower/02_daily-loop.png" alt="每日运行闭环"></p>
+<p>我不打算假装自己从此只做一件事。高并发本来就是我的能力，也是过去很多成果的来源。</p>
+<p>真正需要改变的不是“全都不要”，而是给并发加上上限。</p>
+<p>我的新规则是：每天可以选出 Top 3，但同时真正处于 Active 的项目最多只有两个。第三个只是候补，只有前面的任务完成或明确阻塞以后才启动。</p>
+<p>这个区别很小，却很关键。</p>
+<p>Top 3 解决“当日什么最重要”；WIP 上限解决“我现在到底在做什么”。前者负责方向，后者负责带宽。</p>
+<p>优先级也不按兴趣排，而按五个桶排：</p>
+<ol>
+<li>有真实后果的外部死线；</li>
+<li>别人正在等待的事情；</li>
+<li>论文、职业或长期筹码的当前主线；</li>
+<li>为主线服务的工具和系统；</li>
+<li>可以晚点再做的优化与灵感。</li>
+</ol>
+<p>工具任务尤其要写停止线。否则“搭一个更好的系统”很容易成为最舒服、最可控，也最不产生真实反馈的工作。</p>
+<h2 id="06｜项目窗口结束时，必须交一张“回执”"><a href="#06｜项目窗口结束时，必须交一张“回执”" class="headerlink" title="06｜项目窗口结束时，必须交一张“回执”"></a>06｜项目窗口结束时，必须交一张“回执”</h2><p><img src="/img/ai-personal-control-tower/06_project-receipt.webp" alt="项目窗口标准回执"></p>
+<p>以前一个窗口完成任务后，我常常只收到一句“已经优化好了”。这句话几乎没有管理价值。</p>
+<p>现在我要求每个窗口结束时固定回答六个问题：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">完成了什么？</span><br><span class="line">改了哪些文件？</span><br><span class="line">测试和构建是否通过？</span><br><span class="line">Git 是否干净并已同步？</span><br><span class="line">交付物在哪里？</span><br><span class="line">唯一下一步是什么？</span><br></pre></td></tr></table></figure>
+
+<p>主控不重新阅读几小时聊天记录，只读取这张回执和对应证据。</p>
+<p>如果测试没跑、文件没提交、结果无法定位，主控就把项目放回 <code>Verify</code>，而不是为了好看把它标成完成。</p>
+<p>这也是我最近越来越认同的一句话：<strong>系统先于内容，但交付才算验收。</strong></p>
+<h2 id="07｜把执行外包，不把方向外包"><a href="#07｜把执行外包，不把方向外包" class="headerlink" title="07｜把执行外包，不把方向外包"></a>07｜把执行外包，不把方向外包</h2><p><img src="/img/ai-personal-control-tower/07_human-direction-boundary.webp" alt="AI 执行与人的方向边界"></p>
+<p>“把整个人外包给 AI”听起来很爽，但它也有一个危险：我可能慢慢把价值判断一起交出去。</p>
+<p>AI 可以根据死线、风险、收益和切换成本推荐优先级，也可以自动检查项目状态。但哪些事情值得长期投入，哪些关系需要保护，什么时候应该暂停，哪些结果愿意公开，仍然应该由我决定。</p>
+<p>我更愿意这样理解分工：</p>
+<blockquote>
+<p><strong>我把收集、执行、检查和整理外包给系统，把方向、边界和不可逆决策留给自己。</strong></p>
+</blockquote>
+<p>主控不是替我生活，而是减少我反复记忆、切换和追踪的成本。它把脑内负担移到盘上，但不会替我决定人生主线。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/ai-personal-control-tower/08_closed-loop-ending.webp" alt="个人控制塔的每日闭环"></p>
+<p>这套方法最后可以压缩成一个很简单的日循环。</p>
+<p>早上，主控扫描所有项目，给出 Top 3，只激活前两个窗口。白天，我进入具体项目，把一件事做到可验收。晚上，项目窗口提交回执，主控更新状态，再把可复用的方法蒸馏进知识库。</p>
+<p>新的灵感当然还会不断出现。但它们先进入 Inbox，不再直接抢占正在执行的主线。</p>
+<p>我不需要一个永远忙碌的 AI 团队。我需要的是一套能让我知道“现在做什么、什么时候算完、做完留下什么”的控制系统。</p>
+<p><strong>不要再开一个窗口。先让已有窗口交作业。</strong></p>
+<hr>
+<p><em>研路炼钢，记录一个计算机研究生的真实成长。</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/ai-personal-control-tower.html">https://insistgang.top/posts/ai-personal-control-tower.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Codex/">Codex</a><a class="post-meta__tags" href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/">个人成长</a><a class="post-meta__tags" href="/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/">研路炼钢</a><a class="post-meta__tags" href="/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/">AI工作流</a><a class="post-meta__tags" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a></div><div class="post-share"><div class="social-share" data-image="/img/ai-personal-control-tower/00_ai-control-tower-cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img class="cover" src="/img/ai-project-orchestration-retro/00_cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断 AI 可以替我检索、拆解、执行和校验，但不能替我决定什么值得做。主控的价值不是让更多窗口同时忙，而是把碎片推进成有证据的交付。  前几天我和舍友聊天，他说自己对 AI 的使用程度可能只有 10%，而我已经到了 70%。 他又补了一句：你几乎什么都问 AI，会不会慢慢没有自己的思考？ 这句话让我停了一下。 一周前，我刚写完上一篇文章：《我想把自己外包给 AI，最后先搭了一座“控制塔”》。当时我想得很完整：用一个空白项目做主控，再把论文、代码、博文和知识库分发到不同窗口推进。 真正跑了几天以后，我发现设计一个系统不难，难的是给系统装上刹车。 个人主控最重要的能力，不是帮我启动更多事情，而是更早地决定：哪些事情今天不启动。  01｜70% 都问 AI，不等于 70% 没有思考 我确实会把很多问题交给 AI。 查资料、拆任务、读代码、检查引用、生成初稿、排查报错，这些工作如果都靠我一个人串行完成，时间很快就没了。AI 在这些地方像一组可以随时调用的外部进程，能帮我省掉大量机械切换。 但“把问题交给 AI”和“把判断交...</div></div></div></a><a class="pagination-related" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"><img class="cover" src="/img/competition-evidence-chain/00_platform-vision-evidence-chain.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链 比赛结束后，我和一位队友把获奖展板重新看了一遍。最初得出的结论很粗暴：有实物，大于无实物。再往下拆，我发现真正拉开差距的不是那块硬件，而是它背后那条能被看见、被测量、被追问的证据链。  先说明边界：这篇文章只依据现场展板、演示和个人记录复盘，不代表官方评审结论。涉及个人的信息均已脱敏，对评分动机等无法验证的内容也不作事实判断。为保护参赛者信息，正文配图使用脱敏重绘。  01｜我一开始只看见了“有实物” 我们学校是第一次做这种跨学院合作，校内是三选一。现场有长期参赛的学校，选拔强度大约是六选一；也有学校八支队伍来了四支。有人已经在这个赛道积累了十余年，我们则刚把第一套合作流程跑通。 从结果看，获奖作品里确实有不少硬件、传感器、穿戴设备和真实部署图。于是我很容易把它归因为：有实物的项目更占优势。 但这个结论只对了一半。 实物本身不会自动产生创新。它真正提供的是一种“信任压缩”：评委在几分钟里能看到输入从哪里来、算法处理了什么、输出怎么测、最后放到哪里用。纯软件当然也能做到，只是必须用更扎实的实验和真实数据...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img class="cover" src="/img/ai-project-orchestration-retro/00_cover.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-18</div><div class="info-item-2">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断 AI 可以替我检索、拆解、执行和校验，但不能替我决定什么值得做。主控的价值不是让更多窗口同时忙，而是把碎片推进成有证据的交付。  前几天我和舍友聊天，他说自己对 AI 的使用程度可能只有 10%，而我已经到了 70%。 他又补了一句：你几乎什么都问 AI，会不会慢慢没有自己的思考？ 这句话让我停了一下。 一周前，我刚写完上一篇文章：《我想把自己外包给 AI，最后先搭了一座“控制塔”》。当时我想得很完整：用一个空白项目做主控，再把论文、代码、博文和知识库分发到不同窗口推进。 真正跑了几天以后，我发现设计一个系统不难，难的是给系统装上刹车。 个人主控最重要的能力，不是帮我启动更多事情，而是更早地决定：哪些事情今天不启动。  01｜70% 都问 AI，不等于 70% 没有思考 我确实会把很多问题交给 AI。 查资料、拆任务、读代码、检查引用、生成初稿、排查报错，这些工作如果都靠我一个人串行完成，时间很快就没了。AI 在这些地方像一组可以随时调用的外部进程，能帮我省掉大量机械切换。 但“把问题交给 AI”和“把判断交...</div></div></div></a><a class="pagination-related" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"><img class="cover" src="/img/three-cloud-sop/00_cover-zh-v2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-23</div><div class="info-item-2">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</div></div><div class="info-2"><div class="info-item-1"> 这两天，我把 Vercel、Supabase 和 Surge 依次接进了自己的工具箱。 Vercel 能看见项目，博客页面实际返回了 200；Supabase 能读到组织和两个项目；Surge 能列出五个站点，五个地址也都能正常打开。 如果只看仪表盘，这已经是一片绿灯。 但我很快意识到：三个工具都能用，不等于三个工具已经一起工作。 登录成功，只能证明钥匙是真的；页面能开，只能证明炉子还热着。真正的工作流，必须让一块原料从入口进炉，经过加工、落库、验收，再带着证据回到我手里。 01｜三个工具都亮了绿灯 先说现场。 Vercel 这边，连接器能正常读取账号下的项目，博客部署也能直接访问。我请求线上页面，拿到的是 200，页面标题也和预期一致。 Supabase 这边，组织与项目列表可以正常读取。两个现有项目分别在东京和新加坡，只是当时都处于暂停状态。这个结果至少说明：账号、权限和管理通道是通的；要进入业务链路，还需要先恢复目标项目。 Surge 更直接。命令行列出了五个站点：  linkable-board.surge.sh aidatabase-squ.surge.sh aida...</div></div></div></a><a class="pagination-related" href="/posts/tech-value.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——&quot;技术是最不值钱的东西&quot;"><img class="cover" src="/img/tech-value/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——&quot;技术是最不值钱的东西&quot;</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——“技术是最不值钱的东西” 这句话是N师兄说的。他说的时候语气很复杂——他自己就是技术出身，他”非常憎恨这句话”，但随着阅历增加，他发现”说得好像不可逆”。  这句话很刺耳，也很容易被误解。它不是说技术没价值，而是说：只有技术，通常不够值钱。 技术的价值需要被放进一个完整链条里看：解决什么问题、服务谁、怎么交付、谁愿意买单、后续谁维护。离开这些问题，技术再强，也可能只是一个漂亮的局部最优。  01｜一个技术人说出这句话的重量 N师兄是我见过的技术很强的人之一。 高二开始学虚幻引擎，本科做外包，从几十块的小单做到几万块的项目；后来参与过复杂仿真系统，也把自己的游戏做到了上线。他长期保留代码日志、项目文档和备份记录，工程习惯非常扎实。 这样一个人，跟我说”技术是这个世界上最不值钱的东西”。 他知道我不爱听，他自己也不爱听。但他说了。  02｜”你代码写得再屌，那又怎样？” N师兄的原话是这样的： “你在不会写代码之前，写代码这件事情非常重要。但是当你真正写代码写得非常屌的时候，你会发现——这代码到底干什么用啊？” ...</div></div></div></a><a class="pagination-related" href="/posts/startup-journey.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研路上的体会全讲了（二）——研究生创业篇"><img class="cover" src="/img/startup-journey/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研路上的体会全讲了（二）——研究生创业篇</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研路上的体会全讲了（二）——研究生创业篇 接上篇。N师兄不仅延毕了一年，还在研二的时候注册了公司，做了一款游戏，已经上线。听他讲创业的过程，我才意识到——做事和做生意之间，隔着一整套不一样的认知体系。  这篇同样只保留对我有启发的部分。涉及具体公司、股权和个人身份的细节，没有必要展开到可识别程度。真正值得写的是：一个研究生从”我能做东西”走到”我要对产品和商业负责”，中间到底差了什么。  01｜”我一开始没想着要创业” N师兄说他并不是从一开始就计划开公司的。 “是机缘巧合碰到了几个朋友，大家都有想法。先把事情做起来，后面才慢慢变成公司。” 他的合伙人有游戏行业和产品经验，也有资源和资金。最初对方是想把他招进去做正式员工。但N师兄想了想—— “不如自己先拼一把。先把事情做起来，做起来之后再谈合作的形式。” 后来几个人成了合伙人。具体比例不重要，重要的是他们把权责先说清楚：谁出钱，谁拍板，谁负责技术和产品，谁负责策划和内容。产品后来也确实上线了。 这件事给我的第一个提醒是：合伙不是”大家关系好，所以一起干”。合伙是先把钱、权、责、风险说...</div></div></div></a><a class="pagination-related" href="/posts/agent-skill-sdd.html" title="研路炼钢 | 从卖产品到卖技能——一顿火锅，我把 Agent 的底层逻辑又梳理了一遍"><img class="cover" src="/img/agent-skill-sdd/00-cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-06</div><div class="info-item-2">研路炼钢 | 从卖产品到卖技能——一顿火锅，我把 Agent 的底层逻辑又梳理了一遍</div></div><div class="info-2"><div class="info-item-1"> 昨天和一个做产品的朋友吃饭。八两的帝王蟹端上来的那一刻,我们聊的话题已经从”他要做什么产品”转到了”他要做什么技能”。 这个转向本身就值得记一下。 一、从”卖产品”到”卖 Skill”,中间那一步是什么 他过去一直想做一个产品出来卖。这次见面,他的方向变了——他想做一个 Skill 来卖。 这两件事看起来像同一件事,差别其实很大。 卖产品,你卖的是一个能直接被使用的东西。卖 Skill,你卖的不是 Skill 本身——Skill 没法独立存在,它必须绑定脚本,绑定 Agent,才能跑起来。所谓卖技能,本质上卖的是 API 能力包:一段被规范化、被工程化、被可调用化的能力。 为什么这个转向在这两年突然变成显学?因为 Claude Code、Codex、Kimi 这一批 Agent 产品出来之后,大家发现”能力”是可以被封装的,而封装出来的东西有人愿意付费。 但卖 Skill 有个隐含前提:你得真的把一套流程跑通过、抽象过、压缩过。否则你卖出去的就是一个空壳子。 二、95% 的时间不是在写代码 我最近又在系统学 Agent 相关的东西,把 Kimi、Codex、Claude Cod...</div></div></div></a><a class="pagination-related" href="/posts/mentor-relationship.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇"><img class="cover" src="/img/mentor-relationship/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇 前两天和一位即将毕业的师兄吃饭，聊了整整一个小时。他讲了自己读研期间和导师、项目、论文之间的几段经历。里面有很多具体细节，我不适合也没必要展开到可识别的程度。这里更想记录的是：一个研究生在资源、署名、沟通和边界上踩过的坑。  先说清楚边界：这是一段个人口述和我的个人理解，不代表所有导师，也不代表所有课题组。读研关系高度依赖具体人和具体环境，不能拿一个案例去推导全部结论。  01｜”我是奔着产学研合作来的，不是来当执行工具的” N师兄本科就做过大量商业项目，来读研的时候，心里想的是和导师建立一种合作伙伴关系。 “我不喜欢那种模式——老师拍脑门说’这个好像可以做’，然后你去做完来找他汇报。我喜欢的是大家一起去做一件事。” 他甚至直接说：”我很讨厌向人汇报事情。因为以前都是我听别人汇报的。” 这话听着有点冲，但放在他的经历里，我能理解。他入组之后参与了一个新方向的系统搭建，很多技术细节都是自己一点点摸出来的。问题在于—— 他遇到技术难题去找导师，导师说：”我不会，你自己做。” N师兄当时跟我说了一句让我...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">75</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">139</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2-%E6%88%91%E6%83%B3%E6%8A%8A%E8%87%AA%E5%B7%B1%E5%A4%96%E5%8C%85%E7%BB%99-AI%EF%BC%8C%E6%9C%80%E5%90%8E%E5%85%88%E6%90%AD%E4%BA%86%E4%B8%80%E5%BA%A7%E2%80%9C%E6%8E%A7%E5%88%B6%E5%A1%94%E2%80%9D"><span class="toc-number">1.</span> <span class="toc-text">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01%EF%BD%9C%E6%88%91%E4%BB%A5%E4%B8%BA%E8%87%AA%E5%B7%B1%E7%BC%BA%E7%9A%84%E6%98%AF%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%BC%BA%E7%9A%84-Agent"><span class="toc-number">1.1.</span> <span class="toc-text">01｜我以为自己缺的是一个更强的 Agent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02%EF%BD%9C%E4%B8%80%E7%9B%B4%E5%9C%A8%E7%83%A7-token%EF%BC%8C%E4%B8%8D%E4%BB%A3%E8%A1%A8%E7%9C%9F%E7%9A%84%E6%9C%89-completion"><span class="toc-number">1.2.</span> <span class="toc-text">02｜一直在烧 token，不代表真的有 completion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03%EF%BD%9C%E4%B8%BB%E6%8E%A7%E4%B8%8D%E6%98%AF%E4%B8%87%E8%83%BD%E5%8A%A9%E6%89%8B%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%BA%A7%E6%8E%A7%E5%88%B6%E5%A1%94"><span class="toc-number">1.3.</span> <span class="toc-text">03｜主控不是万能助手，而是一座控制塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04%EF%BD%9C%E6%89%80%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E8%AF%B4%E5%90%8C%E4%B8%80%E7%A7%8D%E7%8A%B6%E6%80%81%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">04｜所有项目必须说同一种状态语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05%EF%BD%9C%E6%AF%8F%E5%A4%A9-Top-3%EF%BC%8C%E4%BD%86%E5%90%8C%E6%97%B6%E5%8F%AA%E8%B7%91%E4%B8%A4%E6%9D%A1%E7%BA%BF"><span class="toc-number">1.5.</span> <span class="toc-text">05｜每天 Top 3，但同时只跑两条线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06%EF%BD%9C%E9%A1%B9%E7%9B%AE%E7%AA%97%E5%8F%A3%E7%BB%93%E6%9D%9F%E6%97%B6%EF%BC%8C%E5%BF%85%E9%A1%BB%E4%BA%A4%E4%B8%80%E5%BC%A0%E2%80%9C%E5%9B%9E%E6%89%A7%E2%80%9D"><span class="toc-number">1.6.</span> <span class="toc-text">06｜项目窗口结束时，必须交一张“回执”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07%EF%BD%9C%E6%8A%8A%E6%89%A7%E8%A1%8C%E5%A4%96%E5%8C%85%EF%BC%8C%E4%B8%8D%E6%8A%8A%E6%96%B9%E5%90%91%E5%A4%96%E5%8C%85"><span class="toc-number">1.7.</span> <span class="toc-text">07｜把执行外包，不把方向外包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">1.8.</span> <span class="toc-text">写在最后</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙"><img src="/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读研最怕的不是没工具，是没有自己的龙"/></a><div class="content"><a class="title" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙">读研最怕的不是没工具，是没有自己的龙</a><time datetime="2026-07-24T06:26:50.020Z" title="发表于 2026-07-24 06:26:50">2026-07-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"><img src="/img/three-cloud-sop/00_cover-zh-v2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"/></a><div class="content"><a class="title" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</a><time datetime="2026-07-23T21:05:00.000Z" title="发表于 2026-07-23 21:05:00">2026-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img src="/img/ai-project-orchestration-retro/00_cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"/></a><div class="content"><a class="title" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</a><time datetime="2026-07-18T03:00:00.000Z" title="发表于 2026-07-18 03:00:00">2026-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-personal-control-tower.html" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"><img src="/img/ai-personal-control-tower/00_ai-control-tower-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"/></a><div class="content"><a class="title" href="/posts/ai-personal-control-tower.html" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</a><time datetime="2026-07-11T13:00:23.000Z" title="发表于 2026-07-11 13:00:23">2026-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"><img src="/img/competition-evidence-chain/00_platform-vision-evidence-chain.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"/></a><div class="content"><a class="title" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链">研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链</a><time datetime="2026-07-11T12:10:00.000Z" title="发表于 2026-07-11 12:10:00">2026-07-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.jpg" alt="/img/steam-steel-infinite-minds/00_封面.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.jpg" alt="/img/award-winning-grad-student-reflection/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.jpg" alt="/img/claude-code-seven-components-deep-dive/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.jpg" alt="/img/ai-coding-era-career-path/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI 编程工具时代，别把会用工具当护城河</a><div class="blog-slider__text">AI 编程工具时代，真正稀缺的不是行数，而是需求判断和商业闭环</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="/gitcalendar/js/gitcalendar-init.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>

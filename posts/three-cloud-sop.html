@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 这两天，我把 Vercel、Supabase 和 Surge 依次接进了自己的工具箱。 Vercel 能看见项目，博客页面实际返回了 200；Supabase 能读到组织和两个项目；Surge 能列出五个站点，五个地址也都能正常打开。 如果只看仪表盘，这已经是一片绿灯。 但我很快意识到：三个..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流",
+  "url": "https://insistgang.top/posts/three-cloud-sop.html",
+  "image": "https://insistgang.top/img/three-cloud-sop/00_cover-zh-v2.png",
+  "datePublished": "2026-07-23T21:05:00.000Z",
+  "dateModified": "2026-07-24T06:26:50.019Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/three-cloud-sop.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/gitcalendar/css/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">75</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">139</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/three-cloud-sop/00_cover-zh-v2.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-23T21:05:00.000Z" title="发表于 2026-07-23 21:05:00">2026-07-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-24T06:26:50.019Z" title="更新于 2026-07-24 06:26:50">2026-07-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">技术实践</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/three-cloud-sop/00_cover-zh-v2.png" alt="三个云端工具组成一条可验证的闭环"></p>
+<p>这两天，我把 Vercel、Supabase 和 Surge 依次接进了自己的工具箱。</p>
+<p>Vercel 能看见项目，博客页面实际返回了 <code>200</code>；Supabase 能读到组织和两个项目；Surge 能列出五个站点，五个地址也都能正常打开。</p>
+<p>如果只看仪表盘，这已经是一片绿灯。</p>
+<p>但我很快意识到：<strong>三个工具都能用，不等于三个工具已经一起工作。</strong></p>
+<p>登录成功，只能证明钥匙是真的；页面能开，只能证明炉子还热着。真正的工作流，必须让一块原料从入口进炉，经过加工、落库、验收，再带着证据回到我手里。</p>
+<h2 id="01｜三个工具都亮了绿灯"><a href="#01｜三个工具都亮了绿灯" class="headerlink" title="01｜三个工具都亮了绿灯"></a>01｜三个工具都亮了绿灯</h2><p><img src="/img/three-cloud-sop/01_green-lights-zh-v2.png" alt="三个工具各自亮灯但尚未连成生产线"></p>
+<p>先说现场。</p>
+<p>Vercel 这边，连接器能正常读取账号下的项目，博客部署也能直接访问。我请求线上页面，拿到的是 <code>200</code>，页面标题也和预期一致。</p>
+<p>Supabase 这边，组织与项目列表可以正常读取。两个现有项目分别在东京和新加坡，只是当时都处于暂停状态。这个结果至少说明：账号、权限和管理通道是通的；要进入业务链路，还需要先恢复目标项目。</p>
+<p>Surge 更直接。命令行列出了五个站点：</p>
+<ul>
+<li><code>linkable-board.surge.sh</code></li>
+<li><code>aidatabase-squ.surge.sh</code></li>
+<li><code>aidatabase-zhangxin.surge.sh</code></li>
+<li><code>aidatabase-insistgang.surge.sh</code></li>
+<li><code>insistgang-test2.surge.sh</code></li>
+</ul>
+<p>我又逐个发起请求，五个站点都返回了 <code>200</code>。</p>
+<p>这轮检查有价值，但它只完成了设备点检。三台机器各自转起来了，传送带还没有接上。</p>
+<h2 id="02｜能登录、能访问、能完成，是三件事"><a href="#02｜能登录、能访问、能完成，是三件事" class="headerlink" title="02｜能登录、能访问、能完成，是三件事"></a>02｜能登录、能访问、能完成，是三件事</h2><p><img src="/img/three-cloud-sop/02_three-layers-zh-v2.png" alt="身份可达服务可达与业务完成是三道不同的门"></p>
+<p>我现在会把“跑通”拆成三层。</p>
+<p>第一层是<strong>身份可达</strong>：账号能登录、令牌有效、插件能读到资源。</p>
+<p>第二层是<strong>服务可达</strong>：域名能解析、页面能打开、接口能返回明确的状态码。</p>
+<p>第三层才是<strong>业务完成</strong>：页面发起真实请求，后端处理成功，数据库产生预期记录，用户拿到正确结果，而且日志能把整段过程串起来。</p>
+<p>这次 Surge 还给了我一个很典型的提醒。</p>
+<p>在一个受限执行环境里，命令行曾因为无法写入凭据文件而报错；但用户自己的终端已经成功执行 <code>surge list</code>，线上站点也全部能访问。问题不在 Surge 服务，而在观察它的那间“检测室”权限不足。</p>
+<p>排障最怕把观察环境的故障，误判成生产设备的故障。</p>
+<p>所以从现在开始，我不再用一句“连不上”概括所有问题。我会先问：是身份没通过，网络没到达，还是业务没有完成？</p>
+<h2 id="03｜真正的链路：Surge-→-Vercel-→-Supabase"><a href="#03｜真正的链路：Surge-→-Vercel-→-Supabase" class="headerlink" title="03｜真正的链路：Surge → Vercel → Supabase"></a>03｜真正的链路：Surge → Vercel → Supabase</h2><p><img src="/img/three-cloud-sop/03_request-chain-zh-v2.png" alt="静态页面经服务接口安全查询云端数据库的中文流程图"></p>
+<p>这三个工具组合起来，最清晰的分工不是互相替代，而是各守一道工序。</p>
+<p>Surge 负责静态入口。它适合快速发布演示页、管理台外壳和轻量前端，让用户先拿到一个稳定可访问的界面。</p>
+<p>Vercel 负责服务接口。浏览器把请求交给 Vercel 函数，由它校验参数、执行业务逻辑、读取环境变量，再去访问数据库。</p>
+<p>Supabase 负责数据底座。表、权限策略、身份认证和持久化记录都留在这里。</p>
+<p>最小闭环可以很小：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">用户打开静态页面</span><br><span class="line">  → 页面请求服务接口</span><br><span class="line">  → 服务接口查询云端数据库</span><br><span class="line">  → 数据库返回一条记录</span><br><span class="line">  → 服务接口返回结构化结果</span><br><span class="line">  → 页面显示结果与请求编号</span><br></pre></td></tr></table></figure>
+
+<p>这里最重要的一条红线是：<strong>数据库的高权限密钥不能放进 Surge 的前端代码。</strong></p>
+<p>浏览器里发布出去的内容，本质上都应视为公开。需要保密的凭据必须留在 Vercel 的服务端环境变量里；Supabase 再用行级安全策略限制每个身份能读写什么。</p>
+<p>这条链路不是为了把架构画复杂，而是为了把边界焊牢。</p>
+<h2 id="04｜SOP-不是步骤清单，而是一条证据链"><a href="#04｜SOP-不是步骤清单，而是一条证据链" class="headerlink" title="04｜SOP 不是步骤清单，而是一条证据链"></a>04｜SOP 不是步骤清单，而是一条证据链</h2><p><img src="/img/three-cloud-sop/04_evidence-sop-zh-v2.png" alt="每一道工序都产出可验收证据的流水线"></p>
+<p>过去我写 SOP，容易写成“先点这里，再运行那里”。这样的文档能指导操作，却不能证明结果。</p>
+<p>真正可复用的 SOP，每一步都要带一个验收件：</p>
+<table>
+<thead>
+<tr>
+<th>工序</th>
+<th>操作</th>
+<th>验收证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>静态入口</td>
+<td>发布 Surge 页面</td>
+<td>固定地址返回 <code>200</code>，页面版本号正确</td>
+</tr>
+<tr>
+<td>服务接口</td>
+<td>部署 Vercel 函数</td>
+<td>健康检查返回 <code>200</code>，响应带请求编号</td>
+</tr>
+<tr>
+<td>数据访问</td>
+<td>查询或写入 Supabase</td>
+<td>目标表出现预期记录，时间与请求编号一致</td>
+</tr>
+<tr>
+<td>前端回显</td>
+<td>展示业务结果</td>
+<td>页面内容与数据库记录一致</td>
+</tr>
+<tr>
+<td>现场留痕</td>
+<td>保存日志与版本</td>
+<td>能从请求编号追到部署、日志和数据记录</td>
+</tr>
+</tbody></table>
+<p>这套 SOP 的结束条件也必须写死：</p>
+<blockquote>
+<p>不是“我操作完了”，而是“结果已验证、证据已保存、下一次可以复现”。</p>
+</blockquote>
+<p>如果没有请求编号，前端截图、函数日志和数据库记录就像散落在车间里的三张纸；一旦出错，很难证明它们属于同一炉钢。</p>
+<p>让证据共享同一个编号，排障才会从猜测变成追踪。</p>
+<h2 id="05｜回滚能力，才决定这套系统敢不敢用"><a href="#05｜回滚能力，才决定这套系统敢不敢用" class="headerlink" title="05｜回滚能力，才决定这套系统敢不敢用"></a>05｜回滚能力，才决定这套系统敢不敢用</h2><p><img src="/img/three-cloud-sop/05_rollback-safety-zh-v2.png" alt="预览生产数据库和快照共同组成可回滚的安全岔道"></p>
+<p>一条只能向前冲的流水线，不叫自动化，叫风险放大器。</p>
+<p>Vercel 的价值不只是发布快，还在于可以先生成预览部署。新接口先在预览环境验证，通过后再进入生产；生产版本出问题时，要能立即切回上一份可用部署。</p>
+<p>Surge 发布前要保留明确的版本标记。新页面如果异常，应该能快速恢复上一版静态产物，而不是现场重新打包、重新猜。</p>
+<p>Supabase 更要克制。结构变更先备份，再做可审查的迁移；新增字段优先于直接删除；权限策略先在测试身份下验证；任何高权限密钥都不进入前端，也不进入仓库。</p>
+<p>我给这套链路设了四个放行条件：</p>
+<ol>
+<li>预览环境已经跑完一次真实请求；</li>
+<li>数据变更有备份或可逆迁移；</li>
+<li>三层证据能用同一个请求编号串起来；</li>
+<li>回滚动作已经写清楚，并且真的演练过。</li>
+</ol>
+<p>能部署，只代表油门存在；能回滚，才代表刹车存在。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><img src="/img/three-cloud-sop/99_final-zh-v2.png" alt="让一次请求完整走完并拿回证据"></p>
+<p>这次最有价值的，不是又多装了三个工具。</p>
+<p>而是我终于把“已连接”与“已完成”分开了：Vercel、Supabase、Surge 各自在线，只是零件验收；一次请求从静态入口出发，穿过服务接口，命中数据库，再带着编号、日志和结果回来，才算整条产线交付。</p>
+<p>下一步也很明确：恢复目标 Supabase 项目，建立一张最小测试表，在 Vercel 写一个健康检查接口，再让 Surge 页面完成一次真实读写。跑通以后，把请求编号、验收证据和回滚动作固化成模板。</p>
+<p>别再问工具装没装。</p>
+<p><strong>让一次请求走完，拿回证据。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/three-cloud-sop.html">https://insistgang.top/posts/three-cloud-sop.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/">研路炼钢</a><a class="post-meta__tags" href="/tags/Vercel/">Vercel</a><a class="post-meta__tags" href="/tags/Supabase/">Supabase</a><a class="post-meta__tags" href="/tags/Surge/">Surge</a><a class="post-meta__tags" href="/tags/%E4%BA%91%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81/">云端工作流</a><a class="post-meta__tags" href="/tags/SOP/">SOP</a></div><div class="post-share"><div class="social-share" data-image="/img/three-cloud-sop/00_cover-zh-v2.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙"><img class="cover" src="/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">读研最怕的不是没工具，是没有自己的龙</div></div><div class="info-2"><div class="info-item-1"> 读研最怕的不是没工具，是没有自己的龙最近读到一篇讨论AI工具热潮的文章，作者提了一个很尖锐的观察：全国一半的AI Agent每天在给主人发天气预报，另一半在发新闻简报——而这些事，手机免费就能干。 看到这里我笑了，因为我自己也干过类似的事。 刚接触Claude Code的时候，我花了大量时间搭技能模块、配MCP工具链、研究各种Prompt模板。折腾完了，坐在屏幕前，突然发现——嗯，然后呢？ 工具倒是磨快了，但砍什么？ 这个问题，放到我们读研的语境里，更扎心。  你的”问题资源”是什么？ 原文提出了一个概念叫问题资源。意思是：当AI已经能给出不错的答案时，真正稀缺的不再是解题能力，而是你手里有没有值得去解的题。 谁拥有问题，谁就拥有调度工具和系统的权力。 读研不就是这样吗？ 导师给你一个方向，你读了几十篇论文，跑了几个baseline，然后呢？你的contribution是什么？你发现了什么别人没发现的问题？ 我见过两种研究生： 一种人工具玩得特别溜，YOLO各版本如数家珍，训练脚本写得飞快，但你问他”你这篇论文到底解决了什么问题”，他支支吾吾半天，最后说”我把mAP提了两个点”...</div></div></div></a><a class="pagination-related" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img class="cover" src="/img/ai-project-orchestration-retro/00_cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断 AI 可以替我检索、拆解、执行和校验，但不能替我决定什么值得做。主控的价值不是让更多窗口同时忙，而是把碎片推进成有证据的交付。  前几天我和舍友聊天，他说自己对 AI 的使用程度可能只有 10%，而我已经到了 70%。 他又补了一句：你几乎什么都问 AI，会不会慢慢没有自己的思考？ 这句话让我停了一下。 一周前，我刚写完上一篇文章：《我想把自己外包给 AI，最后先搭了一座“控制塔”》。当时我想得很完整：用一个空白项目做主控，再把论文、代码、博文和知识库分发到不同窗口推进。 真正跑了几天以后，我发现设计一个系统不难，难的是给系统装上刹车。 个人主控最重要的能力，不是帮我启动更多事情，而是更早地决定：哪些事情今天不启动。  01｜70% 都问 AI，不等于 70% 没有思考 我确实会把很多问题交给 AI。 查资料、拆任务、读代码、检查引用、生成初稿、排查报错，这些工作如果都靠我一个人串行完成，时间很快就没了。AI 在这些地方像一组可以随时调用的外部进程，能帮我省掉大量机械切换。 但“把问题交给 AI”和“把判断交...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/agent-skill-sdd.html" title="研路炼钢 | 从卖产品到卖技能——一顿火锅，我把 Agent 的底层逻辑又梳理了一遍"><img class="cover" src="/img/agent-skill-sdd/00-cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-06</div><div class="info-item-2">研路炼钢 | 从卖产品到卖技能——一顿火锅，我把 Agent 的底层逻辑又梳理了一遍</div></div><div class="info-2"><div class="info-item-1"> 昨天和一个做产品的朋友吃饭。八两的帝王蟹端上来的那一刻,我们聊的话题已经从”他要做什么产品”转到了”他要做什么技能”。 这个转向本身就值得记一下。 一、从”卖产品”到”卖 Skill”,中间那一步是什么 他过去一直想做一个产品出来卖。这次见面,他的方向变了——他想做一个 Skill 来卖。 这两件事看起来像同一件事,差别其实很大。 卖产品,你卖的是一个能直接被使用的东西。卖 Skill,你卖的不是 Skill 本身——Skill 没法独立存在,它必须绑定脚本,绑定 Agent,才能跑起来。所谓卖技能,本质上卖的是 API 能力包:一段被规范化、被工程化、被可调用化的能力。 为什么这个转向在这两年突然变成显学?因为 Claude Code、Codex、Kimi 这一批 Agent 产品出来之后,大家发现”能力”是可以被封装的,而封装出来的东西有人愿意付费。 但卖 Skill 有个隐含前提:你得真的把一套流程跑通过、抽象过、压缩过。否则你卖出去的就是一个空壳子。 二、95% 的时间不是在写代码 我最近又在系统学 Agent 相关的东西,把 Kimi、Codex、Claude Cod...</div></div></div></a><a class="pagination-related" href="/posts/ai-usage.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇"><img class="cover" src="/img/ai-usage/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇 接上两篇。吃饭聊到最后，我和N师兄聊到了AI。我们俩都是高强度AI用户，都花了真金白银买会员。但聊完之后我发现，我们对AI的判断出奇地一致——好用，但没那么神。  如果只用一句话概括：AI 最适合帮你加速确定性任务，不适合替你承担不确定性决策。 这个边界一旦想清楚，很多焦虑会少一半。  01｜我的AI全家桶 先交代一下我自己的使用情况。 我现在同时在用Claude、ChatGPT、Kimi，全部付费开了会员。GitHub Copilot也在用。国内的几个模型也都试过。 为什么花这么多钱？因为它是生产力。 我的判断标准很简单：它能不能帮我转化出我要的结果。花一块钱做出小学生水平的东西，不值；花一万块做出博士水平的东西，值。这不是钱多钱少的问题，是效率和结果的问题。 N师兄也认同这个判断：”你花了钱，提升了效率，获得了结果，就完事了。” 说实话，有一天AI平台宕机了，我坐在电脑前都不知道该干嘛。不夸张。  02｜AI 最适合接管哪类编程任务 这是我们聊得最深的一个话题。 他做了快两年的商业项目...</div></div></div></a><a class="pagination-related" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"><img class="cover" src="/img/competition-evidence-chain/00_platform-vision-evidence-chain.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-11</div><div class="info-item-2">研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链 比赛结束后，我和一位队友把获奖展板重新看了一遍。最初得出的结论很粗暴：有实物，大于无实物。再往下拆，我发现真正拉开差距的不是那块硬件，而是它背后那条能被看见、被测量、被追问的证据链。  先说明边界：这篇文章只依据现场展板、演示和个人记录复盘，不代表官方评审结论。涉及个人的信息均已脱敏，对评分动机等无法验证的内容也不作事实判断。为保护参赛者信息，正文配图使用脱敏重绘。  01｜我一开始只看见了“有实物” 我们学校是第一次做这种跨学院合作，校内是三选一。现场有长期参赛的学校，选拔强度大约是六选一；也有学校八支队伍来了四支。有人已经在这个赛道积累了十余年，我们则刚把第一套合作流程跑通。 从结果看，获奖作品里确实有不少硬件、传感器、穿戴设备和真实部署图。于是我很容易把它归因为：有实物的项目更占优势。 但这个结论只对了一半。 实物本身不会自动产生创新。它真正提供的是一种“信任压缩”：评委在几分钟里能看到输入从哪里来、算法处理了什么、输出怎么测、最后放到哪里用。纯软件当然也能做到，只是必须用更扎实的实验和真实数据...</div></div></div></a><a class="pagination-related" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img class="cover" src="/img/ai-project-orchestration-retro/00_cover.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-18</div><div class="info-item-2">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断 AI 可以替我检索、拆解、执行和校验，但不能替我决定什么值得做。主控的价值不是让更多窗口同时忙，而是把碎片推进成有证据的交付。  前几天我和舍友聊天，他说自己对 AI 的使用程度可能只有 10%，而我已经到了 70%。 他又补了一句：你几乎什么都问 AI，会不会慢慢没有自己的思考？ 这句话让我停了一下。 一周前，我刚写完上一篇文章：《我想把自己外包给 AI，最后先搭了一座“控制塔”》。当时我想得很完整：用一个空白项目做主控，再把论文、代码、博文和知识库分发到不同窗口推进。 真正跑了几天以后，我发现设计一个系统不难，难的是给系统装上刹车。 个人主控最重要的能力，不是帮我启动更多事情，而是更早地决定：哪些事情今天不启动。  01｜70% 都问 AI，不等于 70% 没有思考 我确实会把很多问题交给 AI。 查资料、拆任务、读代码、检查引用、生成初稿、排查报错，这些工作如果都靠我一个人串行完成，时间很快就没了。AI 在这些地方像一组可以随时调用的外部进程，能帮我省掉大量机械切换。 但“把问题交给 AI”和“把判断交...</div></div></div></a><a class="pagination-related" href="/posts/resume-tips.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（六）——简历不要写你做了什么，要写你能做什么"><img class="cover" src="/img/resume-tips/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（六）——简历不要写你做了什么，要写你能做什么</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（六）——简历不要写你做了什么，要写你能做什么 最后一篇。下午散步的时候，N师兄帮我看了简历，给了一些很直接的建议。说实话，有些话我听着不太舒服，但越想越觉得他说得对。  这篇是整个系列里最能直接落地的一篇。前面几篇更多是经历和判断，这一篇只有一个主题：简历不是工作记录，简历是能力证据。  01｜”我招人看简历，只看最后两项” N师兄自己开公司，招过人，也面过不少应届生。他跟我说了他看简历的逻辑： “项目经验，还有你的核心能力。其他的我基本不看。” 他说很多简历写了一大堆学生工作、社会实践、课程成绩什么的——这些他翻都不翻。 “我只想知道两件事：你做过什么项目，你从中展现了什么能力。”  02｜”不要罗列细节，要总结能力” 他看我简历的时候，指着其中一段说： “你写了’集成测距算法，计算路灯到摄像头的距离’——这个解决了什么问题？” 我说解决了路灯检测中距离计算的精度问题。 他说：”那你就不应该写你用了什么算法，你应该告诉面试官你有解决复杂工程问题的能力。” 他举了自己写简历的例子： “比如我不会写’我把战斗系统拆解成...</div></div></div></a><a class="pagination-related" href="/posts/mentor-relationship.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇"><img class="cover" src="/img/mentor-relationship/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（一）——导师关系篇 前两天和一位即将毕业的师兄吃饭，聊了整整一个小时。他讲了自己读研期间和导师、项目、论文之间的几段经历。里面有很多具体细节，我不适合也没必要展开到可识别的程度。这里更想记录的是：一个研究生在资源、署名、沟通和边界上踩过的坑。  先说清楚边界：这是一段个人口述和我的个人理解，不代表所有导师，也不代表所有课题组。读研关系高度依赖具体人和具体环境，不能拿一个案例去推导全部结论。  01｜”我是奔着产学研合作来的，不是来当执行工具的” N师兄本科就做过大量商业项目，来读研的时候，心里想的是和导师建立一种合作伙伴关系。 “我不喜欢那种模式——老师拍脑门说’这个好像可以做’，然后你去做完来找他汇报。我喜欢的是大家一起去做一件事。” 他甚至直接说：”我很讨厌向人汇报事情。因为以前都是我听别人汇报的。” 这话听着有点冲，但放在他的经历里，我能理解。他入组之后参与了一个新方向的系统搭建，很多技术细节都是自己一点点摸出来的。问题在于—— 他遇到技术难题去找导师，导师说：”我不会，你自己做。” N师兄当时跟我说了一句让我...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">75</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">139</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01%EF%BD%9C%E4%B8%89%E4%B8%AA%E5%B7%A5%E5%85%B7%E9%83%BD%E4%BA%AE%E4%BA%86%E7%BB%BF%E7%81%AF"><span class="toc-number">1.</span> <span class="toc-text">01｜三个工具都亮了绿灯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02%EF%BD%9C%E8%83%BD%E7%99%BB%E5%BD%95%E3%80%81%E8%83%BD%E8%AE%BF%E9%97%AE%E3%80%81%E8%83%BD%E5%AE%8C%E6%88%90%EF%BC%8C%E6%98%AF%E4%B8%89%E4%BB%B6%E4%BA%8B"><span class="toc-number">2.</span> <span class="toc-text">02｜能登录、能访问、能完成，是三件事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03%EF%BD%9C%E7%9C%9F%E6%AD%A3%E7%9A%84%E9%93%BE%E8%B7%AF%EF%BC%9ASurge-%E2%86%92-Vercel-%E2%86%92-Supabase"><span class="toc-number">3.</span> <span class="toc-text">03｜真正的链路：Surge → Vercel → Supabase</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04%EF%BD%9CSOP-%E4%B8%8D%E6%98%AF%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E6%9D%A1%E8%AF%81%E6%8D%AE%E9%93%BE"><span class="toc-number">4.</span> <span class="toc-text">04｜SOP 不是步骤清单，而是一条证据链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05%EF%BD%9C%E5%9B%9E%E6%BB%9A%E8%83%BD%E5%8A%9B%EF%BC%8C%E6%89%8D%E5%86%B3%E5%AE%9A%E8%BF%99%E5%A5%97%E7%B3%BB%E7%BB%9F%E6%95%A2%E4%B8%8D%E6%95%A2%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">05｜回滚能力，才决定这套系统敢不敢用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">6.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙"><img src="/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读研最怕的不是没工具，是没有自己的龙"/></a><div class="content"><a class="title" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙">读研最怕的不是没工具，是没有自己的龙</a><time datetime="2026-07-24T06:26:50.020Z" title="发表于 2026-07-24 06:26:50">2026-07-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"><img src="/img/three-cloud-sop/00_cover-zh-v2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"/></a><div class="content"><a class="title" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</a><time datetime="2026-07-23T21:05:00.000Z" title="发表于 2026-07-23 21:05:00">2026-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img src="/img/ai-project-orchestration-retro/00_cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"/></a><div class="content"><a class="title" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</a><time datetime="2026-07-18T03:00:00.000Z" title="发表于 2026-07-18 03:00:00">2026-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ai-personal-control-tower.html" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"><img src="/img/ai-personal-control-tower/00_ai-control-tower-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"/></a><div class="content"><a class="title" href="/posts/ai-personal-control-tower.html" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</a><time datetime="2026-07-11T13:00:23.000Z" title="发表于 2026-07-11 13:00:23">2026-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"><img src="/img/competition-evidence-chain/00_platform-vision-evidence-chain.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链"/></a><div class="content"><a class="title" href="/posts/competition-evidence-chain.html" title="研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链">研路炼钢 | 复盘六个获奖项目后，我终于明白：平台愿景为什么打不过一条证据链</a><time datetime="2026-07-11T12:10:00.000Z" title="发表于 2026-07-11 12:10:00">2026-07-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.jpg" alt="/img/steam-steel-infinite-minds/00_封面.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.jpg" alt="/img/award-winning-grad-student-reflection/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.jpg" alt="/img/claude-code-seven-components-deep-dive/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.jpg" alt="/img/ai-coding-era-career-path/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI 编程工具时代，别把会用工具当护城河</a><div class="blog-slider__text">AI 编程工具时代，真正稀缺的不是行数，而是需求判断和商业闭环</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="/gitcalendar/js/gitcalendar-init.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>
