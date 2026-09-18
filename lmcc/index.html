@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CCF LMCC-A · 官方例题对齐模拟</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Vue 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .katex { font-size: 1.05em; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    [v-cloak] { display: none !important; }
+    pre.code-context { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; white-space: pre; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col antialiased">
+  <noscript>
+    <div class="max-w-xl mx-auto m-6 p-6 bg-white border border-rose-200 rounded-2xl text-sm text-slate-800">
+      需要启用 JavaScript 才能使用网页刷题。也可运行 <code>python3 quiz.py</code>。
+    </div>
+  </noscript>
+  <div id="boot-error" style="display:none" class="max-w-xl mx-auto m-6 p-6 bg-white border border-rose-200 rounded-2xl text-sm text-slate-800">
+    <h1 class="text-lg font-bold text-rose-800 mb-2">刷题界面未能启动</h1>
+    <p>Vue 脚本加载失败（CDN 不可达或被拦截）。请检查网络后刷新，或改用终端：<code>python3 quiz.py</code>。</p>
+  </div>
+  <div id="app" v-cloak class="flex-1 flex flex-col max-w-4xl w-full mx-auto pb-24 md:pb-8">
+
+    <!-- Top Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm px-4 py-3">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="bg-indigo-600 text-white text-xs font-bold px-2 py-0.5 rounded">CCF 认证</span>
+            <h1 class="text-base md:text-lg font-bold text-slate-900 truncate">LMCC-A 大模型首轮机试</h1>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            考试：9/19 (周六) 09:30 · 东华大学松江校区2306机房
+          </p>
+        </div>
+
+        <!-- Timer / Answer Sheet Button -->
+        <div class="flex items-center space-x-2">
+          <div v-if="currentMode === 'mock'" class="flex items-center space-x-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full text-amber-800 text-xs md:text-sm font-semibold">
+            <span>⏱️</span>
+            <span>{{ formatTimer(mockTimeRemaining) }}</span>
+          </div>
+          <button @click="showAnswerSheet = true" class="flex items-center space-x-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs md:text-sm px-3 py-1.5 rounded-lg border border-slate-300 transition">
+            <span>📋</span>
+            <span class="hidden sm:inline">答题卡</span>
+            <span>({{ currentQIndex + 1 }}/{{ currentQuestions.length }})</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div class="flex items-center space-x-2 mt-3 overflow-x-auto no-scrollbar pb-1 text-xs md:text-sm">
+        <button
+          @click="switchMode('practice')"
+          :class="currentMode === 'practice' ? 'bg-indigo-600 text-white font-medium shadow-sm' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'"
+          class="px-3 py-1.5 rounded-lg whitespace-nowrap transition">
+          📚 专项分块刷题 ({{ practiceCount }}题)
+        </button>
+        <button
+          @click="switchMode('mock')"
+          :class="currentMode === 'mock' ? 'bg-amber-600 text-white font-medium shadow-sm' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'"
+          class="px-3 py-1.5 rounded-lg whitespace-nowrap transition flex items-center space-x-1">
+          <span>🏆 官方例题对齐模拟 ({{ mockCount }}题)</span>
+        </button>
+        <button
+          @click="switchMode('mistakes')"
+          :class="currentMode === 'mistakes' ? 'bg-rose-600 text-white font-medium shadow-sm' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'"
+          class="px-3 py-1.5 rounded-lg whitespace-nowrap transition flex items-center space-x-1">
+          <span>❌ 错题集</span>
+          <span v-if="mistakes.length > 0" class="bg-rose-100 text-rose-700 px-1.5 py-0.2 rounded-full text-[10px] font-bold">{{ mistakes.length }}</span>
+        </button>
+      </div>
+
+      <!-- Module Selector (Only in Practice Mode) -->
+      <div v-if="currentMode === 'practice'" class="flex items-center space-x-1.5 mt-2 overflow-x-auto no-scrollbar pb-1 text-[11px] md:text-xs">
+        <button
+          v-for="(mod, idx) in examData.modules"
+          :key="mod.id"
+          @click="switchModule(idx)"
+          :class="activeModuleIdx === idx ? 'bg-indigo-50 border-indigo-500 text-indigo-700 font-bold' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'"
+          class="px-2.5 py-1 rounded border whitespace-nowrap transition flex items-center space-x-1">
+          <span>Part {{ idx + 1 }}</span>
+          <span class="text-slate-400">({{ mod.count }})</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-3 md:p-6 flex flex-col justify-start">
+      <p v-if="currentMode === 'mock' && dataReady" class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mb-3">
+        {{ formatDisclaimer }}
+      </p>
+
+      <!-- Loading / fetch error -->
+      <div v-if="!dataReady" class="my-auto text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-800">{{ dataError ? '题库加载失败' : '正在加载题库' }}</h2>
+        <p class="text-xs text-slate-500 mt-2">{{ dataError || '读取 questions.json …' }}</p>
+      </div>
+
+      <!-- No Mistakes Banner -->
+      <div v-else-if="currentMode === 'mistakes' && mistakes.length === 0" class="my-auto text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+        <div class="text-5xl mb-3">🎉</div>
+        <h2 class="text-lg font-bold text-slate-800">太棒了！错题本空空如也</h2>
+        <p class="text-xs text-slate-500 mt-1">在专项刷题或模拟考中答错的题目会自动沉淀在这里，供你考前突击！</p>
+        <button @click="switchMode('practice')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">
+          开始专项刷题
+        </button>
+      </div>
+
+      <!-- Question Card -->
+      <div v-else-if="currentQuestion" class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-4 md:p-6 flex flex-col transition-all">
+
+        <!-- Question Meta -->
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <div class="flex items-center space-x-2">
+            <span class="text-indigo-600 font-extrabold text-sm md:text-base">第 {{ currentQuestion.num }} 题</span>
+            <span
+              :class="getTypeBadgeClass(currentQuestion.type)"
+              class="text-[11px] font-semibold px-2 py-0.5 rounded">
+              {{ questionTypeLabel(currentQuestion) }}
+            </span>
+            <span
+              v-if="currentMode === 'practice' && currentQuestion.priority"
+              :class="priorityBadgeClass(currentQuestion.priority)"
+              class="text-[10px] font-semibold px-2 py-0.5 rounded">
+              {{ priorityLabel(currentQuestion.priority) }}
+            </span>
+            <span v-if="currentMode === 'mock'" class="text-xs text-slate-400 font-medium">
+              ({{ getQuestionScore(currentQuestion) }}分)
+            </span>
+          </div>
+
+          <!-- Star / Mark Button -->
+          <button
+            @click="toggleFlag(currentQKey)"
+            :class="isFlagged(currentQKey) ? 'text-amber-500 font-bold' : 'text-slate-300 hover:text-slate-400'"
+            class="text-sm flex items-center space-x-1 px-2 py-1 rounded transition">
+            <span>{{ isFlagged(currentQKey) ? '★' : '☆' }}</span>
+            <span class="text-xs">{{ isFlagged(currentQKey) ? '已标记' : '标记' }}</span>
+          </button>
+        </div>
+
+        <!-- Question Body -->
+        <div class="text-sm md:text-base text-slate-800 leading-relaxed font-normal mb-4 tracking-wide" v-html="formatMath(currentQuestion.body)">
+        </div>
+        <pre v-if="currentQuestion.code_context" class="code-context mb-5 p-3 bg-slate-900 text-slate-100 text-[11px] md:text-xs overflow-x-auto rounded-xl leading-relaxed">{{ currentQuestion.code_context }}</pre>
+
+        <!-- Options List -->
+        <div class="space-y-2.5">
+          <div
+            v-for="(opt, oIdx) in currentQuestion.options"
+            :key="oIdx"
+            @click="handleSelectOption(getOptionLetter(opt))"
+            :class="getOptionClass(getOptionLetter(opt))"
+            class="p-3.5 md:p-4 rounded-xl border text-xs md:text-sm font-medium cursor-pointer transition-all duration-150 flex items-start space-x-3">
+
+            <div
+              :class="getOptionBadgeClass(getOptionLetter(opt))"
+              class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 border mt-0.5">
+              {{ getOptionLetter(opt) }}
+            </div>
+
+            <div class="flex-1 leading-normal" v-html="formatMath(getOptionText(opt))">
+            </div>
+          </div>
+        </div>
+
+        <!-- Multi-choice Submit Button (when multiple choice and not yet submitted) -->
+        <div v-if="isMultiChoice && !isQuestionChecked && currentMode !== 'mock'" class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
+          <button
+            @click="submitMultiChoice"
+            :disabled="!hasMultiSelection"
+            :class="hasMultiSelection ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm' : 'bg-slate-200 text-slate-400 cursor-not-allowed'"
+            class="text-xs font-semibold px-5 py-2 rounded-lg transition">
+            确认提交多选
+          </button>
+        </div>
+
+        <!-- Feedback & Explanation (Visible when practice mode checked OR mock exam finished) -->
+        <div v-if="isQuestionChecked && (currentMode !== 'mock' || mockSubmitted)" class="mt-6 pt-5 border-t border-slate-100 transition-all">
+          <div
+            :class="isAnswerCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-rose-50 border-rose-200 text-rose-900'"
+            class="p-4 rounded-xl border mb-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-xl">{{ isAnswerCorrect ? '🎉' : '❌' }}</span>
+              <div>
+                <span class="font-bold text-sm">{{ isAnswerCorrect ? '回答正确！' : '回答错误！' }}</span>
+                <span class="text-xs ml-2">你的选择：<b>{{ getUserAnswer(currentQKey) || '未作答' }}</b></span>
+              </div>
+            </div>
+            <div class="text-xs font-bold px-2.5 py-1 bg-white/80 rounded-lg shadow-xs">
+              正确答案：<span class="text-emerald-700 font-extrabold">{{ currentQuestion.answer }}</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 text-xs md:text-sm text-slate-700 space-y-2">
+            <div v-if="currentQuestion.point" class="flex items-start space-x-2">
+              <span class="text-indigo-600 font-bold shrink-0">🎯 核心考点:</span>
+              <span class="font-semibold text-slate-800">{{ currentQuestion.point }}</span>
+            </div>
+            <div v-if="currentQuestion.explanation" class="pt-2 border-t border-slate-200/60">
+              <span class="text-slate-900 font-bold block mb-1">💡 深度解析:</span>
+              <div class="leading-relaxed text-slate-600 whitespace-pre-line" v-html="formatMath(currentQuestion.explanation)"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Bottom Sticky Navigation Bar -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 z-20 px-4 py-2.5">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
+
+        <button
+          @click="prevQuestion"
+          :disabled="currentQIndex === 0"
+          :class="currentQIndex === 0 ? 'opacity-30 cursor-not-allowed text-slate-400' : 'text-slate-700 hover:bg-slate-100'"
+          class="flex items-center space-x-1 px-3 py-2 rounded-lg text-xs md:text-sm font-semibold border border-slate-200 transition">
+          <span>←</span>
+          <span>上一题</span>
+        </button>
+
+        <div class="flex items-center space-x-2">
+          <!-- Mock Finish Button -->
+          <button
+            v-if="currentMode === 'mock' && !mockSubmitted"
+            @click="confirmSubmitMock({ early: true })"
+            aria-label="确认提前交卷"
+            class="bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs md:text-sm px-4 py-2 rounded-lg shadow-sm transition">
+            提前交卷评分
+          </button>
+
+          <button
+            v-if="currentMode === 'mock' && mockSubmitted"
+            @click="showScoreModal = true"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs md:text-sm px-4 py-2 rounded-lg shadow-sm transition">
+            查看成绩单
+          </button>
+
+          <!-- Question jump indicator -->
+          <span class="text-xs text-slate-500 font-medium px-2">
+            {{ currentQIndex + 1 }} / {{ currentQuestions.length }}
+          </span>
+        </div>
+
+        <button
+          @click="nextQuestion"
+          :disabled="currentQIndex >= currentQuestions.length - 1"
+          :class="currentQIndex >= currentQuestions.length - 1 ? 'opacity-30 cursor-not-allowed text-slate-400' : 'text-slate-700 hover:bg-slate-100'"
+          class="flex items-center space-x-1 px-3 py-2 rounded-lg text-xs md:text-sm font-semibold border border-slate-200 transition">
+          <span>下一题</span>
+          <span>→</span>
+        </button>
+
+      </div>
+    </footer>
+
+    <!-- Answer Sheet Modal (答题卡) -->
+    <div v-if="showAnswerSheet" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-white w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-slide-up">
+
+        <div class="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
+          <h3 class="font-bold text-base text-slate-800 flex items-center space-x-2">
+            <span>📋 答题卡</span>
+            <span class="text-xs text-slate-400 font-normal">点击题号快速跳转</span>
+          </h3>
+          <button @click="showAnswerSheet = false" class="text-slate-400 hover:text-slate-600 text-xl font-bold p-1">✕</button>
+        </div>
+
+        <div class="p-4 overflow-y-auto flex-1">
+          <!-- Legend -->
+          <div class="flex items-center justify-around text-xs text-slate-500 pb-3 border-b border-slate-100 mb-4">
+            <span class="flex items-center space-x-1"><span class="w-3 h-3 rounded-full bg-slate-100 border border-slate-300"></span><span>未答</span></span>
+            <span class="flex items-center space-x-1"><span class="w-3 h-3 rounded-full bg-indigo-500"></span><span>已选</span></span>
+            <span v-if="currentMode !== 'mock' || mockSubmitted" class="flex items-center space-x-1"><span class="w-3 h-3 rounded-full bg-emerald-500"></span><span>正确</span></span>
+            <span v-if="currentMode !== 'mock' || mockSubmitted" class="flex items-center space-x-1"><span class="w-3 h-3 rounded-full bg-rose-500"></span><span>错误</span></span>
+          </div>
+
+          <!-- Grid of Question Bubbles -->
+          <div class="grid grid-cols-6 sm:grid-cols-8 gap-2.5">
+            <button
+              v-for="(q, idx) in currentQuestions"
+              :key="idx"
+              @click="jumpToQuestion(idx)"
+              :class="getBubbleClass(q, idx)"
+              class="h-10 rounded-xl flex flex-col items-center justify-center text-xs font-bold transition">
+              <span>{{ q.num }}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
+          <button @click="resetProgress" class="text-rose-600 hover:text-rose-700 text-xs font-semibold">
+            重置当前模块进度
+          </button>
+          <button @click="showAnswerSheet = false" class="bg-indigo-600 text-white text-xs font-semibold px-4 py-2 rounded-lg">
+            返回做题
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mock Scorecard Modal (成绩单) -->
+    <div v-if="showScoreModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+      <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center border border-slate-100 animate-scale-up">
+        <div class="text-4xl mb-2">{{ mockScore >= passScore ? '🏆' : '💪' }}</div>
+        <h3 class="text-lg font-bold text-slate-800">官方例题对齐模拟成绩单</h3>
+        <p class="text-xs text-slate-500 mt-0.5">{{ formatDisclaimer }}</p>
+
+        <div class="my-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+          <div class="text-4xl font-black text-indigo-600 tracking-tight">
+            {{ mockScore.toFixed(1) }} <span class="text-lg font-normal text-slate-400">/ {{ mockMaxScore }} 分</span>
+          </div>
+          <div class="mt-2 inline-block px-3 py-0.5 rounded-full text-xs font-bold"
+               :class="mockScore >= passScore ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'">
+            {{ mockScore >= 80 ? '🌟 优异（高分胜算）' : (mockScore >= passScore ? '✅ 合格通过（达到及格线）' : '⚠️ 暂未及格（抓紧补弱）') }}
+          </div>
+        </div>
+
+        <div class="text-xs text-slate-600 grid gap-2 mb-6" :class="mockBreakdown.length === 2 ? 'grid-cols-2' : 'grid-cols-3'">
+          <div v-for="row in mockBreakdown" :key="row.type" class="bg-slate-100 p-2.5 rounded-xl">
+            <span class="block text-slate-400 text-[10px]">{{ row.label }} ({{ row.max }}分)</span>
+            <span class="font-bold text-slate-800">{{ Number(row.got).toFixed(1) }}</span>
+          </div>
+        </div>
+
+        <div class="flex space-x-3">
+          <button @click="showScoreModal = false; showAnswerSheet = true" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 rounded-xl transition">
+            查看错题解析
+          </button>
+          <button @click="restartMockExam" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold py-2.5 rounded-xl transition">
+            重新模拟一次
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Exam data is loaded from questions.json at runtime -->
+  <script>
+    window.EXAM_DATA = { modules: [], mock_exam: { questions: [] }, meta: {}, question_types: {} };
+  </script>
+  <script src="exam_runtime.js"></script>
+  <script>
+    (function () {
+      if (typeof Vue === "undefined") {
+        var err = document.getElementById("boot-error");
+        if (err) err.style.display = "block";
+        var app = document.getElementById("app");
+        if (app) {
+          app.style.display = "none";
+          app.removeAttribute("v-cloak");
+        }
+      }
+    })();
+  </script>
+
+  <!-- Vue App Logic -->
+  <script>
+    if (typeof Vue !== "undefined") {
+    const { createApp, ref, computed, onMounted } = Vue;
+
+    createApp({
+      setup() {
+        const examData = ref(window.EXAM_DATA || { modules: [], mock_exam: { questions: [] }, meta: {}, question_types: {} });
+        const dataReady = ref(false);
+        const dataError = ref('');
+        const currentMode = ref('practice');
+        const activeModuleIdx = ref(0);
+        const currentQIndex = ref(0);
+
+        const userAnswers = ref({});
+        const checkedQuestions = ref({});
+        const flags = ref({});
+        const mistakes = ref([]);
+        const showAnswerSheet = ref(false);
+        const showScoreModal = ref(false);
+
+        const mockTimeRemaining = ref(0);
+        const mockTimerId = ref(null);
+        const mockSubmitted = ref(false);
+        const mockScore = ref(0);
+        const mockBreakdown = ref([]);
+
+        const typeMeta = (q) => {
+          const types = (examData.value && examData.value.question_types) || {};
+          if (q && types[q.type]) return types[q.type];
+          const isMulti = !!(q && q.type && String(q.type).includes('多选'));
+          return {
+            label: (q && (q.type_label || q.type)) || '',
+            choice_mode: isMulti ? 'multi' : 'single',
+            score: q && q.score
+          };
+        };
+
+        const mockQuestionList = () => {
+          const mock = examData.value && examData.value.mock_exam;
+          if (!mock) return [];
+          if (Array.isArray(mock)) return mock;
+          return mock.questions || [];
+        };
+
+        const durationSeconds = () => {
+          const mock = examData.value && examData.value.mock_exam;
+          const meta = examData.value && examData.value.meta;
+          const minutes = (mock && mock.duration_minutes) || (meta && meta.duration_minutes) || 120;
+          return Number(minutes) * 60;
+        };
+
+        const practiceCount = computed(() => {
+          const mods = (examData.value && examData.value.modules) || [];
+          return mods.reduce((sum, mod) => sum + Number(mod.count || (mod.questions || []).length || 0), 0);
+        });
+        const mockCount = computed(() => mockQuestionList().length);
+        const mockMaxScore = computed(() => {
+          const mock = examData.value && examData.value.mock_exam;
+          const meta = examData.value && examData.value.meta;
+          if (mock && mock.total_score) return Number(mock.total_score);
+          if (meta && meta.total_score) return Number(meta.total_score);
+          return mockQuestionList().reduce((sum, q) => sum + Number(q.score || typeMeta(q).score || 0), 0);
+        });
+        const passScore = computed(() => Number(((examData.value && examData.value.meta) || {}).pass_score || 60));
+        const formatDisclaimer = computed(() => {
+          const mock = examData.value && examData.value.mock_exam;
+          const meta = examData.value && examData.value.meta;
+          return (mock && mock.format_disclaimer) || (meta && meta.format_disclaimer) || '官方成人组例题对齐模拟';
+        });
+
+        const nowSeconds = () => Math.floor(Date.now() / 1000);
+        let examFingerprint = '';
+        let mockTimerState = ExamRuntime.persistTimer({
+          now: nowSeconds(), remaining: 0, running: false, submitted: false
+        });
+
+        const applyTimerState = (timer) => {
+          mockTimerState = timer;
+          mockTimeRemaining.value = Number(timer.remaining || 0);
+          mockSubmitted.value = !!timer.submitted;
+        };
+
+        const readSavedBlob = () => {
+          try {
+            const raw = localStorage.getItem(ExamRuntime.STORAGE_KEY);
+            return raw ? JSON.parse(raw) : null;
+          } catch (e) {
+            return null;
+          }
+        };
+
+        const saveState = () => {
+          try {
+            if (mockTimerState && mockTimerState.running && !mockTimerState.submitted) {
+              mockTimerState = ExamRuntime.persistTimer({
+                now: nowSeconds(),
+                remaining: mockTimeRemaining.value,
+                running: true,
+                submitted: false
+              });
+            }
+            const blob = {
+              version: ExamRuntime.STORAGE_VERSION,
+              fingerprint: examFingerprint,
+              answers: userAnswers.value,
+              checked: checkedQuestions.value,
+              flags: flags.value,
+              mistakes: mistakes.value,
+              timer: mockTimerState,
+              mode: currentMode.value,
+              mockScore: mockScore.value,
+              mockBreakdown: mockBreakdown.value
+            };
+            localStorage.setItem(ExamRuntime.STORAGE_KEY, JSON.stringify(blob));
+          } catch (e) {
+            console.error('Storage save error', e);
+          }
+        };
+
+        const loadSavedState = () => {
+          const saved = readSavedBlob();
+          const session = ExamRuntime.hydrateSession(
+            saved,
+            nowSeconds(),
+            durationSeconds(),
+            examFingerprint,
+            currentMode.value
+          );
+          if (!session.reused) {
+            userAnswers.value = {};
+            checkedQuestions.value = {};
+            flags.value = {};
+            mistakes.value = [];
+            applyTimerState(session.timer);
+            return session;
+          }
+          userAnswers.value = session.answers || {};
+          checkedQuestions.value = session.checked || {};
+          flags.value = session.flags || {};
+          mistakes.value = session.mistakes || [];
+          applyTimerState(session.timer);
+          if (saved && saved.mockScore != null) mockScore.value = saved.mockScore;
+          if (saved && saved.mockBreakdown) mockBreakdown.value = saved.mockBreakdown;
+          return session;
+        };
+
+        const currentQuestions = computed(() => {
+          if (currentMode.value === 'practice') {
+            const mods = (examData.value && examData.value.modules) || [];
+            return (mods[activeModuleIdx.value] && mods[activeModuleIdx.value].questions) || [];
+          }
+          if (currentMode.value === 'mock') return mockQuestionList();
+          if (currentMode.value === 'mistakes') return mistakes.value;
+          return [];
+        });
+
+        const currentQuestion = computed(() => {
+          if (currentQuestions.value.length === 0) return null;
+          return currentQuestions.value[currentQIndex.value] || null;
+        });
+
+        const currentQKey = computed(() => {
+          if (!currentQuestion.value) return '';
+          if (currentMode.value === 'mock') return `mock_${currentQuestion.value.num}`;
+          if (currentMode.value === 'mistakes') return `mistake_${currentQuestion.value.num}_${currentQuestion.value.source}`;
+          return `mod_${activeModuleIdx.value}_${currentQuestion.value.num}`;
+        });
+
+        const isMultiChoice = computed(() => {
+          if (!currentQuestion.value) return false;
+          const meta = typeMeta(currentQuestion.value);
+          return meta.choice_mode === 'multi' || String(currentQuestion.value.type || '').includes('多选');
+        });
+
+        const isQuestionChecked = computed(() => !!checkedQuestions.value[currentQKey.value]);
+
+        const isAnswerCorrect = computed(() => {
+          if (!currentQuestion.value) return false;
+          const user = ExamRuntime.normalizeAnswer(userAnswers.value[currentQKey.value]);
+          const correct = ExamRuntime.normalizeAnswer(currentQuestion.value.answer);
+          return user === correct;
+        });
+
+        const hasMultiSelection = computed(() => (userAnswers.value[currentQKey.value] || '').length > 0);
+
+        const escapeHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        const formatMath = (text) => {
+          if (!text) return '';
+          const src = String(text);
+          const pattern = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
+          let out = '';
+          let last = 0;
+          for (const m of src.matchAll(pattern)) {
+            out += escapeHtml(src.slice(last, m.index));
+            const math = m[1] !== undefined ? m[1] : m[2];
+            if (window.katex) {
+              try { out += window.katex.renderToString(math, { displayMode: m[1] !== undefined, throwOnError: false }); }
+              catch (e) { out += escapeHtml(m[0]); }
+            } else {
+              out += escapeHtml(m[0]);
+            }
+            last = m.index + m[0].length;
+          }
+          out += escapeHtml(src.slice(last));
+          return out;
+        };
+
+        const getOptionLetter = (opt) => {
+          const m = String(opt).match(/^- ([A-D])\./);
+          return m ? m[1] : '';
+        };
+        const getOptionText = (opt) => String(opt).replace(/^- [A-D]\.\s*/, '').trim();
+        const getUserAnswer = (key) => userAnswers.value[key] || '';
+        const questionTypeLabel = (q) => (q && (q.type_label || typeMeta(q).label || q.type)) || '';
+        const getQuestionScore = (q) => {
+          if (!q) return 0;
+          if (q.score != null) return q.score;
+          return typeMeta(q).score || 0;
+        };
+
+        const handleSelectOption = (letter) => {
+          if (isQuestionChecked.value && currentMode.value !== 'mock') return;
+          if (mockSubmitted.value) return;
+          const key = currentQKey.value;
+          const currentAns = userAnswers.value[key] || '';
+          if (isMultiChoice.value) {
+            const set = new Set(currentAns.split('').filter(Boolean));
+            if (set.has(letter)) set.delete(letter);
+            else set.add(letter);
+            userAnswers.value[key] = Array.from(set).sort().join('');
+          } else {
+            userAnswers.value[key] = letter;
+            if (currentMode.value !== 'mock') {
+              checkedQuestions.value[key] = true;
+              checkAndRecordMistake(currentQuestion.value, letter);
+            }
+          }
+          saveState();
+        };
+
+        const submitMultiChoice = () => {
+          const key = currentQKey.value;
+          checkedQuestions.value[key] = true;
+          checkAndRecordMistake(currentQuestion.value, userAnswers.value[key] || '');
+          saveState();
+        };
+
+        const checkAndRecordMistake = (q, userAns) => {
+          const user = ExamRuntime.normalizeAnswer(userAns);
+          const correct = ExamRuntime.normalizeAnswer(q && q.answer);
+          if (user !== correct) {
+            const exists = mistakes.value.some(m => m.num === q.num && m.source === q.source);
+            if (!exists) mistakes.value.push(JSON.parse(JSON.stringify(q)));
+          }
+        };
+
+        const getOptionClass = (letter) => {
+          const key = currentQKey.value;
+          const userAns = userAnswers.value[key] || '';
+          const isSelected = userAns.includes(letter);
+          const q = currentQuestion.value;
+          if ((isQuestionChecked.value && currentMode.value !== 'mock') || mockSubmitted.value) {
+            const isCorrectOption = ExamRuntime.normalizeAnswer(q && q.answer).includes(letter);
+            if (isCorrectOption) return 'bg-emerald-50 border-emerald-500 text-emerald-900 ring-1 ring-emerald-500';
+            if (isSelected && !isCorrectOption) return 'bg-rose-50 border-rose-500 text-rose-900 ring-1 ring-rose-500';
+            return 'bg-white border-slate-200 text-slate-400 opacity-60';
+          }
+          if (isSelected) return 'bg-indigo-50 border-indigo-500 text-indigo-900 ring-1 ring-indigo-500';
+          return 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800';
+        };
+
+        const getOptionBadgeClass = (letter) => {
+          const key = currentQKey.value;
+          const userAns = userAnswers.value[key] || '';
+          const isSelected = userAns.includes(letter);
+          const q = currentQuestion.value;
+          if ((isQuestionChecked.value && currentMode.value !== 'mock') || mockSubmitted.value) {
+            const isCorrectOption = ExamRuntime.normalizeAnswer(q && q.answer).includes(letter);
+            if (isCorrectOption) return 'bg-emerald-600 text-white border-emerald-600';
+            if (isSelected && !isCorrectOption) return 'bg-rose-600 text-white border-rose-600';
+            return 'bg-slate-100 text-slate-400 border-slate-200';
+          }
+          if (isSelected) return 'bg-indigo-600 text-white border-indigo-600';
+          return 'bg-slate-100 text-slate-700 border-slate-300';
+        };
+
+        const getTypeBadgeClass = (type) => {
+          const text = String(type || '');
+          if (text === 'code_single' || text.includes('程序')) return 'bg-amber-100 text-amber-800';
+          if (text === 'concept_single' || text.includes('单选')) return 'bg-blue-100 text-blue-800';
+          if (text.includes('多选')) return 'bg-purple-100 text-purple-800';
+          return 'bg-amber-100 text-amber-800';
+        };
+        const priorityLabel = (priority) => ({
+          core: '第一轮核心',
+          important: '考纲重要',
+          extended: '拓展'
+        }[priority] || priority);
+        const priorityBadgeClass = (priority) => ({
+          core: 'bg-emerald-100 text-emerald-800',
+          important: 'bg-sky-100 text-sky-800',
+          extended: 'bg-slate-100 text-slate-600'
+        }[priority] || 'bg-slate-100 text-slate-600');
+
+        const prevQuestion = () => { if (currentQIndex.value > 0) currentQIndex.value--; };
+        const nextQuestion = () => {
+          if (currentQIndex.value < currentQuestions.value.length - 1) currentQIndex.value++;
+        };
+        const jumpToQuestion = (idx) => {
+          currentQIndex.value = idx;
+          showAnswerSheet.value = false;
+        };
+        const toggleFlag = (key) => { flags.value[key] = !flags.value[key]; saveState(); };
+        const isFlagged = (key) => !!flags.value[key];
+
+        const getBubbleClass = (q, idx) => {
+          let key = '';
+          if (currentMode.value === 'mock') key = `mock_${q.num}`;
+          else if (currentMode.value === 'mistakes') key = `mistake_${q.num}_${q.source}`;
+          else key = `mod_${activeModuleIdx.value}_${q.num}`;
+          const isCurrent = currentQIndex.value === idx;
+          const userAns = userAnswers.value[key] || '';
+          const checked = checkedQuestions.value[key];
+          let base = 'border ';
+          if (isCurrent) base += 'ring-2 ring-indigo-600 font-extrabold ';
+          if ((checked && currentMode.value !== 'mock') || mockSubmitted.value) {
+            const user = ExamRuntime.normalizeAnswer(userAns);
+            const correct = ExamRuntime.normalizeAnswer(q.answer);
+            if (user === correct) return base + 'bg-emerald-500 text-white border-emerald-600';
+            if (userAns) return base + 'bg-rose-500 text-white border-rose-600';
+            return base + 'bg-slate-100 text-slate-400 border-slate-300';
+          }
+          if (userAns) return base + 'bg-indigo-600 text-white border-indigo-700';
+          return base + 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200';
+        };
+
+        const stopMockTimer = () => {
+          if (mockTimerId.value) {
+            clearInterval(mockTimerId.value);
+            mockTimerId.value = null;
+          }
+        };
+
+        const switchMode = (mode) => {
+          const prev = currentMode.value;
+          if (prev === 'mock' && mode !== 'mock' && !mockSubmitted.value) {
+            stopMockTimer();
+            applyTimerState(ExamRuntime.onLeaveMock(mockTimerState, nowSeconds()));
+            saveState();
+          }
+          currentMode.value = mode;
+          currentQIndex.value = 0;
+          if (mode === 'mock' && !mockSubmitted.value) {
+            const entered = ExamRuntime.onEnterMock(mockTimerState, nowSeconds(), durationSeconds());
+            applyTimerState(entered);
+            if (entered.autosubmit) {
+              confirmSubmitMock({ early: false });
+            } else {
+              startMockTimer();
+            }
+            saveState();
+          }
+        };
+        const switchModule = (idx) => {
+          activeModuleIdx.value = idx;
+          currentQIndex.value = 0;
+        };
+
+        const formatTimer = (seconds) => {
+          const m = Math.floor(seconds / 60);
+          const s = seconds % 60;
+          return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        };
+
+        const startMockTimer = () => {
+          stopMockTimer();
+          if (mockSubmitted.value) return;
+          if (currentMode.value !== 'mock') return;
+          if (!mockTimeRemaining.value) {
+            applyTimerState(ExamRuntime.persistTimer({
+              now: nowSeconds(), remaining: durationSeconds(), running: true, submitted: false
+            }));
+          } else {
+            applyTimerState(ExamRuntime.persistTimer({
+              now: nowSeconds(), remaining: mockTimeRemaining.value, running: true, submitted: false
+            }));
+          }
+          mockTimerId.value = setInterval(() => {
+            const tick = ExamRuntime.onTick({
+              mode: currentMode.value,
+              remaining: mockTimeRemaining.value,
+              submitted: mockSubmitted.value
+            });
+            mockTimeRemaining.value = tick.remaining;
+            mockTimerState = ExamRuntime.persistTimer({
+              now: nowSeconds(),
+              remaining: tick.remaining,
+              running: tick.keep_ticking,
+              submitted: mockSubmitted.value
+            });
+            if (!tick.keep_ticking) stopMockTimer();
+            if (tick.autosubmit) {
+              confirmSubmitMock({ early: false });
+            } else {
+              saveState();
+            }
+          }, 1000);
+        };
+
+        const confirmSubmitMock = (opts) => {
+          opts = opts || {};
+          if (opts.early) {
+            if (!ExamRuntime.requestEarlySubmit(window.confirm)) return;
+          }
+          stopMockTimer();
+          mockSubmitted.value = true;
+          applyTimerState(ExamRuntime.persistTimer({
+            now: nowSeconds(), remaining: 0, running: false, submitted: true
+          }));
+          const questions = mockQuestionList();
+          const groups = {};
+          let total = 0;
+          questions.forEach((q) => {
+            const key = `mock_${q.num}`;
+            checkedQuestions.value[key] = true;
+            const user = ExamRuntime.normalizeAnswer(userAnswers.value[key]);
+            const correct = ExamRuntime.normalizeAnswer(q.answer);
+            const weight = Number(getQuestionScore(q) || 0);
+            const meta = typeMeta(q);
+            if (!groups[q.type]) {
+              groups[q.type] = { type: q.type, label: questionTypeLabel(q) || meta.label || q.type, max: 0, got: 0 };
+            }
+            groups[q.type].max += weight;
+            if (user === correct) {
+              total += weight;
+              groups[q.type].got += weight;
+            } else {
+              checkAndRecordMistake(q, user);
+            }
+          });
+          mockScore.value = total;
+          mockBreakdown.value = Object.values(groups);
+          showScoreModal.value = true;
+          saveState();
+        };
+
+        const restartMockExam = () => {
+          mockQuestionList().forEach((q) => {
+            delete userAnswers.value[`mock_${q.num}`];
+            delete checkedQuestions.value[`mock_${q.num}`];
+            delete flags.value[`mock_${q.num}`];
+          });
+          mockSubmitted.value = false;
+          mockScore.value = 0;
+          mockBreakdown.value = [];
+          currentQIndex.value = 0;
+          showScoreModal.value = false;
+          applyTimerState(ExamRuntime.persistTimer({
+            now: nowSeconds(), remaining: durationSeconds(), running: true, submitted: false
+          }));
+          currentMode.value = 'mock';
+          startMockTimer();
+          saveState();
+        };
+
+        const resetProgress = () => {
+          if (confirm('确定清空所有做题记录与错题本吗？')) {
+            userAnswers.value = {};
+            checkedQuestions.value = {};
+            flags.value = {};
+            mistakes.value = [];
+            stopMockTimer();
+            applyTimerState(ExamRuntime.persistTimer({
+              now: nowSeconds(), remaining: durationSeconds(), running: false, submitted: false
+            }));
+            saveState();
+            showAnswerSheet.value = false;
+          }
+        };
+
+        const loadExamData = async () => {
+          try {
+            const res = await fetch('questions.json?v=9a11f655', { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            examData.value = await res.json();
+            examFingerprint = ExamRuntime.questionFingerprint(examData.value);
+            const session = loadSavedState();
+            dataReady.value = true;
+            if (session.autosubmit && currentMode.value === 'mock') {
+              confirmSubmitMock({ early: false });
+            }
+          } catch (e) {
+            dataError.value = '无法加载 questions.json，请用 python3 -m http.server 8000 -d web 打开本页。';
+            console.error(e);
+          }
+        };
+
+        onMounted(() => {
+          loadExamData();
+        });
+
+        return {
+          examData,
+          dataReady,
+          dataError,
+          currentMode,
+          activeModuleIdx,
+          currentQIndex,
+          currentQuestions,
+          currentQuestion,
+          currentQKey,
+          isMultiChoice,
+          isQuestionChecked,
+          isAnswerCorrect,
+          hasMultiSelection,
+          formatMath,
+          userAnswers,
+          getUserAnswer,
+          getOptionLetter,
+          getOptionText,
+          handleSelectOption,
+          submitMultiChoice,
+          getOptionClass,
+          getOptionBadgeClass,
+          getTypeBadgeClass,
+          priorityLabel,
+          priorityBadgeClass,
+          questionTypeLabel,
+          getQuestionScore,
+          prevQuestion,
+          nextQuestion,
+          jumpToQuestion,
+          toggleFlag,
+          isFlagged,
+          getBubbleClass,
+          switchMode,
+          switchModule,
+          showAnswerSheet,
+          showScoreModal,
+          mockTimeRemaining,
+          formatTimer,
+          confirmSubmitMock,
+          mockSubmitted,
+          mockScore,
+          mockBreakdown,
+          mockMaxScore,
+          passScore,
+          formatDisclaimer,
+          practiceCount,
+          mockCount,
+          restartMockExam,
+          resetProgress,
+          mistakes
+        };
+      }
+    }).mount('#app');
+    }
+  </script>
+</body>
+</html>
