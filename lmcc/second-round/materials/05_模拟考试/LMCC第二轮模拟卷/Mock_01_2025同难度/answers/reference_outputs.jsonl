@@ -1,0 +1,11 @@
+{"section": "t1", "id": "01-t1-1", "raw_output": "{\"student_id\": \"student_001\", \"judgements\": [true, true, true, true, true]}"}
+{"section": "t1", "id": "01-t1-2", "raw_output": "{\"student_id\": \"student_002\", \"judgements\": [false, true, false, true, false]}"}
+{"section": "t1", "id": "01-t1-3", "raw_output": "{\"student_id\": \"student_003\", \"judgements\": [true, false, true, false, true]}"}
+{"section": "t1", "id": "01-t1-4", "raw_output": "{\"student_id\": \"student_004\", \"judgements\": [false, false, true, true, false]}"}
+{"section": "t1", "id": "01-t1-5", "raw_output": "{\"student_id\": \"student_005\", \"judgements\": [true, true, false, false, true]}"}
+{"section": "t2", "id": "01-rag-1", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"96\"}"}
+{"section": "t2", "id": "01-rag-2", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"59\"}"}
+{"section": "t2", "id": "01-rag-3", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"63\"}"}
+{"section": "t2", "id": "01-rag-4", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"9\"}"}
+{"section": "t2", "id": "01-rag-5", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"1500\"}"}
+{"section": "t2", "id": "01-rag-6", "raw_output": "{\"reasoning\": \"按参考方法计算\", \"answer\": \"225\"}"}

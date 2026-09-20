@@ -1,0 +1,5 @@
+[
+  {"id":"u1","problem":"单位换算 2.5升 等于多少毫升","answer":"2500","explanation":"1 升 = 1000 毫升"},
+  {"id":"u2","problem":"单位换算 3千克 等于多少克","answer":"3000","explanation":"1 千克 = 1000 克"},
+  {"id":"u3","problem":"时间换算 4分钟 等于多少秒","answer":"240","explanation":"1 分钟 = 60 秒"}
+]

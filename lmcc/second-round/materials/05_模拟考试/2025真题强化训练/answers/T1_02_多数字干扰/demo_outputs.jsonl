@@ -1,0 +1,3 @@
+{"section":"t1","id":"t1-02-p1","raw_output":"{\"student_id\":\"noise_001\",\"judgements\":[true,true,true,true]}"}
+{"section":"t1","id":"t1-02-p2","raw_output":"{\"student_id\":\"noise_002\",\"judgements\":[false,false,true,true]}"}
+{"section":"t1","id":"t1-02-h1","raw_output":"{\"student_id\":\"noise_003\",\"judgements\":[true,true,false,false]}"}

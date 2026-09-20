@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-bank-1",
+    "problem": "折扣 原价80元 打七五折",
+    "answer": "60",
+    "explanation": "80 × 0.75 = 60"
+  },
+  {
+    "id": "01-bank-2",
+    "problem": "余数 除数5 商7 余数4",
+    "answer": "39",
+    "explanation": "5 × 7 + 4 = 39"
+  },
+  {
+    "id": "01-bank-3",
+    "problem": "面积 长方形 长6 宽4",
+    "answer": "24",
+    "explanation": "6 × 4 = 24"
+  },
+  {
+    "id": "01-bank-4",
+    "problem": "平均数 3个数 12 18 21",
+    "answer": "17",
+    "explanation": "51 ÷ 3 = 17"
+  },
+  {
+    "id": "01-bank-5",
+    "problem": "单位换算 2升 毫升",
+    "answer": "2000",
+    "explanation": "2 × 1000 = 2000"
+  }
+]

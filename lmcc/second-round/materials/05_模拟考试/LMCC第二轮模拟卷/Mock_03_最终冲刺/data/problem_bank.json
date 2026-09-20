@@ -1,0 +1,32 @@
+[
+  {
+    "id": "03-bank-1",
+    "problem": "比例 3份对应45个 总数5份",
+    "answer": "75",
+    "explanation": "45 ÷ 3 × 5 = 75"
+  },
+  {
+    "id": "03-bank-2",
+    "problem": "折扣 原价100元 打八折",
+    "answer": "80",
+    "explanation": "100 × 0.8 = 80"
+  },
+  {
+    "id": "03-bank-3",
+    "problem": "平均数 4个数 8 10 12 14",
+    "answer": "11",
+    "explanation": "44 ÷ 4 = 11"
+  },
+  {
+    "id": "03-bank-4",
+    "problem": "余数 除数8 商6 余数3",
+    "answer": "51",
+    "explanation": "8 × 6 + 3 = 51"
+  },
+  {
+    "id": "03-bank-5",
+    "problem": "容量 0.75升 毫升",
+    "answer": "750",
+    "explanation": "0.75 × 1000 = 750"
+  }
+]

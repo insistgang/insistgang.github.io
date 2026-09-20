@@ -1,0 +1,5 @@
+[
+  {"id":"m1","problem":"平均数 3个数 12 18 21","answer":"17","explanation":"(12+18+21) ÷ 3 = 17"},
+  {"id":"m2","problem":"票价 3张 每张18元 服务费5元","answer":"59","explanation":"3 × 18 + 5 = 59"},
+  {"id":"m3","problem":"速度 距离120公里 时间2小时","answer":"60","explanation":"距离 ÷ 时间 = 60"}
+]

@@ -1,0 +1,5 @@
+{"section":"t1","id":"mix2-t1-p1","raw_output":"{\"student_id\":\"final_001\",\"judgements\":[true,true,true,true]}"}
+{"section":"t1","id":"mix2-t1-h1","raw_output":"{\"student_id\":\"final_002\",\"judgements\":[false,true,true,false]}"}
+{"section":"t2","id":"mix2-t2-p1","raw_output":"{\"reasoning\":\"(6+8+10+12+14) ÷ 5 = 10\",\"answer\":\"10\"}"}
+{"section":"t2","id":"mix2-t2-p2","raw_output":"{\"reasoning\":\"2.75 × 1000 = 2750\",\"answer\":\"2750\"}"}
+{"section":"t2","id":"mix2-t2-h1","raw_output":"{\"reasoning\":\"10 × 9 + 6 = 96\",\"answer\":\"96\"}"}

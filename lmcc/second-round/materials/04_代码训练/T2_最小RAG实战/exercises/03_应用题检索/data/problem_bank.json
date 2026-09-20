@@ -1,0 +1,5 @@
+[
+  {"id":"a1","problem":"平均数 3个数 12 18 21 的平均值","answer":"17","explanation":"总和 51，51 ÷ 3 = 17"},
+  {"id":"a2","problem":"票价 3张票 每张18元 服务费5元","answer":"59","explanation":"3 × 18 + 5 = 59"},
+  {"id":"a3","problem":"阅读 5天 每天14页 一共多少页","answer":"70","explanation":"5 × 14 = 70"}
+]
