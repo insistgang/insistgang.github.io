@@ -1,0 +1,2 @@
+# 本训练包的自测、评分器和 submission.py 只依赖 Python 3 标准库。
+# 在 2025 官方评测器环境中运行 T1 时，官方环境另行提供 torch、transformers、mindnlp 等依赖。

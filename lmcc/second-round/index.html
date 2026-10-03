@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>LMCC-A 第二轮实战冲刺</title>
+  <style>
+    :root { --ink:#121a2b; --muted:#667085; --line:#e5eaf2; --page:#f4f7fb; --navy:#101827; --blue:#4457e8; --blue-bg:#edf0ff; --green:#0e927d; --green-bg:#e9fbf6; --rose:#bf3858; --rose-bg:#fff0f3; --shadow:0 14px 38px rgba(20,33,61,.08); }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; min-width:320px; color:var(--ink); background:var(--page); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    a { color:inherit; } button { font:inherit; cursor:pointer; } .shell { width:min(1160px,calc(100% - 32px)); margin:0 auto; }
+    .topbar { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(229,234,242,.94); background:rgba(255,255,255,.93); backdrop-filter:blur(18px); }
+    .top-inner { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; gap:10px; align-items:center; font-size:15px; font-weight:850; text-decoration:none; letter-spacing:-.02em; } .mark { width:31px; height:31px; display:grid; place-items:center; border-radius:9px; color:white; background:linear-gradient(135deg,#6575ff,#3443c7); box-shadow:0 6px 15px rgba(68,87,232,.25); }
+    .nav { display:flex; gap:5px; } .nav a { padding:8px 10px; border-radius:8px; color:#59667a; font-size:13px; font-weight:700; text-decoration:none; } .nav a:hover { color:var(--navy); background:#f2f5fa; }
+    .hero { padding:48px 0 31px; color:white; background:radial-gradient(circle at 78% 15%,rgba(103,232,249,.19),transparent 31%),radial-gradient(circle at 18% 70%,rgba(129,140,248,.23),transparent 31%),linear-gradient(130deg,#0d1424 0%,#16234e 60%,#263872 100%); }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(255px,.7fr); align-items:center; gap:36px; }
+    .eyebrow { display:inline-block; padding:6px 10px; border:1px solid rgba(255,255,255,.2); border-radius:999px; color:#dfe7ff; background:rgba(255,255,255,.09); font-size:12px; font-weight:800; letter-spacing:.05em; }
+    h1 { margin:12px 0; font-size:clamp(32px,5vw,51px); line-height:1.08; letter-spacing:-.045em; } .hero p { max-width:650px; margin:0; color:#cad6f5; font-size:15px; line-height:1.75; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:23px; } .button { display:inline-flex; min-height:41px; align-items:center; justify-content:center; padding:0 15px; border:1px solid transparent; border-radius:10px; font-size:13px; font-weight:800; text-decoration:none; transition:.18s ease; }
+    .primary { color:#172553; background:white; box-shadow:0 8px 20px rgba(0,0,0,.14); } .primary:hover { transform:translateY(-1px); background:#f6f8ff; } .ghost { color:white; border-color:rgba(255,255,255,.26); background:rgba(255,255,255,.08); } .ghost:hover { background:rgba(255,255,255,.16); }
+    .exam-card { padding:22px; border:1px solid rgba(255,255,255,.18); border-radius:17px; background:rgba(7,13,31,.31); box-shadow:0 18px 45px rgba(1,7,23,.2); } .exam-card small { color:#b9c9f6; font-weight:700; } .exam-card strong { display:block; margin:6px 0 13px; font-size:23px; letter-spacing:-.03em; } .exam-card ul { display:grid; gap:9px; margin:0; padding:0; color:#d3ddf9; font-size:13px; list-style:none; } .exam-card b { color:white; }
+    .notice { padding:12px 0; color:#263867; background:#eaf0ff; font-size:13px; line-height:1.5; } .notice .shell { display:flex; gap:10px; align-items:center; }
+    main { padding:28px 0 62px; } .dashboard { display:grid; grid-template-columns:1.3fr .9fr; gap:20px; } .card { border:1px solid var(--line); border-radius:16px; background:white; box-shadow:var(--shadow); } .pad { padding:23px; }
+    h2 { margin:0; font-size:20px; letter-spacing:-.025em; } h3 { margin:0; font-size:16px; letter-spacing:-.02em; } .caption { margin:8px 0 0; color:var(--muted); font-size:13px; line-height:1.65; }
+    .track { display:grid; grid-template-columns:145px 1fr auto; gap:12px; align-items:center; margin-top:18px; } .track-title { font-size:13px; font-weight:800; } .bar { height:10px; overflow:hidden; border-radius:999px; background:#e8edf6; } .bar div { width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,#6173ff,#31b6a3); transition:width .2s ease; } #progress-value { color:#58657a; font-size:12px; font-variant-numeric:tabular-nums; }
+    .timer { display:grid; place-items:center; padding:24px; text-align:center; } .timer-label { color:var(--muted); font-size:12px; font-weight:800; letter-spacing:.06em; } #timer { margin:7px 0 16px; color:#15224a; font:800 38px ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:-.08em; } .controls { display:flex; gap:8px; } .mini { padding:8px 10px; border:1px solid #d8deea; border-radius:8px; color:#334155; background:white; font-size:12px; font-weight:800; } .mini:hover { background:#f7f9fd; } .start { color:#3546c9; border-color:#b9c5ff; background:#f0f3ff; }
+    .tabs { display:flex; gap:8px; overflow-x:auto; margin:25px 0 18px; padding:3px; border:1px solid var(--line); border-radius:12px; background:#eef2f7; } .tab { white-space:nowrap; padding:10px 13px; border:0; border-radius:9px; color:#5b687b; background:transparent; font-size:13px; font-weight:800; } .tab[aria-selected="true"] { color:#2738bf; background:white; box-shadow:0 3px 9px rgba(31,47,86,.08); }
+    .panel[hidden] { display:none; } .heading { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; margin-bottom:14px; } .heading p { max-width:670px; margin:7px 0 0; color:var(--muted); font-size:13px; line-height:1.6; }
+    .grid2,.drills,.mocks,.library { display:grid; gap:15px; } .grid2,.drills { grid-template-columns:repeat(2,minmax(0,1fr)); } .mocks,.library { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .unit,.drill,.mock,.lib { position:relative; overflow:hidden; padding:19px; border:1px solid var(--line); border-radius:14px; background:white; } .unit:before,.drill:before,.mock:before,.lib:before { position:absolute; top:0; left:0; width:100%; height:3px; content:""; background:#aab4c7; } .t1:before { background:#6575ff; } .t2:before { background:#12a58d; } .mix:before,.mock:before { background:linear-gradient(90deg,#6575ff,#12a58d); } .kicker { display:block; margin-bottom:6px; color:#64748b; font-size:11px; font-weight:850; letter-spacing:.07em; } .unit p,.drill p,.mock p,.lib p { margin:8px 0 0; color:#667085; font-size:13px; line-height:1.62; }
+    .footer-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:16px; } .link { color:#3e50ce; font-size:12px; font-weight:800; text-decoration:none; } .link:hover { text-decoration:underline; } .check { display:inline-flex; align-items:center; gap:6px; color:#607087; font-size:12px; font-weight:700; } .check input { width:15px; height:15px; accent-color:#4658e8; }
+    .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:13px; } .chip { min-height:23px; padding:3px 8px; border-radius:999px; color:#536073; background:#f2f5f9; font-size:11px; font-weight:750; } .chip.t1 { color:#3849c7; background:#eef0ff; } .chip.t2 { color:#087b6c; background:#e7fbf5; }
+    .code { position:relative; margin-top:15px; overflow:auto; border:1px solid #25304d; border-radius:12px; color:#eaf0ff; background:#121a2b; } .code pre { margin:0; padding:15px 17px; font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre; } .copy { position:absolute; top:8px; right:8px; padding:5px 8px; border:1px solid #46557e; border-radius:7px; color:#cbd5ee; background:#1d2944; font-size:11px; } .copy:hover { background:#293858; }
+    .answer-toggle { margin-top:14px; padding:8px 10px; border:1px solid #f0c9d3; border-radius:8px; color:#a4304e; background:#fff7f8; font-size:12px; font-weight:800; } .answer-toggle:hover { background:#fff0f3; } .data-answer-panel { margin-top:10px; padding:12px; border:1px solid #fde0e6; border-radius:10px; color:#6f3040; background:var(--rose-bg); font-size:12px; line-height:1.65; } .hidden { display:none; }
+    .flow { display:grid; grid-template-columns:repeat(5,1fr); overflow:hidden; margin-top:18px; border:1px solid var(--line); border-radius:13px; } .flow div { min-height:93px; padding:14px; border-right:1px solid var(--line); background:white; } .flow div:last-child { border-right:0; } .flow b { display:block; color:#3244c8; font-size:12px; } .flow span { display:block; margin-top:7px; color:#64748b; font-size:12px; line-height:1.45; }
+    .warning { display:flex; gap:10px; margin-top:20px; padding:15px; border:1px solid #f6d9a2; border-radius:12px; color:#85520c; background:#fff5de; font-size:13px; line-height:1.6; } .warning strong { color:#714200; }
+    .resources { display:grid; gap:9px; margin-top:20px; } .resource { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:white; text-decoration:none; } .resource div { min-width:0; } .resource strong { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; } .resource span { display:block; margin-top:3px; color:var(--muted); font-size:12px; }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:#667085; background:white; font-size:12px; } footer .shell { display:flex; justify-content:space-between; gap:20px; }
+    @media(max-width:850px){ .hero-grid,.dashboard{grid-template-columns:1fr}.mocks,.library{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow div{min-height:auto;border-right:0;border-bottom:1px solid var(--line)}.flow div:last-child{border-bottom:0} }
+    @media(max-width:620px){ .shell{width:min(100% - 24px,1160px)}.nav a:not(.back){display:none}.hero{padding-top:36px}.grid2,.drills{grid-template-columns:1fr}.track{grid-template-columns:105px 1fr}.track #progress-value{grid-column:2}.heading{align-items:flex-start;flex-direction:column}footer .shell{flex-direction:column} }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="shell top-inner"><a class="brand" href="./" aria-label="第二轮实战冲刺首页"><span class="mark">Ⅱ</span><span>LMCC-A · 第二轮</span></a><nav class="nav" aria-label="页面导航"><a class="back" href="../">← 首轮刷题</a><a href="#training">训练</a><a href="#mocks">模拟卷</a><a href="#library">资料库</a></nav></div></header>
+  <section class="hero"><div class="shell hero-grid"><div><span class="eyebrow">2026 成人组 · 第二轮 · 代码实战</span><h1>把真题规律，<br>压成能落笔的代码。</h1><p>这里不是泛泛教程。按 2025 成人组第二轮 T1/T2 的输入输出、评测器和隐藏测试逻辑组织：先写对格式，再写稳算法，最后用 3 小时模拟卷收口。</p><div class="actions"><a class="button primary" href="#training">从 T1 / T2 开练</a><a class="button ghost" href="#mocks">进入 3 小时模拟</a></div></div><aside class="exam-card" aria-label="考试信息"><small>官方公布的第二轮信息</small><strong>2026.10.18 · 09:00–12:00</strong><ul><li><b>时长：</b>180 分钟</li><li><b>形式：</b>Python 编程任务</li><li><b>重点：</b>严格 JSON、Tensor、检索、RAG</li><li><b>基准：</b>2025 官方 T1 + T2</li></ul></aside></div></section>
+  <div class="notice"><div class="shell"><span>✦</span><span><strong>使用顺序：</strong>先跑 starter 与 evaluator，再做变式；模拟卷开始后不看 answers/。网页只把答案默认折叠，真正的自测以本地评测器为准。</span></div></div>
+  <main class="shell">
+    <section class="dashboard" aria-labelledby="dashboard-title"><div class="card pad"><h2 id="dashboard-title">冲刺进度</h2><p class="caption">勾选状态只保存在当前浏览器；它不替代仓库内的 progress.md。</p><div class="track"><span class="track-title">训练完成度</span><div class="bar" aria-label="训练完成进度"><div id="progress-bar"></div></div><span id="progress-value">0 / 0</span></div></div><div class="card timer"><span class="timer-label">正式模拟倒计时 · 3 小时</span><strong id="timer">03:00:00</strong><div class="controls"><button id="timer-start" class="mini start" type="button">开始</button><button id="timer-pause" class="mini" type="button">暂停</button><button id="timer-reset" class="mini" type="button">重置</button></div></div></section>
+    <div class="tabs" role="tablist" aria-label="第二轮内容"><button class="tab" role="tab" aria-selected="true" aria-controls="overview" id="overview-tab" data-tab="overview">考试地图</button><button class="tab" role="tab" aria-selected="false" aria-controls="t1" id="t1-tab" data-tab="t1">T1 · 严格 JSON</button><button class="tab" role="tab" aria-selected="false" aria-controls="t2" id="t2-tab" data-tab="t2">T2 · 最小 RAG</button><button class="tab" role="tab" aria-selected="false" aria-controls="training" id="training-tab" data-tab="training">10 道强化题</button><button class="tab" role="tab" aria-selected="false" aria-controls="mocks" id="mocks-tab" data-tab="mocks">3 套模拟卷</button><button class="tab" role="tab" aria-selected="false" aria-controls="library" id="library-tab" data-tab="library">考前资料库</button></div>
+
+    <section class="panel" id="overview" role="tabpanel" aria-labelledby="overview-tab"><div class="heading"><div><h2>一张考试地图</h2><p>第二轮内容被压缩成 5 条可执行路径。每条先从 starter 出发，再用 evaluator 自证，不需要额外扩展无关框架。</p></div></div><div class="flow"><div><b>01 · 读约束</b><span>README、允许修改位置、输入和输出一行不漏。</span></div><div><b>02 · 跑基线</b><span>先让 starter 与 public data 走通，再动核心函数。</span></div><div><b>03 · 写最小解</b><span>T1 写格式；T2 写相似度、Top-K、消息组装。</span></div><div><b>04 · 自测边界</b><span>空值、类型、长度、布尔值、并列排序和 JSONL。</span></div><div><b>05 · 模拟收口</b><span>3 小时内完成两题，最后只按 evaluator 修正。</span></div></div><div class="warning"><span>⚠</span><span><strong>高风险提醒：</strong>模型回答“看起来对”不等于可得分。评测器会检查 JSON 是否可解析、字段名与类型是否精确、输出条数、Top-K 顺序以及是否夹杂多余文本。</span></div><div class="grid2" style="margin-top:20px"><article class="unit t1"><span class="kicker">50 分风格 · T1</span><h3>文本抽取 + Prompt + JSONL</h3><p>把原始文本、字段定义和示例压入 prompt；从模型文本中取出唯一 JSON，再逐行写出。</p><div class="footer-row"><a class="link" href="materials/01_真题分析/T1_数学作业批改助手.md" target="_blank" rel="noopener">看官方题型拆解 →</a><label class="check"><input type="checkbox" data-progress="overview-t1">已掌握</label></div></article><article class="unit t2"><span class="kicker">50 分风格 · T2</span><h3>Embedding + cosine + Top-K + RAG</h3><p>先把检索做成确定性模块，再把命中文档拼进 messages，最终保持与 T1 相同的 JSON 纪律。</p><div class="footer-row"><a class="link" href="materials/01_真题分析/T2_RAG数学解答助手.md" target="_blank" rel="noopener">看官方题型拆解 →</a><label class="check"><input type="checkbox" data-progress="overview-t2">已掌握</label></div></article></div></section>
+
+    <section class="panel" id="t1" role="tabpanel" aria-labelledby="t1-tab" hidden><div class="heading"><div><h2>T1 · 严格 JSON 批改</h2><p>目标不是写出“聪明”的 prompt，而是让每条输入稳定产出一个满足 schema 的对象。先看标准解法，再从 starter 默写。</p></div><a class="link" href="materials/04_代码训练/T1_严格JSON批改/T1_逐步拆解.md" target="_blank" rel="noopener">完整逐步拆解 →</a></div><div class="grid2"><article class="unit t1"><span class="kicker">必须会写</span><h3>Prompt 的约束顺序</h3><p>先角色与任务，再给字段和类型，接着给原文，最后明确“只输出 JSON，不要 Markdown”。</p><div class="code"><button class="copy" type="button" data-copy="t1-prompt">复制</button><pre id="t1-prompt">prompt = f"""你是批改助手。
+从题目文本抽取答案并判断对错。
+只输出一个 JSON 对象，不要解释、不要 Markdown。
+字段：answer(str), is_correct(bool), reason(str)
+题目：{question}
+学生答案：{student_answer}"""</pre></div><div class="footer-row"><a class="link" href="materials/04_代码训练/T1_严格JSON批改/starter/submission.py" target="_blank" rel="noopener">打开 starter.py →</a><label class="check"><input type="checkbox" data-progress="t1-prompt">默写过</label></div></article><article class="unit t1"><span class="kicker">必须会查</span><h3>评测器的硬边界</h3><p>一行一条 JSON、字段完整、类型正确、不能多字、输入多少条就输出多少条。先验证再提交。</p><div class="code"><button class="copy" type="button" data-copy="t1-json">复制</button><pre id="t1-json">record = json.loads(model_text.strip())
+assert isinstance(record["answer"], str)
+assert isinstance(record["is_correct"], bool)
+assert isinstance(record["reason"], str)
+print(json.dumps(record, ensure_ascii=False))</pre></div><div class="footer-row"><a class="link" href="materials/04_代码训练/T1_严格JSON批改/tools/t1_validator.py" target="_blank" rel="noopener">打开 JSON 验证器 →</a><label class="check"><input type="checkbox" data-progress="t1-json">跑通过</label></div></article></div><div class="drills" style="margin-top:16px"><article class="drill t1"><span class="kicker">T1 练习 01–03</span><h3>先处理简单干扰</h3><p>数字提取、单位括号、多数字干扰。每题有独立测试数据与答案文件。</p><div class="footer-row"><a class="link" href="materials/04_代码训练/T1_严格JSON批改/exercises/01_数字提取入门/题目.md" target="_blank" rel="noopener">从练习 01 开始 →</a><label class="check"><input type="checkbox" data-progress="t1-basic">完成</label></div></article><article class="drill t1"><span class="kicker">T1 练习 04–05</span><h3>应用题到近真题</h3><p>不再依赖唯一数字。练 prompt 的抽取范围、纠错理由和 JSONL 输出稳定性。</p><div class="footer-row"><a class="link" href="materials/04_代码训练/T1_严格JSON批改/exercises/05_近真题综合/题目.md" target="_blank" rel="noopener">挑战练习 05 →</a><label class="check"><input type="checkbox" data-progress="t1-advanced">完成</label></div></article></div><button class="answer-toggle" type="button" aria-expanded="false" data-answer-toggle="t1-answer">显示 T1 自检要点（不显示标准答案）</button><div id="t1-answer" class="data-answer-panel hidden" hidden>提交前逐项核对：① json.loads 能成功；② is_correct 是 Python bool 而非字符串；③ 输出行数等于输入行数；④ 没有 Markdown 围栏、解释文字或额外键；⑤ 不要对公开样例硬编码。</div></section>
+
+    <section class="panel" id="t2" role="tabpanel" aria-labelledby="t2-tab" hidden><div class="heading"><div><h2>T2 · 最小 RAG 实战</h2><p>检索模块要可复现：向量归一化、cosine、稳定 Top-K、上下文拼接。LLM 只负责最后的结构化回答。</p></div><a class="link" href="materials/04_代码训练/T2_最小RAG实战/T2逐步拆解.md" target="_blank" rel="noopener">完整逐步拆解 →</a></div><div class="grid2"><article class="unit t2"><span class="kicker">必须会写</span><h3>cosine similarity + Top-K</h3><p>先防止零向量，再按分数降序取 K 个索引。并列和输入维度都要按题面/评测器处理。</p><div class="code"><button class="copy" type="button" data-copy="t2-retrieve">复制</button><pre id="t2-retrieve">q = F.normalize(query.float(), dim=-1)
+d = F.normalize(docs.float(), dim=-1)
+scores = d @ q
+top_scores, top_ids = torch.topk(scores, k=top_k)
+retrieved = [documents[i] for i in top_ids.tolist()]</pre></div><div class="footer-row"><a class="link" href="materials/04_代码训练/T2_最小RAG实战/T2_starter.py" target="_blank" rel="noopener">打开 T2_starter.py →</a><label class="check"><input type="checkbox" data-progress="t2-retrieve">默写过</label></div></article><article class="unit t2"><span class="kicker">必须会查</span><h3>messages 与严格输出</h3><p>只拼接命中文档，不混入答案文件。最终响应沿用 T1 的 JSON schema 和本地验证。</p><div class="code"><button class="copy" type="button" data-copy="t2-rag">复制</button><pre id="t2-rag">context = "\n\n".join(retrieved)
+messages = [
+  {"role": "system", "content": system_prompt},
+  {"role": "user", "content": "参考资料：\n" + context + "\n\n问题：" + query},
+]
+result = call_llm(messages)</pre></div><div class="footer-row"><a class="link" href="materials/04_代码训练/T2_最小RAG实战/batch_evaluate.py" target="_blank" rel="noopener">打开批量自测 →</a><label class="check"><input type="checkbox" data-progress="t2-rag">跑通过</label></div></article></div><div class="drills" style="margin-top:16px"><article class="drill t2"><span class="kicker">T2 练习 01–03</span><h3>检索的最小闭环</h3><p>折扣、单位换算、应用题。每道都有 problem_bank、JSONL 和可运行测例。</p><div class="footer-row"><a class="link" href="materials/04_代码训练/T2_最小RAG实战/exercises/01_折扣检索入门/题目.md" target="_blank" rel="noopener">从练习 01 开始 →</a><label class="check"><input type="checkbox" data-progress="t2-basic">完成</label></div></article><article class="drill t2"><span class="kicker">T2 练习 04–05</span><h3>多步骤到近真题</h3><p>先排查检索，再检查 Prompt；不要用模型不稳定性掩盖确定性代码的 bug。</p><div class="footer-row"><a class="link" href="materials/04_代码训练/T2_最小RAG实战/exercises/05_近真题综合/题目.md" target="_blank" rel="noopener">挑战练习 05 →</a><label class="check"><input type="checkbox" data-progress="t2-advanced">完成</label></div></article></div><button class="answer-toggle" type="button" aria-expanded="false" data-answer-toggle="t2-answer">显示 T2 自检要点（不显示标准答案）</button><div id="t2-answer" class="data-answer-panel hidden" hidden>提交前逐项核对：① Embedding 维度匹配；② 归一化维度写对；③ torch.topk 的 k 不越界；④ 按分数正确排序；⑤ RAG 上下文只来自检索结果；⑥ 最终 JSON/JSONL 仍按 T1 的强约束输出。</div></section>
+
+    <section class="panel" id="training" role="tabpanel" aria-labelledby="training-tab" hidden><div class="heading"><div><h2>10 道真题强化训练</h2><p>4 道 T1、4 道 T2、2 道综合。题目、starter、公开数据、评测脚本和答案严格分目录；先打开题目，完成后才查看 answers/。</p></div><a class="link" href="materials/05_模拟考试/2025真题强化训练/真题强化训练说明.md" target="_blank" rel="noopener">训练说明 →</a></div><div class="drills"><article class="drill t1"><span class="kicker">T1_01 · T1_02</span><h3>答案提取 / 多数字干扰</h3><p>练 schema 约束和抽取边界，避免从题干中错拿数字。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/T1_01_答案提取/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-t1-01">已完成</label></div></article><article class="drill t1"><span class="kicker">T1_03 · T1_04</span><h3>单位与应用 / 近真题批改</h3><p>练理由字段和不确定表达，重点是输出契约而不是修辞。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/T1_03_单位与应用/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-t1-02">已完成</label></div></article><article class="drill t2"><span class="kicker">T2_01 · T2_02</span><h3>折扣检索 / 单位检索</h3><p>先证明 cosine 与 Top-K 正确，再让模型利用检索内容生成字段。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/T2_01_折扣检索/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-t2-01">已完成</label></div></article><article class="drill t2"><span class="kicker">T2_03 · T2_04</span><h3>关系检索 / 近真题 RAG</h3><p>练多文档上下文和隐藏样例泛化，不允许用公开结果表查答案。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/T2_03_关系检索/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-t2-02">已完成</label></div></article><article class="drill mix"><span class="kicker">综合_01</span><h3>批改后检索</h3><p>先做 T1 结构化抽取，再把可信字段交给 T2；练模块边界。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/综合_01_批改后检索/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-mix-01">已完成</label></div></article><article class="drill mix"><span class="kicker">综合_02</span><h3>双任务限时</h3><p>练 3 小时内的取舍：先让每条任务有可提交版本，再逐项补强。</p><div class="footer-row"><a class="link" href="materials/05_模拟考试/2025真题强化训练/questions/综合_02_双任务限时/题目.md" target="_blank" rel="noopener">打开题目 →</a><label class="check"><input type="checkbox" data-progress="drill-mix-02">已完成</label></div></article></div><div class="resources"><a class="resource" href="materials/05_模拟考试/2025真题强化训练/T1_T2通用做题模板.md" target="_blank" rel="noopener"><div><strong>T1 / T2 通用做题模板</strong><span>看到题型后，按固定步骤落代码。</span></div><b class="link">打开 →</b></a><a class="resource" href="materials/05_模拟考试/2025真题强化训练/高频错误清单.md" target="_blank" rel="noopener"><div><strong>高频错误清单</strong><span>提交前按 evaluator 风格做最后排查。</span></div><b class="link">打开 →</b></a></div></section>
+
+    <section class="panel" id="mocks" role="tabpanel" aria-labelledby="mocks-tab" hidden><div class="heading"><div><h2>3 套完整模拟卷 · 3 小时</h2><p>每套都有 exam、starter、data、evaluator、answers 和解析。答案没有放在题目路径里；开始前勾选“已开始”，时间到后再去打开 answers/。</p></div><a class="link" href="materials/05_模拟考试/LMCC第二轮模拟卷/README.md" target="_blank" rel="noopener">模拟卷总说明 →</a></div><div class="mocks"><article class="mock"><span class="kicker">MOCK 01</span><h3>2025 同难度</h3><p>以官方 T1/T2 的代码骨架和评分点作为对齐基线，适合第一次完整计时。</p><div class="chips"><span class="chip">180 分钟</span><span class="chip t1">T1</span><span class="chip t2">T2</span></div><div class="footer-row"><a class="link" href="materials/05_模拟考试/LMCC第二轮模拟卷/Mock_01_2025同难度/README.md" target="_blank" rel="noopener">打开试卷 →</a><label class="check"><input type="checkbox" data-progress="mock-01">已完成</label></div></article><article class="mock"><span class="kicker">MOCK 02</span><h3>合理变式</h3><p>保持题型不变，改变文本、文档和边界条件；检验是否真正掌握了结构。</p><div class="chips"><span class="chip">180 分钟</span><span class="chip t1">T1</span><span class="chip t2">T2</span></div><div class="footer-row"><a class="link" href="materials/05_模拟考试/LMCC第二轮模拟卷/Mock_02_合理变式/README.md" target="_blank" rel="noopener">打开试卷 →</a><label class="check"><input type="checkbox" data-progress="mock-02">已完成</label></div></article><article class="mock"><span class="kicker">MOCK 03</span><h3>最终冲刺</h3><p>覆盖合理的新考法，但不引入竞赛算法题。把它当作考前最后一次全流程演练。</p><div class="chips"><span class="chip">180 分钟</span><span class="chip t1">T1</span><span class="chip t2">T2</span></div><div class="footer-row"><a class="link" href="materials/05_模拟考试/LMCC第二轮模拟卷/Mock_03_最终冲刺/README.md" target="_blank" rel="noopener">打开试卷 →</a><label class="check"><input type="checkbox" data-progress="mock-03">已完成</label></div></article></div><button class="answer-toggle" type="button" aria-expanded="false" data-answer-toggle="mock-answer">显示模拟卷完成后的复盘顺序</button><div id="mock-answer" class="data-answer-panel hidden" hidden>先记录用时、失败点、是否独立完成和是否查资料，再运行 evaluator；只定位第一个确定性错误，然后回到 starter 改最小代码。复盘记录写入 mock_results.md，不要先读 answers/解析.md。</div></section>
+
+    <section class="panel" id="library" role="tabpanel" aria-labelledby="library-tab" hidden><div class="heading"><div><h2>考前资料库</h2><p>全量资料已随页面部署：官方材料、训练代码、公开数据、评测器、答案和速查均可直接打开。网页中的答案默认折叠，但静态站点不适合作为答案权限控制。</p></div></div><div class="library"><article class="lib"><span class="kicker">官方与定位</span><h3>真题、逆向分析、优先级</h3><p>先明确评分逻辑与 S/A/B/C，再开始任何一份练习。</p><div class="footer-row"><a class="link" href="materials/02_考试逆向分析/LMCC成人组第二轮考试逆向分析报告.md" target="_blank" rel="noopener">逆向分析报告 →</a><label class="check"><input type="checkbox" data-progress="library-analysis">已阅读</label></div></article><article class="lib"><span class="kicker">考前最小集合</span><h3>终极速查 / 闭卷代码 / 流程</h3><p>考前只看这三份；不再扩展新知识点。</p><div class="footer-row"><a class="link" href="materials/07_考前速查/LMCC第二轮考前终极速查.md" target="_blank" rel="noopener">终极速查 →</a><label class="check"><input type="checkbox" data-progress="library-cheat">已阅读</label></div></article><article class="lib"><span class="kicker">节奏</span><h3>四周路线与最后 7 天</h3><p>用真题、错题、模拟和模板默写收敛到可提交的代码。</p><div class="footer-row"><a class="link" href="materials/03_四周冲刺计划/最后7天计划.md" target="_blank" rel="noopener">最后 7 天计划 →</a><label class="check"><input type="checkbox" data-progress="library-plan">已阅读</label></div></article></div><div class="resources"><a class="resource" href="materials/README.md" target="_blank" rel="noopener"><div><strong>全量第二轮训练包 README</strong><span>资料目录、运行入口与总览。</span></div><b class="link">打开 →</b></a><a class="resource" href="materials/07_考前速查/闭卷必须会写的代码.md" target="_blank" rel="noopener"><div><strong>闭卷必须会写的代码</strong><span>Prompt、JSON、Tensor、cosine、Top-K、RAG 的最小模板。</span></div><b class="link">打开 →</b></a><a class="resource" href="materials/07_考前速查/考试做题流程.md" target="_blank" rel="noopener"><div><strong>考试做题流程</strong><span>读 README → 跑 baseline → 实现 → 自测 → 最终提交检查。</span></div><b class="link">打开 →</b></a><a class="resource" href="materials/06_错题与进度/progress.md" target="_blank" rel="noopener"><div><strong>进度与错题记录</strong><span>长期记录请维护仓库里的 Markdown，而非只依赖浏览器勾选。</span></div><b class="link">打开 →</b></a></div></section>
+  </main>
+  <footer><div class="shell"><span>LMCC-A 第二轮实战冲刺 · 以公开 2025 成人组真题结构与本地评测器为训练基准。</span><a class="link" href="../">返回首轮刷题 →</a></div></footer>
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('[role="tabpanel"]'));
+      function openTab(name) {
+        tabs.forEach(function (tab) { tab.setAttribute('aria-selected', String(tab.dataset.tab === name)); });
+        panels.forEach(function (panel) { panel.hidden = panel.id !== name; });
+        history.replaceState(null, '', '#' + name);
+      }
+      tabs.forEach(function (tab) { tab.addEventListener('click', function () { openTab(tab.dataset.tab); }); });
+      var hash = location.hash.slice(1);
+      if (tabs.some(function (tab) { return tab.dataset.tab === hash; })) openTab(hash);
+
+      var storageKey = 'lmcc-second-round-progress-v1';
+      var checks = Array.prototype.slice.call(document.querySelectorAll('[data-progress]'));
+      var progress = {};
+      try { progress = JSON.parse(localStorage.getItem(storageKey) || '{}'); } catch (error) { progress = {}; }
+      function renderProgress() {
+        var done = checks.filter(function (check) { return check.checked; }).length;
+        var total = checks.length;
+        document.querySelector('#progress-bar').style.width = (total ? (done / total) * 100 : 0) + '%';
+        document.querySelector('#progress-value').textContent = done + ' / ' + total;
+      }
+      checks.forEach(function (check) {
+        check.checked = Boolean(progress[check.dataset.progress]);
+        check.addEventListener('change', function () {
+          progress[check.dataset.progress] = check.checked;
+          localStorage.setItem(storageKey, JSON.stringify(progress));
+          renderProgress();
+        });
+      });
+      renderProgress();
+
+      Array.prototype.slice.call(document.querySelectorAll('[data-answer-toggle]')).forEach(function (button) {
+        button.addEventListener('click', function () {
+          var panel = document.getElementById(button.dataset.answerToggle);
+          var next = panel.hidden;
+          panel.hidden = !next;
+          panel.classList.toggle('hidden', !next);
+          button.setAttribute('aria-expanded', String(next));
+          if (next) button.textContent = '收起自检要点';
+          else if (button.dataset.answerToggle === 'mock-answer') button.textContent = '显示模拟卷完成后的复盘顺序';
+          else button.textContent = '显示 ' + (button.dataset.answerToggle === 't1-answer' ? 'T1' : 'T2') + ' 自检要点（不显示标准答案）';
+        });
+      });
+
+      Array.prototype.slice.call(document.querySelectorAll('[data-copy]')).forEach(function (button) {
+        button.addEventListener('click', function () {
+          var source = document.getElementById(button.dataset.copy).textContent;
+          if (!navigator.clipboard) { button.textContent = '请手动复制'; return; }
+          navigator.clipboard.writeText(source).then(function () { button.textContent = '已复制'; }, function () { button.textContent = '请手动复制'; });
+          window.setTimeout(function () { button.textContent = '复制'; }, 1200);
+        });
+      });
+
+      var initialSeconds = 3 * 60 * 60;
+      var remaining = initialSeconds;
+      var timerId = null;
+      var timer = document.querySelector('#timer');
+      function renderTimer() {
+        var h = Math.floor(remaining / 3600);
+        var m = Math.floor((remaining % 3600) / 60);
+        var s = remaining % 60;
+        timer.textContent = [h, m, s].map(function (value) { return String(value).padStart(2, '0'); }).join(':');
+      }
+      document.querySelector('#timer-start').addEventListener('click', function () {
+        if (timerId || remaining === 0) return;
+        timerId = window.setInterval(function () {
+          remaining -= 1; renderTimer();
+          if (remaining === 0) { window.clearInterval(timerId); timerId = null; }
+        }, 1000);
+      });
+      document.querySelector('#timer-pause').addEventListener('click', function () { window.clearInterval(timerId); timerId = null; });
+      document.querySelector('#timer-reset').addEventListener('click', function () { window.clearInterval(timerId); timerId = null; remaining = initialSeconds; renderTimer(); });
+      renderTimer();
+
+      Array.prototype.slice.call(document.querySelectorAll('a[href^="materials/"][href$=".md"]')).forEach(function (link) {
+        var file = link.getAttribute('href').slice('materials/'.length);
+        link.href = 'read/?file=' + encodeURIComponent(file);
+        link.setAttribute('data-markdown-reader', 'true');
+      });
+    }());
+  </script>
+</body>
+</html>

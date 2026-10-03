@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=" 研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场 学 Git 时，我最缺的不是一张命令速查表，而是每次敲命令前都能回答：我现在在哪个分支，改动在哪一层，接下来会动哪段历史？  这次我在 Windows 的 E:\demo 里，从 git init 一直练到分支合并、冲突、变基和..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场",
+  "url": "https://insistgang.top/posts/git-from-zero-to-practice.html",
+  "image": "https://insistgang.top/img/git-from-zero-to-practice/00_cover.png",
+  "datePublished": "2026-09-27T14:04:11.000Z",
+  "dateModified": "2026-10-03T08:37:45.191Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "insistgang",
+      "url": "https://insistgang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/posts/git-from-zero-to-practice.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/gitcalendar/css/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">153</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/git-from-zero-to-practice/00_cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a><a class="nav-page-title" href="/"><span class="site-name">研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-09-27T14:04:11.000Z" title="发表于 2026-09-27 14:04:11">2026-09-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-03T08:37:45.191Z" title="更新于 2026-10-03 08:37:45">2026-10-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/img/git-from-zero-to-practice/00_cover.png" alt="封面：Git 记录每一步，也给改错留一条路"></p>
+<h1 id="研路炼钢-我把-Git-命令跑了一遍，才明白它为什么能救场"><a href="#研路炼钢-我把-Git-命令跑了一遍，才明白它为什么能救场" class="headerlink" title="研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场"></a>研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场</h1><blockquote>
+<p>学 Git 时，我最缺的不是一张命令速查表，而是每次敲命令前都能回答：我现在在哪个分支，改动在哪一层，接下来会动哪段历史？</p>
+</blockquote>
+<p>这次我在 Windows 的 <code>E:\demo</code> 里，从 <code>git init</code> 一直练到分支合并、冲突、变基和推送。练习仓库也同步到了 GitHub。原本以为自己需要记住更多命令，结果最深的一次印象，来自一个只有三个字母的参数：<code>-M</code>。</p>
+<p>我本想把 <code>master</code> 改名为 <code>main</code>，却忘了自己已经切到 <code>test2</code>。<code>git branch -M main</code> 执行得很干脆：<strong>被改名的是当前分支 <code>test2</code>。</strong> Git 没有猜错，是我没看自己站在哪。</p>
+<p>这次练习让我重新理解 Git：它不只是“保存代码”，更像一张能看见改动位置、协作方向和撤销边界的地图。</p>
+<hr>
+<h2 id="01｜先认清三个区，再谈提交"><a href="#01｜先认清三个区，再谈提交" class="headerlink" title="01｜先认清三个区，再谈提交"></a>01｜先认清三个区，再谈提交</h2><p><img src="/img/git-from-zero-to-practice/01_three-areas.png" alt="工作区、暂存区与提交历史的关系"></p>
+<p>我以前把 <code>git add</code> 和 <code>git commit</code> 当成一套连招，后来才明白，中间多出来的暂存区，是 Git 最贴心的一层设计。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">工作区（正在改） → git add → 暂存区（这次选哪些） → git commit → 本地历史（形成记录）</span><br></pre></td></tr></table></figure>
+
+<p>假设我同时改了首页、说明文档和一份还没写完的实验记录。这次只想提交首页与说明文档，就只把这两个文件放进暂存区。<strong>一次提交应该表达一个清楚的改动，而不是把今天碰过的文件全打包。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git status                 <span class="comment"># 先看现在有什么改动</span></span><br><span class="line">git diff                   <span class="comment"># 看还没暂存的内容</span></span><br><span class="line">git add index.html README.md</span><br><span class="line">git diff --cached          <span class="comment"># 看这次准备提交什么</span></span><br><span class="line">git commit -m <span class="string">&quot;完善首页与使用说明&quot;</span></span><br><span class="line">git <span class="built_in">log</span> --oneline          <span class="comment"># 看刚形成的提交</span></span><br></pre></td></tr></table></figure>
+
+<p>Git 的提交可以理解成项目状态的一张快照；内部为了节省空间也会使用压缩和差量存储。对日常使用来说，重要的是：<strong>提交之后，能明确找到当时的版本。</strong></p>
+<h2 id="02｜分支不是文件副本，合并先看站位"><a href="#02｜分支不是文件副本，合并先看站位" class="headerlink" title="02｜分支不是文件副本，合并先看站位"></a>02｜分支不是文件副本，合并先看站位</h2><p><img src="/img/git-from-zero-to-practice/02_branch-merge.png" alt="两条分支从同一提交分开并重新汇合"></p>
+<p>分支可以先理解成一个指向提交的名字，<code>HEAD</code> 则告诉我当前站在哪个分支上。创建实验分支，不是复制出一套互不相关的项目；两边仍共享分叉以前的历史。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git switch -c <span class="built_in">test</span>     <span class="comment"># 从当前位置创建并切换到 test</span></span><br><span class="line">git branch             <span class="comment"># 星号标出当前分支</span></span><br><span class="line">git switch master      <span class="comment"># 回到要接收改动的分支</span></span><br><span class="line">git merge <span class="built_in">test</span>         <span class="comment"># 把 test 的改动合进当前分支</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>合并有方向。</strong> 我站在 <code>master</code> 上执行 <code>git merge test</code>，前进的是 <code>master</code>。如果 <code>master</code> 之后没有新提交，Git 通常只需“快进”指针，不会额外生成合并提交；两边已经各自前进时，才通常需要把两条历史汇合成一个新的合并提交。<a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-merge">Git 官方文档</a>把这两种情况分得很清楚。</p>
+<p>我还练到了冲突。两边对同一处内容给出互不兼容的修改，Git 不能替我做判断，就会在文件里留下冲突标记。我需要先读懂两边意图，改成最终版本，再执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git add index.html</span><br><span class="line">git commit             <span class="comment"># 完成这次有冲突的合并</span></span><br></pre></td></tr></table></figure>
+
+<p>如果决定不合了，可以在合并过程中用 <code>git merge --abort</code>。这里真正需要记住的不是标记长什么样，而是：<strong>冲突不是 Git 坏了，是它把决策权交还给我。</strong></p>
+<h2 id="03｜merge-接上历史，rebase-重放历史"><a href="#03｜merge-接上历史，rebase-重放历史" class="headerlink" title="03｜merge 接上历史，rebase 重放历史"></a>03｜merge 接上历史，rebase 重放历史</h2><p><img src="/img/git-from-zero-to-practice/03_merge-rebase.png" alt="合并保留分叉，变基重放提交"></p>
+<p>练到 <code>rebase</code> 时，我第一次看到“内容看起来一样，提交编号却变了”。原因是它会把分支上的提交拿到新的基点上重新应用。旧提交和新提交不再是同一个对象，所以哈希也会变化。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git switch <span class="built_in">test</span></span><br><span class="line">git rebase master</span><br></pre></td></tr></table></figure>
+
+<p><code>merge</code> 适合保留两条线如何汇合；<code>rebase</code> 适合在个人分支上整理尚未共享的提交，让阅读历史更直。它们不是“高级版”和“低级版”的关系，而是两种不同的历史表达。</p>
+<p>变基遇到冲突时，我要改好文件、<code>git add</code>，再执行 <code>git rebase --continue</code>；想撤销这次操作，用 <code>git rebase --abort</code>。<strong>不要把解决变基冲突的下一步机械地写成 <code>git commit</code>。</strong></p>
+<p>我给自己的边界是：已经推送、又可能被别人基于它继续工作的提交，不轻易改写。Git 官方的<a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">变基章节</a>也特别提醒了共享历史被改写后的协作成本。</p>
+<h2 id="04｜后悔药先分类：还没提交、已经提交、已经推送"><a href="#04｜后悔药先分类：还没提交、已经提交、已经推送" class="headerlink" title="04｜后悔药先分类：还没提交、已经提交、已经推送"></a>04｜后悔药先分类：还没提交、已经提交、已经推送</h2><p><img src="/img/git-from-zero-to-practice/04_undo-map.png" alt="按改动是否提交和推送选择撤销方式"></p>
+<p>Git 最让我安心，也最让我紧张的，是它的“后悔药”很多。不能一看见改错，就直接复制一条 <code>reset --hard</code>。</p>
+<p>如果只是把文件放错了暂存区，先看 <code>git status</code>，再用 <code>git restore --staged 文件名</code> 撤下暂存。如果改到一半需要临时切走，可以用 <code>git stash push -m &quot;未完成的改动&quot;</code> 暂存现场，回来后用 <code>git stash list</code> 和 <code>git stash pop</code> 找回。</p>
+<p>如果<strong>最近一次提交还没共享</strong>，<code>reset</code> 才适合进入讨论：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>提交指针</th>
+<th>暂存区</th>
+<th>工作区</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git reset --soft HEAD~1</code></td>
+<td>后退一格</td>
+<td>保留</td>
+<td>保留</td>
+</tr>
+<tr>
+<td><code>git reset --mixed HEAD~1</code></td>
+<td>后退一格</td>
+<td>撤下暂存</td>
+<td>保留</td>
+</tr>
+<tr>
+<td><code>git reset --hard HEAD~1</code></td>
+<td>后退一格</td>
+<td>对齐旧提交</td>
+<td>对齐旧提交</td>
+</tr>
+</tbody></table>
+<p><code>--hard</code> 会覆盖已跟踪文件的未提交改动，还可能覆盖挡路的未跟踪文件。<strong>提交过的历史有时能借助 <code>reflog</code> 找回；从没提交过的改动则不能指望它救。</strong> 所以我不把 <code>--hard</code> 当日常清理按钮。<a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-reset">官方 <code>reset</code> 文档</a>列出了三种模式的准确行为。</p>
+<p>如果错误提交已经推送给别人，通常用 <code>git revert 提交号</code> 生成一条反向提交，保留大家正在共同使用的历史。改提交信息或补进遗漏文件时，<code>git commit --amend</code> 很方便，但它也会改写最近一次提交；同样要先确认有没有共享。</p>
+<h2 id="05｜推到-GitHub，才知道本地与远程是两本账"><a href="#05｜推到-GitHub，才知道本地与远程是两本账" class="headerlink" title="05｜推到 GitHub，才知道本地与远程是两本账"></a>05｜推到 GitHub，才知道本地与远程是两本账</h2><p><img src="/img/git-from-zero-to-practice/05_remote.png" alt="本地分支、远程跟踪分支与 GitHub 的同步关系"></p>
+<p>我在 <code>E:\demo</code> 里改完文件，并不等于 GitHub 已经有了。<code>commit</code> 只写进本地仓库，<code>push</code> 才把相应提交送到远程。第一次推新分支时，<code>-u</code> 会顺手建立上游关联：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git push -u origin main</span><br><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
+
+<p>远程变了，也不意味着我的工作区会自动变化。<code>git fetch</code> 先更新我对远程状态的认识；随后我可以比较 <code>main</code> 和 <code>origin/main</code>，再决定怎么整合。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git <span class="built_in">log</span> --oneline main..origin/main</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p><code>git pull</code> 会先获取远程更新，再按命令参数或配置整合到当前分支：可能快进，也可能合并或变基。因此我不会把它死记成永远的“<code>fetch + merge</code>”。<a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-pull">Git 官方 <code>pull</code> 文档</a>列出了这些方式。</p>
+<p>练习时我也遇到过 <code>non-fast-forward</code>。这通常意味着远程有我本地没有的提交，Git 拒绝直接覆盖它。我会先 <code>fetch</code> 看差异，确认自己的分支和上游关系，再决定如何整合。<code>--force-with-lease</code> 仍然是在改写远程历史，不能当成普通重试；有别人协作的分支，更不能随手强推。</p>
+<h2 id="06｜这几个坑，根子都是我没先看状态"><a href="#06｜这几个坑，根子都是我没先看状态" class="headerlink" title="06｜这几个坑，根子都是我没先看状态"></a>06｜这几个坑，根子都是我没先看状态</h2><p><img src="/img/git-from-zero-to-practice/06_pitfalls.png" alt="操作前依次检查分支、改动和远程差异"></p>
+<p>回头看这次练习，几个坑其实有同一个根源。</p>
+<p>第一，在两个终端里操作同一个 <code>E:\demo</code> 仓库，一个终端切了分支，另一个终端并不会留在旧分支。两个窗口共享同一份仓库状态。执行 <code>reset</code> 前如果只凭记忆，动到的就可能不是我以为的那条线。</p>
+<p>第二，<code>git branch -M main</code> 修改的是<strong>当前分支</strong>的名字。我那时站在 <code>test2</code>，于是改名的也是 <code>test2</code>。从那以后，涉及分支改名、合并、重置，我都先跑一次 <code>git status</code> 或 <code>git branch --show-current</code>。</p>
+<p>第三，工作区有未提交改动时，切换分支可能被 Git 拦住，提示改动会被覆盖。这不是报错来添乱，而是在阻止我丢掉现场。先提交、暂存，或者把当前改动处理清楚，再继续切换。</p>
+<p>它们让我多出一个固定动作：<strong>命令记不全可以查，当前状态不能靠猜。</strong></p>
+<h2 id="写在最后｜把这五步贴在终端旁边"><a href="#写在最后｜把这五步贴在终端旁边" class="headerlink" title="写在最后｜把这五步贴在终端旁边"></a>写在最后｜把这五步贴在终端旁边</h2><p><img src="/img/git-from-zero-to-practice/99_final.png" alt="操作 Git 前先看状态，改完再核对提交与远程"></p>
+<p>现在我给自己留的速查表，只有五步：</p>
+<ol>
+<li><code>git status</code>：当前在哪、哪些文件被改过？</li>
+<li><code>git diff</code> 与 <code>git diff --cached</code>：这次到底要提交什么？</li>
+<li><code>git branch --show-current</code>：合并、变基、重置会作用在哪条线？</li>
+<li><code>git log --oneline --all --graph</code>：历史已经走到哪里？</li>
+<li><code>git fetch</code> 后再比较：远程有没有新的提交？</li>
+</ol>
+<p>做完再检查一遍 <code>git status</code>，确认工作区与分支状态符合预期。需要推送时，再执行 <code>git push</code>。</p>
+<p>这次从零练 Git，我真正记住的不是几十条命令，而是一个顺序：<strong>先看状态，再动历史；先确认影响范围，再按回车。</strong></p>
+<hr>
+<p><em>研路炼钢，记录一个计算机研究生的真实成长。</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://insistgang.top">insistgang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://insistgang.top/posts/git-from-zero-to-practice.html">https://insistgang.top/posts/git-from-zero-to-practice.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://insistgang.top" target="_blank">Leo的笔记本</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a><a class="post-meta__tags" href="/tags/Git/">Git</a><a class="post-meta__tags" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">踩坑记录</a><a class="post-meta__tags" href="/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/">研路炼钢</a></div><div class="post-share"><div class="social-share" data-image="/img/git-from-zero-to-practice/00_cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙"><img class="cover" src="/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">读研最怕的不是没工具，是没有自己的龙</div></div><div class="info-2"><div class="info-item-1"> 读研最怕的不是没工具，是没有自己的龙最近读到一篇讨论AI工具热潮的文章，作者提了一个很尖锐的观察：全国一半的AI Agent每天在给主人发天气预报，另一半在发新闻简报——而这些事，手机免费就能干。 看到这里我笑了，因为我自己也干过类似的事。 刚接触Claude Code的时候，我花了大量时间搭技能模块、配MCP工具链、研究各种Prompt模板。折腾完了，坐在屏幕前，突然发现——嗯，然后呢？ 工具倒是磨快了，但砍什么？ 这个问题，放到我们读研的语境里，更扎心。  你的”问题资源”是什么？ 原文提出了一个概念叫问题资源。意思是：当AI已经能给出不错的答案时，真正稀缺的不再是解题能力，而是你手里有没有值得去解的题。 谁拥有问题，谁就拥有调度工具和系统的权力。 读研不就是这样吗？ 导师给你一个方向，你读了几十篇论文，跑了几个baseline，然后呢？你的contribution是什么？你发现了什么别人没发现的问题？ 我见过两种研究生： 一种人工具玩得特别溜，YOLO各版本如数家珍，训练脚本写得飞快，但你问他”你这篇论文到底解决了什么问题”，他支支吾吾半天，最后说”我把mAP提了两个点”...</div></div></div></a><a class="pagination-related" href="/posts/luyao-ai-public-deployment.html" title="从本地 Demo 到公网可用：路遥 AI 的低成本部署实录"><img class="cover" src="/img/luyao-ai-public-deployment/00_cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">从本地 Demo 到公网可用：路遥 AI 的低成本部署实录</div></div><div class="info-2"><div class="info-item-1"> 从本地 Demo 到公网可用：路遥 AI 的低成本部署实录 本地能跑，只证明代码在我的电脑上成立。真正把一个带后端、数据库和 API Key 的 AI 应用交给别人用，还要同时解决网络、部署、密钥、冷启动和数据持久化。  上一篇《不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣》，我讲了路遥 AI 的多 Agent、声音复刻、多气泡、上下文和长期记忆。 代码重构完以后，我很快撞上了另一个问题：它在本地可以聊天、可以说话，也可以写入 ChromaDB，但我一关电脑，别人就完全用不了。 更麻烦的是，这不是一个纯前端网页。它需要 FastAPI 常驻运行，需要访问 MiniMax，需要保存 API Key，还要限制陌生人无限调用付费接口。把它传到 GitHub，不等于它已经上线；把端口暴露到公网，也不等于它可以安全分享。 这篇只复盘一件事：我怎样用一套尽量低成本的方案，把本地 Demo 变成一个别人可以访问、密钥又不会落到浏览器里的在线应用。  01｜本地能跑和别人能用，中间隔着两层应用 路遥 AI 里，FastAPI 和 Gradio 不是两个重复的 W...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/tech-value.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——&quot;技术是最不值钱的东西&quot;"><img class="cover" src="/img/tech-value/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——&quot;技术是最不值钱的东西&quot;</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（五）——“技术是最不值钱的东西” 这句话是N师兄说的。他说的时候语气很复杂——他自己就是技术出身，他”非常憎恨这句话”，但随着阅历增加，他发现”说得好像不可逆”。  这句话很刺耳，也很容易被误解。它不是说技术没价值，而是说：只有技术，通常不够值钱。 技术的价值需要被放进一个完整链条里看：解决什么问题、服务谁、怎么交付、谁愿意买单、后续谁维护。离开这些问题，技术再强，也可能只是一个漂亮的局部最优。  01｜一个技术人说出这句话的重量 N师兄是我见过的技术很强的人之一。 高二开始学虚幻引擎，本科做外包，从几十块的小单做到几万块的项目；后来参与过复杂仿真系统，也把自己的游戏做到了上线。他长期保留代码日志、项目文档和备份记录，工程习惯非常扎实。 这样一个人，跟我说”技术是这个世界上最不值钱的东西”。 他知道我不爱听，他自己也不爱听。但他说了。  02｜”你代码写得再屌，那又怎样？” N师兄的原话是这样的： “你在不会写代码之前，写代码这件事情非常重要。但是当你真正写代码写得非常屌的时候，你会发现——这代码到底干什么用啊？” ...</div></div></div></a><a class="pagination-related" href="/posts/three-cloud-sop.html" title="研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流"><img class="cover" src="/img/three-cloud-sop/00_cover-zh-v2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-23</div><div class="info-item-2">研路炼钢 | 我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</div></div><div class="info-2"><div class="info-item-1"> 这两天，我把 Vercel、Supabase 和 Surge 依次接进了自己的工具箱。 Vercel 能看见项目，博客页面实际返回了 200；Supabase 能读到组织和两个项目；Surge 能列出五个站点，五个地址也都能正常打开。 如果只看仪表盘，这已经是一片绿灯。 但我很快意识到：三个工具都能用，不等于三个工具已经一起工作。 登录成功，只能证明钥匙是真的；页面能开，只能证明炉子还热着。真正的工作流，必须让一块原料从入口进炉，经过加工、落库、验收，再带着证据回到我手里。 01｜三个工具都亮了绿灯 先说现场。 Vercel 这边，连接器能正常读取账号下的项目，博客部署也能直接访问。我请求线上页面，拿到的是 200，页面标题也和预期一致。 Supabase 这边，组织与项目列表可以正常读取。两个现有项目分别在东京和新加坡，只是当时都处于暂停状态。这个结果至少说明：账号、权限和管理通道是通的；要进入业务链路，还需要先恢复目标项目。 Surge 更直接。命令行列出了五个站点：  linkable-board.surge.sh aidatabase-squ.surge.sh aida...</div></div></div></a><a class="pagination-related" href="/posts/ai-personal-control-tower.html" title="研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”"><img class="cover" src="/img/ai-personal-control-tower/00_ai-control-tower-cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-11</div><div class="info-item-2">研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔”</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我想把自己外包给 AI，最后先搭了一座“控制塔” 多窗口不是生产力系统。没有主控、并发上限和验收回流，窗口开得越多，只是在用更高级的方式制造上下文切换。  有一次，我盯着 Codex 里一排正在工作的窗口，突然不知道自己应该先点开哪一个。 一个窗口在跑论文实验，一个窗口在改项目代码，一个窗口准备博文和配图，还有一个窗口在整理知识库。每个窗口都很忙，每件事也都看起来有价值。 问题是，我自己反而成了最忙的那个调度器：不断切窗口、补背景、确认方向、处理新的想法，再去检查哪些任务到底做完了。 我原来想把自己外包给 AI。后来发现，真正需要外包的不是“我”，而是我的项目调度系统。  01｜我以为自己缺的是一个更强的 Agent 最开始，我的解决办法很直接：任务多，就多开几个窗口；一个模型不够，就再加一个 Agent。 这套方法确实有效。AI 可以读论文、写代码、做图、检查材料，也可以同时推进几个互不相关的项目。以前需要排队处理的事情，现在可以并行。 但能力被放大之后，我原来的行为模式也被放大了。 我本来就容易“全都要”。看到一个想法会先启动，碰到一个项目会顺手优化，工具能跑...</div></div></div></a><a class="pagination-related" href="/posts/ai-project-orchestration-retro.html" title="研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断"><img class="cover" src="/img/ai-project-orchestration-retro/00_cover.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-18</div><div class="info-item-2">研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 我把自己外包给 AI 一周后，发现真正不能外包的是判断 AI 可以替我检索、拆解、执行和校验，但不能替我决定什么值得做。主控的价值不是让更多窗口同时忙，而是把碎片推进成有证据的交付。  前几天我和舍友聊天，他说自己对 AI 的使用程度可能只有 10%，而我已经到了 70%。 他又补了一句：你几乎什么都问 AI，会不会慢慢没有自己的思考？ 这句话让我停了一下。 一周前，我刚写完上一篇文章：《我想把自己外包给 AI，最后先搭了一座“控制塔”》。当时我想得很完整：用一个空白项目做主控，再把论文、代码、博文和知识库分发到不同窗口推进。 真正跑了几天以后，我发现设计一个系统不难，难的是给系统装上刹车。 个人主控最重要的能力，不是帮我启动更多事情，而是更早地决定：哪些事情今天不启动。  01｜70% 都问 AI，不等于 70% 没有思考 我确实会把很多问题交给 AI。 查资料、拆任务、读代码、检查引用、生成初稿、排查报错，这些工作如果都靠我一个人串行完成，时间很快就没了。AI 在这些地方像一组可以随时调用的外部进程，能帮我省掉大量机械切换。 但“把问题交给 AI”和“把判断交...</div></div></div></a><a class="pagination-related" href="/posts/ai-usage.html" title="研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇"><img class="cover" src="/img/ai-usage/00_yanlu_steel.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="info-item-2">研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇</div></div><div class="info-2"><div class="info-item-1"> 研路炼钢 | 和一位延毕师兄吃了顿饭，他把读研踩过的坑全讲了（三）——AI到底能干什么篇 接上两篇。吃饭聊到最后，我和N师兄聊到了AI。我们俩都是高强度AI用户，都花了真金白银买会员。但聊完之后我发现，我们对AI的判断出奇地一致——好用，但没那么神。  如果只用一句话概括：AI 最适合帮你加速确定性任务，不适合替你承担不确定性决策。 这个边界一旦想清楚，很多焦虑会少一半。  01｜我的AI全家桶 先交代一下我自己的使用情况。 我现在同时在用Claude、ChatGPT、Kimi，全部付费开了会员。GitHub Copilot也在用。国内的几个模型也都试过。 为什么花这么多钱？因为它是生产力。 我的判断标准很简单：它能不能帮我转化出我要的结果。花一块钱做出小学生水平的东西，不值；花一万块做出博士水平的东西，值。这不是钱多钱少的问题，是效率和结果的问题。 N师兄也认同这个判断：”你花了钱，提升了效率，获得了结果，就完事了。” 说实话，有一天AI平台宕机了，我坐在电脑前都不知道该干嘛。不夸张。  02｜AI 最适合接管哪类编程任务 这是我们聊得最深的一个话题。 他做了快两年的商业项目...</div></div></div></a><a class="pagination-related" href="/posts/luyao-ai-emotional-companion.html" title="不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣"><img class="cover" src="/img/luyao-ai-emotional-companion/00_cover.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-08</div><div class="info-item-2">不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣</div></div><div class="info-2"><div class="info-item-1"> 不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣 我这次真正意识到：情绪共鸣不是一句“请温柔一点”的 Prompt，而是记忆、信息顺序、停顿、声音、气泡节奏和上下文连续性共同形成的结果。  前阵子，我拿到了一段 61.6 秒的标杆视频。视频里，用户问“前女友结婚该送什么”，AI 没有马上解释一大段，而是先提到一台基础款白色拍立得。 用户追问“你怎么知道”，它才慢慢带出拍糊的合照、楼下凉掉的奶茶，以及那段关于等待和替代品的独白。 原项目其实已经能聊天：有 Prompt、有向量检索、有接口，也有一个 Gradio 页面。但把它和视频并排放在一起，我马上发现，能回答和像一个人回应，中间差的不是一个语音接口，而是一整条情绪执行链。 这篇只讲我怎样把这条链路重新搭起来。至于它后来怎样从本地 Demo 走到公网，我放到下一篇单独复盘。  01｜61 秒标杆让我看见：像不像，不是文案问题 我没有先改 Prompt，而是先把视频当成一段需要验收的系统行为。 用 FFmpeg、波形和转写对齐后，视频全长约 61.6 秒。用户第二次追问结束后，路遥没有立刻开口，而是留了...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">insistgang</div><div class="author-info-description">Leo的笔记本 - 一个专注于编程学习、技术分享的个人博客。涵盖C语言、数据结构、数据库、Python、Linux等技术领域，记录学习历程与技术实践。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">153</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/insistgang"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/insistgang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:insistgang@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2-%E6%88%91%E6%8A%8A-Git-%E5%91%BD%E4%BB%A4%E8%B7%91%E4%BA%86%E4%B8%80%E9%81%8D%EF%BC%8C%E6%89%8D%E6%98%8E%E7%99%BD%E5%AE%83%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E6%95%91%E5%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01%EF%BD%9C%E5%85%88%E8%AE%A4%E6%B8%85%E4%B8%89%E4%B8%AA%E5%8C%BA%EF%BC%8C%E5%86%8D%E8%B0%88%E6%8F%90%E4%BA%A4"><span class="toc-number">1.1.</span> <span class="toc-text">01｜先认清三个区，再谈提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02%EF%BD%9C%E5%88%86%E6%94%AF%E4%B8%8D%E6%98%AF%E6%96%87%E4%BB%B6%E5%89%AF%E6%9C%AC%EF%BC%8C%E5%90%88%E5%B9%B6%E5%85%88%E7%9C%8B%E7%AB%99%E4%BD%8D"><span class="toc-number">1.2.</span> <span class="toc-text">02｜分支不是文件副本，合并先看站位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03%EF%BD%9Cmerge-%E6%8E%A5%E4%B8%8A%E5%8E%86%E5%8F%B2%EF%BC%8Crebase-%E9%87%8D%E6%94%BE%E5%8E%86%E5%8F%B2"><span class="toc-number">1.3.</span> <span class="toc-text">03｜merge 接上历史，rebase 重放历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04%EF%BD%9C%E5%90%8E%E6%82%94%E8%8D%AF%E5%85%88%E5%88%86%E7%B1%BB%EF%BC%9A%E8%BF%98%E6%B2%A1%E6%8F%90%E4%BA%A4%E3%80%81%E5%B7%B2%E7%BB%8F%E6%8F%90%E4%BA%A4%E3%80%81%E5%B7%B2%E7%BB%8F%E6%8E%A8%E9%80%81"><span class="toc-number">1.4.</span> <span class="toc-text">04｜后悔药先分类：还没提交、已经提交、已经推送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05%EF%BD%9C%E6%8E%A8%E5%88%B0-GitHub%EF%BC%8C%E6%89%8D%E7%9F%A5%E9%81%93%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E6%98%AF%E4%B8%A4%E6%9C%AC%E8%B4%A6"><span class="toc-number">1.5.</span> <span class="toc-text">05｜推到 GitHub，才知道本地与远程是两本账</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06%EF%BD%9C%E8%BF%99%E5%87%A0%E4%B8%AA%E5%9D%91%EF%BC%8C%E6%A0%B9%E5%AD%90%E9%83%BD%E6%98%AF%E6%88%91%E6%B2%A1%E5%85%88%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="toc-number">1.6.</span> <span class="toc-text">06｜这几个坑，根子都是我没先看状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BD%9C%E6%8A%8A%E8%BF%99%E4%BA%94%E6%AD%A5%E8%B4%B4%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%97%81%E8%BE%B9"><span class="toc-number">1.7.</span> <span class="toc-text">写在最后｜把这五步贴在终端旁边</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙"><img src="/img/yanlu-liangang-find-dragon/00_yanlu_liangang_find_dragon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读研最怕的不是没工具，是没有自己的龙"/></a><div class="content"><a class="title" href="/posts/yanlu-liangang-find-dragon.html" title="读研最怕的不是没工具，是没有自己的龙">读研最怕的不是没工具，是没有自己的龙</a><time datetime="2026-10-03T08:37:45.192Z" title="发表于 2026-10-03 08:37:45">2026-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/git-from-zero-to-practice.html" title="研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场"><img src="/img/git-from-zero-to-practice/00_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场"/></a><div class="content"><a class="title" href="/posts/git-from-zero-to-practice.html" title="研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场">研路炼钢 | 我把 Git 命令跑了一遍，才明白它为什么能救场</a><time datetime="2026-09-27T14:04:11.000Z" title="发表于 2026-09-27 14:04:11">2026-09-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/luyao-ai-public-deployment.html" title="从本地 Demo 到公网可用：路遥 AI 的低成本部署实录"><img src="/img/luyao-ai-public-deployment/00_cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从本地 Demo 到公网可用：路遥 AI 的低成本部署实录"/></a><div class="content"><a class="title" href="/posts/luyao-ai-public-deployment.html" title="从本地 Demo 到公网可用：路遥 AI 的低成本部署实录">从本地 Demo 到公网可用：路遥 AI 的低成本部署实录</a><time datetime="2026-08-08T18:10:00.000Z" title="发表于 2026-08-08 18:10:00">2026-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/luyao-ai-emotional-companion.html" title="不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣"><img src="/img/luyao-ai-emotional-companion/00_cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣"/></a><div class="content"><a class="title" href="/posts/luyao-ai-emotional-companion.html" title="不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣">不是接一个 TTS：我如何把 61 秒视频重构成有记忆、有情绪的 AI 伴侣</a><time datetime="2026-08-08T16:45:00.000Z" title="发表于 2026-08-08 16:45:00">2026-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/jetson-mac-unified-memory.html" title="研路炼钢 | Jetson 的 8GB 到底算内存还是显存？和 Mac 对照后，我终于想明白了"><img src="/img/jetson-mac-unified-memory/00_cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研路炼钢 | Jetson 的 8GB 到底算内存还是显存？和 Mac 对照后，我终于想明白了"/></a><div class="content"><a class="title" href="/posts/jetson-mac-unified-memory.html" title="研路炼钢 | Jetson 的 8GB 到底算内存还是显存？和 Mac 对照后，我终于想明白了">研路炼钢 | Jetson 的 8GB 到底算内存还是显存？和 Mac 对照后，我终于想明白了</a><time datetime="2026-08-05T20:40:43.000Z" title="发表于 2026-08-05 20:40:43">2026-08-05</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/steam-steel-infinite-minds/00_封面.jpg" alt="/img/steam-steel-infinite-minds/00_封面.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-24</span><a class="blog-slider__title" href="posts/steam-steel-infinite-minds-analysis.html">深度解析：蒸汽、钢铁与无限心智</a><div class="blog-slider__text">AI时代的个人发展路径深度思考</div><a class="blog-slider__button" href="posts/steam-steel-infinite-minds-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/minimax-agent-analysis/cover.png" alt="/img/minimax-agent-analysis/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-23</span><a class="blog-slider__title" href="posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><div class="blog-slider__text">MiniMax Agent 深度分析与场景应用</div><a class="blog-slider__button" href="posts/minimax-agent-analysis.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/award-winning-grad-student-reflection/00_cover.jpg" alt="/img/award-winning-grad-student-reflection/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><div class="blog-slider__text">一个研究生的自我反思与成长记录</div><a class="blog-slider__button" href="posts/grad-self-reflection.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/claude-code-seven-components-deep-dive/00_cover.jpg" alt="/img/claude-code-seven-components-deep-dive/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><div class="blog-slider__text">深入解析 Claude Code 的核心架构与工作流</div><a class="blog-slider__button" href="posts/claude-code-components.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/img/ai-coding-era-career-path/00_cover.jpg" alt="/img/ai-coding-era-career-path/00_cover.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2026-02-25</span><a class="blog-slider__title" href="posts/ai-coding-era-career-path.html">AI 编程工具时代，别把会用工具当护城河</a><div class="blog-slider__text">AI 编程工具时代，真正稀缺的不是行数，而是需求判断和商业闭环</div><a class="blog-slider__button" href="posts/ai-coding-era-career-path.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v4.0.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script data-pjax src="/gitcalendar/js/gitcalendar-init.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>
