@@ -1,0 +1,32 @@
+[
+  {
+    "id": "02-bank-1",
+    "problem": "票价 3张 每张18元 服务费5元",
+    "answer": "59",
+    "explanation": "3 × 18 + 5 = 59"
+  },
+  {
+    "id": "02-bank-2",
+    "problem": "速度 距离120公里 时间2小时",
+    "answer": "60",
+    "explanation": "120 ÷ 2 = 60"
+  },
+  {
+    "id": "02-bank-3",
+    "problem": "工作量 4人 3天 完成60页",
+    "answer": "5",
+    "explanation": "60 ÷ 4 ÷ 3 = 5"
+  },
+  {
+    "id": "02-bank-4",
+    "problem": "体积 长方体 长4宽3高2",
+    "answer": "24",
+    "explanation": "4 × 3 × 2 = 24"
+  },
+  {
+    "id": "02-bank-5",
+    "problem": "单价 5本书 总价75元",
+    "answer": "15",
+    "explanation": "75 ÷ 5 = 15"
+  }
+]

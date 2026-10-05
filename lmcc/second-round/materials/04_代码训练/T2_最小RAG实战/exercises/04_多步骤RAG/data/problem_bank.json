@@ -1,0 +1,5 @@
+[
+  {"id":"m1","problem":"速度 距离120公里 时间2小时 求速度","answer":"60","explanation":"速度 = 距离 ÷ 时间"},
+  {"id":"m2","problem":"工作效率 4人 3天 完成60页 求每天每人页数","answer":"5","explanation":"60 ÷ 4 ÷ 3 = 5"},
+  {"id":"m3","problem":"长方体 体积 长4 宽3 高2","answer":"24","explanation":"4 × 3 × 2 = 24"}
+]

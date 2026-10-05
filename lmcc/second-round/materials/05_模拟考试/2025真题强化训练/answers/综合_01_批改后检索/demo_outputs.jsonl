@@ -1,0 +1,4 @@
+{"section":"t1","id":"mix1-t1-p1","raw_output":"{\"student_id\":\"mix_001\",\"judgements\":[true,true,false]}"}
+{"section":"t1","id":"mix1-t1-h1","raw_output":"{\"student_id\":\"mix_002\",\"judgements\":[false,true,true]}"}
+{"section":"t2","id":"mix1-t2-p1","raw_output":"{\"reasoning\":\"7 × 8 + 2 = 58\",\"answer\":\"58\"}"}
+{"section":"t2","id":"mix1-t2-h1","raw_output":"{\"reasoning\":\"9 × 7 = 63\",\"answer\":\"63\"}"}

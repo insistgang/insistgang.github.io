@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>专题阅读 | Leo的笔记本</title><meta name="author" content="insistgang"><meta name="copyright" content="insistgang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里按问题和主题整理了「研路炼钢」的公开文章。你可以从最近的实践读起，也可以展开某一主题，沿着它慢慢看。 文章里的经历与判断属于写作当时。涉及工具版本、价格和考试安排时，请结合文中的记录日期阅读。 需要直接练习时，可以前往 LMCC 练习页；想按时间浏览，可以打开全部文章。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="专题阅读">
+<meta property="og:url" content="https://insistgang.top/reading/index.html">
+<meta property="og:site_name" content="Leo的笔记本">
+<meta property="og:description" content="这里按问题和主题整理了「研路炼钢」的公开文章。你可以从最近的实践读起，也可以展开某一主题，沿着它慢慢看。 文章里的经历与判断属于写作当时。涉及工具版本、价格和考试安排时，请结合文中的记录日期阅读。 需要直接练习时，可以前往 LMCC 练习页；想按时间浏览，可以打开全部文章。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://insistgang.top/img/toux.jpg">
+<meta property="article:published_time" content="2026-10-06T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-05T17:01:52.772Z">
+<meta property="article:author" content="insistgang">
+<meta property="article:tag" content="研路炼钢,AI工具,工程实践,科研写作,研究生成长,技术复盘">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://insistgang.top/img/toux.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://insistgang.top/reading/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":2,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '专题阅读',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css?v=55a1a87bff9e"><!-- hexo injector head_end start --><link rel="stylesheet" href="/gitcalendar/css/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Leo的笔记本" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">79</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">153</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fas fa-book-open"></i><span> 专题阅读</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page type-reading" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Leo的笔记本</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/reading/"><i class="fa-fw fas fa-book-open"></i><span> 专题阅读</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">专题阅读</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">专题阅读</div><p>这里按问题和主题整理了「研路炼钢」的公开文章。你可以从最近的实践读起，也可以展开某一主题，沿着它慢慢看。</p>
+<p>文章里的经历与判断属于写作当时。涉及工具版本、价格和考试安排时，请结合文中的记录日期阅读。</p>
+<p>需要直接练习时，可以前往 <a href="/lmcc/">LMCC 练习页</a>；想按时间浏览，可以打开<a href="/archives/">全部文章</a>。</p>
+<nav class="reading-nav" aria-label="阅读主题"><a href="#ai">AI 工具与工作流</a><a href="#engineering">工程实践与部署</a><a href="#research">科研与论文写作</a><a href="#growth">研究生成长与选择</a><a href="#reading">阅读与生活</a><a href="#exams">备考与学习资料</a></nav><section class="reading-section" id="ai"><div class="reading-heading"><h2>AI 工具与工作流</h2><span>27 篇</span></div><p class="reading-description">从实际任务出发，看工具能做什么、哪里会失效，以及最后留下了什么。</p><ul class="reading-posts"><li><a href="/posts/ai-project-orchestration-retro.html">把自己外包给 AI 一周后，发现真正不能外包的是判断</a><p>主控跑了一周后，半成品和上下文重复开始暴露问题。结合调用日志，我重新收紧并行上限、验收标准和收尾流程；日志里的 Token 总量不等于付费账单。</p></li><li><a href="/posts/ai-personal-control-tower.html">我想把自己外包给 AI，最后先搭了一座“控制塔”</a><p>多个 AI 窗口同时开着，我却成了最忙的调度员。这次给主控和执行窗口重新分工：集中收任务、限制并行数，用交付物和回执判断一件事是否真的完成。</p></li><li><a href="/posts/ai-video-workflow-deleted.html">我用 AI 做了一个 20 秒视频，最后把项目删了</a><p>记录我把网页做成一条二十秒宣传片又删掉整个项目的过程：AI 生成不是魔法而是工具接力，原型能跑不等于能交付，权限弹窗其实是信任边界。文件删了，对工作流的理解留下了。</p></li></ul><details class="reading-more"><summary>查看其余 24 篇</summary><ul class="reading-posts"><li><a href="/posts/agent-skill-sdd.html">从卖产品到卖技能：一顿火锅聊清 Agent 的底层逻辑</a><p>一顿饭里的 Agent 讨论：技能怎样变成可复用的能力包，子代理如何分工，为什么需求整理常常比写代码更费时间。记录这些想法怎样影响了我接下来的实践。</p></li><li><a href="/posts/digital-asset-accumulation.html">你每天都在消费Token，但你积累数字资产了吗？</a><p>一次长谈后的整理：每天和 AI 聊完就关，等于只消费没沉淀。我们把文章、笔记、仓库、复盘这类可检索可复用的产出叫数字资产。对我的提醒是，每做完一件事都问能不能留下点什么。</p></li><li><a href="/posts/ai-money-paper-zero.html">我用 AI 烧了很多钱，但论文一个字没多</a><p>一次自我清算：命令行工具装了一堆、订阅开了一堆，论文却没进展。粗算过去三个月在工具和接口上的开销，够一个月伙食费，我才承认自己是在体验工具而不是完成任务。现在开工具前先问论文能多出什么。</p></li><li><a href="/posts/ai-skill-monetization-truth.html">人人都吃早餐，但你的豆浆卖给谁？——聊聊AI技能变现的真相</a><p>从“人人都吃早餐，谁会买你的豆浆”聊到 AI 技能变现：用户要什么结果，哪些环节值得定制，什么时候才适合做成产品。保留一次交流里对需求和交付的判断。</p></li><li><a href="/posts/minimax-api-annual-member-review.html">MiniMax 年度会员 API：图像与语音实测</a><p>记录我开通年度会员后调 API 的过程：图像生成能调通；语音合成卡在模型名上，翻官方 SDK 才找到会员套餐支持的那个。附我当时整理的错误代码和参数说明，额度以账户页面为准。</p></li><li><a href="/posts/openclaw-architecture.html">OpenClaw 的主智能体和子智能体，为什么加载的东西不一样？</a><p>我配 OpenClaw 多 Agent 时发现主智能体加载人格、记忆等七层文件，子智能体只加载规则和工具。我理解这是决策集中、执行专注的结构。文中对开销的估算是我的体感，不是测量值。</p></li><li><a href="/posts/ai-coding-six-stages.html">为什么你用 AI 编程工具只能产出「AI 垃圾」？</a><p>复盘我自己用 AI 写代码从能跑但丑到能用的过程，整理成六个阶段：从下命令到对话协作、管上下文、精简工具、固化流程、多实例并行。这些是我的体感台阶，不是人人必经的路线。</p></li><li><a href="/posts/claude-half-year.html">用了半年 Claude，我摸出来的几个真实好用的用法</a><p>用 Claude 半年后我的分工感受：帮我读、帮我改、帮我搭框架最稳定；从零创作容易平庸，查事实会编。我现在的配合方式是自己定方向写初稿，让它打磨细节，重要事实不用它单独查。</p></li><li><a href="/posts/six-ai-tools.html">我每天都在用的 6 个 AI 工具，说说真实体验</a><p>记录我每天实际在用的几类 AI 能力：把重复流程固化、处理表格文档、找现成方案、优化界面、清理冗余代码、跑长任务。好用在哪、坑在哪一起写。效率感受是我的主观体感，不是测量结果。</p></li><li><a href="/posts/ai-tool-division.html">这么多 AI 工具，我是怎么分工的</a><p>几份订阅同时续费后我做的分工：能动手改代码的、能通读长材料的、能对话出方案的，按工种各留一个主力；任务按通读、决策、执行、复查四步走。铁律是别在对话框搬长文、别让两个工具改同一文件。</p></li><li><a href="/posts/openclaw-ecosystem-opportunity.html">OpenClaw 生态里，真的有人赚到钱了</a><p>整理我在 OpenClaw 社群和小红书看到的几类变现说法：部署、培训、托管、行业定制，以及我自己的判断——门槛低的先卷价格，行业理解深的才有壁垒。这些都是个案观察，不是收益承诺。</p></li><li><a href="/posts/ai-anxiety-action-guide.html">AI 时代，我不想再只当观众：先跑通一个小闭环</a><p>写给被 AI 新闻刷得焦虑的自己：先把目标缩到跑通一个小闭环。我按本周、几个月、一年三层排了行动梯度，从把重复工作交给 AI 开始，到围绕一个自用工具补技能，附一个每日简报的起步想法。</p></li><li><a href="/posts/maxclaw-deep-dive.html">MiniMax MaxClaw：托管 Agent 的使用体验与边界</a><p>回看我在 2026 年 3 月试用 MaxClaw 的记录：托管入口减少了哪些配置工作，哪些任务仍需验证。本次补正模型规格，并把旧价格与当前购买判断分开。</p></li><li><a href="/posts/minimax-agent-vs-qoderwork.html">MiniMax Agent 与 QoderWork 使用笔记：云端创作与本地操作</a><p>我用过两款桌面 Agent 后的分工笔记：一个偏云端内容生成，一个偏本地文件和应用操作，解决的不是同一类问题。我的做法是按场景分工。文中性能和价格口径以官方信息为准。</p></li><li><a href="/posts/ai-coding-tools-review-2026.html">五款 AI 编程助手使用记录与选型笔记</a><p>整理我使用五款编程助手的记录：按代码理解、生成、调试、中文支持和上手难度逐项比较，再按个人开发者、小团队等场景给出我的选择倾向。评分是个人体感，不是统一基准测试。</p></li><li><a href="/posts/claude-code-glm5-tutorial.html">Claude Code 接入 GLM-5 实战教程</a><p>记录我把 Claude Code 接到智谱兼容接口的配置过程：用哪个环境变量、shell 里怎么避免冲突、怎么验证，以及我当时遇到的三类报错——连接失败、域名解析、首次启动卡住——分别怎么排查。</p></li><li><a href="/posts/codex-ssh-auto-login-fix.html">Codex 每次都要登录？一文解决 SSH 自动登录问题</a><p>我在 SSH 服务器上遇到 Codex 每次弹登录的问题，排查后发现写了 API Key 不等于完成登录，缺的是认证状态文件。记录我的三步修复和换服务器时的做法，供遇到同样问题的人参考。</p></li><li><a href="/posts/qwen-code-model-analysis.html">Qwen Code 编程模型资料整理与选型笔记</a><p>整理阿里百炼 Coding Plan 当时接入的几款编程模型的公开资料：定位、上下文和计费口径，再按我的使用场景给出倾向。参数和价格以官方页面为准，这篇是选型笔记，不是基准测试。</p></li><li><a href="/posts/discord-x-telegram-guide.html">Discord、X、Telegram：三个你迟早会用到的海外平台</a><p>我自己的信息渠道笔记：很多开源项目的第一手讨论不在国内平台。这篇按我的使用感受区分三个海外平台的定位——有结构的社区、公开的广场、私密的管道，以及各自适合什么场景。</p></li><li><a href="/posts/claude-skills-intro.html">Claude的Skills是什么</a><p>用后厨操作手册的类比讲我对 Skills 的理解：它不是插件而是结构化的说明书，AI 先匹配场景再照着做。对我的启发是，把踩过的坑写成规范，比每次口头交代更稳定。</p></li><li><a href="/posts/claude-code-components.html">Claude Code 七大组件深度拆解：从入门到真正会用</a><p>我用新员工入职的类比梳理 Claude Code 的几类组件：交接文档、操作手册、外部账号、强制规则、分身执行和打包分发各自对应什么，以及我建议的上手顺序。版本特性以官方文档为准。</p></li><li><a href="/posts/minimax-agent-analysis.html">MiniMax Agent 应用场景与核心竞争力</a><p>从科研使用者的角度整理我对 MiniMax Agent 的定位判断：它偏全模态快速交付，我用来出展示图和草稿；论文写作和复杂代码我仍交给推理更深的工具。这是我的分工习惯，不是统一答案。</p></li><li><a href="/posts/qwen-coding-plan-report.html">通义千问 Coding Plan 调研报告</a><p>我调研通义千问 Coding Plan 的笔记：专属端点和密钥前缀别用错、双协议兼容、视觉可用而语音不在套餐内、联网和代码搜索要靠扩展。额度和限制以官方页面当时的信息为准。</p></li><li><a href="/posts/coding-plan-api-report.html">国产三大 Coding Plan API 调研与试用记录</a><p>整理我试用三家 Coding Plan 接口时遇到的差异：认证方式、协议、图像输入与独立工具端点。保留当时的排查过程，具体接入限制以各平台的当前文档为准。</p></li></ul></details></section><section class="reading-section" id="engineering"><div class="reading-heading"><h2>工程实践与部署</h2><span>11 篇</span></div><p class="reading-description">部署、排障、系统整理与开发工具：把一次解决问题的过程写清楚。</p><ul class="reading-posts"><li><a href="/posts/git-from-zero-to-practice.html">我把 Git 命令跑了一遍，才明白它为什么能救场</a><p>从一次改错分支名开始，重新梳理暂存区、分支、合并与撤销。把日常操作分成五步：先看状态，再核对改动与历史，最后处理远程同步。</p></li><li><a href="/posts/luyao-ai-public-deployment.html">从本地 Demo 到公网可用：路遥 AI 的低成本部署实录</a><p>本地能跑之后，怎样让别人也能访问？记录路遥 AI 的服务拆分、容器部署、平台迁移与密钥处理，也交代免费实例在休眠和数据持久化上的限制。</p></li><li><a href="/posts/luyao-ai-emotional-companion.html">不是接一个 TTS：把 61 秒视频重构成有情绪的 AI 伴侣</a><p>一段标杆视频怎样拆成可落地的系统？从对话节奏出发，把记忆、人设、语音与安全检查逐层接起来，记录我重构 AI 伴侣时做过的取舍。</p></li></ul><details class="reading-more"><summary>查看其余 8 篇</summary><ul class="reading-posts"><li><a href="/posts/jetson-mac-unified-memory.html">Jetson 的 8GB 算内存还是显存？和 Mac 对照后想明白了</a><p>Jetson 的 8GB 该怎么算，为什么还要看空载余量？和 Mac 对照后，我把统一内存、模型权重、缓存和并发开销放进同一张预算表。</p></li><li><a href="/posts/three-cloud-sop.html">我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</a><p>我把三个云服务都接进工具箱后的反思：能登录、能访问、业务能完成是三件事。我给它们分了工序，密钥只留服务端，每一步配验收件，并且要求能回滚。这是我搭链路的草稿，不是现成方案。</p></li><li><a href="/posts/local-network-troubleshooting.html">一次局域网部署排障：为什么 Linux 能访问，Windows 却不行？</a><p>记录一次局域网部署排障：同一个服务在 Linux 和 Mac 上能被其他设备访问，换 Windows 就只有本机能通。我按监听地址、防火墙入站规则、网络类型分层排查，并用临时隧道验证服务本体没死。</p></li><li><a href="/posts/bastion-host-deep-dive.html">堡垒机与跳板机：同一拓扑的攻防两面</a><p>把堡垒机和跳板机放在一起学的笔记：同一种中间节点拓扑，防守方用来做认证审计，攻击方用来做横向移动。附我整理的配置方式、一个历史漏洞的教训和最小化搭建思路。</p></li><li><a href="/posts/e-disk-cleanup.html">E盘整理实战：微信文件治理与空间管理</a><p>E 盘最难处理的是两个版本并存的聊天软件文件。记录我去重、清理闲置软件的过程，以及之后给自己定的维护习惯：关自动下载、定期导出备份、按周期检查。这只是我的做法，重要数据请先自行备份。</p></li><li><a href="/posts/d-disk-cleanup.html">D盘整理实战：从「爆红」到「健康」</a><p>C 盘之后的 D 盘整理记录：大头是开发环境和虚拟机。我学到的是包缓存不等于环境、判断软件去留不能只看修改时间还要看进程，以及按能否重新获得来取舍闲置软件。过程比 C 盘更费判断。</p></li><li><a href="/posts/appdata-deep-dive.html">Windows AppData 深度解析：Local vs Roaming</a><p>整理 C 盘时我发现 AppData 占用惊人，于是把 Local 和 Roaming 的机制查清楚：一个偏本机缓存，一个偏随用户走的配置。我的清理口径只代表自己的判断，删任何目录前请先确认里面是什么。</p></li><li><a href="/posts/c-disk-cleanup.html">C盘整理实战：从混沌到清晰</a><p>记录我整理 C 盘的过程：桌面堆了多年项目文件，AppData 两个目录是占用大头。我按缓存与配置分开对待的口径逐层清理，也踩了删除报错和幽灵文件夹的坑，文末是我自己的检查清单。</p></li></ul></details></section><section class="reading-section" id="research"><div class="reading-heading"><h2>科研与论文写作</h2><span>6 篇</span></div><p class="reading-description">选问题、读文献、做实验和写论文，记录研究生训练中的具体经验与教训。</p><ul class="reading-posts"><li><a href="/posts/yanlu-liangang-find-dragon.html">读研最怕的不是没工具，是没有自己的龙</a><p>一篇读后理解：很多 AI 助手在干手机就能干的事，因为主人手里没有值得解的题。对照读研，我的体会是工具熟不如问题真——好问题从数据和现场的反常里长出来，选题要和自己能级匹配。</p></li><li><a href="/posts/ai-fake-paper.html">DeepSeek 给我编了一篇根本不存在的论文</a><p>我写论文时让 AI 推荐文献，拿到几条格式完美的引用，核实后发现好几条根本不存在。之后我的习惯改成：只让 AI 梳理方向、用联网工具交叉验证、引用前逐条点开确认。找文献和读文献分开。</p></li><li><a href="/posts/sci-writing-errors.html">我论文里犯过的那些低级错误</a><p>整理我被导师和审稿人纠过的英文写作问题：单位与空格、缩写展开、公式也要标点、of 堆叠和机翻味的表达，附几个我从好论文里摘的句式和投稿前的自检项。是我自己的踩坑清单。</p></li></ul><details class="reading-more"><summary>查看其余 3 篇</summary><ul class="reading-posts"><li><a href="/posts/academic-story.html">论文被拒，可能不是你方法不行，是故事没讲好</a><p>记录一段身边经历：一篇方法扎实的论文初稿读下来像实验报告，重写引言的叙事结构后结果不同了。我由此整理了自己的写作检查点——问题尽早出现、贡献能压成一句话、逻辑层层递进。</p></li><li><a href="/posts/sci-submission-checklist.html">投稿 SCI，我因为漏了一个文件被退回过</a><p>我第一次投 SCI 因漏传标题页被退回，之后整理了投稿材料清单：核心文件、图表格式、投稿信结构、审稿人选择和各类声明，附逐项打钩的检查表。期刊要求各不相同，以投稿系统为准。</p></li><li><a href="/posts/graduate-paper-writing.html">写论文前，我先学会了怎么选范文</a><p>从一篇论文初稿的修改经历出发，学习怎样选择范文、拆解论证与表达，再回到自己的研究。模仿写法不等于复制内容，参考文献也应先看相关性和证据质量。</p></li></ul></details></section><section class="reading-section" id="growth"><div class="reading-heading"><h2>研究生成长与选择</h2><span>23 篇</span></div><p class="reading-description">导师沟通、职业方向、注意力与交付。保留阶段性的判断，也允许以后修正。</p><ul class="reading-posts"><li><a href="/posts/competition-evidence-chain.html">复盘六个获奖项目：平台愿景为什么打不过一条证据链</a><p>我复盘几个获奖竞赛项目后的修正：不是有实物就赢，而是痛点、技术、数据、场景能否接成闭环。对照我们自己把功能做全却没一个做深的项目，下一步是先砍功能、补对照实验和小试点。</p></li><li><a href="/posts/resume-tips.html">和师兄聊读研（六）：简历写你能做什么</a><p>转述师兄帮我看简历的建议：他招人只看项目和能力；先写能力判断再举一个例子做证据；项目名要让人一眼看懂价值；放上能直接看的作品链接。我把这些问题留作检查自己简历的参照。</p></li><li><a href="/posts/tech-value.html">和师兄聊读研（五）：技术是最不值钱的东西</a><p>转述师兄的一句刺耳判断：技术不值钱指的是只有技术不够——能做是门槛，知道该不该做更重要，最终要交付价值。我记下的出路是成为能独当一面的人，再找互补的合伙人。</p></li></ul><details class="reading-more"><summary>查看其余 20 篇</summary><ul class="reading-posts"><li><a href="/posts/competition-reflection.html">和师兄聊读研（四）：比赛到底有没有用</a><p>看完师兄做的可运行系统后我对竞赛的重新定位：它能让人被看见、练表达、认识人，但代替不了真实需求的验证。我也被点醒——简历只写实现了什么，展示的恰恰是容易被替代的执行。</p></li><li><a href="/posts/ai-usage.html">和师兄聊读研（三）：AI 到底能干什么</a><p>和师兄聊到 AI 的一段交流记录：我们的共识是它适合接管边界清楚的确定性任务，但取舍和担责仍是人的事。他合伙人从惊艳到放弃的经历也提醒我，别把它当成能兜底的魔法。</p></li><li><a href="/posts/startup-journey.html">和师兄聊读研（二）：研究生创业</a><p>转述师兄研二开公司做产品的经历：先做事再注册公司，招人试了几种方式都不顺最后按件合作，合伙人磨合靠陪对方试错，朋友和商业关系分开算账。这是一段口述，不是创业指南。</p></li><li><a href="/posts/mentor-relationship.html">和师兄聊读研（一）：导师关系与成果归属</a><p>转述一位延毕师兄和我的一顿饭：他想做合作式的产学研，却感觉被当成执行工具，项目贡献和论文过程都要自己扛。我记下的是对自己的提醒——贡献留证据、预期落到文字、边界自己守。这是单方口述。</p></li><li><a href="/posts/shaoshaotoken-completion.html">少烧 token，多出 completion</a><p>一个周六画图崩掉后的反思：桌面十几个软件、浏览器几十个标签页，我以为在并行推进，其实大量精力耗在上下文切换上。借 Token 和 completion 的比喻，我给自己定的解法是每天留一段单线程时间。</p></li><li><a href="/posts/llm-job-guide.html">70 场面试换来的一句话：实习比学历重要</a><p>转述一位研究生秋招复盘里的判断，再加我自己的理解：他认为实习经历的权重高于论文，项目讲解、八股和手撕题各有准备方法。这是他个人的求职样本，我倾向读博，只把实习当作补认知的渠道。</p></li><li><a href="/posts/quant-investment.html">一个工科生从亏 30% 到跑通 AI 量化策略，他踩的坑比方法更有价值</a><p>转述一位工科生从亏损到跑通量化策略的经历，对我触动最深的是他从预测涨跌转向管理风险。我把回测漂亮不等于实盘有效对照到自己的实验上：实验室指标好，真实场景未必成立。</p></li><li><a href="/posts/70-year-letter.html">如果 70 岁的你给现在的你写一封信</a><p>读到一位长者写给年轻人的几条建议后的记录：别反刍过去、别预支焦虑、别把情绪开关交给别人。我结合自己竞赛失利后在脑子里反复重放的经历写下来，道理朴素，我还在验证的路上。</p></li><li><a href="/posts/survival-philosophy.html">活着是硬道理，但怎么活是个技术活</a><p>我这两年的一点生存心得：先把物质基本面稳住，再区分真实的匮乏和自己制造的精神痛苦；在意评价、刷新闻义愤，都是把精力花在改不了的事上。环境不合适可以换，每天往前走就行。</p></li><li><a href="/posts/phd-vs-work.html">读博还是工作？一个 AI 方向硕士生的真实纠结</a><p>记录我读博还是工作的纠结：学术侧担心方向迭代太快，工业侧看重经验匹配；我仍倾向读博，理由是自己的方向还在早期、学位信号对我更重要，底线是保持和工业界的连接。只是我的个人权衡。</p></li><li><a href="/posts/fate-and-destiny.html">逆天改命，改的到底是什么？</a><p>记录我听到的一个说法和自己的对照：命像不假思索的默认反应，运是停下来之后做出的不同选择。我自己的练习是砍掉也不错的机会、聚焦少数几件事。这只是我认可的解释框架。</p></li><li><a href="/posts/token-conversation.html">人和人说话，也是要消耗 Token 的</a><p>我的精力管理笔记：把深度对话想成消耗 Token，白天在群里热心答疑，晚上重要的人说话我却没余量了。现在我把联系人分档，核心的人认真回应，其余用轻量模式，不再为没逐条回复愧疚。</p></li><li><a href="/posts/work-life-balance.html">工作与生活的平衡？算了吧</a><p>我对工作生活平衡的重新理解：下班后只想刷手机不是自制力差，是精力真的被掏空了；硬挤时间也各有代价。我目前的做法是提高工作的价值密度、砍掉内耗、用小的持续积累代替大幅改变。</p></li><li><a href="/posts/mantis-and-truck.html">螳螂与重卡</a><p>用螳螂挡重卡的画面写我对无知者无畏的警惕，包括我自己没跑过实验就在组会上指导方案的经历。讨论随时可以，挑战需要系统知识和可验证的东西打底。</p></li><li><a href="/posts/graduate-efficient-communication.html">研究生最该补的一课：怎么跟导师说话</a><p>我被景哥点醒的一次沟通复盘：给导师发了一大段汇报，被指像让人做阅读理解。他的建议是先说对方关心的进展、再讲自己的思考、提具体困难、给下一步计划——先解决别人的焦虑，再提自己的诉求。</p></li><li><a href="/posts/high-roi-habits.html">别收藏一堆清单了：人生高回报习惯先做这一件</a><p>读了一堆高回报习惯清单后我的减法：按门槛低、能持续、断一天不崩三个标准筛选，并且只从一件开始。我自己的第一件是睡前写几条当天做成的具体小事，用证据而不是鸡血积累自信。</p></li><li><a href="/posts/ai-knowledge-equality.html">大模型时代，知识真的平权了吗？</a><p>我的一篇自问自答：大模型拉平了拿到答案的门槛，但提问能力、辨别能力和付费差异还在分层。像图书馆一样，入口免费不等于人人受益。我给自己的约束是每次用完留下结论、问题和判断。</p></li><li><a href="/posts/order-driven-execution.html">我是怎么从「靠状态干活」变成「到点就干」的</a><p>我从靠状态干活转向固定时间做事的记录：状态好时连肝、差时瘫痪的模式不可持续，于是只绑定散步、看书、复盘三件小事到固定时间点。一段时间后动作开始自动化，</p></li><li><a href="/posts/ai-coding-era-career-path.html">AI 编程工具时代，别把会用工具当护城河</a><p>转述一段对话给我的提醒：会用 AI 工具不等于有护城河，工具先发优势会过期，没有用户和闭环的项目更像练习。我记下的方向是把经验沉淀成内容、去企业里理解真实需求、垂直领域深扎。</p></li><li><a href="/posts/grad-self-reflection.html">一个拿了一堆奖却觉得自己什么都没做好的研究生</a><p>一篇自我剖析：简历上奖项不少，我却把论文拖了很久，答辩时被基本功问住。一次对话让我开始怀疑自己是不是在靠不断获得外部认可来确认价值。现在我把论文放回第一优先级，练习少做一点。</p></li></ul></details></section><section class="reading-section" id="reading"><div class="reading-heading"><h2>阅读与生活</h2><span>10 篇</span></div><p class="reading-description">读书、生活经验与观点转译，留下真正与自己的处境有关的部分。</p><ul class="reading-posts"><li><a href="/posts/ai-era-bandwidth.html">AI时代，你的带宽够用吗？</a><p>重读《格局》后的自省：注意力像带宽固定的网线，我同时推进很多事结果件件烂尾。书里做减法的观点落到我身上，就是清收藏、让 AI 只做预处理、每天只留三件必做的事。</p></li><li><a href="/posts/scaling-laws-human-learning.html">当我把AI的「缩放定律」迁移到人类学习上</a><p>读 Scaling Laws 论文后的一篇联想笔记：我把幂律、样本效率、早停这些概念对照到自己的学习上，比如知识网大了学新东西更顺、只输入不实践像过拟合。这是个人类比，不是论文的结论。</p></li><li><a href="/posts/six-wealthy-money.html">读完 6 个巨富的金钱观，我一个研究生想了很多</a><p>读几位企业家金钱观材料后的联想：对我触动最大的是真正的安全保障是知识和能力的储备。我由此把读研重新理解为对自己的投资。这些是二手材料里的说法，出处我没有逐一核对。</p></li></ul><details class="reading-more"><summary>查看其余 7 篇</summary><ul class="reading-posts"><li><a href="/posts/hualuogeng-speech.html">华罗庚 70 年前说的两句话，我到现在才真正听懂</a><p>重读华罗庚那场演讲的两句话，对照我自己每天读论文从磕绊到顺手的经历，才算听懂积累不是鸡汤。他说的薄书读厚、厚书读薄，我现在读论文也是这个路子。</p></li><li><a href="/posts/partner-selection.html">找对象这件事，我想通了一个标准</a><p>记录我想通的一个标准：看一段关系不如看相处之后自己是更有能量还是更疲惫——能不能做自己、是松弛还是紧绷、对方自身状态是否自足。前提是自己先成为这样的人。</p></li><li><a href="/posts/situational-awareness-essence.html">《Situational Awareness》精华：前 OpenAI 研究员的十年判断</a><p>我读后整理的《Situational Awareness》要点：作者用数量级外推论证 AGI 临近，并讨论基建竞赛和实验室安全。他是押注 AGI 的投资者，这些是他的预测而非共识，文末我也列了反面观点。</p></li><li><a href="/posts/fall-asleep-fast.html">睡前放松：几种方法与适用边界</a><p>整理呼吸、肌肉放松、睡前待办和规律作息等常见方法。重点是缓和紧张、观察自身感受，不把练习当作保证入睡的办法，也说明什么时候应该寻求专业帮助。</p></li><li><a href="/posts/steam-steel-infinite-minds-analysis.html">解析 Ivan Zhao：蒸汽、钢铁与无限心智</a><p>我拆解 Notion 创始人一篇长文的笔记：他把 AI 比作时代的奇迹材料，从个人、组织、经济三层展开。我也记下了自己的保留——文章是管理者视角，劳动者去向和资源不平等没有被回答。</p></li><li><a href="/posts/reading2026final.html">2026 年阅读计划：最终整理版</a><p>我的全年阅读计划最终版：历史方向是重点，必读几本打头，按季度排节奏，另留一个待定池随时替补；论文忙的时候切换到轻阅读。计划是写给自己的，执行中随时调整。</p></li><li><a href="/posts/reading2026v2.html">2026 年阅读计划：V2 历史版本</a><p>我阅读计划的 V2 版：相对最终版书目更少、心理认知类有所增补，附待定池和季度节奏。留在这里是为了对照计划是怎么迭代的，实际执行以最终版为准。</p></li></ul></details></section><section class="reading-section" id="exams"><div class="reading-heading"><h2>备考与学习资料</h2><span>2 篇</span></div><p class="reading-description">按用途找到复习笔记与练习入口，使用时留意对应考试年份。</p><ul class="reading-posts"><li><a href="/posts/teacher-cert-education-knowledge.html">教资科目二｜教育知识与能力·考前速览</a><p>我备考教资科目二时整理的速览：分值结构、教育学人物和起源学说的口诀、教学原则、学习理论、发展阶段、德育原则，附我自己划的简答重点、辨析陷阱和材料分析套路。</p></li><li><a href="/posts/teacher-cert-comprehensive-quality.html">教资综合素质｜考前速览手册</a><p>我备考教资科目一《综合素质》的整理：职业理念和职业道德的口诀、法律法规里的高频考点、材料分析的答题模板、作文的结构和素材。是我自己的考前浓缩，不保证覆盖所有考点。</p></li></ul></section></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2021 - 2026 By insistgang</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div><!-- hexo injector body_end start --><script data-pjax src="/gitcalendar/js/gitcalendar-init.js"></script><script data-pjax>
+  var git_color = document.documentElement.dataset.theme === 'dark' ? ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'] : ['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e']
+  function boxInit(git_color) {
+    function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('about-git-calendar');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+    }
+    if( document.getElementById('about-git-calendar') && (location.pathname ==='/about/'|| '/about/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/insistgang",git_color,'insistgang')
+    }
+  }
+  boxInit(git_color)
+  var htmlElement = document.documentElement
+  var observer = new MutationObserver(function (mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        var newThemeValue = htmlElement.getAttribute('data-theme')
+        if (newThemeValue === 'light') {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        } else {
+          var gitcalendarBar = document.getElementById('gitcalendarBar');
+          if (gitcalendarBar) {
+              gitcalendarBar.parentNode.removeChild(gitcalendarBar);
+          }
+          boxInit(['#ebedf0', '#bae3fd', '#74b9ff', '#4dabf7', '#0969da', '#0550ae', '#033d8b', '#0a3069', '#08285c', '#06224d', '#041c3e'])
+        }
+      }
+    }
+  })
+  var config = { attributes: true }
+  observer.observe(htmlElement, config)  
+  </script><!-- hexo injector body_end end --></body></html>

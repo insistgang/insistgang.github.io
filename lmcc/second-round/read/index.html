@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>LMCC 第二轮资料阅读</title>
+  <style>
+    :root { --ink:#172033; --muted:#64748b; --line:#e5eaf2; --page:#f4f7fb; --brand:#4457e8; --soft:#eef1ff; --code:#111a2d; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--page); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    a { color:var(--brand); } .shell { width:min(980px,calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:5; border-bottom:1px solid var(--line); background:rgba(255,255,255,.93); backdrop-filter:blur(16px); }
+    .top { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .back { display:inline-flex; align-items:center; min-height:36px; padding:0 11px; border:1px solid #d7deef; border-radius:9px; color:#334155; background:#fff; text-decoration:none; font-size:13px; font-weight:800; }
+    .back:hover { background:#f6f8ff; color:#2f42d0; } .source { overflow:hidden; max-width:52vw; color:#68758a; font-size:12px; text-overflow:ellipsis; white-space:nowrap; }
+    main { padding:34px 0 64px; } .doc-meta { margin-bottom:18px; } .crumb { color:#5669d5; font-size:12px; font-weight:800; letter-spacing:.04em; } h1 { margin:8px 0 0; font-size:clamp(26px,4vw,38px); line-height:1.18; letter-spacing:-.04em; }
+    .doc { min-height:300px; padding:clamp(21px,4vw,46px); border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:0 14px 40px rgba(27,42,74,.08); font-size:16px; line-height:1.8; }
+    .doc h1,.doc h2,.doc h3,.doc h4 { margin:1.6em 0 .65em; color:#142044; line-height:1.32; letter-spacing:-.025em; } .doc h1 { margin-top:0; font-size:1.7em; } .doc h2 { padding-bottom:.36em; border-bottom:1px solid var(--line); font-size:1.35em; } .doc h3 { font-size:1.13em; }
+    .doc p { margin:0 0 1em; } .doc ul,.doc ol { margin:.1em 0 1.1em; padding-left:1.45em; } .doc li { margin:.28em 0; } .doc blockquote { margin:1.1em 0; padding:.65em 1em; border-left:4px solid #a9b6ff; color:#53637b; background:#f7f8ff; }
+    .doc code { padding:.14em .36em; border-radius:5px; color:#25397f; background:#edf0fb; font: .88em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; } .doc pre { overflow:auto; margin:1.2em 0; padding:16px; border-radius:12px; color:#e9efff; background:var(--code); line-height:1.62; } .doc pre code { padding:0; color:inherit; background:transparent; font-size:13px; }
+    .doc table { display:block; overflow:auto; width:100%; margin:1.15em 0; border-spacing:0; border-collapse:separate; border:1px solid var(--line); border-radius:10px; } .doc th,.doc td { min-width:105px; padding:9px 11px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:.91em; line-height:1.58; } .doc th { color:#263c91; background:#f2f4ff; } .doc tr:last-child td { border-bottom:0; } .doc th:last-child,.doc td:last-child { border-right:0; }
+    .doc hr { height:1px; margin:1.7em 0; border:0; background:var(--line); } .status { display:grid; min-height:250px; place-items:center; color:var(--muted); text-align:center; } .error { padding:18px; border:1px solid #ffd2dc; border-radius:12px; color:#a02e4d; background:#fff4f6; }
+    footer { padding:24px 0 34px; color:#778398; font-size:12px; text-align:center; }
+    @media(max-width:600px) { .shell { width:min(100% - 24px,980px); } .source { display:none; } main { padding-top:22px; } .doc { padding:21px; font-size:15px; } }
+  </style>
+</head>
+<body>
+  <header><div class="shell top"><a class="back" href="../">← 返回第二轮冲刺</a><span class="source" id="source-path">正在读取资料…</span></div></header>
+  <main class="shell"><div class="doc-meta"><div class="crumb">LMCC-A 第二轮 · 学习资料</div><h1 id="title">加载中…</h1></div><article id="article" class="doc"><div class="status">正在排版学习资料…</div></article></main>
+  <footer>LMCC-A 第二轮训练资料 · 阅读页已完成排版。</footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var file = params.get('file') || '';
+      var article = document.getElementById('article');
+      var title = document.getElementById('title');
+      var sourcePath = document.getElementById('source-path');
+
+      function showError(message) {
+        title.textContent = '无法打开资料';
+        sourcePath.textContent = '文件路径无效';
+        article.innerHTML = '<div class="error">' + escapeHtml(message) + '</div>';
+      }
+      if (!file || file.startsWith('/') || file.includes('..') || !file.endsWith('.md')) {
+        showError('只允许阅读第二轮训练包 materials/ 目录中的 Markdown 文件。');
+        return;
+      }
+
+      var sourceUrl = '../materials/' + file.split('/').map(encodeURIComponent).join('/');
+      sourcePath.textContent = file;
+      title.textContent = file.split('/').pop().replace(/\.md$/i, '');
+
+      fetch(sourceUrl)
+        .then(function (response) {
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          return response.text();
+        })
+        .then(function (markdown) { article.innerHTML = renderMarkdown(markdown); })
+        .catch(function () { showError('资料读取失败。请返回资料库后重新打开。'); });
+
+      function escapeHtml(value) {
+        return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+      function safePath(value) {
+        var parts = [];
+        value.split('/').forEach(function (part) {
+          if (!part || part === '.') return;
+          if (part === '..') { parts.pop(); return; }
+          parts.push(part);
+        });
+        return parts.join('/');
+      }
+      function resolveLink(raw) {
+        if (/^(https?:|mailto:|#)/i.test(raw)) return raw;
+        if (!/\.md(?:#.*)?$/i.test(raw)) return raw;
+        var split = raw.split('#');
+        var directory = file.split('/').slice(0, -1).join('/');
+        var target = safePath((directory ? directory + '/' : '') + split[0]);
+        return '../read/?file=' + encodeURIComponent(target) + (split[1] ? '#' + encodeURIComponent(split[1]) : '');
+      }
+      function inline(value) {
+        var text = escapeHtml(value);
+        text = text.replace(/\[([^\]]+)\]\(([^ )]+)(?:\s+&quot;[^&]*&quot;)?\)/g, function (_, label, url) {
+          var href = resolveLink(url.replace(/&amp;/g, '&'));
+          return '<a href="' + escapeHtml(href) + '">' + label + '</a>';
+        });
+        text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        text = text.replace(/~~(.+?)~~/g, '<del>$1</del>');
+        text = text.replace(new RegExp('\\x60([^\\x60]+)\\x60', 'g'), '<code>$1</code>');
+        return text;
+      }
+      function cells(line) {
+        return line.trim().replace(/^\||\|$/g, '').split('|').map(function (cell) { return cell.trim(); });
+      }
+      function isTableDivider(line) {
+        return /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line);
+      }
+      function renderMarkdown(markdown) {
+        var lines = markdown.replace(/\r\n?/g, '\n').split('\n');
+        var out = [];
+        var fence = String.fromCharCode(96, 96, 96);
+        var index = 0;
+        while (index < lines.length) {
+          var line = lines[index];
+          if (line.startsWith(fence)) {
+            var language = line.slice(fence.length).trim();
+            var code = [];
+            index += 1;
+            while (index < lines.length && !lines[index].startsWith(fence)) { code.push(lines[index]); index += 1; }
+            if (index < lines.length) index += 1;
+            out.push('<pre><code class="language-' + escapeHtml(language) + '">' + escapeHtml(code.join('\n')) + '</code></pre>');
+            continue;
+          }
+          var heading = /^(#{1,4})\s+(.+)$/.exec(line);
+          if (heading) { out.push('<h' + heading[1].length + '>' + inline(heading[2]) + '</h' + heading[1].length + '>'); index += 1; continue; }
+          if (/^\s*(---+|\*\*\*+|___+)\s*$/.test(line)) { out.push('<hr>'); index += 1; continue; }
+          if (line.includes('|') && index + 1 < lines.length && isTableDivider(lines[index + 1])) {
+            var header = cells(line);
+            var rows = [];
+            index += 2;
+            while (index < lines.length && lines[index].includes('|') && lines[index].trim()) { rows.push(cells(lines[index])); index += 1; }
+            out.push('<table><thead><tr>' + header.map(function (cell) { return '<th>' + inline(cell) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.map(function (row) { return '<tr>' + header.map(function (_, col) { return '<td>' + inline(row[col] || '') + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>');
+            continue;
+          }
+          var unordered = /^\s*[-*+]\s+(.+)$/.exec(line);
+          var ordered = /^\s*\d+\.\s+(.+)$/.exec(line);
+          if (unordered || ordered) {
+            var tag = unordered ? 'ul' : 'ol';
+            var items = [];
+            while (index < lines.length) {
+              var item = (tag === 'ul' ? /^\s*[-*+]\s+(.+)$/.exec(lines[index]) : /^\s*\d+\.\s+(.+)$/.exec(lines[index]));
+              if (!item) break;
+              items.push('<li>' + inline(item[1]) + '</li>');
+              index += 1;
+            }
+            out.push('<' + tag + '>' + items.join('') + '</' + tag + '>');
+            continue;
+          }
+          var quote = /^>\s?(.*)$/.exec(line);
+          if (quote) {
+            var quotes = [];
+            while (index < lines.length) {
+              var quoted = /^>\s?(.*)$/.exec(lines[index]);
+              if (!quoted) break;
+              quotes.push(quoted[1]);
+              index += 1;
+            }
+            out.push('<blockquote>' + inline(quotes.join('<br>')) + '</blockquote>');
+            continue;
+          }
+          if (!line.trim()) { index += 1; continue; }
+          var paragraph = [line.trim()];
+          index += 1;
+          while (index < lines.length && lines[index].trim() && !lines[index].startsWith(fence) && !/^(#{1,4})\s+/.test(lines[index]) && !/^\s*[-*+]\s+/.test(lines[index]) && !/^\s*\d+\.\s+/.test(lines[index]) && !/^>\s?/.test(lines[index]) && !(lines[index].includes('|') && index + 1 < lines.length && isTableDivider(lines[index + 1]))) {
+            paragraph.push(lines[index].trim());
+            index += 1;
+          }
+          out.push('<p>' + inline(paragraph.join(' ')) + '</p>');
+        }
+        return out.join('');
+      }
+    }());
+  </script>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leo的笔记本</title>
+  <icon>https://insistgang.top/img/favicon.svg</icon>
+  <subtitle>研路炼钢 · AI 实践、科研与成长</subtitle>
+  <link href="https://insistgang.top/atom.xml" rel="self"/>
+  
+  <link href="https://insistgang.top/"/>
+  <updated>2026-10-05T17:01:52.184Z</updated>
+  <id>https://insistgang.top/</id>
+  
+  <author>
+    <name>insistgang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我把 Git 命令跑了一遍，才明白它为什么能救场</title>
+    <link href="https://insistgang.top/posts/git-from-zero-to-practice.html"/>
+    <id>https://insistgang.top/posts/git-from-zero-to-practice.html</id>
+    <published>2026-09-27T14:04:11.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">从一次改错分支名开始，重新梳理暂存区、分支、合并与撤销。把日常操作分成五步：先看状态，再核对改动与历史，最后处理远程同步。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="开发工具" scheme="https://insistgang.top/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Git" scheme="https://insistgang.top/tags/Git/"/>
+    
+    <category term="踩坑记录" scheme="https://insistgang.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从本地 Demo 到公网可用：路遥 AI 的低成本部署实录</title>
+    <link href="https://insistgang.top/posts/luyao-ai-public-deployment.html"/>
+    <id>https://insistgang.top/posts/luyao-ai-public-deployment.html</id>
+    <published>2026-08-08T18:10:00.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">本地能跑之后，怎样让别人也能访问？记录路遥 AI 的服务拆分、容器部署、平台迁移与密钥处理，也交代免费实例在休眠和数据持久化上的限制。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI部署" scheme="https://insistgang.top/tags/AI%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="GitHub Actions" scheme="https://insistgang.top/tags/GitHub-Actions/"/>
+    
+    <category term="Render" scheme="https://insistgang.top/tags/Render/"/>
+    
+    <category term="Docker" scheme="https://insistgang.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不是接一个 TTS：把 61 秒视频重构成有情绪的 AI 伴侣</title>
+    <link href="https://insistgang.top/posts/luyao-ai-emotional-companion.html"/>
+    <id>https://insistgang.top/posts/luyao-ai-emotional-companion.html</id>
+    <published>2026-08-08T16:45:00.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">一段标杆视频怎样拆成可落地的系统？从对话节奏出发，把记忆、人设、语音与安全检查逐层接起来，记录我重构 AI 伴侣时做过的取舍。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI伴侣" scheme="https://insistgang.top/tags/AI%E4%BC%B4%E4%BE%A3/"/>
+    
+    <category term="多智能体" scheme="https://insistgang.top/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    
+    <category term="语音复刻" scheme="https://insistgang.top/tags/%E8%AF%AD%E9%9F%B3%E5%A4%8D%E5%88%BB/"/>
+    
+    <category term="长期记忆" scheme="https://insistgang.top/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jetson 的 8GB 算内存还是显存？和 Mac 对照后想明白了</title>
+    <link href="https://insistgang.top/posts/jetson-mac-unified-memory.html"/>
+    <id>https://insistgang.top/posts/jetson-mac-unified-memory.html</id>
+    <published>2026-08-05T20:40:43.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">Jetson 的 8GB 该怎么算，为什么还要看空载余量？和 Mac 对照后，我把统一内存、模型权重、缓存和并发开销放进同一张预算表。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Jetson" scheme="https://insistgang.top/tags/Jetson/"/>
+    
+    <category term="统一内存" scheme="https://insistgang.top/tags/%E7%BB%9F%E4%B8%80%E5%86%85%E5%AD%98/"/>
+    
+    <category term="边缘计算" scheme="https://insistgang.top/tags/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="本地大模型" scheme="https://insistgang.top/tags/%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我把 Vercel、Supabase 和 Surge 都连上了，但这还不叫工作流</title>
+    <link href="https://insistgang.top/posts/three-cloud-sop.html"/>
+    <id>https://insistgang.top/posts/three-cloud-sop.html</id>
+    <published>2026-07-23T21:05:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">我把三个云服务都接进工具箱后的反思：能登录、能访问、业务能完成是三件事。我给它们分了工序，密钥只留服务端，每一步配验收件，并且要求能回滚。这是我搭链路的草稿，不是现成方案。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Vercel" scheme="https://insistgang.top/tags/Vercel/"/>
+    
+    <category term="Supabase" scheme="https://insistgang.top/tags/Supabase/"/>
+    
+    <category term="Surge" scheme="https://insistgang.top/tags/Surge/"/>
+    
+    <category term="云端工作流" scheme="https://insistgang.top/tags/%E4%BA%91%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="SOP" scheme="https://insistgang.top/tags/SOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把自己外包给 AI 一周后，发现真正不能外包的是判断</title>
+    <link href="https://insistgang.top/posts/ai-project-orchestration-retro.html"/>
+    <id>https://insistgang.top/posts/ai-project-orchestration-retro.html</id>
+    <published>2026-07-18T03:00:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">主控跑了一周后，半成品和上下文重复开始暴露问题。结合调用日志，我重新收紧并行上限、验收标准和收尾流程；日志里的 Token 总量不等于付费账单。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI工作流" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="项目管理" scheme="https://insistgang.top/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我想把自己外包给 AI，最后先搭了一座“控制塔”</title>
+    <link href="https://insistgang.top/posts/ai-personal-control-tower.html"/>
+    <id>https://insistgang.top/posts/ai-personal-control-tower.html</id>
+    <published>2026-07-11T13:00:23.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">多个 AI 窗口同时开着，我却成了最忙的调度员。这次给主控和执行窗口重新分工：集中收任务、限制并行数，用交付物和回执判断一件事是否真的完成。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Codex" scheme="https://insistgang.top/tags/Codex/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="AI工作流" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="项目管理" scheme="https://insistgang.top/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复盘六个获奖项目：平台愿景为什么打不过一条证据链</title>
+    <link href="https://insistgang.top/posts/competition-evidence-chain.html"/>
+    <id>https://insistgang.top/posts/competition-evidence-chain.html</id>
+    <published>2026-07-11T12:10:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">我复盘几个获奖竞赛项目后的修正：不是有实物就赢，而是痛点、技术、数据、场景能否接成闭环。对照我们自己把功能做全却没一个做深的项目，下一步是先砍功能、补对照实验和小试点。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="创新竞赛" scheme="https://insistgang.top/tags/%E5%88%9B%E6%96%B0%E7%AB%9E%E8%B5%9B/"/>
+    
+    <category term="产品复盘" scheme="https://insistgang.top/tags/%E4%BA%A7%E5%93%81%E5%A4%8D%E7%9B%98/"/>
+    
+    <category term="工程实践" scheme="https://insistgang.top/tags/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一次局域网部署排障：为什么 Linux 能访问，Windows 却不行？</title>
+    <link href="https://insistgang.top/posts/local-network-troubleshooting.html"/>
+    <id>https://insistgang.top/posts/local-network-troubleshooting.html</id>
+    <published>2026-07-08T20:00:00.000Z</published>
+    <updated>2026-10-05T17:01:52.183Z</updated>
+    
+    
+    <summary type="html">记录一次局域网部署排障：同一个服务在 Linux 和 Mac 上能被其他设备访问，换 Windows 就只有本机能通。我按监听地址、防火墙入站规则、网络类型分层排查，并用临时隧道验证服务本体没死。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="技术实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="Windows" scheme="https://insistgang.top/tags/Windows/"/>
+    
+    <category term="局域网" scheme="https://insistgang.top/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
+    
+    <category term="Cloudflare Tunnel" scheme="https://insistgang.top/tags/Cloudflare-Tunnel/"/>
+    
+    <category term="部署排障" scheme="https://insistgang.top/tags/%E9%83%A8%E7%BD%B2%E6%8E%92%E9%9A%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我用 AI 做了一个 20 秒视频，最后把项目删了</title>
+    <link href="https://insistgang.top/posts/ai-video-workflow-deleted.html"/>
+    <id>https://insistgang.top/posts/ai-video-workflow-deleted.html</id>
+    <published>2026-07-08T18:00:00.000Z</published>
+    <updated>2026-10-05T17:01:52.156Z</updated>
+    
+    
+    <summary type="html">记录我把网页做成一条二十秒宣传片又删掉整个项目的过程：AI 生成不是魔法而是工具接力，原型能跑不等于能交付，权限弹窗其实是信任边界。文件删了，对工作流的理解留下了。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="AI工具实践" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/AI%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="HyperFrames" scheme="https://insistgang.top/tags/HyperFrames/"/>
+    
+    <category term="MiniMax" scheme="https://insistgang.top/tags/MiniMax/"/>
+    
+    <category term="工作流" scheme="https://insistgang.top/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从卖产品到卖技能：一顿火锅聊清 Agent 的底层逻辑</title>
+    <link href="https://insistgang.top/posts/agent-skill-sdd.html"/>
+    <id>https://insistgang.top/posts/agent-skill-sdd.html</id>
+    <published>2026-05-06T22:00:00.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">一顿饭里的 Agent 讨论：技能怎样变成可复用的能力包，子代理如何分工，为什么需求整理常常比写代码更费时间。记录这些想法怎样影响了我接下来的实践。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Agent" scheme="https://insistgang.top/tags/Agent/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="Skill" scheme="https://insistgang.top/tags/Skill/"/>
+    
+    <category term="SDD" scheme="https://insistgang.top/tags/SDD/"/>
+    
+    <category term="Token经济学" scheme="https://insistgang.top/tags/Token%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（六）：简历写你能做什么</title>
+    <link href="https://insistgang.top/posts/resume-tips.html"/>
+    <id>https://insistgang.top/posts/resume-tips.html</id>
+    <published>2026-04-29T10:40:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">转述师兄帮我看简历的建议：他招人只看项目和能力；先写能力判断再举一个例子做证据；项目名要让人一眼看懂价值；放上能直接看的作品链接。我把这些问题留作检查自己简历的参照。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="求职" scheme="https://insistgang.top/tags/%E6%B1%82%E8%81%8C/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="简历" scheme="https://insistgang.top/tags/%E7%AE%80%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（五）：技术是最不值钱的东西</title>
+    <link href="https://insistgang.top/posts/tech-value.html"/>
+    <id>https://insistgang.top/posts/tech-value.html</id>
+    <published>2026-04-29T10:39:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">转述师兄的一句刺耳判断：技术不值钱指的是只有技术不够——能做是门槛，知道该不该做更重要，最终要交付价值。我记下的出路是成为能独当一面的人，再找互补的合伙人。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="技术" scheme="https://insistgang.top/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（四）：比赛到底有没有用</title>
+    <link href="https://insistgang.top/posts/competition-reflection.html"/>
+    <id>https://insistgang.top/posts/competition-reflection.html</id>
+    <published>2026-04-29T10:38:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">看完师兄做的可运行系统后我对竞赛的重新定位：它能让人被看见、练表达、认识人，但代替不了真实需求的验证。我也被点醒——简历只写实现了什么，展示的恰恰是容易被替代的执行。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="竞赛" scheme="https://insistgang.top/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（三）：AI 到底能干什么</title>
+    <link href="https://insistgang.top/posts/ai-usage.html"/>
+    <id>https://insistgang.top/posts/ai-usage.html</id>
+    <published>2026-04-29T10:37:00.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">和师兄聊到 AI 的一段交流记录：我们的共识是它适合接管边界清楚的确定性任务，但取舍和担责仍是人的事。他合伙人从惊艳到放弃的经历也提醒我，别把它当成能兜底的魔法。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（二）：研究生创业</title>
+    <link href="https://insistgang.top/posts/startup-journey.html"/>
+    <id>https://insistgang.top/posts/startup-journey.html</id>
+    <published>2026-04-29T10:36:00.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">转述师兄研二开公司做产品的经历：先做事再注册公司，招人试了几种方式都不顺最后按件合作，合伙人磨合靠陪对方试错，朋友和商业关系分开算账。这是一段口述，不是创业指南。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="创业" scheme="https://insistgang.top/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和师兄聊读研（一）：导师关系与成果归属</title>
+    <link href="https://insistgang.top/posts/mentor-relationship.html"/>
+    <id>https://insistgang.top/posts/mentor-relationship.html</id>
+    <published>2026-04-29T10:35:00.000Z</published>
+    <updated>2026-10-05T17:01:52.184Z</updated>
+    
+    
+    <summary type="html">转述一位延毕师兄和我的一顿饭：他想做合作式的产学研，却感觉被当成执行工具，项目贡献和论文过程都要自己扛。我记下的是对自己的提醒——贡献留证据、预期落到文字、边界自己守。这是单方口述。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="成长" scheme="https://insistgang.top/tags/%E6%88%90%E9%95%BF/"/>
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/tags/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    <category term="导师" scheme="https://insistgang.top/tags/%E5%AF%BC%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读研最怕的不是没工具，是没有自己的龙</title>
+    <link href="https://insistgang.top/posts/yanlu-liangang-find-dragon.html"/>
+    <id>https://insistgang.top/posts/yanlu-liangang-find-dragon.html</id>
+    <published>2026-04-20T05:47:50.000Z</published>
+    <updated>2026-10-05T17:01:52.185Z</updated>
+    
+    
+    <summary type="html">一篇读后理解：很多 AI 助手在干手机就能干的事，因为主人手里没有值得解的题。对照读研，我的体会是工具熟不如问题真——好问题从数据和现场的反常里长出来，选题要和自己能级匹配。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研路炼钢" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E8%B7%AF%E7%82%BC%E9%92%A2/"/>
+    
+    
+    <category term="研究生" scheme="https://insistgang.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+    <category term="科研方法" scheme="https://insistgang.top/tags/%E7%A7%91%E7%A0%94%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="问题意识" scheme="https://insistgang.top/tags/%E9%97%AE%E9%A2%98%E6%84%8F%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI时代，你的带宽够用吗？</title>
+    <link href="https://insistgang.top/posts/ai-era-bandwidth.html"/>
+    <id>https://insistgang.top/posts/ai-era-bandwidth.html</id>
+    <published>2026-04-13T20:57:38.000Z</published>
+    <updated>2026-10-05T17:01:52.181Z</updated>
+    
+    
+    <summary type="html">重读《格局》后的自省：注意力像带宽固定的网线，我同时推进很多事结果件件烂尾。书里做减法的观点落到我身上，就是清收藏、让 AI 只做预处理、每天只留三件必做的事。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="AI" scheme="https://insistgang.top/tags/AI/"/>
+    
+    <category term="读书" scheme="https://insistgang.top/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你每天都在消费Token，但你积累数字资产了吗？</title>
+    <link href="https://insistgang.top/posts/digital-asset-accumulation.html"/>
+    <id>https://insistgang.top/posts/digital-asset-accumulation.html</id>
+    <published>2026-03-29T15:45:00.000Z</published>
+    <updated>2026-10-05T17:01:52.182Z</updated>
+    
+    
+    <summary type="html">一次长谈后的整理：每天和 AI 聊完就关，等于只消费没沉淀。我们把文章、笔记、仓库、复盘这类可检索可复用的产出叫数字资产。对我的提醒是，每做完一件事都问能不能留下点什么。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="研究生成长" scheme="https://insistgang.top/categories/%E6%9D%82%E8%B0%88/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%88%90%E9%95%BF/"/>
+    
+    
+    <category term="AI工具" scheme="https://insistgang.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="个人成长" scheme="https://insistgang.top/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    
+    <category term="数字资产" scheme="https://insistgang.top/tags/%E6%95%B0%E5%AD%97%E8%B5%84%E4%BA%A7/"/>
+    
+  </entry>
+  
+</feed>
