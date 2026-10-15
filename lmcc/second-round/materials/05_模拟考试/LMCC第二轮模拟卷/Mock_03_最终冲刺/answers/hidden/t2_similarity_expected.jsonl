@@ -1,0 +1,10 @@
+{"id": "03-sim-3-3", "query": "平均数 平均数 4个数 8 10 12 14 同类变式 3：请使用同类方法计算", "expected_top_id": "03-bank-3"}
+{"id": "03-sim-3-4", "query": "平均数 平均数 4个数 8 10 12 14 同类变式 4：请使用同类方法计算", "expected_top_id": "03-bank-3"}
+{"id": "03-sim-4-1", "query": "余数 余数 除数8 商6 余数3 同类变式 1：请使用同类方法计算", "expected_top_id": "03-bank-4"}
+{"id": "03-sim-4-2", "query": "余数 余数 除数8 商6 余数3 同类变式 2：请使用同类方法计算", "expected_top_id": "03-bank-4"}
+{"id": "03-sim-4-3", "query": "余数 余数 除数8 商6 余数3 同类变式 3：请使用同类方法计算", "expected_top_id": "03-bank-4"}
+{"id": "03-sim-4-4", "query": "余数 余数 除数8 商6 余数3 同类变式 4：请使用同类方法计算", "expected_top_id": "03-bank-4"}
+{"id": "03-sim-5-1", "query": "容量 容量 0.75升 毫升 同类变式 1：请使用同类方法计算", "expected_top_id": "03-bank-5"}
+{"id": "03-sim-5-2", "query": "容量 容量 0.75升 毫升 同类变式 2：请使用同类方法计算", "expected_top_id": "03-bank-5"}
+{"id": "03-sim-5-3", "query": "容量 容量 0.75升 毫升 同类变式 3：请使用同类方法计算", "expected_top_id": "03-bank-5"}
+{"id": "03-sim-5-4", "query": "容量 容量 0.75升 毫升 同类变式 4：请使用同类方法计算", "expected_top_id": "03-bank-5"}

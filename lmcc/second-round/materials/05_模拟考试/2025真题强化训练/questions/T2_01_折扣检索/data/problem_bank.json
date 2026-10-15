@@ -1,0 +1,5 @@
+[
+  {"id":"r1","problem":"折扣 商品 原价80元 打七五折","answer":"60","explanation":"80 × 0.75 = 60"},
+  {"id":"r2","problem":"余数 除数5 商7 余数4","answer":"39","explanation":"5 × 7 + 4 = 39"},
+  {"id":"r3","problem":"面积 长方形 长6 宽4","answer":"24","explanation":"6 × 4 = 24"}
+]

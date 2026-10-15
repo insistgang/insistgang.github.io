@@ -1,0 +1,5 @@
+{"section":"t2","id":"t2-04-p1","raw_output":"{\"reasoning\":\"250 × 0.8 = 200\",\"answer\":\"200\"}"}
+{"section":"t2","id":"t2-04-p2","raw_output":"{\"reasoning\":\"9 × 8 + 7 = 79\",\"answer\":\"79\"}"}
+{"section":"t2","id":"t2-04-p3","raw_output":"{\"reasoning\":\"15 × 4 = 60\",\"answer\":\"60\"}"}
+{"section":"t2","id":"t2-04-h1","raw_output":"{\"reasoning\":\"(9+11+13+15) ÷ 4 = 12\",\"answer\":\"12\"}"}
+{"section":"t2","id":"t2-04-h2","raw_output":"{\"reasoning\":\"1.25 × 1000 = 1250\",\"answer\":\"1250\"}"}

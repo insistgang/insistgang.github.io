@@ -1,0 +1,5 @@
+[
+  {"id":"d1","problem":"平均数 4个数 8 10 12 14","answer":"11","explanation":"44 ÷ 4 = 11"},
+  {"id":"d2","problem":"单位换算 0.75升 毫升","answer":"750","explanation":"0.75 × 1000 = 750"},
+  {"id":"d3","problem":"余数 除数8 商6 余数3","answer":"51","explanation":"8 × 6 + 3 = 51"}
+]

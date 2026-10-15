@@ -1,0 +1,7 @@
+[
+  {"id":"z1","problem":"折扣 原价100元 打九折","answer":"90","explanation":"100 × 0.9 = 90"},
+  {"id":"z2","problem":"余数 除数8 商6 余数3 求被除数","answer":"51","explanation":"8 × 6 + 3 = 51"},
+  {"id":"z3","problem":"面积 长方形 长12 宽5","answer":"60","explanation":"12 × 5 = 60"},
+  {"id":"z4","problem":"平均数 4个数 8 10 12 14","answer":"11","explanation":"44 ÷ 4 = 11"},
+  {"id":"z5","problem":"单位换算 0.75升 毫升","answer":"750","explanation":"0.75 × 1000 = 750"}
+]
