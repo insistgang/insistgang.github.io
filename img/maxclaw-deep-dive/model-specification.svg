@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">模型规格与托管产品能力需要分别核对</title>
+  <desc id="desc">MiniMax M2.5 官方开源配置的最大位置数为196608。托管产品的工具、连接器和文件处理能力需在具体入口验证。</desc>
+  <rect width="1400" height="760" fill="#f5f4f8"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#292630">
+    <text x="88" y="106" font-size="44" font-weight="650">模型规格与产品能力，分开核对</text>
+    <text x="88" y="156" font-size="24" fill="#716d7c">先看官方模型配置，再看实际使用入口的限制</text>
+    <rect x="88" y="216" width="584" height="344" rx="16" fill="white" stroke="#e0dbe7"/>
+    <rect x="704" y="216" width="608" height="344" rx="16" fill="white" stroke="#e0dbe7"/>
+    <text x="124" y="272" font-size="22" fill="#764ba2">模型规格</text>
+    <text x="124" y="326" font-size="30" font-weight="600">MiniMax M2.5</text>
+    <text x="124" y="414" font-size="62" font-weight="650">196,608</text>
+    <text x="124" y="462" font-size="25">官方开源配置的最大位置数</text>
+    <text x="124" y="511" font-size="21" fill="#716d7c">约 19.7 万，不能直接写成 400 万</text>
+    <text x="742" y="272" font-size="22" fill="#764ba2">托管产品</text>
+    <text x="742" y="326" font-size="30" font-weight="600">入口、工具与运行环境</text>
+    <text x="742" y="400" font-size="25">任务编排 · 连接器 · 文件处理</text>
+    <text x="742" y="451" font-size="24">是否可用、限制多少，</text>
+    <text x="742" y="491" font-size="24">需要在具体服务中验证。</text>
+    <text x="88" y="640" font-size="25">能持续处理任务，不等于模型单次上下文无限。</text>
+    <text x="88" y="697" font-size="18" fill="#716d7c">依据：MiniMaxAI 官方模型配置 · 2026-10-06 核对</text>
+  </g>
+</svg>
